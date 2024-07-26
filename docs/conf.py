@@ -18,6 +18,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.mathjax',
     'sphinx.ext.todo',
+    'sphinx_togglebutton',
 ]
 myst_enable_extensions = [
     'amsmath',
