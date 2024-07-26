@@ -129,6 +129,7 @@ charset:
 Comme cette balise ne contient pas de contenu, c'est une balise unique (pas de
 balise ouvrante et fermante).
 
+(hyperliens)=
 ## Hyperliens
 
 La balise `<a>` permet de créer un  hyperlien, c'est-à-dire un texte sur lequel
@@ -152,6 +153,7 @@ Pour ouvrir la nouvelle page dans un nouvel onglet, il faut ajouter l'attribut
 
 [Tuto](https://developer.mozilla.org/fr/docs/Web/HTML/Element/a) élément `<a>`.
 
+(listes)=
 ## Listes
 
 Il existe deux types de listes:
@@ -177,6 +179,7 @@ Il existe deux types de listes:
 
 [Tuto](https://developer.mozilla.org/fr/docs/Web/HTML/Element/li) listes.
 
+(images)=
 ## Images
 
 La balise `<img>` permet d'insérer une image sur une page Web. Dans l'attribut
@@ -272,14 +275,14 @@ appuyer sur **Run**):
    par Collège Sainte-Croix.
    - Modifier la partie présentation pour avoir les informations qui
    correspondent au Collège Sainte-Croix. Changer aussi le lien vers le site de
-   l'école.
+   l'école. (cf. [](#hyperliens))
    - Compléter la liste de vos cours avec: Économie et droit, Biologie, ...
-   - Changer la liste de vos cours par une liste numérotée.
+   - Changer la liste de vos cours par une liste numérotée. (cf. [](#listes))
    - Ajouter un sous-titre **Ma classe** et un paragraphe avec quelques
    informations.
    - Ajouter une image du Collège Sainte-Croix:
      - Télécharger l'image que vous avez choisie.
      - Importer l'image sur replit.com dans un répertoire nommé **images**.
-     - Noter le code HTML nécessaire.
+     - Noter le code HTML nécessaire. (cf. [](#images))
      - Ne pas oublier d'indiquer la source.
    - Faire un tableau de votre horaire.
