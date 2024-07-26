@@ -36,6 +36,9 @@ print("Hello World!")
 > J'ai 16 ans\
 > J'aime bien jouer au volley
 
+<!-- TODO: Utiliser un {admonition} avec ":class: dropdown" (nécessite
+     sphinx-togglebutton) -->
+
 <details>
 <summary>Solution</summary>
 
