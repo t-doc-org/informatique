@@ -27,7 +27,7 @@ jobs:
       - name: Install packages
         run: |
           pip install myst-parser sphinx sphinx-book-theme sphinx-copybutton \
-              sphinx_desgin sphinx-togglebutton
+              sphinx_design sphinx-togglebutton
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build HTML
@@ -37,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'docs/_build/html'
+          path: docs/_build/html
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
