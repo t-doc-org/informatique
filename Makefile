@@ -44,9 +44,5 @@ serve: html
 	@echo -e "$(_WHITE)Serving:$(_NORM) $(_LBLUE)http://localhost:8000$(_NORM)"
 	@python -m http.server --bind=localhost --directory="$(BUILD)/html"
 
-.PHONY: clean
-clean:
-	@rm -rf "$(BUILD)"
-
 %:
 	@$(SPHINX_BUILD) -M $@ "$(SOURCE)" "$(BUILD)" $(SPHINX_OPTS) $(O)
