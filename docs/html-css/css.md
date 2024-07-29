@@ -205,7 +205,7 @@ venez de télécharger:
 ### Exercice 5
 
 1. Qu'est-ce qui a changé?
-2. Cliquer sur ***style.css** pour que le document s'afficher et essayer de le
+2. Cliquer sur **style.css** pour que le document s'afficher et essayer de le
 comprendre.
     - À quels éléments s'appliquent les différentes propriétés?
     - Quelle est la différence entre `h1{...}` et `#source{...}`? Quand va-t-on
