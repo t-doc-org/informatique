@@ -7,5 +7,4 @@
 :maxdepth: 1
 
 introduction
-sql
 ```
