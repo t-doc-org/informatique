@@ -11,8 +11,7 @@ Ces différents **fichiers** sont accessibles sur votre ordinteur grâce aux
 **système de fichiers**. Chaque fichier a une **extension** propre dépendante du
 type de données qu'il contient (.txt, .docx, .pdf, .png, .jpg, .mp3, .py)
 
-````{admonition} Conseil
-:class: tip
+```{tip}
 Pour retrouver facilement ses documents:
 
 1. Utiliser une hiérachie de dossiers adéquate.\
@@ -20,7 +19,7 @@ Exemples: 1ère année, 2e année, maths, informatique, programmation, bases de
 données
 2. Choisir des noms de fichier qui permettent de savoir ce qu'ils contiennent.\
 Exemples: ex1, théorie, exercices
-````
+```
 
 Il existe 3 manières d'enregistrer des données:
 
@@ -40,11 +39,10 @@ patielles peuvent arriver à tout moment. En voici quelques exemples:
 3. Erreur de manipulation (effacement de données)
 4. Piratage, virus, rançongiciel
 
-````{admonition} Conseil
-:class: tip
+```{tip}
 En sauvegardant vos données sur OneDrive, vous aurez toujours une copie
 accessible de vos données en cas de problème avec votre ordinateur.
-````
+```
 
 ## Structure des données
 
