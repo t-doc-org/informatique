@@ -25,23 +25,25 @@ attributs, ainsi que leur type.\
 Chaque instruction doit se terminer par un point-virgule.
 
 ```{code-block} sql
-CREATE TABLE livre (
-    titre VARCHAR(100),     # chaîne de caractères de maximum 100 caractères
-    editeur VARCHAR(20),
-    annee INT,              # nombre entier (integer)
-    isbn CHAR(14)           # chaîne de caractère avec exactement 14 caractères
+CREATE TABLE stock (
+    id INT,                 # nombre entier (integer)
+    article VARCHAR(15),    # chaîne de caractères de maximum 15 caractères
+    couleur VARCHAR(15),
+    taille varchar(3),
+    quantite INT,
+    prixUnitaire INT
 );
 ```
 
 ## Exercice 1
 
-Écrire l'instruction SQL qui permet de créer la table **auteur** ci-dessous,
-sachant que **auteur_id** est un entier et que nom et prénom sont des chaînes
-de caractères avec un maximum de 90 caractères:
+Écrire l'instruction SQL qui permet de créer la table **produit** ci-dessous,
+sachant que **no_p** et **prix** sont des entiers et que **nom** et **description** sont des chaînes
+de caractères avec respectivement maximum de 20 et 100 caractères:
 
-| auteur_id | nom | prenom |
-| :-------: | :-: | :----: |
-| ... | ... | ... |
+| no_p | nom | description | prix |
+| :--: | :-: | :---------: | :--: |
+| ... | ... | ... | ... |
 
 <!-- TODO: Ajouter un éditeur pour que les élèves puissent effectuer l'ex
     directement sur la page -->
@@ -50,10 +52,10 @@ de caractères avec un maximum de 90 caractères:
 ````{admonition} Solution
 :class: hint dropdown
 ```{code-block} sql
-CREATE TABLE auteur (
-    auteur_id INT,
+CREATE TABLE produit (
+    no_p INT,
     nom VARCHAR(20),
-    prenom VARCHAR(20)
+    description VARCHAR(100)
 );
 ```
 ````
@@ -66,7 +68,7 @@ les valeurs des attributs. L'ordre doit être le même que lors de la création 
 la table.
 
 ```{code-block} sql
-INSERT INTO livre VALUES("Le Viel Homme et la Mer", "Editions Gallimard", 2018, "978-2072762093");
+INSERT INTO stock VALUES(1, "T-shirt", "rouge", "M", 15, 20);
 ```
 
 ```{attention}
@@ -76,21 +78,21 @@ apostrophes.
 
 ## Exercice 2
 
-Écrire les instructions SQL qui permettent d'insérer dans la table auteur les
-éléments ci-dessous:
+Écrire les instructions SQL qui permettent d'insérer dans la table produit les
+éléments suivants:
 
-| auteur_id | nom | prenom |
-| :-------: | :-: | :----: |
-| 1 | Hemingway | Ernest |
-| 2 | Asimov | Isaac |
-| 3 | Goscinny | René |
+| no_p | nom | description | prix |
+| :--: | :-: | :---------: | :--: |
+| 1 | Ektorp | canapé 2 places | 599 |
+| 2 | Brimnes | structure de lit | 129 |
+| 3 | Jaren | matelas à ressorts | 59 |
 
 ````{admonition} Solution
 :class: hint dropdown
 ```{code-block} sql
-INSERT INTO livre VALUES(1, "Hemingway", "Ernest");
-INSERT INTO livre VALUES(2, "Asimov", "Isaac");
-INSERT INTO livre VALUES(3, "Goscinny", "René");
+INSERT INTO produit VALUES(1, "Ektorp", "canapé 2 places", 599);
+INSERT INTO produit VALUES(2, "Brimnes", "structure de lit", 129);
+INSERT INTO produit VALUES(3, "Jaren", "matelas à ressorts", 59);
 ```
 ````
 
@@ -100,41 +102,41 @@ L'instruction SQL suivante permet d'afficher le contenu d'une table,
 c'est-à-dire les valeurs de chaque attributs.
 
 ```{code-block} sql
-SELECT * FROM livre;
+SELECT * FROM stock;
 ```
 
 Le caractère * signifie tous les attributs, cela évite de devoir écrire toute la
-liste.
+liste d'attributs.
 Traduite en français, cette instruction signifie: "Afficher tous les attributs
-de la table livre."
+de la table stock."
 
 Il est aussi possible d'afficher seulement un ou plusieurs des attributs.
 
 ```{code-block} sql
-SELECT titre FROM livre;
-SELECT titre, isbn FROM livre;
+SELECT article FROM stock;
+SELECT article, quantite FROM stock;
 ```
 
 ## Exercice 3
 
-Écrire l'instruction SQL qui permet d'afficher toutes les entités de la table
-**auteur**.
+Écrire l'instruction SQL qui permet d'afficher toutes les éléments de la table
+**produit**.
 
 ````{admonition} Solution
 :class: hint dropdown
 ```{code-block} sql
-SELECT * FROM auteur;
+SELECT * FROM produit;
 ```
 ````
 
-Écrire l'instruction SQL qui permet d'afficher le nom de tous les auteurs et
-celle qui permet d'afficher le prénom et le nom de tous les auteurs.
+Écrire l'instruction SQL qui permet d'afficher le nom de tous les produits et
+celle qui permet d'afficher le nom et le prix de tous les prduits.
 
 ````{admonition} Solution
 :class: hint dropdown
 ```{code-block} sql
-SELECT nom FROM auteur;
-SELECT prenom, nom FROM auteur;
+SELECT nom FROM produit;
+SELECT nom, prix FROM produit;
 ```
 ````
 
@@ -145,62 +147,164 @@ souhaiterait afficher tous les livres parus aux Editions Gallimards.
 
 Voici la base de données à disposition:
 
-| titre | editeur | annee | isbn |
-| :---: | :-----: | :---: | :--: |
-| Le Vieil Homme et la Mer | Editions Gallimard | 2018 | 978-2072762093 |
-| Fondation et Empire | Editions Denoël | 1999 | 978-2207249123 |
-| Ravage | Editions Gallimard | 2014 | 978-2072534911 |
-| Demain les chiens | J'ai Lu | 2015 | 978-2290112168 |
-| L'Homme qui rétrécit | Editions Gallimard | 2017 | 978-2072457340 |
-| La Grande Traversée | Seuil Jeunesse | 2014 | 979-1023500448 |
-| L'Étranger | Editions Gallimard | 2012 | 978-2072376429 |
+| id | article | couleur | taille | quantité | prixUnitaire
+| :-: | :----: | :-----: | :----: | :------: | :----------: |
+| 1 | T-shirt | rouge | M | 15 | 20 |
+| 2 | T-shirt | blanc | XL | 17 | 25 |
+| 3 | Polo | rouge | L | 12 | 35 |
+| 4 | Polo | blanc | M | 10 | 40 |
+| 5 | T-shirt | rouge | XL | 8 | 20 |
+| 6 | T-shirt | blanc | S | 30 | 20 |
+| 7 | Veste | rouge | L | 5 | 50 |
 
 L'instruction `WHERE` permet de ne sélectionner que les lignes qui répondent à
 ce(s) critère(s).
 
 ```{code-block} sql
-SELECT * FROM livre WHERE editeur = "Editions Gallimard";
+SELECT * FROM stock WHERE stock="M";
 ```
 Cette requête affichera le résultat suivant:
 
 ```{code-block} text
-Le Vieil Homme et la Mer    Editions Gallimard     2018    978-2072762093
-Ravage                      Editions Gallimard     2014    978-2072534911
-L'Homme qui rétrécit        Editions Gallimard     2017    978-2072457340
-L'Étranger                  Editions Gallimard     2012    978-2072376429
+1   T-shirt     rouge   M   15  20
+4   Polo        blanc   M   10  40
 ```
 
 ```{code-block} sql
-SELECT * FROM livre WHERE annee = 2014;
+SELECT * FROM stock WHERE prix=35;
 ```
 Celle-ci affichera le résultat suivant:
 
 ```{code-block} text
-Ravage                      Editions Gallimard     2014    978-2072534911
-La Grande Traversée         Seuil Jeunesse         2014    979-1023500448
+3   Polo        rouge   L   12  35
 ```
 
 ## Exercice 4
 
-Écrire l'instruction SQL qui permet d'afficher tous les attributs de l'auteur
-dont l'auteur_id est 3.
+Écrire l'instruction SQL qui permet d'afficher tous les attributs du produit
+Brimnes.
 
 ````{admonition} Solution
 :class: hint dropdown
 ```{code-block} sql
-SELECT * FROM auteur WHERE auteur_id = 3;
+SELECT * FROM produit WHERE nom="Brimnes";
 ```
 ````
 
-Écrire l'instruction SQL qui permet d'afficher le prénom de l'auteur dont le nom
-est Asimov.
+Écrire l'instruction SQL qui permet d'afficher uniquement la description du
+produit Ektorp.
 
 ````{admonition} Solution
 :class: hint dropdown
 ```{code-block} sql
-SELECT prenom FROM auteur WHERE nom = "Asimov";
+SELECT description FROM poduit WHERE nom="Ektorp";
 ```
 ````
+
+## Modification de données
+
+Pour modifier la couleur de l'article dont l'id est 3, la requête sera la
+suivante:
+
+```{code-block} sql
+UPDATE stock SET couleur="bleu" WHERE id=3;
+```
+
+La base de donnée sera modifiée ainsi:
+
+| id | article | couleur | taille | quantité | prixUnitaire
+| :-: | :----: | :-----: | :----: | :------: | :----------: |
+| 1 | T-shirt | rouge | M | 15 | 20 |
+| 2 | T-shirt | blanc | XL | 17 | 25 |
+| 3 | Polo | **bleu** | L | 12 | 35 |
+| 4 | Polo | blanc | M | 10 | 40 |
+| 5 | T-shirt | rouge | XL | 8 | 20 |
+| 6 | T-shirt | blanc | S | 30 | 20 |
+| 7 | Veste | rouge | L | 5 | 50 |
+
+## Exercice 5
+
+Mettre à jour le prix du **canapé 2 places** qui ne coûte plus que 499 CHF.\
+Contrôler le résultat en affichant tous les éléments de la table produit.
+
+````{admonition} Solution
+:class: hint dropdown
+```{code-block} sql
+UPDATE stock SET prix=499 WHERE description="canapé 2 places";
+```
+````
+
+## Suppression d'un élément
+
+Il est aussi possible de supprimer un élément, c'est-à-dire une ligne complète
+d'une table.
+
+```{code-block} sql
+DELETE FROM stock WHERE article="Polo";
+```
+
+La nouvelle base de donnée sera la suivante:
+
+| id | article | couleur | taille | quantité | prixUnitaire
+| :-: | :----: | :-----: | :----: | :------: | :----------: |
+| 1 | T-shirt | rouge | M | 15 | 20 |
+| 2 | T-shirt | blanc | XL | 17 | 25 |
+| 5 | T-shirt | rouge | XL | 8 | 20 |
+| 6 | T-shirt | blanc | S | 30 | 20 |
+| 7 | Veste | rouge | L | 5 | 50 |
+
+## Exercice 6
+
+Supprimer le produit dont le no_p est 3.\
+Contrôler le résultat en affichant tous les éléments de la table produit.
+
+````{admonition} Solution
+:class: hint dropdown
+```{code-block} sql
+DELETE FROM produit WHERE no_p=3;
+```
+````
+
+## Liste des requêtes SQL
+
+### Modification de la base de données
+
+| Mots réservés | Description |
+| :------------ | :---------- |
+| CREATE TABLE | Crée une table |
+| INSERT INTO ... VALUES | Ajoute un élément (une ligne à la table) |
+| UPDATE ... SET | Met à jour des valeurs |
+| DELETE | Supprime un élément (supprime une ligne à la table) |
+| ALTER TABLE | Modifie la structure de la table (ajout de colonne, ...) |
+| DROP TABLE | Supprime une table |
+| DROP DATABASE | Supprime une base de données |
+
+### Consultation de la base de données
+
+| Mots réservés | Description |
+| :------------ | :---------- |
+| SELECT | Sélectionne |
+| FROM | Choisit les tables |
+| WHERE | Filtre le résultat avec des critères |
+| DISTINCT | Supprime les doublons |
+| ORDER BY | Trie le résultat |
+| BETWEEN ... AND | Filtre dans une plage de nombres |
+| LIKE ... % | Désigne une chaîne de caractères |
+| LIKE ... _ | Représente un caractère |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
