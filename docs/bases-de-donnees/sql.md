@@ -234,7 +234,7 @@ UPDATE stock SET prix=499 WHERE description="canapé 2 places";
 ```
 ````
 
-## Suppression d'un élément
+## Suppression d'éléments
 
 Il est aussi possible de supprimer un élément, c'est-à-dire une ligne complète
 d'une table.
