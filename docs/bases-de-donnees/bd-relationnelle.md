@@ -12,9 +12,6 @@ facilement accessible, géré et mis à jour par ses utilisateurs. Dans une éco
 toutes les données relatives aux élèves et aux enseignants sont stockées dans
 une base de données.
 
-<!-- TODO: Afficher le menu du contenu, même lorsqu'une note est dans la marge
-           lorsqu'il y a la place -->
-
 ## Tableur[^sn1]
 
 Une approche simple est d'utiliser un tableur pour stocker les informations.
@@ -186,7 +183,7 @@ INSERT INTO client VALUES (4, 'M', 'Stephen', 'Kleene');
 ```
 ````
 
-## Exercice 7
+## Exercice 8
 
 Écrire les instructions SQL permettant de créer la table **achat** et d'y
 enregistrer les achats effectués par les clients:

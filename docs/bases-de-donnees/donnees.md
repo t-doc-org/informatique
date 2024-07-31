@@ -16,7 +16,7 @@ Pour retrouver facilement ses documents:
 
 1. Utiliser une hiérarchie de dossiers adéquate.\
 Exemples: 1ère année, 2e année, maths, informatique, programmation, bases de
-données
+donnée
 2. Choisir des noms de fichier qui permettent de savoir ce qu'ils contiennent.\
 Exemples: ex1, théorie, exercices
 ```

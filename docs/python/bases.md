@@ -136,7 +136,7 @@ print(a % b)
 réponse:
 
 1. 452.52 + 27.78 =
-2. 5.65 \cdot 3.4 =
+2. 5.65 * 3.4 =
 3. 4 569 - 8 532 =
 4. 56 / 3 =
 5. Calculer le quotient et le reste de la division de 345 par 37.
