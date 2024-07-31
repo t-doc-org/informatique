@@ -3,7 +3,7 @@
 
 # Base de données
 
-Nous avons vu précedemment qu'il est pratique de stocker des données
+Nous avons vu précédemment qu'il est pratique de stocker des données
 semi-structurées dans des tables (ou tableaux). Grâce au langage SQL, il est
 facile de les créer et de les manipuler.
 
@@ -36,9 +36,9 @@ achats avec un tableau:
 
 Que se passe-t-il si un client change d'adresse?
 
-Les inconvénients de cette réprésentation sont les suivants:
+Les inconvénients de cette représentation sont les suivants:
 1. Les informations sont **redondantes**: l'adresse du client ou la description
-du produit apparaîssent sur plusieurs lignes.
+du produit apparaissent sur plusieurs lignes.
 2. S'il y a un changement, il faut le faire à plusieurs endroits, sinon les
 données ne sont plus cohérentes.
 
@@ -79,7 +79,7 @@ On ajoute un numéro de client unique qui permet de différencier les clients.
 | 1 | 2 |
 
 
-<!-- TODO: Améliorer le rendu des diagrammes. -->
+<!-- TODO: Améliorer le rendu des diagrammes (titre, center, ...). -->
 
 ```{graphviz}
 digraph UML_Class_diagram {
@@ -154,7 +154,7 @@ digraph UML_Class_diagram {
 ## Exercice 7
 
 Écrire une instruction SQL qui permet de créer la table **client** ci-dessous,
-sachant que **no_c** est un entier et que **titre**, **prenom** et **sont** sont
+sachant que **no_c** est un entier et que **titre**, **prenom** et **nom** sont
 des chaînes de caractères avec respectivement maximum de 3, 20 et 20 caractères:
 
 | no_c | titre | prenom | nom |
@@ -191,7 +191,7 @@ INSERT INTO client VALUES (4, 'M', 'Stephen', 'Kleene');
 Écrire les instructions SQL permettant de créer la table **achat** et d'y
 enregistrer les achats effectués par les clients:
 1. Alan Turing a acheté le canapé 2 places Ektrop.
-2. Ada Lovelace a également achaté le canapé Ektrop.
+2. Ada Lovelace a également acheté le canapé Ektrop.
 3. Albert Einstein a acheté la structure de lit et le canapé.
 4. Stephen Kleene n'a rien acheté.
 

@@ -26,8 +26,8 @@ l'exercice).
 
 ## Fonction `print()`
 
-La fonction `print()` permet d'afficher d'afficher une phrase ou la valeur d'un
-objet sur la console.
+La fonction `print()` permet d'afficher une phrase ou la valeur d'un objet sur
+la console.
 
 ```{code-block} python
 :caption: Exemple
@@ -87,7 +87,7 @@ nombres.
 | :-------: | :-: | :-----: | :------: |
 | + | Addition | 3+4 | 7 |
 | - | Soustraction | 9-12 | -3 |
-| * | Mutliplication | 5*6| 30 |
+| * | Multiplication | 5*6| 30 |
 | / | Division | 11/2 | 5.5 |
 | ** | Puissance | 2**3 | 8 |
 | // | Division entière | 26//6 | 4 |
@@ -97,7 +97,7 @@ nombres.
 
 1. Effectuer mentalement les 7 opérations ci-dessus avec les nombres 13 et 2.
 2. Écrire un programme qui permet d'effectuer les 7 opérations ci-dessus avec 13
-et 2 et d'afficher le résulat. Les résultats sont-ils les mêmes qu'au point
+et 2 et d'afficher le résultat. Les résultats sont-ils les mêmes qu'au point
 précédent?
 3. Faire de même avec 10 et 3.
 4. Faire de même avec 8 et 5.

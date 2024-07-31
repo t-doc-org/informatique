@@ -5,16 +5,16 @@
 
 ## Gestion des données
 
-Losque l'on utilise un ordinateur, beaucoup de données sont générées: des
+Lorsque l'on utilise un ordinateur, beaucoup de données sont générées: des
 documents, des images, des vidéos, de la musique, des mails, etc.
-Ces différents **fichiers** sont accessibles sur votre ordinteur grâce aux
+Ces différents **fichiers** sont accessibles sur votre ordinateur grâce au
 **système de fichiers**. Chaque fichier a une **extension** propre dépendante du
 type de données qu'il contient (.txt, .docx, .pdf, .png, .jpg, .mp3, .py)
 
 ```{tip}
 Pour retrouver facilement ses documents:
 
-1. Utiliser une hiérachie de dossiers adéquate.\
+1. Utiliser une hiérarchie de dossiers adéquate.\
 Exemples: 1ère année, 2e année, maths, informatique, programmation, bases de
 données
 2. Choisir des noms de fichier qui permettent de savoir ce qu'ils contiennent.\
@@ -24,7 +24,7 @@ Exemples: ex1, théorie, exercices
 Il existe 3 manières d'enregistrer des données:
 
 1. Le **stockage** est l'enregistrement des fichiers sous forme de données
-binaires sur un support physique (disque dur, clé USB, carte SSD, etc).
+binaires sur un support physique (disque dur, clé USB, carte SSD, etc.).
 2. La **sauvegarde** (backup en anglais) est une copie des données pertinentes à
 garder sous la main pour une restauration (restore en anglais) rapide en cas de
 besoin.
@@ -32,7 +32,7 @@ besoin.
 à conserver, en général, pour des raisons légales.
 
 Les sauvegardes sont importantes, car les pertes de données complètes ou
-patielles peuvent arriver à tout moment. En voici quelques exemples:
+partielles peuvent arriver à tout moment. En voici quelques exemples:
 
 1. Perte ou vol de matériel (ordinateur, téléphone, disque dur externe, etc.)
 2. Défaut matériel ou logiciel (ordinateur qui ne démarre plus)
@@ -76,7 +76,7 @@ Exemples: des utilisateurs, des jeux, des élèves, des livres.
 entités. Une colonne est caractérisée par son nom qui désigne la propriété
 concernée.
 - Une ligne du tableau correspond à **une et une seule entité** et est formée
-de la liste des valeurs asssociées à chacune des propriétés pour l'entité
+de la liste des valeurs associées à chacune des propriétés pour l'entité
 concernée.
 
 ```{image} images/tableau.png
@@ -95,7 +95,7 @@ Separated Values).\
 Chaque ligne du fichier CVS correspond à une ligne de la
 table.\
 La première ligne du fichier énumère les noms des attributs des entités. Chaque
-ligne suivante correpond à une entité.
+ligne suivante correspond à une entité.
 
 ```{code-block} text
 :caption: eleves.cvs
