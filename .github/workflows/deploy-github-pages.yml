@@ -24,11 +24,17 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+      - name: Update system package index
+        run: sudo apt-get update
+      - name: Install system packages
+        run: |
+          sudo apt-get install --yes \
+              graphviz
       - name: Install Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install packages
+      - name: Install Python packages
         run: |
           pip install \
               myst-parser==3.0.1 \
