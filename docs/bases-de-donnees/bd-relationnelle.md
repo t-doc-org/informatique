@@ -76,9 +76,10 @@ On ajoute un numéro de client unique qui permet de différencier les clients.
 | 1 | 2 |
 
 
-<!-- TODO: Améliorer le rendu des diagrammes (titre, center, ...). -->
+<!-- TODO: Améliorer le rendu des diagrammes (titre, couleur). -->
 
 ```{graphviz}
+:align: center
 digraph UML_Class_diagram {
   graph [
     label="Modèle logique"
@@ -150,7 +151,7 @@ digraph UML_Class_diagram {
 
 ## Exercice 7
 
-Écrire une instruction SQL qui permet de créer la table **client** ci-dessous,
+Écrire la requête SQL qui permet de créer la table **client** ci-dessous,
 sachant que **no_c** est un entier et que **titre**, **prenom** et **nom** sont
 des chaînes de caractères avec respectivement maximum de 3, 20 et 20 caractères:
 
@@ -166,7 +167,7 @@ Contrôler le résultat en affichant tous les éléments de la table.
 
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} sql
 CREATE TABLE client (
   no_c INT,
@@ -185,7 +186,7 @@ INSERT INTO client VALUES (4, 'M', 'Stephen', 'Kleene');
 
 ## Exercice 8
 
-Écrire les instructions SQL permettant de créer la table **achat** et d'y
+Écrire les requêtes SQL qui permet de créer la table **achat** et d'y
 enregistrer les achats effectués par les clients:
 1. Alan Turing a acheté le canapé 2 places Ektrop.
 2. Ada Lovelace a également acheté le canapé Ektrop.
@@ -200,10 +201,8 @@ enregistrer les achats effectués par les clients:
 
 Contrôler le résultat en affichant tous les éléments de la table.
 
-
-
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} sql
 CREATE TABLE achat (
   no_c INT,
@@ -214,5 +213,113 @@ INSERT INTO achat VALUES (3, 1);
 INSERT INTO achat VALUES (2, 1);
 INSERT INTO achat VALUES (1, 2);
 INSERT INTO achat VALUES (1, 1);
+```
+````
+
+## Requête sur plusieurs tables
+
+En SQL, il est souvent utile de fusionner toute ou une partie de deux ou
+plusieurs tables. La table de l'exercice précédent n'est pas très lisible pour
+un humain:
+
+| no_c | no_p |
+| :--: | :--: |
+| 3 | 1 |
+| 2 | 1 |
+| 1 | 2 |
+| 1 | 1 |
+
+Il serait préférable que la table contienne aussi le prénom et le nom du client,
+ainsi que le nom du produit acheté./
+Cela se fait au moyen d'une jointure. Celle-ci va créer une nouvelle table avec
+les informations souhaitées.
+
+| no_c | prenom | nom | no_p | nom |
+| :--: | :----: | :-: | :--: | :-: |
+| 3 | Alan | Turing | 1 | Ektorp |
+| 2 | Ada | Lovelace | 1 | Ektorp |
+| 1 | Albert | Einstein | 2 | Brimnes |
+| 1 | Albert | Einstein | 1 | Ektorp |
+
+Cela se fait avec une jointure entre 3 tables.
+
+Pour joindre deux tables, il faut utiliser l'instruction
+`JOIN ... ON ... WHERE`.
+
+La requête suivante permet d'afficher le(s) nom(s) du (des) produits acheté(s)
+par le client n°3.
+
+```{code-block} sql
+SELECT nom FROM produit           -- sélectionne l'attribut nom de la table produit
+
+JOIN achat                        -- joint la table précédente avec la table achat
+ON produit.no_p=achat.no_p        -- condition de jointure
+
+WHERE no_c=3;                     -- critère de sélection
+```
+
+## Exercice 9
+
+Écrire la requête SQL qui permet d'afficher le(s) nom(s) du (des) produits
+acheté(s) par le client n°1.
+
+````{admonition} Solution
+:class: note dropdown
+```{code-block} sql
+SELECT nom FROM produit
+
+JOIN achat
+ON produit.no_p=achat.no_p
+
+WHERE no_c=1;
+```
+````
+
+## Exercice 10
+
+Écrire la requête SQL qui permet d'afficher le **titre**, le **prénom** et le
+**nom** des clients ayant acheté le produit Ektorp.\
+Trier les valeurs dans l'ordre alphabétique des prénoms.
+
+```{hint}
+Pour afficher les valeurs dans l'ordre alphabétique selon un attribut, utiliser
+l'instruction\
+`ORDER BY {nom de l'attribut} ASC`.
+```
+
+````{admonition} Solution
+:class: note dropdown
+```{code-block} sql
+SELECT client.titre, client.prenom, client.nom FROM client
+
+JOIN achat ON
+client.no_c = achat.no_c
+
+WHERE achat.no_p = 1
+ORDER BY prenom ASC;
+```
+````
+
+## Exercice 11
+
+Écrire la requête SQL qui permet d'afficher le tableau ci-dessous (trié selon
+les prénoms):
+| no_c | prenom | nom | no_p | nom | prix |
+| :--: | :----: | :-: | :--: | :-: | :-: |
+| 2 | Ada | Lovelace | 1 | Ektorp | 599 |
+| 3 | Alan | Turing | 1 | Ektorp | 599 |
+| 1 | Albert | Einstein | 1 | Ektorp | 599 |
+| 1 | Albert | Einstein | 2 | Brimnes | 129 |
+
+
+````{admonition} Solution
+:class: note dropdown
+```{code-block} sql
+SELECT client.no_c, client.prenom, client.nom, produit.no_p, produit.nom, prix FROM client
+
+JOIN achat ON client.no_c = achat.no_c        -- joins les tables client et achat
+JOIN produit ON achat.no_p=produit.no_p       -- joins les tables achats et produit
+
+ORDER BY prenom ASC;
 ```
 ````

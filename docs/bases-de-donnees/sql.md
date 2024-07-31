@@ -26,8 +26,8 @@ Chaque instruction doit se terminer par un point-virgule.
 
 ```{code-block} sql
 CREATE TABLE stock (
-    id INT,                 # nombre entier (integer)
-    article VARCHAR(15),    # chaîne de caractères de maximum 15 caractères
+    id INT,                 - nombre entier (integer)
+    article VARCHAR(15),    - chaîne de caractères de maximum 15 caractères
     couleur VARCHAR(15),
     taille varchar(3),
     quantite INT,
@@ -37,7 +37,7 @@ CREATE TABLE stock (
 
 ## Exercice 1
 
-Écrire l'instruction SQL qui permet de créer la table **produit** ci-dessous,
+Écrire la requête SQL qui permet de créer la table **produit** ci-dessous,
 sachant que **no_p** et **prix** sont des entiers et que **nom** et **description** sont des chaînes
 de caractères avec respectivement maximum de 20 et 100 caractères:
 
@@ -50,7 +50,7 @@ de caractères avec respectivement maximum de 20 et 100 caractères:
 <!-- TODO: Ajouter un affichage de la table créée si c'est possible -->
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} sql
 CREATE TABLE produit (
     no_p INT,
@@ -88,7 +88,7 @@ apostrophes.
 | 3 | Jaren | matelas à ressorts | 59 |
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} sql
 INSERT INTO produit VALUES(1, "Ektorp", "canapé 2 places", 599);
 INSERT INTO produit VALUES(2, "Brimnes", "structure de lit", 129);
@@ -119,21 +119,21 @@ SELECT article, quantite FROM stock;
 
 ## Exercice 3
 
-Écrire l'instruction SQL qui permet d'afficher toutes les éléments de la table
+Écrire la requête qui permet d'afficher toutes les éléments de la table
 **produit**.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} sql
 SELECT * FROM produit;
 ```
 ````
 
-Écrire l'instruction SQL qui permet d'afficher le nom de tous les produits et
+Écrire la requête SQL qui permet d'afficher le nom de tous les produits et
 celle qui permet d'afficher le nom et le prix de tous les prduits.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} sql
 SELECT nom FROM produit;
 SELECT nom, prix FROM produit;
@@ -181,21 +181,21 @@ Celle-ci affichera le résultat suivant:
 
 ## Exercice 4
 
-Écrire l'instruction SQL qui permet d'afficher tous les attributs du produit
+Écrire la requête SQL qui permet d'afficher tous les attributs du produit
 Brimnes.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} sql
 SELECT * FROM produit WHERE nom="Brimnes";
 ```
 ````
 
-Écrire l'instruction SQL qui permet d'afficher uniquement la description du
-produit Ektorp.
+Écrire la requête SQL qui permet d'afficher uniquement la description du produit
+Ektorp.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} sql
 SELECT description FROM poduit WHERE nom="Ektorp";
 ```
@@ -228,7 +228,7 @@ Mettre à jour le prix du **canapé 2 places** qui ne coûte plus que 499 CHF.\
 Contrôler le résultat en affichant tous les éléments de la table produit.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} sql
 UPDATE stock SET prix=499 WHERE description="canapé 2 places";
 ```
@@ -259,7 +259,7 @@ Supprimer le produit dont le no_p est 3.\
 Contrôler le résultat en affichant tous les éléments de la table produit.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} sql
 DELETE FROM produit WHERE no_p=3;
 ```

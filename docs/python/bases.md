@@ -47,7 +47,7 @@ print("Hello World!")
 <!-- TODO: Validation de l'exercice par un vu, s'il est correctement réalisé -->
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 print("Salut")
@@ -67,7 +67,7 @@ récrire 10 fois la même chose.
 5. Ajouter un commentaire qui explique ce que tu as fait au point précédent.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 print("Bonjour tout le monde!")
@@ -105,7 +105,7 @@ précédent?
 par un commentaire dans le code.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 print(13 + 2)
@@ -142,7 +142,7 @@ réponse:
 5. Calculer le quotient et le reste de la division de 345 par 37.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 print("452.52 + 27.78 = ", 452.52 + 27.78)
@@ -170,7 +170,7 @@ variables pour stocker le prix avant et après réduction).
 5. Arrondir les prix aux centimes.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 prix_livre = 9.30
@@ -233,7 +233,7 @@ connaissance.\
 > Je vois que tu habites à {afficher le lieu}.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 nom = input("Quel est ton nom? ")
@@ -257,7 +257,7 @@ Le programme affichera:
 > Tu es né en {afficher l'année de naissance}.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 age = int(input("Quel âge avais-tu au 31 décembre? "))
@@ -273,7 +273,7 @@ Le programme affichera:
 > {afficher le nombre de mégaoctets} Mo  donnent {afficher le nombre de bits} bits.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 nb_mo = float(input("Combien de mégaoctets veux-tu convertir en bits? "))

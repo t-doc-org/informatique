@@ -5,3 +5,5 @@
 
 - Améliorer la présentation de la numérotation de blocs de code: plus d'espace
   entre le numéro et le code, bord autour du numéro.
+
+- Rendu pdf avec les solutions (les dropdowns ouverts).
