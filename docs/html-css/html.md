@@ -242,7 +242,7 @@ tableaux
 ### Exercice 1
 
 But: Comprendre la structure principale d'un document HTML.\
-Faire l'[ex 1](https://moodle.fritic.ch/mod/hvp/view.php?id=112347) sur Moodle.
+Faire [ex 1](https://moodle.fritic.ch/mod/hvp/view.php?id=112347) sur Moodle.
 
 ### Exercice 2
 

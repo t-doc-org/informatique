@@ -26,8 +26,8 @@ l'exercice).
 
 ## Fonction `print()`
 
-La fonction `print()` permet d'afficher d'afficher une phrase ou la valeur d'un
-objet sur la console.
+La fonction `print()` permet d'afficher une phrase ou la valeur d'un objet sur
+la console.
 
 ```{code-block} python
 :caption: Exemple
@@ -47,7 +47,7 @@ print("Hello World!")
 <!-- TODO: Validation de l'exercice par un vu, s'il est correctement réalisé -->
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 print("Salut")
@@ -67,7 +67,7 @@ récrire 10 fois la même chose.
 5. Ajouter un commentaire qui explique ce que tu as fait au point précédent.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 print("Bonjour tout le monde!")
@@ -87,7 +87,7 @@ nombres.
 | :-------: | :-: | :-----: | :------: |
 | + | Addition | 3+4 | 7 |
 | - | Soustraction | 9-12 | -3 |
-| * | Mutliplication | 5*6| 30 |
+| * | Multiplication | 5*6| 30 |
 | / | Division | 11/2 | 5.5 |
 | ** | Puissance | 2**3 | 8 |
 | // | Division entière | 26//6 | 4 |
@@ -97,7 +97,7 @@ nombres.
 
 1. Effectuer mentalement les 7 opérations ci-dessus avec les nombres 13 et 2.
 2. Écrire un programme qui permet d'effectuer les 7 opérations ci-dessus avec 13
-et 2 et d'afficher le résulat. Les résultats sont-ils les mêmes qu'au point
+et 2 et d'afficher le résultat. Les résultats sont-ils les mêmes qu'au point
 précédent?
 3. Faire de même avec 10 et 3.
 4. Faire de même avec 8 et 5.
@@ -105,7 +105,7 @@ précédent?
 par un commentaire dans le code.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 print(13 + 2)
@@ -136,13 +136,13 @@ print(a % b)
 réponse:
 
 1. 452.52 + 27.78 =
-2. 5.65 \cdot 3.4 =
+2. 5.65 * 3.4 =
 3. 4 569 - 8 532 =
 4. 56 / 3 =
 5. Calculer le quotient et le reste de la division de 345 par 37.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 print("452.52 + 27.78 = ", 452.52 + 27.78)
@@ -170,7 +170,7 @@ variables pour stocker le prix avant et après réduction).
 5. Arrondir les prix aux centimes.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 prix_livre = 9.30
@@ -233,7 +233,7 @@ connaissance.\
 > Je vois que tu habites à {afficher le lieu}.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 nom = input("Quel est ton nom? ")
@@ -257,7 +257,7 @@ Le programme affichera:
 > Tu es né en {afficher l'année de naissance}.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 age = int(input("Quel âge avais-tu au 31 décembre? "))
@@ -273,7 +273,7 @@ Le programme affichera:
 > {afficher le nombre de mégaoctets} Mo  donnent {afficher le nombre de bits} bits.
 
 ````{admonition} Solution
-:class: hint dropdown
+:class: note dropdown
 ```{code-block} python
 :linenos:
 nb_mo = float(input("Combien de mégaoctets veux-tu convertir en bits? "))

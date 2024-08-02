@@ -9,6 +9,8 @@ html_title = "Informatique"
 copyright = "2024 Caroline Blank"
 language = 'fr'
 
+smartquotes = False
+
 extensions = [
     'myst_parser',
     'sphinx.ext.duration',
@@ -41,7 +43,6 @@ myst_enable_extensions = [
     'html_image',
     # 'linkify',
     # 'replacements',
-    # 'smartquotes',
     'strikethrough',
     'substitution',
     'tasklist',

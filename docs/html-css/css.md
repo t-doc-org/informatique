@@ -14,7 +14,7 @@ les paragraphes `<p></p>`
 
 La règle commence par un sélecteur qui indique à quelles balises cette règle
 doit s'appliquer. Ensuite, la liste des propriétés ainsi que leurs valeurs sont
-sont indiquées entre accolades.
+indiquées entre accolades.
 
 ```{code} css
 sélecteur {
@@ -58,9 +58,9 @@ La balise `<link>` a deux attributs:
 
 Dans ce cours, nous allons travailler sur 3 types de sélecteurs:
 
-1. sélecteur de type
-2. sélecteur d'identifiant
-3. sélecteu de classe
+1. Sélecteur de type
+2. Sélecteur d'identifiant
+3. Sélecteur de classe
 
 ### Sélecteur de type
 
@@ -114,7 +114,7 @@ Ce style ne s'appliquera qu'à un élément unique, la balise dont l'id est
 ### Sélecteur par classe
 
 Le sélecteur de classe permet d'appliquer un style à plusieurs éléments qui
-appartiennent à un même classe (groupe). Pour cela, il faut ajouter un nouvel
+appartiennent à une même classe (groupe). Pour cela, il faut ajouter un nouvel
 attribut class à la balise HTML concernée.\par
 
 <table> <tr><th>Fichier HTML</th><th>Fichier CSS</th></tr>
