@@ -47,6 +47,8 @@ jobs:
               sphinx-togglebutton==0.3.2
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - name: Build HTML
         run: make html
       - name: Configure GitHub Pages
