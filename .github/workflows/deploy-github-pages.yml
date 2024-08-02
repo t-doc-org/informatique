@@ -52,7 +52,7 @@ jobs:
       - name: Checkout common repository
         uses: actions/checkout@v4
         with:
-          repository: t-docs/common.git
+          repository: https://github.com/t-docs/common.git
           ref: main
           path: common
       - name: Build HTML
