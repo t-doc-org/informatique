@@ -20,6 +20,8 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.mathjax',
     'sphinx.ext.todo',
+    'sphinx_copybutton',
+    'sphinx_design',
     # TODO: sphinx_exercise force "numfig = True", et la numérotation ne peut
     #       pas être désactivée par type, page ou bloc
     #       <https://github.com/sphinx-doc/sphinx/issues/10316>.
