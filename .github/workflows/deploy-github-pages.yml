@@ -53,7 +53,7 @@ jobs:
           path: common
           ssh-key: ${{ secrets.DEPLOY_COMMON }}
       - name: Install common package
-        run: pip install common
+        run: pip install ./common
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
