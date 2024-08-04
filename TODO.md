@@ -1,9 +1,11 @@
 # Choses à faire
 
-- Supprimer le texte "Click to show" dans les dropdowns. Devrait être possible
-  juste avec du CSS.
+- TODO: Décider entre les targets "html" et "dirhtml".
 
-- Améliorer la présentation de la numérotation de blocs de code: plus d'espace
-  entre le numéro et le code, bord autour du numéro.
+- TODO: Supprimer le texte "Click to show" dans les dropdowns. Devrait être
+  possible juste avec du CSS.
 
-- Rendu pdf avec les solutions (les dropdowns ouverts).
+- TODO: Améliorer la présentation de la numérotation de blocs de code: plus
+  d'espace entre le numéro et le code, bord autour du numéro.
+
+- TODO: Rendu pdf avec les solutions (les dropdowns ouverts).

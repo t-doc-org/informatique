@@ -4,6 +4,7 @@
 
 *.orig
 __pycache__
+Makefile.local
 
 docs/_build
 tmp/

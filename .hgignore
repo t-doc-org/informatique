@@ -5,6 +5,7 @@
 syntax: glob
 *.orig
 __pycache__
+Makefile.local
 
 syntax: regexp
 ^docs/_build

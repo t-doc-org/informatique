@@ -2,14 +2,20 @@
 # Copyright 2024 Remy Blank <remy@c-space.org>
 # SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+# TODO: Migrer la majeure partie de tout ceci dans t-doc/common?
+
 # Configuration.
 COLOR = 1
-SPHINX_OPTS ?= --jobs=auto --nitpicky --fail-on-warning
+SPHINX_OPTS ?= --jobs=auto --fail-on-warning
 SPHINX_BUILD ?= sphinx-build
 SOURCE = docs
 BUILD = docs/_build
 
+PYTHON = python
+PYTHONPATH =
+
 # ANSI escape codes.
+_V := $(if $(VERBOSE:0=),,@)
 _ANSI = $(if $(COLOR:0=),\e[$(1)m)
 _NORM := $(call _ANSI,39)
 _BLACK := $(call _ANSI,30)
@@ -32,17 +38,24 @@ _WHITE := $(call _ANSI,97)
 .PHONY: default
 default: help
 
+-include Makefile.local
+.PHONY: Makefile.local
+Makefile.local:
+
 .PHONY: help
 help:
-	@echo -e "$(_WHITE)Make targets:$(_NORM)"
-	@echo -e "  $(_LBLUE)serve$(_NORM): Build the $(_LBLUE)html$(_NORM) target, then serve the result on http://localhost:8000"
-	@echo -e
-	@$(SPHINX_BUILD) -M help "$(SOURCE)" "$(BUILD)" $(SPHINX_OPTS) $(O)
+	$(_V)echo -e "$(_WHITE)Make targets:$(_NORM)"
+	$(_V)echo -e "  $(_LBLUE)serve$(_NORM): Build the $(_LBLUE)html$(_NORM) target, then serve the result on http://localhost:8000"
+	$(_V)echo -e
+	$(_V)PYTHONPATH="$(PYTHONPATH)" $(SPHINX_BUILD) -M help \
+		"$(SOURCE)" "$(BUILD)" $(SPHINX_OPTS) $(O)
 
 .PHONY: serve
 serve: html
-	@echo -e "$(_WHITE)Serving:$(_NORM) $(_LBLUE)http://localhost:8000$(_NORM)"
-	@python -m http.server --bind=localhost --directory="$(BUILD)/html"
+	$(_V)echo -e "$(_WHITE)Serving:$(_NORM) $(_LBLUE)http://localhost:8000$(_NORM)"
+	$(_V)PYTHONPATH="$(PYTHONPATH)" $(PYTHON) -m http.server \
+		--bind=localhost --directory="$(BUILD)/html"
 
 %:
-	@$(SPHINX_BUILD) -M $@ "$(SOURCE)" "$(BUILD)" $(SPHINX_OPTS) $(O)
+	$(_V)PYTHONPATH="$(PYTHONPATH)" $(SPHINX_BUILD) -M $@ \
+		"$(SOURCE)" "$(BUILD)" $(SPHINX_OPTS) $(O)

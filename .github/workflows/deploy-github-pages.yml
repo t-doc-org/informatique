@@ -38,24 +38,26 @@ jobs:
         run: |
           pip install \
               myst-parser==3.0.1 \
-              sphinx==7.3.7 \
+              Sphinx==7.3.7 \
               sphinx-book-theme==1.1.3 \
               sphinx-copybutton==0.5.2 \
               sphinx_design==0.6.0 \
               sphinx-exercise==0.4.1 \
               sphinx-proof==0.1.3 \
               sphinx-togglebutton==0.3.2
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          path: repo
       - name: Checkout common repository
         uses: actions/checkout@v4
         with:
           repository: t-docs/common
           ref: main
           path: common
-          ssh-key: ${{secrets.DEPLOY_COMMON}}
+          ssh-key: ${{ secrets.DEPLOY_COMMON }}
+      - Install common package
+        run: pip install common
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          path: repo
       - name: Build HTML
         run: make -C repo html
       - name: Configure GitHub Pages
