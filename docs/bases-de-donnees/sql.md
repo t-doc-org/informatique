@@ -1,7 +1,7 @@
 <!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 
-# La langage SQL
+# Langage SQL
 
 Une **base de données** (BD) est un ensemble structuré d'informations
 représentées par des tables et des relations entre ces tables. **SQL**
@@ -21,7 +21,7 @@ mais ce n'est pas obligatoire.
 
 Pour créer une table, il faut utiliser l'instruction `CREATE TABLE {nom de la table} (...)`
 suivi du nom de la table. Entre parenthèses, nous indiquons la liste des
-attributs, ainsi que leur type.\
+attributs, ainsi que leur [type](./type-donnees.md).\
 Chaque instruction doit se terminer par un point-virgule.
 
 ```{code-block} sql

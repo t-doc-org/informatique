@@ -8,5 +8,6 @@
 
 donnees
 sql
+type-donnees
 bd-relationnelle
 ```
