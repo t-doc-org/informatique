@@ -53,9 +53,14 @@ Les nombres réels
 
 ## Exercice
 
+<!-- TODO: Remplacer le pdf par un pdf éditable avec ouverture directement dans
+           le browser -->
 Remplir le tableau dans le document joint [Exercice sur les types](./exercice-types.pdf).
 
+## Valeur NULL
 
+EN SQL, il existe une valeur notée **NULL**. Elle représente une absence de
+valeur. Elle peut remplacer une valeur quel que soit le type attendu.
 
 
 

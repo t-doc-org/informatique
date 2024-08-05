@@ -29,7 +29,7 @@ CREATE TABLE stock (
     id INT,                 - nombre entier (integer)
     article VARCHAR(15),    - chaîne de caractères de maximum 15 caractères
     couleur VARCHAR(15),
-    taille varchar(3),
+    taille VARCHAR(3),
     quantite INT,
     prixUnitaire INT
 );
@@ -265,32 +265,40 @@ DELETE FROM produit WHERE no_p=3;
 ```
 ````
 
-## Liste des requêtes SQL
+## Colonnes sans valeur
 
-### Modification de la base de données
+Nous souhaitons compléter notre table stock avec l'article Pantalon dont le
+numéro de produit est 8 et le prix unitaire
+45 CHF. Nous ne connaissons pas (encore) la couleur, la taille et la quantité.
 
-| Mots réservés | Description |
-| :------------ | :---------- |
-| CREATE TABLE | Crée une table |
-| INSERT INTO ... VALUES | Ajoute un élément (une ligne à la table) |
-| UPDATE ... SET | Met à jour des valeurs |
-| DELETE | Supprime un élément (supprime une ligne à la table) |
-| ALTER TABLE | Modifie la structure de la table (ajout de colonne, ...) |
-| DROP TABLE | Supprime une table |
-| DROP DATABASE | Supprime une base de données |
+Nous ne pouvons pas utiliser la requête utilisée précédemment (liste de tous les
+attributs dans l'ordre), car nous n'avons pas toutes les informations, mais nous
+pouvons spécifier que certains attributs.
 
-### Consultation de la base de données
+```{code-block} sql
+INSERT INTO stock (no_p, article, prixUnitaire) VALUES (8, "pantalon" , 20);
+```
+<!-- TODO: Faire en sorte que le lien amène au bon endroit de la page-->
+Une colonne sans valeur contient la valeur [NULL](./type-donnees.md).
 
-| Mots réservés | Description |
-| :------------ | :---------- |
-| SELECT | Sélectionne |
-| FROM | Choisit les tables |
-| WHERE | Filtre le résultat avec des critères |
-| DISTINCT | Supprime les doublons |
-| ORDER BY | Trie le résultat |
-| BETWEEN ... AND | Filtre dans une plage de nombres |
-| LIKE ... % | Désigne une chaîne de caractères |
-| LIKE ... _ | Représente un caractère |
+Certaines colonnes ne doivent pas être vide sinon cela posera problème, comme
+id qui est un numéro unique qui permet de différencier les différents articles
+ou la colonne article qui permet de savoir quel est le type d'article.
+Il est possible d'obliger l'utilisateur à fournir ces informations lorsqu'il
+ajoute un élément en utilisant les mots **NOT NULL** lors de la création de la
+table.
+
+ ```{code-block} sql
+CREATE TABLE stock (
+    id INT NOT NULL,
+    article VARCHAR(15) NOT NULL,
+    couleur VARCHAR(15),
+    taille VARCHAR(3),
+    quantite INT,
+    prixUnitaire INT
+);
+```
+
 
 
 
