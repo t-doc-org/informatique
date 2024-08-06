@@ -57,6 +57,7 @@ Les nombres réels
            le browser -->
 Remplir le tableau dans le document joint [Exercice sur les types](./exercice-types.pdf).
 
+(null)=
 ## Valeur NULL
 
 EN SQL, il existe une valeur notée **NULL**. Elle représente une absence de
