@@ -248,6 +248,7 @@ La table contact ressemble à cela:
              si les élèves"travaillent sur replit.com
              [contacts.sql](./contacts.sql) -->
 
+
 1. Rechercher les adresses mail de toutes les personnes célibataires.
 
 ````{admonition} Solution
@@ -257,7 +258,23 @@ SELECT email FROM contact WHERE statut='Célibataire';
 ```
 ````
 
-2. Recherche toutes les personnes qui habitent à Lausanne.
+2. Rechercher toutes les personnes qui habitent à Val-d'Illiez.
+
+```{tip}
+Le guillemet simple est utilisé en SQL pour indiqué le début et la fin d'une
+chaîne de caractères. Par conséquent, si une chaîne de caractère contient un
+apostrophe, il faut mettre deux guillemets pour que le logiciel comprenne que
+ce n'est pas la fin de la chaîne de caractères, mais un apostrophe.
+```
+
+````{admonition} Solution
+:class: note dropdown
+```{code-block} sql
+SELECT * FROM contact WHERE lieu='Val-d''Illiez';
+```
+````
+
+3. Recherche toutes les personnes qui habitent à Lausanne.
 
 ````{admonition} Solution
 :class: note dropdown
@@ -266,7 +283,7 @@ SELECT * FROM contact WHERE lieu='Lausanne';
 ```
 ````
 
-3. Rechercher toutes les personnes qui habitent dans la région lausannoise (le
+4. Rechercher toutes les personnes qui habitent dans la région lausannoise (le
 code postal doit commencer par 10..).
 
 ````{tip}
@@ -292,7 +309,7 @@ SELECT * FROM contact WHERE code_postal LIKE '10%';
 ```
 ````
 
-4. Rechercher le nom, le prénom et la date de naissance de toutes les personnes
+5. Rechercher le nom, le prénom et la date de naissance de toutes les personnes
 nées 1995.
 
 ````{admonition} Solution
@@ -302,7 +319,7 @@ SELECT nom, prenom FROM contact WHERE naissance LIKE '1995-%';
 ```
 ````
 
-5. Rechercher les contacts qui aiment le cinéma.
+6. Rechercher les contacts qui aiment le cinéma.
 
 ````{admonition} Solution
 :class: note dropdown
@@ -311,7 +328,7 @@ SELECT * FROM contact WHERE interets LIKE '%Cinéma%';
 ```
 ````
 
-6. Rechercher le nom, le prénom et la date de naissance de toutes les personnes
+7. Rechercher le nom, le prénom et la date de naissance de toutes les personnes
 nées en juin.
 
 ````{admonition} Solution
@@ -321,7 +338,7 @@ SELECT nom, prenom, naissance FROM contact WHERE naissance LIKE '%-06-%';
 ```
 ````
 
-7. Rechercher tous les hommes qui sont célibataire et habitent dans la
+8. Rechercher tous les hommes qui sont célibataire et habitent dans la
 région genevoise (12..).
 
 ````{admonition} Solution
@@ -331,7 +348,7 @@ SELECT * FROM contact WHERE sexe='M' AND statut='Célibataire' AND code_postal L
 ```
 ````
 
-8. Rechercher toutes les femmes qui sont divorcées et qui ont entre 30 et
+9. Rechercher toutes les femmes qui sont divorcées et qui ont entre 30 et
 40 ans.
 
 ````{admonition} Solution
