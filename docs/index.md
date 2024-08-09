@@ -10,4 +10,5 @@ architecture/index
 html-css/index
 python/index
 bases-de-donnees/index
+crypto/index
 ```

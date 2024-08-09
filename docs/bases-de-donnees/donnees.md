@@ -88,17 +88,17 @@ concernée.
 
 Pour enregistrer le contenu d'une table de données, il faut pouvoir sauvegarder
 sa structure et son contenu. Il existe différents types de fichiers texte qui
-permettent cela, notamment les formats **CVS**, **XML** et **JSON**.
+permettent cela, notamment les formats **CSV**, **XML** et **JSON**.
 
-**CVS** est l'abréviation pour valeurs séparées par des virgules (Coma
+**CSV** est l'abréviation pour valeurs séparées par des virgules (Coma
 Separated Values).\
-Chaque ligne du fichier CVS correspond à une ligne de la
+Chaque ligne du fichier CSV correspond à une ligne de la
 table.\
 La première ligne du fichier énumère les noms des attributs des entités. Chaque
 ligne suivante correspond à une entité.
 
 ```{code-block} text
-:caption: eleves.cvs
+:caption: eleves.csv
 nom, prenom, date de naissance, classe
 Dupont, Bob, 15.09.2007, 2F8
 Martin, Amandine, 01.01.2008, 2F7
