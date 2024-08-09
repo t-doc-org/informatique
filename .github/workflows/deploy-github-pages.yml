@@ -31,20 +31,10 @@ jobs:
           sudo apt-get install --yes \
               graphviz
       - name: Install Python
+        id: python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Install Python packages
-        run: |
-          pip install \
-              myst-parser==3.0.1 \
-              Sphinx==7.3.7 \
-              sphinx-book-theme==1.1.3 \
-              sphinx-copybutton==0.5.2 \
-              sphinx_design==0.6.0 \
-              sphinx-exercise==0.4.1 \
-              sphinx-proof==0.1.3 \
-              sphinx-togglebutton==0.3.2
       - name: Checkout common repository
         uses: actions/checkout@v4
         with:
@@ -52,8 +42,15 @@ jobs:
           ref: main
           path: common
           ssh-key: ${{ secrets.DEPLOY_COMMON }}
+      - name: Install Python packages
+        run: |
+          ${{ steps.python.outputs.python-path }} -m pip install \
+              $(${{ steps.python.outputs.python-path }} \
+                  common/tools/deps.py common/pyproject.toml \
+                  | sed -re 's/>=/==/g')
       - name: Install common package
-        run: pip install ./common
+        run: |
+          ${{ steps.python.outputs.python-path }} -m pip install ./common
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
