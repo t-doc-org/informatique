@@ -3,11 +3,26 @@
 
 # Cryptographie
 
+## Définitions
+
+...
+
 ## Cryptographie symétrique
 
-Il existe plusieurs types de cryptographie symétrique. Dans ce cours, nous
-allons étudier la substitution monoalphabétique et la substitution
-polyalphabétique.
+La **cryptographie symétrique**, également appelée cryptographie à clé secrète,
+est la méthode de chiffrement la plus ancienne. Elle repose sur l'utilisation
+d'une même clé pour chiffrer et déchiffrer un message.
+
+```{figure} images/crypt-sym.png
+:alt: Schéma de la cryptographie symétrique
+:align: center
+
+source: www.pgpi.org
+```
+
+## Transpositon
+
+Scytale ...
 
 ## Substitution monoalphabétique
 
