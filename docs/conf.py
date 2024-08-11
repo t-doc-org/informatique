@@ -2,10 +2,12 @@
 # Copyright 2024 Remy Blank <remy@c-space.org>
 # SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+import time
+
 from tdoc.common.defaults import *
 
 project = "Informatique"
-copyright = "2024 Caroline Blank"
+copyright = f"{time.strftime('%Y')} Caroline Blank"
 
 html_title = project
 html_short_title = html_title

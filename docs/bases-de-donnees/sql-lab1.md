@@ -6,17 +6,29 @@
 Le but de cette section est d'entraîner les concepts vus dans la section
 [](./sql.md).
 
-Voici la table canton contenant certaines informations sur des cantons suisses.
+Voici la table `canton` contenant certaines informations sur des cantons
+suisses.
 
-| com | abr | chef_lieu | nb_communes | population | superficie |
-| :----: | :--: | :-------: | :---------:  | :--------: | :--------: |
-| Fribourg | FR | Fribourg | 126 | 334465 | 1670.7 |
-| Genève | GE | Genève | 45 | 514114 | 282.48 |
-| Berne | BE | Berne | 335 | 1051437 | 5959.44 |
-| Zurich | ZH | Zurich | 160 | 1579967 | 1729 |
-| Tessin | TI | Bellinzone | 106 | 354023 | 2812.2 |
-| Grison | GR | Coire | 101 | 202538 | 7105.44 |
-| Uri | UR | Altdorf | 19 | 37317 | 1076.57 |
+```{exec} sql
+:name: sql-canton
+:class: hidden
+create table canton (
+    nom text not null,
+    abr text not null,
+    chef_lieu text not null,
+    nb_communes integer not null,
+    population integer not null,
+    superficie real not null
+);
+insert into canton values ('Fribourg', 'FR', 'Fribourg', 126, 334465, 1670.7);
+insert into canton values ('Genève', 'GE', 'Genève', 45, 514114, 282.48);
+insert into canton values ('Berne', 'BE', 'Berne', 335, 1051437, 5959.44);
+insert into canton values ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729);
+insert into canton values ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2);
+insert into canton values ('Grison', 'GR', 'Coire', 101, 202538, 7105.44);
+insert into canton values ('Uri', 'UR', 'Altdorf', 19, 37317, 1076.57);
+select * from canton;
+```
 
 ## Exercice 1
 
@@ -106,8 +118,8 @@ Indiquer ce qu'afficheront les requêtes suivantes:
 
 ## Exercice 2
 
-Créer et compléter la table canton avec des requêtes SQL. La table ne doit pas
-accepter les valeurs NULL.\
+Créer et compléter la table `canton` avec des requêtes SQL. La table ne doit pas
+accepter les valeurs `NULL`.\
 Contrôler les réponses de l'exercice précédent.
 
 ```{code-block} sql
@@ -133,6 +145,8 @@ INSERT INTO canton VALUES ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729);
 INSERT INTO canton VALUES ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2);
 INSERT INTO canton VALUES ('Grison', 'GR', 'Coire', 101, 202538, 7105.44);
 INSERT INTO canton VALUES ('URI', 'UR', 'Altdorf', 19, 37317, 1076.57);
+
+SELECT * FROM canton ORDER BY superficie;
 ```
 ````
 
@@ -234,16 +248,33 @@ cantons dont la population se trouvent entre 300'000 et 500'000 habitants.
 Une application de rencontres demande, à l'enregistrement sur son site, les
 informations suivantes: le nom, le prénom, l'adresse mail, le sexe,
 la date de naissance, le statut, le lieu et les interêts principaux.\
-Les champs obligatoires sont le nom, le prénom, adresse mail, le sexe et l'âge.
+Les champs obligatoires sont le nom, le prénom, adresse mail, le sexe et la date
+de naissance.
 
-La table contact ressemble à cela:
+La table `contact` ressemble à cela:
 
-| nom | prenom | email | sexe | anniversaire | statut | lieu | code_postal | interets |
-| :-: | :----: | :---: | :--: | :----------: | :----: | :--: | :---------: | :------: |
-| Dupont | Bob | dupont.bob@glog.com | M | 1990-09-10 | Divorcé | Villars-sur-Glânes | 1752 | Tennis, Animaux |
-| Martin | Anne | amartin@fri.ch | F | 1995-06-02 | Célibataire | Lausanne | 1000 | Escape game |
-| Dunant | Martine | martine.dunant@google.com | F | 1985-12-24 | Séparée | Val d'Illiez | 1873 | Lecture |
-| Schmidt | Léo | leo@cine.ch | M | 2000-01-01 | Célibataire | La Roche | 1634 | Cinéma, Jeux de société |
+```{exec} sql
+:name: sql-contact
+:class: hidden
+create table contact (
+    nom text not null,
+    prenom text not null,
+    email text not null,
+    sexe text not null,
+    anniversaire text not null,
+    statut text,
+    lieu text,
+    code_postal text,
+    interets text
+);
+
+insert into contact values ('Dupont', 'Bob', 'dupont.bob@glog.com', 'M', '1990-09-10', 'Divorcé', 'Villars-sur-Glâne', '1752', 'Tennis, Animaux');
+insert into contact values ('Martin', 'Anne', 'amartin@fri.ch', 'F', '1995-06-02', 'Célibataire', 'Lausanne', '1000', 'Escape game');
+insert into contact values ('Dunant', 'Martine', 'martine.dunant@google.com', 'F', '1985-12-24', 'Séparée', 'Val d''Illiez', '1873', 'Lecture');
+insert into contact values ('Schmidt', 'Léo', 'leo@cine.ch', 'M', '2000-01-01', 'Célibataire', 'La Roche', '1634', 'Cinéma, Jeux de société');
+
+select * from contact;
+```
 
 <!-- TODO: Ajouter le lien pour le fichier contacts.sql et les instructions,
              si les élèves"travaillent sur replit.com
