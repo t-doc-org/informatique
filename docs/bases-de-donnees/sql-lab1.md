@@ -12,22 +12,22 @@ suisses.
 ```{exec} sql
 :name: sql-canton
 :class: hidden
-create table canton (
-    nom text not null,
-    abr text not null,
-    chef_lieu text not null,
-    nb_communes integer not null,
-    population integer not null,
-    superficie real not null
+CREATE TABLE canton (
+    nom TEXT NOT NULL,
+    abr TEXT NOT NULL,
+    chef_lieu TEXT NOT NULL,
+    nb_communes INTEGER NOT NULL,
+    population INTEGER NOT NULL,
+    superficie REAL NOT NULL
 );
-insert into canton values ('Fribourg', 'FR', 'Fribourg', 126, 334465, 1670.7);
-insert into canton values ('Genève', 'GE', 'Genève', 45, 514114, 282.48);
-insert into canton values ('Berne', 'BE', 'Berne', 335, 1051437, 5959.44);
-insert into canton values ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729);
-insert into canton values ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2);
-insert into canton values ('Grison', 'GR', 'Coire', 101, 202538, 7105.44);
-insert into canton values ('Uri', 'UR', 'Altdorf', 19, 37317, 1076.57);
-select * from canton;
+INSERT INTO canton VALUES ('Fribourg', 'FR', 'Fribourg', 126, 334465, 1670.7);
+INSERT INTO canton VALUES ('Genève', 'GE', 'Genève', 45, 514114, 282.48);
+INSERT INTO canton VALUES ('Berne', 'BE', 'Berne', 335, 1051437, 5959.44);
+INSERT INTO canton VALUES ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729);
+INSERT INTO canton VALUES ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2);
+INSERT INTO canton VALUES ('Grison', 'GR', 'Coire', 101, 202538, 7105.44);
+INSERT INTO canton VALUES ('Uri', 'UR', 'Altdorf', 19, 37317, 1076.57);
+SELECT * FROM canton;
 ```
 
 ## Exercice 1
@@ -256,24 +256,24 @@ La table `contact` ressemble à cela:
 ```{exec} sql
 :name: sql-contact
 :class: hidden
-create table contact (
-    nom text not null,
-    prenom text not null,
-    email text not null,
-    sexe text not null,
-    anniversaire text not null,
-    statut text,
-    lieu text,
-    code_postal text,
-    interets text
+CREATE TABLE contact (
+    nom TEXT NOT NULL,
+    prenom TEXT NOT NULL,
+    email TEXT NOT NULL,
+    sexe TEXT NOT NULL,
+    anniversaire TEXT NOT NULL,
+    statut TEXT,
+    lieu TEXT,
+    code_postal TEXT,
+    interets TEXT
 );
 
-insert into contact values ('Dupont', 'Bob', 'dupont.bob@glog.com', 'M', '1990-09-10', 'Divorcé', 'Villars-sur-Glâne', '1752', 'Tennis, Animaux');
-insert into contact values ('Martin', 'Anne', 'amartin@fri.ch', 'F', '1995-06-02', 'Célibataire', 'Lausanne', '1000', 'Escape game');
-insert into contact values ('Dunant', 'Martine', 'martine.dunant@google.com', 'F', '1985-12-24', 'Séparée', 'Val d''Illiez', '1873', 'Lecture');
-insert into contact values ('Schmidt', 'Léo', 'leo@cine.ch', 'M', '2000-01-01', 'Célibataire', 'La Roche', '1634', 'Cinéma, Jeux de société');
+INSERT INTO contact VALUES ('Dupont', 'Bob', 'dupont.bob@glog.com', 'M', '1990-09-10', 'Divorcé', 'Villars-sur-Glâne', '1752', 'Tennis, Animaux');
+INSERT INTO contact VALUES ('Martin', 'Anne', 'amartin@fri.ch', 'F', '1995-06-02', 'Célibataire', 'Lausanne', '1000', 'Escape game');
+INSERT INTO contact VALUES ('Dunant', 'Martine', 'martine.dunant@google.com', 'F', '1985-12-24', 'Séparée', 'Val d''Illiez', '1873', 'Lecture');
+INSERT INTO contact VALUES ('Schmidt', 'Léo', 'leo@cine.ch', 'M', '2000-01-01', 'Célibataire', 'La Roche', '1634', 'Cinéma, Jeux de société');
 
-select * from contact;
+SELECT * FROM contact;
 ```
 
 <!-- TODO: Ajouter le lien pour le fichier contacts.sql et les instructions,
