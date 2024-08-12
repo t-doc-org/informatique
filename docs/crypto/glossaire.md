@@ -3,6 +3,8 @@
 
 # Glossaire
 
+<!-- TODO: Ajouter le popup pour l'affichage des définitions. -->
+
 ```{glossary}
 
 Cryptographie
