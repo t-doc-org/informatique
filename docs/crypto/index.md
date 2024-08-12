@@ -7,5 +7,6 @@
 :maxdepth: 1
 
 introduction
-cryptographie
+crypto-sym
+glossaire
 ```

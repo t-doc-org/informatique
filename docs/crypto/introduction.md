@@ -71,13 +71,13 @@ suffit de peler l'oeuf.
 
 ## Cryptographie
 
-La **cryptographie** est l'ensemble des procédés visant à chiffrer un message.
-Elle assure la confidentialité entre l'émetteur et le destinataire. Seul celui
-qui a la clé de déchiffrement peut lire le message.
+La **{term}`cryptographie`** est l'ensemble des procédés visant à
+{term}`chiffrer` un message. Elle assure la confidentialité entre l'émetteur et
+le destinataire. Seul celui qui a la {term}`clé` de déchiffrement peut lire le message.
 
 ## Exemples
 
-### Le code Mary Stuart
+### Code Mary Stuart
 
 Le 15 octobre 1586, Marie Stuart est jugée pour trahison. Elle est accusée
 d'avoir pris part à un complot pour tenter d'assassiner la reine Elizabeth et
@@ -97,7 +97,7 @@ secret.
 source: [apprendre en ligne](https://www.apprendre-en-ligne.net/crypto/codes/mary.html)
 ```
 
-### Le chiffre Pig Pen
+### Chiffre Pig Pen
 
 Le chiffre de Pig Pen est un chiffre de substitutions qui a perduré pendant des
 siècles sous des formes variées. Un voici un exemple:
