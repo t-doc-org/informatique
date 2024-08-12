@@ -26,9 +26,9 @@ achats avec un tableau:
 | nom_client | prenom | adresse | nom_produit | description | prix |
 | :--------- | :----- | :------ | :---------- | :---------- | ---: |
 | Duck | Donald | Bd de Pérolles 7<br> 1700 Fribourg | Ektorp | canapé 2 places | 499 |
-| Léclair | Buzz | Rue de Centre 14<br> 1752 Villars sur Glâne | Brimnes | structure de lit | 129 |
+| Léclair | Buzz | Rue de Centre 14<br> 1752 Villars-sur-Glâne | Brimnes | structure de lit | 129 |
 | Duck | Donald | Bd de Pérolles 7<br> 1700 Fribourg | Brimnes | structure de lit | 129 |
-| Léclair | Buzz | Rue de Centre 14<br> 1752 Villars sur Glâne | Jaren | matelas à ressorts | 59 |
+| Léclair | Buzz | Rue de Centre 14<br> 1752 Villars-sur-Glâne | Jaren | matelas à ressorts | 59 |
 | Lebricoleur | Bob | Rue de Lausanne 65<br> 1700 Fribourg  | Brimnes | structure de lit | 129 |
 
 Que se passe-t-il si un client change d'adresse?
@@ -54,7 +54,7 @@ On ajoute un numéro de client unique qui permet de différencier les clients.
 | no_c | nom | prenom | adresse | telephone | mail |
 | :---:| :-- | :----- | :------ | :-------: | :--: |
 | 1 | Duck | Donald | Bd de Pérolles 7<br> 1700 Fribourg | 071 324 56 71 | donald.duck@proton.ch |
-| 2 | Lebricoleur | Bob | Rue de Centre 14<br> 1752 Villars sur Glâne | 075 652 56 90 | bob.lebricoleur@gmail.com |
+| 2 | Lebricoleur | Bob | Rue de Centre 14<br> 1752 Villars-sur-Glâne | 075 652 56 90 | bob.lebricoleur@gmail.com |
 | 3 | Léclair | Buzz | Rue de la Lune 7<br> 1700 Fribourg | 070 589 09 12 | buzz.leclair@infomaniak.ch |
 
 2. Table produit:
@@ -169,17 +169,17 @@ Contrôler le résultat en affichant tous les éléments de la table.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-CREATE TABLE client (
-  no_c INT,
-  titre VARCHAR(3),
-  prenom VARCHAR(20),
-  nom VARCHAR(20)
+create table client (
+  no_c int,
+  titre text,
+  prenom text,
+  nom text
 );
 
-INSERT INTO client VALUES (1, 'M', 'Albert', 'Einstein');
-INSERT INTO client VALUES (2, 'Mme', 'Ada', 'Lovelace');
-INSERT INTO client VALUES (3, 'M', 'Alan', 'Turing');
-INSERT INTO client VALUES (4, 'M', 'Stephen', 'Kleene');
+insert into client values (1, 'M', 'Albert', 'Einstein');
+insert into client values (2, 'Mme', 'Ada', 'Lovelace');
+insert into client values (3, 'M', 'Alan', 'Turing');
+insert into client values (4, 'M', 'Stephen', 'Kleene');
 );
 ```
 ````
@@ -204,15 +204,15 @@ Contrôler le résultat en affichant tous les éléments de la table.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-CREATE TABLE achat (
-  no_c INT,
-  no_p INT
+create table achat (
+  no_c int,
+  no_p int
 );
 
-INSERT INTO achat VALUES (3, 1);
-INSERT INTO achat VALUES (2, 1);
-INSERT INTO achat VALUES (1, 2);
-INSERT INTO achat VALUES (1, 1);
+insert into achat values (3, 1);
+insert into achat values (2, 1);
+insert into achat values (1, 2);
+insert into achat values (1, 1);
 ```
 ````
 
@@ -244,18 +244,18 @@ les informations souhaitées.
 Cela se fait avec une jointure entre 3 tables.
 
 Pour joindre deux tables, il faut utiliser l'instruction
-`JOIN ... ON ... WHERE`.
+`join ... on ... where`.
 
 La requête suivante permet d'afficher le(s) nom(s) du (des) produits acheté(s)
 par le client n°3.
 
 ```{code-block} sql
-SELECT nom FROM produit           -- sélectionne l'attribut nom de la table produit
+select nom from produit        -- sélectionne l'attribut nom de la table produit
 
-JOIN achat                        -- joint la table précédente avec la table achat
-ON produit.no_p=achat.no_p        -- condition de jointure
+join achat                     -- joint la table précédente avec la table achat
+on produit.no_p=achat.no_p     -- condition de jointure
 
-WHERE no_c=3;                     -- critère de sélection
+where no_c=3;                  -- critère de sélection
 ```
 
 ## Exercice 9
@@ -266,12 +266,11 @@ acheté(s) par le client n°1.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-SELECT nom FROM produit
+select nom from produit
 
-JOIN achat
-ON produit.no_p=achat.no_p
+join achat on produit.no_p=achat.no_p
 
-WHERE no_c=1;
+where no_c=1;
 ```
 ````
 
@@ -281,22 +280,15 @@ WHERE no_c=1;
 **nom** des clients ayant acheté le produit Ektorp.\
 Trier les valeurs dans l'ordre alphabétique des prénoms.
 
-```{hint}
-Pour afficher les valeurs dans l'ordre alphabétique selon un attribut, utiliser
-l'instruction\
-`ORDER BY {nom de l'attribut} ASC`.
-```
-
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-SELECT client.titre, client.prenom, client.nom FROM client
+select client.titre, client.prenom, client.nom from client
 
-JOIN achat ON
-client.no_c = achat.no_c
+join achat on client.no_c = achat.no_c
 
-WHERE achat.no_p = 1
-ORDER BY prenom ASC;
+where achat.no_p = 1
+order by prenom ASC;
 ```
 ````
 
@@ -315,11 +307,12 @@ les prénoms):
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-SELECT client.no_c, client.prenom, client.nom, produit.no_p, produit.nom, prix FROM client
+select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom, prix
+  from client
 
-JOIN achat ON client.no_c = achat.no_c        -- joins les tables client et achat
-JOIN produit ON achat.no_p=produit.no_p       -- joins les tables achats et produit
+join achat on client.no_c = achat.no_c      -- joins les tables client et achat
+join produit on achat.no_p=produit.no_p     -- joins les tables achat et produit
 
-ORDER BY prenom ASC;
+order by prenom asc;
 ```
 ````

@@ -14,32 +14,27 @@ des critères particuliers.
 Le langage SQL permet de créer des tables en spécifiant leur nom et leurs
 attributs.
 
-```{note}
-Par convention, nous écrirons les mots réservés du langage SQL en majuscule,
-mais ce n'est pas obligatoire.
-```
-
-Pour créer une table, il faut utiliser l'instruction `CREATE TABLE {nom de la table} (...)`
+Pour créer une table, il faut utiliser l'instruction `create table {nom de la table} (...)`
 suivi du nom de la table. Entre parenthèses, nous indiquons la liste des
 attributs, ainsi que leur [type](./type-donnees.md).\
 Chaque instruction doit se terminer par un point-virgule.
 
 ```{code-block} sql
-CREATE TABLE stock (
-    id INT,                 -- nombre entier (integer)
-    article VARCHAR(15),    -- chaîne de caractères de maximum 15 caractères
-    couleur VARCHAR(15),
-    taille VARCHAR(3),
-    quantite INT,
-    prixUnitaire INT
+create table stock (
+    id int,                 -- nombre entier (integer)
+    article text,           -- chaîne de caractères
+    couleur text,
+    taille text,
+    quantite int,
+    prix_unitaire int
 );
 ```
 
 ## Exercice 1
 
 Écrire la requête SQL qui permet de créer la table **produit** ci-dessous,
-sachant que **no_p** et **prix** sont des entiers et que **nom** et **description** sont des chaînes
-de caractères avec respectivement maximum de 20 et 100 caractères:
+sachant que **no_p** et **prix** sont des entiers et que **nom** et
+**description** sont des chaînes de caractères:
 
 | no_p | nom | description | prix |
 | :--: | :-: | :---------: | :--: |
@@ -52,10 +47,10 @@ de caractères avec respectivement maximum de 20 et 100 caractères:
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-CREATE TABLE produit (
-    no_p INT,
-    nom VARCHAR(20),
-    description VARCHAR(100)
+create table produit (
+    no_p int,
+    nom text,
+    description text
 );
 ```
 ````
@@ -63,12 +58,12 @@ CREATE TABLE produit (
 ## Ajout d'éléments
 
 Pour insérer une nouvelle entité dans une table, il faut utiliser l'instruction
-`INSERT INTO {nom de la table} VALUES (...);`. Entre parenthèses, nous indiquons
+`insert into {nom de la table} values (...);`. Entre parenthèses, nous indiquons
 les valeurs des attributs. L'ordre doit être le même que lors de la création de
 la table.
 
 ```{code-block} sql
-INSERT INTO stock VALUES(1, 'T-shirt', 'rouge', 'M', 15, 20);
+insert into stock values(1, 'T-shirt', 'rouge', 'M', 15, 20);
 ```
 
 ```{attention}
@@ -89,19 +84,19 @@ Les chaînes de caractères doivent être entre apostrophes (guillemets simples)
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-INSERT INTO produit VALUES(1, 'Ektorp', 'canapé 2 places', 599);
-INSERT INTO produit VALUES(2, 'Brimnes', 'structure de lit', 129);
-INSERT INTO produit VALUES(3, 'Jaren', 'matelas à ressorts', 59);
+insert into produit values(1, 'Ektorp', 'canapé 2 places', 599);
+insert into produit values(2, 'Brimnes', 'structure de lit', 129);
+insert into produit values(3, 'Jaren', 'matelas à ressorts', 59);
 ```
 ````
 
 ## Affichage d'éléments
 
 L'instruction SQL suivante permet d'afficher le contenu d'une table,
-c'est-à-dire les valeurs de chaque attributs.
+c'est-à-dire les valeurs de chaque attribut.
 
 ```{code-block} sql
-SELECT * FROM stock;
+select * from stock;
 ```
 
 Le caractère * signifie tous les attributs, cela évite de devoir écrire toute la
@@ -112,41 +107,41 @@ de la table stock."
 Il est aussi possible d'afficher seulement un ou plusieurs des attributs.
 
 ```{code-block} sql
-SELECT article FROM stock;
-SELECT article, quantite FROM stock;
+select article from stock;
+select article, quantite from stock;
 ```
 
 ## Exercice 3
 
-Écrire la requête qui permet d'afficher toutes les éléments de la table
+Écrire la requête qui permet d'afficher tous les éléments de la table
 **produit**.
 
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-SELECT * FROM produit;
+select * from produit;
 ```
 ````
 
 Écrire la requête SQL qui permet d'afficher le nom de tous les produits et
-celle qui permet d'afficher le nom et le prix de tous les prduits.
+celle qui permet d'afficher le nom et le prix de tous les produits.
 
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-SELECT nom FROM produit;
-SELECT nom, prix FROM produit;
+select nom from produit;
+select nom, prix from produit;
 ```
 ````
 
 ## Affichage d'éléments avec critères
 
-Il est souvent utile de faire des recherches par critères, par exemple on
-souhaiterait afficher tous les livres parus aux Editions Gallimards.
+Il est souvent utile d'effectuer des recherches par critères, par exemple on
+souhaiterait afficher tous les articles en taille M.
 
 Voici la base de données à disposition:
 
-| id | article | couleur | taille | quantité | prixUnitaire |
+| id | article | couleur | taille | quantité | prix_unitaire |
 | :-: | :----: | :-----: | :----: | :------: | :----------: |
 | 1 | T-shirt | rouge | M | 15 | 20 |
 | 2 | T-shirt | blanc | XL | 17 | 25 |
@@ -156,12 +151,13 @@ Voici la base de données à disposition:
 | 6 | T-shirt | blanc | S | 30 | 20 |
 | 7 | Veste | rouge | L | 5 | 50 |
 
-L'instruction `WHERE` permet de ne sélectionner que les lignes qui répondent à
+L'instruction `where` permet de ne sélectionner que les lignes qui répondent à
 ce(s) critère(s).
 
 ```{code-block} sql
-SELECT * FROM stock WHERE stock='M';
+select * from stock where stock='M';
 ```
+
 Cette requête affichera le résultat suivant:
 
 ```{code-block} text
@@ -170,8 +166,9 @@ Cette requête affichera le résultat suivant:
 ```
 
 ```{code-block} sql
-SELECT * FROM stock WHERE prix=35;
+select * from stock where prix=35;
 ```
+
 Celle-ci affichera le résultat suivant:
 
 ```{code-block} text
@@ -186,7 +183,7 @@ Brimnes.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-SELECT * FROM produit WHERE nom='Brimnes';
+select * from produit where nom='Brimnes';
 ```
 ````
 
@@ -196,7 +193,7 @@ Ektorp.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-SELECT description FROM poduit WHERE nom='Ektorp';
+select description from poduit where nom='Ektorp';
 ```
 ````
 
@@ -206,13 +203,13 @@ Pour modifier la couleur de l'article dont l'id est 3, la requête sera la
 suivante:
 
 ```{code-block} sql
-UPDATE stock SET couleur='bleu' WHERE id=3;
+update stock set couleur='bleu' where id=3;
 ```
 
-La base de donnée sera modifiée ainsi:
+La base de données sera modifiée ainsi:
 
-| id | article | couleur | taille | quantité | prixUnitaire |
-| :-: | :----: | :-----: | :----: | :------: | :----------: |
+| id | article | couleur | taille | quantité | prix_unitaire |
+| :-: | :----: | :-----: | :----: | :------: | :-----------: |
 | 1 | T-shirt | rouge | M | 15 | 20 |
 | 2 | T-shirt | blanc | XL | 17 | 25 |
 | 3 | Polo | **bleu** | L | 12 | 35 |
@@ -229,9 +226,9 @@ Contrôler le résultat en affichant tous les éléments de la table produit.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-UPDATE stock SET prix=499 WHERE description='canapé 2 places';
+update stock set prix=499 where description='canapé 2 places';
 
-SELECT * FROM stock;                                                -- Pour tester le résultat
+select * from stock;                                  -- Pour tester le résultat
 ```
 ````
 
@@ -241,13 +238,13 @@ Il est aussi possible de supprimer un élément, c'est-à-dire une ligne complè
 d'une table.
 
 ```{code-block} sql
-DELETE FROM stock WHERE article='Polo';
+delete from stock where article='Polo';
 ```
 
-La nouvelle base de donnée sera la suivante:
+La nouvelle base de données sera la suivante:
 
-| id | article | couleur | taille | quantité | prixUnitaire |
-| :-: | :----: | :-----: | :----: | :------: | :----------: |
+| id | article | couleur | taille | quantité | prix_unitaire |
+| :-: | :----: | :-----: | :----: | :------: | :-----------: |
 | 1 | T-shirt | rouge | M | 15 | 20 |
 | 2 | T-shirt | blanc | XL | 17 | 25 |
 | 5 | T-shirt | rouge | XL | 8 | 20 |
@@ -262,42 +259,42 @@ Contrôler le résultat en affichant tous les éléments de la table produit.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-DELETE FROM produit WHERE no_p=3;
+delete from produit where no_p=3;
 
-SELECT * FROM produit;                  -- Pour tester le résultat
+select * from produit;                              -- Pour tester le résultat
 ```
 ````
 
 ## Colonnes sans valeur
 
 Nous souhaitons compléter notre table stock avec l'article Pantalon dont le
-numéro de produit est 8 et le prix unitaire
-45 CHF. Nous ne connaissons pas (encore) la couleur, la taille et la quantité.
+numéro de produit est 8 et le prix unitaire 45 CHF. Nous ne connaissons pas
+(encore) la couleur, la taille et la quantité.
 
 Nous ne pouvons pas utiliser la requête utilisée précédemment (liste de tous les
 attributs dans l'ordre), car nous n'avons pas toutes les informations, mais nous
 pouvons spécifier que certains attributs.
 
 ```{code-block} sql
-INSERT INTO stock (no_p, article, prixUnitaire) VALUES (8, 'pantalon' , 20);
+insert into stock (no_p, article, prix_unitaire) values (8, 'Pantalon' , 20);
 ```
-Une colonne sans valeur contient la [](#null).
+Une colonne sans valeur contient la valeur [null](#null).
 
-Certaines colonnes ne doivent pas être vide sinon cela poserait problème, comme
-id qui est un numéro unique qui permet de différencier les différents articles
-ou la colonne article qui permet de savoir quel est le type d'article.
+Certaines colonnes ne doivent pas être vide sinon cela poserait un problème,
+comme id qui est un numéro unique qui permet de différencier les différents
+articles ou la colonne article qui permet de savoir quel est le type d'article.
 Il est possible d'obliger l'utilisateur à fournir ces informations lorsqu'il
 ajoute un élément dans la table. Pour cela, il faut utiliser les mots
-**NOT NULL** lors de la création de la table.
+**not null** lors de la création de la table.
 
 ```{code-block} sql
-CREATE TABLE stock (
-    id INT NOT NULL,
-    article VARCHAR(15) NOT NULL,
-    couleur VARCHAR(15),
-    taille VARCHAR(3),
-    quantite INT,
-    prixUnitaire INT
+create table stock (
+    id int not null,
+    article text not null,
+    couleur text,
+    taille text,
+    quantite int,
+    prix_unitaire int
 );
 ```
 
@@ -312,27 +309,27 @@ adapté.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-CREATE TABLE eleve (
-    nom VARCHAR(30) NOT NULL,
-    prenom VARCHAR(30) NOT NULL,
-    sexe CHAR(1),
-    naissance DATE NOT NULL,
-    classe VARCHAR(4) NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    adresse VARCHAR(200),
-    code_postal CHAR(4),
-    ville VARCHAR(30),
-    telephone CHAR(12)
+create table eleve (
+    nom text not null,
+    prenom text not null,
+    sexe text,
+    naissance date not null,
+    classe text not null,
+    email text not null,
+    adresse text,
+    code_postal text,
+    ville text,
+    telephone text
 );
 ```
 ````
 
 ## Valeurs par défaut
 
-Lorsqu'une colonne a généralement une même valeur, nous pouvons lui attribuer
-une valeur par défaut, en anglais **DEFAULT**.
+Lorsqu'une colonne contient souvent la même valeur, nous pouvons lui attribuer
+une valeur par défaut, en anglais **default**.
 
-La valeur qui suit le mot réservé DEFAULT est automatiquement inséré dnas la
+La valeur qui suit le mot réservé default est automatiquement insérée dans la
 table si aucune valeur pour cet attribut n'est spécifiée.
 
 La valeur par défaut doit être du même type de celui de la colonne.
@@ -346,10 +343,10 @@ La valeur par défaut doit être du même type de celui de la colonne.
 | Créme de marron | fourrée | 8.00 |
 
 ```{code-block} sql
-CREATE TABLE crepe (
-    nom VARCHAR(15) NOT NULL,
-    description VARCHAR(7) NOT NULL,
-    prix DEC(3,2) NOT NULL DEFAULT 5.00        -- la plupart des crêpes coûtent 5.00 CHF
+create table crepe (
+    nom text not null,
+    description text not null,
+    prix dec(3,2) not null default 5.00   -- souvent les crêpes coûtent 5.00 CHF
 );
 ```
 
@@ -375,21 +372,21 @@ Insérer les données du tableau ci-dessous.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-CREATE TABLE boisson (
-  nom VARCHAR(30) NOT NULL,
-  prix DEC(3,2) NOT NULL DEFAULT 2.50
+create table boisson (
+  nom text not null,
+  prix dec(3,2) not null default 2.50
 );
 
-INSERT INTO boisson VALUES ('Espresso', 2.00);
-INSERT INTO boisson VALUES ('Café', 2.00);
-INSERT INTO boisson (nom) VALUES ('Café au lait');
-INSERT INTO boisson (nom) VALUES ('Cappuccino');
-INSERT INTO boisson (nom) VALUES ('Latte Macchiato');
-INSERT INTO boisson (nom) VALUES ('Chocolat chaud');
-INSERT INTO boisson (nom) VALUES ('Chocolat froid');
-INSERT INTO boisson VALUES ('Thé', 2.00);
+insert into boisson values ('Espresso', 2.00);
+insert into boisson values ('Café', 2.00);
+insert into boisson (nom) values ('Café au lait');
+insert into boisson (nom) values ('Cappuccino');
+insert into boisson (nom) values ('Latte Macchiato');
+insert into boisson (nom) values ('Chocolat chaud');
+insert into boisson (nom) values ('Chocolat froid');
+insert into boisson values ('Thé', 2.00);
 
-SELECT * FROM boisson;                                  -- Pour tester le résultat
+select * from boisson;                                -- Pour tester le résultat
 ```
 ````
 

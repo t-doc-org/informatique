@@ -6,28 +6,28 @@
 Le but de cette section est d'entraîner les concepts vus dans la section
 [](./sql.md).
 
-Voici la table `canton` contenant certaines informations sur des cantons
+Voici la table **canton** contenant certaines informations sur des cantons
 suisses.
 
 ```{exec} sql
 :name: sql-canton
 :class: hidden
-CREATE TABLE canton (
-    nom TEXT NOT NULL,
-    abr TEXT NOT NULL,
-    chef_lieu TEXT NOT NULL,
-    nb_communes INTEGER NOT NULL,
-    population INTEGER NOT NULL,
-    superficie REAL NOT NULL
+create table canton (
+    nom text not null,
+    abr text not null,
+    chef_lieu text not null,
+    nb_communes int not null,
+    population int not null,
+    superficie decimal(6,2) not null
 );
-INSERT INTO canton VALUES ('Fribourg', 'FR', 'Fribourg', 126, 334465, 1670.7);
-INSERT INTO canton VALUES ('Genève', 'GE', 'Genève', 45, 514114, 282.48);
-INSERT INTO canton VALUES ('Berne', 'BE', 'Berne', 335, 1051437, 5959.44);
-INSERT INTO canton VALUES ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729);
-INSERT INTO canton VALUES ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2);
-INSERT INTO canton VALUES ('Grison', 'GR', 'Coire', 101, 202538, 7105.44);
-INSERT INTO canton VALUES ('Uri', 'UR', 'Altdorf', 19, 37317, 1076.57);
-SELECT * FROM canton;
+insert into canton values ('Fribourg', 'FR', 'Fribourg', 126, 334465, 1670.7);
+insert into canton values ('Genève', 'GE', 'Genève', 45, 514114, 282.48);
+insert into canton values ('Berne', 'BE', 'Berne', 335, 1051437, 5959.44);
+insert into canton values ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729);
+insert into canton values ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2);
+insert into canton values ('Grison', 'GR', 'Coire', 101, 202538, 7105.44);
+insert into canton values ('Uri', 'UR', 'Altdorf', 19, 37317, 1076.57);
+select * from canton;
 ```
 
 ## Exercice 1
@@ -38,7 +38,7 @@ SELECT * FROM canton;
 Indiquer ce qu'afficheront les requêtes suivantes:
 
 1.  ```{code-block} sql
-    SELECT * FROM canton WHERE nb_communes=45;
+    select * from canton where nb_communes=45;
     ```
 
     ````{admonition} Solution
@@ -49,7 +49,7 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     ````
 
 2.  ```{code-block} sql
-    SELECT * FROM canton WHERE chef_lieu=Coire;
+    select * from canton where chef_lieu=Coire;
     ```
 
     ````{admonition} Solution
@@ -59,7 +59,7 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     ````
 
 3.  ```{code-block} sql
-    SELECT nom, superficie FROM canton WHERE nom='Fribourg';
+    select nom, superficie from canton where nom='Fribourg';
     ```
 
     ````{admonition} Solution
@@ -70,7 +70,7 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     ````
 
 4.  ```{code-block} sql
-    SELECT * FROM canton WHERE population>500000;
+    select * from canton where population>500000;
     ```
 
     ````{admonition} Solution
@@ -83,7 +83,7 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     ````
 
 5.  ```{code-block} sql
-    SELECT * FROM canton WHERE abr<'GR';
+    select * from canton where abr<'GR';
     ```
 
     ````{admonition} Solution
@@ -99,7 +99,7 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     ````
 
 6.  ```{code-block} sql
-    SELECT * FROM canton ORDER BY superficie;
+    select * from canton order by superficie asc;
     ```
 
     ````{admonition} Solution
@@ -118,35 +118,35 @@ Indiquer ce qu'afficheront les requêtes suivantes:
 
 ## Exercice 2
 
-Créer et compléter la table `canton` avec des requêtes SQL. La table ne doit pas
-accepter les valeurs `NULL`.\
+Créer et compléter la table **canton** avec des requêtes SQL. La table ne doit pas
+accepter les valeurs `null`.\
 Contrôler les réponses de l'exercice précédent.
 
 ```{code-block} sql
-SELECT * FROM canton ORDER BY superficie;
+select * from canton order by superficie asc;
 ```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-CREATE TABLE canton (
-  nom VARCHAR(30) NOT NULL,
-  abr CHAR(2) NOT NULL,
-  chef_lieu VARCHAR(30) NOT NULL,
-  nb_communes SMALLINT NOT NULL,
-  population INT NOT NULL,
-  superficie DECIMAL(6,2) NOT NULL
+create table canton (
+  nom text not null,
+  abr text not null,
+  chef_lieu text not null,
+  nb_communes text not null,
+  population int not null,
+  superficie decimal(6,2) not null
 );
 
-INSERT INTO canton VALUES ('Fribourg', 'FR', 'Fribourg', 126, 334465, 1670.7);
-INSERT INTO canton VALUES ('Genève', 'GE', 'Genève', 45, 514114, 282.48);
-INSERT INTO canton VALUES ('Berne', 'BE', 'Berne', 335, 1051437, 5959.44);
-INSERT INTO canton VALUES ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729);
-INSERT INTO canton VALUES ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2);
-INSERT INTO canton VALUES ('Grison', 'GR', 'Coire', 101, 202538, 7105.44);
-INSERT INTO canton VALUES ('URI', 'UR', 'Altdorf', 19, 37317, 1076.57);
+insert into canton values ('Fribourg', 'FR', 'Fribourg', 126, 334465, 1670.7);
+insert into canton values ('Genève', 'GE', 'Genève', 45, 514114, 282.48);
+insert into canton values ('Berne', 'BE', 'Berne', 335, 1051437, 5959.44);
+insert into canton values ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729);
+insert into canton values ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2);
+insert into canton values ('Grison', 'GR', 'Coire', 101, 202538, 7105.44);
+insert into canton values ('URI', 'UR', 'Altdorf', 19, 37317, 1076.57);
 
-SELECT * FROM canton ORDER BY superficie;
+select * from canton order by superficie asc;
 ```
 ````
 
@@ -158,7 +158,7 @@ dont le chef-lieu est Bellinzone.
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT * FROM canton WHERE chef_lieu='Bellinzone';
+    select * from canton where chef_lieu='Bellinzone';
     ```
     ````
 
@@ -168,7 +168,7 @@ cantons dont la population est inférieure à 300'000 habitants.
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT * FROM canton WHERE population<300000;
+    select * from canton where population<300000;
     ```
     ````
 
@@ -178,7 +178,7 @@ cantons dans l'ordre alphabétique des abréviations.
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT * FROM canton ORDER BY abr;
+    select * from canton order by abr asc;
     ```
     ````
 
@@ -188,16 +188,17 @@ chef-lieu des cantons.
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT nom, abr, chef_lieu FROM canton;
+    select nom, abr, chef_lieu from canton;
     ```
 
 5. Écrire une requête SQL qui permet d'afficher le nom, l'abréviation et le
-chef-lieu des cantons ordonnés selon le nombre d'habitants.
+chef-lieu des cantons ordonnés selon le nombre d'habitants du plus grand au plus
+petit.
 
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT nom, abr, chef_lieu FROM canton ORDER BY population;
+    select nom, abr, chef_lieu from canton order by population desc;
     ```
     ````
 
@@ -208,7 +209,7 @@ habitants.
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT * FROM canton WHERE nb_communes>100 AND population<500000;
+    select * from canton where nb_communes>100 and population<500000;
     ```
     ````
 
@@ -219,7 +220,7 @@ cantons dont le chef-lieu est Altdorf ou le nombre de communes supérieur ou ég
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT * FROM canton WHERE chef_lieu='Altdorf' OR nb_communes>=150;
+    select * from canton where chef_lieu='Altdorf' or nb_communes>=150;
     ```
     ````
 
@@ -229,7 +230,7 @@ l'abreviation n'est pas FR.
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT nom FROM canton WHERE abr<>'FR';
+    select nom from canton where abr<>'FR';
     ```
     ````
 
@@ -239,7 +240,7 @@ cantons dont la population se trouvent entre 300'000 et 500'000 habitants.
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT nom FROM canton WHERE population BETWEEN 300000 AND 500000;
+    select nom from canton where population between 300000 and 500000;
     ```
     ````
 
@@ -256,24 +257,24 @@ La table `contact` ressemble à cela:
 ```{exec} sql
 :name: sql-contact
 :class: hidden
-CREATE TABLE contact (
-    nom TEXT NOT NULL,
-    prenom TEXT NOT NULL,
-    email TEXT NOT NULL,
-    sexe TEXT NOT NULL,
-    anniversaire TEXT NOT NULL,
-    statut TEXT,
-    lieu TEXT,
-    code_postal TEXT,
-    interets TEXT
+create table contact (
+    nom text not null,
+    prenom text not null,
+    email text not null,
+    sexe text not null,
+    anniversaire text not null,
+    statut text,
+    lieu text,
+    code_postal text,
+    interets text
 );
 
-INSERT INTO contact VALUES ('Dupont', 'Bob', 'dupont.bob@glog.com', 'M', '1990-09-10', 'Divorcé', 'Villars-sur-Glâne', '1752', 'Tennis, Animaux');
-INSERT INTO contact VALUES ('Martin', 'Anne', 'amartin@fri.ch', 'F', '1995-06-02', 'Célibataire', 'Lausanne', '1000', 'Escape game');
-INSERT INTO contact VALUES ('Dunant', 'Martine', 'martine.dunant@google.com', 'F', '1985-12-24', 'Séparée', 'Val d''Illiez', '1873', 'Lecture');
-INSERT INTO contact VALUES ('Schmidt', 'Léo', 'leo@cine.ch', 'M', '2000-01-01', 'Célibataire', 'La Roche', '1634', 'Cinéma, Jeux de société');
+insert into contact values ('Dupont', 'Bob', 'dupont.bob@glog.com', 'M', '1990-09-10', 'Divorcé', 'Villars-sur-Glâne', '1752', 'Tennis, Animaux');
+insert into contact values ('Martin', 'Anne', 'amartin@fri.ch', 'F', '1995-06-02', 'Célibataire', 'Lausanne', '1000', 'Escape game');
+insert into contact values ('Dunant', 'Martine', 'martine.dunant@google.com', 'F', '1985-12-24', 'Séparée', 'Val d''Illiez', '1873', 'Lecture');
+insert into contact values ('Schmidt', 'Léo', 'leo@cine.ch', 'M', '2000-01-01', 'Célibataire', 'La Roche', '1634', 'Cinéma, Jeux de société');
 
-SELECT * FROM contact;
+select * from contact;
 ```
 
 <!-- TODO: Ajouter le lien pour le fichier contacts.sql et les instructions,
@@ -286,7 +287,7 @@ SELECT * FROM contact;
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT email FROM contact WHERE statut='Célibataire';
+    select email from contact where statut='Célibataire';
     ```
     ````
 
@@ -302,7 +303,7 @@ SELECT * FROM contact;
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT * FROM contact WHERE lieu='Val-d''Illiez';
+    select * from contact where lieu='Val-d''Illiez';
     ```
     ````
 
@@ -311,7 +312,7 @@ SELECT * FROM contact;
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT * FROM contact WHERE lieu='Lausanne';
+    select * from contact where lieu='Lausanne';
     ```
     ````
 
@@ -320,24 +321,24 @@ code postal doit commencer par 10..).
 
     ````{tip}
     Pour chercher des chaînes de caractères dans un mot, utiliser le mot
-    réservé **LIKE** et les caractères **%** pour remplacer plusieurs caractères ou
+    réservé **like** et les caractères **%** pour remplacer plusieurs caractères ou
     **_** qui remplace un seul caractère.
 
     Pour trouver tous les contacts dont le prénom commence par Ma, utiliser
     ```{code-block} sql
-    SELECT * FROM contact WHERE prenom LIKE 'Ma%';
+    select * from contact where prenom like 'Ma%';
     ```
 
     Pour trouver toutes les Laure ou les Laura dans la liste de contacts, utiliser
     ```{code-block} sql
-    SELECT * FROM contact WHERE prenom LIKE 'Laur_';
+    select * from contact where prenom like 'Laur_';
     ```
     ````
 
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT * FROM contact WHERE code_postal LIKE '10%';
+    select * from contact where code_postal like '10%';
     ```
     ````
 
@@ -347,7 +348,7 @@ nées 1995.
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT nom, prenom FROM contact WHERE naissance LIKE '1995-%';
+    select nom, prenom from contact where naissance like '1995-%';
     ```
     ````
 
@@ -356,7 +357,7 @@ nées 1995.
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT * FROM contact WHERE interets LIKE '%Cinéma%';
+    select * from contact where interets like '%Cinéma%';
     ```
     ````
 
@@ -366,7 +367,7 @@ nées en juin.
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT nom, prenom, naissance FROM contact WHERE naissance LIKE '%-06-%';
+    select nom, prenom, naissance from contact where naissance like '%-06-%';
     ```
     ````
 
@@ -376,7 +377,8 @@ région genevoise (12..).
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT * FROM contact WHERE sexe='M' AND statut='Célibataire' AND code_postal LIKE '12%';
+    select * from contact where sexe='M' and statut='Célibataire'
+        and code_postal like '12%';
     ```
     ````
 
@@ -386,7 +388,8 @@ région genevoise (12..).
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    SELECT * FROM contact WHERE sexe='F' AND statut='Divorcée' AND naissance BETWEEN '1984-%' AND '1994-%';
+    select * from contact where sexe='F' and statut='Divorcée'
+        and naissance between '1984-%' and '1994-%';
     ```
     ````
 

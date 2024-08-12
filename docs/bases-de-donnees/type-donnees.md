@@ -4,11 +4,11 @@
 # Type de données
 
 Lors de la création de tables en SQL, il faut déterminer le type des attributs.
-Il est important de choisir un type adapté aux données qui seront stockées afin
-d'optimiser l'espace de la mémoire utilisée.
-
-Par exemple, utiliser BIGINT pour stocker l'âge d'une personne est inutile.
-TINYINT est largement suffisant.
+Il y a quelques années, il était important de choisir le type le mieux adapté
+aux données afin d'optimiser l'espace de la mémoire utilisée. Actuellement, les
+bases de données sont intelligentes et gèrent elles-même l'espace-mémoire. Il
+faut toutefois choisir le type correct et suivant le système de gestion de base
+de données utilisées, il peut y avoir des différences.
 
 Il existe plusieurs catégories de types de données:
 
@@ -22,34 +22,35 @@ Les entiers
 
 | Type | Description |
 | :--- | :---------- |
-| TINYINT | -127 à 128 |
-| SMALLINT | -32'768 à 32'7676 |
-| INT | -2'147'483'648 à 2'147'483'647 |
-| BIGINT | -9'223'372'036'854'775'808 à 9'223'372'036'854'775'807 |
+| tinyint | -127 à 128 |
+| smallint | -32'768 à 32'7676 |
+| **int** | -2'147'483'648 à 2'147'483'647 |
+| bigint | -9'223'372'036'854'775'808 à 9'223'372'036'854'775'807 |
 
 Les nombres réels
 
 | Type | Description |
 | :--- | :---------- |
-| DECIMAL(taille,d) | Le nombre de chiffre est précisé dans taille (max 65) et le nombre de décimales <br> dans d (max 30) <br> DECIMAL(6,2) -> 2345.67 |
+| **decimal(taille,d)** |  Nombre décimal <br> Le nombre de chiffre est précisé dans taille (max 65) et le nombre de décimales <br> dans d (max 30) <br> decimal(6,2) -> 2345.67 |
 
 
 ## Types textes ou chaînes de caractères
 
 | Type | Description |
 | :--- | :---------- |
-| CHAR(n) | Chaîne de caractères de **taille fixe** n |
-| VARCHAR(n) | Chaîne de caractères de **taille variable** au maximum n |
-| TEXT | Chaîne de caractères de taille quelconque |
+| **text** | Chaîne de caractères de taille quelconque |
+| char(n) | Chaîne de caractères de **taille fixe** n |
+| varchar(n) | Chaîne de caractères de **taille variable** au maximum n |
+
 
 ## Type des dates, durées et instants
 
 | Type | Description |
 | :--- | :---------- |
-| DATE | Format: AAAA-MM-JJ |
-| DATETIME | Format: AAAA-MM-JJ hh:mm:ss |
-| TIME | Format: hh:mm:ss |
-| YEAR | Format: AAAA |
+| date | Format: AAAA-MM-JJ |
+| datetime | Format: AAAA-MM-JJ hh:mm:ss |
+| time | Format: hh:mm:ss |
+| year | Format: AAAA |
 
 ## Exercice
 
@@ -58,9 +59,9 @@ Les nombres réels
 Remplir le tableau dans le document joint [Exercice sur les types](./exercice-types.pdf).
 
 (null)=
-## Valeur NULL
+## Valeur null
 
-EN SQL, il existe une valeur notée **NULL**. Elle représente une absence de
+EN SQL, il existe une valeur notée **null**. Elle représente une absence de
 valeur. Elle peut remplacer une valeur quel que soit le type attendu.
 
 
