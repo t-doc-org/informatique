@@ -8,5 +8,6 @@
 
 introduction
 crypto-sym
+crypto-asym
 glossaire
 ```
