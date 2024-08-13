@@ -12,7 +12,7 @@ d'une même clé pour {term}`chiffrer` et {term}`déchiffrer` un message.
 :width: 70%
 :align: center
 
-source: www.pgpi.org
+source: Network Associates Inc, *Introduction à la cryptographie*
 ```
 
 - Une clé est choisie et échangée entre les participants.
@@ -231,7 +231,13 @@ Sans devoir calculer le décalage, on peut utiliser le carré de Vigenère.
 Dans un chiffrement symétrique, toute personne connaissant la clé est capable de
 déchiffrer le texte. Il est donc essentiel de maintenir la clé secrète.
 
-Problème: Comment transmettre la clé?
+Problèmes:
+
+- La clé doit être transmise par un canal sûr. Comment faire?
+
+- On ne peut pas garantir que l'expéditeur du message est bien celui qu'il
+prétend être (authentification). Si un intru intercepte la clé, il peut créer
+des messages frauduleux indétectables (falsification).
 
 
 

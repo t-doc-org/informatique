@@ -8,7 +8,7 @@
 ```{glossary}
 
 Chiffrer
-    Rendre une information confidentielle.
+    Transformer un texte clair en un cryptogramme.
 
 Clé
     Secret utilisé pour chiffrer une information.
@@ -29,23 +29,24 @@ Cryptographie
 
 Cryptogramme
     Information rendue confidentielle au moyen de la cryptographie. Synonyme de
-    texte clair.
+    texte chiffré.
 
 Cryptologie
     Science récente englobant à la fois la cryptographie et la cryptanalyse.
 
 Déchiffrage
-    Processus qui permet de retrouver l'information chiffrée grâce à la clé.
+    Processus qui permet de retrouver le texte clair à partir du cryptogramme
+    grâce à la clé.
 
 Déchiffrer
-    Retrouver l'information correspondante à l'information chiffrée grâce à la
-    clé.
+    Retrouver le texte clair à partir du cryptogramme grâce à la clé.
 
 Décryptage
-    Processus qui permet de retrouver l'information chiffrée sans la clé.
+    Processus qui permet de retrouver le texte clair à partir du cryptogramme
+    sans connaître la clé.
 
 Décrypter
-    Retrouver l'information correspondante à l'information chiffrée sans la clé.
+    Retrouver le texte clair à partir du cryptogramme sans connaître la clé.
 
 Texte chiffré
     Information rendue confidentielle au moyen de la cryptographie. Synonyme de

@@ -9,5 +9,6 @@
 introduction
 crypto-sym
 crypto-asym
+notions-math
 glossaire
 ```
