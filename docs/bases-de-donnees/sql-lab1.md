@@ -225,7 +225,7 @@ cantons dont le chef-lieu est Altdorf ou le nombre de communes supérieur ou ég
     ````
 
 8. Écrire une requête SQL qui permet d'afficher le nom des cantons dont
-l'abreviation n'est pas FR.
+l'abréviation n'est pas FR.
 
     ````{admonition} Solution
     :class: note dropdown
@@ -248,7 +248,7 @@ cantons dont la population se trouvent entre 300'000 et 500'000 habitants.
 
 Une application de rencontres demande, à l'enregistrement sur son site, les
 informations suivantes: le nom, le prénom, l'adresse mail, le sexe,
-la date de naissance, le statut, le lieu et les interêts principaux.\
+la date de naissance, le statut, le lieu et les intérêts principaux.\
 Les champs obligatoires sont le nom, le prénom, adresse mail, le sexe et la date
 de naissance.
 

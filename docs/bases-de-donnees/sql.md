@@ -364,7 +364,7 @@ Insérer les données du tableau ci-dessous.
 | Café | 2.00 |
 | Café au lait | 2.50 |
 | Cappuccino | 2.50 |
-| Latte Macchiatto | 2.50 |
+| Latte Macchiato | 2.50 |
 | Chocolat chaud | 2.50 |
 | Chocolat froid | 2.50 |
 | Thé | 2.00 |

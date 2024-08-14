@@ -5,7 +5,7 @@
 
 ## Web et Internet
 
-Internet ne doit pas être confondu avec le World Wide Web.Ces deux mots ne sont
+Internet ne doit pas être confondu avec le World Wide Web. Ces deux mots ne sont
 pas des synonymes.
 
 **Internet** est le réseau physique (filaire ou par ondes) qui relie les

@@ -69,10 +69,10 @@ faciliter leur analyse. Une donnée est représentée par une paire
 
 Un **tableau** est une structure permettant de représenter un ensemble de
 données sous forme de **lignes** et **colonnes**:
-- un tableau (ou table) regroupe les données d'un ensemble **d'entités** de
+- Un tableau (ou table) regroupe les données d'un ensemble **d'entités** de
 même nature qui partage le même ensemble de **propriétés**.\
 Exemples: des utilisateurs, des jeux, des élèves, des livres.
-- une colonne du tableau correspond à **une et une seule propriété** commune aux
+- Une colonne du tableau correspond à **une et une seule propriété** commune aux
 entités. Une colonne est caractérisée par son nom qui désigne la propriété
 concernée.
 - Une ligne du tableau correspond à **une et une seule entité** et est formée

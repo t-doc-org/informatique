@@ -23,7 +23,7 @@
 | `from` | Choisit les tables |
 | `where` | Filtre le résultat avec des critères |
 | `distinct` | Supprime les doublons |
-| `order by ... asc` | Trie les résultats selon un attibut par ordre croissant |
+| `order by ... asc` | Trie les résultats selon un attribut par ordre croissant |
 | `order by ... desc` | Trie les résultats selon un attribut par ordre décroissant |
 | `between ... and` | Filtre dans une plage de nombres |
 | `like ...%` | Désigne une chaîne de caractères |

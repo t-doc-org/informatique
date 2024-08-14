@@ -6,7 +6,7 @@
 Lors de la création de tables en SQL, il faut déterminer le type des attributs.
 Il y a quelques années, il était important de choisir le type le mieux adapté
 aux données afin d'optimiser l'espace de la mémoire utilisée. Actuellement, les
-bases de données sont intelligentes et gèrent elles-même l'espace-mémoire. Il
+bases de données sont intelligentes et gèrent elles-mêmes l'espace-mémoire. Il
 faut toutefois choisir le type correct et suivant le système de gestion de base
 de données utilisées, il peut y avoir des différences.
 

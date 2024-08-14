@@ -27,7 +27,7 @@ calculs de l'ordinateur:
 
 - Les opérations élémentaires (additions, soustractions, etc.)
 - Les opérations logiques (ET, OU, NI, etc.)
-- Les opérations de comparaison (vérfie si deux valeurs sont égales)
+- Les opérations de comparaison (vérifie si deux valeurs sont égales)
 
 ## Unité de contrôle
 

@@ -4,9 +4,9 @@
 # Système de fichiers
 
 
-## Définiton
+## Définition
 
-Un **sytème de fichiers** est l'organisation hiérarchique des fichiers sur un
+Un **système de fichiers** est l'organisation hiérarchique des fichiers sur un
 ordinateur, un disque dur externe, une clé USB ou n'importe quel support qui
 contient des fichiers.
 
@@ -77,7 +77,7 @@ affichées?
     l'ouverture.
     ```
 
-7. Citer quelques extensions et indiquer à quel type de fichier ça correpond.
+7. Citer quelques extensions et indiquer à quel type de fichier ça correspond.
 
     ```{admonition} Solution
     :class: note dropdown
@@ -105,5 +105,5 @@ affichées?
 
 8. Créer un répertoire pour les documents de cette année (ex: 1F…/informatique)
 soit sur oneDrive directement, sinon dans vos documents ou sur le bureau en
-activant la sauvegarde sur oneDrive. Vérifier que le synchronisation est
+activant la sauvegarde sur oneDrive. Vérifier que la synchronisation est
 activée.
