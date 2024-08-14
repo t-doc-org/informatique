@@ -27,14 +27,14 @@ Alice souhaite envoyer un message privé à Bob:
 source: Network Associates Inc, *Introduction à la cryptographie*
 ```
 
-Chaque utilisateurs possède deux clés:
+Chaque utilisateur possède deux clés:
     - la **clé publique** qu'il met à disposition sur le web,
     - la **clé privée** qu'il garde secrète.
 
 Pour déchiffrer un cryptogramme à l'aide d'une clé différente (clé privée) de
 celle utilisée pour le chiffrer (clé publique), il doit exister une relation
-entre ces deux clés. Cette relation mathématique est conçue de manière à ce
-qu'il soit impossible de déduire la clé privée à partir de la clé publique.
+entre ces deux clés. Cette relation mathématique est conçue pour empêcher la
+déduction de la clé privée à partir de la clé publique.
 
 ## Signature électronique
 
@@ -62,16 +62,16 @@ source: Network Associates Inc, *Introduction à la cryptographie*
 ## RSA
 
 Le plus premier et plus célèbre système cryptographique à clé publique est le
-système **RSA** qui sont les initales de ces trois "inventeurs" (Ronald Riverst,
-Adi Shamir et Leonard Adleman).
+système **RSA** qui sont les initiales de ces trois "inventeurs"
+(Ronald Riverst, Adi Shamir et Leonard Adleman).
 
-Pour comprendre comment fonctionne le sytème RSA, nous allons utiliser quelques
+Pour comprendre comment fonctionne le système RSA, nous allons utiliser quelques
 [notions mathématiques](./notions-math.md) de base tels que le reste de la
-division entière (modulo) et les nombres permiers.
+division entière (modulo) et les nombres premiers.
 
 Le modulo est une opération asymétrique, c'est-à-dire qu'il est facile de
-calculer $c$ tel que $c$ = $a \textrm{ mod } b$ ($a$ et $b$ sont connus). Par
-contre, il est impossible de retrouver $a$, si $b$ et $c$ sont donnés.
+calculer $c$ tel que $c$ = $a \textrm{ mod } b$ ($a$ et $b$ sont connus).
+Cependant, il est impossible de retrouver $a$, si $b$ et $c$ sont donnés.
 
 Exemple:\
 $a \textrm{ mod 5 } = 3$ (le reste de la division de $a$ par 5 vaut 3)\
@@ -80,13 +80,13 @@ $a$ peut valoir 3, 8, 103, 68, ...
 Certaines opérations sont faciles, tel que multiplier deux nombres premiers.\
 Que vaut $17 \cdot 241$?
 
-Certaines opérations sont difficles, tel que factoriser un nombre en facteurs
+Certaines opérations sont difficiles, tel que factoriser un nombre en facteurs
 premier.\
 Quels sont les facteurs de 4097?
 
 Le système RSA repose sur la capacité de {term}`déchiffrer` le cryptogramme
 malgré l'utilisation d'un modulo, en tirant parti des propriétés des nombres
-permiers. Il s'appuie sur la difficulté de factoriser un nombre en facteurs
+premiers. Il s'appuie sur la difficulté de factoriser un nombre en facteurs
 premiers.
 
 ### Création des clés
@@ -104,15 +104,14 @@ suffisamment grande. Les nombres choisis devront avoir plus de 100 chiffres.
 
 La clé publique sera composée des nombres $n$ et $e$.
 
-La clé privé sera composée des nombres $p$, $q$ et $d$.
+La clé privée sera composée des nombres $p$, $q$ et $d$.
 
 #### Exemple
 
 Alice souhaite générer sa clé privée et sa clé publique pour pouvoir échanger
 des messages en toute sécurité avec Bob.
 
-1. Alice choisit $p = 5$ et $q = 11$. (En pratique, il faut choisir des nombres
-   beaucoup plus grande que ça.)
+1. Alice choisit $p = 5$ et $q = 11$.
 2. Alice calcule $n = p \cdot q = 5 \cdot 11 = 55$.
 3. Alice calcule $\phi = (p - 1) \cdot (q - 1) = 4 \cdot 10 = 40$.
 4. Alice choisit $e = 43$, car $43 \textrm{ mod } 40 = 3 \ne 0$.
@@ -139,7 +138,8 @@ des messages en toute sécurité avec Bob.
 3. Si le nombre ainsi obtenu est plus grand que $n$, découper le message en
    blocs de taille $m$ tel que $1 < m < n$. Ces blocs seront chiffrés et envoyés
    séparément.
-4. Le crypogramme est le nombre $c$ que l'on calcule ainsi: $ c = m^e \textrm{ mod } n $.
+4. Le cryptogramme correspond au nombre $c$ calculé en utilisant
+    $ c = m^e \textrm{ mod } n $.
 
 #### Exemple
 
@@ -156,7 +156,7 @@ Bob souhaite envoyer à Alice le message suivant: "salut".
    découper en blocs d'une lettre (toujours inférieur ou égal à 26, donc
    forcément < 55).\
    Il y aura donc 5 blocs qui seront chiffrés et envoyés séparément.
-4. Bob détermine le cryptogramme de chaque bloc, noté $m$, en utilsant la
+4. Bob détermine le cryptogramme de chaque bloc, noté $m$, en utilisant la
    formule suivante:
    $c = m^{43} \textrm{ mod } 55$.
    s: $c = 19^{43} \textrm{ mod } 55 = 39$\
@@ -176,7 +176,7 @@ Bob souhaite envoyer à Alice le message suivant: "salut".
 2. Déchiffrer chacun des blocs reçus avec la formule suivante:
     $ m = c^d \textrm{ mod } n $.
 3. Transformer le nombre en lettre, c'est-à-dire remplacer chaque code ASCII
-    étendu par la lettre correpondante.
+    étendu par la lettre correspondante.
 
 #### Exemple
 
@@ -190,9 +190,9 @@ Alice a reçu le cryptogramme suivant composé de 5 blocs: 39 01 23 21 25.
     23: $m = 23^27 \textrm{ mod } 55 = 12$\
     21: $m = 21^27 \textrm{ mod } 55 = 21$\
     25: $m = 25^27 \textrm{ mod } 55 = 20$
-3. Alice transforme le nombre en lettre (pour facilité, nous avions pris le rang
-    de la lettre dans l'alphabet au lieu du code ASCII étendu): 19 -> s, 1 -> a,
-    12 -> l, 21 -> u et 20 -> t.\
+3. Alice transforme le nombre en lettre (pour faciliter, nous avions pris le
+    rang de la lettre dans l'alphabet au lieu du code ASCII étendu): 19 -> s,
+    1 -> a, 12 -> l, 21 -> u et 20 -> t.\
     Le message reçu est donc "salut".
 
 ## Conclusion
@@ -200,8 +200,8 @@ Alice a reçu le cryptogramme suivant composé de 5 blocs: 39 01 23 21 25.
 Le chiffrement asymétrique est plus lent, mais offre une sécurité renforcée. En
 revanche, le chiffrement symétrique est rapide, mais il est vulnérable aux
 interceptions et nécessite une distribution sécurisée des clés. Ces deux
-techniques présentent des avanatges et des inconvénients et sont souvent
-utilisées coinjointement:
+techniques présentent des avantages et des inconvénients et sont souvent
+utilisées conjointement:
 
 - Échange d'une clé symétrique en utilisant la cryptographie asymétrique.
 - Transmission des messages en utilisant la clé symétrique échangée et un

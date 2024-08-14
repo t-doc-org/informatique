@@ -22,7 +22,7 @@ utilise cette clé.
 ## Transpositions
 
 Dans une **transposition**, les lettres du texte clair sont mélangées, mais pas
-modifiées. C'est-à-dire que le texte mélangé est un anagramme du texte
+modifiées. C'est-à-dire que le texte mélangé est une anagramme du texte
 d'origine.
 
 <table><tr><td valign="top">
@@ -51,11 +51,11 @@ source: [apprendre en ligne](https://www.apprendre-en-ligne.net/crypto/index-cry
 ### Chiffre Rail Fence
 
 Ce procédé a été beaucoup utilisé pendant la guerre de Sécession. Le Rail Fence
-dipose les lettres en "zig zag" sur un nombre de lignes donné.
+dispose les lettres en "zig-zag" sur un nombre de lignes donné.
 
 Le texte "vive le collège saint-croix" donnera le message codé sur 2 lignes:
 VVLCLEEANERIIEEOLGSITCOX\
-Écrit en "zig zag" donne:
+Écrit en "zig-zag" donne:
 
 ```{code-block} text
 V V L C L E E A N E R I
@@ -63,7 +63,7 @@ V V L C L E E A N E R I
 ```
 
 Le même texte donnera le message codé sur 3 lignes: VLLENRIEEOLGSITCOXVCEAEI\
-Écrit en "zig zag" donne:
+Écrit en "zig-zag" donne:
 
 ```{code-block} text
 V   L   L   E   N   R
@@ -77,7 +77,7 @@ V   L   L   E   N   R
 ## Substitutions monoalphabétiques
 
 Dans une **substitution monoalphabétique**, aussi appelée substitution simple,
-chaque lettre est remplacée par un autre symboles, toujours le même.
+chaque lettre est remplacée par un autre symbole, toujours le même.
 
 
 ### Chiffre de César
@@ -85,7 +85,7 @@ chaque lettre est remplacée par un autre symboles, toujours le même.
 Ce procédé, déjà utilisé dans l'Antiquité, était connu des Romains. Jules César,
 dont elle tire le nom, l'employait pour chiffrer certaines de ses
 correspondances. La substitution proposée par César est un décalage de trois
-positions. C'est-à-dire que a est remplacé par D, b par E, etc.
+positions. C'est-à-dire que le a est remplacé par D, b par E, etc.
 
 | Clair | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z |
 | :---: |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -103,9 +103,9 @@ Si les 25 positions possibles sont testées, le message sera découvert.
 
 ### Cas général
 
-Pour rendre le {term}`décryptage` plus difficile, on peut substituté à chaque lettre une
-lettre tirée au hasard. Dans ce cas, il y a environ $1.5 \cdot 10^{25}$
-possibilités.
+Pour rendre le {term}`décryptage` plus difficile, on peut substituter à chaque
+lettre une lettre tirée au hasard. Dans ce cas, il y a environ
+$1.5 \cdot 10^{25}$ possibilités.
 
 | Clair | a | b | c | d | e | f | g | h | i | j | k | l | m | n | o | p | q | r | s | t | u | v | w | x | y | z |
 | :---: |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -116,7 +116,7 @@ possibilités.
 ### Attaque
 
 Une méthode efficace pour attaquer un message qui utilise une substitution
-monalphabétique est l'**analyse des fréquences**. En supposant que le symbole le
+monoalphabétique est l'**analyse des fréquences**. En supposant que le symbole le
 plus fréquent remplace la lettre la plus fréquente en français (le "e") et en
 appliquant cette logique aux autres lettres, il devient possible de
 décrypte le message, à condition qu'il soit suffisamment long.
@@ -161,7 +161,7 @@ Chiffrons "tout est perdu" avec comme clé CRYPTO.
 en clair.
 2. Calculer le décalage pour chaque lettre de la clé. A->C: décalage de 2
 positions, A->R: 17 positions, ...
-3. Appliquer le décalage aux lettre du texte clair.
+3. Appliquer le décalage aux lettres du texte clair.
 
 Sans devoir calculer le décalage, on peut utiliser le carré de Vigenère.
 
@@ -235,7 +235,7 @@ plus ou moins de la manière suivante:
 [^sn1]: Advanced Encryption Standard
 
 1. Remplacer les caractères par un code binaire (par exemple, code ASCII), ce
-   qui genère une chaîne de 0 et de 1.
+   qui génère une chaîne de 0 et de 1.
 2. Découper cette chaîne en blocs de longueur donnée (par exemple, 128 bits).
 3. Pour chaque bloc:
       - Permuter certains bits du bloc selon une table prédéfinie.

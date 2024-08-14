@@ -5,8 +5,8 @@
 
 ## Nombres premiers
 
-Un **nombre permier** est un nombre entier naturel qui est divisible uniquement
-par 1 et par lui même.\
+Un **nombre premier** est un nombre entier naturel qui est divisible uniquement
+par 1 et par lui-même.\
 1 n'est pas un nombre premier.
 
 Nombres premiers jusqu'à 1000:
