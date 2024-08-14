@@ -156,23 +156,61 @@ Bob souhaite envoyer à Alice le message suivant: "salut".
    découper en blocs d'une lettre (toujours inférieur ou égal à 26, donc
    forcément < 55).\
    Il y aura donc 5 blocs qui seront chiffrés et envoyés séparément.
-4. Bob détermine le cryptogramme de chaque bloc en utilsant la formule suivante:
+4. Bob détermine le cryptogramme de chaque bloc, noté $m$, en utilsant la
+   formule suivante:
    $c = m^{43} \textrm{ mod } 55$.
-   - s: $c = 19^{43} \textrm{ mod } 55 = 39$
-   - a: $c = 1^{43} \textrm{ mod } 55 = 1$
-   - l: $c = 12^{43} \textrm{ mod } 55 = 23$
-   - u: $c = 21^{43} \textrm{ mod } 55 = 21$
-   - t: $c = 20^{43} \textrm{ mod } 55 = 25$
+   s: $c = 19^{43} \textrm{ mod } 55 = 39$\
+   a: $c = 1^{43} \textrm{ mod } 55 = 1$\
+   l: $c = 12^{43} \textrm{ mod } 55 = 23$\
+   u: $c = 21^{43} \textrm{ mod } 55 = 21$\
+   t: $c = 20^{43} \textrm{ mod } 55 = 25$\
 
-   Bob transmet à Alice le cryptogramme suivant: 39 01 23 21 25.
+   Bob transmet à Alice le cryptogramme suivant composé de 5 blocs:
+   39 01 23 21 25.
 
-### Déhiffrement
+### Déchiffrement
 
 #### Méthode
 
-...
+1. Utiliser la clé privée ($p$, $q$, $d$).
+2. Déchiffrer chacun des blocs reçus avec la formule suivante:
+    $ m = c^d \textrm{ mod } n $.
+3. Transformer le nombre en lettre, c'est-à-dire remplacer chaque code ASCII
+    étendu par la lettre correpondante.
 
+#### Exemple
 
+Alice a reçu le cryptogramme suivant composé de 5 blocs: 39 01 23 21 25.
 
+1. Alice reprend sa clé privé (5, 11, 27).
+2. Alice déchiffre chaque bloc, noté c, avec la formule suivante:
+    $ m = c^27 \textrm{ mod } (5 \cdot 11) = c^27 \textrm{ mod } 55$.\
+    39: $m = 39^27 \textrm{ mod } 55 = 19$\
+    01: $m = 1^27 \textrm{ mod } 55 = 1$\
+    23: $m = 23^27 \textrm{ mod } 55 = 12$\
+    21: $m = 21^27 \textrm{ mod } 55 = 21$\
+    25: $m = 25^27 \textrm{ mod } 55 = 20$
+3. Alice transforme le nombre en lettre (pour facilité, nous avions pris le rang
+    de la lettre dans l'alphabet au lieu du code ASCII étendu): 19 -> s, 1 -> a,
+    12 -> l, 21 -> u et 20 -> t.\
+    Le message reçu est donc "salut".
+
+## Conclusion
+
+Le chiffrement asymétrique est plus lent, mais offre une sécurité renforcée. En
+revanche, le chiffrement symétrique est rapide, mais il est vulnérable aux
+interceptions et nécessite une distribution sécurisée des clés. Ces deux
+techniques présentent des avanatges et des inconvénients et sont souvent
+utilisées coinjointement:
+
+- Échange d'une clé symétrique en utilisant la cryptographie asymétrique.
+- Transmission des messages en utilisant la clé symétrique échangée et un
+  algorithme de chiffrement symétrique.
+
+Pour s'assurer que la clé publique appartient bien à la personne concernée, on
+peut:
+- Se rencontrer physique pour faire l'échange.
+- Passer par une autorité de certification qui contrôle l'identité de la
+  personne et stocke la clé (par exemple DigiCert).
 
 

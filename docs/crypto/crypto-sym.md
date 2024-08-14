@@ -226,6 +226,24 @@ Sans devoir calculer le décalage, on peut utiliser le carré de Vigenère.
   - I
 ```
 
+## Cryptographie symétrique moderne
+
+Les chiffrements vus précédemment sont simples et donc faciles à décrypter, ce
+qui explique pourquoi ils ne sont plus utilisés aujourd'hui. Les systèmes
+modernes, comme AES[^sn1], reposent sur le chiffrement par blocs qui fonctionne
+plus ou moins de la manière suivante:
+[^sn1]: Advanced Encryption Standard
+
+1. Remplacer les caractères par un code binaire (par exemple, code ASCII), ce
+   qui genère une chaîne de 0 et de 1.
+2. Découper cette chaîne en blocs de longueur donnée (par exemple, 128 bits).
+3. Pour chaque bloc:
+      - Permuter certains bits du bloc selon une table prédéfinie.
+      - Chiffrer le bloc en utilisant la clé secrète (par exemple, addition bit
+        par bit).
+      - Répéter les deux opérations précédentes plusieurs fois.
+
+
 ## Conclusion
 
 Dans un chiffrement symétrique, toute personne connaissant la clé est capable de
