@@ -37,10 +37,12 @@ print("Hello World!")
 ### Exercice 1
 
 Écrire un programme qui affiche exactement ce texte:
-> Salut\
-> Je suis élève au collège Sainte-Croix\
-> J'ai 16 ans\
-> J'aime bien jouer au volley
+```{code-block} text
+Salut!
+Je suis élève au collège Sainte-Croix.
+J'ai 16 ans.
+J'aime bien jouer au volley.
+```
 
 <!-- TODO: Permettre à l'élève d'écrire du code et de l'exécuter directement sur
      la page -->
@@ -50,10 +52,10 @@ print("Hello World!")
 :class: note dropdown
 ```{code-block} python
 :linenos:
-print("Salut")
-print("Je suis élève au collège Sainte-Croix")
-print("J'ai 16 ans")
-print("J'aime bien jouer au volley")
+print("Salut!")
+print("Je suis élève au collège Sainte-Croix.")
+print("J'ai 16 ans.")
+print("J'aime bien jouer au volley.")
 ```
 ````
 
@@ -225,12 +227,13 @@ print("Les économies de Juliette sont de ", economies_Juliette, " francs.")
 Écrire un programme qui demande à l'utilisateur son nom, son prénom et où il
 habite. Le programme affichera:
 
-> Quel est ton nom?\
-> Quel est ton prénom?\
-> Où habites-tu?\
-> Bonjour {afficher le prénom} {afficher le nom}, heureux de faire ta
-connaissance.\
-> Je vois que tu habites à {afficher le lieu}.
+```{code-block} text
+Quel est ton nom?
+Quel est ton prénom?
+Où habites-tu?
+Bonjour {afficher le prénom} {afficher le nom}, heureux de faire ta connaissance.
+Je vois que tu habites à {afficher le lieu}.
+```
 
 ````{admonition} Solution
 :class: note dropdown
@@ -252,9 +255,11 @@ l'utilisateur.
 
 Le programme affichera:
 
-> Quel âge avais-tu au 31 décembre?\
-> En quelle année sommes-nous?\
-> Tu es né en {afficher l'année de naissance}.
+```{code-block} text
+Quel âge avais-tu au 31 décembre?
+En quelle année sommes-nous?
+Tu es né en {afficher l'année de naissance}.
+```
 
 ````{admonition} Solution
 :class: note dropdown
@@ -269,8 +274,11 @@ print("Tu es né.e en", annee - age - 1)
 ### Exercice 8
 Écrire un programme qui convertit des mégaoctets en bits.\
 Le programme affichera:
-> Combien de mégaoctets veux-tu convertir en bits?\
-> {afficher le nombre de mégaoctets} Mo  donnent {afficher le nombre de bits} bits.
+
+```{code-block} text
+Combien de mégaoctets veux-tu convertir en bits?
+{afficher le nombre de mégaoctets} Mo  donnent {afficher le nombre de bits} bits.
+```
 
 ````{admonition} Solution
 :class: note dropdown
