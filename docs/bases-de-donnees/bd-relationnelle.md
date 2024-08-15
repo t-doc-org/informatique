@@ -8,9 +8,9 @@ semi-structurées dans des tables (ou tableaux). Grâce au langage SQL, il est
 facile de les créer et de les manipuler.
 
 Une **base de données** est un ensemble d'informations organisées pour être
-facilement accessible, géré et mis à jour par ses utilisateurs. Dans une école,
-toutes les données relatives aux élèves et aux enseignants sont stockées dans
-une base de données.
+facilement accessible, géré et mis à jour par ses utilisateurs. Dans une
+entreprise, toutes les données relatives aux clients sont stockées dans une base
+de données.
 
 ## Tableur[^sn1]
 
@@ -21,7 +21,7 @@ Excel.
 Dans une entreprise, des clients achètent des produits. Les informations
 concernant le client sont le nom, le prénom et l'adresse et celles concernant le
 produit sont le nom, la description et le prix. Voici une représentation des
-achats avec un tableau:
+achats avec un tableur:
 
 | nom_client | prenom | adresse | nom_produit | description | prix |
 | :--------- | :----- | :------ | :---------- | :---------- | ---: |
@@ -34,6 +34,7 @@ achats avec un tableau:
 Que se passe-t-il si un client change d'adresse?
 
 Les inconvénients de cette représentation sont les suivants:
+
 1. Les informations sont **redondantes**: l'adresse du client ou la description
 du produit apparaissent sur plusieurs lignes.
 2. S'il y a un changement, il faut le faire à plusieurs endroits, sinon les
@@ -46,10 +47,15 @@ L'utilisation d'un tableur n'est pas adaptée pour les grandes bases de données
 Une autre approche est d'utiliser plusieurs tables reliées entre elles. On parle
 alors de **base de données relationnelle**.
 
-En reprenant l'exemple précédent, nous utiliserions 3 tables.
+En reprenant l'exemple précédent, on utiliserait 3 tables.
+
+```{attention}
+Il est nécessaire de pouvoir identifier de manière unique chaque ligne d'une
+table, par exemple si deux personnes ont le même nom. En cas d'ambiguïté, on
+ajoute un numéro unique à chaque ligne.
+```
 
 1. Table client:\
-On ajoute un numéro de client unique qui permet de différencier les clients.
 
 | no_c | nom | prenom | adresse | telephone | mail |
 | :---:| :-- | :----- | :------ | :-------: | :--: |
@@ -149,11 +155,11 @@ digraph UML_Class_diagram {
 
 <!-- TOTO: Ajouter une numérotation automatique des exercices par chapitre. -->
 
-## Exercice 7
+## Exercice 9
 
 Écrire la requête SQL qui permet de créer la table **client** ci-dessous,
 sachant que **no_c** est un entier et que **titre**, **prenom** et **nom** sont
-des chaînes de caractères avec respectivement maximum de 3, 20 et 20 caractères:
+des chaînes de caractères:
 
 | no_c | titre | prenom | nom |
 | :--: | :---: | :----: | :-: |
@@ -184,10 +190,11 @@ insert into client values (4, 'M', 'Stephen', 'Kleene');
 ```
 ````
 
-## Exercice 8
+## Exercice 10
 
 Écrire les requêtes SQL qui permet de créer la table **achat** et d'y
 enregistrer les achats effectués par les clients:
+
 1. Alan Turing a acheté le canapé 2 places Ektrop.
 2. Ada Lovelace a également acheté le canapé Ektrop.
 3. Albert Einstein a acheté la structure de lit et le canapé.
@@ -219,8 +226,8 @@ insert into achat values (1, 1);
 ## Requête sur plusieurs tables
 
 En SQL, il est souvent utile de fusionner toute ou une partie de deux ou
-plusieurs tables. La table de l'exercice précédent n'est pas très lisible pour
-un humain:
+plusieurs tables. Par exemple, la table de l'exercice précédent n'est pas très
+lisible pour un humain:
 
 | no_c | no_p |
 | :--: | :--: |
@@ -241,7 +248,7 @@ les informations souhaitées.
 | 1 | Albert | Einstein | 2 | Brimnes |
 | 1 | Albert | Einstein | 1 | Ektorp |
 
-Cela se fait avec une jointure entre 3 tables.
+Cela se fait avec une jointure entre 2 tables.
 
 Pour joindre deux tables, il faut utiliser l'instruction
 `join ... on ... where`.
@@ -250,7 +257,7 @@ La requête suivante permet d'afficher le(s) nom(s) du (des) produits acheté(s)
 par le client n°3.
 
 ```{code-block} sql
-select nom from produit        -- sélectionne l'attribut nom de la table produit
+select nom from produit        -- sélectionne la colonne nom de la table produit
 
 join achat                     -- joint la table précédente avec la table achat
 on produit.no_p=achat.no_p     -- condition de jointure
@@ -258,7 +265,7 @@ on produit.no_p=achat.no_p     -- condition de jointure
 where no_c=3;                  -- critère de sélection
 ```
 
-## Exercice 9
+## Exercice 11
 
 Écrire la requête SQL qui permet d'afficher le(s) nom(s) du (des) produits
 acheté(s) par le client n°1.
@@ -274,10 +281,10 @@ where no_c=1;
 ```
 ````
 
-## Exercice 10
+## Exercice 12
 
-Écrire la requête SQL qui permet d'afficher le **titre**, le **prénom** et le
-**nom** des clients ayant acheté le produit Ektorp.\
+Écrire la requête SQL qui permet d'afficher le titre, le prénom et le nom des
+clients ayant acheté le produit Ektorp.\
 Trier les valeurs dans l'ordre alphabétique des prénoms.
 
 ````{admonition} Solution
@@ -292,7 +299,7 @@ order by prenom ASC;
 ```
 ````
 
-## Exercice 11
+## Exercice 13
 
 Écrire la requête SQL qui permet d'afficher le tableau ci-dessous (trié selon
 les prénoms):
@@ -316,3 +323,8 @@ join produit on achat.no_p=produit.no_p     -- joins les tables achat et produit
 order by prenom asc;
 ```
 ````
+
+## Clé
+
+Une clé permet d'identifier chaque élément d'une table de manière unique.
+

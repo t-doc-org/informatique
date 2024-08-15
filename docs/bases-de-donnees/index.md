@@ -8,8 +8,9 @@
 
 donnees
 sql
-type-donnees
-sql-lab1
 bd-relationnelle
+sql-lab1
+sql-lab2
+type-donnees
 requetes.md
 ```

@@ -38,7 +38,7 @@ select * from canton;
 Indiquer ce qu'afficheront les requêtes suivantes:
 
 1.  ```{code-block} sql
-    select * from canton where nb_communes=45;
+    select * from canton where nb_communes = 45;
     ```
 
     ````{admonition} Solution
@@ -49,17 +49,17 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     ````
 
 2.  ```{code-block} sql
-    select * from canton where chef_lieu=Coire;
+    select * from canton where chef_lieu = Coire;
     ```
 
     ````{admonition} Solution
     :class: note dropdown
-    Cette requête produira une erreur, car il manque les guillemets simples autour
-    de Coire.
+    Cette requête produira une erreur, car il manque les guillemets simples
+    autour de Coire.
     ````
 
 3.  ```{code-block} sql
-    select nom, superficie from canton where nom='Fribourg';
+    select nom, superficie from canton where nom = 'Fribourg';
     ```
 
     ````{admonition} Solution
@@ -70,7 +70,7 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     ````
 
 4.  ```{code-block} sql
-    select * from canton where population>500000;
+    select * from canton where population > 500000;
     ```
 
     ````{admonition} Solution
@@ -83,7 +83,7 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     ````
 
 5.  ```{code-block} sql
-    select * from canton where abr<'GR';
+    select * from canton where abr < 'GR';
     ```
 
     ````{admonition} Solution
@@ -118,8 +118,8 @@ Indiquer ce qu'afficheront les requêtes suivantes:
 
 ## Exercice 2
 
-Créer et compléter la table **canton** avec des requêtes SQL. La table ne doit pas
-accepter les valeurs `null`.\
+Créer et compléter la table **canton** avec des requêtes SQL. La table ne doit
+pas accepter les valeurs `null`.\
 Contrôler les réponses de l'exercice précédent.
 
 ```{code-block} sql
@@ -152,27 +152,27 @@ select * from canton order by superficie asc;
 
 ## Exercice 3
 
-1. Écrire une requête SQL qui permet d'afficher toutes les informations du canton
+1. Écrire une requête SQL qui permet d'afficher toutes les colonnes du canton
 dont le chef-lieu est Bellinzone.
 
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select * from canton where chef_lieu='Bellinzone';
+    select * from canton where chef_lieu = 'Bellinzone';
     ```
     ````
 
-2. Écrire une requête SQL qui permet d'afficher toutes les informations des
+2. Écrire une requête SQL qui permet d'afficher toutes les colonnes des
 cantons dont la population est inférieure à 300'000 habitants.
 
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select * from canton where population<300000;
+    select * from canton where population < 300000;
     ```
     ````
 
-3. Écrire une requête SQL qui permet d'afficher toutes les informations des
+3. Écrire une requête SQL qui permet d'afficher toutes les colonnes des
 cantons dans l'ordre alphabétique des abréviations.
 
     ````{admonition} Solution
@@ -202,25 +202,23 @@ petit.
     ```
     ````
 
-6. Écrire une requête SQL qui permet d'afficher toutes les informations des
-cantons qui ont plus de 100 communes et une population inférieure à 500'000
-habitants.
+6. Écrire une requête SQL qui permet d'afficher toutes les colonnes des cantons
+qui ont plus de 100 communes et une population inférieure à 500'000 habitants.
 
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select * from canton where nb_communes>100 and population<500000;
+    select * from canton where nb_communes > 100 and population < 500000;
     ```
     ````
 
-7. Écrire une requête SQL qui permet d'afficher toutes les informations des
-cantons dont le chef-lieu est Altdorf ou le nombre de communes supérieur ou égal
-à 150.
+7. Écrire une requête SQL qui permet d'afficher toutes les colonnes des cantons
+dont le chef-lieu est Altdorf ou le nombre de communes supérieur ou égal à 150.
 
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select * from canton where chef_lieu='Altdorf' or nb_communes>=150;
+    select * from canton where chef_lieu = 'Altdorf' or nb_communes >= 150;
     ```
     ````
 
@@ -230,7 +228,7 @@ l'abréviation n'est pas FR.
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select nom from canton where abr<>'FR';
+    select nom from canton where abr <> 'FR';
     ```
     ````
 
@@ -287,7 +285,7 @@ select * from contact;
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select email from contact where statut='Célibataire';
+    select email from contact where statut = 'Célibataire';
     ```
     ````
 
@@ -303,7 +301,7 @@ select * from contact;
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select * from contact where lieu='Val-d''Illiez';
+    select * from contact where lieu = 'Val-d''Illiez';
     ```
     ````
 
@@ -312,7 +310,7 @@ select * from contact;
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select * from contact where lieu='Lausanne';
+    select * from contact where lieu = 'Lausanne';
     ```
     ````
 
@@ -371,13 +369,13 @@ nées en juin.
     ```
     ````
 
-8. Rechercher tous les hommes qui sont célibataire et habitent dans la
+8. Rechercher tous les hommes qui sont célibataires et qui habitent dans la
 région genevoise (12..).
 
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select * from contact where sexe='M' and statut='Célibataire'
+    select * from contact where sexe = 'M' and statut = 'Célibataire'
         and code_postal like '12%';
     ```
     ````
@@ -388,7 +386,7 @@ région genevoise (12..).
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select * from contact where sexe='F' and statut='Divorcée'
+    select * from contact where sexe = 'F' and statut = 'Divorcée'
         and naissance between '1984-%' and '1994-%';
     ```
     ````

@@ -32,6 +32,7 @@ Les nombres réels
 | Type | Description |
 | :--- | :---------- |
 | **decimal(taille,d)** |  Nombre décimal <br> Le nombre de chiffre est précisé dans taille (max 65) et le nombre de décimales <br> dans d (max 30) <br> decimal(6,2) -> 2345.67 |
+| real | Nombre réel (valeur approchée)|
 
 
 ## Types textes ou chaînes de caractères

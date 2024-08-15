@@ -3,20 +3,20 @@
 
 # Langage SQL
 
-Une **base de données** (BD) est un ensemble structuré d'informations
-représentées par des tables et des relations entre ces tables. **SQL**
-(Structured Query Language ou langage de requête structuré) est un langage qui
-permet de créer des bases de données et/ou de récupérer les données répondant à
-des critères particuliers.
+Une **base de données** est un ensemble structuré d'informations représentées
+par des tables et des relations entre ces tables. **SQL**[^sn1] est un langage
+qui permet de créer des bases de données et/ou de récupérer les données
+répondant à des critères particuliers.
+[^sn1]: Structured Query Language (langage de requête structuré)
 
 ## Création de tables
 
-Le langage SQL permet de créer des tables en spécifiant leur nom et leurs
-attributs.
+Le langage SQL permet de créer des tables en spécifiant leur nom et le nom des
+différentes colonnes.
 
 Pour créer une table, il faut utiliser l'instruction `create table {nom de la table} (...)`
-suivi du nom de la table. Entre parenthèses, nous indiquons la liste des
-attributs, ainsi que leur [type](./type-donnees.md).\
+suivi du nom de la table. Entre parenthèses, nous indiquons la liste des nom des
+colonnes, ainsi que leur [type](./type-donnees.md).\
 Chaque instruction doit se terminer par un point-virgule.
 
 ```{code-block} sql
@@ -55,11 +55,11 @@ create table produit (
 ```
 ````
 
-## Ajout d'éléments
+## Ajout de lignes
 
-Pour insérer une nouvelle entité dans une table, il faut utiliser l'instruction
+Pour insérer une ligne dans une table, il faut utiliser l'instruction
 `insert into {nom de la table} values (...);`. Entre parenthèses, nous indiquons
-les valeurs des attributs. L'ordre doit être le même que lors de la création de
+les valeurs des colonnes. L'ordre doit être le même que lors de la création de
 la table.
 
 ```{code-block} sql
@@ -67,13 +67,14 @@ insert into stock values(1, 'T-shirt', 'rouge', 'M', 15, 20);
 ```
 
 ```{attention}
-Les chaînes de caractères doivent être entre apostrophes (guillemets simples).
+Les chaînes de caractères doivent être entourées d'apostrophes
+(guillemets simples).
 ```
 
 ## Exercice 2
 
 Écrire les instructions SQL qui permettent d'insérer dans la table produit les
-éléments suivants:
+lignes suivantes:
 
 | no_p | nom | description | prix |
 | :--: | :-: | :---------: | :--: |
@@ -90,21 +91,21 @@ insert into produit values(3, 'Jaren', 'matelas à ressorts', 59);
 ```
 ````
 
-## Affichage d'éléments
+## Affichage de lignes
 
 L'instruction SQL suivante permet d'afficher le contenu d'une table,
-c'est-à-dire les valeurs de chaque attribut.
+c'est-à-dire les valeurs de chaque colonne.
 
 ```{code-block} sql
 select * from stock;
 ```
 
-Le caractère * signifie tous les attributs, cela évite de devoir écrire toute la
-liste d'attributs.
-Traduite en français, cette instruction signifie: "Afficher tous les attributs
+Le caractère * signifie toutes les colonnes, cela évite de devoir écrire la
+liste des noms des colonnes.
+Traduite en français, cette instruction signifie: "Afficher toutes les colonnes
 de la table stock."
 
-Il est aussi possible d'afficher seulement un ou plusieurs des attributs.
+Il est aussi possible d'afficher seulement une ou plusieurs colonnes.
 
 ```{code-block} sql
 select article from stock;
@@ -113,7 +114,7 @@ select article, quantite from stock;
 
 ## Exercice 3
 
-Écrire la requête qui permet d'afficher tous les éléments de la table
+Écrire la requête qui permet d'afficher toutes les lignes de la table.
 **produit**.
 
 ````{admonition} Solution
@@ -134,9 +135,9 @@ select nom, prix from produit;
 ```
 ````
 
-## Affichage d'éléments avec critères
+## Affichage de lignes avec critères
 
-Il est souvent utile d'effectuer des recherches par critères, par exemple on
+Il est souvent utile d'effectuer des recherches par critères, par exemple, on
 souhaiterait afficher tous les articles en taille M.
 
 Voici la base de données à disposition:
@@ -177,7 +178,7 @@ Celle-ci affichera le résultat suivant:
 
 ## Exercice 4
 
-Écrire la requête SQL qui permet d'afficher tous les attributs du produit
+Écrire la requête SQL qui permet d'afficher toutes les colonnes du produit
 Brimnes.
 
 ````{admonition} Solution
@@ -197,7 +198,7 @@ select description from poduit where nom='Ektorp';
 ```
 ````
 
-## Modification de données
+## Modification de cellules
 
 Pour modifier la couleur de l'article dont l'id est 3, la requête sera la
 suivante:
@@ -232,10 +233,9 @@ select * from stock;                                  -- Pour tester le résulta
 ```
 ````
 
-## Suppression d'éléments
+## Suppression de lignes
 
-Il est aussi possible de supprimer un élément, c'est-à-dire une ligne complète
-d'une table.
+Il est aussi possible de supprimer une ligne complète d'une table.
 
 ```{code-block} sql
 delete from stock where article='Polo';
@@ -267,13 +267,13 @@ select * from produit;                              -- Pour tester le résultat
 
 ## Colonnes sans valeur
 
-Nous souhaitons compléter notre table stock avec l'article Pantalon dont le
-numéro de produit est 8 et le prix unitaire 45 CHF. Nous ne connaissons pas
-(encore) la couleur, la taille et la quantité.
+On souhaite compléter notre table stock avec l'article Pantalon dont le numéro
+de produit est 8 et le prix unitaire 45 CHF. On ne connaît pas (encore) la
+couleur, la taille et la quantité.
 
-Nous ne pouvons pas utiliser la requête utilisée précédemment (liste de tous les
-attributs dans l'ordre), car nous n'avons pas toutes les informations, mais nous
-pouvons spécifier que certains attributs.
+On ne peut pas utiliser la requête utilisée précédemment (liste de toutes les
+colonnes dans l'ordre), car on n'a pas toutes les informations, mais on peut
+spécifier que certaines colonnes.
 
 ```{code-block} sql
 insert into stock (no_p, article, prix_unitaire) values (8, 'Pantalon' , 20);
@@ -284,7 +284,7 @@ Certaines colonnes ne doivent pas être vide sinon cela poserait un problème,
 comme id qui est un numéro unique qui permet de différencier les différents
 articles ou la colonne article qui permet de savoir quel est le type d'article.
 Il est possible d'obliger l'utilisateur à fournir ces informations lorsqu'il
-ajoute un élément dans la table. Pour cela, il faut utiliser les mots
+ajoute un élément dans la table. Pour cela, il faut utiliser les mots réservés
 **not null** lors de la création de la table.
 
 ```{code-block} sql
@@ -302,7 +302,7 @@ create table stock (
 
 Créer une table eleve qui contient les informations des élèves: nom , prenom,
 sexe, classe, naissance, email, adresse, code postal, ville, telephone.\
-Quels sont les attributs obligatoires?\
+Quelles sont les colonnes obligatoires?\
 Écrire la requête qui permet de créer cette table en choisissant le type
 adapté.
 
@@ -326,13 +326,13 @@ create table eleve (
 
 ## Valeurs par défaut
 
-Lorsqu'une colonne contient souvent la même valeur, nous pouvons lui attribuer
-une valeur par défaut, en anglais **default**.
+Lorsqu'une colonne contient souvent la même valeur, il est possible de lui
+attribuer une valeur par défaut, en anglais **default**.
 
 La valeur qui suit le mot réservé default est automatiquement insérée dans la
-table si aucune valeur pour cet attribut n'est spécifiée.
+table, si aucune valeur pour cette colonne n'est spécifiée.
 
-La valeur par défaut doit être du même type de celui de la colonne.
+La valeur par défaut doit être du même type que celui de la colonne.
 
 | nom | description | prix |
 | :-: | :---------: | :--: |
