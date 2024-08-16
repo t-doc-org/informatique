@@ -9,6 +9,7 @@
 donnees
 sql
 bd-relationnelle
+sql2
 sql-lab1
 sql-lab2
 type-donnees

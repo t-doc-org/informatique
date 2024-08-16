@@ -45,7 +45,12 @@ dans cette partie sera affiché.
 
 <!-- TODO: Améliorer le styling du code, notamment la numérotation. -->
 
-<table><tr><td>
+````{sidebar}
+```{figure} images/balise-html.png
+:alt: Balise HTML
+:align: center
+```
+````
 
 ```{code} html
 :number-lines:
@@ -59,12 +64,6 @@ dans cette partie sera affiché.
   </body>
 </html>
 ```
-
-</td><td>
-
-![balise HTML](images/balise-html.png)
-
-</td></tr></table>
 
 ## Balise `<body>`
 

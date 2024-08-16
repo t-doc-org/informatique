@@ -1,7 +1,7 @@
 <!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 
-# Langage SQL
+# Langage SQL - Notions de base
 
 Une **base de données** est un ensemble structuré d'informations représentées
 par des tables et des relations entre ces tables. **SQL**[^sn1] est un langage
@@ -32,9 +32,9 @@ create table stock (
 
 ## Exercice 1
 
-Écrire la requête SQL qui permet de créer la table **produit** ci-dessous,
-sachant que **no_p** et **prix** sont des entiers et que **nom** et
-**description** sont des chaînes de caractères:
+Écrire la requête SQL qui permet de créer la table `produit` ci-dessous,
+sachant que `no_p` et `prix` sont des entiers et que `nom` et
+`description` sont des chaînes de caractères:
 
 | no_p | nom | description | prix |
 | :--: | :-: | :---------: | :--: |
@@ -100,7 +100,7 @@ c'est-à-dire les valeurs de chaque colonne.
 select * from stock;
 ```
 
-Le caractère * signifie toutes les colonnes, cela évite de devoir écrire la
+Le caractère `*` signifie toutes les colonnes, cela évite de devoir écrire la
 liste des noms des colonnes.
 Traduite en français, cette instruction signifie: "Afficher toutes les colonnes
 de la table stock."
@@ -114,8 +114,8 @@ select article, quantite from stock;
 
 ## Exercice 3
 
-Écrire la requête qui permet d'afficher toutes les lignes de la table.
-**produit**.
+Écrire la requête qui permet d'afficher toutes les lignes de la table
+`produit`.
 
 ````{admonition} Solution
 :class: note dropdown
@@ -124,8 +124,8 @@ select * from produit;
 ```
 ````
 
-Écrire la requête SQL qui permet d'afficher le nom de tous les produits et
-celle qui permet d'afficher le nom et le prix de tous les produits.
+Écrire la requête SQL qui permet d'afficher le `nom` de tous les produits et
+celle qui permet d'afficher le `nom` et le `prix` de tous les produits.
 
 ````{admonition} Solution
 :class: note dropdown
@@ -137,8 +137,8 @@ select nom, prix from produit;
 
 ## Affichage de lignes avec critères
 
-Il est souvent utile d'effectuer des recherches par critères, par exemple, on
-souhaiterait afficher tous les articles en taille M.
+Il est souvent utile d'effectuer des recherches par critères, par exemple, nous
+souhaiterions afficher tous les articles en taille M.
 
 Voici la base de données à disposition:
 
@@ -156,7 +156,7 @@ L'instruction `where` permet de ne sélectionner que les lignes qui répondent �
 ce(s) critère(s).
 
 ```{code-block} sql
-select * from stock where stock='M';
+select * from stock where stock = 'M';
 ```
 
 Cette requête affichera le résultat suivant:
@@ -167,7 +167,7 @@ Cette requête affichera le résultat suivant:
 ```
 
 ```{code-block} sql
-select * from stock where prix=35;
+select * from stock where prix = 35;
 ```
 
 Celle-ci affichera le résultat suivant:
@@ -184,7 +184,7 @@ Brimnes.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-select * from produit where nom='Brimnes';
+select * from produit where nom = 'Brimnes';
 ```
 ````
 
@@ -194,17 +194,17 @@ Ektorp.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-select description from poduit where nom='Ektorp';
+select description from poduit where nom = 'Ektorp';
 ```
 ````
 
 ## Modification de cellules
 
-Pour modifier la couleur de l'article dont l'id est 3, la requête sera la
+Pour modifier la couleur de l'article dont l'`id` est 3, la requête sera la
 suivante:
 
 ```{code-block} sql
-update stock set couleur='bleu' where id=3;
+update stock set couleur = 'bleu' where id = 3;
 ```
 
 La base de données sera modifiée ainsi:
@@ -227,7 +227,7 @@ Contrôler le résultat en affichant tous les éléments de la table produit.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-update stock set prix=499 where description='canapé 2 places';
+update stock set prix = 499 where description = 'canapé 2 places';
 
 select * from stock;                                  -- Pour tester le résultat
 ```
@@ -238,7 +238,7 @@ select * from stock;                                  -- Pour tester le résulta
 Il est aussi possible de supprimer une ligne complète d'une table.
 
 ```{code-block} sql
-delete from stock where article='Polo';
+delete from stock where article = 'Polo';
 ```
 
 La nouvelle base de données sera la suivante:
@@ -253,13 +253,13 @@ La nouvelle base de données sera la suivante:
 
 ## Exercice 6
 
-Supprimer le produit dont le no_p est 3.\
+Supprimer le produit dont le `no_p` est 3.\
 Contrôler le résultat en affichant tous les éléments de la table produit.
 
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-delete from produit where no_p=3;
+delete from produit where no_p = 3;
 
 select * from produit;                              -- Pour tester le résultat
 ```
@@ -267,13 +267,13 @@ select * from produit;                              -- Pour tester le résultat
 
 ## Colonnes sans valeur
 
-On souhaite compléter notre table stock avec l'article Pantalon dont le numéro
-de produit est 8 et le prix unitaire 45 CHF. On ne connaît pas (encore) la
-couleur, la taille et la quantité.
+Nous souhaitons compléter notre table stock avec l'article Pantalon dont le
+numéro de produit est 8 et le prix unitaire 45 CHF. Nous ne connaissons pas
+(encore) la couleur, la taille et la quantité.
 
-On ne peut pas utiliser la requête utilisée précédemment (liste de toutes les
-colonnes dans l'ordre), car on n'a pas toutes les informations, mais on peut
-spécifier que certaines colonnes.
+Nous ne pouvons pas utiliser la requête utilisée précédemment (liste de toutes
+les colonnes dans l'ordre), car nous n'avons pas toutes les informations, mais
+nous pouvons spécifier que certaines colonnes.
 
 ```{code-block} sql
 insert into stock (no_p, article, prix_unitaire) values (8, 'Pantalon' , 20);
@@ -285,7 +285,7 @@ comme id qui est un numéro unique qui permet de différencier les différents
 articles ou la colonne article qui permet de savoir quel est le type d'article.
 Il est possible d'obliger l'utilisateur à fournir ces informations lorsqu'il
 ajoute un élément dans la table. Pour cela, il faut utiliser les mots réservés
-**not null** lors de la création de la table.
+`not null` lors de la création de la table.
 
 ```{code-block} sql
 create table stock (
@@ -300,8 +300,8 @@ create table stock (
 
 ## Exercice 7
 
-Créer une table eleve qui contient les informations des élèves: nom , prenom,
-sexe, classe, naissance, email, adresse, code postal, ville, telephone.\
+Créer une table `eleve` qui contient les informations des élèves: nom, prénom,
+sexe, classe, date de naissance, email, adresse, code postal, ville, téléphone.\
 Quelles sont les colonnes obligatoires?\
 Écrire la requête qui permet de créer cette table en choisissant le type
 adapté.
@@ -327,9 +327,9 @@ create table eleve (
 ## Valeurs par défaut
 
 Lorsqu'une colonne contient souvent la même valeur, il est possible de lui
-attribuer une valeur par défaut, en anglais **default**.
+attribuer une valeur par défaut, en anglais default.
 
-La valeur qui suit le mot réservé default est automatiquement insérée dans la
+La valeur qui suit le mot réservé `default` est automatiquement insérée dans la
 table, si aucune valeur pour cette colonne n'est spécifiée.
 
 La valeur par défaut doit être du même type que celui de la colonne.

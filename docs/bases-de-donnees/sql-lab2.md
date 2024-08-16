@@ -4,4 +4,4 @@
 # BD Lab 2
 
 Le but de cette section est d'entraîner les concepts vus dans les sections
-[](./sql.md) et [](./bd-relationnelle.md).
+[](./bd-relationnelle.md) et [](./sql2.md).
