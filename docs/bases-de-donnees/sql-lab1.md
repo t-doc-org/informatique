@@ -20,13 +20,14 @@ create table canton (
     population int not null,
     superficie decimal(6,2) not null
 );
-insert into canton values ('Fribourg', 'FR', 'Fribourg', 126, 334465, 1670.7);
-insert into canton values ('Genève', 'GE', 'Genève', 45, 514114, 282.48);
-insert into canton values ('Berne', 'BE', 'Berne', 335, 1051437, 5959.44);
-insert into canton values ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729);
-insert into canton values ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2);
-insert into canton values ('Grison', 'GR', 'Coire', 101, 202538, 7105.44);
-insert into canton values ('Uri', 'UR', 'Altdorf', 19, 37317, 1076.57);
+insert into canton values
+    ('Fribourg', 'FR', 'Fribourg', 126, 334465, 1670.7),
+    ('Genève', 'GE', 'Genève', 45, 514114, 282.48),
+    ('Berne', 'BE', 'Berne', 335, 1051437, 5959.44),
+    ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729),
+    ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2),
+    ('Grison', 'GR', 'Coire', 101, 202538, 7105.44),
+    ('Uri', 'UR', 'Altdorf', 19, 37317, 1076.57);
 select * from canton;
 ```
 

@@ -1,27 +1,26 @@
 <!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 
-# Base de données
+# Bases de données relationnelles
 
 Nous avons vu précédemment qu'il est pratique de stocker des données
 semi-structurées dans des tables (ou tableaux). Grâce au langage SQL, il est
 facile de les créer et de les manipuler.
 
 Une **base de données** est un ensemble d'informations organisées pour être
-facilement accessible, géré et mis à jour par ses utilisateurs. Dans une
-entreprise, toutes les données relatives aux clients sont stockées dans une base
-de données.
+facilement accessible, géré et mis à jour par ses utilisateurs. Par exemple,
+dans une entreprise, toutes les données relatives aux clients sont stockées dans
+une base de données.
 
 ## Tableur[^sn1]
 
-Une approche simple est d'utiliser un tableur pour stocker les informations.
+Une approche simple serait d'utiliser un tableur pour stocker les informations.
 [^sn1]: Logiciel pour la création et la manipulation de tableaux, par exemple
 Excel.
 
-Dans une entreprise, des clients achètent des produits. Les informations
-concernant le client sont le nom, le prénom et l'adresse et celles concernant le
-produit sont le nom, la description et le prix. Voici une représentation des
-achats avec un tableur:
+Voici un exemple de tableau qui représente les achats effectués par des clients.
+Les informations concernant le client sont son nom, son prénom et son adresse et
+celles concernant le produit acheté sont le nom, la description et le prix.
 
 | nom_client | prenom | adresse | nom_produit | description | prix |
 | :--------- | :----- | :------ | :---------- | :---------- | ---: |
@@ -40,46 +39,170 @@ du produit apparaissent sur plusieurs lignes.
 2. S'il y a un changement, il faut le faire à plusieurs endroits, sinon les
 données ne sont plus cohérentes.
 
-L'utilisation d'un tableur n'est pas adaptée pour les grandes bases de données.
+L'utilisation d'un tableur n'est donc pas adaptée pour les grandes bases de
+données.
 
-## Base de données relationnelle
+## Modèle relationnel
 
-Une autre approche est d'utiliser plusieurs tables reliées entre elles. On parle
-alors de **base de données relationnelle**.
+Une autre approche est d'utiliser plusieurs tables reliées entre elles. Nous
+parlons alors de **base de données relationnelle**.
 
-En reprenant l'exemple précédent, on utiliserait 3 tables.
+Pour pouvoir relier des tables entre elles, il est nécessaire d'introduire
+quelques concepts.
 
-```{attention}
-Il est nécessaire de pouvoir identifier de manière unique chaque ligne d'une
-table, par exemple si deux personnes ont le même nom. En cas d'ambiguïté, on
-ajoute un numéro unique à chaque ligne.
+### Clé primaire
+
+Une **clé primaire** est une colonne (ou une combinaison de colonnes) qui permet
+d'identifier chaque enregistrement (ligne) d'une table de manière unique. Elle
+doit donc être:
+- unique (deux lignes distinctes ne peuvent pas avoir la même valeur pour la
+colonne qui est clé primaire)
+- stable (la valeur de la colonne qui est clé primaire ne doit pas changer au
+cours du temps)
+
+Si aucune colonne ne remplit ces critères, nous pouvons en créer une nouvelle
+avec un compteur (la valeur augmentera toujours de 1).
+
+#### Exemple - Cantons
+
+<table><tr><td valign="top">
+
+```{graphviz}
+:align: center
+digraph UML_Class_diagram {
+  graph [
+    labelloc="t"
+    fontname="Helvetica,Arial,sans-serif"
+    fontsize="20pt"
+    layout="circo"
+  ]
+  node [
+    fontname="Helvetica,Arial,sans-serif"
+    shape=record
+    style=filled
+    fillcolor=gray95
+  ]
+
+  Class1 [
+    shape=plain
+    label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+      <tr> <td> <b>canton</b> </td> </tr>
+      <tr> <td>
+        <table border="0" cellborder="0" cellspacing="0" >
+          <tr> <td align="left"><u>nom </u> (clé primaire)</td> </tr>
+          <tr> <td align="left" >abr</td> </tr>
+          <tr> <td align="left" >chef_lieu</td> </tr>
+          <tr> <td align="left" >nb_communes</td> </tr>
+          <tr> <td align="left" >population</td> </tr>
+          <tr> <td align="left" >superficie</td> </tr>
+        </table>
+      </td> </tr>
+    </table>>
+  ]
+
+}
 ```
 
-1. Table client:\
+</td><td style="width:70%" valign="top">
 
-| no_c | nom | prenom | adresse | telephone | mail |
-| :---:| :-- | :----- | :------ | :-------: | :--: |
-| 1 | Duck | Donald | Bd de Pérolles 7<br> 1700 Fribourg | 071 324 56 71 | donald.duck@proton.ch |
-| 2 | Lebricoleur | Bob | Rue de Centre 14<br> 1752 Villars-sur-Glâne | 075 652 56 90 | bob.lebricoleur@gmail.com |
-| 3 | Léclair | Buzz | Rue de la Lune 7<br> 1700 Fribourg | 070 589 09 12 | buzz.leclair@infomaniak.ch |
+- Chaque canton a un nom différent et ne change pas.
+- Chaque abréviation est différente et ne change pas.
+- Les chefs-lieux sont en principe différents, mais pourrait changer.
+- Le nombre de communes peut être le même, voir même changer.
+- La population peut être la même et change.
+- La superficie peut être la même, voir même changer.
 
-2. Table produit:
+</td></tr></table>
 
-| no_p | nom | description | prix |
-| :--: | :-- | :---------- | ---: |
-| 1 | Ektorp | canapé 2 places | 599 |
-| 2 | Brimnes | structure de lit | 129 |
-| 3 | Jaren | matelas à ressorts | 59 |
+Dans cet exemple, on peut donc choisir la colonne `nom` ou `abr` comme clé
+primaire. Nous avons choisi `nom`.
 
-3. Table achat:
 
-| no_p | no_c |
-| :--: | :--: |
-| 1 | 1 |
-| 2 | 3 |
-| 2 | 1 |
-| 3 | 3 |
-| 1 | 2 |
+#### Exemple - Clients
+<table><tr><td valign="top">
+
+```{graphviz}
+:align: center
+digraph UML_Class_diagram {
+  graph [
+    labelloc="t"
+    fontname="Helvetica,Arial,sans-serif"
+    fontsize="20pt"
+    layout="circo"
+  ]
+  node [
+    fontname="Helvetica,Arial,sans-serif"
+    shape=record
+    style=filled
+    fillcolor=gray95
+  ]
+
+  Class1 [
+    shape=plain
+    label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+      <tr> <td> <b>client</b> </td> </tr>
+      <tr> <td>
+        <table border="0" cellborder="0" cellspacing="0" >
+          <tr> <td align="left"><u>no_c </u> (clé primaire)</td> </tr>
+          <tr> <td align="left" >nom</td> </tr>
+          <tr> <td align="left" >prenom</td> </tr>
+          <tr> <td align="left" >adresse</td> </tr>
+          <tr> <td align="left" >telephone</td> </tr>
+          <tr> <td align="left" >mail</td> </tr>
+        </table>
+      </td> </tr>
+    </table>>
+  ]
+
+}
+```
+
+</td><td style="width:70%" valign="top">
+
+- Deux clients peuvent avoir le même nom.
+- Deux clients peuvent avoir le même prénom.
+- Deux clients peuvent avoir la même adresse et elle peut changer.
+- Le téléphone peut changer.
+- Le mail peut change.
+
+</td></tr></table>
+
+Dans cet exemple, aucune colonne ne correspond aux critères de clé primaire
+(unique et stable). Par conséquent, il faut créer une nouvelle colonne, par
+exemple, ajouter un numéro de client `no_c`.
+
+### Clé étrangère
+
+Une **clé étrangère** est une colonne qui contient une information qui est une
+clé primaire d'une autre table.
+
+
+### Schéma relationnel
+
+Nous pouvons représenter une base de données relationnelles à l'aide d'un
+schéma. Pour ce faire, il existe quelques règles à respecter:
+1. Chaque table a un nom, suivi de la liste de ses colonnes.
+2. Chaque table a une clé primaire indiquée grâce au soulignement.
+3. Les flèches représentent les références entre les tables et pointent
+toujours d'une clé étrangère vers une clé primaire.
+
+```{tip}
+Lorsque nous construisons une base de données relationnells, il est essentiel de
+s'assurer qu'il n'y a pas de duplication d'informations. S'il y a de la
+redondance, il est souvent nécessaire d'ajouter une nouvelle table pour
+normaliser les données.
+```
+
+Reprenons l'exemple du tableur avec le tableau d'achats. Un **achat** est une
+relation entre un **client** et un **produit**. Pour construire une base de
+données relationnelle, nous aurons donc besoin de trois tables distinctes:
+client, produit et achat. La table achat contiendra deux informations: le numéro
+de client et le numéro de produit. Ces deux éléments sont des clés étangères,
+notées `# no_c` et le `# no_p`. Comme un client peut acheter plusieurs produits
+ou un produit peut être acheté par plusieurs clients, aucune des deux colonnes
+ne peut être une clé primaire à elle seule. Dans ce cas, nous utilisons la
+combinaison des deux colonnes comme clé primaire. Alternativement, nous aurions
+pu créer une nouvelle colonne pour servir de clé primaire.
 
 
 <!-- TODO: Améliorer le rendu des diagrammes (titre, couleur). -->
@@ -88,7 +211,7 @@ ajoute un numéro unique à chaque ligne.
 :align: center
 digraph UML_Class_diagram {
   graph [
-    label="Modèle logique"
+    label="Schéma relationnel"
     labelloc="t"
     fontname="Helvetica,Arial,sans-serif"
     fontsize="20pt"
@@ -153,178 +276,11 @@ digraph UML_Class_diagram {
 }
 ```
 
-<!-- TOTO: Ajouter une numérotation automatique des exercices par chapitre. -->
+### Exercice 9
 
-## Exercice 9
-
-Écrire la requête SQL qui permet de créer la table **client** ci-dessous,
-sachant que **no_c** est un entier et que **titre**, **prenom** et **nom** sont
-des chaînes de caractères:
-
-| no_c | titre | prenom | nom |
-| :--: | :---: | :----: | :-: |
-| 1 | M | Albert | Einstein |
-| 2 | Mme | Ada | Lovelace |
-| 3 | M | Alan | Turing |
-| 4 | M | Stephen | Kleene |
-
-Contrôler le résultat en affichant tous les éléments de la table.
-
-
-
-````{admonition} Solution
-:class: note dropdown
-```{code-block} sql
-create table client (
-  no_c int,
-  titre text,
-  prenom text,
-  nom text
-);
-
-insert into client values (1, 'M', 'Albert', 'Einstein');
-insert into client values (2, 'Mme', 'Ada', 'Lovelace');
-insert into client values (3, 'M', 'Alan', 'Turing');
-insert into client values (4, 'M', 'Stephen', 'Kleene');
-);
-```
-````
-
-## Exercice 10
-
-Écrire les requêtes SQL qui permet de créer la table **achat** et d'y
-enregistrer les achats effectués par les clients:
-
-1. Alan Turing a acheté le canapé 2 places Ektrop.
-2. Ada Lovelace a également acheté le canapé Ektrop.
-3. Albert Einstein a acheté la structure de lit et le canapé.
-4. Stephen Kleene n'a rien acheté.
-
-| no_c | no_p |
-| :--: | :---: |
-| ... | ... |
-| ... | ... |
-| ... | ... |
-
-Contrôler le résultat en affichant tous les éléments de la table.
-
-````{admonition} Solution
-:class: note dropdown
-```{code-block} sql
-create table achat (
-  no_c int,
-  no_p int
-);
-
-insert into achat values (3, 1);
-insert into achat values (2, 1);
-insert into achat values (1, 2);
-insert into achat values (1, 1);
-```
-````
-
-## Requête sur plusieurs tables
-
-En SQL, il est souvent utile de fusionner toute ou une partie de deux ou
-plusieurs tables. Par exemple, la table de l'exercice précédent n'est pas très
-lisible pour un humain:
-
-| no_c | no_p |
-| :--: | :--: |
-| 3 | 1 |
-| 2 | 1 |
-| 1 | 2 |
-| 1 | 1 |
-
-Il serait préférable que la table contienne aussi le prénom et le nom du client,
-ainsi que le nom du produit acheté./
-Cela se fait au moyen d'une jointure. Celle-ci va créer une nouvelle table avec
-les informations souhaitées.
-
-| no_c | prenom | nom | no_p | nom |
-| :--: | :----: | :-: | :--: | :-: |
-| 3 | Alan | Turing | 1 | Ektorp |
-| 2 | Ada | Lovelace | 1 | Ektorp |
-| 1 | Albert | Einstein | 2 | Brimnes |
-| 1 | Albert | Einstein | 1 | Ektorp |
-
-Cela se fait avec une jointure entre 2 tables.
-
-Pour joindre deux tables, il faut utiliser l'instruction
-`join ... on ... where`.
-
-La requête suivante permet d'afficher le(s) nom(s) du (des) produits acheté(s)
-par le client n°3.
-
-```{code-block} sql
-select nom from produit        -- sélectionne la colonne nom de la table produit
-
-join achat                     -- joint la table précédente avec la table achat
-on produit.no_p=achat.no_p     -- condition de jointure
-
-where no_c=3;                  -- critère de sélection
-```
-
-## Exercice 11
-
-Écrire la requête SQL qui permet d'afficher le(s) nom(s) du (des) produits
-acheté(s) par le client n°1.
-
-````{admonition} Solution
-:class: note dropdown
-```{code-block} sql
-select nom from produit
-
-join achat on produit.no_p=achat.no_p
-
-where no_c=1;
-```
-````
-
-## Exercice 12
-
-Écrire la requête SQL qui permet d'afficher le titre, le prénom et le nom des
-clients ayant acheté le produit Ektorp.\
-Trier les valeurs dans l'ordre alphabétique des prénoms.
-
-````{admonition} Solution
-:class: note dropdown
-```{code-block} sql
-select client.titre, client.prenom, client.nom from client
-
-join achat on client.no_c = achat.no_c
-
-where achat.no_p = 1
-order by prenom ASC;
-```
-````
-
-## Exercice 13
-
-Écrire la requête SQL qui permet d'afficher le tableau ci-dessous (trié selon
-les prénoms):
-| no_c | prenom | nom | no_p | nom | prix |
-| :--: | :----: | :-: | :--: | :-: | :-: |
-| 2 | Ada | Lovelace | 1 | Ektorp | 599 |
-| 3 | Alan | Turing | 1 | Ektorp | 599 |
-| 1 | Albert | Einstein | 1 | Ektorp | 599 |
-| 1 | Albert | Einstein | 2 | Brimnes | 129 |
-
-
-````{admonition} Solution
-:class: note dropdown
-```{code-block} sql
-select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom, prix
-  from client
-
-join achat on client.no_c = achat.no_c      -- joins les tables client et achat
-join produit on achat.no_p=produit.no_p     -- joins les tables achat et produit
-
-order by prenom asc;
-```
-````
-
-## Clé
-
-Une clé permet d'identifier chaque élément d'une table de manière unique.
-
+Dessiner le schéma de la base de données relationnelle qui correpondrait à la
+location de trotinettes électriques.
+1. Quelles sont les différentes tables?
+2. Quelles seront les colonnes de ces tables?
+3. Existe-t-il déjà une clé primaire?
+4. Y a-t-il des clés étrangères?

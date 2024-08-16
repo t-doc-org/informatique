@@ -5,7 +5,7 @@
 
 ## Gestion des données
 
-Lorsque l'on utilise un ordinateur, beaucoup de données sont générées: des
+Lorsque nous utilisons un ordinateur, beaucoup de données sont générées: des
 documents, des images, des vidéos, de la musique, des mails, etc.
 Ces différents **fichiers** sont accessibles sur votre ordinateur grâce au
 **système de fichiers**. Chaque fichier a une **extension** propre dépendante du
