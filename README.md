@@ -4,6 +4,8 @@
 
 # Cours d'informatique
 
+[![Publish](https://github.com/t-doc-org/informatique/actions/workflows/deploy-github-pages.yml/badge.svg)](https://github.com/t-doc-org/informatique/actions/workflows/deploy-github-pages.yml)
+
 Ce projet contient des documents pour l'enseignement de l'informatique au
 secondaire supérieur en Suisse.
 
