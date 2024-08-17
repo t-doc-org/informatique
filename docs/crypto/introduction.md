@@ -83,7 +83,7 @@ Le 15 octobre 1586, Marie Stuart est jugée pour trahison. Elle est accusée
 d'avoir pris part à un complot pour tenter d'assassiner la reine Elizabeth et
 ainsi s'emparer de la couronne d'Angleterre.
 
-Le code utilisé est constitué de 23 symboles qui remplacent les lettres de
+Le code[^sn3] utilisé est constitué de 23 symboles qui remplacent les lettres de
 l'alphabet (sauf j, v et w), ainsi que 36 symboles représentant des mots ou des
 phrases. De plus, il y a quatre symboles qui ne font rien et un symbole qui
 indique que la lettre suivante est doublée.
@@ -117,7 +117,3 @@ Que signifie le message suivant?
 :alt: Message codé avec le chiffre de Pig Pen
 :align: center
 ```
-
-
-
-

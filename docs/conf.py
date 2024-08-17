@@ -8,7 +8,7 @@ from tdoc.common.defaults import *
 
 project = "Informatique"
 copyright = f"{time.strftime('%Y')} Caroline Blank"
-license = 'CC-BY-NC-SA-4.0'
+license = 'CC BY-NC-SA 4.0'
 
 keep_warnings = True
 
