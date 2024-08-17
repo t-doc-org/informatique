@@ -34,7 +34,7 @@ digraph UML_Class_diagram {
     label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
       <tr> <td> <b>client</b> </td> </tr>
       <tr> <td>
-        <table border="0" cellborder="0" cellspacing="0" >
+        <table border="0" cellborder="0" cellspacing="7" >
           <tr> <td align="left"><u>no_c </u> (clé primaire)</td> </tr>
           <tr> <td align="left" >nom</td> </tr>
           <tr> <td align="left" >prenom</td> </tr>
@@ -65,10 +65,39 @@ create table client (
 
 </td></tr></table>
 
+Si une clé primaire est définie au moyen de deux colonnes (par exemple, le nom
+et le mail), nous utilisons la notation suivante:
+
+```{code-block} sql
+create table client (
+  nom text not null,                -- Ajouter not null, car clé primaire
+  prenom text not null,
+  adresse text,
+  telephone text,
+  mail text not null,               -- Ajouter not null, car clé primaire
+  primary key (nom, mail)           -- Défini la clé primaire
+);
+```
+
 
 <!-- TOTO: Ajouter une numérotation automatique des exercices par chapitre. -->
 
 ## Exercice 10
+
+Reprendre la table produit créée à l'exercice 1 et y ajouter la clé primaire.
+
+````{admonition} Solution
+:class: note dropdown
+```{code-block} sql
+create table produit (
+    no_p int primary key not null,
+    nom text not null,
+    description text
+);
+```
+````s
+
+## Exercice 11
 
 Écrire la requête SQL qui permet de créer la table `client` ci-dessous,
 sachant que `no_c` est un entier et la clé primaire, `titre`, `prenom` et `nom`
@@ -89,8 +118,8 @@ Contrôler le résultat en affichant tous les éléments de la table.
 create table client (
   no_c int primary key not null,
   titre text,
-  prenom text,
-  nom text
+  prenom text not null,
+  nom text not null
 );
 
 insert into client values
@@ -101,7 +130,7 @@ insert into client values
 ```
 ````
 
-## Exercice 11
+## Exercice 12
 
 Écrire les requêtes SQL qui permet de créer la table `achat` et d'y
 enregistrer les achats effectués par les clients:
@@ -123,8 +152,9 @@ Contrôler le résultat en affichant tous les éléments de la table.
 :class: note dropdown
 ```{code-block} sql
 create table achat (
-  no_c int,
-  no_p int
+  no_c int not null,
+  no_p int not null,
+  primary key(no_c, no_p)
 );
 
 insert into achat values (3, 1);
@@ -174,7 +204,7 @@ on produit.no_p=achat.no_p     -- condition de jointure
 where no_c=3;                  -- critère de sélection
 ```
 
-## Exercice 12
+## Exercice 13
 
 Écrire la requête SQL qui permet d'afficher le(s) nom(s) du (des) produits
 acheté(s) par le client n°1.
@@ -190,7 +220,7 @@ where no_c=1;
 ```
 ````
 
-## Exercice 13
+## Exercice 14
 
 Écrire la requête SQL qui permet d'afficher le titre, le prénom et le nom des
 clients ayant acheté le produit Ektorp.\
@@ -208,7 +238,7 @@ order by prenom ASC;
 ```
 ````
 
-## Exercice 14
+## Exercice 15
 
 Écrire la requête SQL qui permet d'afficher la table ci-dessous (triée selon
 les prénoms):

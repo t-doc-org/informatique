@@ -88,7 +88,7 @@ digraph UML_Class_diagram {
     label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
       <tr> <td> <b>canton</b> </td> </tr>
       <tr> <td>
-        <table border="0" cellborder="0" cellspacing="0" >
+        <table border="0" cellborder="0" cellspacing="7" >
           <tr> <td align="left"><u>nom </u> (clé primaire)</td> </tr>
           <tr> <td align="left" >abr</td> </tr>
           <tr> <td align="left" >chef_lieu</td> </tr>
@@ -142,7 +142,7 @@ digraph UML_Class_diagram {
     label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
       <tr> <td> <b>client</b> </td> </tr>
       <tr> <td>
-        <table border="0" cellborder="0" cellspacing="0" >
+        <table border="0" cellborder="0" cellspacing="7" >
           <tr> <td align="left"><u>no_c </u> (clé primaire)</td> </tr>
           <tr> <td align="left" >nom</td> </tr>
           <tr> <td align="left" >prenom</td> </tr>
@@ -231,9 +231,9 @@ digraph UML_Class_diagram {
   Class1 [
     shape=plain
     label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-      <tr> <td> <b>PRODUIT</b> </td> </tr>
+      <tr> <td> <b>produit</b> </td> </tr>
       <tr> <td>
-        <table border="0" cellborder="0" cellspacing="0" >
+        <table border="0" cellborder="0" cellspacing="7" >
           <tr> <td align="left" port="p1"><u>no_p</u></td> </tr>
           <tr> <td port="p2" align="left" >nom</td> </tr>
           <tr> <td port="p3" align="left" >description</td> </tr>
@@ -246,9 +246,9 @@ digraph UML_Class_diagram {
   Class2 [
     shape=plain
     label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-      <tr> <td> <b>CLIENT</b> </td> </tr>
+      <tr> <td> <b>client</b> </td> </tr>
       <tr> <td>
-        <table border="0" cellborder="0" cellspacing="0" >
+        <table border="0" cellborder="0" cellspacing="7" >
           <tr> <td align="left" port="c1"><u>no_c</u></td> </tr>
           <tr> <td port="c2" align="left" >nom</td> </tr>
           <tr> <td port="c3" align="left" >prenom</td> </tr>
@@ -263,9 +263,9 @@ digraph UML_Class_diagram {
   Class3 [
     shape=plain
     label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-      <tr> <td> <b>ACHAT</b> </td> </tr>
+      <tr> <td> <b>achat</b> </td> </tr>
       <tr> <td>
-        <table border="0" cellborder="0" cellspacing="0" >
+        <table border="0" cellborder="0" cellspacing="7" >
           <tr> <td align="left" port="a1"><u># no_p</u></td> </tr>
           <tr> <td port="a2" align="left" ><u># no_c</u></td> </tr>
         </table>

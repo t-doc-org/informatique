@@ -245,6 +245,9 @@ cantons dont la population se trouvent entre 300'000 et 500'000 habitants.
 
 ## Exercice 4
 
+<!-- TODO: Ajout de la base de données contact.sql à télécharger pour les
+            élèves. -->
+
 Une application de rencontres demande, à l'enregistrement sur son site, les
 informations suivantes: le nom, le prénom, l'adresse mail, le sexe,
 la date de naissance, le statut, le lieu et les intérêts principaux.\
@@ -268,10 +271,10 @@ create table contact (
     interets text
 );
 
-insert into contact values ('Dupont', 'Bob', 'dupont.bob@glog.com', 'M', '1990-09-10', 'Divorcé', 'Villars-sur-Glâne', '1752', 'Tennis, Animaux');
-insert into contact values ('Martin', 'Anne', 'amartin@fri.ch', 'F', '1995-06-02', 'Célibataire', 'Lausanne', '1000', 'Escape game');
-insert into contact values ('Dunant', 'Martine', 'martine.dunant@google.com', 'F', '1985-12-24', 'Séparée', 'Val d''Illiez', '1873', 'Lecture');
-insert into contact values ('Schmidt', 'Léo', 'leo@cine.ch', 'M', '2000-01-01', 'Célibataire', 'La Roche', '1634', 'Cinéma, Jeux de société');
+insert into contact values ('Dupont', 'Bob', 'dupont.bob@glog.com', 'M', '1990-09-10', 'divorcé', 'Villars-sur-Glâne', '1752', 'Tennis, Animaux');
+insert into contact values ('Martin', 'Anne', 'amartin@fri.ch', 'F', '1995-06-02', 'célibataire', 'Lausanne', '1000', 'Escape game');
+insert into contact values ('Dunant', 'Martine', 'martine.dunant@google.com', 'F', '1985-12-24', 'séparé', 'Val d''Illiez', '1873', 'Lecture');
+insert into contact values ('Schmidt', 'Léo', 'leo@cine.ch', 'M', '2000-01-01', 'célibataire', 'La Roche', '1634', 'Cinéma, Jeux de société');
 
 select * from contact;
 ```
@@ -286,7 +289,7 @@ select * from contact;
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select email from contact where statut = 'Célibataire';
+    select email from contact where statut = 'célibataire';
     ```
     ````
 
@@ -376,7 +379,7 @@ région genevoise (12..).
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select * from contact where sexe = 'M' and statut = 'Célibataire'
+    select * from contact where sexe = 'M' and statut = 'célibateire'
         and code_postal like '12%';
     ```
     ````
@@ -387,7 +390,7 @@ région genevoise (12..).
     ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
-    select * from contact where sexe = 'F' and statut = 'Divorcée'
+    select * from contact where sexe = 'F' and statut = 'divorcé'
         and naissance between '1984-%' and '1994-%';
     ```
     ````
