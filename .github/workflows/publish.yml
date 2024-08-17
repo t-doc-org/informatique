@@ -2,7 +2,7 @@
 # Copyright 2024 Remy Blank <remy@c-space.org>
 # SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-name: Deploy book to GitHub Pages
+name: Publish
 on:
   push:
     branches: [main]
