@@ -17,3 +17,9 @@
 
 - TODO: Customiser les sidebars dans le CSS pour pourvoir les utiliser afin
   d'afficher une image à côté de texte ou d'un bloc de code.
+
+- TODO: Permettre la génération de graphiques avec matplotlib
+  <https://matplotlib.org/sampledoc/extensions.html>.
+
+ - TODO: Document dev installation with:
+   $ pip install --user --no-deps --editable .

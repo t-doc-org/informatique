@@ -12,6 +12,6 @@ license = 'CC-BY-NC-SA-4.0'
 
 keep_warnings = True
 
-html_theme_options.update({
+html_theme_options = {
     'repository_url': 'https://github.com/t-doc-org/informatique',
-})
+}
