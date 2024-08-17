@@ -128,6 +128,15 @@ charset:
 Comme cette balise ne contient pas de contenu, c'est une balise unique (pas de
 balise ouvrante et fermante).
 
+<!-- TODO: Créer une directive pour l'ajout d'activités de learningapps.org -->
+
+## Exercice 1
+
+But: Comprendre la structure principale d'un document HTML.
+<iframe src="https://learningapps.org/watch?v=pxjjqttb224"
+style="border:0px;width:100%;height:500px" allowfullscreen="true"
+webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+
 (hyperliens)=
 ## Hyperliens
 
@@ -236,14 +245,7 @@ La balise `<table>` permet de représenter des tableaux de données (tableaux en
 [Tuto](https://developer.mozilla.org/fr/docs/Web/HTML/Element/table) tables et
 tableaux
 
-## Exercices
-
-### Exercice 1
-
-But: Comprendre la structure principale d'un document HTML.\
-Faire [ex 1](https://moodle.fritic.ch/mod/hvp/view.php?id=112347) sur Moodle.
-
-### Exercice 2
+## Exercice 2
 
 But: Ouvrir un document HTML sur replit.com.
 
@@ -262,7 +264,7 @@ But: Ouvrir un document HTML sur replit.com.
    sauvegardé sur votre OneDrive.
 9. Appuyer sur le bouton **Run**.
 
-### Exercice 3
+## Exercice 3
 
 But: Comprendre un document HTML simple et le modifier.\
 Vous voyez maintenant le code HTML et ce que la page affiche.
