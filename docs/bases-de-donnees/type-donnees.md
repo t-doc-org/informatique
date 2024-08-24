@@ -3,7 +3,7 @@
 
 # Type de données
 
-Lors de la création de tables en SQL, il faut déterminer le type des attributs.
+Lors de la création de tables en SQL, il faut déterminer le type des colonnes.
 Il y a quelques années, il était important de choisir le type le mieux adapté
 aux données afin d'optimiser l'espace de la mémoire utilisée. Actuellement, les
 bases de données sont intelligentes et gèrent elles-mêmes l'espace-mémoire. Il
@@ -57,7 +57,7 @@ Les nombres réels
 
 <!-- TODO: Remplacer le pdf par un pdf éditable avec ouverture directement dans
            le browser -->
-Remplir le tableau dans le document joint [Exercice sur les types](./exercice-types.pdf).
+Remplir le tableau dans le document joint [Exercice sur les types](./exercice-types.docx).
 
 (null)=
 ## Valeur null

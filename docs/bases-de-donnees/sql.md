@@ -50,7 +50,8 @@ sachant que `no_p` et `prix` sont des entiers et que `nom` et
 create table produit (
     no_p int,
     nom text,
-    description text
+    description text,
+    prix int
 );
 ```
 ````
@@ -76,11 +77,20 @@ Les chaînes de caractères doivent être entourées d'apostrophes
 Écrire les instructions SQL qui permettent d'insérer dans la table produit les
 lignes suivantes:
 
-| no_p | nom | description | prix |
-| :--: | :-: | :---------: | :--: |
-| 1 | Ektorp | canapé 2 places | 599 |
-| 2 | Brimnes | structure de lit | 129 |
-| 3 | Jaren | matelas à ressorts | 59 |
+```{exec} sql
+:name: sql-meuble
+:class: hidden
+create table produit (
+    no_p int,
+    nom text,
+    description text,
+    prix int
+);
+insert into produit values(1, 'Ektorp', 'canapé 2 places', 599);
+insert into produit values(2, 'Brimnes', 'structure de lit', 129);
+insert into produit values(3, 'Jaren', 'matelas à ressorts', 59);
+select * from produit;
+```
 
 ````{admonition} Solution
 :class: note dropdown
@@ -140,40 +150,87 @@ select nom, prix from produit;
 Il est souvent utile d'effectuer des recherches par critères, par exemple, nous
 souhaiterions afficher tous les articles en taille M.
 
-Voici la base de données à disposition:
+Voici la base de données à disposition test:
 
-| id | article | couleur | taille | quantité | prix_unitaire |
-| :-: | :----: | :-----: | :----: | :------: | :----------: |
-| 1 | T-shirt | rouge | M | 15 | 20 |
-| 2 | T-shirt | blanc | XL | 17 | 25 |
-| 3 | Polo | rouge | L | 12 | 35 |
-| 4 | Polo | blanc | M | 10 | 40 |
-| 5 | T-shirt | rouge | XL | 8 | 20 |
-| 6 | T-shirt | blanc | S | 30 | 20 |
-| 7 | Veste | rouge | L | 5 | 50 |
+```{exec} sql
+:name: sql-stock1
+:class: hidden
+create table stock (
+    id int,
+    article text,
+    couleur text,
+    taille text,
+    quantite int,
+    prix_unitaire int
+);
+insert into stock values
+    (1, 'T-shirt', 'rouge', 'M', 15, 20),
+    (2, 'T-shirt', 'blanc', 'XL', 17, 25),
+    (3, 'Polo', 'rouge', 'L', 12, 35),
+    (4, 'Polo', 'blanc', 'M', 10, 40),
+    (5, 'T-shirt', 'rouge', 'XL', 8, 20),
+    (6, 'T-shirt', 'blanc', 'S', 30, 20),
+    (7, 'Veste', 'rouge', 'L', 5, 50);
+select * from stock;
+```
 
 L'instruction `where` permet de ne sélectionner que les lignes qui répondent à
 ce(s) critère(s).
 
 ```{code-block} sql
-select * from stock where stock = 'M';
+select * from stock where taille = 'M';
 ```
 
 Cette requête affichera le résultat suivant:
 
-```{code-block} text
-1   T-shirt     rouge   M   15  20
-4   Polo        blanc   M   10  40
+```{exec} sql
+:name: sql-stock2
+:class: hidden
+create table stock (
+    id int,
+    article text,
+    couleur text,
+    taille text,
+    quantite int,
+    prix_unitaire int
+);
+insert into stock values
+    (1, 'T-shirt', 'rouge', 'M', 15, 20),
+    (2, 'T-shirt', 'blanc', 'XL', 17, 25),
+    (3, 'Polo', 'rouge', 'L', 12, 35),
+    (4, 'Polo', 'blanc', 'M', 10, 40),
+    (5, 'T-shirt', 'rouge', 'XL', 8, 20),
+    (6, 'T-shirt', 'blanc', 'S', 30, 20),
+    (7, 'Veste', 'rouge', 'L', 5, 50);
+select * from stock where taille = 'M';
 ```
 
 ```{code-block} sql
-select * from stock where prix = 35;
+select * from stock where prix_unitaire = 35;
 ```
 
 Celle-ci affichera le résultat suivant:
 
-```{code-block} text
-3   Polo        rouge   L   12  35
+```{exec} sql
+:name: sql-stock3
+:class: hidden
+create table stock (
+    id int,
+    article text,
+    couleur text,
+    taille text,
+    quantite int,
+    prix_unitaire int
+);
+insert into stock values
+    (1, 'T-shirt', 'rouge', 'M', 15, 20),
+    (2, 'T-shirt', 'blanc', 'XL', 17, 25),
+    (3, 'Polo', 'rouge', 'L', 12, 35),
+    (4, 'Polo', 'blanc', 'M', 10, 40),
+    (5, 'T-shirt', 'rouge', 'XL', 8, 20),
+    (6, 'T-shirt', 'blanc', 'S', 30, 20),
+    (7, 'Veste', 'rouge', 'L', 5, 50);
+select * from stock where prix_unitaire = 35;
 ```
 
 ## Exercice 4
@@ -194,7 +251,7 @@ Ektorp.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-select description from poduit where nom = 'Ektorp';
+select description from produit where nom = 'Ektorp';
 ```
 ````
 
@@ -227,9 +284,9 @@ Contrôler le résultat en affichant tous les éléments de la table produit.
 ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
-update stock set prix = 499 where description = 'canapé 2 places';
+update produit set prix = 499 where description = 'canapé 2 places';
 
-select * from stock;                                  -- Pour tester le résultat
+select * from produit;                                  -- Pour tester le résultat
 ```
 ````
 
@@ -276,11 +333,11 @@ les colonnes dans l'ordre), car nous n'avons pas toutes les informations, mais
 nous pouvons spécifier que certaines colonnes.
 
 ```{code-block} sql
-insert into stock (no_p, article, prix_unitaire) values (8, 'Pantalon' , 20);
+insert into stock (id, article, prix_unitaire) values (8, 'Pantalon' , 20);
 ```
 Une colonne sans valeur contient la valeur [null](#null).
 
-Certaines colonnes ne doivent pas être vide sinon cela poserait un problème,
+Certaines colonnes ne doivent pas être vides sinon cela poserait un problème,
 comme id qui est un numéro unique qui permet de différencier les différents
 articles ou la colonne article qui permet de savoir quel est le type d'article.
 Il est possible d'obliger l'utilisateur à fournir ces informations lorsqu'il
@@ -304,7 +361,8 @@ Créer une table `eleve` qui contient les informations des élèves: nom, préno
 sexe, classe, date de naissance, email, adresse, code postal, ville, téléphone.\
 Quelles sont les colonnes obligatoires?\
 Écrire la requête qui permet de créer cette table en choisissant le type
-adapté.
+adapté pour chaque colonne.\
+Ajouter une ligne avec vos propres informations sauf le numéro de téléphone.
 
 ````{admonition} Solution
 :class: note dropdown
@@ -321,6 +379,10 @@ create table eleve (
     ville text,
     telephone text
 );
+
+insert into eleve values('Bob', 'Dubois', 'M', '2007-03-14', '2F9', 'bob.dubois@example.com', 'Boulevard de Pérolle 11', '1700', 'Fribourg', null);
+
+select * from eleve;
 ```
 ````
 
