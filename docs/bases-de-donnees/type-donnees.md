@@ -62,7 +62,7 @@ Remplir le tableau dans le document joint [Exercice sur les types](./exercice-ty
 (null)=
 ## Valeur null
 
-EN SQL, il existe une valeur notée **null**. Elle représente une absence de
+En SQL, il existe une valeur notée **null**. Elle représente une absence de
 valeur. Elle peut remplacer une valeur quel que soit le type attendu.
 
 
