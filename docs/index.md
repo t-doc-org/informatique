@@ -26,3 +26,11 @@ python/index
 bases-de-donnees/index
 crypto/index
 ```
+
+## Logiciels utilisés
+
+```{toctree}
+:maxdepth: 1
+
+logiciels/index
+```

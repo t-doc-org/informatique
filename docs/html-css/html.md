@@ -247,22 +247,25 @@ tableaux
 
 ## Exercice 2
 
-But: Ouvrir un document HTML sur replit.com.
+But: Ouvrir un document HTML sur Visual Studio Code.
 
-1. Sur Moodle, télécharger le document `index.html`.
-2. Sauvegarder ce document sur OneDrive dans le dossier informatique.
-3. Se connecter sur replit.com.
-4. Cliquer sur **+ Create Repl**.
-5. Choisir **HTML, CSS, JS**.
-6. Nommer le Repl **Exemple**.
-7. Cliquer à nouveau sur **+ Create Repl**.\
-   ![replit](images/replit.png)
-8. Il faut remplacer le fichier `index.html` par celui que vous avez téléchargé:
-   - Effacer le fichier `index.html` déjà présent.
-   - Télécharger votre fichier en cliquant sur les 3 points verticaux et en
-   sélectionnant **Upload file**. Choisir le fichier `index.html` que vous avez
-   sauvegardé sur votre OneDrive.
-9. Appuyer sur le bouton **Run**.
+[Installation de Visual Studio Code](../logiciels/vscode.md)
+
+1. Sur OneDrive, dans le dossier "Informatique/HTML-CSS", créer un dossier
+"exercices".
+2. Sur Teams, dans le dossier "Informatique/HTML-CSS", télécharger le document
+**index.html** et le sauvegarder sur OneDrive dans le dossier créé en 1.
+3. Ouvrir VSCode.
+4. Dans VSCode choisir "ouvrir le dossier..."" et sélectionner le dossier
+"Informatique/HTML-CSS/exercices" de votre OneDrive.
+```{figure} images/ouvrir.png
+:alt: Ouvrir le dossier
+:width: 50%
+:align: center
+```
+5. Sélectionner le fichier **index.html** et le code HTML s'affiche.
+6. Pour voir le rendu, double-cliquer sur le fichier **index.html** de votre
+OneDrive, le fichier s'ouvrira dans le navigateur.
 
 ## Exercice 3
 
@@ -270,20 +273,33 @@ But: Comprendre un document HTML simple et le modifier.\
 Vous voyez maintenant le code HTML et ce que la page affiche.
 
 1. Qu'est-ce que vous comprenez de cette page?
-2. Vous allez maintenant modifier cette page (pour valider une modification,
-appuyer sur **Run**):
-   - Modifier le titre et le premier paragraphe pour remplacer Collège du Sud
+2. Vous allez maintenant modifier cette page. Pour valider une modification:
+    - Sauvegarder le document dans VSCode ({kbd}`ctrl` + {kbd}`s` ou
+    {kbd}`command` + {kbd}`s`).
+    - Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
+    ```{figure} images/actualiser.png
+    :alt: Actualiser la page
+    :width: 30%
+    :align: center
+    ```
+3. Modifier le titre et le premier paragraphe pour remplacer Collège du Sud
    par Collège Sainte-Croix.
-   - Modifier la partie présentation pour avoir les informations qui
+4. Modifier la partie présentation pour avoir les informations qui
    correspondent au Collège Sainte-Croix. Changer aussi le lien vers le site de
    l'école. (cf. [](#hyperliens))
-   - Compléter la liste de vos cours avec: Économie et droit, Biologie, ...
-   - Changer la liste de vos cours par une liste numérotée. (cf. [](#listes))
-   - Ajouter un sous-titre **Ma classe** et un paragraphe avec quelques
+5. Compléter la liste de vos cours avec: Économie et droit, Biologie, ...
+6. Changer la liste de vos cours par une liste numérotée. (cf. [](#listes))
+7. Ajouter un sous-titre "Ma classe" et un paragraphe avec quelques
    informations.
-   - Ajouter une image du Collège Sainte-Croix:
-     - Télécharger l'image que vous avez choisie.
-     - Importer l'image sur replit.com dans un répertoire nommé **images**.
-     - Noter le code HTML nécessaire. (cf. [](#images))
-     - Ne pas oublier d'indiquer la source.
-   - Faire un tableau de votre horaire.
+8. Ajouter une image du Collège Sainte-Croix:
+      - Créer un dossier "images" en cliquant sur l'icone "Nouveau dossier".
+        ```{figure} images/dossier.png
+        :alt: Nouveau dossier
+        :width: 40%
+        :align: center
+        ```
+      - Télécharger l'image que vous avez choisie et la sauvegarder dans le
+      dossier "images".
+      - Noter le code HTML nécessaire. (cf. [](#images))
+      - Ne pas oublier d'indiquer la source.
+9. Faire un tableau de votre horaire.

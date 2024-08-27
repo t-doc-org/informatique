@@ -190,17 +190,12 @@ ultrices felis a facilisis feugiat. </p>
 
 But: Appliquer un fichier CSS au document index.html.
 
-1. Sur Moodle, télécharger le document **style.css**.
-2. Sauvegarder ce document sur OneDrive dans le dossier informatique.
-3. Sur replit.com, il faut remplacer le fichier style.css par celui que vous
-venez de télécharger:
-    - Effacer le fichier **style.css** déjà présent.
-    - Télécharger votre fichier en cliquant sur les 3 points verticaux et en
-  sélectionnant **Upload file**. Choisir le fichier ** style.css** que
-  vous avez sauvegardé sur votre OneDrive.
-4. Ajouter le référencement à la page **style.css** dans le `<head>` du document
+1. Sur Teams, télécharger le document **style.css**.
+2. Sauvegarder ce document sur OneDrive dans le dossier
+"Informatique/HTML-CSS/exercices".
+3. Ajouter le référencement à la page **style.css** dans le `<head>` du document
   **index.html**. (cf. [](#referencement))
-5. Appuyer sur le bouton **Run**.
+4. Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
 
 ### Exercice 5
 
@@ -210,27 +205,29 @@ comprendre.
     - À quels éléments s'appliquent les différentes propriétés?
     - Quelle est la différence entre `h1{...}` et `#source{...}`? Quand va-t-on
     utiliser le deuxième?
-3. Vous allez maintenant modifier cette page (pour valider une modification,
-appuyer sur **Run**):
-    - Modifier la couleur des titres et des sous-titres. Vous pouvez utiliser
-    les noms en anglais ou le code RGB.
+3. Vous allez maintenant modifier cette page.Pour valider une modification:
+    - Sauvegarder le document dans VSCode ({kbd}`ctrl` + {kbd}`s` ou
+    {kbd}`command` + {kbd}`s`).
+    - Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
+4. Modifier la couleur des titres et des sous-titres. Vous pouvez utiliser
+   les noms en anglais ou le code RGB.
     [Liste des couleurs](https://www.rapidtables.com/web/color/RGB_Color.html)
-    - Modifier la police de caractère (font) des titres (pas des sous-titres) en
+5. Modifier la police de caractère (font) des titres (pas des sous-titres) en
     "fantasy".
-    - Modifier la couleur de fond de la page HTML.
-    - Ajouter une couleur de fond aux titres et aux sous-titres.
-    - Modifier le code pour que toutes les sources s'affichent en gris foncé.
+6. Modifier la couleur de fond de la page HTML.
+7. Ajouter une couleur de fond aux titres et aux sous-titres.
+8. Modifier le code pour que toutes les sources s'affichent en gris foncé.
     (Il faut utiliser un sélecteur de classe.)
-    - Ajouter une bordure au tableau.
+9. Ajouter une bordure au tableau.
 
 ### Exercice 6
 
 À vous de jouer! Réfléchir à la structure de votre site internet:
 
 1. Quelles seront les différentes pages?
-2. Sur replit.com, il est nécessaire que la première page de votre site
-s'appelle **index.html**. Vous pouvez en créer d'autres et les référencer avec
-des liens pour pouvoir naviguer entre les différentes pages de votre site.
+2. Nommer la première page de votre site **index.html**. Vous pouvez en créer
+d'autres et les référencer avec des liens pour pouvoir naviguer entre les
+différentes pages de votre site. (cf. [](#hyperliens))
 3. Quel sera le style de votre site? Pouvez-vous le réaliser avec les outils vus
 en classe? Sinon rechercher sur internet comment faire.
 

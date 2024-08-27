@@ -1,16 +1,9 @@
 <!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 
-# Visual Studio Code
+# Création d'une base de donnée sur VSCode
 
-## Installation
-
-1. Télécharger la version de [Visual Studio Code](https://code.visualstudio.com/download)
-qui correspond à votre ordinateur (Windows ou Mac).
-2. Lancer l'installation en double-cliquant sur le fichier téléchargé.
-3. Démarrer l'application Visual Studio Code.
-
-## Création d'une nouvelle base de données
+[Installation de Visual Studio Code](../logiciels/vscode.md)
 
 1. Créer un nouveau dossier dans votre OneDrive. Par exemple, SQL_stock
 2. Depuis VSCode, dans le menu Fichier, choisir ouvrir le dossier... et
