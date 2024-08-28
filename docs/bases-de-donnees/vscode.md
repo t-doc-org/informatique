@@ -1,9 +1,12 @@
 <!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 
-# Création d'une base de donnée sur VSCode
+# Visual Studio Code
 
 [Installation de Visual Studio Code](../logiciels/vscode.md)
+
+(creation)=
+## Création d'une base de donnée
 
 1. Créer un nouveau dossier dans votre OneDrive. Par exemple, SQL_stock
 2. Depuis VSCode, dans le menu Fichier, choisir ouvrir le dossier... et
@@ -54,7 +57,19 @@ données.
 ```
 9. Répéter les points 6 à 8 pour chaque nouvelle requête.
 
+(import)=
+## Importation d'une base de donnée
 
+1. [Créer une nouvelle base de données](#creation) points 1 à 5.
+2. Télécharger et sauvegarder le fichier .sql dans le dossier de la base de
+données.
+3. Dans VSCode, ouvrir le fichier .sql importé et sélectionner "Run Query"
+(clic droit).
+```{figure} images/import.png
+:alt: Lancer la requête d'une base de données importée
+:width: 90%
+:align: center
+```
 
 
 

@@ -42,52 +42,52 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     select * from canton where nb_communes = 45;
     ```
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} text
     Genève    GE    Genève      45        514114      282.48
     ```
-    ````
+    ````-->
 
 2.  ```{code-block} sql
     select * from canton where chef_lieu = Coire;
     ```
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     Cette requête produira une erreur, car il manque les guillemets simples
     autour de Coire.
-    ````
+    ```` -->
 
 3.  ```{code-block} sql
     select nom, superficie from canton where nom = 'Fribourg';
     ```
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} text
     Fribourg    1670.7
     ```
-    ````
+    ````-->
 
 4.  ```{code-block} sql
     select * from canton where population > 500000;
     ```
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} text
     Genève    GE    Genève      45        514114      282.48
     Berne     BE    Berne       335       1051437     5959.44
     Zurich    ZH    Zurich      160       1579967     1729
     ```
-    ````
+    ````-->
 
 5.  ```{code-block} sql
     select * from canton where abr < 'GR';
     ```
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     Les opérateurs de comparaison pour du texte utilisent l'ordre alphabétique.\
     Exemples: 'a' < 'b' ou 'p' > 'd'
@@ -97,13 +97,13 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     Genève    GE    Genève      45        514114      282.48
     Berne     BE    Berne       335       1051437     5959.44
     ```
-    ````
+    ````-->
 
 6.  ```{code-block} sql
     select * from canton order by superficie asc;
     ```
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} text
     Genève    GE    Genève      45        514114      282.48
@@ -115,7 +115,7 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     Grison    GR    Coire       101       202538      7105.44
 
     ```
-    ````
+    ````-->
 
 ## Exercice 2
 
@@ -127,7 +127,8 @@ Contrôler les réponses de l'exercice précédent.
 select * from canton order by superficie asc;
 ```
 
-````{admonition} Solution
+
+<!--````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
 create table canton (
@@ -149,99 +150,99 @@ insert into canton values ('URI', 'UR', 'Altdorf', 19, 37317, 1076.57);
 
 select * from canton order by superficie asc;
 ```
-````
+````-->
 
 ## Exercice 3
 
 1. Écrire une requête SQL qui permet d'afficher toutes les colonnes du canton
 dont le chef-lieu est Bellinzone.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from canton where chef_lieu = 'Bellinzone';
     ```
-    ````
+    ````-->
 
 2. Écrire une requête SQL qui permet d'afficher toutes les colonnes des
 cantons dont la population est inférieure à 300'000 habitants.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from canton where population < 300000;
     ```
-    ````
+    ````-->
 
 3. Écrire une requête SQL qui permet d'afficher toutes les colonnes des
 cantons dans l'ordre alphabétique des abréviations.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from canton order by abr asc;
     ```
-    ````
+    ````-->
 
 4. Écrire une requête SQL qui permet d'afficher le nom, l'abréviation et le
 chef-lieu des cantons.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select nom, abr, chef_lieu from canton;
-    ```
+    ```-->
 
 5. Écrire une requête SQL qui permet d'afficher le nom, l'abréviation et le
 chef-lieu des cantons ordonnés selon le nombre d'habitants du plus grand au plus
 petit.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select nom, abr, chef_lieu from canton order by population desc;
     ```
-    ````
+    ````-->
 
 6. Écrire une requête SQL qui permet d'afficher toutes les colonnes des cantons
 qui ont plus de 100 communes et une population inférieure à 500'000 habitants.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from canton where nb_communes > 100 and population < 500000;
     ```
-    ````
+    ````-->
 
 7. Écrire une requête SQL qui permet d'afficher toutes les colonnes des cantons
 dont le chef-lieu est Altdorf ou le nombre de communes supérieur ou égal à 150.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from canton where chef_lieu = 'Altdorf' or nb_communes >= 150;
     ```
-    ````
+    ````-->
 
 8. Écrire une requête SQL qui permet d'afficher le nom des cantons dont
 l'abréviation n'est pas FR.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select nom from canton where abr <> 'FR';
     ```
-    ````
+    ````-->
 
 9. Écrire une requête SQL qui permet d'afficher le nom et l'abréviation  des
 cantons dont la population se trouvent entre 300'000 et 500'000 habitants.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select nom from canton where population between 300000 and 500000;
     ```
-    ````
+    ````-->
 
 ## Exercice 4
 
@@ -279,19 +280,17 @@ insert into contact values ('Schmidt', 'Léo', 'leo@cine.ch', 'M', '2000-01-01',
 select * from contact;
 ```
 
-<!-- TODO: Ajouter le lien pour le fichier contacts.sql et les instructions,
-             si les élèves"travaillent sur replit.com
-             [contacts.sql](./contacts.sql) -->
-
+0. [Importer](#import) la base de données [contact.sql](./contact.sql) dans
+VSCode.
 
 1. Rechercher les adresses mail de toutes les personnes célibataires.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select email from contact where statut = 'célibataire';
     ```
-    ````
+    ````-->
 
 2. Rechercher toutes les personnes qui habitent à Val-d'Illiez.
 
@@ -303,21 +302,21 @@ select * from contact;
     mais une apostrophe.
     ```
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from contact where lieu = 'Val-d''Illiez';
     ```
-    ````
+    ````-->
 
 3. Recherche toutes les personnes qui habitent à Lausanne.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from contact where lieu = 'Lausanne';
     ```
-    ````
+    ````-->
 
 4. Rechercher toutes les personnes qui habitent dans la région lausannoise (le
 code postal doit commencer par 10..).
@@ -338,62 +337,62 @@ code postal doit commencer par 10..).
     ```
     ````
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from contact where code_postal like '10%';
     ```
-    ````
+    ````-->
 
 5. Rechercher le nom, le prénom et la date de naissance de toutes les personnes
 nées 1995.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select nom, prenom from contact where naissance like '1995-%';
     ```
-    ````
+    ````-->
 
 6. Rechercher les contacts qui aiment le cinéma.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from contact where interets like '%Cinéma%';
     ```
-    ````
+    ````-->
 
 7. Rechercher le nom, le prénom et la date de naissance de toutes les personnes
 nées en juin.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select nom, prenom, naissance from contact where naissance like '%-06-%';
     ```
-    ````
+    ````-->
 
 8. Rechercher tous les hommes qui sont célibataires et qui habitent dans la
 région genevoise (12..).
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from contact where sexe = 'M' and statut = 'célibateire'
         and code_postal like '12%';
     ```
-    ````
+    ````-->
 
 9. Rechercher toutes les femmes qui sont divorcées et qui ont entre 30 et
 40 ans.
 
-    ````{admonition} Solution
+<!--    ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from contact where sexe = 'F' and statut = 'divorcé'
         and naissance between '1984-%' and '1994-%';
     ```
-    ````
+    ````-->
 
 
