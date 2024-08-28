@@ -33,8 +33,7 @@ select * from canton;
 
 ## Exercice 1
 
-<!-- TODO: Cacher les solutions pour que les élèves ne puissent pas y accéder
-            pendant qu'ils font les exercices. -->
+<!-- TODO: Remettre les solutions après les labos. -->
 
 Indiquer ce qu'afficheront les requêtes suivantes:
 
@@ -245,9 +244,6 @@ cantons dont la population se trouvent entre 300'000 et 500'000 habitants.
     ````-->
 
 ## Exercice 4
-
-<!-- TODO: Ajout de la base de données contact.sql à télécharger pour les
-            élèves. -->
 
 Une application de rencontres demande, à l'enregistrement sur son site, les
 informations suivantes: le nom, le prénom, l'adresse mail, le sexe,

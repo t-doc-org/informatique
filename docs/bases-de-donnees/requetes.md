@@ -8,7 +8,7 @@
 | Mots réservés | Description |
 | :------------ | :---------- |
 | `create table` | Crée une table |
-| `insert into ... values` | Ajoute un élément (une ligne à la table) |
+| `insert into ... values` | Insère un élément (une ligne à la table) |
 | `update ... set` | Met à jour des valeurs |
 | `delete` | Supprime un élément (supprime une ligne à la table) |
 | `alter table` | Modifie la structure de la table (ajout de colonne, ...) |

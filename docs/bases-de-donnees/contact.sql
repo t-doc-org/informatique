@@ -1,6 +1,3 @@
-.header on
-.mode column
-
 create table contact (
     nom text not null,
     prenom text not null,

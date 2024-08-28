@@ -56,7 +56,7 @@ create table produit (
 ```
 ````
 
-## Ajout de lignes
+## Insertion de lignes
 
 Pour insérer une ligne dans une table, il faut utiliser l'instruction
 `insert into {nom de la table} values (...);`. Entre parenthèses, nous indiquons

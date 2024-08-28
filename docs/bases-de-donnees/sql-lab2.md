@@ -17,9 +17,9 @@ Lors de l'emprunt, la date de retour est fixée.
 4. Dessiner le schéma relationnel.
 
 
-<!-- Cacher les solutions. -->
+<!-- TODO:  Remettre les solutions. -->
 
-````{admonition} Solution
+<!-- ````{admonition} Solution
 :class: note dropdown
 ```{graphviz}
 :align: center
@@ -120,15 +120,17 @@ digraph UML_Class_diagram {
 
 }
 ```
-````
+```` -->
 
 ## Exercice 2
+
+[Créer](#creation) une nouvelle base de données.
 
 Écrire les requêtes SQL qui permettent de créer cette base de données. Ne
 pas oublier d'indiquer le type et les attributs (`primary key`, `not null`,
 etc.) quand c'est nécessaire.
 
-````{admonition} Solution
+<!-- ````{admonition} Solution
 :class: note dropdown
 ```{code-block} sql
 create table usager (
@@ -166,59 +168,60 @@ create table emprunt (
     retour date not null
 );
 ```
-````
+```` -->
 
 ## Exercice 3
 
-<!-- TODO: Ajout de la base de données bibliothèque.sql à télécharger pour les
-            élèves. -->
 Toutes les requêtes de cet exercice se font dans une seule table.
+
+0. [Importer](#import) la requête [biblio-insertion.sql](./biblio-insertion.sql) dans
+VSCode pour insérer les éléments dans la base de données.
 
 1. Écrire une requête SQL qui affiche tous les livres.
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select * from livre;
     ```
-    ````
+    ```` -->
 2. Écrire une requête SQL qui affiche tous les noms des usagers.
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select nom from usager;
     ```
-    ````
+    ```` -->
 
 3. Écrire une requête SQL qui affiche tous les éditeurs sans doublons.
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select distinct editeur from livre;
     ```
-    ````
+    ```` -->
 
 4. Écrire une requête SQL qui affiche le titre et l'année des livres publiés
 avant 1980.
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select titre from livre where annee < 1980;
     ```
-    ````
+    ```` -->
 
 5. Écrire une requête SQL qui affiche le titre des livres dont le titre
-contient une lettre "Astérix".
+contient le mot "Astérix".
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select titre from livre where titre like '%Astérix%';
     ```
-    ````
+    ```` -->
 
 6. Écrire une requête SQL qui affiche l'isbn des livres à rendre avant le 31
 décembre 2024.
@@ -227,42 +230,42 @@ décembre 2024.
     Les dates se notent entre guillemets simples.
     ```
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select isbn from emprunt where date < '2024-12-31';
     ```
-    ````
+    ```` -->
 
 7. Écrire une requête SQL qui affiche le nom et le prénom de tous les auteurs
 triés par ordre alphabétique.
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select nom, prenom from auteur order by nom asc;
     ```
-    ````
+    ```` -->
 
 8. Écrire une requête SQL qui affiche le nom et l'adresse des usagers vivant à
 Fribourg.
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select nom, adresse from usager where ville = 'Fribourg';
     ```
-    ````
+    ```` -->
 
 9. Écrire une requête SQL qui affiche l'année et le titre des livres publiés
 entre 2005 et 2015.
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select annee, titre from livre where annee between 2005 and 2015;
     ```
-    ````
+    ```` -->
 
 ## Exercice 4
 
@@ -272,20 +275,20 @@ Formuler en français ce que nous cherchons avec les requêtes suivantes:
     select * from livre where titre like '%Robot%';
     ```
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     Affiche tous les livres dont le titre contient "Robot".
-    ````
+    ``` -->
 
 2.
     ```{code-block} sql
     select nom, prenom from usager where ville = 'Granges-Paccots';
     ```
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     Affiche le nom et le prénom des usagers habitant Granges-Paccots.
-    ````
+    ```` -->
 
 3.
     ```{code-block} sql
@@ -294,11 +297,11 @@ Formuler en français ce que nous cherchons avec les requêtes suivantes:
     where retour < '2024-12-01'
     ```
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     Affiche le nom et le prénom des usagers qui doivent rendre un livre avant le
     premier décembre.
-    ````
+    ```` -->
 
 ## Exercice 5
 
@@ -306,40 +309,40 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
 
 1. Écrire une requête SQL qui affiche le titre des livres empruntés.
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select livre.titre from livre
     join emprunt on livre.isbn = emprunt.isbn;
     ```
-    ````
+    ```` -->
 
 2. Écrire une requête SQL qui affiche le titre des livres empruntés à rendre
 après le 15 décembre.
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select livre.titre from livre
     join emprunt on livre.isbn = emprunt.isbn
     where retour < '2024-12-15';
     ```
-    ````
+    ```` -->
 3. Écrire une requête SQL qui affiche le nom et le prénom des usagers qui ont
 emprunté des livres, sans doublons.
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select distinct usager.nom, usager.prenom from usager
     join emprunt on usager.code_barre = emprunt.code_barre;
     ```
-    ````
+    ```` -->
 
 4. Écrire une requête SQL qui affiche le nom et le prénom de l'auteur du livre
 "La Mort d'Ivan Ilitch".
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select auteur.nom, auteur.prenom from auteur
@@ -347,25 +350,25 @@ emprunté des livres, sans doublons.
     join livre on livre.isbn = auteur_de.isbn
     where titre = 'La Mort d''Ivan Ilitch'
     ```
-    ````
+    ```` -->
 
 5. Écrire une requête SQL qui affiche le titre des livres publiés avant "Astérix
 chez les Bretons".
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select livre.titre from livre
     where annee < (select annee from livre
                    where titre = 'Astérix chez les Bretons')
     ```
-    ````
+    ```` -->
 
 
 6. **Challenge**: Écrire une requête SQL qui affiche le nom et le prénom des
 auteurs des livres de la question précédente.
 
-    ````{admonition} Solution
+    <!-- ````{admonition} Solution
     :class: note dropdown
     ```{code-block} sql
     select auteur.nom, auteur.prenom from auteur
@@ -374,4 +377,4 @@ auteurs des livres de la question précédente.
     where annee < (select annee from livre
                    where titre = 'Astérix chez les Bretons')
     ```
-    ````
+    ```` -->
