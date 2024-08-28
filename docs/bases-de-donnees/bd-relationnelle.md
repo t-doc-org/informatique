@@ -8,7 +8,7 @@ semi-structurées dans des tables (ou tableaux). Grâce au langage SQL, il est
 facile de les créer et de les manipuler.
 
 Une **base de données** est un ensemble d'informations organisées pour être
-facilement accessible, géré et mis à jour par ses utilisateurs. Par exemple,
+facilement accessibles, gérées et mises à jour par ses utilisateurs. Par exemple,
 dans une entreprise, toutes les données relatives aux clients sont stockées dans
 une base de données.
 
@@ -114,7 +114,7 @@ digraph UML_Class_diagram {
 
 </td></tr></table>
 
-Dans cet exemple, on peut donc choisir la colonne `nom` ou `abr` comme clé
+Dans cet exemple, nous pouvons donc choisir la colonne `nom` ou `abr` comme clé
 primaire. Nous avons choisi `nom`.
 
 
@@ -163,13 +163,13 @@ digraph UML_Class_diagram {
 - Deux clients peuvent avoir le même prénom.
 - Deux clients peuvent avoir la même adresse et elle peut changer.
 - Le téléphone peut changer.
-- Le mail peut change.
+- Le mail peut changer.
 
 </td></tr></table>
 
 Dans cet exemple, aucune colonne ne correspond aux critères de clé primaire
-(unique et stable). Par conséquent, il faut créer une nouvelle colonne, par
-exemple, ajouter un numéro de client `no_c`.
+(unique et stable). Par conséquent, il faut créer une nouvelle colonne en
+ajoutant, par exemple, un numéro de client `no_c`.
 
 ### Clé étrangère
 
@@ -187,8 +187,8 @@ schéma. Pour ce faire, il existe quelques règles à respecter:
 toujours d'une clé étrangère vers une clé primaire.
 
 ```{tip}
-Lorsque nous construisons une base de données relationnells, il est essentiel de
-s'assurer qu'il n'y a pas de duplication d'informations. S'il y a de la
+Lorsque nous construisons une base de données relationnelles, il est essentiel
+de s'assurer qu'il n'y a pas de duplication d'informations. S'il y a de la
 redondance, il est souvent nécessaire d'ajouter une nouvelle table pour
 normaliser les données.
 ```
@@ -197,7 +197,7 @@ Reprenons l'exemple du tableur avec le tableau d'achats. Un **achat** est une
 relation entre un **client** et un **produit**. Pour construire une base de
 données relationnelle, nous aurons donc besoin de trois tables distinctes:
 client, produit et achat. La table achat contiendra deux informations: le numéro
-de client et le numéro de produit. Ces deux éléments sont des clés étangères,
+de client et le numéro de produit. Ces deux éléments sont des clés étrangères,
 notées `# no_c` et le `# no_p`. Comme un client peut acheter plusieurs produits
 ou un produit peut être acheté par plusieurs clients, aucune des deux colonnes
 ne peut être une clé primaire à elle seule. Dans ce cas, nous utilisons la
@@ -278,9 +278,9 @@ digraph UML_Class_diagram {
 
 ### Exercice 9
 
-Dessiner le schéma de la base de données relationnelle qui correpondrait à la
-location de trotinettes électriques.
+Dessiner le schéma de la base de données relationnelle qui représente un système
+de location de trottinettes électriques.
 1. Quelles sont les différentes tables?
-2. Quelles seront les colonnes de ces tables?
+2. Quelles sont les colonnes de ces tables?
 3. Existe-t-il déjà une clé primaire?
 4. Y a-t-il des clés étrangères?

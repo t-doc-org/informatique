@@ -296,10 +296,11 @@ select * from contact;
 2. Rechercher toutes les personnes qui habitent à Val-d'Illiez.
 
     ```{tip}
-    Le guillemet simple est utilisé en SQL pour indiqué le début et la fin d'une
-    chaîne de caractères. Si une chaîne de caractères contient un apostrophe (ou un
-    guillemet simple), il faut doubler le guillemet pour que le logiciel comprenne
-    que ce n'est pas la fin de la chaîne de caractères, mais un apostrophe.
+    Le guillemet simple est utilisé en SQL pour indiquer le début et la fin
+    d'une chaîne de caractères. Si une chaîne de caractères contient une
+    apostrophe (ou un guillemet simple), il faut doubler le guillemet pour que
+    le logiciel comprenne que ce n'est pas la fin de la chaîne de caractères,
+    mais une apostrophe.
     ```
 
     ````{admonition} Solution

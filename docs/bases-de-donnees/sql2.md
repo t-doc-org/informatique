@@ -9,7 +9,7 @@ Reprenons l'exemple du client. Lors de la création de la table client en SQL,
 nous voulons spécifier que `no_c` est une clé primaire. Pour cela, nous ajoutons
 l'attribut `primary key` en plus de `not null`. Ainsi, il sera impossible
 d'insérer une ligne dans la table si la valeur de `no_c` existe déjà dans
-celle-ci ou si elle est null.
+celle-ci ou si elle est `null`.
 
 <table><tr><td valign="top">
 
@@ -178,7 +178,7 @@ lisible pour un humain:
 | 1 | 1 |
 
 Il serait préférable que la table contienne aussi le prénom et le nom du client,
-ainsi que le nom du produit acheté./
+ainsi que le nom du produit acheté.\
 Cela se fait au moyen d'une jointure. Celle-ci va créer une nouvelle table avec
 les informations souhaitées.
 

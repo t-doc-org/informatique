@@ -70,7 +70,7 @@ digraph UML_Class_diagram {
         <table border="0" cellborder="0" cellspacing="7" >
           <tr> <td align="left" port="l1">titre</td> </tr>
           <tr> <td align="left" port="l2">editeur</td> </tr>
-          <tr> <td align="left" port="l3">anne</td> </tr>
+          <tr> <td align="left" port="l3">annee</td> </tr>
           <tr> <td align="left" port="l4"><u>isbn</u></td> </tr>
         </table>
       </td> </tr>
@@ -200,7 +200,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-4. Écrire une requête SQL qui affiche le titre et l'anne des livres publiés
+4. Écrire une requête SQL qui affiche le titre et l'année des livres publiés
 avant 1980.
 
     ````{admonition} Solution
@@ -302,7 +302,7 @@ Formuler en français ce que nous cherchons avec les requêtes suivantes:
 
 ## Exercice 5
 
-Pour cette exercice, il faudra utiliser des jointures de tables.
+Pour cet exercice, il faudra utiliser des jointures de tables.
 
 1. Écrire une requête SQL qui affiche le titre des livres empruntés.
 
@@ -315,7 +315,7 @@ Pour cette exercice, il faudra utiliser des jointures de tables.
     ````
 
 2. Écrire une requête SQL qui affiche le titre des livres empruntés à rendre
-aprés le 15 décembre.
+après le 15 décembre.
 
     ````{admonition} Solution
     :class: note dropdown
