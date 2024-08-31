@@ -15,6 +15,12 @@
 | `drop table` | Supprime une table |
 | `drop database` | Supprime une base de données |
 
+```{attention}
+Avec SQLite, la requête `drop database` n'existe pas. Pour supprimer une base de
+données, il suffit de supprimer le fichier qui correspond à cette base de
+données.
+```
+
 ## Consultation de la base de données
 
 | Mots réservés | Description |
