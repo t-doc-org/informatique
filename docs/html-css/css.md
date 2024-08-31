@@ -190,9 +190,8 @@ ultrices felis a facilisis feugiat. </p>
 
 But: Appliquer un fichier CSS au document index.html.
 
-1. Sur Teams, télécharger le document **style.css**.
-2. Sauvegarder ce document sur OneDrive dans le dossier
-"Informatique/HTML-CSS/exercices".
+1. Télécharger le fichier [style.css](./style.css) et le sauvegarder sur
+OneDrive dans le dossier "Informatique/HTML-CSS/exercices".
 3. Ajouter le référencement à la page **style.css** dans le `<head>` du document
   **index.html**. (cf. [](#referencement))
 4. Actualiser la page du navigateur (appuyer sur {kbd}`F5`).

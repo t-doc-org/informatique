@@ -253,8 +253,8 @@ But: Ouvrir un document HTML sur Visual Studio Code.
 
 1. Sur OneDrive, dans le dossier "Informatique/HTML-CSS", créer un dossier
 "exercices".
-2. Sur Teams, dans le dossier "Informatique/HTML-CSS", télécharger le document
-**index.html** et le sauvegarder sur OneDrive dans le dossier créé en 1.
+2. Télécharger le fichier [index.html](./index.html) et le sauvegarder sur
+OneDrive dans le dossier créé en 1.
 3. Ouvrir VSCode.
 4. Dans VSCode choisir "ouvrir le dossier..."" et sélectionner le dossier
 "Informatique/HTML-CSS/exercices" de votre OneDrive.
