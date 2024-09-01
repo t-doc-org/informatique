@@ -19,7 +19,9 @@ suivi du nom de la table. Entre parenthèses, nous indiquons la liste des nom de
 colonnes, ainsi que leur [type](./type-donnees.md).\
 Chaque instruction doit se terminer par un point-virgule.
 
-```{code-block} sql
+```{exec} sql
+:name: sql-stock
+:when: never
 create table stock (
     id int,                 -- nombre entier (integer)
     article text,           -- chaîne de caractères
@@ -46,7 +48,9 @@ sachant que `no_p` et `prix` sont des entiers et que `nom` et
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:name: sql-produit
+:when: never
 create table produit (
     no_p int,
     nom text,
@@ -63,7 +67,10 @@ Pour insérer une ligne dans une table, il faut utiliser l'instruction
 les valeurs des colonnes. L'ordre doit être le même que lors de la création de
 la table.
 
-```{code-block} sql
+```{exec} sql
+:after: sql-stock
+:name: sql-stock-insert1
+:when: never
 insert into stock values(1, 'T-shirt', 'rouge', 'M', 15, 20);
 ```
 
@@ -78,14 +85,10 @@ Les chaînes de caractères doivent être entourées d'apostrophes
 lignes suivantes:
 
 ```{exec} sql
-:name: sql-meuble
+:after: sql-produit
+:name: sql-produit-insert
+:when: load
 :class: hidden
-create table produit (
-    no_p int,
-    nom text,
-    description text,
-    prix int
-);
 insert into produit values(1, 'Ektorp', 'canapé 2 places', 599);
 insert into produit values(2, 'Brimnes', 'structure de lit', 129);
 insert into produit values(3, 'Jaren', 'matelas à ressorts', 59);
@@ -106,7 +109,8 @@ insert into produit values(3, 'Jaren', 'matelas à ressorts', 59);
 L'instruction SQL suivante permet d'afficher le contenu d'une table,
 c'est-à-dire les valeurs de chaque colonne.
 
-```{code-block} sql
+```{exec} sql
+:after: sql-stock-insert1
 select * from stock;
 ```
 
@@ -117,8 +121,13 @@ de la table stock."
 
 Il est aussi possible d'afficher seulement une ou plusieurs colonnes.
 
-```{code-block} sql
+```{exec} sql
+:after: sql-stock-insert1
 select article from stock;
+```
+
+```{exec} sql
+:after: sql-stock-insert1
 select article, quantite from stock;
 ```
 
@@ -150,21 +159,14 @@ select nom, prix from produit;
 Il est souvent utile d'effectuer des recherches par critères, par exemple, nous
 souhaiterions afficher tous les articles en taille M.
 
-Voici la base de données à disposition test:
+Voici la base de données à disposition:
 
 ```{exec} sql
-:name: sql-stock1
+:after: sql-stock-insert1
+:name: sql-stock-insert2
+:when: load
 :class: hidden
-create table stock (
-    id int,
-    article text,
-    couleur text,
-    taille text,
-    quantite int,
-    prix_unitaire int
-);
 insert into stock values
-    (1, 'T-shirt', 'rouge', 'M', 15, 20),
     (2, 'T-shirt', 'blanc', 'XL', 17, 25),
     (3, 'Polo', 'rouge', 'L', 12, 35),
     (4, 'Polo', 'blanc', 'M', 10, 40),
@@ -177,59 +179,15 @@ select * from stock;
 L'instruction `where` permet de ne sélectionner que les lignes qui répondent à
 ce(s) critère(s).
 
-```{code-block} sql
+```{exec} sql
+:after: sql-stock-insert2
 select * from stock where taille = 'M';
 ```
 
 Cette requête affichera le résultat suivant:
 
 ```{exec} sql
-:name: sql-stock2
-:class: hidden
-create table stock (
-    id int,
-    article text,
-    couleur text,
-    taille text,
-    quantite int,
-    prix_unitaire int
-);
-insert into stock values
-    (1, 'T-shirt', 'rouge', 'M', 15, 20),
-    (2, 'T-shirt', 'blanc', 'XL', 17, 25),
-    (3, 'Polo', 'rouge', 'L', 12, 35),
-    (4, 'Polo', 'blanc', 'M', 10, 40),
-    (5, 'T-shirt', 'rouge', 'XL', 8, 20),
-    (6, 'T-shirt', 'blanc', 'S', 30, 20),
-    (7, 'Veste', 'rouge', 'L', 5, 50);
-select * from stock where taille = 'M';
-```
-
-```{code-block} sql
-select * from stock where prix_unitaire = 35;
-```
-
-Celle-ci affichera le résultat suivant:
-
-```{exec} sql
-:name: sql-stock3
-:class: hidden
-create table stock (
-    id int,
-    article text,
-    couleur text,
-    taille text,
-    quantite int,
-    prix_unitaire int
-);
-insert into stock values
-    (1, 'T-shirt', 'rouge', 'M', 15, 20),
-    (2, 'T-shirt', 'blanc', 'XL', 17, 25),
-    (3, 'Polo', 'rouge', 'L', 12, 35),
-    (4, 'Polo', 'blanc', 'M', 10, 40),
-    (5, 'T-shirt', 'rouge', 'XL', 8, 20),
-    (6, 'T-shirt', 'blanc', 'S', 30, 20),
-    (7, 'Veste', 'rouge', 'L', 5, 50);
+:after: sql-stock-insert2
 select * from stock where prix_unitaire = 35;
 ```
 
@@ -260,21 +218,12 @@ select description from produit where nom = 'Ektorp';
 Pour modifier la couleur de l'article dont l'`id` est 3, la requête sera la
 suivante:
 
-```{code-block} sql
+```{exec} sql
+:after: sql-stock-insert2
+:name: sql-stock-update
 update stock set couleur = 'bleu' where id = 3;
+select * from stock;                                  -- pour afficher le résultat
 ```
-
-La base de données sera modifiée ainsi:
-
-| id | article | couleur | taille | quantité | prix_unitaire |
-| :-: | :----: | :-----: | :----: | :------: | :-----------: |
-| 1 | T-shirt | rouge | M | 15 | 20 |
-| 2 | T-shirt | blanc | XL | 17 | 25 |
-| 3 | Polo | **bleu** | L | 12 | 35 |
-| 4 | Polo | blanc | M | 10 | 40 |
-| 5 | T-shirt | rouge | XL | 8 | 20 |
-| 6 | T-shirt | blanc | S | 30 | 20 |
-| 7 | Veste | rouge | L | 5 | 50 |
 
 ## Exercice 5
 
@@ -294,19 +243,12 @@ select * from produit;                                  -- Pour tester le résul
 
 Il est aussi possible de supprimer une ligne complète d'une table.
 
-```{code-block} sql
+```{exec} sql
+:after: sql-stock-update
+:name: sql-stock-delete
 delete from stock where article = 'Polo';
+select * from stock;                                  -- pour afficher le résultat
 ```
-
-La nouvelle base de données sera la suivante:
-
-| id | article | couleur | taille | quantité | prix_unitaire |
-| :-: | :----: | :-----: | :----: | :------: | :-----------: |
-| 1 | T-shirt | rouge | M | 15 | 20 |
-| 2 | T-shirt | blanc | XL | 17 | 25 |
-| 5 | T-shirt | rouge | XL | 8 | 20 |
-| 6 | T-shirt | blanc | S | 30 | 20 |
-| 7 | Veste | rouge | L | 5 | 50 |
 
 ## Exercice 6
 
@@ -332,8 +274,11 @@ Nous ne pouvons pas utiliser la requête utilisée précédemment (liste de tout
 les colonnes dans l'ordre), car nous n'avons pas toutes les informations, mais
 nous pouvons spécifier que certaines colonnes.
 
-```{code-block} sql
+```{exec} sql
+:after: sql-stock-delete
+:name: sql-stock-null
 insert into stock (id, article, prix_unitaire) values (8, 'Pantalon' , 20);
+select * from stock;                                  -- pour afficher le résultat
 ```
 Une colonne sans valeur contient la valeur [null](#null).
 
