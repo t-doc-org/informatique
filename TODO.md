@@ -21,5 +21,8 @@
 - TODO: Permettre la génération de graphiques avec matplotlib
   <https://matplotlib.org/sampledoc/extensions.html>.
 
- - TODO: Document dev installation with:
+- TODO: Document dev installation with:
    $ pip install --user --no-deps --editable .
+
+- TODO: Faire en sorte que si le code exécutable est trop large, il y ait une
+  scrollbar pour garder les bonnes dimensions par rapport au reste de la page.

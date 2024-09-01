@@ -81,23 +81,22 @@ Les chaînes de caractères doivent être entourées d'apostrophes
 
 ## Exercice 2
 
-Écrire les instructions SQL qui permettent d'insérer dans la table produit les
+Écrire les requêtes SQL qui permettent d'insérer dans la table `produit` les
 lignes suivantes:
 
 ```{exec} sql
-:after: sql-produit
-:name: sql-produit-insert
+:after: sql-produit-insert
 :when: load
 :class: hidden
-insert into produit values(1, 'Ektorp', 'canapé 2 places', 599);
-insert into produit values(2, 'Brimnes', 'structure de lit', 129);
-insert into produit values(3, 'Jaren', 'matelas à ressorts', 59);
 select * from produit;
 ```
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:after: sql-produit
+:name: sql-produit-insert
+:when: never
 insert into produit values(1, 'Ektorp', 'canapé 2 places', 599);
 insert into produit values(2, 'Brimnes', 'structure de lit', 129);
 insert into produit values(3, 'Jaren', 'matelas à ressorts', 59);
@@ -106,7 +105,7 @@ insert into produit values(3, 'Jaren', 'matelas à ressorts', 59);
 
 ## Affichage de lignes
 
-L'instruction SQL suivante permet d'afficher le contenu d'une table,
+La requête SQL suivante permet d'afficher le contenu d'une table,
 c'est-à-dire les valeurs de chaque colonne.
 
 ```{exec} sql
@@ -133,12 +132,13 @@ select article, quantite from stock;
 
 ## Exercice 3
 
-Écrire la requête qui permet d'afficher toutes les lignes de la table
+Écrire la requête SQL qui permet d'afficher toutes les lignes de la table
 `produit`.
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:after: sql-produit-insert
 select * from produit;
 ```
 ````
@@ -148,8 +148,12 @@ celle qui permet d'afficher le `nom` et le `prix` de tous les produits.
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:after: sql-produit-insert
 select nom from produit;
+```
+```{exec} sql
+:after: sql-produit-insert
 select nom, prix from produit;
 ```
 ````
@@ -184,8 +188,6 @@ ce(s) critère(s).
 select * from stock where taille = 'M';
 ```
 
-Cette requête affichera le résultat suivant:
-
 ```{exec} sql
 :after: sql-stock-insert2
 select * from stock where prix_unitaire = 35;
@@ -198,7 +200,8 @@ Brimnes.
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:after: sql-produit-insert
 select * from produit where nom = 'Brimnes';
 ```
 ````
@@ -208,7 +211,8 @@ Ektorp.
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:after: sql-produit-insert
 select description from produit where nom = 'Ektorp';
 ```
 ````
@@ -232,10 +236,12 @@ Contrôler le résultat en affichant tous les éléments de la table produit.
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:after: sql-produit-insert
+:name: sql-produit-update
 update produit set prix = 499 where description = 'canapé 2 places';
 
-select * from produit;                                  -- Pour tester le résultat
+select * from produit;                                 -- pour afficher le résultat
 ```
 ````
 
@@ -257,10 +263,11 @@ Contrôler le résultat en affichant tous les éléments de la table produit.
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:after: sql-produit-update
 delete from produit where no_p = 3;
 
-select * from produit;                              -- Pour tester le résultat
+select * from produit;                               -- pour afficher le résultat
 ```
 ````
 
@@ -311,7 +318,7 @@ Ajouter une ligne avec vos propres informations sauf le numéro de téléphone.
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
 create table eleve (
     nom text not null,
     prenom text not null,
@@ -325,7 +332,9 @@ create table eleve (
     telephone text
 );
 
-insert into eleve values('Bob', 'Dubois', 'M', '2007-03-14', '2F9', 'bob.dubois@example.com', 'Boulevard de Pérolle 11', '1700', 'Fribourg', null);
+insert into eleve values
+    ('Bob', 'Dubois', 'M', '2007-03-14', '2F9', 'bob.dubois@example.com',
+     'Boulevard de Pérolle 11', '1700', 'Fribourg', null);
 
 select * from eleve;
 ```
@@ -365,20 +374,17 @@ cafétéria.\
 valeur par défaut.\
 Insérer les données du tableau ci-dessous.
 
-| nom | prix |
-| :-: | :--: |
-| Espresso | 2.00 |
-| Café | 2.00 |
-| Café au lait | 2.50 |
-| Cappuccino | 2.50 |
-| Latte Macchiato | 2.50 |
-| Chocolat chaud | 2.50 |
-| Chocolat froid | 2.50 |
-| Thé | 2.00 |
+```{exec} sql
+:after: sql-boisson
+:when: load
+:class: hidden
+select * from boisson;
+```
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:name: sql-boisson
 create table boisson (
   nom text not null,
   prix dec(3,2) not null default 2.50
@@ -393,7 +399,7 @@ insert into boisson (nom) values ('Chocolat chaud');
 insert into boisson (nom) values ('Chocolat froid');
 insert into boisson values ('Thé', 2.00);
 
-select * from boisson;                                -- Pour tester le résultat
+select * from boisson;                                -- pour afficher le résultat
 ```
 ````
 
