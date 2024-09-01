@@ -5,6 +5,21 @@
 
 [Installation de Visual Studio Code](../logiciels/vscode.md)
 
+## Installation de l'extension SQLite
+
+Pour l'utilisation de bases de données dans VSCode, il faut installer
+une extension.
+
+1. Dans VSCode, sélectionner dans le menu à gauche **Extensions**.
+2. Rechercher l'extension **SQLite** créée par alexcvzz.
+3. Cliquer sur installer.
+4. Redémarrer VSCode.
+```{figure} images/extension.png
+:alt: Installer SQLite
+:width: 40%
+:align: center
+```
+
 (creation)=
 ## Création d'une base de donnée
 
@@ -23,13 +38,13 @@ données.
 :width: 50%
 :align: center
 ```
-4. Nommer-là stock.***sqlite***.
+4. Nommer-là stock.**sqlite*.
 ```{figure} images/nommer.png
 :alt: Nommer la nouvelle base de données
 :width: 50%
 :align: center
 ```
-5. Au moyen d'un clic droit sur stock.***sqlite***, sélectionner
+5. Au moyen d'un clic droit sur stock.**sqlite**, sélectionner
 "Open Database".
 ```{figure} images/ouvrir.png
 :alt: Ouvrir la base de données
