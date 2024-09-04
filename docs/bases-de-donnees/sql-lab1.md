@@ -6,7 +6,7 @@
 Le but de cette section est d'entraîner les concepts vus dans la section
 [](./sql.md).
 
-Voici la table **canton** contenant certaines informations sur des cantons
+Voici la table **canton** contenant certaines informations de différents cantons
 suisses.
 
 ```{exec} sql
@@ -234,6 +234,90 @@ cantons dont la population se trouvent entre 300'000 et 500'000 habitants.
     ```` -->
 
 ## Exercice 4
+
+Voici le code d'une base de données qui contient des informations sur différents
+pays.
+
+```{exec} sql
+:name: sql-pays
+:when: never
+create table pays (
+    nom text not null,
+    abr text not null,
+    prefixe text not null,
+    capitale text not null,
+    population int not null,
+    nourriture text
+);
+insert into pays values
+    ('Suisse', 'CH', '+41', 'Zurich', 8776000, 'Fondue'),
+    ('France', 'FR', '+33', 'Paris', 67970000, null),
+    ('Allemagne', 'AL', '+49', 'Berlin', 83800000, null),
+    ('Italie', 'IT', '+39', 'Rome', 58940000, null),
+    ('Autriche', 'AT', '+43', 'Vienne', 9042000, 'Kaiserschmarrn'),
+    ('Yougoslavie', 'YU', '+38', 'Belgrade', 10656929, null),
+    ('Lichtenstein', 'LI', '+423', 'Vaduz', 39327, null);
+```
+
+1. Créer cette base de données, dans VSCode:
+    - Créer un nouveau dossier "pays".
+    - Créer une nouvelle base de données, en créant un nouveau fichier
+    **pays.sqlite**.
+    - Ouvrir cette base de donnée.
+    - Créer une nouvelle requête, copier le code ci-dessus et exécuter.
+2. La Yougoslavie n'existe plus depuis de nombreuses années. Supprimer cette
+ligne.
+
+````{admonition} Solution
+:class: note dropdown
+Ce que vous devez obtenir comme résultat.
+```{exec} sql
+:name: sql-pays-delete
+:when: load
+:class: hidden
+:after: sql-pays
+delete from pays where nom = 'Yougoslavie';
+select * from pays;
+```
+````
+
+3. Deux erreurs se sont produites lors de la création de la base de donnée.
+    - La capitale de la Suisse n'est pas Zurich.
+    - L'abréviation de l'allemagne n'est pas "AL", mais "DE".\
+Corriger ces deux erreurs.
+
+````{admonition} Solution
+:class: note dropdown
+Ce que vous devez obtenir comme résultat.
+```{exec} sql
+:name: sql-pays-update
+:when: load
+:class: hidden
+:after: sql-pays-delete
+update pays set capitale = 'Berne' where nom ='Suisse';
+update pays set abr = 'DE' where nom ='Allemagne';
+select * from pays;
+```
+````
+
+4. Compléter la colonne nourriture par un plat connu pour la France et pour
+l'Italie.
+
+````{admonition} Solution
+:class: note dropdown
+Ce que vous devez obtenir comme résultat.
+```{exec} sql
+:when: load
+:class: hidden
+:after: sql-pays-update
+update pays set nourriture = 'Escargots' where nom = 'France';
+update pays set nourriture = 'Pizza' where nom = 'Italie';
+select * from pays;
+```
+````
+
+
+## Exercice 5
 
 Une application de rencontres demande, à l'enregistrement sur son site, les
 informations suivantes: le nom, le prénom, l'adresse mail, le sexe,
