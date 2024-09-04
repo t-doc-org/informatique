@@ -265,56 +265,66 @@ insert into pays values
     **pays.sqlite**.
     - Ouvrir cette base de donnée.
     - Créer une nouvelle requête, copier le code ci-dessus et exécuter.
+    - Tester en affichant la table.
+
+    ````{admonition} Solution
+    :class: note dropdown
+    ```{exec} sql
+    :after: sql-pays
+    select * from pays;
+    ```
+    ````
+
 2. La Yougoslavie n'existe plus depuis de nombreuses années. Supprimer cette
 ligne.
 
-````{admonition} Solution
-:class: note dropdown
-Ce que vous devez obtenir comme résultat.
-```{exec} sql
-:name: sql-pays-delete
-:when: load
-:class: hidden
-:after: sql-pays
-delete from pays where nom = 'Yougoslavie';
-select * from pays;
-```
-````
+    ````{admonition} Solution
+    :class: note dropdown
+    Ce que vous devez obtenir comme résultat.
+    ```{exec} sql
+    :name: sql-pays-delete
+    :when: load
+    :class: hidden
+    :after: sql-pays
+    delete from pays where nom = 'Yougoslavie';
+    select * from pays;
+    ```
+    ````
 
-3. Deux erreurs se sont produites lors de la création de la base de donnée.
+3. Corriger les deux erreurs qui se sont produites lors de la création de la
+base de donnée.
     - La capitale de la Suisse n'est pas Zurich.
-    - L'abréviation de l'allemagne n'est pas "AL", mais "DE".\
-Corriger ces deux erreurs.
+    - L'abréviation de l'allemagne n'est pas **AL**, mais **DE**.
 
-````{admonition} Solution
-:class: note dropdown
-Ce que vous devez obtenir comme résultat.
-```{exec} sql
-:name: sql-pays-update
-:when: load
-:class: hidden
-:after: sql-pays-delete
-update pays set capitale = 'Berne' where nom ='Suisse';
-update pays set abr = 'DE' where nom ='Allemagne';
-select * from pays;
-```
-````
+    ````{admonition} Solution
+    :class: note dropdown
+    Ce que vous devez obtenir comme résultat.
+    ```{exec} sql
+    :name: sql-pays-update
+    :when: load
+    :class: hidden
+    :after: sql-pays-delete
+    update pays set capitale = 'Berne' where nom ='Suisse';
+    update pays set abr = 'DE' where nom ='Allemagne';
+    select * from pays;
+    ```
+    ````
 
 4. Compléter la colonne nourriture par un plat connu pour la France et pour
 l'Italie.
 
-````{admonition} Solution
-:class: note dropdown
-Ce que vous devez obtenir comme résultat.
-```{exec} sql
-:when: load
-:class: hidden
-:after: sql-pays-update
-update pays set nourriture = 'Escargots' where nom = 'France';
-update pays set nourriture = 'Pizza' where nom = 'Italie';
-select * from pays;
-```
-````
+    ````{admonition} Solution
+    :class: note dropdown
+    Ce que vous devez obtenir comme résultat.
+    ```{exec} sql
+    :when: load
+    :class: hidden
+    :after: sql-pays-update
+    update pays set nourriture = 'Escargots' where nom = 'France';
+    update pays set nourriture = 'Pizza' where nom = 'Italie';
+    select * from pays;
+    ```
+    ````
 
 
 ## Exercice 5
