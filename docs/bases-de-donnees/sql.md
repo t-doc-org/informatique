@@ -38,13 +38,15 @@ create table stock (
 sachant que `no_p` et `prix` sont des entiers et que `nom` et
 `description` sont des chaînes de caractères:
 
-| no_p | nom | description | prix |
-| :--: | :-: | :---------: | :--: |
-| ... | ... | ... | ... |
+```{exec} sql
+:after: sql-produit
+:when: load
+:class: hidden
+select * from produit;
+```
 
 <!-- TODO: Ajouter un éditeur pour que les élèves puissent effectuer l'ex
     directement sur la page -->
-<!-- TODO: Ajouter un affichage de la table créée si c'est possible -->
 
 ````{admonition} Solution
 :class: note dropdown
@@ -71,7 +73,7 @@ la table.
 :after: sql-stock
 :name: sql-stock-insert1
 :when: never
-insert into stock values(1, 'T-shirt', 'rouge', 'M', 15, 20);
+insert into stock values (1, 'T-shirt', 'rouge', 'M', 15, 20);
 ```
 
 ```{attention}
@@ -97,9 +99,9 @@ select * from produit;
 :after: sql-produit
 :name: sql-produit-insert
 :when: never
-insert into produit values(1, 'Ektorp', 'canapé 2 places', 599);
-insert into produit values(2, 'Brimnes', 'structure de lit', 129);
-insert into produit values(3, 'Jaren', 'matelas à ressorts', 59);
+insert into produit values (1, 'Ektorp', 'canapé 2 places', 599);
+insert into produit values (2, 'Brimnes', 'structure de lit', 129);
+insert into produit values (3, 'Jaren', 'matelas à ressorts', 59);
 ```
 ````
 
