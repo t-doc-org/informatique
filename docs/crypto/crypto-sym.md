@@ -78,8 +78,8 @@ V   L   L   E   N   R
 
 Un texte a été chiffré avec le procédé du Chiffre de Rail Fence avec comme
 clé de chiffrement 2.\
-Déchiffrer le texte suivant:\
-LCYTG AHEYE RQESF CLAEH FRRAR PORPI SMTIU ETAIE DCIFE
+Déchiffrer le texte suivant:
+<center>LCYTG AHEYE RQESF CLAEH FRRAR PORPI SMTIU ETAIE DCIFE</center>
 
 ````{admonition} Solution
 :class: note dropdown
@@ -280,11 +280,9 @@ Sans devoir calculer le décalage, on peut utiliser le [carré de Vigenère](htt
 
 #### Exercice 4
 
-Vous avez reçu le message suivant, chiffré avec le Chiffre de Vigenère:\
-ARXOD QONDH YXWV
-
-Déchiffrer le message en vous aidant d'un tableau sachant que la clé de
-chiffrement est: **informatique**.
+Déchiffrer le message suivant, chiffré avec le Chiffre de Vigenère, sachant que
+la clé de chiffrement est **informatique**:
+<center>ARXOD QONDH YXWV</center>
 
 ````{admonition} Solution
 :class: note dropdown
