@@ -7,7 +7,7 @@ La **cryptographie asymétrique**, ou **cryptographie à clé publique**, permet
 garantir la confidentialité d'une communication et d'authentifier les
 participants sans nécessiter le partage préalable d'une clé secrète. Découverts
 à la fin des années 1960, ces systèmes cryptographiques asymétriques ne
-présentent donc pas les faiblesses des systèmes symétriques.
+présentent pas les faiblesses des systèmes symétriques.
 
 
 ## Envoi de message
@@ -28,8 +28,8 @@ source: Network Associates Inc, *Introduction à la cryptographie*
 ```
 
 Chaque utilisateur possède deux clés:
-    - la **clé publique** qu'il met à disposition sur le web,
-    - la **clé privée** qu'il garde secrète.
+- la **clé publique** qu'il met à disposition sur le web,
+- la **clé privée** qu'il garde secrète.
 
 Pour déchiffrer un cryptogramme à l'aide d'une clé différente (clé privée) de
 celle utilisée pour le chiffrer (clé publique), il doit exister une relation
@@ -45,7 +45,7 @@ Alice souhaite envoyer un message à Bob de telle manière que Bob soir sûr que
 ce message vient d'Alice:
 1. Alice écrit son message en clair.
 2. Alice crypte son message avec sa clé privée.
-3. Alice envoie le {term}`cryptogramme` à Bob.
+3. Alice envoie le cryptogramme à Bob.
 4. Bob déchiffre le cryptogramme à l'aide de la clé publique d'Alice.
 
 Seule Alice peut signer le message, mais tout le monde est capable de le lire
@@ -61,7 +61,7 @@ source: Network Associates Inc, *Introduction à la cryptographie*
 
 ## RSA
 
-Le plus premier et plus célèbre système cryptographique à clé publique est le
+Le premier et plus célèbre système cryptographique à clé publique est le
 système **RSA** qui sont les initiales de ces trois "inventeurs"
 (Ronald Riverst, Adi Shamir et Leonard Adleman).
 
@@ -81,12 +81,12 @@ Certaines opérations sont faciles, tel que multiplier deux nombres premiers.\
 Que vaut $17 \cdot 241$?
 
 Certaines opérations sont difficiles, tel que factoriser un nombre en facteurs
-premier.\
+premiers.\
 Quels sont les facteurs de 4097?
 
-Le système RSA repose sur la capacité de {term}`déchiffrer` le cryptogramme
+Le système RSA repose sur la capacité à {term}`déchiffrer` le cryptogramme
 malgré l'utilisation d'un modulo, en tirant parti des propriétés des nombres
-premiers. Il s'appuie sur la difficulté de factoriser un nombre en facteurs
+premiers. Il s'appuie sur la difficulté à factoriser un nombre en facteurs
 premiers.
 
 ### Création des clés
@@ -102,9 +102,9 @@ suffisamment grande. Les nombres choisis devront avoir plus de 100 chiffres.
 4. Choisir un nombre premier $e$ tel que $\phi \textrm{ mod } e \ne 0$.
 5. Rechercher $d$, $d \ne e$ tel que $(e \cdot d) \textrm{ mod } \phi = 1$.
 
-La clé publique sera composée des nombres $n$ et $e$.
+La clé publique sera composée des nombres $n$ et $e$, notée ($n$, $e$).
 
-La clé privée sera composée des nombres $p$, $q$ et $d$.
+La clé privée sera composée des nombres $p$, $q$ et $d$, notée ($p$, $q$, $d$).
 
 #### Exemple
 
@@ -114,7 +114,7 @@ des messages en toute sécurité avec Bob.
 1. Alice choisit $p = 5$ et $q = 11$.
 2. Alice calcule $n = p \cdot q = 5 \cdot 11 = 55$.
 3. Alice calcule $\phi = (p - 1) \cdot (q - 1) = 4 \cdot 10 = 40$.
-4. Alice choisit $e = 43$, car $43 \textrm{ mod } 40 = 3 \ne 0$.
+4. Alice choisit $e = 43$, car $40 \textrm{ mod } 43 = 40 \ne 0$.
 5. Alice cherche $d$, $d \ne 43$ tel que $(43 \cdot d) \textrm{ mod } 40 = 1$.\
    Essais:\
    $d = 3 \quad \quad (43 \cdot 3) \textrm{ mod } 40 = 129 \textrm{ mod } 40 = 9 \;\, \quad \quad$ &#10060; \
@@ -126,6 +126,31 @@ des messages en toute sécurité avec Bob.
 
 6. Alice garde secret sa clé privée (5, 11, 27) et publie sa clé publique (55, 43).
 
+#### Exercice 5
+
+Déterminer la clé publique et la clé privée du système RSA avec les deux nombres
+premiers suivants:\
+$p = 7$ et $q = 11$.
+
+```{tip}
+Utiliser [WolframAlpha](https://www.wolframalpha.com/) comme aide pour les
+calculs.
+```
+
+````{admonition} Solution
+:class: note dropdown
+1. Calculer $n = p \cdot q = 13 \cdot 11 = 143$.
+2. Calculer $\phi = (p - 1) \cdot (q - 1) = 12 \cdot 10 = 120$.
+3. Choisir e, tel que $120 \textrm{ mod } e \ne 0$ et e premier.\
+Choisissons $e = 7$, car $e$ n'est pas un divisieur de 120.
+4. En utilisant [WolframAlpha](https://www.wolframalpha.com/), il faut résoudre
+l'équation: $(7 \cdot d) \textrm{ mod } 120 = 1$.\
+On obtient $d = 120 \cdot m + 103$ avec $m \in {Z}$.\
+Choisissons $d = 103$ ($m = 0$).
+
+La clé privée est (13, 11, 103) et la clé publique est (143, 7).
+````
+
 ### Chiffrement
 
 #### Méthode
@@ -134,7 +159,7 @@ des messages en toute sécurité avec Bob.
    ($n$, $e$).
 2. Transformer le message (texte clair) en nombre, en remplaçant chaque lettre
    par son code ASCII étendu. A -> 65, B -> 66, a -> 97, etc. Le message
-   est donc maintenant une suite de chiffres, donc un nombre.
+   est donc maintenant un nombre.
 3. Si le nombre ainsi obtenu est plus grand que $n$, découper le message en
    blocs de taille $m$ tel que $1 < m < n$. Ces blocs seront chiffrés et envoyés
    séparément.
@@ -152,21 +177,34 @@ Bob souhaite envoyer à Alice le message suivant: "salut".
 2. Bob transformer le message en nombre:
    s -> 19, a -> 01, l -> 12, u -> 21, t -> 20.\
    Le message transformé donnera: 19 01 12 21 20.
-3. Comme le nombre obtenu est plus grand que 1'901'122'120 > 55, Bob décide de
-   découper en blocs d'une lettre (toujours inférieur ou égal à 26, donc
-   forcément < 55).\
+3. Comme 1901122120 > 55, Bob décide de découper en blocs d'une lettre
+    (toujours inférieur ou égal à 26, donc forcément < 55).\
    Il y aura donc 5 blocs qui seront chiffrés et envoyés séparément.
 4. Bob détermine le cryptogramme de chaque bloc, noté $m$, en utilisant la
-   formule suivante:
-   $c = m^{43} \textrm{ mod } 55$.
+   formule suivante:\
+   $$c = m^{43} \textrm{ mod } 55$$
    s: $c = 19^{43} \textrm{ mod } 55 = 39$\
    a: $c = 1^{43} \textrm{ mod } 55 = 1$\
    l: $c = 12^{43} \textrm{ mod } 55 = 23$\
    u: $c = 21^{43} \textrm{ mod } 55 = 21$\
-   t: $c = 20^{43} \textrm{ mod } 55 = 25$\
+   t: $c = 20^{43} \textrm{ mod } 55 = 25$
 
    Bob transmet à Alice le cryptogramme suivant composé de 5 blocs:
    39 01 23 21 25.
+
+#### Exercice 6
+
+Chiffrer le message $m = 34$ à l'aide du système RSA, avec la clé publique
+(143, 7).
+
+````{admonition} Solution
+:class: note dropdown
+1. $n = 143$ et $e = 7$
+2. $34 < 143$ , donc pas besoin découper le message.
+3. Chiffrer le message: $c = 34^{7} \textrm{ mod } 143 = 122$.
+
+Le message chiffré est 122.
+````
 
 ### Déchiffrement
 
@@ -184,16 +222,29 @@ Alice a reçu le cryptogramme suivant composé de 5 blocs: 39 01 23 21 25.
 
 1. Alice reprend sa clé privé (5, 11, 27).
 2. Alice déchiffre chaque bloc, noté c, avec la formule suivante:
-    $ m = c^27 \textrm{ mod } (5 \cdot 11) = c^27 \textrm{ mod } 55$.\
-    39: $m = 39^27 \textrm{ mod } 55 = 19$\
-    01: $m = 1^27 \textrm{ mod } 55 = 1$\
-    23: $m = 23^27 \textrm{ mod } 55 = 12$\
-    21: $m = 21^27 \textrm{ mod } 55 = 21$\
-    25: $m = 25^27 \textrm{ mod } 55 = 20$
+    $ m = c^{27} \textrm{ mod } (5 \cdot 11) = c^{27} \textrm{ mod } 55$.\
+    39: $m = 39^{27} \textrm{ mod } 55 = 19$\
+    01: $m = 1^{27} \textrm{ mod } 55 = 1$\
+    23: $m = 23^{27} \textrm{ mod } 55 = 12$\
+    21: $m = 21^{27} \textrm{ mod } 55 = 21$\
+    25: $m = 25^{27} \textrm{ mod } 55 = 20$
 3. Alice transforme le nombre en lettre (pour faciliter, nous avions pris le
     rang de la lettre dans l'alphabet au lieu du code ASCII étendu): 19 -> s,
     1 -> a, 12 -> l, 21 -> u et 20 -> t.\
     Le message reçu est donc "salut".
+
+#### Exercice 7
+
+Vous avez reçu un message chiffré $c = 122$.\
+Déchiffrer le message $m$ sachant que votre clé privée est  (13, 11, 103).
+
+````{admonition} Solution
+:class: note dropdown
+1. La clé privée est (13, 11, 103).
+3. Déchiffrer le message: $m = 122^{103} \textrm{ mod } (13 \cdot 11) = 34$.
+
+Le message clair est 34.
+````
 
 ## Conclusion
 

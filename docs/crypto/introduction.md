@@ -116,4 +116,10 @@ Que signifie le message suivant?
 ```{figure} images/ex1.png
 :alt: Message codé avec le chiffre de Pig Pen
 :align: center
+:width: 80%
 ```
+
+````{admonition} Solution
+:class: note dropdown
+steganographie ou cryptographie
+````
