@@ -199,7 +199,7 @@ fréquences vue précédemment ne peut pas être utilisée.
 ### Chiffre de Vigenère
 
 Blaise Vigenère (1523-1596) est un diplomate, cryptologue, kabbaliste,
-traducteur, alchimiste et astrologue française. S'appuyant sur les travaux de
+traducteur, alchimiste et astrologue français. S'appuyant sur les travaux de
 ses prédécesseurs (Alberti, Trithème, Bellaso et Porta), il a mis au point le
 chiffre qui porte désormais son nom.
 
