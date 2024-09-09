@@ -21,7 +21,7 @@ Nombres premiers jusqu'à 1000:
 
 Le **reste de la division entière**, aussi appelé **modulo**, d'un nombre entier
 $a$ par un autre nombre entier $b$ avec $b \ne 0$ est noté $a \textrm{ mod } b$.\
-Le modulo est forcément plus petit que $b$.
+Le modulo de $a$ par $b$ est forcément plus petit que $b$.
 
 <!-- TODO: Trouver une meilleure méthode pour aligner verticalement. -->
 
