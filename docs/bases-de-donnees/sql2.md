@@ -84,37 +84,76 @@ create table client (
 
 ## Exercice 10
 
-Reprendre la table produit créée à l'exercice 1 et y ajouter la clé primaire.
+Recréer la table `produit` de l'exercice 1 en y ajoutant la clé primaire.
+
+```{exec} sql
+:name: sql-produit-resp
+:when: never
+:editable:
+```
+
+```{exec} sql
+:after: sql-produit-resp
+select * from produit;
+```
+
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:name: sql-produit
+:when: never
 create table produit (
     no_p int primary key not null,
     nom text not null,
-    description text
+    description text,
+    prix int
 );
 ```
-````s
+````
 
 ## Exercice 11
 
-Écrire la requête SQL qui permet de créer la table `client` ci-dessous,
-sachant que `no_c` est un entier et la clé primaire, `titre`, `prenom` et `nom`
-sont des chaînes de caractères:
+Que se passe-t-il si on ajoute une ligne qui ne contient pas de valeur pour la
+clé primaire? Tester avec l'exemple ci-dessous.
 
-| no_c | titre | prenom | nom |
-| :--: | :---: | :----: | :-: |
-| 1 | M | Albert | Einstein |
-| 2 | Mme | Ada | Lovelace |
-| 3 | M | Alan | Turing |
-| 4 | M | Stephen | Kleene |
+```{exec} sql
+:after: sql-produit
+insert into produit (nom, description, prix) values ('Fado', 'Lampe de table', 20);
+select * from produit;
+```
 
-Contrôler le résultat en affichant tous les éléments de la table.
+
+## Exercice 12
+
+Créer et compléter la table `client` ci-dessous, sachant que `no_c` est un
+entier et la clé primaire, `titre`, `prenom` et `nom` sont des chaînes de
+caractères.
+
+```{exec} sql
+:after: sql-client
+:when: load
+:class: hidden
+select * from client;
+```
+
+
+```{exec} sql
+:name: sql-client-resp
+:when: never
+:editable:
+```
+
+```{exec} sql
+:after: sql-client-resp
+select * from client;
+```
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:name: sql-client
+:when: never
 create table client (
   no_c int primary key not null,
   titre text,
@@ -130,27 +169,40 @@ insert into client values
 ```
 ````
 
-## Exercice 12
+## Exercice 13
 
-Écrire les requêtes SQL qui permet de créer la table `achat` et d'y
-enregistrer les achats effectués par les clients:
+Créer la table `achat` et la compléter avec les achats effectués par les
+clients.
 
 1. Alan Turing a acheté le canapé 2 places Ektrop.
 2. Ada Lovelace a également acheté le canapé Ektrop.
 3. Albert Einstein a acheté la structure de lit et le canapé.
 4. Stephen Kleene n'a rien acheté.
 
-| no_c | no_p |
-| :--: | :---: |
-| ... | ... |
-| ... | ... |
-| ... | ... |
+```{exec} sql
+:after: sql-achat
+:when: load
+:class: hidden
+select * from achat where false;
+```
 
-Contrôler le résultat en affichant tous les éléments de la table.
+
+```{exec} sql
+:name: sql-achat-resp
+:when: never
+:editable:
+```
+
+```{exec} sql
+:after: sql-achat-resp
+select * from achat;
+```
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:name: sql-achat
+:when: never
 create table achat (
   no_c int not null,
   no_p int not null,
@@ -170,24 +222,69 @@ En SQL, il est souvent utile de fusionner toute ou une partie de deux ou
 plusieurs tables. Par exemple, la table de l'exercice précédent n'est pas très
 lisible pour un humain:
 
-| no_c | no_p |
-| :--: | :--: |
-| 3 | 1 |
-| 2 | 1 |
-| 1 | 2 |
-| 1 | 1 |
+```{exec} sql
+:after: sql-achat
+:when: load
+:class: hidden
+select * from achat;
+```
+
+<!-- TODO: Ajouter la possible d'avoir plusieurs valeurs après le champs :after:
+      -->
+
+```{exec} sql
+:name: sql-tables
+:when: never
+:class: hidden
+create table produit (
+    no_p int primary key not null,
+    nom text not null,
+    description text,
+    prix int
+);
+insert into produit values (1, 'Ektorp', 'canapé 2 places', 599);
+insert into produit values (2, 'Brimnes', 'structure de lit', 129);
+insert into produit values (3, 'Jaren', 'matelas à ressorts', 59);
+
+create table client (
+  no_c int primary key not null,
+  titre text,
+  prenom text not null,
+  nom text not null
+);
+insert into client values
+  (1, 'M', 'Albert', 'Einstein'),
+  (2, 'Mme', 'Ada', 'Lovelace'),
+  (3, 'M', 'Alan', 'Turing'),
+  (4, 'M', 'Stephen', 'Kleene');
+
+create table achat (
+  no_c int not null,
+  no_p int not null,
+  primary key(no_c, no_p)
+);
+
+insert into achat values (3, 1);
+insert into achat values (2, 1);
+insert into achat values (1, 2);
+insert into achat values (1, 1);
+```
 
 Il serait préférable que la table contienne aussi le prénom et le nom du client,
 ainsi que le nom du produit acheté.\
 Cela se fait au moyen d'une jointure. Celle-ci va créer une nouvelle table avec
 les informations souhaitées.
 
-| no_c | prenom | nom | no_p | nom |
-| :--: | :----: | :-: | :--: | :-: |
-| 3 | Alan | Turing | 1 | Ektorp |
-| 2 | Ada | Lovelace | 1 | Ektorp |
-| 1 | Albert | Einstein | 2 | Brimnes |
-| 1 | Albert | Einstein | 1 | Ektorp |
+```{exec} sql
+:when: load
+:after: sql-tables
+:class: hidden
+select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom
+  from client
+join achat on client.no_c = achat.no_c
+join produit on achat.no_p=produit.no_p
+```
+
 
 Pour joindre deux tables, il faut utiliser l'instruction
 `join ... on ... where`.
@@ -195,7 +292,10 @@ Pour joindre deux tables, il faut utiliser l'instruction
 La requête suivante permet d'afficher le(s) nom(s) du (des) produits acheté(s)
 par le client n°3.
 
-```{code-block} sql
+
+
+```{exec} sql
+:after: sql-tables
 select nom from produit        -- sélectionne la colonne nom de la table produit
 
 join achat                     -- joint la table précédente avec la table achat
@@ -204,10 +304,15 @@ on produit.no_p=achat.no_p     -- condition de jointure
 where no_c=3;                  -- critère de sélection
 ```
 
-## Exercice 13
+## Exercice 14
 
 Écrire la requête SQL qui permet d'afficher le(s) nom(s) du (des) produits
 acheté(s) par le client n°1.
+
+```{exec} sql
+:after: sql-tables
+:editable:
+```
 
 ````{admonition} Solution
 :class: note dropdown
@@ -220,11 +325,16 @@ where no_c=1;
 ```
 ````
 
-## Exercice 14
+## Exercice 15
 
 Écrire la requête SQL qui permet d'afficher le titre, le prénom et le nom des
 clients ayant acheté le produit Ektorp.\
 Trier les valeurs dans l'ordre alphabétique des prénoms.
+
+```{exec} sql
+:after: sql-tables
+:editable:
+```
 
 ````{admonition} Solution
 :class: note dropdown
@@ -238,17 +348,25 @@ order by prenom ASC;
 ```
 ````
 
-## Exercice 15
+## Exercice 16
 
-Écrire la requête SQL qui permet d'afficher la table ci-dessous (triée selon
-les prénoms):
-| no_c | prenom | nom | no_p | nom | prix |
-| :--: | :----: | :-: | :--: | :-: | :-: |
-| 2 | Ada | Lovelace | 1 | Ektorp | 599 |
-| 3 | Alan | Turing | 1 | Ektorp | 599 |
-| 1 | Albert | Einstein | 1 | Ektorp | 599 |
-| 1 | Albert | Einstein | 2 | Brimnes | 129 |
+Utiliser des jointures pour afficher la table ci-dessous (triée selon les
+prénoms):
+```{exec} sql
+:when: load
+:after: sql-tables
+:class: hidden
+select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom, produit.prix
+  from client
+join achat on client.no_c = achat.no_c
+join produit on achat.no_p=produit.no_p
+order by prenom asc;
+```
 
+```{exec} sql
+:after: sql-tables
+:editable:
+```
 
 ````{admonition} Solution
 :class: note dropdown

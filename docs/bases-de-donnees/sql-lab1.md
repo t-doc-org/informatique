@@ -252,7 +252,7 @@ la population se trouve entre 300'000 et 500'000 habitants.
     :class: note dropdown
     ```{exec} sql
     :after: sql-canton
-    select nom from canton where population between 300000 and 500000;
+    select nom, abr from canton where population between 300000 and 500000;
     ```
     ````
 
@@ -357,7 +357,7 @@ l'Italie, et afficher le contenu de la table.
 ## Exercice 5
 
 Une application de rencontres demande, à l'enregistrement sur son site, les
-informations suivantes: le nom, le prénom, l'adresse mail, le sexe,
+informations suivantes: le nom, le prénom, l'email, le sexe,
 la date de naissance, le statut, le lieu et les intérêts principaux.\
 Les champs obligatoires sont le nom, le prénom, l'adresse mail, le sexe et la
 date de naissance.
@@ -450,7 +450,7 @@ insert into contact values
     ('Petit', 'Julie', 'julie.petit.books@postnet.ch', 'F', '1983-08-26', null, 'Sion', '1950', 'Lecture, Randonnée');
 ```
 
-1. Rechercher les adresses mail de toutes les personnes célibataires.
+1. Rechercher l'email de toutes les personnes célibataires.
 
     ```{exec} sql
     :after: sql-contact
@@ -465,7 +465,22 @@ insert into contact values
     ```
     ````
 
-2. Rechercher toutes les personnes qui habitent à Val-d'Illiez.
+2. Recherche toutes les personnes qui habitent à Lausanne.
+
+    ```{exec} sql
+    :after: sql-contact
+    :editable:
+    ```
+
+    ````{admonition} Solution
+    :class: note dropdown
+    ```{exec} sql
+    :after: sql-contact
+    select * from contact where lieu = 'Lausanne';
+    ```
+    ````
+
+3. Rechercher toutes les personnes qui habitent à Val-d'Illiez.
 
     ```{tip}
     Le guillemet simple est utilisé en SQL pour indiquer le début et la fin
@@ -485,21 +500,6 @@ insert into contact values
     ```{exec} sql
     :after: sql-contact
     select * from contact where lieu = 'Val-d''Illiez';
-    ```
-    ````
-
-3. Recherche toutes les personnes qui habitent à Lausanne.
-
-    ```{exec} sql
-    :after: sql-contact
-    :editable:
-    ```
-
-    ````{admonition} Solution
-    :class: note dropdown
-    ```{exec} sql
-    :after: sql-contact
-    select * from contact where lieu = 'Lausanne';
     ```
     ````
 
@@ -539,7 +539,7 @@ code postal doit commencer par 10..).
     ````
 
 5. Rechercher le nom, le prénom et la date de naissance de toutes les personnes
-nées 1995.
+nées en 1995.
 
     ```{exec} sql
     :after: sql-contact

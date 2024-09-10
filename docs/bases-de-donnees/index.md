@@ -8,9 +8,9 @@
 
 donnees
 sql
+sql-lab1
 bd-relationnelle
 sql2
-sql-lab1
 sql-lab2
 type-donnees
 requetes
