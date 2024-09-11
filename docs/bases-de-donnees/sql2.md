@@ -330,7 +330,8 @@ acheté(s) par le client n°1.
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:after: sql-tables
 select nom from produit
 
 join achat on produit.no_p=achat.no_p
@@ -352,7 +353,8 @@ Trier les valeurs dans l'ordre alphabétique des prénoms.
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:after: sql-tables
 select client.titre, client.prenom, client.nom from client
 
 join achat on client.no_c = achat.no_c
@@ -384,7 +386,8 @@ order by prenom asc;
 
 ````{admonition} Solution
 :class: note dropdown
-```{code-block} sql
+```{exec} sql
+:after: sql-tables
 select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom, prix
   from client
 

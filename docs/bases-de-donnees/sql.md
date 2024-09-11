@@ -176,7 +176,7 @@ select article, quantite from stock;
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:when: never
+:after: sql-produit-insert
 select * from produit;
 ```
 ````
@@ -191,7 +191,7 @@ select * from produit;
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:when: never
+:after: sql-produit-insert
 select nom from produit;
 ```
 ````
@@ -208,7 +208,7 @@ produits.
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:when: never
+:after: sql-produit-insert
 select nom, prix from produit;
 ```
 ````
@@ -261,7 +261,7 @@ Brimnes.
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:when: never
+:after: sql-produit-insert
 select * from produit where nom = 'Brimnes';
 ```
 ````
@@ -277,7 +277,7 @@ Ektorp.
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:when: never
+:after: sql-produit-insert
 select description from produit where nom = 'Ektorp';
 ```
 ````
@@ -307,7 +307,6 @@ afficher le contenu de la table.
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:when: never
 :after: sql-produit-insert
 :name: sql-produit-update
 update produit set prix = 499 where description = 'canapé 2 places';
@@ -340,7 +339,6 @@ Contrôler le résultat en affichant tous les éléments de la table produit.
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:when: never
 :after: sql-produit-update
 :name: sql-produit-delete
 delete from produit where no_p = 3;
@@ -409,7 +407,6 @@ afficher le contenu de la table.
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:when: never
 create table eleve (
     nom text not null,
     prenom text not null,
@@ -494,7 +491,6 @@ select * from boisson;
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:when: never
 :name: sql-boisson
 create table boisson (
   nom text not null,

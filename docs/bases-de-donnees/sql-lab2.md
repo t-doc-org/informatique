@@ -666,7 +666,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
+    :after: sql-biblio-insert
     select * from livre;
     ```
     ````
@@ -681,7 +681,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
+    :after: sql-biblio-insert
     select nom from usager;
     ```
     ````
@@ -696,7 +696,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
+    :after: sql-biblio-insert
     select distinct editeur from livre;
     ```
     ````
@@ -712,7 +712,7 @@ avant 1980.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
+    :after: sql-biblio-insert
     select titre, annee from livre where annee < 1980;
     ```
     ````
@@ -728,7 +728,7 @@ commence par le mot "Astérix".
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
+    :after: sql-biblio-insert
     select titre from livre where titre like 'Astérix%';
     ```
     ````
@@ -744,7 +744,7 @@ contient le mot "Astérix".
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
+    :after: sql-biblio-insert
     select titre from livre where titre like '%Astérix%';
     ```
     ````
@@ -765,7 +765,7 @@ décembre 2024.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
+    :after: sql-biblio-insert
     select isbn from emprunt where retour < '2024-12-31';
     ```
     ````
@@ -781,7 +781,7 @@ triés par ordre alphabétique.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
+    :after: sql-biblio-insert
     select nom, prenom from auteur order by nom asc;
     ```
     ````
@@ -797,7 +797,7 @@ vivant à Fribourg.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
+    :after: sql-biblio-insert
     select nom, prenom, adresse from usager where ville = 'Fribourg';
     ```
     ````
@@ -813,7 +813,7 @@ entre 2012 et 2015.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
+    :after: sql-biblio-insert
     select annee, titre from livre where annee between 2012 and 2015;
     ```
     ````
@@ -868,7 +868,6 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
     :after: sql-biblio-insert
     select livre.titre from livre
         join emprunt on livre.isbn = emprunt.isbn;
@@ -886,7 +885,6 @@ après le 15 décembre.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
     :after: sql-biblio-insert
     select livre.titre from livre
         join emprunt on livre.isbn = emprunt.isbn
@@ -904,7 +902,6 @@ emprunté des livres.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
     :after: sql-biblio-insert
     select usager.nom, usager.prenom from usager
         join emprunt on usager.code_barre = emprunt.code_barre;
@@ -922,7 +919,6 @@ emprunté des livres.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
     :after: sql-biblio-insert
     select distinct usager.nom, usager.prenom from usager
         join emprunt on usager.code_barre = emprunt.code_barre;
@@ -940,7 +936,6 @@ emprunté des livres.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
     :after: sql-biblio-insert
     select auteur.nom, auteur.prenom from auteur
         join auteur_de on auteur.a_id = auteur_de.a_id
@@ -960,7 +955,6 @@ chez les Bretons".
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
     :after: sql-biblio-insert
     select livre.titre from livre
         where annee < (select annee from livre
@@ -980,7 +974,6 @@ auteurs des livres de la question précédente sans doublons.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
-    :when: never
     :after: sql-biblio-insert
     select distinct auteur.nom, auteur.prenom from auteur
         join auteur_de on auteur.a_id = auteur_de.a_id
