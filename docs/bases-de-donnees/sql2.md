@@ -52,7 +52,9 @@ digraph UML_Class_diagram {
 </td><td style="width:70%" valign="top">
 
 
-```{code-block} sql
+```{exec} sql
+:name: sql-client1
+:when: never
 create table client (
   no_c int not null primary key,    -- Ajouter aussi not null
   nom text not null,
@@ -63,12 +65,19 @@ create table client (
 );
 ```
 
+```{exec} sql
+:after: sql-client1
+select * from client;
+```
+
 </td></tr></table>
 
 Si une clé primaire est définie au moyen de deux colonnes (par exemple, le nom
 et le mail), nous utilisons la notation suivante:
 
-```{code-block} sql
+```{exec} sql
+:name: sql-client2
+:when: never
 create table client (
   nom text not null,                -- Ajouter not null, car clé primaire
   prenom text not null,
@@ -77,6 +86,11 @@ create table client (
   mail text not null,               -- Ajouter not null, car clé primaire
   primary key (nom, mail)           -- Défini la clé primaire
 );
+```
+
+```{exec} sql
+:after: sql-client2
+select * from client;
 ```
 
 

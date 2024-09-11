@@ -32,6 +32,11 @@ create table stock (
 );
 ```
 
+```{exec} sql
+:after: sql-stock
+select * from stock;
+```
+
 ## Exercice 1
 
 Écrire la requête SQL qui permet de créer la table `produit` ci-dessous,
@@ -45,8 +50,16 @@ sachant que `no_p` et `prix` sont des entiers et que `nom` et
 select * from produit;
 ```
 
-<!-- TODO: Ajouter un éditeur pour que les élèves puissent effectuer l'ex
-    directement sur la page -->
+```{exec} sql
+:name: sql-produit-resp1
+:when: never
+:editable:
+```
+
+```{exec} sql
+:after: sql-produit-resp1
+select * from produit;
+```
 
 ````{admonition} Solution
 :class: note dropdown
@@ -76,6 +89,12 @@ la table.
 insert into stock values (1, 'T-shirt', 'rouge', 'M', 15, 20);
 ```
 
+```{exec} sql
+:after: sql-stock-insert1
+select * from stock;
+```
+
+
 ```{attention}
 Les chaînes de caractères doivent être entourées d'apostrophes
 (guillemets simples).
@@ -90,6 +109,18 @@ lignes suivantes:
 :after: sql-produit-insert
 :when: load
 :class: hidden
+select * from produit;
+```
+
+```{exec} sql
+:after: sql-produit
+:name: sql-produit-resp2
+:when: never
+:editable:
+```
+
+```{exec} sql
+:after: sql-produit-resp2
 select * from produit;
 ```
 
@@ -137,25 +168,47 @@ select article, quantite from stock;
 Écrire la requête SQL qui permet d'afficher toutes les lignes de la table
 `produit`.
 
+```{exec} sql
+:after: sql-produit-insert
+:editable:
+```
+
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:after: sql-produit-insert
+:when: never
 select * from produit;
 ```
 ````
 
-Écrire la requête SQL qui permet d'afficher le `nom` de tous les produits et
-celle qui permet d'afficher le `nom` et le `prix` de tous les produits.
+Écrire la requête SQL qui permet d'afficher le `nom` de tous les produits.
+
+```{exec} sql
+:after: sql-produit-insert
+:editable:
+```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:after: sql-produit-insert
+:when: never
 select nom from produit;
 ```
+````
+
+Écrire la requête SQL qui permet d'afficher le `nom` et le `prix` de tous les
+produits.
+
 ```{exec} sql
 :after: sql-produit-insert
+:editable:
+```
+
+
+````{admonition} Solution
+:class: note dropdown
+```{exec} sql
+:when: never
 select nom, prix from produit;
 ```
 ````
@@ -200,10 +253,15 @@ select * from stock where prix_unitaire = 35;
 Écrire la requête SQL qui permet d'afficher toutes les colonnes du produit
 Brimnes.
 
+```{exec} sql
+:after: sql-produit-insert
+:editable:
+```
+
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:after: sql-produit-insert
+:when: never
 select * from produit where nom = 'Brimnes';
 ```
 ````
@@ -211,10 +269,15 @@ select * from produit where nom = 'Brimnes';
 Écrire la requête SQL qui permet d'afficher uniquement la description du produit
 Ektorp.
 
+```{exec} sql
+:after: sql-produit-insert
+:editable:
+```
+
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:after: sql-produit-insert
+:when: never
 select description from produit where nom = 'Ektorp';
 ```
 ````
@@ -233,12 +296,18 @@ select * from stock;                                  -- pour afficher le résul
 
 ## Exercice 5
 
-Mettre à jour le prix du **canapé 2 places** qui ne coûte plus que 499 CHF.\
-Contrôler le résultat en affichant tous les éléments de la table produit.
+Mettre à jour le prix du **canapé 2 places** qui ne coûte plus que 499 CHF, et
+afficher le contenu de la table.
+
+```{exec} sql
+:after: sql-produit-insert
+:editable:
+```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
+:when: never
 :after: sql-produit-insert
 :name: sql-produit-update
 update produit set prix = 499 where description = 'canapé 2 places';
@@ -263,10 +332,17 @@ select * from stock;                                  -- pour afficher le résul
 Supprimer le produit dont le `no_p` est 3.\
 Contrôler le résultat en affichant tous les éléments de la table produit.
 
+```{exec} sql
+:after: sql-produit-update
+:editable:
+```
+
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
+:when: never
 :after: sql-produit-update
+:name: sql-produit-delete
 delete from produit where no_p = 3;
 
 select * from produit;                               -- pour afficher le résultat
@@ -298,7 +374,9 @@ Il est possible d'obliger l'utilisateur à fournir ces informations lorsqu'il
 ajoute un élément dans la table. Pour cela, il faut utiliser les mots réservés
 `not null` lors de la création de la table.
 
-```{code-block} sql
+```{exec} sql
+:when: never
+:name: sql-stock2
 create table stock (
     id int not null,
     article text not null,
@@ -309,6 +387,11 @@ create table stock (
 );
 ```
 
+```{exec} sql
+:after: sql-stock2
+select * from stock;
+```
+
 ## Exercice 7
 
 Créer une table `eleve` qui contient les informations des élèves: nom, prénom,
@@ -316,11 +399,17 @@ sexe, classe, date de naissance, email, adresse, code postal, ville, téléphone
 Quelles sont les colonnes obligatoires?\
 Écrire la requête qui permet de créer cette table en choisissant le type
 adapté pour chaque colonne.\
-Ajouter une ligne avec vos propres informations sauf le numéro de téléphone.
+Ajouter une ligne avec vos propres informations sauf le numéro de téléphone, et
+afficher le contenu de la table.
+
+```{exec} sql
+:editable:
+```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
+:when: never
 create table eleve (
     nom text not null,
     prenom text not null,
@@ -352,20 +441,35 @@ table, si aucune valeur pour cette colonne n'est spécifiée.
 
 La valeur par défaut doit être du même type que celui de la colonne.
 
-| nom | description | prix |
-| :-: | :---------: | :--: |
-| Miel Amande | fourrée | 7.50 |
-| Suzette | flambée | 5.00 |
-| Citron | sirop | 5.00 |
-| Sirop d'érable | sirop | 5.00 |
-| Créme de marron | fourrée | 8.00 |
+```{exec} sql
+:when: load
+:after: sql-crepe
+:class: hidden
+insert into crepe values
+    ('Miel-Amande', 'fourrée', 7.5),
+    ('Crème de marron', 'fourrée', 8);
+insert into crepe (nom, description) values
+    ('Suzette', 'flambée'),
+    ('Citron', 'sirop'),
+    ('Sirop d''érable', 'sirop');
+select * from crepe;
+```
 
-```{code-block} sql
+
+```{exec} sql
+:name: sql-crepe
+:when: never
 create table crepe (
     nom text not null,
     description text not null,
     prix dec(3,2) not null default 5.00   -- souvent les crêpes coûtent 5.00 CHF
 );
+```
+
+```{exec} sql
+:after: sql-crepe
+insert into crepe (nom, description) values ('Miel', 'sirop');
+select * from crepe;
 ```
 
 ## Exercice 8
@@ -383,22 +487,29 @@ Insérer les données du tableau ci-dessous.
 select * from boisson;
 ```
 
+```{exec} sql
+:editable:
+```
+
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
+:when: never
 :name: sql-boisson
 create table boisson (
   nom text not null,
   prix dec(3,2) not null default 2.50
 );
 
-insert into boisson values ('Espresso', 2.00);
-insert into boisson values ('Café', 2.00);
-insert into boisson (nom) values ('Café au lait');
-insert into boisson (nom) values ('Cappuccino');
-insert into boisson (nom) values ('Latte Macchiato');
-insert into boisson (nom) values ('Chocolat chaud');
-insert into boisson (nom) values ('Chocolat froid');
+insert into boisson values
+    ('Espresso', 2.00),
+    ('Café', 2.00);
+insert into boisson (nom) values
+    ('Café au lait'),
+    ('Cappuccino'),
+    ('Latte Macchiato'),
+    ('Chocolat chaud'),
+    ('Chocolat froid');
 insert into boisson values ('Thé', 2.00);
 
 select * from boisson;                                -- pour afficher le résultat
