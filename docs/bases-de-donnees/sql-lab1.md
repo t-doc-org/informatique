@@ -347,6 +347,7 @@ l'Italie, et afficher le contenu de la table.
     ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
+    :name: sql-pays-last
     :after: sql-pays-update
     update pays set nourriture = 'escargots' where nom = 'France';
     update pays set nourriture = 'pizza' where nom = 'Italie';
@@ -620,3 +621,33 @@ et 1994.
         and naissance between '1984-%' and '1994-%';
     ```
     ````
+
+## Exercice 6
+
+Reprenons la base de données des pays de l'exercice 4.
+1. Ajouter une colonne `monnaie`. Pour cela, il faut utiliser l'instruction
+`alter table`. Rechercher sur le Web comment faire.
+2. Compléter cette nouvelle colonne pour chaque pays.
+
+```{tip}
+Utiliser une valeur par défaut pour la colonne `monnaie`.
+
+```
+
+```{exec} sql
+:after: sql-pays-last
+:editable:
+```
+
+````{admonition} Solution
+:class: note dropdown
+```{exec} sql
+:after: sql-pays-last
+alter table pays add 'monnaie' text default 'euro';
+
+update pays set monnaie = 'franc suisse' where nom = 'Suisse';
+update pays set monnaie = 'couronne' where nom = 'Lichtenstein';
+
+select * from pays;
+```
+````
