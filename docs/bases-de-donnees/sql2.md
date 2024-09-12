@@ -364,6 +364,9 @@ order by prenom ASC;
 ```
 ````
 
+<!-- TODO: éviter la duplication de code avec les joints, lorsque j'affiche le
+          résultat dans l'énoncé de l'exercice. -->
+
 ## Exercice 16
 
 Utiliser des jointures pour afficher la table ci-dessous (triée selon les
