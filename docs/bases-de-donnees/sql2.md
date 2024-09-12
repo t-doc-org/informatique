@@ -32,17 +32,17 @@ digraph UML_Class_diagram {
   Class1 [
     shape=plain
     label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-      <tr> <td> <b>client</b> </td> </tr>
-      <tr> <td>
-        <table border="0" cellborder="0" cellspacing="7" >
-          <tr> <td align="left"><u>no_c </u> (clé primaire)</td> </tr>
-          <tr> <td align="left" >nom</td> </tr>
-          <tr> <td align="left" >prenom</td> </tr>
-          <tr> <td align="left" >adresse</td> </tr>
-          <tr> <td align="left" >telephone</td> </tr>
-          <tr> <td align="left" >mail</td> </tr>
+      <tr><td><b>client</b></td></tr>
+      <tr><td>
+        <table border="0" cellborder="0" cellspacing="7">
+          <tr><td align="left"><u>no_c</u> (clé primaire)</td></tr>
+          <tr><td align="left" >nom</td></tr>
+          <tr><td align="left" >prenom</td></tr>
+          <tr><td align="left" >adresse</td></tr>
+          <tr><td align="left" >telephone</td></tr>
+          <tr><td align="left" >mail</td></tr>
         </table>
-      </td> </tr>
+      </td></tr>
     </table>>
   ]
 
@@ -50,7 +50,6 @@ digraph UML_Class_diagram {
 ```
 
 </td><td style="width:70%" valign="top">
-
 
 ```{exec} sql
 :name: sql-client1
@@ -93,8 +92,7 @@ create table client (
 select * from client;
 ```
 
-
-<!-- TOTO: Ajouter une numérotation automatique des exercices par chapitre. -->
+<!-- TODO: Ajouter une numérotation automatique des exercices par chapitre. -->
 
 ## Exercice 10
 
@@ -110,7 +108,6 @@ Recréer la table `produit` de l'exercice 1 en y ajoutant la clé primaire.
 :after: sql-produit-resp
 select * from produit;
 ```
-
 
 ````{admonition} Solution
 :class: note dropdown
@@ -137,7 +134,6 @@ insert into produit (nom, description, prix) values ('Fado', 'Lampe de table', 2
 select * from produit;
 ```
 
-
 ## Exercice 12
 
 Créer et compléter la table `client` ci-dessous, sachant que `no_c` est un
@@ -150,7 +146,6 @@ caractères.
 :class: hidden
 select * from client;
 ```
-
 
 ```{exec} sql
 :name: sql-client-resp
@@ -200,7 +195,6 @@ clients.
 select * from achat where false;
 ```
 
-
 ```{exec} sql
 :name: sql-achat-resp
 :when: never
@@ -223,10 +217,7 @@ create table achat (
   primary key(no_c, no_p)
 );
 
-insert into achat values (3, 1);
-insert into achat values (2, 1);
-insert into achat values (1, 2);
-insert into achat values (1, 1);
+insert into achat values (3, 1), (2, 1), (1, 2), (1, 1);
 ```
 ````
 
@@ -243,45 +234,15 @@ lisible pour un humain:
 select * from achat;
 ```
 
-<!-- TODO: Ajouter la possible d'avoir plusieurs valeurs après le champs :after:
-      -->
-
 ```{exec} sql
 :name: sql-tables
+:after: sql-produit sql-client sql-achat
 :when: never
 :class: hidden
-create table produit (
-    no_p int primary key not null,
-    nom text not null,
-    description text,
-    prix int
-);
-insert into produit values (1, 'Ektorp', 'canapé 2 places', 599);
-insert into produit values (2, 'Brimnes', 'structure de lit', 129);
-insert into produit values (3, 'Jaren', 'matelas à ressorts', 59);
-
-create table client (
-  no_c int primary key not null,
-  titre text,
-  prenom text not null,
-  nom text not null
-);
-insert into client values
-  (1, 'M', 'Albert', 'Einstein'),
-  (2, 'Mme', 'Ada', 'Lovelace'),
-  (3, 'M', 'Alan', 'Turing'),
-  (4, 'M', 'Stephen', 'Kleene');
-
-create table achat (
-  no_c int not null,
-  no_p int not null,
-  primary key(no_c, no_p)
-);
-
-insert into achat values (3, 1);
-insert into achat values (2, 1);
-insert into achat values (1, 2);
-insert into achat values (1, 1);
+insert into produit values
+  (1, 'Ektorp', 'canapé 2 places', 599),
+  (2, 'Brimnes', 'structure de lit', 129),
+  (3, 'Jaren', 'matelas à ressorts', 59);
 ```
 
 Il serait préférable que la table contienne aussi le prénom et le nom du client,
@@ -290,15 +251,14 @@ Cela se fait au moyen d'une jointure. Celle-ci va créer une nouvelle table avec
 les informations souhaitées.
 
 ```{exec} sql
-:when: load
 :after: sql-tables
+:when: load
 :class: hidden
 select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom
   from client
-join achat on client.no_c = achat.no_c
-join produit on achat.no_p=produit.no_p
+  join achat on client.no_c = achat.no_c
+  join produit on achat.no_p=produit.no_p
 ```
-
 
 Pour joindre deux tables, il faut utiliser l'instruction
 `join ... on ... where`.
@@ -306,16 +266,14 @@ Pour joindre deux tables, il faut utiliser l'instruction
 La requête suivante permet d'afficher le(s) nom(s) du (des) produits acheté(s)
 par le client n°3.
 
-
-
 ```{exec} sql
 :after: sql-tables
 select nom from produit        -- sélectionne la colonne nom de la table produit
 
-join achat                     -- joint la table précédente avec la table achat
-on produit.no_p=achat.no_p     -- condition de jointure
+  join achat                   -- joint la table précédente avec la table achat
+  on produit.no_p=achat.no_p   -- condition de jointure
 
-where no_c=3;                  -- critère de sélection
+  where no_c=3;                -- critère de sélection
 ```
 
 ## Exercice 14
@@ -333,10 +291,8 @@ acheté(s) par le client n°1.
 ```{exec} sql
 :after: sql-tables
 select nom from produit
-
-join achat on produit.no_p=achat.no_p
-
-where no_c=1;
+  join achat on produit.no_p=achat.no_p
+  where no_c=1;
 ```
 ````
 
@@ -356,11 +312,9 @@ Trier les valeurs dans l'ordre alphabétique des prénoms.
 ```{exec} sql
 :after: sql-tables
 select client.titre, client.prenom, client.nom from client
-
-join achat on client.no_c = achat.no_c
-
-where achat.no_p = 1
-order by prenom ASC;
+  join achat on client.no_c = achat.no_c
+  where achat.no_p = 1
+  order by prenom ASC;
 ```
 ````
 
@@ -369,14 +323,14 @@ order by prenom ASC;
 Utiliser des jointures pour afficher la table ci-dessous (triée selon les
 prénoms):
 ```{exec} sql
-:when: load
 :after: sql-tables
+:when: load
 :class: hidden
 select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom, produit.prix
   from client
-join achat on client.no_c = achat.no_c
-join produit on achat.no_p=produit.no_p
-order by prenom asc;
+  join achat on client.no_c = achat.no_c
+  join produit on achat.no_p=produit.no_p
+  order by prenom asc;
 ```
 
 ```{exec} sql
@@ -391,10 +345,9 @@ order by prenom asc;
 select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom, prix
   from client
 
-join achat on client.no_c = achat.no_c      -- joint les tables client et achat
-join produit on achat.no_p=produit.no_p     -- joint les tables achat et produit
+  join achat on client.no_c = achat.no_c    -- joint les tables client et achat
+  join produit on achat.no_p=produit.no_p   -- joint les tables achat et produit
 
-order by prenom asc;
+  order by prenom asc;
 ```
 ````
-
