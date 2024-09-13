@@ -550,12 +550,11 @@ et 1994.
     ```
     ````
 
-## Exercice 6
+## Exercice 6 (facultatif)
 
 Reprenons la base de données des pays de l'exercice 4.
 1. Ajouter une colonne `monnaie`. Pour cela, il faut utiliser l'instruction
 `alter table`. Rechercher sur le Web comment faire.
-2. Compléter cette nouvelle colonne pour chaque pays.
 
 ```{tip}
 Utiliser une valeur par défaut pour la colonne `monnaie`.
@@ -570,12 +569,46 @@ Utiliser une valeur par défaut pour la colonne `monnaie`.
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
+:name: sql-pays-6-1
 :after: sql-pays-last
-alter table pays add 'monnaie' text default 'euro';
+alter table pays add monnaie text default 'euro';
 
+select * from pays;
+```
+````
+
+2. Compléter cette nouvelle colonne pour chaque pays.
+
+```{exec} sql
+:after: sql-pays-6-1
+:editable:
+```
+
+````{admonition} Solution
+:class: note dropdown
+```{exec} sql
+:name: sql-pays-6-2
+:after: sql-pays-6-1
 update pays set monnaie = 'franc suisse' where nom = 'Suisse';
 update pays set monnaie = 'couronne' where nom = 'Lichtenstein';
 
 select * from pays;
 ```
 ````
+
+3. Supprimer la colonne `food`.
+```{exec} sql
+:after: sql-pays-6-2
+:editable:
+```
+
+````{admonition} Solution
+:class: note dropdown
+```{exec} sql
+:after: sql-pays-6-2
+alter table pays drop column nourriture;
+
+select * from pays;
+```
+
+
