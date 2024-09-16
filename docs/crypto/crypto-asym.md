@@ -130,7 +130,7 @@ des messages en toute sécurité avec Bob.
 
 Déterminer la clé publique et la clé privée du système RSA avec les deux nombres
 premiers suivants:\
-$p = 7$ et $q = 11$.
+$p = 13$ et $q = 11$.
 
 ```{tip}
 Utiliser [WolframAlpha](https://www.wolframalpha.com/) comme aide pour les
