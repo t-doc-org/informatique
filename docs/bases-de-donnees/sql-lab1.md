@@ -479,7 +479,7 @@ nées en 1995.
     :class: note dropdown
     ```{exec} sql
     :after: sql-contact
-    select nom, prenom from contact where naissance like '1995-%';
+    select nom, prenom, naissance from contact where naissance like '1995-%';
     ```
     ````
 
