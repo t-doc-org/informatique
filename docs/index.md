@@ -27,7 +27,7 @@ bases-de-donnees/index
 crypto/index
 ```
 
-## Logiciels utilisés
+## Divers
 
 ```{toctree}
 :maxdepth: 1
