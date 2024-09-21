@@ -9,9 +9,10 @@ Dans le langage courant, **information** et **données** sont souvent utilisés 
 manière interchangeable. En informatique, les données sont la forme sous
 laquelle l'information est représentée.
 
-Exemple:\
-Information: "Il fait beau aujourd'hui!"\
-Données: 01001001 01101100 00100000 01100110 01100001 01101001 01110100 00100000
+Un exmple d'information: "Il fait beau aujourd'hui!"
+
+Les données qui représentent cette même information:\
+01001001 01101100 00100000 01100110 01100001 01101001 01110100 00100000
 01100010 01100101 01100001 01110101 00100000 01100001 01110101 01101010 01101111
 01110101 01110010 01100100 00100111 01101000 01110101 01101001 00100001
 
@@ -43,7 +44,7 @@ forme de données binaires, c'est-à-dire sous la forme d'une suite de 0 ou de 1
 Le **bit** vient de BInary digiT (b minuscule dans les notations) est l'unité la
 plus simple en informatique, représenté par le chiffre 0 ou 1.
 
-> **Pourquoi les ordinateurs fonctionnent-ils en binaire?**
+> **Pourquoi les ordinateurs fonctionnent-ils en binaire?**\
 > Les ordinateurs sont composés de circuits électroniques qui laissent ou non
 circuler l'électricité. Un circuit peut facilement représenter ces deux états:
 allumé (1) ou éteint (0).
