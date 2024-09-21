@@ -16,6 +16,7 @@ scolaire.
 architecture/index
 html-css/index
 python/index
+representation-info/index
 ```
 
 ## Cours de 2{sup}`e` année
