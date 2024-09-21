@@ -133,7 +133,7 @@ balise ouvrante et fermante).
 ## Exercice 1
 
 But: Comprendre la structure principale d'un document HTML.
-<iframe src="https://learningapps.org/watch?v=pxjjqttb224"
+<iframe credentialless src="https://learningapps.org/watch?v=pxjjqttb224"
 style="border:0px;width:100%;height:500px" allowfullscreen="true"
 webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
 

@@ -266,7 +266,7 @@ peut:
 
 ## Résumé en vidéo
 
-<iframe width="560" height="315"
+<iframe credentialless width="560" height="315"
 src="https://www.youtube.com/embed/PW_x5m08QRQ?si=HzY8JL-KiY8P5UqQ"
 title="Vidéo sur l'utilisation du Web" frameborder="0" allow="accelerometer;
 autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;

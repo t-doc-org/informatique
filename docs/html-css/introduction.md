@@ -36,7 +36,7 @@ sur l'écran de l'utilisateur.
 <!-- TODO: Créer une directive pour l'ajout de vidéo youtube.-->
 <!-- TODO: Centrer la vidéo.-->
 
-<iframe width="560" height="315"
+<iframe credentialless width="560" height="315"
 src="https://www.youtube.com/embed/dYgNvn98Nag?si=DxXE4xHKt5gmEpkF"
 title="Vidéo sur l'utilisation du Web" frameborder="0" allow="accelerometer;
 autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
@@ -59,7 +59,7 @@ Une page Web est typiquement composée de 3 types de fichiers:
 
 Regarder la vidéo jusqu'à 1 min 32 s:
 
-<iframe width="560" height="315"
+<iframe credentialless width="560" height="315"
 src="https://www.youtube.com/embed/-7pJ45oXuvE?si=jX_O5B9tOQFWPNP9"
 title="Vidéo sur le développement frontend" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;

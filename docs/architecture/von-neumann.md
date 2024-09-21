@@ -83,7 +83,7 @@ Nous verrons cela plus en détail dans la section [](./encodage-information.md).
 
 ## Vidéo
 
-<iframe width="560" height="315"
+<iframe credentialless width="560" height="315"
 src="https://www.youtube.com/embed/85XUJXHbjBo?si=JRyirLX78uKkRVnE"
 title="Vidéo sur l'architecture de l'ordinateur" frameborder="0" allow="accelerometer;
 autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
