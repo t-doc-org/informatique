@@ -268,6 +268,8 @@ digraph UML_Class_diagram {
         <table border="0" cellborder="0" cellspacing="7" >
           <tr> <td align="left" port="a1"><u># no_p</u></td> </tr>
           <tr> <td port="a2" align="left" ><u># no_c</u></td> </tr>
+          <tr> <td port="a2" align="left" ><u>date</u></td> </tr>
+          <tr> <td port="a2" align="left" >quantite</td> </tr>
         </table>
       </td> </tr>
     </table>>
