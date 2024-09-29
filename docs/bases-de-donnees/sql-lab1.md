@@ -331,6 +331,7 @@ base de donnée.
 
     ```{exec} sql
     :after: sql-pays-delete
+    :then: sql-pays-select
     :editable:
     ```
 
@@ -350,6 +351,7 @@ l'Italie.
 
     ```{exec} sql
     :after: sql-pays-update
+    :then: sql-pays-select
     :editable:
     ```
 
