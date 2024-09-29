@@ -173,8 +173,8 @@ l'alphabet, plutôt que par son code ASCII étendu.
 
 Bob souhaite envoyer à Alice le message suivant: "salut".
 
-1. Bob chercher dans l'annuaire la clé publique d'Alice qui est (55, 43).
-2. Bob transformer le message en nombre:
+1. Bob cherche dans l'annuaire la clé publique d'Alice qui est (55, 43).
+2. Bob transforme le message en nombre:
    s -> 19, a -> 01, l -> 12, u -> 21, t -> 20.\
    Le message transformé donnera: 19 01 12 21 20.
 3. Comme 1901122120 > 55, Bob décide de découper en blocs d'une lettre

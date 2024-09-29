@@ -105,8 +105,8 @@ quoi on va tomber (Forrest Gump)
 But: Déchiffrer un message utilisant la substitution monoalphabétique en
 faisant une analyse de fréquences.
 
-Décrypter à l'aide de l'analyse de fréquences, les cryptogrammes suivants,
-chiffrés par une substitution monoalphabétique (cas général):
+Décrypter à l'aide de l'analyse de fréquences, le cryptogramme suivant,
+chiffré par une substitution monoalphabétique (cas général):
 
 ZRJ VDAARJ CLWJJRCK RK ERARMHRCK ZWIHRJ RK RULMP RC EHDWKJ. ZRJ EWJKWCBKWDCJ
 JDBWLZRJ CR FRMNRCK RKHR TDCERRJ GMR JMH Z'MKWZWKR BDAAMCR.
