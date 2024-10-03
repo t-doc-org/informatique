@@ -9,7 +9,7 @@ Dans le langage courant, **information** et **données** sont souvent utilisés 
 manière interchangeable. En informatique, les données sont la forme sous
 laquelle l'information est représentée.
 
-Un exmple d'information: "Il fait beau aujourd'hui!"
+Un exemple d'information: "Il fait beau aujourd'hui!"
 
 Les données qui représentent cette même information:\
 01001001 01101100 00100000 01100110 01100001 01101001 01110100 00100000
@@ -31,7 +31,7 @@ utilisant le moins de place possible. Comment représenter et compresser des
 données?
 
 3. La durabilité de l'information\
-Lors du stockage ou de la tansmission de données, des erreurs peuvent apparaître.
+Lors du stockage ou de la transmission de données, des erreurs peuvent apparaître.
 Comment détecter ou corriger ces erreurs?
 
 En 1{sup}`ère` année, nous allons nous intéresser à la représentation de
