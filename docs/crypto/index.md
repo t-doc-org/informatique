@@ -1,11 +1,10 @@
 <!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
 <!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
 
-# Cryptographie - 2{sup}`e`
+# 2{sup}`è` - Cryptographie
 
 ```{toctree}
 :maxdepth: 1
-
 introduction
 crypto-sym
 crypto-asym

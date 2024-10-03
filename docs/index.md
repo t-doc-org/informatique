@@ -12,7 +12,6 @@ scolaire.
 
 ```{toctree}
 :maxdepth: 1
-
 architecture/index
 html-css/index
 python/index
@@ -23,7 +22,6 @@ representation-info/index
 
 ```{toctree}
 :maxdepth: 1
-
 bases-de-donnees/index
 crypto/index
 ```
@@ -32,6 +30,5 @@ crypto/index
 
 ```{toctree}
 :maxdepth: 1
-
 logiciels/index
 ```

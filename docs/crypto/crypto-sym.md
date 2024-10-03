@@ -10,8 +10,6 @@ d'une même clé pour {term}`chiffrer` et {term}`déchiffrer` un message.
 ```{figure} images/crypt-sym.png
 :alt: Schéma de la cryptographie symétrique
 :width: 70%
-:align: center
-
 source: Network Associates Inc, *Introduction à la cryptographie*
 ```
 
@@ -25,9 +23,9 @@ Dans une **transposition**, les lettres du texte clair sont mélangées, mais pa
 modifiées. C'est-à-dire que le texte mélangé est une anagramme du texte
 d'origine.
 
-<table><tr><td valign="top">
-
 ### Scytale
+
+<table><tr><td valign="top">
 
 Ce procédé était déjà utilisé pendant l'Antiquité par les Spartes. La scytale
 est un morceau de bois autour duquel est entouré une bande de cuir ou de
@@ -43,10 +41,9 @@ diamètre pour lire le message en clair.
 ```{figure} images/scytale.jpg
 :alt: Scytale
 :width: 1000px
-:align: center
-
 source: [apprendre en ligne](https://www.apprendre-en-ligne.net/crypto/index-crypto-transpo.html)
 ```
+
 </td></tr></table>
 
 ### Chiffre Rail Fence
@@ -89,17 +86,15 @@ ligne et 22 sur la deuxième.
 ```{code-block} text
 L C Y T G A H E Y E R Q E S F C L A E H F R R
  A R P O R P I S M T I U E T A I E D C I F E
-
 ```
-la cryptographie symetrique est facile a dechiffrer
-````
 
+<center>la cryptographie symetrique est facile a dechiffrer</center>
+````
 
 ## Substitutions monoalphabétiques
 
 Dans une **substitution monoalphabétique**, aussi appelée substitution simple,
 chaque lettre est remplacée par un autre symbole, toujours le même.
-
 
 ### Chiffre de César
 
@@ -118,6 +113,7 @@ positions. C'est-à-dire que le a est remplacé par D, b par E, etc.
 
 Coder le message suivant en utilisant le chiffre de César d'origine (décalage de
 trois positions):
+
 <center>La crypto, c'est sympa!</center>
 
 ````{admonition} Solution
@@ -125,13 +121,14 @@ trois positions):
 Il faut effectuer un décalage de 3 positions pour chaque lettre:\
 l -> O, a -> D, c -> F, ...
 
-ODFUB SWRFH VWVBP SD
+<center>ODFUB SWRFH VWVBP SD</center>
 ````
 
 #### Exercice 3
 
 Déchiffrer le texte suivant chiffré en utilisant le Chiffre de César d'origine,
 c'est-à-dire avec comme clé de chiffrement un décalage de trois positions.
+
 <center>WHAWH FRGHD YHFOH FKLII UHGHF HVDU</center>
 
 ````{admonition} Solution
@@ -140,7 +137,7 @@ Un décalage de 3 positions vers la droite a été utilisé pour coder, il faut
 donc faire une décalage vers la gauche de 3 positions pour décoder:\
 W -> t, H -> e, A -> x, ...
 
-texte code avec le chiffre de cesar
+<center>texte code avec le chiffre de cesar</center>
 ````
 
 #### Remarque
@@ -183,8 +180,6 @@ accentuées, les espaces et ponctuations ont été supprimés).
 
 ```{figure} images/batonsfr.gif
 :alt: Fréquence d'apparition des lettres en français
-:align: center
-
 source: [apprendre en ligne](https://apprendre-en-ligne.net/crypto/stat/francais.html)
 ```
 
@@ -215,15 +210,14 @@ en clair.
 positions, A->R: 17 positions, ...
 3. Appliquer le décalage aux lettres du texte clair.
 
-Sans devoir calculer le décalage, on peut utiliser le [carré de Vigenère](https://www.apprendre-en-ligne.net/crypto/vigenere/carrevig.html).
-
-<!-- TODO: Centrer le texte dans les cellules. -->
+Sans devoir calculer le décalage, on peut utiliser le
+[carré de Vigenère](https://www.apprendre-en-ligne.net/crypto/vigenere/carrevig.html).
 
 ```{list-table}
+:class: text-center
 :stub-columns: 1
 :align: center
 :widths: 10 3 3 3 3 3 3 3 3 3 3 3 3
-
 * - Texte clair
   - t
   - o
@@ -282,6 +276,7 @@ Sans devoir calculer le décalage, on peut utiliser le [carré de Vigenère](htt
 
 Déchiffrer le message suivant, chiffré avec le Chiffre de Vigenère, sachant que
 la clé de chiffrement est **informatique**:
+
 <center>ARXOD QONDH YXWV</center>
 
 ````{admonition} Solution
@@ -293,10 +288,10 @@ lettre a.
 3. Déterminer le texte clair en appliquant le décalage vers la gauche.
 
 ```{list-table}
+:class: text-center
 :stub-columns: 1
 :align: center
 :widths: 10 3 3 3 3 3 3 3 3 3 3 3 3 3 3
-
 * - Texte clair
   -
   -
@@ -359,7 +354,7 @@ lettre a.
   - V
 ```
 
-sesame ouvre toi
+<center>sesame ouvre toi</center>
 ````
 
 ## Cryptographie symétrique moderne
@@ -370,15 +365,14 @@ modernes, comme AES[^sn1], reposent sur le chiffrement par blocs qui fonctionne
 plus ou moins de la manière suivante:
 [^sn1]: Advanced Encryption Standard
 
-1. Remplacer les caractères par un code binaire (par exemple, code ASCII), ce
-   qui génère une chaîne de 0 et de 1.
+1. Remplacer les caractères par un code binaire (par exemple, par l'encodage
+   ASCII), ce qui génère une chaîne de 0 et de 1.
 2. Découper cette chaîne en blocs de longueur donnée (par exemple, 128 bits).
 3. Pour chaque bloc:
-      - Permuter certains bits du bloc selon une table prédéfinie.
-      - Chiffrer le bloc en utilisant la clé secrète (par exemple, addition bit
-        par bit).
-      - Répéter les deux opérations précédentes plusieurs fois.
-
+    - Permuter certains bits du bloc selon une table prédéfinie.
+    - Chiffrer le bloc en utilisant la clé secrète (par exemple, addition bit
+      par bit).
+    - Répéter les deux opérations précédentes plusieurs fois.
 
 ## Conclusion
 
@@ -392,6 +386,3 @@ Problèmes:
 - On ne peut pas garantir que l'expéditeur du message est bien celui qu'il
 prétend être (authentification). Si un intru intercepte la clé, il peut créer
 des messages frauduleux indétectables (falsification).
-
-
-

@@ -18,40 +18,38 @@ Il existe plusieurs catégories de types de données:
 
 ## Types numériques
 
-Les entiers
+Les entiers:
 
 | Type | Description |
 | :--- | :---------- |
-| tinyint | -127 à 128 |
-| smallint | -32'768 à 32'7676 |
-| **int** | -2'147'483'648 à 2'147'483'647 |
-| bigint | -9'223'372'036'854'775'808 à 9'223'372'036'854'775'807 |
+| `tinyint` | -128 à 127 |
+| `smallint` | -32'768 à 32'767 |
+| **`int`** | -2'147'483'648 à 2'147'483'647 |
+| `bigint` | -9'223'372'036'854'775'808 à 9'223'372'036'854'775'807 |
 
-Les nombres réels
+Les nombres réels:
 
 | Type | Description |
 | :--- | :---------- |
-| **decimal(taille,d)** |  Nombre décimal <br> Le nombre de chiffre est précisé dans taille (max 65) et le nombre de décimales <br> dans d (max 30) <br> decimal(6,2) -> 2345.67 |
-| real | Nombre réel (valeur approchée)|
-
+| **`decimal(taille,d)`** |  Nombre décimal <br> Le nombre de chiffre est précisé dans taille (max 65) et le nombre de décimales dans d (max 30) <br> `decimal(6,2)` &rarr; 1234.56 |
+| `real` | Nombre réel (valeur approchée)|
 
 ## Types textes ou chaînes de caractères
 
 | Type | Description |
 | :--- | :---------- |
-| **text** | Chaîne de caractères de taille quelconque |
-| char(n) | Chaîne de caractères de **taille fixe** n |
-| varchar(n) | Chaîne de caractères de **taille variable** au maximum n |
-
+| **`text`** | Chaîne de caractères de taille quelconque |
+| `char(n)` | Chaîne de caractères de **taille fixe** n |
+| `varchar(n)` | Chaîne de caractères de **taille variable** au maximum n |
 
 ## Type des dates, durées et instants
 
 | Type | Description |
 | :--- | :---------- |
-| date | Format: AAAA-MM-JJ |
-| datetime | Format: AAAA-MM-JJ hh:mm:ss |
-| time | Format: hh:mm:ss |
-| year | Format: AAAA |
+| `date` | Format: `AAAA-MM-JJ` |
+| `datetime` | Format: `AAAA-MM-JJ hh:mm:ss` |
+| `time` | Format: `hh:mm:ss` |
+| `year` | Format: `AAAA` |
 
 ## Exercice
 
@@ -62,11 +60,5 @@ Remplir le tableau dans le document joint [Exercice sur les types](./exercice-ty
 (null)=
 ## Valeur null
 
-En SQL, il existe une valeur notée **null**. Elle représente une absence de
+En SQL, il existe une valeur notée `null`. Elle représente une absence de
 valeur. Elle peut remplacer une valeur quel que soit le type attendu.
-
-
-
-
-
-

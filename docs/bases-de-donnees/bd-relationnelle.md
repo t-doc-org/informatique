@@ -99,7 +99,6 @@ digraph UML_Class_diagram {
       </td> </tr>
     </table>>
   ]
-
 }
 ```
 
@@ -117,8 +116,8 @@ digraph UML_Class_diagram {
 Dans cet exemple, nous pouvons donc choisir la colonne `nom` ou `abr` comme clé
 primaire. Nous avons choisi `nom`.
 
-
 #### Exemple - Clients
+
 <table><tr><td valign="top">
 
 ```{graphviz}
@@ -153,7 +152,6 @@ digraph UML_Class_diagram {
       </td> </tr>
     </table>>
   ]
-
 }
 ```
 
@@ -274,7 +272,6 @@ digraph UML_Class_diagram {
       </td> </tr>
     </table>>
   ]
-
 }
 ```
 

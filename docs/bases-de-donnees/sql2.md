@@ -45,7 +45,6 @@ digraph UML_Class_diagram {
       </td></tr>
     </table>>
   ]
-
 }
 ```
 
@@ -318,22 +317,16 @@ select client.titre, client.prenom, client.nom from client
 ```
 ````
 
-<!-- TODO: éviter la duplication de code avec les joints, lorsque j'affiche le
-          résultat dans l'énoncé de l'exercice. -->
-
 ## Exercice 16
 
 Utiliser des jointures pour afficher la table ci-dessous (triée selon les
 prénoms):
+
 ```{exec} sql
 :after: sql-tables
+:then: sql-ex-16-sol
 :when: load
 :class: hidden
-select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom, produit.prix
-  from client
-  join achat on client.no_c = achat.no_c
-  join produit on achat.no_p=produit.no_p
-  order by prenom asc;
 ```
 
 ```{exec} sql
@@ -344,6 +337,7 @@ select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom, produi
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
+:name: sql-ex-16-sol
 :after: sql-tables
 select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom, prix
   from client

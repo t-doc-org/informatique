@@ -3,7 +3,6 @@
 
 # Système de fichiers
 
-
 ## Définition
 
 Un **système de fichiers** est l'organisation hiérarchique des fichiers sur un
@@ -13,7 +12,7 @@ contient des fichiers.
 ## Exercice 1
 
 <!-- TODO: Cacher les solutions sinon les élèves ne vont pas faire les
-            exercices. -->
+           exercices. -->
 
 Répondre aux questions:
 
@@ -35,9 +34,9 @@ dossier?
     ```{admonition} Solution
     :class: note dropdown
     OneDrive est un service de stockage en ligne, appelé aussi cloud, fourni par
-    Microsoft. Il stocke une copie de vos données en ligne. En cas de problème avec
-    votre ordinateur (vol ou ordinateur qui ne démarre plus), vous pouvez récupérer
-    vos données.
+    Microsoft. Il stocke une copie de vos données en ligne. En cas de problème
+    avec votre ordinateur (vol ou ordinateur qui ne démarre plus), vous pouvez
+    récupérer vos données.
     ```
 
 3. Voici un schéma "standard" d'un système de fichiers (Windows 10). Qu'est-ce
@@ -51,7 +50,7 @@ fichiers.
     ```
 
 4. Changer les vues possibles du système de fichiers (icones, listes, détails,
-…)
+etc.).
 
 5. Dans l'affichage avec le détail, quelles sont les métadonnées[^sn1]
 affichées?
@@ -59,51 +58,51 @@ affichées?
 
     ```{admonition} Solution
     :class: note dropdown
-    Les métadonnées sont les suivantes: le nom du fichier, l'extension, la date de
-    la dernière modification, le type et la taille.
+    Les métadonnées sont les suivantes: le nom du fichier, l'extension, la date
+    de la dernière modification, le type et la taille.
     ```
 
 6. Qu'est-ce qu'une extension? À quoi sert-elle?
 
     ```{admonition} Solution
     :class: note dropdown
-    Une extension de fichier est un suffixe ajouté au nom d'un fichier, généralement
-    constitué de quelques lettres après un point (.) qui fournit des informations
-    sur le contenu du fichier.\
-    Exemple:  architecture.docx
+    Une extension de fichier est un suffixe ajouté au nom d'un fichier,
+    généralement constitué de quelques lettres après un point (`.`) qui fournit
+    des informations sur le contenu du fichier.\
+    Exemple: `architecture.docx`
 
-    Une extension aide le système d'exploitation et les applications à identifier le
-    type de fichier et à déterminer quelle application exécutera le fichier, lors de
-    l'ouverture.
+    Une extension aide le système d'exploitation et les applications à
+    identifier le type de fichier et à déterminer quelle application exécutera
+    le fichier, lors de l'ouverture.
     ```
 
 7. Citer quelques extensions et indiquer à quel type de fichier ça correspond.
 
     ```{admonition} Solution
     :class: note dropdown
-    .docx
+    `.docx`
     : Document Microsoft Word
 
-    .pdf
+    `.pdf`
     : Fichier PDF (Portable Document Format)
 
-    .jpg / .png
+    `.jpg` / `.png`
     : Fichier image
 
-    .txt
+    `.txt`
     : Fichier texte
 
-    .mp3
+    `.mp3`
     : Fichier musique
 
-    .mp4 / .avi
+    `.mp4` / `.avi`
     : Fichier vidéo
 
-    .zip
+    `.zip`
     : Fichier compressé
     ```
 
-8. Créer un répertoire pour les documents de cette année (ex: 1F…/informatique)
-soit sur oneDrive directement, sinon dans vos documents ou sur le bureau en
-activant la sauvegarde sur oneDrive. Vérifier que la synchronisation est
-activée.
+8. Créer un répertoire pour les documents de cette année (ex:
+`1F.../informatique`) soit sur oneDrive directement, sinon dans vos documents ou
+sur le bureau en activant la sauvegarde sur oneDrive. Vérifier que la
+synchronisation est activée.

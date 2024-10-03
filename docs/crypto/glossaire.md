@@ -6,7 +6,6 @@
 <!-- TODO: Ajouter le popup pour l'affichage des définitions. -->
 
 ```{glossary}
-
 Chiffrer
     Transformer un texte clair en un cryptogramme.
 
@@ -54,7 +53,5 @@ Texte chiffré
 
 Texte clair
     Information non protégée par un procédé cryptographique quelconque.
-
-
 ```
 

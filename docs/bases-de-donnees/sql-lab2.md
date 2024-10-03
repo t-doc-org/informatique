@@ -186,9 +186,6 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 :class: hidden
 ```
 
-<!-- TODO: Pouvoir rétracter ou effacer la réponse après le run quand la
-            solution est longue. -->
-
 1. Écrire une requête SQL qui affiche tous les livres.
 
     ```{exec} sql

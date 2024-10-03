@@ -83,9 +83,9 @@ Nous verrons cela plus en détail dans la section [](./encodage-information.md).
 
 ## Vidéo
 
-<iframe credentialless width="560" height="315"
-src="https://www.youtube.com/embed/85XUJXHbjBo?si=JRyirLX78uKkRVnE"
-title="Vidéo sur l'architecture de l'ordinateur" frameborder="0" allow="accelerometer;
-autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
-web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
+<iframe credentialless style="width: 100%; aspect-ratio: 16/9;"
+  src="https://www.youtube.com/embed/85XUJXHbjBo?si=JRyirLX78uKkRVnE"
+  title="Vidéo sur l'architecture de l'ordinateur" frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+    picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

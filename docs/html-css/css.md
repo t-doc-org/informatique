@@ -3,9 +3,10 @@
 
 # CSS
 
-Le langage **CSS** (Cascading Style Sheet en français feuilles de style en
-cascade) permet de mettre en forme les documents HTML. Il permet notamment de
-modifier la police, la couleur, la taille et l'emplacement du contenu.\
+Le langage **CSS** (**C**ascading **S**tyle **S**heet en français feuilles de
+style en cascade) permet de mettre en forme les documents HTML. Il permet
+notamment de modifier la police, la couleur, la taille et l'emplacement du
+contenu.\
 CSS est un langage basé sur des règles: il permet de définir des règles de style
 pour un type d'élément donné, par exemple les titres principaux `<h1></h1>` ou
 les paragraphes `<p></p>`
@@ -38,20 +39,21 @@ p {                       /* Cette règle définit le style des paragraphes. */
   font-size: 20px;        /* La taille de la police est 20 pixels. */
 }
 ```
+
 (referencement)=
 ## Référencement
 
-Comme le ficher HTML (.html) et le fichier CSS (.css) sont deux fichiers
+Comme le ficher HTML (`.html`) et le fichier CSS (`.css`) sont deux fichiers
 distincts, il faut ajouter au document HTML une référence au fichier CSS. Cela
 se fait dans le `<head>` du document HTML avec la balise `<link>`.
 
 La balise `<link>` a deux attributs:
 
-1. rel (précise à quoi sert le fichier référencé)
-2. href (chemin d'accès au document):
+1. `rel` (précise à quoi sert le fichier référencé)
+2. `href` (chemin d'accès au document):
 
 ```{code} html
-<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css"/>
 ```
 
 ## Sélecteur
@@ -65,7 +67,7 @@ Dans ce cours, nous allons travailler sur 3 types de sélecteurs:
 ### Sélecteur de type
 
 Le sélecteur de type permet d'appliquer un style à toutes les balises de même
-type (h1, h2, p, ...).
+type (`h1`, `h2`, `p`, ...).
 
 Il est de la forme:
 
@@ -76,20 +78,20 @@ h1 {                      /* Cette règle définit le style du titre principal. 
 }
 ```
 
-Ce style s'appliquera au contenu de toutes les balises `<h1>…</h1>`
+Ce style s'appliquera au contenu de toutes les balises `<h1>...</h1>`
 
 ### Sélecteur d'identifiant
 
 Le sélecteur d'identifiant permet d'appliquer un style à un élément précis. Pour
-cela, il faut ajouter un nouvel attribut id à la balise HTML concernée.
+cela, il faut ajouter un nouvel attribut `id` à la balise HTML concernée.
 
-<!-- TODO: Faire en sorte que les entêtes soient centrées. -->
-
-<table> <tr><th>Fichier HTML</th><th>Fichier CSS</th></tr>
-<tr><td>
+<table><tr>
+  <th style="text-align: center">Fichier HTML</th>
+  <th style="text-align: center">Fichier CSS</th>
+</tr><tr><td>
 
 ```{code} html
-<p id = "intro">
+<p id="intro">
 Dans ce paragraphe, j'écris
 l'introduction de mon texte.
 </p>
@@ -104,12 +106,10 @@ l'introduction de mon texte.
 }
 ```
 
-</td></tr>
-</table>
+</td></tr></table>
 
-Ce style ne s'appliquera qu'à un élément unique, la balise dont l'id est
+Ce style ne s'appliquera qu'à un élément unique, la balise dont l'`id` est
 "intro".
-
 
 ### Sélecteur par classe
 
@@ -117,11 +117,13 @@ Le sélecteur de classe permet d'appliquer un style à plusieurs éléments qui
 appartiennent à une même classe (groupe). Pour cela, il faut ajouter un nouvel
 attribut class à la balise HTML concernée.\par
 
-<table> <tr><th>Fichier HTML</th><th>Fichier CSS</th></tr>
-<tr><td>
+<table><tr>
+  <th style="text-align: center">Fichier HTML</th>
+  <th style="text-align: center">Fichier CSS</th>
+</tr><tr><td>
 
 ```{code} html
-<p class = "centre">
+<p class="centre">
 Le texte de ce paragraphe sera centré.
 </p>
 ```
@@ -134,8 +136,7 @@ Le texte de ce paragraphe sera centré.
 }
 ```
 
-</td></tr>
-</table>
+</td></tr></table>
 
 Ce style ne s'appliquera qu'aux balises dont la classe est "centre".
 
@@ -155,11 +156,13 @@ extérieure (margin) ou la bordure (border).
 :align: center
 ```
 
-<table> <tr><th>Fichier HTML</th><th>Fichier CSS</th></tr>
-<tr><td>
+<table><tr>
+  <th style="text-align: center">Fichier HTML</th>
+  <th style="text-align: center">Fichier CSS</th>
+</tr><tr><td>
 
 ```{code} html
-<div id = "mon_conteneur">
+<div id="mon_conteneur">
 <h2> Mon sous-titre</h2>
 <p> Lorem ipsum dolor sit amet, consectetur
 adipiscing elit. Suspendisse ut erat eu risus
@@ -180,9 +183,7 @@ ultrices felis a facilisis feugiat. </p>
 }
 ```
 
-</td></tr>
-</table>
-
+</td></tr></table>
 
 ## Exercices
 
@@ -199,7 +200,7 @@ OneDrive dans le dossier "Informatique/HTML-CSS/exercices".
 ### Exercice 5
 
 1. Qu'est-ce qui a changé?
-2. Cliquer sur **style.css** pour que le document s'afficher et essayer de le
+2. Cliquer sur **`style.css`** pour que le document s'afficher et essayer de le
 comprendre.
     - À quels éléments s'appliquent les différentes propriétés?
     - Quelle est la différence entre `h1{...}` et `#source{...}`? Quand va-t-on
@@ -224,7 +225,7 @@ comprendre.
 À vous de jouer! Réfléchir à la structure de votre site internet:
 
 1. Quelles seront les différentes pages?
-2. Nommer la première page de votre site **index.html**. Vous pouvez en créer
+2. Nommer la première page de votre site **`index.html`**. Vous pouvez en créer
 d'autres et les référencer avec des liens pour pouvoir naviguer entre les
 différentes pages de votre site. (cf. [](#hyperliens))
 3. Quel sera le style de votre site? Pouvez-vous le réaliser avec les outils vus
@@ -235,4 +236,3 @@ en classe? Sinon rechercher sur internet comment faire.
 [Tuto](https://developer.mozilla.org/fr/docs/Web/HTML) pour le HTML.\
 [Tuto](https://developer.mozilla.org/fr/docs/Web/CSS) pour le CSS.\
 [Tuto](https://www.w3schools.com/) en anglais.
-

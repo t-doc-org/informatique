@@ -23,13 +23,10 @@ Le **reste de la division entière**, aussi appelé **modulo**, d'un nombre enti
 $a$ par un autre nombre entier $b$ avec $b \ne 0$ est noté $a \textrm{ mod } b$.\
 Le modulo de $a$ par $b$ est forcément plus petit que $b$.
 
-<!-- TODO: Trouver une meilleure méthode pour aligner verticalement. -->
-
 Exemples:
 
-$34 \textrm{ mod } 10 = 4 \quad \quad \textrm{car} \quad \quad 34 = 3 \cdot 10 + 4$\
-$26 \textrm{ mod } 5 = 1 \quad \quad \; \: \textrm{car} \quad \quad 26 = 5 \cdot 5 + 1$\
-$12 \textrm{ mod } 4 = 0 \quad \quad \; \: \textrm{car} \quad \quad 12 = 3 \cdot 4$
-
-
-
+$$
+& 34 \textrm{ mod } 10 = 4 & \qquad \textrm{car} \qquad & 34 = 3 \cdot 10 + 4\\
+& 26 \textrm{ mod } 5 = 1  & \qquad \textrm{car} \qquad & 26 = 5 \cdot 5 + 1\\
+& 12 \textrm{ mod } 4 = 0  & \qquad \textrm{car} \qquad & 12 = 3 \cdot 4 + 0
+$$
