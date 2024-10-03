@@ -77,13 +77,14 @@ Créer et compléter la table `canton` avec des requêtes SQL. La table ne doit
 pas accepter les valeurs `null`.
 
 ```{exec} sql
-:name: sql-canton-resp
-:when: never
+:then: sql-canton-select
 :editable:
 ```
 
 ```{exec} sql
-:after: sql-canton-resp
+:name: sql-canton-select
+:class: hidden
+:when: never
 select * from canton;
 ```
 
@@ -91,7 +92,7 @@ select * from canton;
 :class: note dropdown
 ```{exec} sql
 :name: sql-canton
-:when: never
+:then: sql-canton-select
 create table canton (
     nom text not null,
     abr text not null,
@@ -169,7 +170,7 @@ cantons.
     :editable:
     ```
 
-     ````{admonition} Solution
+    ````{admonition} Solution
     :class: note dropdown
     ```{exec} sql
     :after: sql-canton
@@ -282,6 +283,13 @@ insert into pays values
     ('Lichtenstein', 'LI', '+423', 'Vaduz', 39327, null);
 ```
 
+```{exec} sql
+:name: sql-pays-select
+:class: hidden
+:when: never
+select * from pays;
+```
+
 1. Afficher le contenu de la table `pays`.
 
     ```{exec} sql
@@ -298,10 +306,11 @@ insert into pays values
     ````
 
 2. La Yougoslavie n'existe plus depuis de nombreuses années. Supprimer cette
-ligne et afficher le contenu de la table.
+ligne.
 
     ```{exec} sql
     :after: sql-pays
+    :then: sql-pays-select
     :editable:
     ```
 
@@ -310,18 +319,19 @@ ligne et afficher le contenu de la table.
     ```{exec} sql
     :name: sql-pays-delete
     :after: sql-pays
+    :then: sql-pays-select
     delete from pays where nom = 'Yougoslavie';
-    select * from pays;
     ```
     ````
 
 3. Corriger les deux erreurs qui se sont produites lors de la création de la
-base de donnée, et afficher le contenu de la table.
+base de donnée.
     - La capitale de la Suisse n'est pas Zurich.
     - L'abréviation de l'allemagne n'est pas **AL**, mais **DE**.
 
     ```{exec} sql
     :after: sql-pays-delete
+    :then: sql-pays-select
     :editable:
     ```
 
@@ -330,17 +340,18 @@ base de donnée, et afficher le contenu de la table.
     ```{exec} sql
     :name: sql-pays-update
     :after: sql-pays-delete
-    update pays set capitale = 'Berne' where nom ='Suisse';
-    update pays set abr = 'DE' where nom ='Allemagne';
-    select * from pays;
+    :then: sql-pays-select
+    update pays set capitale = 'Berne' where nom = 'Suisse';
+    update pays set abr = 'DE' where nom = 'Allemagne';
     ```
     ````
 
 4. Compléter la colonne nourriture par un plat connu pour la France et pour
-l'Italie, et afficher le contenu de la table.
+l'Italie.
 
     ```{exec} sql
     :after: sql-pays-update
+    :then: sql-pays-select
     :editable:
     ```
 
@@ -349,9 +360,9 @@ l'Italie, et afficher le contenu de la table.
     ```{exec} sql
     :name: sql-pays-last
     :after: sql-pays-update
+    :then: sql-pays-select
     update pays set nourriture = 'escargots' where nom = 'France';
     update pays set nourriture = 'pizza' where nom = 'Italie';
-    select * from pays;
     ```
     ````
 
@@ -553,62 +564,61 @@ et 1994.
 ## Exercice 6 (facultatif)
 
 Reprenons la base de données des pays de l'exercice 4.
+
 1. Ajouter une colonne `monnaie`. Pour cela, il faut utiliser l'instruction
 `alter table`. Rechercher sur le Web comment faire.
 
-```{tip}
-Utiliser une valeur par défaut pour la colonne `monnaie`.
+    ```{tip}
+    Utiliser une valeur par défaut pour la colonne `monnaie`.
+    ```
 
-```
+    ```{exec} sql
+    :after: sql-pays-last
+    :then: sql-pays-select
+    :editable:
+    ```
 
-```{exec} sql
-:after: sql-pays-last
-:editable:
-```
-
-````{admonition} Solution
-:class: note dropdown
-```{exec} sql
-:name: sql-pays-6-1
-:after: sql-pays-last
-alter table pays add monnaie text default 'euro';
-
-select * from pays;
-```
-````
+    ````{admonition} Solution
+    :class: note dropdown
+    ```{exec} sql
+    :name: sql-pays-6-1
+    :after: sql-pays-last
+    :then: sql-pays-select
+    alter table pays add monnaie text default 'euro';
+    ```
+    ````
 
 2. Compléter cette nouvelle colonne pour chaque pays.
 
-```{exec} sql
-:after: sql-pays-6-1
-:editable:
-```
+    ```{exec} sql
+    :after: sql-pays-6-1
+    :then: sql-pays-select
+    :editable:
+    ```
 
-````{admonition} Solution
-:class: note dropdown
-```{exec} sql
-:name: sql-pays-6-2
-:after: sql-pays-6-1
-update pays set monnaie = 'franc suisse' where nom = 'Suisse';
-update pays set monnaie = 'couronne' where nom = 'Lichtenstein';
+    ````{admonition} Solution
+    :class: note dropdown
+    ```{exec} sql
+    :name: sql-pays-6-2
+    :after: sql-pays-6-1
+    :then: sql-pays-select
+    update pays set monnaie = 'franc suisse' where nom = 'Suisse';
+    update pays set monnaie = 'couronne' where nom = 'Lichtenstein';
+    ```
+    ````
 
-select * from pays;
-```
-````
+3. Supprimer la colonne `nourriture`.
 
-3. Supprimer la colonne `food`.
-```{exec} sql
-:after: sql-pays-6-2
-:editable:
-```
+    ```{exec} sql
+    :after: sql-pays-6-2
+    :then: sql-pays-select
+    :editable:
+    ```
 
-````{admonition} Solution
-:class: note dropdown
-```{exec} sql
-:after: sql-pays-6-2
-alter table pays drop column nourriture;
-
-select * from pays;
-```
-
-
+    ````{admonition} Solution
+    :class: note dropdown
+    ```{exec} sql
+    :after: sql-pays-6-2
+    :then: sql-pays-select
+    alter table pays drop column nourriture;
+    ```

@@ -69,5 +69,3 @@ insert into contact values
     ('Lemoine', 'Thomas', 'thomas.lemoine.tech@genmail.ch', 'M', '1984-11-03', 'célibataire', 'Fribourg', '1700', 'Musique, Technologie'),
     ('Bernard', 'Claire', 'claire.bernard.photo@romandie.com', 'F', '1992-04-16', 'séparé', null, null, 'Voyage, Photographie'),
     ('Petit', 'Julie', 'julie.petit.books@postnet.ch', 'F', '1983-08-26', null, 'Sion', '1950', 'Lecture, Randonnée');
-
-select * from contact;

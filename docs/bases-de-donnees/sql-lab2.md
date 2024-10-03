@@ -16,7 +16,6 @@ Lors de l'emprunt, la date de retour est fixée.
 3. Déterminer les clés primaires et étrangères.
 4. Dessiner le schéma relationnel.
 
-
 ````{admonition} Solution
 :class: note dropdown
 ```{graphviz}
@@ -115,7 +114,6 @@ digraph UML_Class_diagram {
       </td> </tr>
     </table>>
   ]
-
 }
 ```
 ````
@@ -128,43 +126,47 @@ Créer les différentes tables: `usager`, `livre`, `auteur`, `auteur_de` et
 
 ```{exec} sql
 :name: sql-biblio-resp
-:when: never
+:then: sql-biblio-select-usager sql-biblio-select-livre sql-biblio-select-auteur sql-biblio-select-auteur-de sql-biblio-select-emprunt
 :editable:
 ```
 
 Pour tester que la table `usager` est correcte:
 ```{exec} sql
+:name: sql-biblio-select-usager
 :after: sql-biblio-resp
 select * from usager;
 ```
 
 Pour tester que la table `livre` est correcte:
 ```{exec} sql
+:name: sql-biblio-select-livre
 :after: sql-biblio-resp
 select * from livre;
 ```
 
 Pour tester que la table `auteur` est correcte:
 ```{exec} sql
+:name: sql-biblio-select-auteur
 :after: sql-biblio-resp
 select * from auteur;
 ```
 
 Pour tester que la table `auteur_de` est correcte:
 ```{exec} sql
+:name: sql-biblio-select-auteur-de
 :after: sql-biblio-resp
 select * from auteur_de;
 ```
 
 Pour tester que la table `emprunt` est correcte:
 ```{exec} sql
+:name: sql-biblio-select-emprunt
 :after: sql-biblio-resp
 select * from emprunt;
 ```
 
 ````{admonition} Solution
 :class: note dropdown
-
 ```{exec} sql
 :name: sql-biblio
 :when: never
@@ -176,13 +178,13 @@ select * from emprunt;
 
 Toutes les requêtes de cet exercice se font dans une seule table.
 
-  ```{exec} sql
-  :name: sql-biblio-insert
-  :after: sql-biblio
-  :include: biblio-insertion.sql
-  :when: never
-  :class: hidden
-  ```
+```{exec} sql
+:name: sql-biblio-insert
+:after: sql-biblio
+:include: biblio-insertion.sql
+:when: never
+:class: hidden
+```
 
 <!-- TODO: Pouvoir rétracter ou effacer la réponse après le run quand la
             solution est longue. -->
@@ -264,7 +266,7 @@ commence par le mot "Astérix".
     ```
     ````
 
-5. Écrire une requête SQL qui affiche le titre des livres dont le titre
+6. Écrire une requête SQL qui affiche le titre des livres dont le titre
 contient le mot "Astérix".
 
     ```{exec} sql
@@ -288,7 +290,7 @@ décembre 2024.
     Les dates se notent entre guillemets simples.
     ```
 
-      ```{exec} sql
+    ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
@@ -362,8 +364,7 @@ Formuler en français ce que nous cherchons avec les requêtes suivantes:
     Affiche tous les livres dont le titre contient "Robot".
     ````
 
-2.
-    ```{code-block} sql
+2.  ```{code-block} sql
     select nom, prenom from usager where ville = 'Granges-Paccots';
     ```
 
@@ -372,8 +373,7 @@ Formuler en français ce que nous cherchons avec les requêtes suivantes:
     Affiche le nom et le prénom des usagers habitant Granges-Paccots.
     ````
 
-3.
-    ```{code-block} sql
+3.  ```{code-block} sql
     select usager.nom, usager.prenom from usager
     join emprunt on usager.code_barre = emprunt.code_barre
     where retour < '2024-12-01'
@@ -422,6 +422,7 @@ après le 15 décembre.
         where retour < '2024-12-15';
     ```
     ````
+
 3. Écrire une requête SQL qui affiche le nom et le prénom des usagers qui ont
 emprunté des livres.
 
@@ -492,7 +493,6 @@ chez les Bretons".
                        where titre = 'Astérix chez les Bretons')
     ```
     ````
-
 
 6. **Challenge**: Écrire une requête SQL qui affiche le nom et le prénom des
 auteurs des livres de la question précédente sans doublons.
