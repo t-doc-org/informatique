@@ -17,7 +17,7 @@ $7356 = 7000 + 300 + 50 + 6 = 7 \cdot 10^3 + 3 \cdot 10^2 + 5 \cdot 10^1 + 6 \cd
 En informatique, nous utilisons souvent la base 2 (binaire). Les deux seuls
 symboles à disposition sont le 0 et le 1.
 
-$10101 = 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$
+$10101_2 = 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$
 
 Une autre base beaucoup utilisée en informatique pour sa simplicité
 d'utilisation et de représentation est la base 16 (hexadécimal). Pour la base
@@ -25,7 +25,13 @@ d'utilisation et de représentation est la base 16 (hexadécimal). Pour la base
 à 9), il faut donc 6 symboles supplémentaires qui sont A (pour 10), B (11), C
 (12), D (13), E (14) et F (15).
 
-$3A7E0 = 3 \cdot 16^4 + 10 \cdot 16^3 + 7 \cdot 16^2 + 14 \cdot 16^1 + 0 \cdot 16^0$
+$3A7E0_{16} = 3 \cdot 16^4 + 10 \cdot 16^3 + 7 \cdot 16^2 + 14 \cdot 16^1 + 0 \cdot 16^0$
+
+```{Important}
+Lorsque nous utilisons une autre base que la base 10, nous écrivons la base en
+indice pour éviter toute ambiguïté.\
+$100 \neq 100_2$, l'un est 100 et l'autre 4 en base 2.
+```
 
 ## Conversion binaire - décimal
 
@@ -35,7 +41,7 @@ Pour convertir un nombre binaire en nombre décimal, il faut:
 3. Additionner le tout.
 
 $1101101_2 = 1 \cdot 2^6 + 1 \cdot 2^5 + 0 \cdot 2^4 + 1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$\
-$= 64 + 32 + 0 + 8 + 4 + 0 + 1 = 109_{10}$
+$= 64 + 32 + 0 + 8 + 4 + 0 + 1 = 109$
 
 <!--
 ## Exercice 1
@@ -63,15 +69,15 @@ plus petite ou égale au reste.
 3. Calculer le reste.
 4. Passer à la colonne suivante.
 
-Que vaut $149_{10}$ en binaire?
+Que vaut $149$ en binaire?
 
-| $2^n$             |  $2^8$ | $2^7$        | $2^6$ | $2^5$ | $2^4$     | $2^3$ | $2^2$   | $2^1$ | $2^0$   |
-| :------:          | :---:  | :---:        | :---: | :---: | :---:     | :---: | :---:   | :---: | :---:   |
-|                   | 256    | 128          | 64    | 32    | 16        | 8     | 4       | 2     | 1       |
-| $2^n \leq$ reste? | 0      | 1            | 0     | 0     | 1         | 0     | 1       | 0     | 1       |
-| Reste             | $149$  | $149-128=21$ | $21$  | $21$  | $21-16=5$ | $5$   | $5-4=1$ | $1$   | $1-1=0$ |
+| $2^n$             |  $2^8$ | $2^7$ | $2^6$ | $2^5$ | $2^4$ | $2^3$ | $2^2$ | $2^1$ | $2^0$ |
+| :------:          | :---:  | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|                   | 256    | 128   | 64    | 32    | 16    | 8     | 4     | 2     | 1     |
+| $2^n \leq$ reste? | 0      | 1     | 0     | 0     | 1     | 0     | 1     | 0     | 1     |
+| Reste             | $149$  | $21$  | $21$  | $21$  | $5$   | $5$   | $1$   | $1$   | $0$   |
 
-$149_{10} = 10010101_2$
+$149 = 10010101_2$
 
 
 <!--
