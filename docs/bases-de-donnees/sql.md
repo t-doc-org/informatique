@@ -21,19 +21,21 @@ Chaque instruction doit se terminer par un point-virgule.
 
 ```{exec} sql
 :name: sql-stock
-:when: never
+:then: sql-stock-select
 create table stock (
-    id int,                 -- nombre entier (integer)
-    article text,           -- chaîne de caractères
-    couleur text,
-    taille text,
-    quantite int,
-    prix_unitaire int
+  id int,                 -- nombre entier (integer)
+  article text,           -- chaîne de caractères
+  couleur text,
+  taille text,
+  quantite int,
+  prix_unitaire int
 );
 ```
 
 ```{exec} sql
-:after: sql-stock
+:name: sql-stock-select
+:when: never
+:class: hidden
 select * from stock;
 ```
 
@@ -45,32 +47,33 @@ sachant que `no_p` et `prix` sont des entiers et que `nom` et
 
 ```{exec} sql
 :after: sql-produit
+:then: sql-produit-select
 :when: load
+:class: hidden
+```
+
+```{exec} sql
+:name: sql-produit-select
+:when: never
 :class: hidden
 select * from produit;
 ```
 
 ```{exec} sql
-:name: sql-produit-resp1
-:when: never
+:then: sql-produit-select
 :editable:
-```
-
-```{exec} sql
-:after: sql-produit-resp1
-select * from produit;
 ```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
 :name: sql-produit
-:when: never
+:then: sql-produit-select
 create table produit (
-    no_p int,
-    nom text,
-    description text,
-    prix int
+  no_p int,
+  nom text,
+  description text,
+  prix int
 );
 ```
 ````
@@ -85,15 +88,9 @@ la table.
 ```{exec} sql
 :after: sql-stock
 :name: sql-stock-insert1
-:when: never
+:then: sql-stock-select
 insert into stock values (1, 'T-shirt', 'rouge', 'M', 15, 20);
 ```
-
-```{exec} sql
-:after: sql-stock-insert1
-select * from stock;
-```
-
 
 ```{attention}
 Les chaînes de caractères doivent être entourées d'apostrophes
@@ -107,29 +104,23 @@ lignes suivantes:
 
 ```{exec} sql
 :after: sql-produit-insert
+:then: sql-produit-select
 :when: load
 :class: hidden
-select * from produit;
 ```
 
 ```{exec} sql
 :after: sql-produit
-:name: sql-produit-resp2
-:when: never
+:then: sql-produit-select
 :editable:
-```
-
-```{exec} sql
-:after: sql-produit-resp2
-select * from produit;
 ```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:after: sql-produit
 :name: sql-produit-insert
-:when: never
+:after: sql-produit
+:then: sql-produit-select
 insert into produit values (1, 'Ektorp', 'canapé 2 places', 599);
 insert into produit values (2, 'Brimnes', 'structure de lit', 129);
 insert into produit values (3, 'Jaren', 'matelas à ressorts', 59);
@@ -221,18 +212,18 @@ souhaiterions afficher tous les articles en taille M.
 Voici la base de données à disposition:
 
 ```{exec} sql
-:after: sql-stock-insert1
 :name: sql-stock-insert2
+:after: sql-stock-insert1
+:then: sql-stock-select
 :when: load
 :class: hidden
 insert into stock values
-    (2, 'T-shirt', 'blanc', 'XL', 17, 25),
-    (3, 'Polo', 'rouge', 'L', 12, 35),
-    (4, 'Polo', 'blanc', 'M', 10, 40),
-    (5, 'T-shirt', 'rouge', 'XL', 8, 20),
-    (6, 'T-shirt', 'blanc', 'S', 30, 20),
-    (7, 'Veste', 'rouge', 'L', 5, 50);
-select * from stock;
+  (2, 'T-shirt', 'blanc', 'XL', 17, 25),
+  (3, 'Polo', 'rouge', 'L', 12, 35),
+  (4, 'Polo', 'blanc', 'M', 10, 40),
+  (5, 'T-shirt', 'rouge', 'XL', 8, 20),
+  (6, 'T-shirt', 'blanc', 'S', 30, 20),
+  (7, 'Veste', 'rouge', 'L', 5, 50);
 ```
 
 L'instruction `where` permet de ne sélectionner que les lignes qui répondent à
@@ -288,30 +279,29 @@ Pour modifier la couleur de l'article dont l'`id` est 3, la requête sera la
 suivante:
 
 ```{exec} sql
-:after: sql-stock-insert2
 :name: sql-stock-update
+:after: sql-stock-insert2
+:then: sql-stock-select
 update stock set couleur = 'bleu' where id = 3;
-select * from stock;                                  -- pour afficher le résultat
 ```
 
 ## Exercice 5
 
-Mettre à jour le prix du **canapé 2 places** qui ne coûte plus que 499 CHF, et
-afficher le contenu de la table.
+Mettre à jour le prix du **canapé 2 places** qui ne coûte plus que 499 CHF.
 
 ```{exec} sql
 :after: sql-produit-insert
+:then: sql-produit-select
 :editable:
 ```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:after: sql-produit-insert
 :name: sql-produit-update
+:after: sql-produit-insert
+:then: sql-produit-select
 update produit set prix = 499 where description = 'canapé 2 places';
-
-select * from produit;                                 -- pour afficher le résultat
 ```
 ````
 
@@ -320,10 +310,10 @@ select * from produit;                                 -- pour afficher le résu
 Il est aussi possible de supprimer une ligne complète d'une table.
 
 ```{exec} sql
-:after: sql-stock-update
 :name: sql-stock-delete
+:after: sql-stock-update
+:then: sql-stock-select
 delete from stock where article = 'Polo';
-select * from stock;                                  -- pour afficher le résultat
 ```
 
 ## Exercice 6
@@ -333,17 +323,17 @@ Contrôler le résultat en affichant tous les éléments de la table produit.
 
 ```{exec} sql
 :after: sql-produit-update
+:then: sql-produit-select
 :editable:
 ```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
-:after: sql-produit-update
 :name: sql-produit-delete
+:after: sql-produit-update
+:then: sql-produit-select
 delete from produit where no_p = 3;
-
-select * from produit;                               -- pour afficher le résultat
 ```
 ````
 
@@ -358,12 +348,12 @@ les colonnes dans l'ordre), car nous n'avons pas toutes les informations, mais
 nous pouvons spécifier que certaines colonnes.
 
 ```{exec} sql
-:after: sql-stock-delete
 :name: sql-stock-null
-insert into stock (id, article, prix_unitaire) values (8, 'Pantalon' , 20);
-select * from stock;                                  -- pour afficher le résultat
+:after: sql-stock-delete
+:then: sql-stock-select
+insert into stock (id, article, prix_unitaire) values (8, 'Pantalon', 20);
 ```
-Une colonne sans valeur contient la valeur [null](#null).
+Une colonne sans valeur contient la valeur [`null`](#null).
 
 Certaines colonnes ne doivent pas être vides sinon cela poserait un problème,
 comme id qui est un numéro unique qui permet de différencier les différents
@@ -373,21 +363,16 @@ ajoute un élément dans la table. Pour cela, il faut utiliser les mots réserv�
 `not null` lors de la création de la table.
 
 ```{exec} sql
-:when: never
 :name: sql-stock2
+:then: sql-stock-select
 create table stock (
-    id int not null,
-    article text not null,
-    couleur text,
-    taille text,
-    quantite int,
-    prix_unitaire int
+  id int not null,
+  article text not null,
+  couleur text,
+  taille text,
+  quantite int,
+  prix_unitaire int
 );
-```
-
-```{exec} sql
-:after: sql-stock2
-select * from stock;
 ```
 
 ## Exercice 7
@@ -397,34 +382,40 @@ sexe, classe, date de naissance, email, adresse, code postal, ville, téléphone
 Quelles sont les colonnes obligatoires?\
 Écrire la requête qui permet de créer cette table en choisissant le type
 adapté pour chaque colonne.\
-Ajouter une ligne avec vos propres informations sauf le numéro de téléphone, et
-afficher le contenu de la table.
+Ajouter une ligne avec vos propres informations sauf le numéro de téléphone.
 
 ```{exec} sql
+:then: sql-eleve-select
 :editable:
+```
+
+```{exec} sql
+:name: sql-eleve-select
+:when: never
+:class: hidden
+select * from eleve;
 ```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
+:then: sql-eleve-select
 create table eleve (
-    nom text not null,
-    prenom text not null,
-    sexe text,
-    naissance date not null,
-    classe text not null,
-    email text not null,
-    adresse text,
-    code_postal text,
-    ville text,
-    telephone text
+  nom text not null,
+  prenom text not null,
+  sexe text,
+  naissance date not null,
+  classe text not null,
+  email text not null,
+  adresse text,
+  code_postal text,
+  ville text,
+  telephone text
 );
 
 insert into eleve values
-    ('Bob', 'Dubois', 'M', '2007-03-14', '2F9', 'bob.dubois@example.com',
-     'Boulevard de Pérolle 11', '1700', 'Fribourg', null);
-
-select * from eleve;
+  ('Bob', 'Dubois', 'M', '2007-03-14', '2F9', 'bob.dubois@example.com',
+   'Boulevard de Pérolle 11', '1700', 'Fribourg', null);
 ```
 ````
 
@@ -439,33 +430,27 @@ table, si aucune valeur pour cette colonne n'est spécifiée.
 La valeur par défaut doit être du même type que celui de la colonne.
 
 ```{exec} sql
-:when: load
-:after: sql-crepe
-:class: hidden
-insert into crepe values
-    ('Miel-Amande', 'fourrée', 7.5),
-    ('Crème de marron', 'fourrée', 8);
-insert into crepe (nom, description) values
-    ('Suzette', 'flambée'),
-    ('Citron', 'sirop'),
-    ('Sirop d''érable', 'sirop');
-select * from crepe;
-```
-
-
-```{exec} sql
 :name: sql-crepe
-:when: never
+:then: sql-crepe-select
 create table crepe (
-    nom text not null,
-    description text not null,
-    prix dec(3,2) not null default 5.00   -- souvent les crêpes coûtent 5.00 CHF
+  nom text not null,
+  description text not null,
+  prix dec(3,2) not null default 5.00   -- souvent les crêpes coûtent 5.00 CHF
 );
+
+insert into crepe values
+  ('Miel-Amande', 'fourrée', 7.5),
+  ('Crème de marron', 'fourrée', 8);
+insert into crepe (nom, description) values
+  ('Suzette', 'flambée'),
+  ('Citron', 'sirop'),
+  ('Sirop d''érable', 'sirop');
 ```
 
 ```{exec} sql
-:after: sql-crepe
-insert into crepe (nom, description) values ('Miel', 'sirop');
+:name: sql-crepe-select
+:when: never
+:class: hidden
 select * from crepe;
 ```
 
@@ -479,48 +464,42 @@ Insérer les données du tableau ci-dessous.
 
 ```{exec} sql
 :after: sql-boisson
+:then: sql-boisson-select
 :when: load
+:class: hidden
+```
+
+```{exec} sql
+:name: sql-boisson-select
+:when: never
 :class: hidden
 select * from boisson;
 ```
 
 ```{exec} sql
 :editable:
+:then: sql-boisson-select
 ```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
 :name: sql-boisson
+:then: sql-boisson-select
 create table boisson (
   nom text not null,
   prix dec(3,2) not null default 2.50
 );
 
 insert into boisson values
-    ('Espresso', 2.00),
-    ('Café', 2.00);
+  ('Espresso', 2.00),
+  ('Café', 2.00);
 insert into boisson (nom) values
-    ('Café au lait'),
-    ('Cappuccino'),
-    ('Latte Macchiato'),
-    ('Chocolat chaud'),
-    ('Chocolat froid');
+  ('Café au lait'),
+  ('Cappuccino'),
+  ('Latte Macchiato'),
+  ('Chocolat chaud'),
+  ('Chocolat froid');
 insert into boisson values ('Thé', 2.00);
-
-select * from boisson;                                -- pour afficher le résultat
 ```
 ````
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -51,10 +51,9 @@ digraph UML_Class_diagram {
 </td><td style="width:70%" valign="top">
 
 ```{exec} sql
-:name: sql-client1
-:when: never
+:then: sql-client-select
 create table client (
-  no_c int not null primary key,    -- Ajouter aussi not null
+  no_c int not null primary key,  -- Ajouter aussi not null
   nom text not null,
   prenom text not null,
   adresse text,
@@ -64,7 +63,9 @@ create table client (
 ```
 
 ```{exec} sql
-:after: sql-client1
+:name: sql-client-select
+:when: never
+:class: hidden
 select * from client;
 ```
 
@@ -74,8 +75,7 @@ Si une clé primaire est définie au moyen de deux colonnes (par exemple, le nom
 et le mail), nous utilisons la notation suivante:
 
 ```{exec} sql
-:name: sql-client2
-:when: never
+:then: sql-client-select
 create table client (
   nom text not null,                -- Ajouter not null, car clé primaire
   prenom text not null,
@@ -86,25 +86,21 @@ create table client (
 );
 ```
 
-```{exec} sql
-:after: sql-client2
-select * from client;
-```
-
 <!-- TODO: Ajouter une numérotation automatique des exercices par chapitre. -->
 
 ## Exercice 10
 
-Recréer la table `produit` de l'exercice 1 en y ajoutant la clé primaire.
+Recréer la table `produit` des exercices 1 & 2 en y ajoutant la clé primaire.
 
 ```{exec} sql
-:name: sql-produit-resp
-:when: never
+:then: sql-produit-select
 :editable:
 ```
 
 ```{exec} sql
-:after: sql-produit-resp
+:name: sql-produit-select
+:when: never
+:class: hidden
 select * from produit;
 ```
 
@@ -112,13 +108,18 @@ select * from produit;
 :class: note dropdown
 ```{exec} sql
 :name: sql-produit
-:when: never
+:then: sql-produit-select
 create table produit (
     no_p int primary key not null,
     nom text not null,
     description text,
     prix int
 );
+
+insert into produit values
+  (1, 'Ektorp', 'canapé 2 places', 599),
+  (2, 'Brimnes', 'structure de lit', 129),
+  (3, 'Jaren', 'matelas à ressorts', 59);
 ```
 ````
 
@@ -130,7 +131,6 @@ clé primaire? Tester avec l'exemple ci-dessous.
 ```{exec} sql
 :after: sql-produit
 insert into produit (nom, description, prix) values ('Fado', 'Lampe de table', 20);
-select * from produit;
 ```
 
 ## Exercice 12
@@ -141,27 +141,21 @@ caractères.
 
 ```{exec} sql
 :after: sql-client
+:then: sql-client-select
 :when: load
 :class: hidden
-select * from client;
 ```
 
 ```{exec} sql
-:name: sql-client-resp
-:when: never
+:then: sql-client-select
 :editable:
-```
-
-```{exec} sql
-:after: sql-client-resp
-select * from client;
 ```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
 :name: sql-client
-:when: never
+:then: sql-client-select
 create table client (
   no_c int primary key not null,
   titre text,
@@ -189,27 +183,28 @@ clients.
 
 ```{exec} sql
 :after: sql-achat
+:then: sql-achat-select
 :when: load
 :class: hidden
-select * from achat where false;
 ```
 
 ```{exec} sql
-:name: sql-achat-resp
+:name: sql-achat-select
 :when: never
-:editable:
+:class: hidden
+select * from achat;
 ```
 
 ```{exec} sql
-:after: sql-achat-resp
-select * from achat;
+:then: sql-achat-select
+:editable:
 ```
 
 ````{admonition} Solution
 :class: note dropdown
 ```{exec} sql
 :name: sql-achat
-:when: never
+:then: sql-achat-select
 create table achat (
   no_c int not null,
   no_p int not null,
@@ -228,9 +223,9 @@ lisible pour un humain:
 
 ```{exec} sql
 :after: sql-achat
+:then: sql-achat-select
 :when: load
 :class: hidden
-select * from achat;
 ```
 
 ```{exec} sql
@@ -238,10 +233,6 @@ select * from achat;
 :after: sql-produit sql-client sql-achat
 :when: never
 :class: hidden
-insert into produit values
-  (1, 'Ektorp', 'canapé 2 places', 599),
-  (2, 'Brimnes', 'structure de lit', 129),
-  (3, 'Jaren', 'matelas à ressorts', 59);
 ```
 
 Il serait préférable que la table contienne aussi le prénom et le nom du client,
@@ -313,7 +304,7 @@ Trier les valeurs dans l'ordre alphabétique des prénoms.
 select client.titre, client.prenom, client.nom from client
   join achat on client.no_c = achat.no_c
   where achat.no_p = 1
-  order by prenom ASC;
+  order by prenom asc;
 ```
 ````
 

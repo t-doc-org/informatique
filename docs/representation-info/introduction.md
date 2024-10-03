@@ -11,10 +11,13 @@ laquelle l'information est représentée.
 
 Un exemple d'information: "Il fait beau aujourd'hui!"
 
-Les données qui représentent cette même information:\
+Les données qui représentent cette même information:
+
+```{code-block} text
 01001001 01101100 00100000 01100110 01100001 01101001 01110100 00100000
 01100010 01100101 01100001 01110101 00100000 01100001 01110101 01101010 01101111
 01110101 01110010 01100100 00100111 01101000 01110101 01101001 00100001
+```
 
 ## Trois défis
 
@@ -35,7 +38,7 @@ Lors du stockage ou de la transmission de données, des erreurs peuvent apparaî
 Comment détecter ou corriger ces erreurs?
 
 En 1{sup}`ère` année, nous allons nous intéresser à la représentation de
-l'information. Les autres défis seront abordés dans le cours de 2{sup}`e` année.
+l'information. Les autres défis seront abordés dans le cours de 2{sup}`è` année.
 
 ## Binaire
 

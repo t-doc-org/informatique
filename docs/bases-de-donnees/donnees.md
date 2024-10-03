@@ -9,7 +9,8 @@ Lorsque nous utilisons un ordinateur, beaucoup de données sont générées: des
 documents, des images, des vidéos, de la musique, des mails, etc.
 Ces différents **fichiers** sont accessibles sur votre ordinateur grâce au
 **système de fichiers**. Chaque fichier a une **extension** propre dépendante du
-type de données qu'il contient (.txt, .docx, .pdf, .png, .jpg, .mp3, .py)
+type de données qu'il contient (`.txt`, `.docx`, `.pdf`, `.png`, `.jpg`, `.mp3`,
+`.py`).
 
 ```{tip}
 Pour retrouver facilement ses documents:

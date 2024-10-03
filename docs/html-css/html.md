@@ -255,8 +255,8 @@ OneDrive dans le dossier créé en 1.
 :width: 50%
 :align: center
 ```
-5. Sélectionner le fichier **`index.html`** et le code HTML s'affiche.
-6. Pour voir le rendu, double-cliquer sur le fichier **`index.html`** de votre
+5. Sélectionner le fichier `index.html` et le code HTML s'affiche.
+6. Pour voir le rendu, double-cliquer sur le fichier `index.html` de votre
 OneDrive, le fichier s'ouvrira dans le navigateur.
 
 ## Exercice 3

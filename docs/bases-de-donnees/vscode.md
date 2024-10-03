@@ -24,7 +24,7 @@ une extension.
 ## Création d'une base de donnée
 
 1. Créer un nouveau dossier dans votre OneDrive. Par exemple, SQL_stock
-2. Depuis VSCode, dans le menu Fichier, choisir ouvrir le dossier... et
+2. Depuis VSCode, dans le menu "Fichier", choisir "Ouvrir le dossier..."" et
 sélectionner le dossier créé en 1.
 ```{figure} images/menu-fichier.png
 :alt: Menu fichier
@@ -38,13 +38,13 @@ données.
 :width: 50%
 :align: center
 ```
-4. Nommer-là stock.**sqlite**.
+4. Nommer-là `stock.sqlite`.
 ```{figure} images/nommer.png
 :alt: Nommer la nouvelle base de données
 :width: 50%
 :align: center
 ```
-5. Au moyen d'un clic droit sur stock.**sqlite**, sélectionner
+5. Au moyen d'un clic droit sur `stock.sqlite`, sélectionner
 "Open Database".
 ```{figure} images/ouvrir.png
 :alt: Ouvrir la base de données
@@ -78,7 +78,7 @@ données.
 1. [Créer une nouvelle base de données](#creation) points 1 à 5.
 2. Télécharger et sauvegarder le fichier .sql dans le dossier de la base de
 données.
-3. Dans VSCode, ouvrir le fichier .sql importé et sélectionner "Run Query"
+3. Dans VSCode, ouvrir le fichier `.sql` importé et sélectionner "Run Query"
 (clic droit).
 ```{figure} images/import.png
 :alt: Lancer la requête d'une base de données importée

@@ -191,16 +191,16 @@ ultrices felis a facilisis feugiat. </p>
 
 But: Appliquer un fichier CSS au document index.html.
 
-1. Télécharger le fichier [style.css](./style.css) et le sauvegarder sur
+1. Télécharger le fichier [`style.css`](./style.css) et le sauvegarder sur
 OneDrive dans le dossier "Informatique/HTML-CSS/exercices".
-3. Ajouter le référencement à la page **style.css** dans le `<head>` du document
-  **index.html**. (cf. [](#referencement))
+3. Ajouter le référencement à la page `style.css` dans le `<head>` du document
+`index.html`. (cf. [](#referencement))
 4. Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
 
 ### Exercice 5
 
 1. Qu'est-ce qui a changé?
-2. Cliquer sur **`style.css`** pour que le document s'afficher et essayer de le
+2. Cliquer sur `style.css` pour que le document s'afficher et essayer de le
 comprendre.
     - À quels éléments s'appliquent les différentes propriétés?
     - Quelle est la différence entre `h1{...}` et `#source{...}`? Quand va-t-on
@@ -225,7 +225,7 @@ comprendre.
 À vous de jouer! Réfléchir à la structure de votre site internet:
 
 1. Quelles seront les différentes pages?
-2. Nommer la première page de votre site **`index.html`**. Vous pouvez en créer
+2. Nommer la première page de votre site `index.html`. Vous pouvez en créer
 d'autres et les référencer avec des liens pour pouvoir naviguer entre les
 différentes pages de votre site. (cf. [](#hyperliens))
 3. Quel sera le style de votre site? Pouvez-vous le réaliser avec les outils vus

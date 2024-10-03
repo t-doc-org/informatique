@@ -40,8 +40,10 @@ Pour convertir un nombre binaire en nombre décimal, il faut:
 2. Calculer les valeurs,
 3. Additionner le tout.
 
-$1101101_2 = 1 \cdot 2^6 + 1 \cdot 2^5 + 0 \cdot 2^4 + 1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$\
-$= 64 + 32 + 0 + 8 + 4 + 0 + 1 = 109$
+$$
+1101101_2 &= 1 \cdot 2^6 + 1 \cdot 2^5 + 0 \cdot 2^4 + 1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0\\
+          &= 64 + 32 + 0 + 8 + 4 + 0 + 1 = 109
+$$
 
 <!--
 ## Exercice 1
