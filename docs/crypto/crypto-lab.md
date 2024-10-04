@@ -156,7 +156,8 @@ calculs.
 ```
 
 2. Chiffrement du message:
-    - Écrire un message (une petite phrase).
+    - Écrire un message (une petite phrase avec majuscule, espaces et
+    ponctuations).
     - Transformer le message en nombre en utilisant le code ASCII étendu
     correspondant à chaque caractère. Utiliser le tableau suivant:
     [Code ASCII](./images/code-ascii.pdf).
