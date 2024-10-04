@@ -159,7 +159,7 @@ calculs.
     - Écrire un message (une petite phrase).
     - Transformer le message en nombre en utilisant le code ASCII étendu
     correspondant à chaque caractère. Utiliser le tableau suivant:
-    [Code ASCII](./images/code-ascii.pdf)).
+    [Code ASCII](./images/code-ascii.pdf).
     - Chiffrer le message avec la bonne clé.
     - Transmettre le message chiffré au bon groupe.
 
