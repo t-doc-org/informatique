@@ -156,11 +156,12 @@ calculs.
 ```
 
 2. Chiffrement du message:
-    - Écrire un message (un mot ou une petite phrase).
-    - Tranformer le message en nombre en utilisant le code ASCII étendu
-    correspondant de chaque caractère. (cf [Code ASCII](./images/code-ascii.pdf))
+    - Écrire un message (une petite phrase).
+    - Transformer le message en nombre en utilisant le code ASCII étendu
+    correspondant à chaque caractère. Utiliser le tableau suivant:
+    [Code ASCII](./images/code-ascii.pdf)).
     - Chiffrer le message avec la bonne clé.
-    - Transmettre le message chiffré à la bonne personne.
+    - Transmettre le message chiffré au bon groupe.
 
 3. Déchiffrement d'un autre message:
     - Déchiffrer le message reçu.
