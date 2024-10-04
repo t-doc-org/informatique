@@ -157,6 +157,8 @@ calculs.
 
 2. Chiffrement du message:
     - Écrire un message (un mot ou une petite phrase).
+    - Tranformer le message en nombre en utilisant le code ASCII étendu
+    correspondant de chaque caractère. (cf [Code ASCII](./images/code-ascii.pdf))
     - Chiffrer le message avec la bonne clé.
     - Transmettre le message chiffré à la bonne personne.
 

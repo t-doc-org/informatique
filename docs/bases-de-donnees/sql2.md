@@ -82,7 +82,7 @@ create table client (
   adresse text,
   telephone text,
   mail text not null,               -- Ajouter not null, car clé primaire
-  primary key (nom, mail)           -- Défini la clé primaire
+  primary key (nom, mail)           -- Définit la clé primaire
 );
 ```
 
