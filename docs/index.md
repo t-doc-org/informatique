@@ -8,7 +8,7 @@ Caroline Blank.\
 Le site est encore en cours de développement et évoluera tout au long de l'année
 scolaire.
 
-## Cours de 1{sup}`ère` année
+## Cours de 1{sup}`re` année
 
 ```{toctree}
 :maxdepth: 1
