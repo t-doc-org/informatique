@@ -7,4 +7,7 @@
 :maxdepth: 1
 introduction
 entiers-non-signes
+entiers-signes
+caracteres
+images
 ```

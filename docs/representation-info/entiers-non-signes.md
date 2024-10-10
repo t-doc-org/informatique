@@ -21,7 +21,7 @@ $10101_2 = 1 \cdot 2^4 + 0 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$
 
 Une autre base beaucoup utilisée en informatique pour sa simplicité
 d'utilisation et de représentation est la base 16 (hexadécimal). Pour la base
-16, nous avons besoin de 16 caractères, nous en avons déjà 10 à disposition (0
+16, nous avons besoin de 16 symboles, nous en avons déjà 10 à disposition (0
 à 9), il faut donc 6 symboles supplémentaires qui sont A (pour 10), B (11), C
 (12), D (13), E (14) et F (15).
 
@@ -45,22 +45,110 @@ $$
           &= 64 + 32 + 0 + 8 + 4 + 0 + 1 = 109
 $$
 
-<!--
 ## Exercice 1
+
 Convertir les nombres suivants de binaire en décimal.
+
 1. $10_2$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "2":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
 2. $101_2$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "5":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
 3. $1111_2$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "15":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
 4. $1001_2$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "9":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
 5. $0110_2$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "6":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
 6. $1101_2$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "13":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
 7. $1010101_2$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "85":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
 8. $1100110_2$
--->
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "102":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
 
 ## Conversion décimal - binaire
 
-Pour convertir un nombre décimal en nombre binaire, il existe plusieurs méthodes.
+Pour convertir un nombre décimal en nombre binaire, il existe plusieurs
+méthodes.
 
 Le but est de décomposer le nombre décimal en puissances de 2. Pour cela nous
 allons nous aider d'un tableau:
@@ -81,31 +169,172 @@ Que vaut $149$ en binaire?
 
 $149 = 10010101_2$
 
+<iframe credentialless style="width: 100%; aspect-ratio: 16/9;"
+  src="https://www.youtube.com/embed/ysoWgx186DM?si=w8Saf68xWMwjZyMt"
+  title="Vidéo sur le binaire" frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
+    picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-<!--
+
 ## Exercice 2
+
 Convertir les nombres suivants de décimal en binaire.
-- $3_{10}$
-- $6_{10}$
-- $9_{10}$
-- $41_{10}$
-- $64_{10}$
-- $171_{10}$
-- $720_{10}$
-- $1573_{10}$
+
+1. $3$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "11":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+2. $6$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "110":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+3. $9$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "1001":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+4. $41$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "101001":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+5. $64$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "1000000" and resp != "100 0000":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+6. $171$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "10101011" and resp != "1010 1011":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+7. $720$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "1011010000" and resp != "10 1101 0000":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+8. $1573$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "11000100101" and resp != "110 0010 0101":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
 
 ## Exercice 3
-Combien de bits faut-il pour écrire les nombres suivants en base 2?
-- $13$
-- $37$
-- $128$
-- $350$
 
--->
+Combien de bits faut-il pour écrire les nombres suivants en base 2?
+
+1. $13$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "4" and resp != "4 bits":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+2. $37$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "6" and resp != "6 bits":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+3. $128$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "8" and resp != "8 bits":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+4. $350$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "9" and resp != "9 bits":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+
 
 ## Conversion binaire - hexadécimal
 
-Pour convertir un nombre binaire en hexadécimal, il suffit de grouper les bits par 4 depuis la droite et de calculer leur valeur en hexadécimal.
+Pour convertir un nombre binaire en hexadécimal, il suffit de grouper les bits
+par 4 depuis la droite et de calculer leur valeur en hexadécimal.
 
 Que vaut 1101110 en hexadécimal?
 
@@ -118,7 +347,8 @@ $1101110_{2} = 6E_{16}$
 
 ## Conversion hexadécimal - binaire
 
-Pour convertir un nombre hexadécimal en binaire, il suffit de remplacer chaque chiffre hexadécimal par sa valeur en binaire sur 4 bits.
+Pour convertir un nombre hexadécimal en binaire, il suffit de remplacer chaque
+chiffre hexadécimal par sa valeur en binaire sur 4 bits.
 
 Que vaut A0D7 en binaire?
 
@@ -129,18 +359,106 @@ Que vaut A0D7 en binaire?
 
 $A0D7_{16} = 1010\,0000\,1101\,0111_{2}$
 
-<!--
+
 ## Exercice 4
-Convertir les nombres suivants en hexadécimal ou en binaire:
-- $1000\,0111_2$
-- $0101\,1010_2$
-- $1001\,1111_2$
-- $0111\,0001\,1110\,1001_2$
-- $3A_{16}$
-- $F4_{16}$
-- $BD_{16}$
-- $9C\,2E_{16}$
--->
+
+Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
+
+1. $1000\,0111_2$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "87":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+2. $0101\,1010_2$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "5A":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+3. $1001\,1111_2$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "9F":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+4. $0111\,0001\,1110\,1001_2$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "71E9":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+5. $3A_{16}$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "00111010" and resp != "0011 1010":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+6. $F4_{16}$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "11110100" and resp != "1111 0100":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+7. $BD_{16}$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "10111101" and resp != "1011 1101":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+8. $9C\,2E_{16}$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "1001110000101110" and resp != "1001 1100 0010 1110":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
 
 ## L'addition de nombres entiers en binaire
 
@@ -156,6 +474,7 @@ Voici les quelques règles importantes de l'addition en binaire:
 
 Comment additionner $0101_2$ et $1001_2$?
 ```{code-block} text
+     1 1     (retenues)
    0 1 0 1
  + 1 0 0 1
  ---------
@@ -170,30 +489,119 @@ produire un dépassement de capacité.
 
 Que se passe-t-il lors de l'addition de $1101_2$ et de $1010_2$?
 ```{code-block} text
+ 1           (retenues)
    1 1 0 1
  + 1 0 1 0
  ---------
  1 0 1 1 1
 ```
 $1101_2 + 1010_2 = \cancel{1}0111_2$, mais comme nous n'avons que 4 bits à
-dispositions et pas 5, le premier bit va être simplement ignoré et donc le
+disposition et pas 5, le premier bit va simplement être ignoré et donc le
 résultat sera faux ($13 + 12 \ne 7$).
 
 Un exemple coûteux d'overflow est le [vol 501 d'Ariane 5](https://fr.wikipedia.org/wiki/Vol_501_d%27Ariane_5).
 
-<!--
-### Exercice 5
-Effectuer les additions suivantes sur 4 bits:
-- $0010 + 0011$
-- $0101 + 1000$
-- $1011 + 0001$
-- $1111 + 1000$
+## Exercice 5
 
-### Exercice 6
-Effectuer les additions suivantes sur 8 bits:
-- $0110\,0110 + 0011\,0010$
-- $0101\,1111 + 1000\,0000$
-- $1011\,0001 + 0010\,1101$
-- $0011\,1100 + 0110\,0101$
--->
+Effectuer les additions suivantes sur 4 bits.
+
+1. $0010 + 0011$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "0101":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+2. $0101 + 1000$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "1101":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+3. $1011 + 0001$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "1100":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+4. $1111 + 1000$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "Overflow" and resp != "overflow":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+## Exercice 6
+
+Effectuer les additions suivantes sur 8 bits.
+
+1. $0110\,0110 + 0011\,0010$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "10011000" and resp != "1001 1000":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+2. $0101\,1111 + 1000\,0000$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "11011111" and resp != "1101 1111":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+3. $1011\,0001 + 0010\,1101$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "11011110" and resp != "1101 1110":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
+
+4. $0011\,1100 + 0110\,0101$
+
+    ```{exec} python
+    :when: load
+    :class: hidden
+    resp = ""
+    while resp != "10100001" and resp != "1010 0001":
+      resp = await input_line("Réponse:")
+      print("\x0cEssaie encore")
+    print("\x0cBravo")
+    ```
 

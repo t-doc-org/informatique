@@ -3,6 +3,11 @@
 
 # Introduction
 
+## Exercices
+
+Le fichier pdf des exercices du chapitre **Représentation de l'information** est
+à disposition [Exercices](./Exercices.pdf).
+
 ## Information versus données
 
 Dans le langage courant, **information** et **données** sont souvent utilisés de
@@ -52,9 +57,9 @@ plus simple en informatique, représenté par le chiffre 0 ou 1.
 circuler l'électricité. Un circuit peut facilement représenter ces deux états:
 allumé (1) ou éteint (0).
 
-L'**octet** en anglais byte (o minuscule ou B majuscule dans les notations) est
-une unité composée de 8 bits. Pour faciliter la lisibilité, nous regroupons en
-général l'information par paquet de 8, 16, 32 ou 64 bits.
+L'**octet**, en anglais byte, (o minuscule ou B majuscule dans les notations)
+est une unité composée de 8 bits. Pour faciliter la lisibilité, nous regroupons
+en général l'information par paquet de 8, 16, 32 ou 64 bits.
 
 Voici les unités standardisées depuis 1998:
 
