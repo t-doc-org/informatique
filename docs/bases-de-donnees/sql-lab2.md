@@ -186,7 +186,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 :class: hidden
 ```
 
-1. Écrire une requête SQL qui affiche tous les livres.
+1. Écrire une requête SQL qui retourne tous les livres.
 
     ```{exec} sql
     :after: sql-biblio-insert
@@ -201,7 +201,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-2. Écrire une requête SQL qui affiche tous les noms des usagers.
+2. Écrire une requête SQL qui retourne tous les noms des usagers.
 
     ```{exec} sql
     :after: sql-biblio-insert
@@ -216,7 +216,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-3. Écrire une requête SQL qui affiche tous les éditeurs sans doublons.
+3. Écrire une requête SQL qui retourne tous les éditeurs sans doublons.
 
     ```{exec} sql
     :after: sql-biblio-insert
@@ -231,7 +231,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-4. Écrire une requête SQL qui affiche le titre et l'année des livres publiés
+4. Écrire une requête SQL qui retourne le titre et l'année des livres publiés
 avant 1980.
 
     ```{exec} sql
@@ -247,7 +247,7 @@ avant 1980.
     ```
     ````
 
-5. Écrire une requête SQL qui affiche le titre des livres dont le titre
+5. Écrire une requête SQL qui retourne le titre des livres dont le titre
 commence par le mot "Astérix".
 
     ```{exec} sql
@@ -263,7 +263,7 @@ commence par le mot "Astérix".
     ```
     ````
 
-6. Écrire une requête SQL qui affiche le titre des livres dont le titre
+6. Écrire une requête SQL qui retourne le titre des livres dont le titre
 contient le mot "Astérix".
 
     ```{exec} sql
@@ -280,7 +280,7 @@ contient le mot "Astérix".
     ````
 
 
-7. Écrire une requête SQL qui affiche l'isbn des livres à rendre avant le 31
+7. Écrire une requête SQL qui retourne l'isbn des livres à rendre avant le 31
 décembre 2024.
 
     ```{tip}
@@ -300,7 +300,7 @@ décembre 2024.
     ```
     ````
 
-8. Écrire une requête SQL qui affiche le nom et le prénom de tous les auteurs
+8. Écrire une requête SQL qui retourne le nom et le prénom de tous les auteurs
 triés par ordre alphabétique.
 
     ```{exec} sql
@@ -316,7 +316,7 @@ triés par ordre alphabétique.
     ```
     ````
 
-9. Écrire une requête SQL qui affiche le nom, le prénom et l'adresse des usagers
+9. Écrire une requête SQL qui retourne le nom, le prénom et l'adresse des usagers
 vivant à Fribourg.
 
     ```{exec} sql
@@ -332,7 +332,7 @@ vivant à Fribourg.
     ```
     ````
 
-10. Écrire une requête SQL qui affiche l'année et le titre des livres publiés
+10. Écrire une requête SQL qui retourne l'année et le titre des livres publiés
 entre 2012 et 2015.
 
     ```{exec} sql
@@ -386,7 +386,7 @@ Formuler en français ce que nous cherchons avec les requêtes suivantes:
 
 Pour cet exercice, il faudra utiliser des jointures de tables.
 
-1. Écrire une requête SQL qui affiche le titre des livres empruntés.
+1. Écrire une requête SQL qui retourne le titre des livres empruntés.
 
     ```{exec} sql
     :after: sql-biblio-insert
@@ -402,7 +402,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     ```
     ````
 
-2. Écrire une requête SQL qui affiche le titre des livres empruntés à rendre
+2. Écrire une requête SQL qui retourne le titre des livres empruntés à rendre
 après le 15 décembre.
 
     ```{exec} sql
@@ -420,7 +420,7 @@ après le 15 décembre.
     ```
     ````
 
-3. Écrire une requête SQL qui affiche le nom et le prénom des usagers qui ont
+3. Écrire une requête SQL qui retourne le nom et le prénom des usagers qui ont
 emprunté des livres.
 
     ```{exec} sql
@@ -454,7 +454,7 @@ emprunté des livres.
     ```
     ````
 
-4. Écrire une requête SQL qui affiche le nom et le prénom de l'auteur du livre
+4. Écrire une requête SQL qui retourne le nom et le prénom de l'auteur du livre
 "La Mort d'Ivan Ilitch".
 
     ```{exec} sql
@@ -473,7 +473,7 @@ emprunté des livres.
     ```
     ````
 
-5. Écrire une requête SQL qui affiche le titre des livres publiés avant "Astérix
+5. Écrire une requête SQL qui retourne le titre des livres publiés avant "Astérix
 chez les Bretons".
 
     ```{exec} sql
@@ -491,7 +491,7 @@ chez les Bretons".
     ```
     ````
 
-6. **Challenge**: Écrire une requête SQL qui affiche le nom et le prénom des
+6. **Challenge**: Écrire une requête SQL qui retourne le nom et le prénom des
 auteurs des livres de la question précédente sans doublons.
 
     ```{exec} sql

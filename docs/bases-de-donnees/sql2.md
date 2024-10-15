@@ -253,8 +253,8 @@ select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom
 Pour joindre deux tables, il faut utiliser l'instruction
 `join ... on ... where`.
 
-La requête suivante permet d'afficher le(s) nom(s) du (des) produits acheté(s)
-par le client n°3.
+La requête suivante retourne le(s) nom(s) du (des) produits acheté(s) par le
+client n°3.
 
 ```{exec} sql
 :after: sql-tables
@@ -268,8 +268,8 @@ select nom from produit        -- sélectionne la colonne nom de la table produi
 
 ## Exercice 14
 
-Écrire la requête SQL qui permet d'afficher le(s) nom(s) du (des) produits
-acheté(s) par le client n°1.
+Écrire la requête SQL qui retourne le(s) nom(s) du (des) produits acheté(s) par
+le client n°1.
 
 ```{exec} sql
 :after: sql-tables
@@ -288,8 +288,8 @@ select nom from produit
 
 ## Exercice 15
 
-Écrire la requête SQL qui permet d'afficher le titre, le prénom et le nom des
-clients ayant acheté le produit Ektorp.\
+Écrire la requête SQL qui retourne le titre, le prénom et le nom des clients
+ayant acheté le produit Ektorp.\
 Trier les valeurs dans l'ordre alphabétique des prénoms.
 
 ```{exec} sql
@@ -310,7 +310,7 @@ select client.titre, client.prenom, client.nom from client
 
 ## Exercice 16
 
-Utiliser des jointures pour afficher la table ci-dessous (triée selon les
+Utiliser des jointures pour retourner la table ci-dessous (triée selon les
 prénoms):
 
 ```{exec} sql
