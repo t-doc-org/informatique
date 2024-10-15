@@ -24,6 +24,7 @@ python-1/index
 :maxdepth: 1
 bases-de-donnees/index
 crypto/index
+python-2/index
 ```
 
 ## Divers
