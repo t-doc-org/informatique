@@ -54,9 +54,9 @@ Convertir les nombres suivants de binaire en décimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "2":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "2": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -66,9 +66,9 @@ Convertir les nombres suivants de binaire en décimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "5":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "5": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -78,9 +78,9 @@ Convertir les nombres suivants de binaire en décimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "15":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "15": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -90,9 +90,9 @@ Convertir les nombres suivants de binaire en décimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "9":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "9": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -102,9 +102,9 @@ Convertir les nombres suivants de binaire en décimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "6":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "6": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -114,9 +114,9 @@ Convertir les nombres suivants de binaire en décimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "13":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "13": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -126,9 +126,9 @@ Convertir les nombres suivants de binaire en décimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "85":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "85": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -138,9 +138,9 @@ Convertir les nombres suivants de binaire en décimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "102":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "102": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -186,9 +186,9 @@ Convertir les nombres suivants de décimal en binaire.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "11":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "11": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -198,9 +198,9 @@ Convertir les nombres suivants de décimal en binaire.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "110":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "110": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -210,9 +210,9 @@ Convertir les nombres suivants de décimal en binaire.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "1001":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "1001": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -222,9 +222,9 @@ Convertir les nombres suivants de décimal en binaire.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "101001":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "101001": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -234,9 +234,9 @@ Convertir les nombres suivants de décimal en binaire.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "1000000" and resp != "100 0000":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "1000000": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -246,9 +246,9 @@ Convertir les nombres suivants de décimal en binaire.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "10101011" and resp != "1010 1011":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "10101011": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -258,9 +258,9 @@ Convertir les nombres suivants de décimal en binaire.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "1011010000" and resp != "10 1101 0000":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "1011010000": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -270,9 +270,9 @@ Convertir les nombres suivants de décimal en binaire.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "11000100101" and resp != "110 0010 0101":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "11000100101": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -286,9 +286,10 @@ Combien de bits faut-il pour écrire les nombres suivants en base 2?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "4" and resp != "4 bits":
+    while True:
       resp = await input_line("Réponse:")
+      resp = resp.replace(" ", "").lower()
+      if resp == "4" or resp == "4bits": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -298,9 +299,10 @@ Combien de bits faut-il pour écrire les nombres suivants en base 2?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "6" and resp != "6 bits":
+    while True:
       resp = await input_line("Réponse:")
+      resp = resp.replace(" ", "").lower()
+      if resp == "6" or resp == "6bits": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -310,9 +312,10 @@ Combien de bits faut-il pour écrire les nombres suivants en base 2?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "8" and resp != "8 bits":
+    while True:
       resp = await input_line("Réponse:")
+      resp = resp.replace(" ", "").lower()
+      if resp == "8" or resp == "8bits": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -322,9 +325,10 @@ Combien de bits faut-il pour écrire les nombres suivants en base 2?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "9" and resp != "9 bits":
+    while True:
       resp = await input_line("Réponse:")
+      resp = resp.replace(" ", "").lower()
+      if resp == "9" or resp == "9bits": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -369,9 +373,9 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "87":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "87": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -381,9 +385,9 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "5A":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "5A": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -393,9 +397,9 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "9F":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "9F": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -405,9 +409,9 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "71E9":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "71E9": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -417,9 +421,9 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "00111010" and resp != "0011 1010":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "00111010": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -429,9 +433,9 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "11110100" and resp != "1111 0100":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "11110100": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -441,9 +445,9 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "10111101" and resp != "1011 1101":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "10111101": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -453,9 +457,9 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "1001110000101110" and resp != "1001 1100 0010 1110":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "1001110000101110": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -510,9 +514,9 @@ Effectuer les additions suivantes sur 4 bits.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "0101":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "0101": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -522,9 +526,9 @@ Effectuer les additions suivantes sur 4 bits.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "1101":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "1101": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -534,9 +538,9 @@ Effectuer les additions suivantes sur 4 bits.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "1100":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "1100": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -546,9 +550,10 @@ Effectuer les additions suivantes sur 4 bits.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "Overflow" and resp != "overflow":
+    while True:
       resp = await input_line("Réponse:")
+      resp = resp.lower()
+      if resp.replace(" ", "") == "overflow": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -562,9 +567,9 @@ Effectuer les additions suivantes sur 8 bits.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "10011000" and resp != "1001 1000":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "10011000": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -574,9 +579,9 @@ Effectuer les additions suivantes sur 8 bits.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "11011111" and resp != "1101 1111":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "11011111": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -586,9 +591,9 @@ Effectuer les additions suivantes sur 8 bits.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "11011110" and resp != "1101 1110":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "11011110": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -598,9 +603,9 @@ Effectuer les additions suivantes sur 8 bits.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "10100001" and resp != "1010 0001":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "10100001": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```

@@ -48,9 +48,9 @@ Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "494E464F" and resp != "49 4E 46 4F":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "494E464F": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -60,9 +60,9 @@ Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "68656C6C6F" and resp != "68 65 6C 6C 6F":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "68656C6C6F": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -72,9 +72,9 @@ Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "426F6E6A6F7572" and resp != "42 6F 6E 6A 6F 75 72":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "426F6E6A6F7572": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -84,9 +84,9 @@ Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "3B2D29" and resp != "3B 2D 29":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "3B2D29": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -101,9 +101,9 @@ Convertir le texte suivant écrit en code ASCII hexadécimal.
 ```{exec} python
 :when: load
 :class: hidden
-resp = ""
-while resp != "J'aime l'informatique!":
+while True:
   resp = await input_line("Réponse:")
+  if resp == "J'aime l'informatique!": break
   print("\x0cEssaie encore")
 print("\x0cBravo")
 ```

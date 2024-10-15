@@ -229,9 +229,9 @@ une case) codée...
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "18.75" and resp != "18,75":
+    while True:
       resp = await input_line("Réponse en ko:")
+      if resp == "18.75" or resp == "18,75": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -241,9 +241,9 @@ une case) codée...
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "37.5" and resp != "37,5":
+    while True:
       resp = await input_line("Réponse en ko:")
+      if resp == "37.5" or resp == "37,5": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -253,9 +253,9 @@ une case) codée...
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "150":
+    while True:
       resp = await input_line("Réponse en ko:")
+      if resp != "150": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -265,9 +265,9 @@ une case) codée...
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "450":
+    while True:
       resp = await input_line("Réponse en ko:")
+      if resp != "450": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```

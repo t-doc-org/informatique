@@ -85,13 +85,14 @@ décimale de celui-ci.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "1001":
+    while True:
       resp = await input_line("Opposé:")
+      if resp.replace(" ", "") == "1001": break
       print("\x0cEssaie encore")
     print("\x0cL'opposé est correct.")
-    while resp != "-7":
+    while True:
       resp = await input_line("Valeur décimale:")
+      if resp.replace(" ", "") == "-7": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -101,13 +102,14 @@ décimale de celui-ci.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "10100110" and resp != "1010 0110":
+    while True:
       resp = await input_line("Opposé:")
+      if resp.replace(" ", "") == "10100110": break
       print("\x0cEssaie encore")
     print("\x0cL'opposé est correct.")
-    while resp != "-90":
+    while True:
       resp = await input_line("Valeur décimale:")
+      if resp.replace(" ", "") == "-90": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -117,13 +119,14 @@ décimale de celui-ci.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "0001":
+    while True:
       resp = await input_line("Opposé:")
+      if resp.replace(" ", "") == "0001": break
       print("\x0cEssaie encore")
     print("\x0cL'opposé est correct.")
-    while resp != "1":
+    while True:
       resp = await input_line("Valeur décimale:")
+      if resp.replace(" ", "") == "1": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -133,13 +136,14 @@ décimale de celui-ci.
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "00101111" and resp != "0010 1111":
+    while True:
       resp = await input_line("Opposé:")
+      if resp.replace(" ", "") == "00101111": break
       print("\x0cEssaie encore")
     print("\x0cL'opposé est correct.")
-    while resp != "47":
+    while True:
       resp = await input_line("Valeur décimale:")
+      if resp.replace(" ", "") == "47": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -154,13 +158,14 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "15":
+    while True:
       resp = await input_line("Réponse en décimal:")
+      if resp.replace(" ", "") == "15": break
       print("\x0cEssaie encore")
     print("\x0cQu'est-ce que cela donne en binaire?")
-    while resp != "1111":
+    while True:
       resp = await input_line("Réponse en binaire:")
+      if resp.replace(" ", "") == "1111": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -171,13 +176,14 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "255":
+    while True:
       resp = await input_line("Réponse en décimal:")
+      if resp.replace(" ", "") == "255": break
       print("\x0cEssaie encore")
     print("\x0cQu'est-ce que cela donne en binaire?")
-    while resp != "11111111" or resp != "1111 1111":
+    while True:
       resp = await input_line("Réponse en binaire:")
+      if resp.replace(" ", "") == "11111111": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -188,9 +194,9 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "2^n-1" and resp != "2^n - 1":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "2^n-1": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -202,13 +208,14 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "0":
+    while True:
       resp = await input_line("Réponse en décimal:")
+      if resp.replace(" ", "") == "0": break
       print("\x0cEssaie encore")
     print("\x0cQu'est-ce que cela donne en binaire?")
-    while resp != "0000":
+    while True:
       resp = await input_line("Réponse en binaire:")
+      if resp.replace(" ", "") == "0000": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -219,13 +226,14 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "0":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "0": break
       print("\x0cEssaie encore")
     print("\x0cQu'est-ce que cela donne en binaire?")
-    while resp != "00000000" or resp != "0000 0000":
+    while True:
       resp = await input_line("Réponse en binaire:")
+      if resp.replace(" ", "") == "00000000": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -236,9 +244,9 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "0":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "0": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -249,13 +257,14 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "7":
+    while True:
       resp = await input_line("Réponse en décimal:")
+      if resp.replace(" ", "") == "7": break
       print("\x0cEssaie encore")
     print("\x0cQu'est-ce que cela donne en binaire?")
-    while resp != "0111":
+    while True:
       resp = await input_line("Réponse en binaire:")
+      if resp.replace(" ", "") == "0111": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -266,13 +275,14 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "127":
+    while True:
       resp = await input_line("Réponse en décimal:")
+      if resp.replace(" ", "") == "127": break
       print("\x0cEssaie encore")
     print("\x0cQu'est-ce que cela donne en binaire?")
-    while resp != "01111111" or resp != "0111 1111":
+    while True:
       resp = await input_line("Réponse en binaire:")
+      if resp.replace(" ", "") == "01111111": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -283,9 +293,9 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "2^(n-1)-1" and resp != "2^(n-1) - 1" and resp != "2^(n - 1) - 1":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "2^(n-1)-1": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -296,13 +306,14 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "-8":
+    while True:
       resp = await input_line("Réponse en décimal:")
+      if resp.replace(" ", "") == "-8": break
       print("\x0cEssaie encore")
     print("\x0cQu'est-ce que cela donne en binaire?")
-    while resp != "1000":
+    while True:
       resp = await input_line("Réponse en binaire:")
+      if resp.replace(" ", "") == "1000": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -313,13 +324,14 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "-128":
+    while True:
       resp = await input_line("Réponse en décimal:")
+      if resp.replace(" ", "") == "-128": break
       print("\x0cEssaie encore")
     print("\x0cQu'est-ce que cela donne en binaire?")
-    while resp != "10000000" or resp != "1000 0000":
+    while True:
       resp = await input_line("Réponse en binaire:")
+      if resp.replace(" ", "") == "10000000": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
@@ -330,9 +342,9 @@ bits?
     ```{exec} python
     :when: load
     :class: hidden
-    resp = ""
-    while resp != "-2^(n-1)" and resp != "-2^(n - 1)":
+    while True:
       resp = await input_line("Réponse:")
+      if resp.replace(" ", "") == "-2^(n-1)": break
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```

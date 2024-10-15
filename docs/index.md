@@ -14,8 +14,8 @@ scolaire.
 :maxdepth: 1
 architecture/index
 html-css/index
-python/index
 representation-info/index
+python-1/index
 ```
 
 ## Cours de 2{sup}`e` année
