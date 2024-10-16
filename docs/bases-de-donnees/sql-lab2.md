@@ -10,7 +10,11 @@ Le but de cette section est d'entraîner les concepts vus dans les sections
 
 Nous souhaitons créer une base de données pour une bibliothèque communale. Pour
 emprunter un livre, Bob doit scanner son code-barre personnel et celui du livre.
-Lors de l'emprunt, la date de retour est fixée.
+Lors de l'emprunt, la date de retour est fixée. Chaque livre a un titre, un
+auteur, un éditeur, un ISBN qui est unique et une année de sortie. Un usager a
+un nom, un prénom, une adresse, un code postal, une ville, un email et un
+code-barre personnel. De chaque auteur, nous connaissons le nom et le prénom.
+
 1. Déterminer les différentes tables nécessaires.
 2. Déterminer les colonnes de chaque table.
 3. Déterminer les clés primaires et étrangères.
@@ -49,7 +53,7 @@ digraph UML_Class_diagram {
         <table border="0" cellborder="0" cellspacing="7" >
           <tr> <td align="left" port="u1">nom</td> </tr>
           <tr> <td align="left" port="u2">prenom</td> </tr>
-          <tr> <td align="left" port="u3">adress</td> </tr>
+          <tr> <td align="left" port="u3">adresse</td> </tr>
           <tr> <td align="left" port="u4">code_postal</td> </tr>
           <tr> <td align="left" port="u5">ville</td> </tr>
           <tr> <td align="left" port="u6">email</td> </tr>
@@ -468,12 +472,51 @@ emprunté des livres.
     :after: sql-biblio-insert
     select auteur.nom, auteur.prenom from auteur
         join auteur_de on auteur.a_id = auteur_de.a_id
-        join livre on livre.isbn = auteur_de.isbn
+        join livre on auteur_de.isbn = livre.isbn
         where titre = 'La Mort d''Ivan Ilitch'
     ```
     ````
 
-5. Écrire une requête SQL qui retourne le titre des livres publiés avant "Astérix
+5. Écrire une requête SQL qui retourne le nom et le prénom de l'usager qui a
+emprunté "Jack Barron et l'Éternité".
+
+    ```{exec} sql
+    :after: sql-biblio-insert
+    :editable:
+    ```
+
+    ````{admonition} Solution
+    :class: note dropdown
+    ```{exec} sql
+    :after: sql-biblio-insert
+    select usager.nom, usager.prenom from usager
+        join emprunt on usager.code_barre = emprunt.code_barre
+        join livre on emprunt.isbn = livre.isbn
+        where titre = 'Jack Barron et l''Éternité'
+    ```
+    ````
+
+6. Écrire une requête SQL qui retourne le titre et la date de retour des livres
+empruntés par Philippe Dubois.
+
+    ```{exec} sql
+    :after: sql-biblio-insert
+    :editable:
+    ```
+
+    ````{admonition} Solution
+    :class: note dropdown
+    ```{exec} sql
+    :after: sql-biblio-insert
+    select livre.titre, emprunt.retour from livre
+        join emprunt on livre.isbn = emprunt.isbn
+        join usager on emprunt.code_barre = usager.code_barre
+        where usager.nom = 'Dubois' and usager.prenom = 'Philippe'
+    ```
+    ````
+
+
+7. Écrire une requête SQL qui retourne le titre des livres publiés avant "Astérix
 chez les Bretons".
 
     ```{exec} sql
@@ -491,7 +534,7 @@ chez les Bretons".
     ```
     ````
 
-6. **Challenge**: Écrire une requête SQL qui retourne le nom et le prénom des
+8. **Challenge**: Écrire une requête SQL qui retourne le nom et le prénom des
 auteurs des livres de la question précédente sans doublons.
 
     ```{exec} sql
