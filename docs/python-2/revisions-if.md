@@ -25,6 +25,7 @@ Le bloc d'instructions ne sera exécuté que si le condition est vraie.
 meteo = "soleil"
 if meteo == "pluie":
     print("Je prends un parapluie.")
+print("Programme terminé!")
 ```
 
 Dans l'exemple ci-dessus, il ne se passe rien, la condition n'est pas vérifiée.\
