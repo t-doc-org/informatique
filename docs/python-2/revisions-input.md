@@ -19,7 +19,7 @@ print("Salut", prenom, "!")
 Une instruction d'entrée donne la main à l'utilisateur pour saisir une donnée au
 clavier. En Python, cela se fait au moyen de la fonction `input(...)`. La valeur
 saisie doit être obligatoirement affectée à une variable, sinon elle sera
-perdue. La valeur rentrée par l'utiliseur est stocké sous forme de chaîne de
+perdue. La valeur rentrée par l'utilisateur est stockée sous forme de chaîne de
 caractères (de type `str`). Pour effectuer des calculs, il faut la convertir en `int`
 ou en `float`.
 
@@ -38,7 +38,7 @@ print("Dans 10 ans, tu auras", age + 10, "ans.")
 ```
 
 Lors de l'exécution de la ligne 1, la question est affichée. Le programme attend
-jusqu'à ce que l'utilisateur saisissse une réponse et appuyer sur {kbd}`enter`.
+jusqu'à ce que l'utilisateur saisisse une réponse et appuye sur {kbd}`enter`.
 
 ## Exercice 5
 

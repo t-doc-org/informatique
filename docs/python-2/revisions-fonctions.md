@@ -7,19 +7,19 @@ En programmation, une fonction est un bloc de code (suite d'instructions) qui
 réalise une tâche. Nous en avons déjà rencontré plusieurs:
 
 print(...)
-: affiche ce qui est entre parenthèses sur la console
+: affiche ce qui est entre parenthèses sur la console.
 
 input(...)
-: demande à l'utilisateur d'entrer une donnée
+: demande à l'utilisateur d'entrer une donnée.
 
 int(...)
-: convertit ce qui est entre parenthèses en nombre entier
+: convertit ce qui est entre parenthèses en nombre entier.
 
 float(...)
-: convertit ce qui est entre parenthèses en nombre à virgule
+: convertit ce qui est entre parenthèses en nombre à virgule.
 
 range(...)
-: renvoie une liste de nombre (de 0 à la valeur entre parenthèses -1)
+: renvoie une liste de nombre (de 0 à la valeur entre parenthèses -1).
 
 Toutes les fonctions ci-dessus sont des fonctions intégrées, elles ont été
 prédéfinies pour nous. Nous n'avons qu'à les utiliser, sans nous soucier de
@@ -135,7 +135,7 @@ while i < 20:
 
 ## Exercice 18
 
-Au dessus du code donné, définir une fonction nommée `affiche_prix_billet`
+Au-dessus du code donné, définir une fonction nommée `affiche_prix_billet`
 prenant en paramètre l'âge de l'utilisateur et affichant le prix du billet de
 cinéma en fonction de cet âge.
 

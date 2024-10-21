@@ -3,7 +3,7 @@
 
 # Révisions - Boucles
 
-En programmation, nous sommes souvent amené à répéter des instructions plusieurs
+En programmation, nous sommes souvent amenés à répéter des instructions plusieurs
 fois. Pour cela nous pouvons utiliser des boucles.
 
 ## Boucle for
@@ -51,7 +51,7 @@ En réalité, la boucle `for` fait plus que juste répéter x fois: pour
 chaque itération (passage de la boucle), la variable (ici nommée i) va prendre
 la valeur d'un élément de l'ensemble range(n), c'est-à-dire l'ensemble des
 nombres entiers de 0 à n non compris $\{0; 1; 2; ...; n-1\}$. Il est donc
-possible d'utiliser la valeur de cette variable dans le boucle.
+possible d'utiliser la valeur de cette variable dans la boucle.
 
 ## Boucle while
 
@@ -183,7 +183,7 @@ print("BOOM")
 
 ## Exercice 14
 
-Écrire un programme qui demande à l'utilisateur combien il y a de canton en
+Écrire un programme qui demande à l'utilisateur combien il y a de cantons en
 Suisse. Tant que la réponse n'est pas 26, le programme redemande une nouvelle
 réponse.
 

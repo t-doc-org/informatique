@@ -84,7 +84,7 @@ Voici les principaux types de données que nous utiliserons.
 | str   | string    | Chaînes de caractères            | "Bonjour"          |
 | bool  | booléen   | Résultat d'un test: Vrai ou Faux | 2<1 renvoie False  |
 
-Pour connaître le type d'une variable, nous pouvons utiliser la foncton `type()`.
+Pour connaître le type d'une variable, nous pouvons utiliser la fonction `type()`.
 
 ## Commentaires
 
@@ -109,7 +109,7 @@ commençant par # sera ignorée lors de l'exécution du programme.
       print("Dans 10 ans, tu auras", age, "ans.")
       ```
 
-      Nous remplaçons le valeur qui est stockée dans la variable `age` par une
+      Nous remplaçons la valeur qui est stockée dans la variable `age` par une
       nouvelle valeur. L'ancienne valeur est "perdue".
 
 
@@ -134,7 +134,7 @@ commençant par # sera ignorée lors de l'exécution du programme.
       ```
 
       Dans une variable, seul le résultat du calcul est stocké, par conséquent, même
-      si la valeur de `a` ou de `b` change, celle de `c` ne changera pas, tant que
+      si la valeur de la variable `a` ou celle de `b` change, celle de `c` ne changera pas, tant que
       nous nous lui affectons pas une nouvelle valeur.
 
 5.
@@ -145,7 +145,7 @@ commençant par # sera ignorée lors de l'exécution du programme.
       ```
 
       Dès que la division est utilisée dans un calcul, le résultat sera de type
-      `float`, même si le resultat de la division est un nombre entier.
+      `float`, même si le résultat de la division est un nombre entier.
 
 
 ## Exercice 1
@@ -200,7 +200,7 @@ Quel est le résultat des expressions suivantes en Python?
         resp = await input_line("10 - 2 * 5 = ")
         if resp == "0": break
         if resp == "40":
-              print("\x0cEn Python, l'odre de priorité est le même qu'en maths.")
+              print("\x0cEn Python, l'ordre de priorité est le même qu'en maths.")
         else:
               print("\x0cEssaie encore.")
     print("\x0cBravo!")
@@ -302,7 +302,7 @@ De quel type sont les données suivantes?
 
 ## Exercice 3
 
-Qu'affiche le programme suivant? Appuyer sur play pour vérifier votre réponse.
+Qu'affiche le programme suivant? Appuyer sur bouton "play" pour vérifier votre réponse.
 
 ```{exec} python
 :linenos:
@@ -315,7 +315,7 @@ print("L'aire du triangle est de", aire)
 ## Exercice 4
 
 Qu'affiche le programme suivant? Faire un tableau d'états.\
-Appuyer sur play pour vérifier votre réponse.
+Appuyer sur bouton "play" pour vérifier votre réponse.
 
 ```{exec} python
 :linenos:

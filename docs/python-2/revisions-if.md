@@ -4,13 +4,13 @@
 # Révisions - Instructions conditionnelles
 
 Une instruction conditionnelle est composée d'une **condition** puis d'un
-**bloc d'instructions**. La condition est un expression ou une variable logique
-évaluée par `True` ou `False`. Le bloc d'instruction s'exécute seulement si la
+**bloc d'instructions**. La condition est une expression ou une variable logique
+évaluée par `True` ou `False`. Le bloc d'instructions s'exécute seulement si la
 condition est vérifiée.
 
 ## Exemple avec if
 
-Le bloc d'instructions ne sera exécuté que si le condition est vraie.
+Le bloc d'instructions ne sera exécuté que si la condition est vraie.
 
 
 ```{figure} images/if.png
@@ -22,10 +22,11 @@ Le bloc d'instructions ne sera exécuté que si le condition est vraie.
 ```{exec} python
 :linenos:
 :editable:
+print("Début")
 meteo = "soleil"
 if meteo == "pluie":
     print("Je prends un parapluie.")
-print("Programme terminé!")
+print("Fin")
 ```
 
 Dans l'exemple ci-dessus, il ne se passe rien, la condition n'est pas vérifiée.\
@@ -34,8 +35,8 @@ Changer la météo en "pluie". Que se passe-t-il?
 
 ## Exemple avec if ... else
 
-Le bloc d'instructions après le if sera exécuté si le condition est vraie,
-sinon ce sera le bloc d'instructions du else qui sera exécuté.
+Le bloc d'instructions après le `if` sera exécuté si la condition est vraie,
+sinon ce sera le bloc d'instructions du `else` qui sera exécuté.
 
 ```{figure} images/if-else.png
 :alt: Ordinogramme if-else
@@ -59,7 +60,7 @@ d'autres possibilités.
 
 ## Exemple avec if ... elif ... else
 
-Certaines situations nécessitent de distinguer plus que un ou deux cas.
+Certaines situations nécessitent de distinguer plus qu'un ou deux cas.
 
 ```{figure} images/if-elif-else.png
 :alt: Ordinogramme if-elif-else
@@ -192,7 +193,7 @@ print("\x0cBravo!")
 
 ## Exercice 9
 
-Nous souhaitons créer un programme qui calcul le prix à payer lors de l'achat de
+Nous souhaitons créer un programme qui calcule le prix à payer lors de l'achat de
 canette de Red Bull dont le prix unitaire est de 1.50 CHF.
 
 Écrire un programme qui correspond à l'algorithme suivant:
@@ -245,7 +246,7 @@ Sinon
 :linenos:
 :editable:
 # Modifier et compléter le programme
-... await input_line("Quel est votre âge?"))
+... await input_line("Quel est votre âge?")
 ...
 ```
 
@@ -268,7 +269,7 @@ else:
 Voici trois programmes:
 
 1. Quelles sont les différences?
-2. Que vont-il afficher?
+2. Que vont-ils afficher?
 3. Faire un ordinogramme pour chacun.
 
 <table width="100%">
