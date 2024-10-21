@@ -251,7 +251,7 @@ select client.no_c, client.prenom, client.nom, produit.no_p, produit.nom
 ```
 
 Pour joindre deux tables, il faut utiliser l'instruction
-`join ... on ... where`.
+`join ... on ...`.
 
 La requête suivante retourne le(s) nom(s) du (des) produits acheté(s) par le
 client n°3.

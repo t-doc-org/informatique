@@ -40,6 +40,6 @@ données.
 
 | Mots réservés | Description |
 | :------------ | :---------- |
-| `join ... on ... where` | Joint plusieurs tables ensembles |
+| `join ... on ... ` | Joint deux tables ensembles |
 
 
