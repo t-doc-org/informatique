@@ -23,10 +23,10 @@ message.
 
 ## Exercice 2
 
-But: Effectuer une analyse de fréquences pour déchiffrer un message codé avec un
+But: Effectuer une analyse de fréquences pour décrypter un message codé avec un
 chiffre de César.
 
-Vous interceptez, sur le réseau public, un des messages suivants codés au moyen
+Vous interceptez, sur le réseau public, un des messages suivants chiffré au moyen
 du Chiffre de César.
 
 Groupe 1:\
@@ -102,7 +102,7 @@ quoi on va tomber (Forrest Gump)
 
 ## Exercice 3
 
-But: Déchiffrer un message utilisant la substitution monoalphabétique en
+But: Décrypter un message utilisant la substitution monoalphabétique en
 faisant une analyse de fréquences.
 
 Décrypter à l'aide de l'analyse de fréquences, le cryptogramme suivant,
@@ -116,7 +116,7 @@ Les espaces et la ponctuation ont été laissés pour faciliter l'exercice.
 1. Faire une [analyse de fréquences](https://www.dcode.fr/analyse-frequences)
 des lettres, des digrammes et des caractères répétés et utiliser les [tables de
 fréquences](./frequences.md).
-2. Déchiffrer le message.
+2. Décrypter le message.
 
 ````{tip}
 Écrire un programme python qui permet de remplacer les lettres les unes après
