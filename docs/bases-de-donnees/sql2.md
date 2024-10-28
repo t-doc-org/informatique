@@ -174,7 +174,7 @@ insert into client values
 ## Exercice 13
 
 Créer la table `achat` et la compléter avec les achats effectués par les
-clients.
+clients. La clé primaire est composée des deux colonnes `no_p` et `no_c`.
 
 1. Alan Turing a acheté le canapé 2 places Ektrop.
 2. Ada Lovelace a également acheté le canapé Ektrop.
