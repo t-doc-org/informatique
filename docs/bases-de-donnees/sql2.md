@@ -90,7 +90,7 @@ create table client (
 
 ## Exercice 10
 
-Recréer la table `produit` des exercices 1 & 2 en y ajoutant la clé primaire.
+Recréer la table `produit` des exercices 1 et 2 en y ajoutant la clé primaire.
 
 ```{exec} sql
 :then: sql-produit-select
