@@ -8,7 +8,7 @@ But: Créer un site web sur un sujet d'informatique.
 Le site doit être composé de:
 
 - Plusieurs pages Web (format .html), chaque élève s'occupe de faire au moins deux pages.
-- Un fichier css (format .css).
+- Un fichier CSS (format .css).
 
 ## Marche à suivre
 
@@ -19,7 +19,7 @@ Le document Word et les fichiers de votre site doivent toujours être sauvegard�
 
 1. Définir les différentes parties de votre sujet et les répartir entre les membres du groupe.
 2. Compléter, si nécessaire, les sources déjà trouvées.
-3. Lire les sources et faire des résumés dans le document word.
+3. Lire les sources et faire des résumés dans le document Word.
 4. Réfléchir à la structure du site:
       - Quelles seront les différentes pages?
       - Quelles seront les différentes sections?
@@ -29,22 +29,26 @@ Le document Word et les fichiers de votre site doivent toujours être sauvegard�
 
 1. Commencer par les pages de contenus (les fichiers HTML) sans se soucier du CSS.
 2. Nommer la première page de votre site "index.html".
-3. Créer les autres pages avec des noms, sans accent et espace, tel que "introduction.html", "historique.html", "sources.html", etc.
+3. Créer les autres pages avec des noms, sans accent et espace, tel que "index.html", "historique.html".
 4. Utiliser un seul fichier CSS pour tout le site et le nommer "style.css".
 5. Créer le menu qui vous permettra de naviguer facilement entre les différentes pages.
 6. Chaque membre du groupe s'occupe des recherches d'une partie du sujet et de créer les pages correspondantes.
 
-
-### Remarques
+### Conseils
 
 1. Créer un dossier "images" dans lequel il faudra importer toutes les images de votre site.
 2. Soigner l'indentation des fichiers pour faciliter la lecture.
-3. Commenter vos fichiers HTML avec `<!--` `-->` ou vos fichiers CSS avec `/**` `**/`.\
-Pour le code copié sur le Web: indiquer la source et expliquer ce que ça fait dans les commentaires.
+3. Commenter vos fichiers HTML avec `<!--` `-->` ou vos fichiers CSS avec `/**` `**/`.
 4. Noter toutes les références (sites visités et images téléchargées) au fur et à mesure.
-5. Sur la page "sources.html" doivent figurer toutes les références avec des hyperliens.
-6. Attention à la grammaire et l'orthographe.
-7. Consulter la grille d'évaluation.
+5. Attention à la grammaire et l'orthographe.
+6. Consulter régulièrement la grille d'évaluation.
+
+## Sources
+
+1. Les sources doivent être indiquées à la fin de chaque paragraphe ou chaque section au moyen d'un
+hyperlien.
+2. La source du code copié sur le Web doit être indiquée dans un commentaire avec une petite
+explication de ce que le code fait.
 
 
 ## Règlement concernant l'utilisation de l'intelligence artificielle
