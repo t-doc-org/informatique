@@ -94,7 +94,31 @@ print("Bravo!")
 </td></tr>
 </table>
 
-## Exercice 12
+## Exercice 13
+```{exec} python
+:linenos:
+:when: never
+somme = 0
+for nombre in range(6):
+    somme += nombre
+print("La somme est:", somme)
+```
+
+Quel est le résultat affiché par ce programme?
+
+````{admonition} Solution
+:class: note dropdown
+Vérifie ta réponse en exécutant le code.
+```{exec} python
+:linenos:
+somme = 0
+for nombre in range(6):
+    somme += nombre
+print("La somme est:", somme)
+```
+````
+
+## Exercice 14
 
 Nous voulons créer un programme qui demande à l'utilisateur un nombre
 strictement positif. Tant que l'utilisateur entre un nombre plus petit ou égal à
@@ -131,7 +155,7 @@ print("Merci")
 ```
 ````
 
-## Exercice 13
+## Exercice 15
 
 Nous souhaitons créer un programme qui compte le temps avant qu'une bombe
 explose. Pour cela, un compte à rebours commencera à 10 et ira jusqu'à 1, puis
@@ -181,7 +205,7 @@ print("BOOM")
 ```
 ````
 
-## Exercice 14
+## Exercice 16
 
 Écrire un programme qui demande à l'utilisateur combien il y a de cantons en
 Suisse. Tant que la réponse n'est pas 26, le programme redemande une nouvelle

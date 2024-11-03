@@ -90,6 +90,36 @@ comédie et horreur). Le branchement `else` gérera tous les autres cas.
 ## Exercice 7
 
 ```{exec} python
+:when: never
+:linenos:
+age = int(input("Quel âge as-tu? "))
+if age >= 18 :
+    print("Tu es majeur.")
+else :
+    print("Tu es mineur.")
+```
+
+1. Quel message sera affiché si l'utilisateur entre 21?
+2. Que se passe-t-il si l'utilisateur entre 21 ans?
+3. Que se passe-t-il si l'utilisateur entre -10?
+4. Que se passe-t-il si l'utilisateur entre 17.5?
+
+````{admonition} Solution
+:class: note dropdown
+Vérifie tes réponses en exécutant le code.
+```{exec} python
+:linenos:
+age = int(await input_line("Quel âge as-tu? "))
+if age >= 18 :
+    print("Tu es majeur.")
+else :
+    print("Tu es mineur.")
+```
+````
+
+## Exercice 8
+
+```{exec} python
 :name: python-buffer
 :class: hidden
 from io import StringIO
@@ -130,7 +160,7 @@ while True:
 print("\x0cBravo!")
 ```
 
-## Exercice 8
+## Exercice 9
 
 1.
     ```{exec} python
@@ -191,7 +221,7 @@ print("\x0cBravo!")
         print("La division par 0 est impossible.")
     ```
 
-## Exercice 9
+## Exercice 10
 
 Nous souhaitons créer un programme qui calcule le prix à payer lors de l'achat de
 canette de Red Bull dont le prix unitaire est de 1.50 CHF.
@@ -228,7 +258,7 @@ else:
 ```
 ````
 
-## Exercice 10
+## Exercice 11
 
 Écrire un programme qui correspond à l'algorithme suivant:
 
@@ -264,7 +294,7 @@ else:
 ```
 ````
 
-## Exercice 11
+## Exercice 12
 
 Voici trois programmes:
 
