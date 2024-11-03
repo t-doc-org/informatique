@@ -8,6 +8,16 @@ Une instruction conditionnelle est composée d'une **condition** puis d'un
 évaluée par `True` ou `False`. Le bloc d'instructions s'exécute seulement si la
 condition est vérifiée.
 
+## Opérateurs logiques
+
+Les opérateurs logiques permettent de combiner plusieurs conditions simples
+
+| Opérateur | Description          |
+| :-------: | :------------------: |
+| and       | retourne True si les deux conditions sont vraies |
+| or        | retourne True si une des conditions est vraie    |
+| not       | inverse le résultat, renvoie True si le résultat est faux et vice-versa |
+
 ## Exemple avec if
 
 Le bloc d'instructions ne sera exécuté que si la condition est vraie.
@@ -312,7 +322,6 @@ Voici trois programmes:
 
 ```{exec} python
 :linenos:
-:editable:
 x = -4
 if x < 0:
     x += 7
@@ -329,7 +338,6 @@ print(x)
 
 ```{exec} python
 :linenos:
-:editable:
 x = -4
 if x < 0:
     x += 7
@@ -346,7 +354,6 @@ print(x)
 
 ```{exec} python
 :linenos:
-:editable:
 x = -4
 if x < 0:
     x += 7
@@ -357,6 +364,67 @@ if x < 0:
 else:
     x = 1000
 print(x)
+```
+
+</td></tr>
+</table>
+
+## Exercice 13
+
+Que vont afficher chacun de ces programmes?
+
+<table width="100%">
+<tr>
+      <th style="width: 50% ; text-align: center">Programme 1</th>
+      <th style="text-align: center">Programme 2</th>
+</tr>
+<tr><td>
+
+```{exec} python
+:linenos:
+a = 22
+b = 5
+c = 1
+print((a > b) and (b <= c))
+```
+
+</td><td>
+
+```{exec} python
+:linenos:
+a = 11
+b = 3
+c = 0
+print((a < b) or (c == 0))
+
+```
+
+</td></tr>
+</table>
+
+<table width="100%">
+<tr>
+      <th style="width: 50% ; text-align: center">Programme 3</th>
+      <th style="text-align: center">Programme 4</th>
+</tr>
+<tr><td>
+
+```{exec} python
+:linenos:
+a = 11
+b = 3
+c = 0
+print((a < b) or (c != 0))
+
+```
+
+</td><td>
+
+```{exec} python
+:linenos:
+a = 1.5
+b = 3.2
+print(not(a <= b))
 ```
 
 </td></tr>
