@@ -1,5 +1,5 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Langage SQL - Notions avancées
 
@@ -86,7 +86,7 @@ create table client (
 );
 ```
 
-<!-- TODO: Ajouter une numérotation automatique des exercices par chapitre. -->
+% TODO: Ajouter une numérotation automatique des exercices par chapitre.
 
 ## Exercice 10
 

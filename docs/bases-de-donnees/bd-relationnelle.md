@@ -1,5 +1,5 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Bases de données relationnelles
 
@@ -203,7 +203,7 @@ combinaison des deux colonnes comme clé primaire. Alternativement, nous aurions
 pu créer une nouvelle colonne pour servir de clé primaire.
 
 
-<!-- TODO: Améliorer le rendu des diagrammes (titre, couleur). -->
+% TODO: Améliorer le rendu des diagrammes (titre, couleur).
 
 ```{graphviz}
 :align: center

@@ -1,5 +1,5 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Système de fichiers
 
@@ -11,8 +11,7 @@ contient des fichiers.
 
 ## Exercice 1
 
-<!-- TODO: Cacher les solutions sinon les élèves ne vont pas faire les
-           exercices. -->
+% TODO: Cacher les solutions sinon les élèves ne vont pas faire les exercices.
 
 Répondre aux questions:
 

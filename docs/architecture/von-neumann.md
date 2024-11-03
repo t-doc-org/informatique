@@ -1,5 +1,5 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Architecture de von Neumann
 
@@ -77,9 +77,8 @@ Les périphériques de sorties décodent l'information fournie par l'ordinateur 
 binaire) afin de la rendre compréhensible par l'utilisateur (une image qui
 s'affiche sur l'écran).
 
-<!-- TODO: À Ajouter lorsque la section sera créée.
-Nous verrons cela plus en détail dans la section [](./encodage-information.md).
--->
+% TODO: À Ajouter lorsque la section sera créée.
+% Nous verrons cela plus en détail dans la section [](./encodage-information.md).
 
 ## Vidéo
 
