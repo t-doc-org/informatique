@@ -420,7 +420,7 @@ après le 15 décembre.
     :after: sql-biblio-insert
     select livre.titre from livre
         join emprunt on livre.isbn = emprunt.isbn
-        where retour < '2024-12-15';
+        where retour > '2024-12-15';
     ```
     ````
 
