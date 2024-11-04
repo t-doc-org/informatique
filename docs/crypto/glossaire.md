@@ -1,9 +1,9 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Glossaire
 
-<!-- TODO: Ajouter le popup pour l'affichage des définitions. -->
+% TODO: Ajouter le popup pour l'affichage des définitions.
 
 ```{glossary}
 Chiffrer

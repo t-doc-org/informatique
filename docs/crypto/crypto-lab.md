@@ -1,5 +1,5 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Cryptographie Lab
 
@@ -96,7 +96,6 @@ que c est une comedie (Jocker)
 Clé: décalage de 5\
 Texte clair: la vie c est comme une boite de chocolats on ne sait jamais sur
 quoi on va tomber (Forrest Gump)
-
 ````
 -->
 
@@ -130,7 +129,6 @@ print(texte)
 Ce programme donnera:
 ```{code-block} text
 IMPLU St KPXOt
-
 ```
 ````
 
@@ -166,6 +164,3 @@ calculs.
 
 3. Déchiffrement d'un autre message:
     - Déchiffrer le message reçu.
-
-
-

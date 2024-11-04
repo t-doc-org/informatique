@@ -1,5 +1,5 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Type de données
 
@@ -53,8 +53,9 @@ Les nombres réels:
 
 ## Exercice
 
-<!-- TODO: Remplacer le pdf par un pdf éditable avec ouverture directement dans
-           le browser -->
+% TODO: Remplacer le pdf par un pdf éditable avec ouverture directement dans
+%       le browser
+
 Remplir le tableau dans le document joint [Exercice sur les types](./exercice-types.docx).
 
 (null)=

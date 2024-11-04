@@ -1,5 +1,5 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 ```{role} html(code)
 :language: html
@@ -119,7 +119,7 @@ donc utiliser de l'UTF-8 que nous allons indiquer dans l'attribut charset:
 Comme cette balise ne contient pas de contenu, c'est une balise unique (pas de
 balise ouvrante et fermante).
 
-<!-- TODO: Créer une directive pour l'ajout d'activités de learningapps.org -->
+% TODO: Créer une directive pour l'ajout d'activités de learningapps.org
 
 ## Exercice 1
 

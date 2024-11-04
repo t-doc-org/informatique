@@ -1,5 +1,5 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Images
 
@@ -145,72 +145,72 @@ prend rapidement beaucoup de place.
 </style>
 
 <table class="table-couleur">
-    <tr>
-        <th class="cellule-couleur entete-couleur">Couleur</th>
-        <th class="cellule-couleur entete-couleur">Nom</th>
-        <th class="cellule-couleur entete-couleur">Code hexadécimal</th>
-        <th class="cellule-couleur entete-couleur">Code décimal (R,G,B)</th>
-    </tr>
-    <tr>
-        <td class="cellule-couleur" style="background-color: #000000;"></td>
-        <td class="cellule-couleur">Black</td>
-        <td class="cellule-couleur">#000000</td>
-        <td class="cellule-couleur">(0, 0, 0)</td>
-    </tr>
-    <tr>
-        <td class="cellule-couleur" style="background-color: #FFFFFF;"></td>
-        <td class="cellule-couleur">White</td>
-        <td class="cellule-couleur">#FFFFFF</td>
-        <td class="cellule-couleur">(255, 255, 255)</td>
-    </tr>
-    <tr>
-        <td class="cellule-couleur" style="background-color: #FF0000;"></td>
-        <td class="cellule-couleur">Red</td>
-        <td class="cellule-couleur">#FF0000</td>
-        <td class="cellule-couleur">(255, 0, 0)</td>
-    </tr>
-    <tr>
-        <td class="cellule-couleur" style="background-color: #00FF00;"></td>
-        <td class="cellule-couleur">Lime</td>
-        <td class="cellule-couleur">#00FF00</td>
-        <td class="cellule-couleur">(0, 255, 0)</td>
-    </tr>
-    <tr>
-        <td class="cellule-couleur" style="background-color: #0000FF;"></td>
-        <td class="cellule-couleur">Blue</td>
-        <td class="cellule-couleur">#0000FF</td>
-        <td class="cellule-couleur">(0, 0, 255)</td>
-    </tr>
-    <tr>
-        <td class="cellule-couleur" style="background-color: #FFFF00;"></td>
-        <td class="cellule-couleur">Yellow</td>
-        <td class="cellule-couleur">#FFFF00</td>
-        <td class="cellule-couleur">(255, 255, 0)</td>
-    </tr>
-    <tr>
-        <td class="cellule-couleur" style="background-color: #00FFFF;"></td>
-        <td class="cellule-couleur">Cyan</td>
-        <td class="cellule-couleur">#00FFFF</td>
-        <td class="cellule-couleur">(0, 255, 255)</td>
-    </tr>
-    <tr>
-        <td class="cellule-couleur" style="background-color: #FF00FF;"></td>
-        <td class="cellule-couleur">Magenta</td>
-        <td class="cellule-couleur">#FF00FF</td>
-        <td class="cellule-couleur">(255, 0, 255)</td>
-    </tr>
-    <tr>
-        <td class="cellule-couleur" style="background-color: #C0C0C0;"></td>
-        <td class="cellule-couleur">Silver</td>
-        <td class="cellule-couleur">#C0C0C0</td>
-        <td class="cellule-couleur">(192, 192, 192)</td>
-    </tr>
-    <tr>
-        <td class="cellule-couleur" style="background-color: #808080;"></td>
-        <td class="cellule-couleur">Gray</td>
-        <td class="cellule-couleur">#808080</td>
-        <td class="cellule-couleur">(128, 128, 128)</td>
-    </tr>
+  <tr>
+    <th class="cellule-couleur entete-couleur">Couleur</th>
+    <th class="cellule-couleur entete-couleur">Nom</th>
+    <th class="cellule-couleur entete-couleur">Code hexadécimal</th>
+    <th class="cellule-couleur entete-couleur">Code décimal (R,G,B)</th>
+  </tr>
+  <tr>
+    <td class="cellule-couleur" style="background-color: #000000;"></td>
+    <td class="cellule-couleur">Black</td>
+    <td class="cellule-couleur">#000000</td>
+    <td class="cellule-couleur">(0, 0, 0)</td>
+  </tr>
+  <tr>
+    <td class="cellule-couleur" style="background-color: #FFFFFF;"></td>
+    <td class="cellule-couleur">White</td>
+    <td class="cellule-couleur">#FFFFFF</td>
+    <td class="cellule-couleur">(255, 255, 255)</td>
+  </tr>
+  <tr>
+    <td class="cellule-couleur" style="background-color: #FF0000;"></td>
+    <td class="cellule-couleur">Red</td>
+    <td class="cellule-couleur">#FF0000</td>
+    <td class="cellule-couleur">(255, 0, 0)</td>
+  </tr>
+  <tr>
+    <td class="cellule-couleur" style="background-color: #00FF00;"></td>
+    <td class="cellule-couleur">Lime</td>
+    <td class="cellule-couleur">#00FF00</td>
+    <td class="cellule-couleur">(0, 255, 0)</td>
+  </tr>
+  <tr>
+    <td class="cellule-couleur" style="background-color: #0000FF;"></td>
+    <td class="cellule-couleur">Blue</td>
+    <td class="cellule-couleur">#0000FF</td>
+    <td class="cellule-couleur">(0, 0, 255)</td>
+  </tr>
+  <tr>
+    <td class="cellule-couleur" style="background-color: #FFFF00;"></td>
+    <td class="cellule-couleur">Yellow</td>
+    <td class="cellule-couleur">#FFFF00</td>
+    <td class="cellule-couleur">(255, 255, 0)</td>
+  </tr>
+  <tr>
+    <td class="cellule-couleur" style="background-color: #00FFFF;"></td>
+    <td class="cellule-couleur">Cyan</td>
+    <td class="cellule-couleur">#00FFFF</td>
+    <td class="cellule-couleur">(0, 255, 255)</td>
+  </tr>
+  <tr>
+    <td class="cellule-couleur" style="background-color: #FF00FF;"></td>
+    <td class="cellule-couleur">Magenta</td>
+    <td class="cellule-couleur">#FF00FF</td>
+    <td class="cellule-couleur">(255, 0, 255)</td>
+  </tr>
+  <tr>
+    <td class="cellule-couleur" style="background-color: #C0C0C0;"></td>
+    <td class="cellule-couleur">Silver</td>
+    <td class="cellule-couleur">#C0C0C0</td>
+    <td class="cellule-couleur">(192, 192, 192)</td>
+  </tr>
+  <tr>
+    <td class="cellule-couleur" style="background-color: #808080;"></td>
+    <td class="cellule-couleur">Gray</td>
+    <td class="cellule-couleur">#808080</td>
+    <td class="cellule-couleur">(128, 128, 128)</td>
+  </tr>
 </table>
 
 En général, le code RGB est noté en hexadécimal et il est précédé d'un \#.\
@@ -218,7 +218,6 @@ Si les trois valeurs sont identiques, nous obtiendrons du gris.
 
 Sur le site suivant [Liste des couleurs](https://www.rapidtables.com/web/color/RGB_Color.html), il
 y a les références de toutes les couleurs possibles.
-
 
 ## Exercice 17
 
@@ -288,4 +287,3 @@ Quelle couleur est représentée par les codes RGB suivants?
 2. (20,200,250)
 3. (50,220,50)
 -->
-

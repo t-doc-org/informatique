@@ -1,5 +1,5 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Caractères
 
@@ -38,7 +38,6 @@ Dans ce tableau, il n'y a aucun caractère accentué, car cette norme a été
 développée pour l'anglais. Ce code a été ensuite étendu à 8 bits pour pouvoir
 coder plus de caractères. Le problème est que le code ASCII étendu n'est pas
 identique dans tous les pays.
-
 
 ## Exercice 9
 
@@ -96,7 +95,6 @@ Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
 Convertir le texte suivant écrit en code ASCII hexadécimal.
 
 4A 27 61 69 6D 65 20 6C 27 69 6E 66 6F 72 6D 61 74 69 71 75 65 21
-
 
 ```{exec} python
 :when: load

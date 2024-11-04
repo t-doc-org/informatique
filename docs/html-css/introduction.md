@@ -1,5 +1,5 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Introduction
 
@@ -33,7 +33,7 @@ correspondant à la demande au client via internet.
 4. Le navigateur va lire et interpréter le fichier HTML pour pouvoir l'afficher
 sur l'écran de l'utilisateur.
 
-<!-- TODO: Créer une directive pour l'ajout de vidéo youtube.-->
+% TODO: Créer une directive pour l'ajout de vidéo youtube.
 
 <iframe credentialless style="width: 100%; aspect-ratio: 16/9;"
   src="https://www.youtube.com/embed/dYgNvn98Nag?si=DxXE4xHKt5gmEpkF"

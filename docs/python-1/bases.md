@@ -1,5 +1,5 @@
-<!-- Copyright 2024 Caroline Blank <caro@c-space.org> -->
-<!-- SPDX-License-Identifier: CC-BY-NC-SA-4.0 -->
+% Copyright 2024 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Notions de bases
 
@@ -40,7 +40,7 @@ print("Hello World!")
 :editable:
 ```
 
-<!-- TODO: Validation de l'exercice par un vu, s'il est correctement réalisé -->
+% TODO: Validation de l'exercice par un vu, s'il est correctement réalisé
 
 ````{admonition} Solution
 :class: note dropdown
