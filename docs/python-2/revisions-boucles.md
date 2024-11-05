@@ -94,7 +94,7 @@ print("Bravo!")
 </td></tr>
 </table>
 
-## Exercice 14
+## Exercice 18
 ```{exec} python
 :linenos:
 :when: never
@@ -118,7 +118,7 @@ print("La somme est:", somme)
 ```
 ````
 
-## Exercice 15
+## Exercice 19
 
 Nous voulons créer un programme qui demande à l'utilisateur un nombre
 strictement positif. Tant que l'utilisateur entre un nombre plus petit ou égal à
@@ -155,7 +155,7 @@ print("Merci")
 ```
 ````
 
-## Exercice 16
+## Exercice 20
 
 Nous souhaitons créer un programme qui compte le temps avant qu'une bombe
 explose. Pour cela, un compte à rebours commencera à 10 et ira jusqu'à 1, puis
@@ -205,7 +205,7 @@ print("BOOM")
 ```
 ````
 
-## Exercice 17
+## Exercice 21
 
 Écrire un programme qui demande à l'utilisateur combien il y a de cantons en
 Suisse. Tant que la réponse n'est pas 26, le programme redemande une nouvelle
@@ -244,4 +244,45 @@ print("Bravo!")
 
 Améliorer le programme de l'exercice précédent en indiquant à l'utilisateur
 s'il y a plus ou moins de cantons en fonction de sa réponse.
+
+## Exercice 22
+
+Indiquer l'ordre d'exécution des lignes et faire le tableau d'états du programme
+suivant:
+
+```{exec} python
+:linenos:
+a = 0
+b = 1
+while a < 5:
+    a += 1
+    if a % 2 == 0:
+        b *= 2
+a = 1
+print(a, b)
+```
+
+
+````{admonition} Solution
+:class: note dropdown
+
+L'ordre d'exécution des ligne est le suivant:
+
+1-2-3-4-5-3-4-5-6-3-4-5-3-4-5-6-3-4-5-3-7-8
+
+| Instruction | a   | b   |
+| :---------- |:---:|:---:|
+| a = 0       | 0   | -   |
+| b = 1       | 0   | 1   |
+| a += 1      | 1   | 1   |
+| a += 1      | 2   | 1   |
+| b *= 2      | 2   | 2   |
+| a += 1      | 3   | 2   |
+| a += 1      | 4   | 2   |
+| b *= 2      | 4   | 4   |
+| a += 1      | 5   | 4   |
+| a = 1       | 1   | 4   |
+
+````
+
 

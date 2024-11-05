@@ -392,7 +392,7 @@ l'aide du message d'erreur.
 
 ## Exercice 6
 
-Faire le tableau d'état du programme suivant:
+Faire le tableau d'états du programme suivant:
 ```{exec} python
 :linenos:
 a = 8

@@ -94,9 +94,19 @@ annee = await input_line("En quelle année sommes-nous?")
 print("Tu es né.e en" annee - age "ou en" annee - age - 1)
 ```
 
+````{admonition} Solution
+:class: note dropdown
+Ligne 2: l'âge doit être un nombre entier.\
+Ligne 3: l'année doit aussi être un nombre entier.\
+Ligne 4: Il manque des virgules entre les chaînes de caractères et les nombres
+dans la parenthèse de la fonction print.
+````
+
+
 ## Exercice 9
 
-Expliquer ce que font les programmes suivants, expliquer et corriger le problème.
+Il y a des erreurs dans les programmes suivants. Expliquer et corriger le
+sproblème.
 
 1.  ```{exec} python
     :editable:
@@ -104,8 +114,15 @@ Expliquer ce que font les programmes suivants, expliquer et corriger le problèm
     # Programme qui demande son prénom à l'utilisateur
     # et lui dit bonjour en citant son prénom
     await input_line("Comment t'appelles-tu?")
-    print("Bonjour Bob")
+    print("Bonjour")
     ```
+
+    ````{admonition} Solution
+    :class: note dropdown
+    Lorsqu'on utilise la fonction input(), il est impératif de stocker la valeur
+    dans une variable, sinon le input ne sert à rien.
+    ````
+
 
 2.  ```{exec} python
     :editable:
@@ -115,6 +132,13 @@ Expliquer ce que font les programmes suivants, expliquer et corriger le problèm
     age = await input_line("Quel âge as-tu?")
     print("Dans 10 ans, tu auras", age + 10)
     ```
+
+    ````{admonition} Solution
+    :class: note dropdown
+    Lorsqu'on pose une question à l'utilisateur, la valeur retournée est une
+    chaîne de caractère. Pour pouvoir faire des opérations mathématiques avec
+    cette valeur, il est nécessaire de la convertir en int() ou en float().
+    ````
 
 
 
