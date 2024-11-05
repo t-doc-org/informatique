@@ -34,6 +34,8 @@ Le problème de cette fonction est que pour afficher la table de  multiplication
 de 6, il est nécessaire d'écrire une nouvelle fonction. Cela peut être amélioré
 en utilisant des paramètres.
 
+## Fonctions avec paramètres
+
 Un **paramètre d'une fonction** est une variable définie dans la fonction qui
 recevra une valeur lors de chaque appel de la fonction. Ainsi le comportement
 d'une fonction varie suivant les valeurs de ses paramètres.
@@ -74,11 +76,14 @@ La fonction ainsi écrite affiche le discriminant, mais il n'est pas possible
 d'utiliser la valeur. Ce qui pose problème pour calculer les solutions si
 elle(s) existe(nt).
 
+## Fonctions avec valeur de retour
+
 La commande `return` permet de renvoyer le résultat d'une fonction et ainsi
 pouvoir le réutiliser dans la suite du programme. Pour cela, il est nécessaire
 de sauvegarder la valeur retournée dans une variable.
 
 ## Exercice 1
+
 Modifier le code de l'exemple 3, pour afficher le nombre de solution de
 l'équation. Rappel: si $\Delta < 0$, il n'y a pas de solution, si $\Delta = 0$,
 il y a une solution et si $\Delta > 0$, il y a 2 solutions.
@@ -89,7 +94,32 @@ il y a une solution et si $\Delta > 0$, il y a 2 solutions.
 # écrire le programme ici
 ```
 
+````{admonition} Solution
+:class: note dropdown
+```{exec} python
+:linenos:
+# Calcule le discriminant dans la résolution d'équation du 2e degré
+def discriminant(a, b, c):
+    return b ** 2 - 4 * a * c
+
+# Demande à l'utilisateur les valeurs des coefficients a, b et c
+a = float(await input_line("Coefficient de x^2: "))
+b = float(await input_line("Coefficient de x: "))
+c = float(await input_line("Coefficient sans partie littérale: "))
+
+delta = discriminant(a, b, c)
+
+if delta > 0:
+    print("Cette équation a deux solutions.")
+elif delta == 0:
+    print("Cette équation a une solution.")
+else:
+    print("Cette équation n'a pas de solution.")
+```
+````
+
 ## Exercice 2
+
 Compléter le code de l'exercice 1, pour calculer les solutions de l'équation.
 
 ````{tip}
@@ -103,6 +133,40 @@ from math import sqrt
 ```
 ````
 
+````{admonition} Solution
+:class: note dropdown
+```{exec} python
+:linenos:
+from math import sqrt
+
+# Calcule le discriminant dans la résolution d'équation du 2e degré
+def discriminant(a, b, c):
+    return b ** 2 - 4 * a * c
+
+# Demande à l'utilisateur les valeurs des coefficients a, b et c
+a = float(await input_line("Coefficient de x^2: "))
+b = float(await input_line("Coefficient de x: "))
+c = float(await input_line("Coefficient sans partie littérale: "))
+
+delta = discriminant(a, b, c)
+
+if delta > 0:
+    x_1 = (-b + sqrt(delta)) / (2 * a)
+    x_2 = (-b - sqrt(delta)) / (2 * a)
+    print("Cette équation a deux solutions: x_1 =", x_1, "et x_2 =", x_2)
+elif delta == 0:
+    x = -b / (2 * a)
+    print("Cette équation a une solution: x =", x)
+else:
+    print("Cette équation n'a pas de solution.")
+```
+````
+
+## Exercice 3
+
+Écrire une fonction qui permet de convertir des bits en octets et une autre
+fonction qui convertit des octets en bits.
+
 ```{exec} python
 :linenos:
 :editable:
@@ -111,7 +175,7 @@ from math import sqrt
 
 
 ````{important}
-`return` interompt la fonction. Tout ce qui se trouve dans la fonction, mais
+`return` interrompt la fonction. Tout ce qui se trouve dans la fonction, mais
 après le `return` sera ignoré.
 
 ```{exec} python
