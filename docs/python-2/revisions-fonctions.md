@@ -49,7 +49,7 @@ fonction dans le programme.
 :linenos:
 :editable:
 def salutations():
-    print("Bonjour, comment vas-tu?")
+  print("Bonjour, comment vas-tu?")
 
 # Compléter l'appel de la fonction
 ...
@@ -59,7 +59,7 @@ def salutations():
 ```{exec} python
 :linenos:
 def salutations():
-    print("Bonjour, comment vas-tu?")
+  print("Bonjour, comment vas-tu?")
 
 # Appel de la fonction
 salutations()
@@ -78,7 +78,7 @@ Appeler cette fonction 2 fois pour que le programme affiche le résultat de
 :linenos:
 :editable:
 def affiche_somme(a, b):
-    print(a + b)
+  print(a + b)
 
 # Compléter l'appel de la fonction 2 fois
 ...
@@ -88,7 +88,7 @@ def affiche_somme(a, b):
 ```{exec} python
 :linenos:
 def affiche_somme(a, b):
-    print(a + b)
+  print(a + b)
 
 # Appel de la fonction 2 fois
 affiche_somme(4, 9)
@@ -112,8 +112,8 @@ Le code donné doit ensuite pouvoir s'exécuter sans problème afin d'afficher
 
 i = 0
 while i < 20:
-    au_revoir()
-    i += 1
+  au_revoir()
+  i += 1
 ```
 
 ````{solution}
@@ -121,12 +121,12 @@ while i < 20:
 :linenos:
 # Définition de la fonction au_revoir
 def au_revoir():
-    print("À bientôt!")
+  print("À bientôt!")
 
 i = 0
 while i < 20:
-    au_revoir()
-    i += 1
+  au_revoir()
+  i += 1
 ```
 ````
 
@@ -150,22 +150,22 @@ les prix des billets pour tous les âges de 1 à 70 ans.
 ...
 
 for a in range(1, 71):
-    affiche_prix_billet(a)
+  affiche_prix_billet(a)
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
 def affiche_prix_billet(age):
-    if a < 12:
-        print(10)
-    elif a >= 65:
-        print(14)
-    else:
-        print(16)
+  if a < 12:
+    print(10)
+  elif a >= 65:
+    print(14)
+  else:
+    print(16)
 
 for a in range(1, 71):
-    affiche_prix_billet(a)
+  affiche_prix_billet(a)
 ```
 ````
 
@@ -177,10 +177,10 @@ suivant:
 ```{exec} python
 :linenos:
 def salutations(prenom):
-    print("Bonjour", prenom)
+  print("Bonjour", prenom)
 
 def au_revoir():
-    print("Au revoir à tous!")
+  print("Au revoir à tous!")
 
 salutations("Bob")
 salutations("Alice")

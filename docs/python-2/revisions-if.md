@@ -34,7 +34,7 @@ Le bloc d'instructions ne sera exécuté que si la condition est vraie.
 print("Début")
 meteo = "soleil"
 if meteo == "pluie":
-    print("Je prends un parapluie.")
+  print("Je prends un parapluie.")
 print("Fin")
 ```
 
@@ -57,9 +57,9 @@ sinon ce sera le bloc d'instructions du `else` qui sera exécuté.
 :editable:
 moyenne = 5
 if moyenne >= 4:
-    print("Moyenne suffisante")
+  print("Moyenne suffisante")
 else:
-    print("Moyenne insuffisante")
+  print("Moyenne insuffisante")
 ```
 
 Dans l'exemple ci-dessus, soit la moyenne est suffisante (moyenne supérieure ou
@@ -82,13 +82,13 @@ Certaines situations nécessitent de distinguer plus qu'un ou deux cas.
 type_film = "comédie"
 
 if type_film == "action":
-    print("Explosions et des cascades de folie!")
+  print("Explosions et des cascades de folie!")
 elif type_film == "comédie":
-    print("Mort de rire!")
+  print("Mort de rire!")
 elif type_film == "horreur":
-    print("Terrifiant!")
+  print("Terrifiant!")
 else:
-    print("Je ne connais pas.")
+  print("Je ne connais pas.")
 ```
 
 Dans l'exemple ci-dessus, il y a le choix entre trois types de films (action,
@@ -101,9 +101,9 @@ comédie et horreur). Le branchement `else` gérera tous les autres cas.
 :linenos:
 age = int(input("Quel âge as-tu? "))
 if age >= 18 :
-    print("Tu es majeur.")
+  print("Tu es majeur.")
 else :
-    print("Tu es mineur.")
+  print("Tu es mineur.")
 ```
 
 1. Quel message sera affiché si l'utilisateur entre 21?
@@ -117,9 +117,9 @@ Vérifie tes réponses en exécutant le code.
 :linenos:
 age = int(await input_line("Quel âge as-tu? "))
 if age >= 18 :
-    print("Tu es majeur.")
+  print("Tu es majeur.")
 else :
-    print("Tu es mineur.")
+  print("Tu es mineur.")
 ```
 ````
 
@@ -142,11 +142,11 @@ sys.stdout = StringIO()
 :linenos:
 x = 2
 if x <= -1 :
-    print(2 * x + 1)
+  print(2 * x + 1)
 elif x <=3 :
-    print(-x + 2)
+  print(-x + 2)
 else :
-    print(2 * x - 5)
+  print(2 * x - 5)
 ```
 
 ```{exec} python
@@ -157,12 +157,12 @@ else :
 s = sys.stdout.getvalue().rstrip()
 sys.stdout = old_stdout
 while True:
-    resp = await input_line("Que va afficher ce programme?")
-    if resp == s: break
-    if resp.replace(" ", "") == "-x+2":
-        print("\x0cIl faut remplacer x par sa valeur.")
-    else:
-        print("\x0cEssaie encore.")
+  resp = await input_line("Que va afficher ce programme?")
+  if resp == s: break
+  if resp.replace(" ", "") == "-x+2":
+    print("\x0cIl faut remplacer x par sa valeur.")
+  else:
+    print("\x0cEssaie encore.")
 print("\x0cBravo!")
 ```
 
@@ -174,11 +174,11 @@ print("\x0cBravo!")
     # Compléter le programme
     a = ...
     if ... :
-        print("a est nul.")
+      print("a est nul.")
     elif ... :
-        print("a est plus petit que 0.")
+      print("a est plus petit que 0.")
     else:
-        print("a est ...")
+      print("a est ...")
     ```
 
     Tester la justesse de votre code avec différentes valeurs de a.
@@ -189,11 +189,11 @@ print("\x0cBravo!")
     :linenos:
     a = ...                                 # choisir la valeur de a
     if a == 0 :                             # a == 0 pour la comparaison
-        print("a est nul.")
+      print("a est nul.")
     elif a < 0 :
-        print("a est plus petit que 0.")
+      print("a est plus petit que 0.")
     else:
-        print("a est plus grand que 0")
+      print("a est plus grand que 0")
     ```
     ````
 
@@ -204,9 +204,9 @@ print("\x0cBravo!")
     a = ...
     b = ...
     if ... :                                        # tester que b n'est pas nul
-        print(a / b)
+      print(a / b)
     else:
-        print("La division par 0 est impossible.")
+      print("La division par 0 est impossible.")
     ```
 
     Tester la justesse de votre code avec différentes valeurs de a et de b.
@@ -218,9 +218,9 @@ print("\x0cBravo!")
     a = ...                                         # choisir la valeur de a
     b = ...                                         # choisir la valeur de b
     if b != 0 :                                     # tester que b n'est pas nul
-        print(a / b)
+      print(a / b)
     else:
-        print("La division par 0 est impossible.")
+      print("La division par 0 est impossible.")
     ```
 
 ## Exercice 13
@@ -253,9 +253,9 @@ nb_canettes = int(await input_line("Nombre de canettes de Red Bull à acheter?")
 prix_unitaire = 1.5
 nb_canettes = int(await input_line("Nombre de canettes de Red Bull à acheter?"))
 if nb_canettes < 0:
-    print("La quantité doit être un nombre positif.")
+  print("La quantité doit être un nombre positif.")
 else:
-    print("Prix à payer:", nb_canettes * prix_unitaire, "CHF.")
+  print("Prix à payer:", nb_canettes * prix_unitaire, "CHF.")
 ```
 ````
 
@@ -286,11 +286,11 @@ Sinon
 :linenos:
 age = int(await input_line("Quel âge as-tu?"))
 if  age < 16:
-    print("Tu ne peux pas acheter d'alcool.")
+  print("Tu ne peux pas acheter d'alcool.")
 elif age < 18:
-    print("Tu peux acheter de la bière et du vin.")
+  print("Tu peux acheter de la bière et du vin.")
 else:
-    print("Tu peux acheter de l'alcool.")
+  print("Tu peux acheter de l'alcool.")
 ```
 ````
 
@@ -310,13 +310,13 @@ Voici trois programmes:
 :linenos:
 x = -4
 if x < 0:
-    x += 7
+  x += 7
 if x < 5:
-    x *= 4
+  x *= 4
 if x < 10:
-    x -= 6
+  x -= 6
 else:
-    x = 1000
+  x = 1000
 print(x)
 ```
 
@@ -326,13 +326,13 @@ print(x)
 :linenos:
 x = -4
 if x < 0:
-    x += 7
+  x += 7
 elif x < 5:
-    x *= 4
+  x *= 4
 elif x < 10:
-    x -= 6
+  x -= 6
 else:
-    x = 1000
+  x = 1000
 print(x)
 ```
 
@@ -342,13 +342,13 @@ print(x)
 :linenos:
 x = -4
 if x < 0:
-    x += 7
-    if x < 5:
-        x *= 4
-        if x < 10:
-            x -= 6
+  x += 7
+  if x < 5:
+    x *= 4
+    if x < 10:
+      x -= 6
 else:
-    x = 1000
+  x = 1000
 print(x)
 ```
 
@@ -417,11 +417,11 @@ différentes valeurs pour trouver et corriger l'erreur.
 :editable:
 age = 18
 if age >= 18:
-    print("Tu payes le prix adulte.")
+  print("Tu payes le prix adulte.")
 elif age >= 65:
-    print("Tu payes le prix retraité")
+  print("Tu payes le prix retraité")
 else:
-    print("Tu payes le prix enfant.")
+  print("Tu payes le prix enfant.")
 ```
 
 ```{solution}

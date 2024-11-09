@@ -15,22 +15,23 @@ type de données qu'il contient (`.txt`, `.docx`, `.pdf`, `.png`, `.jpg`, `.mp3`
 ```{tip}
 Pour retrouver facilement ses documents:
 
-1. Utiliser une hiérarchie de dossiers adéquate.\
-Exemples: 1ère année, 2e année, maths, informatique, programmation, bases de
-données
-2. Choisir des noms de fichiers qui permettent de savoir ce qu'ils contiennent.\
-Exemples: ex1, théorie, exercices
+1.  Utiliser une hiérarchie de dossiers adéquate.\
+    Exemples: 1ère année, 2e année, maths, informatique, programmation, bases de
+    données
+2.  Choisir des noms de fichiers qui permettent de savoir ce qu'ils
+    contiennent.\
+    Exemples: ex1, théorie, exercices
 ```
 
 Il existe 3 manières d'enregistrer des données:
 
-1. Le **stockage** est l'enregistrement des fichiers sous forme de données
-binaires sur un support physique (disque dur, clé USB, carte SSD, etc.).
-2. La **sauvegarde** (backup en anglais) est une copie des données pertinentes à
-garder sous la main pour une restauration (restore en anglais) rapide en cas de
-besoin.
-3. L'**archivage** est l'enregistrement de fichiers pour des rétentions longues
-à conserver, en général, pour des raisons légales.
+1.  Le **stockage** est l'enregistrement des fichiers sous forme de données
+    binaires sur un support physique (disque dur, clé USB, carte SSD, etc.).
+2.  La **sauvegarde** (backup en anglais) est une copie des données pertinentes
+    à garder sous la main pour une restauration (restore en anglais) rapide en
+    cas de besoin.
+3.  L'**archivage** est l'enregistrement de fichiers pour des rétentions longues
+    à conserver, en général, pour des raisons légales.
 
 Les sauvegardes sont importantes, car les pertes de données complètes ou
 partielles peuvent arriver à tout moment. En voici quelques exemples:
@@ -71,14 +72,14 @@ faciliter leur analyse. Une donnée est représentée par une paire
 Un **tableau** est une structure permettant de représenter un ensemble de
 données sous forme de **lignes** et **colonnes**:
 - Un tableau (ou table) regroupe les données d'un ensemble **d'entités** de
-même nature qui partage le même ensemble de **propriétés**.\
-Exemples: des utilisateurs, des jeux, des élèves, des livres.
+  même nature qui partage le même ensemble de **propriétés**.\
+  Exemples: des utilisateurs, des jeux, des élèves, des livres.
 - Une colonne du tableau correspond à **une et une seule propriété** commune aux
-entités. Une colonne est caractérisée par son nom qui désigne la propriété
-concernée.
+  entités. Une colonne est caractérisée par son nom qui désigne la propriété
+  concernée.
 - Une ligne du tableau correspond à **une et une seule entité** et est formée
-de la liste des valeurs associées à chacune des propriétés pour l'entité
-concernée.
+  de la liste des valeurs associées à chacune des propriétés pour l'entité
+  concernée.
 
 ```{image} images/tableau.png
 :alt: Exemple de tableau
@@ -92,7 +93,7 @@ sa structure et son contenu. Il existe différents types de fichiers texte qui
 permettent cela, notamment les formats **CSV**, **XML** et **JSON**.
 
 **CSV**[^sn1] est l'abréviation pour valeurs séparées par des virgules.
-[^sn1]: Coma Separated Values
+[^sn1]: Comma Separated Values
 
 Chaque ligne du fichier CSV correspond à une ligne de la table. La première
 ligne du fichier énumère le nom des colonnes. Chaque ligne suivante du fichier
@@ -107,8 +108,8 @@ Müller, Max, 29.02.2008, 2F7
 Perroud, Marie, 01.11.2007, 2F8
 ```
 
-**XML**[^sn2] est un langage de description de données appartenant à la même famille
-que le HTML.
+**XML**[^sn2] est un langage de description de données appartenant à la même
+famille que le HTML.
 [^sn2]: Extensible Markup Language
 
 La structure est définie par des balises dont les noms peuvent être librement
@@ -118,30 +119,30 @@ choisis.
 :caption: eleves.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <eleves>
-    <eleve id="0">
-        <nom>Dupont</nom>
-        <prenom>Bob</prenom>
-        <naissance>15.09.2007</naissance>
-        <classe>2F8</classe>
-    <eleve>
-    <eleve id="1">
-        <nom>Marin</nom>
-        <prenom>Amandine</prenom>
-        <naissance>01.01.2008</naissance>
-        <classe>2F7</classe>
-    <eleve>
-    <eleve id="2">
-        <nom>Müller</nom>
-        <prenom>Max</prenom>
-        <naissance>29.02.2008</naissance>
-        <classe>2F7</classe>
-    <eleve>
-    <eleve id="3">
-        <nom>Perroud</nom>
-        <prenom>Marie</prenom>
-        <naissance>01.11.2007</naissance>
-        <classe>2F8</classe>
-    <eleve>
+  <eleve id="0">
+    <nom>Dupont</nom>
+    <prenom>Bob</prenom>
+    <naissance>15.09.2007</naissance>
+    <classe>2F8</classe>
+  <eleve>
+  <eleve id="1">
+    <nom>Marin</nom>
+    <prenom>Amandine</prenom>
+    <naissance>01.01.2008</naissance>
+    <classe>2F7</classe>
+  <eleve>
+  <eleve id="2">
+    <nom>Müller</nom>
+    <prenom>Max</prenom>
+    <naissance>29.02.2008</naissance>
+    <classe>2F7</classe>
+  <eleve>
+  <eleve id="3">
+    <nom>Perroud</nom>
+    <prenom>Marie</prenom>
+    <naissance>01.11.2007</naissance>
+    <classe>2F8</classe>
+  <eleve>
 <eleves>
 ```
 
@@ -152,33 +153,29 @@ JavaScript.
 ```{code-block} javascript
 :caption: eleves.json
 [
-    {
-        "nom": "Dupont",
-        "prenom": "Bob",
-        "naissance": "15.09.2007",
-        "classe": "2F8"
-    },
-    {
-        "nom": "Marin",
-        "prenom": "Amandine",
-        "naissance": "01.01.2008",
-        "classe": "2F7"
-    },
-    {
-        "nom": "Müller",
-        "prenom": "Max",
-        "naissance": "29.02.2008",
-        "classe": "2F7"
-    },
-    {
-        "nom": "Perroud",
-        "prenom": "Marie",
-        "naissance": "01.11.2007",
-        "classe": "2F8"
-    }
+  {
+    "nom": "Dupont",
+    "prenom": "Bob",
+    "naissance": "15.09.2007",
+    "classe": "2F8"
+  },
+  {
+    "nom": "Marin",
+    "prenom": "Amandine",
+    "naissance": "01.01.2008",
+    "classe": "2F7"
+  },
+  {
+    "nom": "Müller",
+    "prenom": "Max",
+    "naissance": "29.02.2008",
+    "classe": "2F7"
+  },
+  {
+    "nom": "Perroud",
+    "prenom": "Marie",
+    "naissance": "01.11.2007",
+    "classe": "2F8"
+  }
 ]
 ```
-
-
-
-

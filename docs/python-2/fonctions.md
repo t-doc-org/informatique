@@ -99,7 +99,7 @@ il y a une solution et si $\Delta > 0$, il y a 2 solutions.
 :linenos:
 # Calcule le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
-    return b ** 2 - 4 * a * c
+  return b ** 2 - 4 * a * c
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
 a = float(await input_line("Coefficient de x^2: "))
@@ -109,11 +109,11 @@ c = float(await input_line("Coefficient sans partie littérale: "))
 delta = discriminant(a, b, c)
 
 if delta > 0:
-    print("Cette équation a deux solutions.")
+  print("Cette équation a deux solutions.")
 elif delta == 0:
-    print("Cette équation a une solution.")
+  print("Cette équation a une solution.")
 else:
-    print("Cette équation n'a pas de solution.")
+  print("Cette équation n'a pas de solution.")
 ```
 ````
 
@@ -139,7 +139,7 @@ from math import sqrt
 
 # Calcule le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
-    return b ** 2 - 4 * a * c
+  return b ** 2 - 4 * a * c
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
 a = float(await input_line("Coefficient de x^2: "))
@@ -149,14 +149,14 @@ c = float(await input_line("Coefficient sans partie littérale: "))
 delta = discriminant(a, b, c)
 
 if delta > 0:
-    x_1 = (-b + sqrt(delta)) / (2 * a)
-    x_2 = (-b - sqrt(delta)) / (2 * a)
-    print("Cette équation a deux solutions: x_1 =", x_1, "et x_2 =", x_2)
+  x_1 = (-b + sqrt(delta)) / (2 * a)
+  x_2 = (-b - sqrt(delta)) / (2 * a)
+  print("Cette équation a deux solutions: x_1 =", x_1, "et x_2 =", x_2)
 elif delta == 0:
-    x = -b / (2 * a)
-    print("Cette équation a une solution: x =", x)
+  x = -b / (2 * a)
+  print("Cette équation a une solution: x =", x)
 else:
-    print("Cette équation n'a pas de solution.")
+  print("Cette équation n'a pas de solution.")
 ```
 ````
 
@@ -171,7 +171,6 @@ fonction qui convertit des octets en bits.
 # Écrire le programme ici
 ```
 
-
 ````{important}
 `return` interrompt la fonction. Tout ce qui se trouve dans la fonction, mais
 après le `return` sera ignoré.
@@ -179,8 +178,8 @@ après le `return` sera ignoré.
 ```{exec} python
 :linenos:
 def double(x):
-    return 2*x
-    print("Ce texte ne s'affichera pas.")
+  return 2*x
+  print("Ce texte ne s'affichera pas.")
 
 print(double(5))
 print("Fin du programme")

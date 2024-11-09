@@ -14,9 +14,9 @@ La boucle 'for' permet de répéter un bloc d'instructions un nombre de fois con
 ```{exec} python
 :when: never
 for _ in range(nb_repetitions):
-    instruction 1
-    instruction 2
-    ...
+  instruction 1
+  instruction 2
+  ...
 ```
 
 <table><tr style="text-align: center">
@@ -27,7 +27,7 @@ for _ in range(nb_repetitions):
 :linenos:
 :editable:
 for i in range(5):
-    print(i)
+  print(i)
 ```
 
 </td><td>
@@ -57,9 +57,9 @@ d'instructions tant qu'une condition est vraie.
 ```{exec} python
 :when: never
 while condition:
-    instruction 1
-    instruction 2
-    ...
+  instruction 1
+  instruction 2
+  ...
 ```
 
 <table><tr style="text-align: center">
@@ -72,8 +72,8 @@ while condition:
 nb_points = 0
 max = 10
 while nb_points < max:
-    print("Points:", nb_points)
-    nb_points += 3
+  print("Points:", nb_points)
+  nb_points += 3
 print("Bravo!")
 ```
 
@@ -92,7 +92,7 @@ print("Bravo!")
 :when: never
 somme = 0
 for nombre in range(6):
-    somme += nombre
+  somme += nombre
 print("La somme est:", somme)
 ```
 
@@ -104,7 +104,7 @@ Vérifie ta réponse en exécutant le code.
 :linenos:
 somme = 0
 for nombre in range(6):
-    somme += nombre
+  somme += nombre
 print("La somme est:", somme)
 ```
 ````
@@ -113,7 +113,7 @@ print("La somme est:", somme)
 
 Nous voulons créer un programme qui demande à l'utilisateur un nombre
 strictement positif. Tant que l'utilisateur entre un nombre plus petit ou égal à
- 0, alors le programme devra lui redemander d'entrer un nouveau nombre.
+0, alors le programme devra lui redemander d'entrer un nouveau nombre.
 
 Écrire un programme qui correspond à l'algorithme suivant:
 
@@ -139,8 +139,8 @@ print("Merci")
 :linenos:
 n = int(await input_line("Entrer un nombre strictement positif: "))
 while n <= 0:
-    print("Le nombre doit être strictement positif!")
-    n = int(await input_line("Entrer un nombre strictement positif: "))
+  print("Le nombre doit être strictement positif!")
+  n = int(await input_line("Entrer un nombre strictement positif: "))
 print("Merci")
 ```
 ````
@@ -188,8 +188,8 @@ BOOM
 :linenos:
 compte_a_rebours = 10
 while compte_a_rebours > 0:
-    print(compte_a_rebours)
-    compte_a_rebours -= 1
+  print(compte_a_rebours)
+  compte_a_rebours -= 1
 print("BOOM")
 ```
 ````
@@ -223,7 +223,7 @@ Bravo!
 :linenos:
 nb_cantons = int(await input_line("Combien y a-t-il de cantons en Suisse?"))
 while nb_cantons != 26:
-    nb_cantons = int(await input_line("Faux, essaie encore!"))
+  nb_cantons = int(await input_line("Faux, essaie encore!"))
 print("Bravo!")
 ```
 ````

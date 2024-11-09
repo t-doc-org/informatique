@@ -91,21 +91,21 @@ select * from canton;
 :name: sql-canton
 :then: sql-canton-select
 create table canton (
-    nom text not null,
-    abr text not null,
-    chef_lieu text not null,
-    nb_communes int not null,
-    population int not null,
-    superficie decimal(6,2) not null
+  nom text not null,
+  abr text not null,
+  chef_lieu text not null,
+  nb_communes int not null,
+  population int not null,
+  superficie decimal(6,2) not null
 );
 insert into canton values
-    ('Fribourg', 'FR', 'Fribourg', 126, 334465, 1670.7),
-    ('Genève', 'GE', 'Genève', 45, 514114, 282.48),
-    ('Berne', 'BE', 'Berne', 335, 1051437, 5959.44),
-    ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729),
-    ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2),
-    ('Grison', 'GR', 'Coire', 101, 202538, 7105.44),
-    ('Uri', 'UR', 'Altdorf', 19, 37317, 1076.57);
+  ('Fribourg', 'FR', 'Fribourg', 126, 334465, 1670.7),
+  ('Genève', 'GE', 'Genève', 45, 514114, 282.48),
+  ('Berne', 'BE', 'Berne', 335, 1051437, 5959.44),
+  ('Zurich', 'ZH', 'Zurich', 160, 1579967, 1729),
+  ('Tessin', 'TI', 'Bellinzone', 106, 354023, 2812.2),
+  ('Grison', 'GR', 'Coire', 101, 202538, 7105.44),
+  ('Uri', 'UR', 'Altdorf', 19, 37317, 1076.57);
 ```
 ````
 
@@ -255,21 +255,21 @@ pays.
 :name: sql-pays
 :when: never
 create table pays (
-    nom text not null,
-    abr text not null,
-    prefixe text not null,
-    capitale text not null,
-    population int not null,
-    nourriture text
+  nom text not null,
+  abr text not null,
+  prefixe text not null,
+  capitale text not null,
+  population int not null,
+  nourriture text
 );
 insert into pays values
-    ('Suisse', 'CH', '+41', 'Zurich', 8776000, 'fondue'),
-    ('France', 'FR', '+33', 'Paris', 67970000, null),
-    ('Allemagne', 'AL', '+49', 'Berlin', 83800000, null),
-    ('Italie', 'IT', '+39', 'Rome', 58940000, null),
-    ('Autriche', 'AT', '+43', 'Vienne', 9042000, 'Kaiserschmarrn'),
-    ('Yougoslavie', 'YU', '+38', 'Belgrade', 10656929, null),
-    ('Lichtenstein', 'LI', '+423', 'Vaduz', 39327, null);
+  ('Suisse', 'CH', '+41', 'Zurich', 8776000, 'fondue'),
+  ('France', 'FR', '+33', 'Paris', 67970000, null),
+  ('Allemagne', 'AL', '+49', 'Berlin', 83800000, null),
+  ('Italie', 'IT', '+39', 'Rome', 58940000, null),
+  ('Autriche', 'AT', '+43', 'Vienne', 9042000, 'Kaiserschmarrn'),
+  ('Yougoslavie', 'YU', '+38', 'Belgrade', 10656929, null),
+  ('Lichtenstein', 'LI', '+423', 'Vaduz', 39327, null);
 ```
 
 ```{exec} sql
@@ -516,8 +516,8 @@ select * from contact limit 4;
     ```{exec} sql
     :after: sql-contact
     select * from contact
-        where sexe = 'M' and statut = 'célibataire'
-        and code_postal like '12%';
+      where sexe = 'M' and statut = 'célibataire'
+      and code_postal like '12%';
     ```
     ````
 
@@ -533,8 +533,8 @@ select * from contact limit 4;
     ```{exec} sql
     :after: sql-contact
     select * from contact
-        where sexe = 'F' and statut = 'divorcé'
-        and naissance between '1984-%' and '1994-%';
+      where sexe = 'F' and statut = 'divorcé'
+      and naissance between '1984-%' and '1994-%';
     ```
     ````
 
