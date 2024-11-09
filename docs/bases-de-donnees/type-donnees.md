@@ -56,7 +56,8 @@ Les nombres réels:
 % TODO: Remplacer le pdf par un pdf éditable avec ouverture directement dans
 %       le browser
 
-Remplir le tableau dans le document joint [Exercice sur les types](./exercice-types.docx).
+Remplir le tableau dans le document joint
+[Exercice sur les types](exercice-types.docx).
 
 (null)=
 ## Valeur null

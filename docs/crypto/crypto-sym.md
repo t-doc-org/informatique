@@ -25,7 +25,7 @@ d'origine.
 
 ### Scytale
 
-<table><tr><td valign="top">
+<table><tr style="vertical-align: top"><td>
 
 Ce procédé était déjà utilisé pendant l'Antiquité par les Spartes. La scytale
 est un morceau de bois autour duquel est entouré une bande de cuir ou de
@@ -76,10 +76,10 @@ V   L   L   E   N   R
 Un texte a été chiffré avec le procédé du Chiffre de Rail Fence avec comme
 clé de chiffrement 2.\
 Déchiffrer le texte suivant:
+
 <center>LCYTG AHEYE RQESF CLAEH FRRAR PORPI SMTIU ETAIE DCIFE</center>
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 Il y 45 caractères $45 : 2 = 22.5$. Il y aura 23 caractères sur la première
 ligne et 22 sur la deuxième.
 
@@ -116,8 +116,7 @@ trois positions):
 
 <center>La crypto, c'est sympa!</center>
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 Il faut effectuer un décalage de 3 positions pour chaque lettre:\
 l -> O, a -> D, c -> F, ...
 
@@ -131,8 +130,7 @@ c'est-à-dire avec comme clé de chiffrement un décalage de trois positions.
 
 <center>WHAWH FRGHD YHFOH FKLII UHGHF HVDU</center>
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 Un décalage de 3 positions vers la droite a été utilisé pour coder, il faut
 donc faire une décalage vers la gauche de 3 positions pour décoder:\
 W -> t, H -> e, A -> x, ...
@@ -279,8 +277,7 @@ la clé de chiffrement est **informatique**:
 
 <center>ARXOD QONDH YXWV</center>
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 Pour déterminer le message en clair, il faut compléter le tableau suivant:
 1. Noter la clé et le texte chiffré.
 2. Compter le décalage de chaque lettre du mot informatique par rapport à la

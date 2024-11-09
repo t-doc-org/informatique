@@ -40,11 +40,11 @@ Tout le code HTML doit être inséré dans une balise nommée html:
 `<html> ... </html>`.
 La balise html contient en général deux autres balises:
 - `<head> ... </head>`: entête du document, elle contient différentes
-informations concernant le document (titre de la page, type d'encodage, lien
-vers le fichier CSS, etc.). Ces informations ne seront pas affichées à l'écran à
-l'exception du titre affiché sur l'onglet de la page.
+  informations concernant le document (titre de la page, type d'encodage, lien
+  vers le fichier CSS, etc.). Ces informations ne seront pas affichées à l'écran
+  à l'exception du titre affiché sur l'onglet de la page.
 - `<body> ... </body>`: contient le contenu (corps) de la page. Tout ce qui sera
-dans cette partie sera affiché.
+  dans cette partie sera affiché.
 
 ```{sidebar}
 ![Balise html](images/balise-html.png)
@@ -66,8 +66,8 @@ dans cette partie sera affiché.
 ## Balise `<body>`
 
 Dans la balise `<body>`, nous allons structurer le contenu de la page. Nous
-  allons voir les balises les plus simples qui permettent de définir des titres,
-  sous-titres et paragraphes:
+allons voir les balises les plus simples qui permettent de définir des titres,
+sous-titres et paragraphes:
 - `<h1> ... </h1>`: permet de définir un titre principal
 - `<h2> ... </h2>`: permet de définir un sous-titre
 - `<h3> ... </h3>`: permet de définir un sous-sous-titre
@@ -124,6 +124,7 @@ balise ouvrante et fermante).
 ## Exercice 1
 
 But: Comprendre la structure principale d'un document HTML.
+
 <iframe credentialless style="border: 0; width: 100%; height:530px"
   src="https://learningapps.org/watch?v=pxjjqttb224"
   allowfullscreen="true" webkitallowfullscreen="true"
@@ -133,8 +134,8 @@ But: Comprendre la structure principale d'un document HTML.
 ## Hyperliens
 
 La balise `<a>` permet de créer un  hyperlien, c'est-à-dire un texte sur lequel
-  il faut cliquer pour accéder à une autre page. Il faut indiquer le lien dans
-  l'attribut href: {html}`<a href="lien">Texte</a>`
+il faut cliquer pour accéder à une autre page. Il faut indiquer le lien dans
+l'attribut href: {html}`<a href="lien">Texte</a>`
 
 ```{code} html
 :number-lines:
@@ -158,24 +159,24 @@ Pour ouvrir la nouvelle page dans un nouvel onglet, il faut ajouter l'attribut
 
 Il existe deux types de listes:
 
-1. Listes numérotées (ordered) `<ol>`
-   ```{code} html
-   :number-lines:
-   <ol>
+1.  Listes numérotées (ordered) `<ol>`
+    ```{code} html
+    :number-lines:
+    <ol>
       <li>Mettre 1L d'eau dans un casserole</li>
       <li>Porter à ébullition</li>
       ...
-   </ol>
-   ```
-2. Listes à puces (unordered) `<ul>`
-   ```{code} html
-   :number-lines:
-   <ul>
+    </ol>
+    ```
+2.  Listes à puces (unordered) `<ul>`
+    ```{code} html
+    :number-lines:
+    <ul>
       <li>Tomates</li>
       <li>Courgettes</li>
       ...
-   </ul>
-   ```
+    </ul>
+    ```
 
 [Tuto](https://developer.mozilla.org/fr/docs/Web/HTML/Element/li) listes.
 
@@ -244,20 +245,20 @@ But: Ouvrir un document HTML sur Visual Studio Code.
 [Installation de Visual Studio Code](../logiciels/vscode.md)
 
 1. Sur OneDrive, dans le dossier `Informatique/HTML-CSS`, créer un dossier
-`exercices`.
-2. Télécharger le fichier [`index.html`](./index.html) et le sauvegarder sur
-OneDrive dans le dossier créé en 1.
+   `exercices`.
+2. Télécharger le fichier [`index.html`](index.html) et le sauvegarder sur
+   OneDrive dans le dossier créé en 1.
 3. Ouvrir VSCode.
 4. Dans VSCode choisir "Ouvrir le dossier..."" et sélectionner le dossier
-`Informatique/HTML-CSS/exercices` de votre OneDrive.
-```{figure} images/ouvrir.png
-:alt: Ouvrir le dossier
-:width: 50%
-:align: center
-```
+   `Informatique/HTML-CSS/exercices` de votre OneDrive.
+   ```{figure} images/ouvrir.png
+   :alt: Ouvrir le dossier
+   :width: 50%
+   :align: center
+   ```
 5. Sélectionner le fichier `index.html` et le code HTML s'affiche.
 6. Pour voir le rendu, double-cliquer sur le fichier `index.html` de votre
-OneDrive, le fichier s'ouvrira dans le navigateur.
+   OneDrive, le fichier s'ouvrira dans le navigateur.
 
 ## Exercice 3
 
@@ -267,13 +268,13 @@ Vous voyez maintenant le code HTML et ce que la page affiche.
 1. Qu'est-ce que vous comprenez de cette page?
 2. Vous allez maintenant modifier cette page. Pour valider une modification:
     - Sauvegarder le document dans VSCode ({kbd}`ctrl` + {kbd}`s` ou
-    {kbd}`command` + {kbd}`s`).
+      {kbd}`command` + {kbd}`s`).
     - Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
-    ```{figure} images/actualiser.png
-    :alt: Actualiser la page
-    :width: 30%
-    :align: center
-    ```
+      ```{figure} images/actualiser.png
+      :alt: Actualiser la page
+      :width: 30%
+      :align: center
+      ```
 3. Modifier le titre et le premier paragraphe pour remplacer "Collège du Sud"
    par "Collège Sainte-Croix".
 4. Modifier la partie présentation pour avoir les informations qui
@@ -284,14 +285,14 @@ Vous voyez maintenant le code HTML et ce que la page affiche.
 7. Ajouter un sous-titre "Ma classe" et un paragraphe avec quelques
    informations.
 8. Ajouter une image du Collège Sainte-Croix:
-      - Créer un dossier `images` en cliquant sur l'icone "Nouveau dossier".
-        ```{figure} images/dossier.png
-        :alt: Nouveau dossier
-        :width: 40%
-        :align: center
-        ```
-      - Télécharger l'image que vous avez choisie et la sauvegarder dans le
+    - Créer un dossier `images` en cliquant sur l'icone "Nouveau dossier".
+      ```{figure} images/dossier.png
+      :alt: Nouveau dossier
+      :width: 40%
+      :align: center
+      ```
+    - Télécharger l'image que vous avez choisie et la sauvegarder dans le
       dossier `images`.
-      - Noter le code HTML nécessaire. (cf. [](#images))
-      - Ne pas oublier d'indiquer la source.
+    - Noter le code HTML nécessaire. (cf. [](#images))
+    - Ne pas oublier d'indiquer la source.
 9. Faire un tableau de votre horaire.

@@ -78,7 +78,7 @@ binaire) afin de la rendre compréhensible par l'utilisateur (une image qui
 s'affiche sur l'écran).
 
 % TODO: À Ajouter lorsque la section sera créée.
-% Nous verrons cela plus en détail dans la section [](./encodage-information.md).
+% Nous verrons cela plus en détail dans la section [](encodage-information.md).
 
 ## Vidéo
 

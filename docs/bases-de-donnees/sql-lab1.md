@@ -4,7 +4,7 @@
 # SQL Lab 1
 
 Le but de cette section est d'entraîner les concepts vus dans la section
-[](./sql.md).
+[](sql.md).
 
 Voici la table `canton` contenant certaines informations de différents cantons
 suisses.
@@ -30,8 +30,7 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     select * from canton where chef_lieu = Coire;
     ```
 
-    ````{admonition} Explication
-    :class: note dropdown
+    ````{solution} Explication
     Cette requête produit une erreur, car il manque les guillemets simples
     autour de Coire.
     ````
@@ -51,8 +50,7 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     select * from canton where abr < 'GR';
     ```
 
-    ````{admonition} Explication
-    :class: note dropdown
+    ````{solution} Explication
     Les opérateurs de comparaison pour du texte utilisent l'ordre alphabétique.\
     Exemples: 'a' < 'b' ou 'p' > 'd'
     ````
@@ -88,8 +86,7 @@ pas accepter les valeurs `null`.
 select * from canton;
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :name: sql-canton
 :then: sql-canton-select
@@ -114,143 +111,135 @@ insert into canton values
 
 ## Exercice 3
 
-1. Écrire une requête SQL qui retourne toutes les colonnes du canton dont le
-chef-lieu est Bellinzone.
+1.  Écrire une requête SQL qui retourne toutes les colonnes du canton dont le
+    chef-lieu est Bellinzone.
 
     ```{exec} sql
     :after: sql-canton
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-canton
     select * from canton where chef_lieu = 'Bellinzone';
     ```
     ````
 
-2. Écrire une requête SQL qui retourne toutes les colonnes des cantons dont la
-population est inférieure à 300'000 habitants.
+2.  Écrire une requête SQL qui retourne toutes les colonnes des cantons dont la
+    population est inférieure à 300'000 habitants.
 
     ```{exec} sql
     :after: sql-canton
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-canton
     select * from canton where population < 300000;
     ```
     ````
 
-3. Écrire une requête SQL qui retourne toutes les colonnes des cantons dans
-l'ordre alphabétique des abréviations.
+3.  Écrire une requête SQL qui retourne toutes les colonnes des cantons dans
+    l'ordre alphabétique des abréviations.
 
     ```{exec} sql
     :after: sql-canton
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-canton
     select * from canton order by abr asc;
     ```
     ````
 
-4. Écrire une requête SQL qui retourne le nom, l'abréviation et le chef-lieu des
-cantons.
+4.  Écrire une requête SQL qui retourne le nom, l'abréviation et le chef-lieu
+    des cantons.
 
     ```{exec} sql
     :after: sql-canton
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-canton
     select nom, abr, chef_lieu from canton;
     ```
 
-5. Écrire une requête SQL qui retourne le nom, l'abréviation et le chef-lieu des
-cantons ordonnés selon le nombre d'habitants du plus grand au plus petit.
+5.  Écrire une requête SQL qui retourne le nom, l'abréviation et le chef-lieu
+    des cantons ordonnés selon le nombre d'habitants du plus grand au plus
+    petit.
 
     ```{exec} sql
     :after: sql-canton
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-canton
     select nom, abr, chef_lieu from canton order by population desc;
     ```
     ````
 
-6. Écrire une requête SQL qui retourne toutes les colonnes des cantons qui ont
-plus de 100 communes et une population inférieure à 500'000 habitants.
+6.  Écrire une requête SQL qui retourne toutes les colonnes des cantons qui ont
+    plus de 100 communes et une population inférieure à 500'000 habitants.
 
     ```{exec} sql
     :after: sql-canton
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-canton
     select * from canton where nb_communes > 100 and population < 500000;
     ```
     ````
 
-7. Écrire une requête SQL qui retourne toutes les colonnes des cantons dont le
-chef-lieu est Altdorf ou le nombre de communes supérieur ou égal à 150.
+7.  Écrire une requête SQL qui retourne toutes les colonnes des cantons dont le
+    chef-lieu est Altdorf ou le nombre de communes supérieur ou égal à 150.
 
     ```{exec} sql
     :after: sql-canton
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-canton
     select * from canton where chef_lieu = 'Altdorf' or nb_communes >= 150;
     ```
     ````
 
-8. Écrire une requête SQL qui retourne le nom des cantons dont l'abréviation
-n'est pas FR.
+8.  Écrire une requête SQL qui retourne le nom des cantons dont l'abréviation
+    n'est pas FR.
 
     ```{exec} sql
     :after: sql-canton
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-canton
     select nom from canton where abr <> 'FR';
     ```
     ````
 
-9. Écrire une requête SQL qui retourne le nom et l'abréviation des cantons dont
-la population se trouve entre 300'000 et 500'000 habitants.
+9.  Écrire une requête SQL qui retourne le nom et l'abréviation des cantons dont
+    la population se trouve entre 300'000 et 500'000 habitants.
 
     ```{exec} sql
     :after: sql-canton
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-canton
     select nom, abr from canton where population between 300000 and 500000;
@@ -290,23 +279,22 @@ insert into pays values
 select * from pays;
 ```
 
-1. Afficher le contenu de la table `pays`.
+1.  Afficher le contenu de la table `pays`.
 
     ```{exec} sql
     :after: sql-pays
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-pays
     select * from pays;
     ```
     ````
 
-2. La Yougoslavie n'existe plus depuis de nombreuses années. Supprimer cette
-ligne.
+2.  La Yougoslavie n'existe plus depuis de nombreuses années. Supprimer cette
+    ligne.
 
     ```{exec} sql
     :after: sql-pays
@@ -314,8 +302,7 @@ ligne.
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :name: sql-pays-delete
     :after: sql-pays
@@ -324,8 +311,8 @@ ligne.
     ```
     ````
 
-3. Corriger les deux erreurs qui se sont produites lors de la création de la
-base de donnée.
+3.  Corriger les deux erreurs qui se sont produites lors de la création de la
+    base de donnée.
     - La capitale de la Suisse n'est pas Zurich.
     - L'abréviation de l'allemagne n'est pas **AL**, mais **DE**.
 
@@ -335,8 +322,7 @@ base de donnée.
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :name: sql-pays-update
     :after: sql-pays-delete
@@ -346,8 +332,8 @@ base de donnée.
     ```
     ````
 
-4. Compléter la colonne nourriture par un plat connu pour la France et pour
-l'Italie.
+4.  Compléter la colonne nourriture par un plat connu pour la France et pour
+    l'Italie.
 
     ```{exec} sql
     :after: sql-pays-update
@@ -355,8 +341,7 @@ l'Italie.
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :name: sql-pays-last
     :after: sql-pays-update
@@ -390,37 +375,35 @@ select * from contact limit 4;
 :class: hidden
 ```
 
-1. Rechercher l'email de toutes les personnes célibataires.
+1.  Rechercher l'email de toutes les personnes célibataires.
 
     ```{exec} sql
     :after: sql-contact
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-contact
     select email from contact where statut = 'célibataire';
     ```
     ````
 
-2. Recherche toutes les personnes qui habitent à Lausanne.
+2.  Recherche toutes les personnes qui habitent à Lausanne.
 
     ```{exec} sql
     :after: sql-contact
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-contact
     select * from contact where lieu = 'Lausanne';
     ```
     ````
 
-3. Rechercher toutes les personnes qui habitent à Val-d'Illiez.
+3.  Rechercher toutes les personnes qui habitent à Val-d'Illiez.
 
     ```{tip}
     Le guillemet simple est utilisé en SQL pour indiquer le début et la fin
@@ -435,16 +418,15 @@ select * from contact limit 4;
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-contact
     select * from contact where lieu = 'Val-d''Illiez';
     ```
     ````
 
-4. Rechercher toutes les personnes qui habitent dans la région lausannoise (le
-code postal doit commencer par 10..).
+4.  Rechercher toutes les personnes qui habitent dans la région lausannoise (le
+    code postal doit commencer par 10..).
 
     ```{exec} sql
     :after: sql-contact
@@ -464,77 +446,73 @@ code postal doit commencer par 10..).
 
     Pour trouver toutes les Laur**e** ou les Laur**a** dans la liste de
     contacts, utiliser:
+
     ```{exec} sql
     :after: sql-contact
     select * from contact where prenom like 'Laur_';
     ```
     ````
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-contact
     select * from contact where code_postal like '10%';
     ```
     ````
 
-5. Rechercher le nom, le prénom et la date de naissance de toutes les personnes
-nées en 1995.
+5.  Rechercher le nom, le prénom et la date de naissance de toutes les personnes
+    nées en 1995.
 
     ```{exec} sql
     :after: sql-contact
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-contact
     select nom, prenom, naissance from contact where naissance like '1995-%';
     ```
     ````
 
-6. Rechercher les contacts qui aiment le cinéma.
+6.  Rechercher les contacts qui aiment le cinéma.
 
     ```{exec} sql
     :after: sql-contact
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-contact
     select * from contact where interets like '%Cinéma%';
     ```
     ````
 
-7. Rechercher le nom, le prénom et la date de naissance de toutes les personnes
-nées en juin.
+7.  Rechercher le nom, le prénom et la date de naissance de toutes les personnes
+    nées en juin.
 
     ```{exec} sql
     :after: sql-contact
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-contact
     select nom, prenom, naissance from contact where naissance like '%-06-%';
     ```
     ````
 
-8. Rechercher tous les hommes qui sont célibataires et qui habitent dans la
-région genevoise (12..).
+8.  Rechercher tous les hommes qui sont célibataires et qui habitent dans la
+    région genevoise (12..).
 
     ```{exec} sql
     :after: sql-contact
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-contact
     select * from contact
@@ -543,16 +521,15 @@ région genevoise (12..).
     ```
     ````
 
-9. Rechercher toutes les femmes qui sont divorcées et qui sont nées entre 1984
-et 1994.
+9.  Rechercher toutes les femmes qui sont divorcées et qui sont nées entre 1984
+    et 1994.
 
     ```{exec} sql
     :after: sql-contact
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-contact
     select * from contact
@@ -565,8 +542,8 @@ et 1994.
 
 Reprenons la base de données des pays de l'exercice 4.
 
-1. Ajouter une colonne `monnaie`. Pour cela, il faut utiliser l'instruction
-`alter table`. Rechercher sur le Web comment faire.
+1.  Ajouter une colonne `monnaie`. Pour cela, il faut utiliser l'instruction
+    `alter table`. Rechercher sur le Web comment faire.
 
     ```{tip}
     Utiliser une valeur par défaut pour la colonne `monnaie`.
@@ -578,8 +555,7 @@ Reprenons la base de données des pays de l'exercice 4.
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :name: sql-pays-6-1
     :after: sql-pays-last
@@ -588,7 +564,7 @@ Reprenons la base de données des pays de l'exercice 4.
     ```
     ````
 
-2. Compléter cette nouvelle colonne pour chaque pays.
+2.  Compléter cette nouvelle colonne pour chaque pays.
 
     ```{exec} sql
     :after: sql-pays-6-1
@@ -596,8 +572,7 @@ Reprenons la base de données des pays de l'exercice 4.
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :name: sql-pays-6-2
     :after: sql-pays-6-1
@@ -607,7 +582,7 @@ Reprenons la base de données des pays de l'exercice 4.
     ```
     ````
 
-3. Supprimer la colonne `nourriture`.
+3.  Supprimer la colonne `nourriture`.
 
     ```{exec} sql
     :after: sql-pays-6-2
@@ -615,8 +590,7 @@ Reprenons la base de données des pays de l'exercice 4.
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-pays-6-2
     :then: sql-pays-select

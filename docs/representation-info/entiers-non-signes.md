@@ -27,7 +27,7 @@ d'utilisation et de représentation est la base 16 (hexadécimal). Pour la base
 
 $3A7E0_{16} = 3 \cdot 16^4 + 10 \cdot 16^3 + 7 \cdot 16^2 + 14 \cdot 16^1 + 0 \cdot 16^0$
 
-```{Important}
+```{important}
 Lorsque nous utilisons une autre base que la base 10, nous écrivons la base en
 indice pour éviter toute ambiguïté.\
 $100 \neq 100_2$, l'un est 100 et l'autre 4 en base 2.

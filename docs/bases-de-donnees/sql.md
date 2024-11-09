@@ -14,9 +14,9 @@ répondant à des critères particuliers.
 Le langage SQL permet de créer des tables en spécifiant leur nom et le nom des
 différentes colonnes.
 
-Pour créer une table, il faut utiliser l'instruction `create table {nom de la table} (...)`
-suivi du nom de la table. Entre parenthèses, nous indiquons la liste des nom des
-colonnes, ainsi que leur [type](./type-donnees.md).\
+Pour créer une table, il faut utiliser l'instruction `create table {nom de la
+table} (...)` suivi du nom de la table. Entre parenthèses, nous indiquons la
+liste des nom des colonnes, ainsi que leur [type](type-donnees.md).\
 Chaque instruction doit se terminer par un point-virgule.
 
 ```{exec} sql
@@ -64,8 +64,7 @@ select * from produit;
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :name: sql-produit
 :then: sql-produit-select
@@ -115,8 +114,7 @@ lignes suivantes:
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :name: sql-produit-insert
 :after: sql-produit
@@ -164,8 +162,7 @@ select article, quantite from stock;
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :after: sql-produit-insert
 select * from produit;
@@ -179,8 +176,7 @@ select * from produit;
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :after: sql-produit-insert
 select nom from produit;
@@ -196,8 +192,7 @@ produits.
 ```
 
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :after: sql-produit-insert
 select nom, prix from produit;
@@ -249,8 +244,7 @@ Brimnes.
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :after: sql-produit-insert
 select * from produit where nom = 'Brimnes';
@@ -265,8 +259,7 @@ Ektorp.
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :after: sql-produit-insert
 select description from produit where nom = 'Ektorp';
@@ -295,8 +288,7 @@ Mettre à jour le prix du **canapé 2 places** qui ne coûte plus que 499 CHF.
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :name: sql-produit-update
 :after: sql-produit-insert
@@ -327,8 +319,7 @@ Contrôler le résultat en affichant tous les éléments de la table produit.
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :name: sql-produit-delete
 :after: sql-produit-update
@@ -353,6 +344,7 @@ nous pouvons spécifier que certaines colonnes.
 :then: sql-stock-select
 insert into stock (id, article, prix_unitaire) values (8, 'Pantalon', 20);
 ```
+
 Une colonne sans valeur contient la valeur [`null`](#null).
 
 Certaines colonnes ne doivent pas être vides sinon cela poserait un problème,
@@ -396,8 +388,7 @@ Ajouter une ligne avec vos propres informations sauf le numéro de téléphone.
 select * from eleve;
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :then: sql-eleve-select
 create table eleve (
@@ -481,8 +472,7 @@ select * from boisson;
 :then: sql-boisson-select
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :name: sql-boisson
 :then: sql-boisson-select

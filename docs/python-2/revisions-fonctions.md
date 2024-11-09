@@ -6,19 +6,19 @@
 En programmation, une fonction est un bloc de code (suite d'instructions) qui
 réalise une tâche. Nous en avons déjà rencontré plusieurs:
 
-print(...)
+`print(...)`
 : affiche ce qui est entre parenthèses sur la console.
 
-input(...)
+`input(...)`
 : demande à l'utilisateur d'entrer une donnée.
 
-int(...)
+`int(...)`
 : convertit ce qui est entre parenthèses en nombre entier.
 
-float(...)
+`float(...)`
 : convertit ce qui est entre parenthèses en nombre à virgule.
 
-range(...)
+`range(...)`
 : renvoie une liste de nombre (de 0 à la valeur entre parenthèses -1).
 
 Toutes les fonctions ci-dessus sont des fonctions intégrées, elles ont été
@@ -55,8 +55,7 @@ def salutations():
 ...
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 def salutations():
@@ -85,8 +84,7 @@ def affiche_somme(a, b):
 ...
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 def affiche_somme(a, b):
@@ -118,8 +116,7 @@ while i < 20:
     i += 1
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 # Définition de la fonction au_revoir
@@ -156,8 +153,7 @@ for a in range(1, 71):
     affiche_prix_billet(a)
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 def affiche_prix_billet(age):

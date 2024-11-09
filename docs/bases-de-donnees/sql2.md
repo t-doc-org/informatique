@@ -11,7 +11,7 @@ l'attribut `primary key` en plus de `not null`. Ainsi, il sera impossible
 d'insérer une ligne dans la table si la valeur de `no_c` existe déjà dans
 celle-ci ou si elle est `null`.
 
-<table><tr><td valign="top">
+<table><tr style="vertical-align: top"><td>
 
 ```{graphviz}
 :align: center
@@ -48,7 +48,7 @@ digraph UML_Class_diagram {
 }
 ```
 
-</td><td style="width:70%" valign="top">
+</td><td style="width: 70%">
 
 ```{exec} sql
 :then: sql-client-select
@@ -104,8 +104,7 @@ Recréer la table `produit` des exercices 1 et 2 en y ajoutant la clé primaire.
 select * from produit;
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :name: sql-produit
 :then: sql-produit-select
@@ -151,8 +150,7 @@ caractères.
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :name: sql-client
 :then: sql-client-select
@@ -200,8 +198,7 @@ select * from achat;
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :name: sql-achat
 :then: sql-achat-select
@@ -276,8 +273,7 @@ le client n°1.
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :after: sql-tables
 select nom from produit
@@ -297,8 +293,7 @@ Trier les valeurs dans l'ordre alphabétique des prénoms.
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :after: sql-tables
 select client.titre, client.prenom, client.nom from client
@@ -325,8 +320,7 @@ prénoms):
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :name: sql-ex-16-sol
 :after: sql-tables

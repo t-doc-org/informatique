@@ -22,7 +22,6 @@ Les opérateurs logiques permettent de combiner plusieurs conditions simples
 
 Le bloc d'instructions ne sera exécuté que si la condition est vraie.
 
-
 ```{figure} images/if.png
 :alt: Ordinogramme if
 :width: 300px
@@ -41,7 +40,6 @@ print("Fin")
 
 Dans l'exemple ci-dessus, il ne se passe rien, la condition n'est pas vérifiée.\
 Changer la météo en "pluie". Que se passe-t-il?
-
 
 ## Exemple avec if ... else
 
@@ -91,7 +89,6 @@ elif type_film == "horreur":
     print("Terrifiant!")
 else:
     print("Je ne connais pas.")
-
 ```
 
 Dans l'exemple ci-dessus, il y a le choix entre trois types de films (action,
@@ -114,8 +111,7 @@ else :
 3. Que se passe-t-il si l'utilisateur entre -10?
 4. Que se passe-t-il si l'utilisateur entre 17.5?
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 Vérifie tes réponses en exécutant le code.
 ```{exec} python
 :linenos:
@@ -172,8 +168,7 @@ print("\x0cBravo!")
 
 ## Exercice 9
 
-1.
-    ```{exec} python
+1.  ```{exec} python
     :linenos:
     :editable:
     # Compléter le programme
@@ -188,8 +183,7 @@ print("\x0cBravo!")
 
     Tester la justesse de votre code avec différentes valeurs de a.
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} python
     :editable:
     :linenos:
@@ -203,8 +197,7 @@ print("\x0cBravo!")
     ```
     ````
 
-2.
-    ```{exec} python
+2.  ```{exec} python
     :linenos:
     :editable:
     # Compléter le programme
@@ -218,8 +211,7 @@ print("\x0cBravo!")
 
     Tester la justesse de votre code avec différentes valeurs de a et de b.
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} python
     :linenos:
     :editable:
@@ -255,8 +247,7 @@ prix_unitaire = ...
 nb_canettes = int(await input_line("Nombre de canettes de Red Bull à acheter?"))
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 prix_unitaire = 1.5
@@ -290,8 +281,7 @@ Sinon
 ...
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 age = int(await input_line("Quel âge as-tu?"))
@@ -312,13 +302,9 @@ Voici trois programmes:
 2. Que vont-ils afficher?
 3. Faire un ordinogramme pour chacun.
 
-<table width="100%">
-<tr>
-      <th style="text-align: center">Programme 1</th>
-      <th style="text-align: center">Programme 2</th>
-      <th style="text-align: center">Programme 3</th>
-</tr>
-<tr><td>
+<table style="width: 100%"><tr style="text-align: center">
+  <th>Programme 1</th><th>Programme 2</th><th>Programme 3</th>
+</tr><tr style="vertical-align: top"><td>
 
 ```{exec} python
 :linenos:
@@ -334,7 +320,7 @@ else:
 print(x)
 ```
 
-</td><td>
+</td><td style="padding-left: 1rem">
 
 ```{exec} python
 :linenos:
@@ -350,7 +336,7 @@ else:
 print(x)
 ```
 
-</td><td>
+</td><td style="padding-left: 1rem">
 
 ```{exec} python
 :linenos:
@@ -366,19 +352,15 @@ else:
 print(x)
 ```
 
-</td></tr>
-</table>
+</td></tr></table>
 
 ## Exercice 13
 
 Que vont afficher chacun de ces programmes?
 
-<table width="100%">
-<tr>
-      <th style="width: 50% ; text-align: center">Programme 1</th>
-      <th style="text-align: center">Programme 2</th>
-</tr>
-<tr><td>
+<table style="width: 100%"><tr style="text-align: center">
+  <th style="width: 50%">Programme 1</th><th>Programme 2</th>
+</tr><tr style="vertical-align: top"><td>
 
 ```{exec} python
 :linenos:
@@ -388,7 +370,7 @@ c = 1
 print((a > b) and (b <= c))
 ```
 
-</td><td>
+</td><td style="padding-left: 1rem">
 
 ```{exec} python
 :linenos:
@@ -399,15 +381,11 @@ print((a < b) or (c == 0))
 
 ```
 
-</td></tr>
-</table>
+</td></tr></table>
 
-<table width="100%">
-<tr>
-      <th style="width: 50% ; text-align: center">Programme 3</th>
-      <th style="text-align: center">Programme 4</th>
-</tr>
-<tr><td>
+<table style="width: 100%"><tr style="text-align: center">
+  <th style="width: 50%">Programme 3</th><th>Programme 4</th>
+</tr><tr style="vertical-align: top"><td>
 
 ```{exec} python
 :linenos:
@@ -418,7 +396,7 @@ print((a < b) or (c != 0))
 
 ```
 
-</td><td>
+</td><td style="padding-left: 1rem">
 
 ```{exec} python
 :linenos:
@@ -427,8 +405,4 @@ b = 3.2
 print(not(a <= b))
 ```
 
-</td></tr>
-</table>
-
-
-
+</td></tr></table>

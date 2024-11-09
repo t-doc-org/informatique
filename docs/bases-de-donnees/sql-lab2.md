@@ -4,7 +4,7 @@
 # SQL Lab 2
 
 Le but de cette section est d'entraîner les concepts vus dans les sections
-[](./bd-relationnelle.md) et [](./sql2.md).
+[](bd-relationnelle.md) et [](sql2.md).
 
 ## Exercice 1
 
@@ -20,8 +20,7 @@ code-barre personnel. De chaque auteur, nous connaissons le nom et le prénom.
 3. Déterminer les clés primaires et étrangères.
 4. Dessiner le schéma relationnel.
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{graphviz}
 :align: center
 digraph UML_Class_diagram {
@@ -169,8 +168,7 @@ Pour tester que la table `emprunt` est correcte:
 select * from emprunt;
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} sql
 :name: sql-biblio
 :when: never
@@ -190,93 +188,87 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 :class: hidden
 ```
 
-1. Écrire une requête SQL qui retourne tous les livres.
+1.  Écrire une requête SQL qui retourne tous les livres.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select * from livre;
     ```
     ````
 
-2. Écrire une requête SQL qui retourne tous les noms des usagers.
+2.  Écrire une requête SQL qui retourne tous les noms des usagers.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select nom from usager;
     ```
     ````
 
-3. Écrire une requête SQL qui retourne tous les éditeurs sans doublons.
+3.  Écrire une requête SQL qui retourne tous les éditeurs sans doublons.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select distinct editeur from livre;
     ```
     ````
 
-4. Écrire une requête SQL qui retourne le titre et l'année des livres publiés
-avant 1980.
+4.  Écrire une requête SQL qui retourne le titre et l'année des livres publiés
+    avant 1980.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select titre, annee from livre where annee < 1980;
     ```
     ````
 
-5. Écrire une requête SQL qui retourne le titre des livres dont le titre
-commence par le mot "Astérix".
+5.  Écrire une requête SQL qui retourne le titre des livres dont le titre
+    commence par le mot "Astérix".
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select titre from livre where titre like 'Astérix%';
     ```
     ````
 
-6. Écrire une requête SQL qui retourne le titre des livres dont le titre
-contient le mot "Astérix".
+6.  Écrire une requête SQL qui retourne le titre des livres dont le titre
+    contient le mot "Astérix".
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select titre from livre where titre like '%Astérix%';
@@ -284,8 +276,8 @@ contient le mot "Astérix".
     ````
 
 
-7. Écrire une requête SQL qui retourne l'isbn des livres à rendre avant le 31
-décembre 2024.
+7.  Écrire une requête SQL qui retourne l'isbn des livres à rendre avant le 31
+    décembre 2024.
 
     ```{tip}
     Les dates se notent entre guillemets simples.
@@ -296,40 +288,37 @@ décembre 2024.
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select isbn from emprunt where retour < '2024-12-31';
     ```
     ````
 
-8. Écrire une requête SQL qui retourne le nom et le prénom de tous les auteurs
-triés par ordre alphabétique.
+8.  Écrire une requête SQL qui retourne le nom et le prénom de tous les auteurs
+    triés par ordre alphabétique.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select nom, prenom from auteur order by nom asc;
     ```
     ````
 
-9. Écrire une requête SQL qui retourne le nom, le prénom et l'adresse des usagers
-vivant à Fribourg.
+9.  Écrire une requête SQL qui retourne le nom, le prénom et l'adresse des usagers
+    vivant à Fribourg.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select nom, prenom, adresse from usager where ville = 'Fribourg';
@@ -337,15 +326,14 @@ vivant à Fribourg.
     ````
 
 10. Écrire une requête SQL qui retourne l'année et le titre des livres publiés
-entre 2012 et 2015.
+    entre 2012 et 2015.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select annee, titre from livre where annee between 2012 and 2015;
@@ -360,8 +348,7 @@ Formuler en français ce que nous cherchons avec les requêtes suivantes:
     select * from livre where titre like '%Robot%';
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     Affiche tous les livres dont le titre contient "Robot".
     ````
 
@@ -369,19 +356,17 @@ Formuler en français ce que nous cherchons avec les requêtes suivantes:
     select nom, prenom from usager where ville = 'Granges-Paccots';
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     Affiche le nom et le prénom des usagers habitant Granges-Paccots.
     ````
 
 3.  ```{code-block} sql
     select usager.nom, usager.prenom from usager
-    join emprunt on usager.code_barre = emprunt.code_barre
-    where retour < '2024-12-01'
+      join emprunt on usager.code_barre = emprunt.code_barre
+      where retour < '2024-12-01';
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     Affiche le nom et le prénom des usagers qui doivent rendre un livre avant le
     premier décembre.
     ````
@@ -390,54 +375,51 @@ Formuler en français ce que nous cherchons avec les requêtes suivantes:
 
 Pour cet exercice, il faudra utiliser des jointures de tables.
 
-1. Écrire une requête SQL qui retourne le titre des livres empruntés.
+1.  Écrire une requête SQL qui retourne le titre des livres empruntés.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select livre.titre from livre
-        join emprunt on livre.isbn = emprunt.isbn;
+      join emprunt on livre.isbn = emprunt.isbn;
     ```
     ````
 
-2. Écrire une requête SQL qui retourne le titre des livres empruntés à rendre
-après le 15 décembre.
+2.  Écrire une requête SQL qui retourne le titre des livres empruntés à rendre
+    après le 15 décembre.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select livre.titre from livre
-        join emprunt on livre.isbn = emprunt.isbn
-        where retour < '2024-12-15';
+      join emprunt on livre.isbn = emprunt.isbn
+      where retour < '2024-12-15';
     ```
     ````
 
-3. Écrire une requête SQL qui retourne le nom et le prénom des usagers qui ont
-emprunté des livres.
+3.  Écrire une requête SQL qui retourne le nom et le prénom des usagers qui ont
+    emprunté des livres.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select usager.nom, usager.prenom from usager
-        join emprunt on usager.code_barre = emprunt.code_barre;
+      join emprunt on usager.code_barre = emprunt.code_barre;
     ```
     ````
 
@@ -449,107 +431,100 @@ emprunté des livres.
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select distinct usager.nom, usager.prenom from usager
-        join emprunt on usager.code_barre = emprunt.code_barre;
+      join emprunt on usager.code_barre = emprunt.code_barre;
     ```
     ````
 
-4. Écrire une requête SQL qui retourne le nom et le prénom de l'auteur du livre
-"La Mort d'Ivan Ilitch".
+4.  Écrire une requête SQL qui retourne le nom et le prénom de l'auteur du livre
+    "La Mort d'Ivan Ilitch".
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select auteur.nom, auteur.prenom from auteur
-        join auteur_de on auteur.a_id = auteur_de.a_id
-        join livre on auteur_de.isbn = livre.isbn
-        where titre = 'La Mort d''Ivan Ilitch'
+      join auteur_de on auteur.a_id = auteur_de.a_id
+      join livre on auteur_de.isbn = livre.isbn
+      where titre = 'La Mort d''Ivan Ilitch';
     ```
     ````
 
-5. Écrire une requête SQL qui retourne le nom et le prénom de l'usager qui a
-emprunté "Jack Barron et l'Éternité".
+5.  Écrire une requête SQL qui retourne le nom et le prénom de l'usager qui a
+    emprunté "Jack Barron et l'Éternité".
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select usager.nom, usager.prenom from usager
-        join emprunt on usager.code_barre = emprunt.code_barre
-        join livre on emprunt.isbn = livre.isbn
-        where titre = 'Jack Barron et l''Éternité'
+      join emprunt on usager.code_barre = emprunt.code_barre
+      join livre on emprunt.isbn = livre.isbn
+      where titre = 'Jack Barron et l''Éternité';
     ```
     ````
 
-6. Écrire une requête SQL qui retourne le titre et la date de retour des livres
-empruntés par Philippe Dubois.
+6.  Écrire une requête SQL qui retourne le titre et la date de retour des livres
+    empruntés par Philippe Dubois.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select livre.titre, emprunt.retour from livre
-        join emprunt on livre.isbn = emprunt.isbn
-        join usager on emprunt.code_barre = usager.code_barre
-        where usager.nom = 'Dubois' and usager.prenom = 'Philippe'
+      join emprunt on livre.isbn = emprunt.isbn
+      join usager on emprunt.code_barre = usager.code_barre
+      where usager.nom = 'Dubois' and usager.prenom = 'Philippe';
     ```
     ````
 
-
-7. Écrire une requête SQL qui retourne le titre des livres publiés avant "Astérix
-chez les Bretons".
+7.  Écrire une requête SQL qui retourne le titre des livres publiés avant
+    "Astérix chez les Bretons".
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select livre.titre from livre
-        where annee < (select annee from livre
-                       where titre = 'Astérix chez les Bretons')
+      where annee < (select annee from livre
+                     where titre = 'Astérix chez les Bretons');
     ```
     ````
 
-8. **Challenge**: Écrire une requête SQL qui retourne le nom et le prénom des
-auteurs des livres de la question précédente sans doublons.
+8.  **Challenge**: Écrire une requête SQL qui retourne le nom et le prénom des
+    auteurs des livres de la question précédente sans doublons.
 
     ```{exec} sql
     :after: sql-biblio-insert
     :editable:
     ```
 
-    ````{admonition} Solution
-    :class: note dropdown
+    ````{solution}
     ```{exec} sql
     :after: sql-biblio-insert
     select distinct auteur.nom, auteur.prenom from auteur
-        join auteur_de on auteur.a_id = auteur_de.a_id
-        join livre on livre.isbn = auteur_de.isbn
-        where annee < (select annee from livre
-                       where titre = 'Astérix chez les Bretons')
+      join auteur_de on auteur.a_id = auteur_de.a_id
+      join livre on livre.isbn = auteur_de.isbn
+      where annee < (select annee from livre
+                     where titre = 'Astérix chez les Bretons');
     ```
     ````

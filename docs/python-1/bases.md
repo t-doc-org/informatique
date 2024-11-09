@@ -42,8 +42,7 @@ print("Hello World!")
 
 % TODO: Validation de l'exercice par un vu, s'il est correctement réalisé
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :name: py-ex-1-sol
 :linenos:
@@ -67,8 +66,7 @@ récrire 10 fois la même chose.
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 print("Bonjour tout le monde!")
@@ -109,8 +107,7 @@ par un commentaire dans le code.
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 print(13 + 2)
@@ -150,8 +147,7 @@ réponse:
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 print("452.52 + 27.78 = ", 452.52 + 27.78)
@@ -182,8 +178,7 @@ variables pour stocker le prix avant et après réduction).
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 prix_livre = 9.30
@@ -254,8 +249,7 @@ Je vois que tu habites à {afficher le lieu}.
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 nom = await input_line("Quel est ton nom?")
@@ -284,8 +278,7 @@ Tu es né en {afficher l'année de naissance}.
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 age = int(await input_line("Quel âge avais-tu au 31 décembre?"))
@@ -308,8 +301,7 @@ Combien de mégaoctets veux-tu convertir en bits?
 :editable:
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 nb_mo = float(await input_line("Combien de mégaoctets veux-tu convertir en bits?"))

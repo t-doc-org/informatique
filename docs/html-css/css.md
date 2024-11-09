@@ -85,9 +85,8 @@ Ce style s'appliquera au contenu de toutes les balises `<h1>...</h1>`
 Le sélecteur d'identifiant permet d'appliquer un style à un élément précis. Pour
 cela, il faut ajouter un nouvel attribut `id` à la balise HTML concernée.
 
-<table><tr>
-  <th style="text-align: center">Fichier HTML</th>
-  <th style="text-align: center">Fichier CSS</th>
+<table><tr style="text-align: center">
+  <th>Fichier HTML</th><th>Fichier CSS</th>
 </tr><tr><td>
 
 ```{code} html
@@ -97,7 +96,7 @@ l'introduction de mon texte.
 </p>
 ```
 
-</td><td>
+</td><td style="padding-left: 1rem">
 
 ```{code} css
 #intro {
@@ -115,11 +114,10 @@ Ce style ne s'appliquera qu'à un élément unique, la balise dont l'`id` est
 
 Le sélecteur de classe permet d'appliquer un style à plusieurs éléments qui
 appartiennent à une même classe (groupe). Pour cela, il faut ajouter un nouvel
-attribut class à la balise HTML concernée.\par
+attribut class à la balise HTML concernée.
 
-<table><tr>
-  <th style="text-align: center">Fichier HTML</th>
-  <th style="text-align: center">Fichier CSS</th>
+<table><tr style="text-align: center">
+  <th>Fichier HTML</th><th>Fichier CSS</th>
 </tr><tr><td>
 
 ```{code} html
@@ -128,7 +126,7 @@ Le texte de ce paragraphe sera centré.
 </p>
 ```
 
-</td><td>
+</td><td style="padding-left: 1rem">
 
 ```{code} css
 .centre {
@@ -156,9 +154,8 @@ extérieure (margin) ou la bordure (border).
 :align: center
 ```
 
-<table><tr>
-  <th style="text-align: center">Fichier HTML</th>
-  <th style="text-align: center">Fichier CSS</th>
+<table><tr style="text-align: center">
+  <th>Fichier HTML</th><th>Fichier CSS</th>
 </tr><tr><td>
 
 ```{code} html
@@ -171,7 +168,7 @@ ultrices felis a facilisis feugiat. </p>
 </div>
 ```
 
-</td><td>
+</td><td style="padding-left: 1rem">
 
 ```{code} css
 #mon_conteneur {
@@ -191,33 +188,33 @@ ultrices felis a facilisis feugiat. </p>
 
 But: Appliquer un fichier CSS au document index.html.
 
-1. Télécharger le fichier [`style.css`](./style.css) et le sauvegarder sur
-OneDrive dans le dossier "Informatique/HTML-CSS/exercices".
-3. Ajouter le référencement à la page `style.css` dans le `<head>` du document
-`index.html`. (cf. [](#referencement))
-4. Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
+1. Télécharger le fichier [`style.css`](style.css) et le sauvegarder sur
+   OneDrive dans le dossier "Informatique/HTML-CSS/exercices".
+2. Ajouter le référencement à la page `style.css` dans le `<head>` du document
+   `index.html`. (cf. [](#referencement))
+3. Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
 
 ### Exercice 5
 
 1. Qu'est-ce qui a changé?
 2. Cliquer sur `style.css` pour que le document s'afficher et essayer de le
-comprendre.
+   comprendre.
     - À quels éléments s'appliquent les différentes propriétés?
     - Quelle est la différence entre `h1{...}` et `#source{...}`? Quand va-t-on
-    utiliser le deuxième?
+      utiliser le deuxième?
 3. Vous allez maintenant modifier cette page.Pour valider une modification:
     - Sauvegarder le document dans VSCode ({kbd}`ctrl` + {kbd}`s` ou
-    {kbd}`command` + {kbd}`s`).
+      {kbd}`command` + {kbd}`s`).
     - Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
 4. Modifier la couleur des titres et des sous-titres. Vous pouvez utiliser
-   les noms en anglais ou le code RGB.
-    [Liste des couleurs](https://www.rapidtables.com/web/color/RGB_Color.html)
+   les noms en anglais ou le code RGB.\
+   [Liste des couleurs](https://www.rapidtables.com/web/color/RGB_Color.html)
 5. Modifier la police de caractère (font) des titres (pas des sous-titres) en
-    "fantasy".
+   "fantasy".
 6. Modifier la couleur de fond de la page HTML.
 7. Ajouter une couleur de fond aux titres et aux sous-titres.
 8. Modifier le code pour que toutes les sources s'affichent en gris foncé.
-    (Il faut utiliser un sélecteur de classe.)
+   (Il faut utiliser un sélecteur de classe.)
 9. Ajouter une bordure au tableau.
 
 ### Exercice 6
@@ -226,13 +223,13 @@ comprendre.
 
 1. Quelles seront les différentes pages?
 2. Nommer la première page de votre site `index.html`. Vous pouvez en créer
-d'autres et les référencer avec des liens pour pouvoir naviguer entre les
-différentes pages de votre site. (cf. [](#hyperliens))
+   d'autres et les référencer avec des liens pour pouvoir naviguer entre les
+   différentes pages de votre site. (cf. [](#hyperliens))
 3. Quel sera le style de votre site? Pouvez-vous le réaliser avec les outils vus
-en classe? Sinon rechercher sur internet comment faire.
+   en classe? Sinon rechercher sur internet comment faire.
 
 ## Liens utiles
 
-[Tuto](https://developer.mozilla.org/fr/docs/Web/HTML) pour le HTML.\
-[Tuto](https://developer.mozilla.org/fr/docs/Web/CSS) pour le CSS.\
-[Tuto](https://www.w3schools.com/) en anglais.
+- [Tuto](https://developer.mozilla.org/fr/docs/Web/HTML) pour le HTML.
+- [Tuto](https://developer.mozilla.org/fr/docs/Web/CSS) pour le CSS.
+- [Tuto](https://www.w3schools.com/) en anglais.

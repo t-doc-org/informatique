@@ -6,7 +6,7 @@
 ## Exercices
 
 Le fichier pdf des exercices du chapitre **Représentation de l'information** est
-à disposition [Exercices](./Exercices.pdf).
+à disposition [Exercices](Exercices.pdf).
 
 ## Information versus données
 
@@ -29,18 +29,17 @@ Les données qui représentent cette même information:
 Lorsque nous représentons de l'information sur un support physique (disque dur,
 clé USB, etc.), trois problèmes se posent:
 
-1. La sécurité de l'information\
-Dès que l'information est stockée ou transmise, elle peut tomber entre les
-mains de n'importe qui. Comment puis-je la protéger?
+1. **La sécurité de l'information:** Dès que l'information est stockée ou
+   transmise, elle peut tomber entre les mains de n'importe qui. Comment puis-je
+   la protéger?
 
-2. La densité de l'information\
-Il est nécessaire de trouver un moyen de stocker le maximum d'information en
-utilisant le moins de place possible. Comment représenter et compresser des
-données?
+2. **La densité de l'information:** Il est nécessaire de trouver un moyen de
+   stocker le maximum d'information en utilisant le moins de place possible.
+   Comment représenter et compresser des données?
 
-3. La durabilité de l'information\
-Lors du stockage ou de la transmission de données, des erreurs peuvent apparaître.
-Comment détecter ou corriger ces erreurs?
+3. **La durabilité de l'information:** Lors du stockage ou de la transmission de
+   données, des erreurs peuvent apparaître. Comment détecter ou corriger ces
+   erreurs?
 
 En 1{sup}`ère` année, nous allons nous intéresser à la représentation de
 l'information. Les autres défis seront abordés dans le cours de 2{sup}`è` année.
@@ -66,10 +65,6 @@ Voici les unités standardisées depuis 1998:
 | Unité | Valeur en octets | Valeur en puissance de 10 |
 |-------|------------------|---------------------------|
 | Un **kilooctet** (ko ou kB) | 1 000 octets | $10^3$ octets |
-| Un **Megaoctet** (Mo ou MB) | 1 000 ko | 1 000 000 octets = $10^6$ octets |
-| Un **Gigaoctet** (Go ou GB) | 1 000 Mo | 1 000 000 000 octets = $10^9$ octets |
-| Un **Téraoctet** (To ou TB) | 1 000 Go | 1 000 000 000 000 octets = $10^{12}$ octets |
-
-
-
-
+| Un **megaoctet** (Mo ou MB) | 1 000 ko | 1 000 000 octets = $10^6$ octets |
+| Un **gigaoctet** (Go ou GB) | 1 000 Mo | 1 000 000 000 octets = $10^9$ octets |
+| Un **téraoctet** (To ou TB) | 1 000 Go | 1 000 000 000 000 octets = $10^{12}$ octets |

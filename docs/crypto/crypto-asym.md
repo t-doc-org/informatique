@@ -9,13 +9,12 @@ participants sans nécessiter le partage préalable d'une clé secrète. Découv
 à la fin des années 1960, ces systèmes cryptographiques asymétriques ne
 présentent pas les faiblesses des systèmes symétriques.
 
-
 ## Envoi de message
 
 Alice souhaite envoyer un message privé à Bob:
 1. Alice écrit son message en clair.
 2. Alice crypte son message avec la clé publique de Bob mise à disposition sur
-    le web.
+   le web.
 3. Alice envoie le {term}`cryptogramme` à Bob.
 4. Bob déchiffre le cryptogramme à l'aide de sa propre clé privée.
 
@@ -66,7 +65,7 @@ système **RSA** qui sont les initiales de ces trois "inventeurs"
 (Ronald Riverst, Adi Shamir et Leonard Adleman).
 
 Pour comprendre comment fonctionne le système RSA, nous allons utiliser quelques
-[notions mathématiques](./notions-math.md) de base tels que le reste de la
+[notions mathématiques](notions-math.md) de base tels que le reste de la
 division entière (modulo) et les nombres premiers.
 
 Le modulo est une opération asymétrique, c'est-à-dire qu'il est facile de
@@ -137,19 +136,18 @@ Utiliser [WolframAlpha](https://www.wolframalpha.com/) comme aide pour les
 calculs.
 ```
 
-````{admonition} Solution
-:class: note dropdown
+```{solution}
 1. Calculer $n = p \cdot q = 13 \cdot 11 = 143$.
 2. Calculer $\phi = (p - 1) \cdot (q - 1) = 12 \cdot 10 = 120$.
 3. Choisir e, tel que $120 \textrm{ mod } e \ne 0$ et e premier.\
-Choisissons $e = 7$, car $e$ n'est pas un divisieur de 120.
+   Choisissons $e = 7$, car $e$ n'est pas un divisieur de 120.
 4. En utilisant [WolframAlpha](https://www.wolframalpha.com/), il faut résoudre
-l'équation: $(7 \cdot d) \textrm{ mod } 120 = 1$.\
-On obtient $d = 120 \cdot m + 103$ avec $m \in {Z}$.\
-Choisissons $d = 103$ ($m = 0$).
+   l'équation: $(7 \cdot d) \textrm{ mod } 120 = 1$.\
+   On obtient $d = 120 \cdot m + 103$ avec $m \in {Z}$.\
+   Choisissons $d = 103$ ($m = 0$).
 
 La clé privée est (13, 11, 103) et la clé publique est (143, 7).
-````
+```
 
 ### Chiffrement
 
@@ -164,7 +162,7 @@ La clé privée est (13, 11, 103) et la clé publique est (143, 7).
    blocs de taille $m$ tel que $1 < m < n$. Ces blocs seront chiffrés et envoyés
    séparément.
 4. Le cryptogramme correspond au nombre $c$ calculé en utilisant
-    $ c = m^e \textrm{ mod } n $.
+   $c = m^e \textrm{ mod } n$.
 
 #### Exemple
 
@@ -197,14 +195,13 @@ Bob souhaite envoyer à Alice le message suivant: "salut".
 Chiffrer le message $m = 34$ à l'aide du système RSA, avec la clé publique
 (143, 7).
 
-````{admonition} Solution
-:class: note dropdown
+```{solution}
 1. $n = 143$ et $e = 7$
 2. $34 < 143$ , donc pas besoin découper le message.
 3. Chiffrer le message: $c = 34^{7} \textrm{ mod } 143 = 122$.
 
 Le message chiffré est 122.
-````
+```
 
 ### Déchiffrement
 
@@ -222,29 +219,28 @@ Alice a reçu le cryptogramme suivant composé de 5 blocs: 39 01 23 21 25.
 
 1. Alice reprend sa clé privé (5, 11, 27).
 2. Alice déchiffre chaque bloc, noté c, avec la formule suivante:
-    $ m = c^{27} \textrm{ mod } (5 \cdot 11) = c^{27} \textrm{ mod } 55$.\
-    39: $m = 39^{27} \textrm{ mod } 55 = 19$\
-    01: $m = 1^{27} \textrm{ mod } 55 = 1$\
-    23: $m = 23^{27} \textrm{ mod } 55 = 12$\
-    21: $m = 21^{27} \textrm{ mod } 55 = 21$\
-    25: $m = 25^{27} \textrm{ mod } 55 = 20$
+   $ m = c^{27} \textrm{ mod } (5 \cdot 11) = c^{27} \textrm{ mod } 55$.\
+   39: $m = 39^{27} \textrm{ mod } 55 = 19$\
+   01: $m = 1^{27} \textrm{ mod } 55 = 1$\
+   23: $m = 23^{27} \textrm{ mod } 55 = 12$\
+   21: $m = 21^{27} \textrm{ mod } 55 = 21$\
+   25: $m = 25^{27} \textrm{ mod } 55 = 20$
 3. Alice transforme le nombre en lettre (pour faciliter, nous avions pris le
-    rang de la lettre dans l'alphabet au lieu du code ASCII étendu): 19 -> s,
-    1 -> a, 12 -> l, 21 -> u et 20 -> t.\
-    Le message reçu est donc "salut".
+   rang de la lettre dans l'alphabet au lieu du code ASCII étendu): 19 -> s,
+   1 -> a, 12 -> l, 21 -> u et 20 -> t.\
+   Le message reçu est donc "salut".
 
 #### Exercice 7
 
 Vous avez reçu un message chiffré $c = 122$.\
 Déchiffrer le message $m$ sachant que votre clé privée est  (13, 11, 103).
 
-````{admonition} Solution
-:class: note dropdown
+```{solution}
 1. La clé privée est (13, 11, 103).
 3. Déchiffrer le message: $m = 122^{103} \textrm{ mod } (13 \cdot 11) = 34$.
 
 Le message clair est 34.
-````
+```
 
 ## Conclusion
 

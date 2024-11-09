@@ -19,12 +19,9 @@ for _ in range(nb_repetitions):
     ...
 ```
 
-<table>
-<tr>
-    <th style="text-align: center">Programme</th>
-    <th style="text-align: center">Ordinogramme</th>
-</tr>
-<tr><td width="50%"; valign="top">
+<table><tr style="text-align: center">
+    <th style="width: 50%">Programme</th><th>Ordinogramme</th>
+</tr><tr style="vertical-align: top"><td>
 
 ```{exec} python
 :linenos:
@@ -40,8 +37,7 @@ for i in range(5):
 :align: center
 ```
 
-</td></tr>
-</table>
+</td></tr></table>
 
 1. Quelles valeurs prend la variable i?
 2. Changer le nombre de répétitions.
@@ -66,12 +62,9 @@ while condition:
     ...
 ```
 
-<table>
-<tr>
-    <th style="text-align: center">Programme</th>
-    <th style="text-align: center">Ordinogramme</th>
-</tr>
-<tr><td width="50%"; valign="top">
+<table><tr style="text-align: center">
+  <th style="width: 50%">Programme</th><th>Ordinogramme</th>
+</tr><tr style="vertical-align: top"><td>
 
 ```{exec} python
 :linenos:
@@ -91,8 +84,7 @@ print("Bravo!")
 :align: center
 ```
 
-</td></tr>
-</table>
+</td></tr></table>
 
 ## Exercice 14
 ```{exec} python
@@ -106,8 +98,7 @@ print("La somme est:", somme)
 
 Quel est le résultat affiché par ce programme?
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 Vérifie ta réponse en exécutant le code.
 ```{exec} python
 :linenos:
@@ -143,8 +134,7 @@ print("Le nombre doit être strictement positif!")
 print("Merci")
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 n = int(await input_line("Entrer un nombre strictement positif: "))
@@ -190,11 +180,10 @@ BOOM
 ```{exec} python
 :linenos:
 :editable:
-# écrire le programme ici
+# Écrire le programme ici
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 compte_a_rebours = 10
@@ -226,11 +215,10 @@ Bravo!
 ```{exec} python
 :linenos:
 :editable:
-# écrire le programme ici
+# Écrire le programme ici
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 nb_cantons = int(await input_line("Combien y a-t-il de cantons en Suisse?"))
@@ -244,4 +232,3 @@ print("Bravo!")
 
 Améliorer le programme de l'exercice précédent en indiquant à l'utilisateur
 s'il y a plus ou moins de cantons en fonction de sa réponse.
-

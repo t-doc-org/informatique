@@ -23,9 +23,7 @@ perdue. La valeur rentrée par l'utilisateur est stockée sous forme de chaîne 
 caractères (de type `str`). Pour effectuer des calculs, il faut la convertir en `int`
 ou en `float`.
 
-
-
-```{Important}
+```{important}
 L'utilisation de la fonction input sur ce site est différente de ce que vous
 avez faite d'habitude.\
 `nom_variable = await input_line("...")`
@@ -63,8 +61,7 @@ print("Le périmètre vaut")
 
 Tester le code avec les valeurs 3.6 et 6.4.
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 ```{exec} python
 :linenos:
 # Ne pas oublier de convertir les inputs en float
@@ -93,5 +90,3 @@ age = await input_line("Quel âge as-tu?")
 annee = await input_line("En quelle année sommes-nous?")
 print("Tu es né.e en" annee - age "ou en" annee - age - 1)
 ```
-
-

@@ -33,6 +33,7 @@ son gendre, avec la consigne de lui raser la tête.
 
 source: hareenlaks.blogspot.com
 ```
+
 </td></tr></table>
 
 <table><tr><td style="width:50%" valign="top">
@@ -52,6 +53,7 @@ Ainsi les tablettes semblent vierges et n'attirent pas l'attention.
 
 photo: Peter van der Sluijs
 ```
+
 </td></tr></table>
 
 ### Boule de cire
@@ -119,7 +121,6 @@ Que signifie le message suivant?
 :width: 80%
 ```
 
-````{admonition} Solution
-:class: note dropdown
+````{solution}
 steganographie ou cryptographie
 ````
