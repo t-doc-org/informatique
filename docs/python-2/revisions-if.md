@@ -94,7 +94,7 @@ else:
 Dans l'exemple ci-dessus, il y a le choix entre trois types de films (action,
 comédie et horreur). Le branchement `else` gérera tous les autres cas.
 
-## Exercice 7
+## Exercice 10
 
 ```{exec} python
 :when: never
@@ -123,7 +123,7 @@ else :
 ```
 ````
 
-## Exercice 8
+## Exercice 11
 
 ```{exec} python
 :name: python-buffer
@@ -166,7 +166,7 @@ while True:
 print("\x0cBravo!")
 ```
 
-## Exercice 9
+## Exercice 12
 
 1.  ```{exec} python
     :linenos:
@@ -223,7 +223,7 @@ print("\x0cBravo!")
         print("La division par 0 est impossible.")
     ```
 
-## Exercice 10
+## Exercice 13
 
 Nous souhaitons créer un programme qui calcule le prix à payer lors de l'achat de
 canette de Red Bull dont le prix unitaire est de 1.50 CHF.
@@ -259,7 +259,7 @@ else:
 ```
 ````
 
-## Exercice 11
+## Exercice 14
 
 Écrire un programme qui correspond à l'algorithme suivant:
 
@@ -294,7 +294,7 @@ else:
 ```
 ````
 
-## Exercice 12
+## Exercice 15
 
 Voici trois programmes:
 
@@ -354,7 +354,7 @@ print(x)
 
 </td></tr></table>
 
-## Exercice 13
+## Exercice 16
 
 Que vont afficher chacun de ces programmes?
 
@@ -406,3 +406,25 @@ print(not(a <= b))
 ```
 
 </td></tr></table>
+
+## Exercice 17
+
+Le programme suivant contient une erreur de logique. Tester le programme avec
+différentes valeurs pour trouver et corriger l'erreur.
+
+```{exec} python
+:linenos:
+:editable:
+age = 18
+if age >= 18:
+    print("Tu payes le prix adulte.")
+elif age >= 65:
+    print("Tu payes le prix retraité")
+else:
+    print("Tu payes le prix enfant.")
+```
+
+```{solution}
+Le `elif` ne sera jamais exécuté, car si l'âge est supérieur ou égal à 65, il
+est aussi supérieur ou égal à 18. Donc la condition du `if` sera vérifiée.
+```

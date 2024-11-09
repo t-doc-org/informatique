@@ -40,7 +40,7 @@ def nom_de_la_fonction(paramètres):
 nom_de_la_fonction(paramètres)
 ```
 
-## Exercice 18
+## Exercice 23
 
 Une fonction nommée `salutations` a été définie ci-dessous. Appeler cette
 fonction dans le programme.
@@ -66,7 +66,7 @@ salutations()
 ```
 ````
 
-## Exercice 19
+## Exercice 24
 
 Une fonction nommée `affiche_somme` prend 2 paramètres numériques. Cette
 fonction additionne les paramètres et affiche le résultat.
@@ -96,7 +96,7 @@ affiche_somme(3, 7)
 ```
 ````
 
-## Exercice 20
+## Exercice 25
 
 Au début du code donné ci-dessous, définir une fonction nommée `au_revoir`
 permettant simplement d'afficher le texte "À bientôt!".
@@ -130,7 +130,7 @@ while i < 20:
 ```
 ````
 
-## Exercice 21
+## Exercice 26
 
 Au-dessus du code donné, définir une fonction nommée `affiche_prix_billet`
 prenant en paramètre l'âge de l'utilisateur et affichant le prix du billet de
@@ -168,3 +168,28 @@ for a in range(1, 71):
     affiche_prix_billet(a)
 ```
 ````
+
+## Exercice 27
+
+Indiquer l'ordre d'exécution des lignes et faire le tableau d'états du programme
+suivant:
+
+```{exec} python
+:linenos:
+def salutations(prenom):
+    print("Bonjour", prenom)
+
+def au_revoir():
+    print("Au revoir à tous!")
+
+salutations("Bob")
+salutations("Alice")
+au_revoir()
+print("Fin du programme")
+```
+
+```{solution}
+L'ordre d'exécution des ligne est le suivant:
+
+7-1-2-8-1-2-9-4-5-10
+```

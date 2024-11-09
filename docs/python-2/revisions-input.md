@@ -36,17 +36,17 @@ print("Dans 10 ans, tu auras", age + 10, "ans.")
 ```
 
 Lors de l'exécution de la ligne 1, la question est affichée. Le programme attend
-jusqu'à ce que l'utilisateur saisisse une réponse et appuye sur {kbd}`enter`.
+jusqu'à ce que l'utilisateur saisisse une réponse et appuye sur {kbd}`Enter`.
 
-## Exercice 5
+## Exercice 7
 
-Compléter ce programme permettant de calculer le périmètre d'un rectangle.
+Compléter ce programme permettant de calculer l'aire d'un rectangle.
 
 ```{code-block} text
 Demander à l'utilisateur la largeur.
 Demander à l'utilisateur la longueur.
-Calculer le périmètre.
-Afficher le périmètre.
+Calculer l'aire.
+Afficher l'aire.
 ```
 
 ```{exec} python
@@ -55,8 +55,8 @@ Afficher le périmètre.
 # Compléter le programme
 largeur = await input_line(...)
 longueur = await input_line(...)
-perimetre =
-print("Le périmètre vaut")
+aire =
+print("L'aire vaut")
 ```
 
 Tester le code avec les valeurs 3.6 et 6.4.
@@ -68,15 +68,15 @@ Tester le code avec les valeurs 3.6 et 6.4.
 largeur = float(await input_line("Quelle est la largeur du rectangle"))
 longueur = float(await input_line("Quelle est la longueur du rectangle"))
 
-# Calcul du périmètre
-perimetre = (largeur + longueur) * 2
+# Calcul de l'aire
+aire = largeur * longueur
 
 # Affichage de la réponse
-print("Le périmètre vaut", perimetre)
+print("L'aire vaut", aire)
 ```
 ````
 
-## Exercice 6
+## Exercice 8
 
 Le programme ci-dessous devrait permettre de calculer l'année de naissance de
 l'utilisateur. Mais, il contient au moins une erreur par ligne.\
@@ -90,3 +90,44 @@ age = await input_line("Quel âge as-tu?")
 annee = await input_line("En quelle année sommes-nous?")
 print("Tu es né.e en" annee - age "ou en" annee - age - 1)
 ```
+
+```{solution}
+Ligne 2: l'âge doit être un nombre entier.\
+Ligne 3: l'année doit aussi être un nombre entier.\
+Ligne 4: Il manque des virgules entre les chaînes de caractères et les nombres
+dans la parenthèse de la fonction print.
+```
+
+## Exercice 9
+
+Il y a des erreurs dans les programmes suivants. Expliquer et corriger le
+sproblème.
+
+1.  ```{exec} python
+    :editable:
+    :linenos:
+    # Programme qui demande son prénom à l'utilisateur
+    # et lui dit bonjour en citant son prénom
+    await input_line("Comment t'appelles-tu?")
+    print("Bonjour")
+    ```
+
+    ```{solution}
+    Lorsqu'on utilise la fonction `input_line()`, il est impératif de stocker la
+    valeur dans une variable, sinon le input ne sert à rien.
+    ```
+
+2.  ```{exec} python
+    :editable:
+    :linenos:
+    # Programme qui demande son âge à l'utilisateur
+    # et calcule son âge dans 10 ans
+    age = await input_line("Quel âge as-tu?")
+    print("Dans 10 ans, tu auras", age + 10)
+    ```
+
+    ```{solution}
+    Lorsqu'on pose une question à l'utilisateur, la valeur retournée est une
+    chaîne de caractère. Pour pouvoir faire des opérations mathématiques avec
+    cette valeur, il est nécessaire de la convertir en `int()` ou en `float()`.
+    ```

@@ -403,7 +403,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     :after: sql-biblio-insert
     select livre.titre from livre
       join emprunt on livre.isbn = emprunt.isbn
-      where retour < '2024-12-15';
+      where retour > '2024-12-15';
     ```
     ````
 

@@ -315,3 +315,83 @@ print(a, b)
 | a += b      |14 |4  |
 | a = a * 2   |28 |4  |
 ````
+
+## Exercice 5
+
+En exécutant les programmes suivants, une erreur se produit. Corriger le code à
+l'aide du message d'erreur.
+
+1.  ```{exec} python
+    :editable:
+    :linenos:
+    print("Bonjour)
+    ```
+
+2.  ```{exec} python
+    :editable:
+    :linenos:
+    print(hello)
+    ```
+
+3.  ```{exec} python
+    :editable:
+    :linenos:
+    age == 18
+    print(age)
+    ```
+
+4.  ```{exec} python
+    :editable:
+    :linenos:
+    longueur = 7
+    largeur = 12
+    perimetre = 2 * (LONGUEUR + largeur)
+    print(perimetre)
+    ```
+
+5.  ```{exec} python
+    :editable:
+    :linenos:
+    a = 10
+    # afficher la valeur de a
+    print("a")
+    ```
+
+6.  ```{exec} python
+    :editable:
+    :linenos:
+    a = 10
+    b = 5
+    print("La somme de a et b vaut" a + b)
+    ```
+
+## Exercice 6
+
+Faire le tableau d'états du programme suivant:
+```{exec} python
+:linenos:
+a = 8
+b = a / 2
+a += 5
+c =  a - b
+d = b ** 2
+c = a // 3
+b *= 5
+d = a % 3
+e = a < b
+print(a, b, c, d, e)
+```
+
+````{solution}
+| Instruction | a   | b   | c   | d   | e   |
+| :---------- |:---:|:---:|:---:|:---:|:---:|
+| a = 8       | 8   | -   | -   | -   | -   |
+| b = a / 2   | 8   | 4.0 | -   | -   | -   |
+| a += 5      | 13  | 4.0 | -   | -   | -   |
+| c = a - b   | 13  | 4.0 | 9.0 | -   | -   |
+| d = b ** 2  | 13  | 4.0 | 9.0 | 16.0| -   |
+| c = a // 3  | 13  | 4.0 | 4   | 16.0| -   |
+| b *= 5      | 13  | 20.0| 4   | 16.0|-    |
+| d = a % 3   | 13  | 20.0| 4   | 1   |-    |
+| e = a < b   | 13  | 20.0| 4   | 1   | True|
+````
