@@ -3,6 +3,10 @@
 
 # Fonctions
 
+```{metadata}
+hide-solutions: true
+```
+
 En programmation, une **fonction** est une bloc de code (suite d'instructions)
 permettant de réaliser une tâche donnée et auquel nous donnons un nom. Cela
 permet de découper un programme en plusieurs petites tâches plus facile à
