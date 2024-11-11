@@ -101,7 +101,7 @@ dans la parenthèse de la fonction print.
 ## Exercice 9
 
 Il y a des erreurs dans les programmes suivants. Expliquer et corriger le
-sproblème.
+problème.
 
 1.  ```{exec} python
     :editable:
