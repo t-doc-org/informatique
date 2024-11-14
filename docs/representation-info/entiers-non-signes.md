@@ -167,15 +167,11 @@ Que vaut $149$ en binaire?
 | $2^n \leq$ reste? | 0      | 1     | 0     | 0     | 1     | 0     | 1     | 0     | 1     |
 | Reste             | $149$  | $21$  | $21$  | $21$  | $5$   | $5$   | $1$   | $1$   | $0$   |
 
-$149 = 10010101_2$
+$$149 = 10010101_2$$
 
-<iframe credentialless style="width: 100%; aspect-ratio: 16/9;"
-  src="https://www.youtube.com/embed/ysoWgx186DM?si=w8Saf68xWMwjZyMt"
-  title="Vidéo sur le binaire" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-    picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+```{youtube} ysoWgx186DM
+:title: Vidéo sur le binaire
+```
 
 ## Exercice 2
 
@@ -347,7 +343,7 @@ Que vaut 1101110 en hexadécimal?
 | pseudo-décimal| 6    | 14   |
 | hexadécimal   | 6    | E    |
 
-$1101110_{2} = 6E_{16}$
+$$1101110_{2} = 6E_{16}$$
 
 ## Conversion hexadécimal - binaire
 
@@ -361,7 +357,7 @@ Que vaut A0D7 en binaire?
 | pseudo-décimal| 10   | 0    | 13   | 7    |
 | binaire       | 1010 | 0000 | 1101 | 0111 |
 
-$A0D7_{16} = 1010\,0000\,1101\,0111_{2}$
+$$A0D7_{16} = 1010\,0000\,1101\,0111_{2}$$
 
 
 ## Exercice 4
@@ -477,6 +473,7 @@ Voici les quelques règles importantes de l'addition en binaire:
 - 1 + 1 + 1 = 11
 
 Comment additionner $0101_2$ et $1001_2$?
+
 ```{code-block} text
      1 1     (retenues)
    0 1 0 1
@@ -484,7 +481,8 @@ Comment additionner $0101_2$ et $1001_2$?
  ---------
    1 1 1 0
 ```
-$0101_2 + 1001_2 = 1110_2$
+
+$$0101_2 + 1001_2 = 1110_2$$
 
 ## Le dépassement de capacité (overflow)
 
@@ -492,6 +490,7 @@ En additionnant deux nombres entiers non signés en base 2 sur 4 bits, il peut s
 produire un dépassement de capacité.
 
 Que se passe-t-il lors de l'addition de $1101_2$ et de $1010_2$?
+
 ```{code-block} text
  1           (retenues)
    1 1 0 1
@@ -499,6 +498,7 @@ Que se passe-t-il lors de l'addition de $1101_2$ et de $1010_2$?
  ---------
  1 0 1 1 1
 ```
+
 $1101_2 + 1010_2 = \cancel{1}0111_2$, mais comme nous n'avons que 4 bits à
 disposition et pas 5, le premier bit va simplement être ignoré et donc le
 résultat sera faux ($13 + 12 \ne 7$).
@@ -609,4 +609,3 @@ Effectuer les additions suivantes sur 8 bits.
       print("\x0cEssaie encore")
     print("\x0cBravo")
     ```
-
