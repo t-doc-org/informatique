@@ -107,7 +107,7 @@ else :
 ```
 
 1. Quel message sera affiché si l'utilisateur entre 21?
-2. Que se passe-t-il si l'utilisateur entre 21 ans?
+2. Que se passe-t-il si l'utilisateur entre 16 ans?
 3. Que se passe-t-il si l'utilisateur entre -10?
 4. Que se passe-t-il si l'utilisateur entre 17.5?
 
