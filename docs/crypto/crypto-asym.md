@@ -262,9 +262,6 @@ peut:
 
 ## Résumé en vidéo
 
-<iframe credentialless style="width: 100%; aspect-ratio: 16/9;"
-  src="https://www.youtube.com/embed/PW_x5m08QRQ?si=HzY8JL-KiY8P5UqQ"
-  title="Vidéo sur l'utilisation du Web" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-    picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```{youtube} PW_x5m08QRQ
+:title: Vidéo sur l'encryption des données sur internet
+```

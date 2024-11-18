@@ -119,16 +119,13 @@ donc utiliser de l'UTF-8 que nous allons indiquer dans l'attribut charset:
 Comme cette balise ne contient pas de contenu, c'est une balise unique (pas de
 balise ouvrante et fermante).
 
-% TODO: Créer une directive pour l'ajout d'activités de learningapps.org
-
 ## Exercice 1
 
 But: Comprendre la structure principale d'un document HTML.
 
-<iframe credentialless style="border: 0; width: 100%; height:530px"
-  src="https://learningapps.org/watch?v=pxjjqttb224"
-  allowfullscreen="true" webkitallowfullscreen="true"
-  mozallowfullscreen="true"></iframe>
+```{iframe} https://learningapps.org/watch?v=pxjjqttb224
+:style: height: 530px
+```
 
 (hyperliens)=
 ## Hyperliens

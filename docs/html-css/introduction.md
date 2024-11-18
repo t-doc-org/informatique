@@ -33,15 +33,9 @@ correspondant à la demande au client via internet.
 4. Le navigateur va lire et interpréter le fichier HTML pour pouvoir l'afficher
 sur l'écran de l'utilisateur.
 
-% TODO: Créer une directive pour l'ajout de vidéo youtube.
-
-<iframe credentialless style="width: 100%; aspect-ratio: 16/9;"
-  src="https://www.youtube.com/embed/dYgNvn98Nag?si=DxXE4xHKt5gmEpkF"
-  title="Vidéo sur l'utilisation du Web" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-    picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+```{youtube} dYgNvn98Nag
+:title: Vidéo sur l'utilisation du Web
+```
 
 ## Fichiers d'une page Web
 
@@ -58,9 +52,6 @@ Une page Web est typiquement composée de 3 types de fichiers:
 
 Regarder la vidéo jusqu'à 1 min 32 s:
 
-<iframe credentialless style="width: 100%; aspect-ratio: 16/9;"
-  src="https://www.youtube.com/embed/-7pJ45oXuvE?si=jX_O5B9tOQFWPNP9"
-  title="Vidéo sur le développement frontend" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;
-    picture-in-picture; web-share"
-  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+```{youtube} -7pJ45oXuvE
+:title: Vidéo sur le développement frontend
+```

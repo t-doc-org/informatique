@@ -3,6 +3,10 @@
 
 # Système de fichiers
 
+```{metadata}
+hide-solutions: true
+```
+
 ## Définition
 
 Un **système de fichiers** est l'organisation hiérarchique des fichiers sur un
@@ -10,8 +14,6 @@ ordinateur, un disque dur externe, une clé USB ou n'importe quel support qui
 contient des fichiers.
 
 ## Exercice 1
-
-% TODO: Cacher les solutions sinon les élèves ne vont pas faire les exercices.
 
 Répondre aux questions:
 
