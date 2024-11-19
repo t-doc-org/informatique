@@ -3,6 +3,10 @@
 
 # Révisions - Boucles
 
+```{metadata}
+hide-solutions: true
+```
+
 En programmation, nous sommes souvent amenés à répéter des instructions plusieurs
 fois. Pour cela nous pouvons utiliser des boucles.
 
@@ -87,6 +91,7 @@ print("Bravo!")
 </td></tr></table>
 
 ## Exercice 18
+
 ```{exec} python
 :linenos:
 :when: never
@@ -110,6 +115,92 @@ print("La somme est:", somme)
 ````
 
 ## Exercice 19
+
+1. Écrire un programme en utilisant le boucle `for` qui affiche les nombres de 0
+à 9.
+
+```{exec} python
+:linenos:
+:editable:
+# Écrire le programme ici
+```
+
+````{solution}
+```{exec} python
+:linenos:
+for nombre in range(10):
+  print(nombre)
+```
+````
+
+2. Écrire un programme en utilisant le boucle `for` qui affiche les nombres de 1
+à 10.
+
+```{exec} python
+:linenos:
+:editable:
+# Écrire le programme ici
+```
+
+````{solution}
+```{exec} python
+:linenos:
+for nombre in range(10):
+  print(nombre + 1)
+```
+````
+
+3. Écrire un programme en utilisant le boucle `for` qui affiche les 12 premiers
+multiples de 5.
+
+```{exec} python
+:linenos:
+:editable:
+# Écrire le programme ici
+```
+
+````{solution}
+```{exec} python
+:linenos:
+for nombre in range(12):
+  print((nombre + 1) * 5)
+```
+````
+
+## Exercice 20
+
+Indiquer l'ordre d'exécution des lignes et ce qu'affichera le programme.
+
+```{exec} python
+:linenos:
+:when: never
+a = 4
+b = 1
+for i in range (3):
+  a += 5
+  b *= 2
+  print("i =", i)
+print("a =", a, "b =", b)
+```
+
+````{solution}
+L'ordre d'exécution des ligne est le suivant:
+
+1-2-3-4-5-6-3-4-5-6-3-4-5-6-7
+
+```{exec} python
+:linenos:
+a = 4
+b = 1
+for i in range (3):
+  a += 5
+  b *= 2
+  print("i =", i)
+print("a =", a, "b =", b)
+```
+````
+
+## Exercice 21
 
 Nous voulons créer un programme qui demande à l'utilisateur un nombre
 strictement positif. Tant que l'utilisateur entre un nombre plus petit ou égal à
@@ -145,7 +236,7 @@ print("Merci")
 ```
 ````
 
-## Exercice 20
+## Exercice 22
 
 Nous souhaitons créer un programme qui compte le temps avant qu'une bombe
 explose. Pour cela, un compte à rebours commencera à 10 et ira jusqu'à 1, puis
@@ -194,7 +285,7 @@ print("BOOM")
 ```
 ````
 
-## Exercice 21
+## Exercice 23
 
 Écrire un programme qui demande à l'utilisateur combien il y a de cantons en
 Suisse. Tant que la réponse n'est pas 26, le programme redemande une nouvelle
@@ -233,7 +324,7 @@ print("Bravo!")
 Améliorer le programme de l'exercice précédent en indiquant à l'utilisateur
 s'il y a plus ou moins de cantons en fonction de sa réponse.
 
-## Exercice 22
+## Exercice 24
 
 Indiquer l'ordre d'exécution des lignes et faire le tableau d'états du programme
 suivant:
