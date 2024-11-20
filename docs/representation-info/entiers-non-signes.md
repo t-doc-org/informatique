@@ -472,12 +472,12 @@ Voici les quelques règles importantes de l'addition en binaire:
 - 1 + 1 = 10
 - 1 + 1 + 1 = 11
 
-Comment additionner $0101_2$ et $1001_2$?
+Comment additionner $1011_2$ et $0011_2$?
 
 ```{code-block} text
      1 1     (retenues)
-   0 1 0 1
- + 1 0 0 1
+   1 0 1 1
+ + 0 0 1 1
  ---------
    1 1 1 0
 ```
