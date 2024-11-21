@@ -45,7 +45,7 @@ $$
           &= 64 + 32 + 0 + 8 + 4 + 0 + 1 = 109
 $$
 
-## Exercice 1
+## Exercice {num}`exo-info`
 
 Convertir les nombres suivants de binaire en décimal.
 
@@ -173,7 +173,7 @@ $$149 = 10010101_2$$
 :title: Vidéo sur le binaire
 ```
 
-## Exercice 2
+## Exercice {num}`exo-info`
 
 Convertir les nombres suivants de décimal en binaire.
 
@@ -273,7 +273,7 @@ Convertir les nombres suivants de décimal en binaire.
     print("\x0cBravo")
     ```
 
-## Exercice 3
+## Exercice {num}`exo-info`
 
 Combien de bits faut-il pour écrire les nombres suivants en base 2?
 
@@ -360,7 +360,7 @@ Que vaut A0D7 en binaire?
 $$A0D7_{16} = 1010\,0000\,1101\,0111_{2}$$
 
 
-## Exercice 4
+## Exercice {num}`exo-info`
 
 Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
@@ -505,7 +505,7 @@ résultat sera faux ($13 + 12 \ne 7$).
 
 Un exemple coûteux d'overflow est le [vol 501 d'Ariane 5](https://fr.wikipedia.org/wiki/Vol_501_d%27Ariane_5).
 
-## Exercice 5
+## Exercice {num}`exo-info`
 
 Effectuer les additions suivantes sur 4 bits.
 
@@ -558,7 +558,7 @@ Effectuer les additions suivantes sur 4 bits.
     print("\x0cBravo")
     ```
 
-## Exercice 6
+## Exercice {num}`exo-info`
 
 Effectuer les additions suivantes sur 8 bits.
 

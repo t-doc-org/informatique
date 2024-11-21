@@ -39,7 +39,7 @@ développée pour l'anglais. Ce code a été ensuite étendu à 8 bits pour pouv
 coder plus de caractères. Le problème est que le code ASCII étendu n'est pas
 identique dans tous les pays.
 
-## Exercice 9
+## Exercice {num}`exo-info`
 
 Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
 1. INFO
@@ -90,7 +90,7 @@ Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
     print("\x0cBravo")
     ```
 
-## Exercice 10
+## Exercice {num}`exo-info`
 
 Convertir le texte suivant écrit en code ASCII hexadécimal.
 
@@ -107,7 +107,7 @@ print("\x0cBravo")
 ```
 
 <!--
-### Exercice 11
+### Exercice {num}`exo-info`
 
 Comment peut-on transformer un lettre majuscule en lettre minuscule et
 vice-versa en utilisant le code ASCII?
@@ -153,12 +153,12 @@ L'Unicode du caractère é est U+00E9 qui en binaire donne **1110 1001**
 |<span style="color:red">0</span>1000100| <span style="color:red">11</span>0000**11** <span style="color:red">1</span>0**101001**| <span style="color:red">0</span>1100010| <span style="color:red">0</span>1110101| <span style="color:red">0</span>1110100|
 
 <!--
-### Exercice 12
+### Exercice {num}`exo-info`
 
 Pourquoi n'utilise-t-on pas toujours l'unicode étant donné que nous pouvons
 coder tous les caractères pour chaque langue?
 
-### Exercice 13
+### Exercice {num}`exo-info`
 
 Quels sont les avantages et les inconvénients des différents encodages?
 -->

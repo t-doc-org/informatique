@@ -75,7 +75,7 @@ Vérification: l'addition d'un nombre et de son opposé doit donner 0.
   1 0 0 0 0    (sans tenir compte de la retenue finale)
 ```
 
-## Exercice 7
+## Exercice {num}`exo-info`
 
 Déterminer l'opposé des nombres suivants en binaire, ainsi que la valeur
 décimale de celui-ci.
@@ -148,7 +148,7 @@ décimale de celui-ci.
     print("\x0cBravo")
     ```
 
-## Exercice 8
+## Exercice {num}`exo-info`
 
 Répondre aux questions suivantes:
 

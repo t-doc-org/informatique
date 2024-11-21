@@ -16,7 +16,7 @@ suisses.
 select * from canton;
 ```
 
-## Exercice 1
+## Exercice {num}`exo-bd-lab1`
 
 Indiquer ce qu'afficheront les requêtes suivantes:
 
@@ -60,7 +60,7 @@ Indiquer ce qu'afficheront les requêtes suivantes:
     select * from canton order by superficie asc;
     ```
 
-## Exercice 2
+## Exercice {num}`exo-bd-lab1`
 
 Voici à nouveau la table `canton`.
 
@@ -109,7 +109,7 @@ insert into canton values
 ```
 ````
 
-## Exercice 3
+## Exercice {num}`exo-bd-lab1`
 
 1.  Écrire une requête SQL qui retourne toutes les colonnes du canton dont le
     chef-lieu est Bellinzone.
@@ -246,7 +246,7 @@ insert into canton values
     ```
     ````
 
-## Exercice 4
+## Exercice {num}`exo-bd-lab1:pays`
 
 Voici le code d'une base de données qui contient des informations sur différents
 pays.
@@ -351,7 +351,7 @@ select * from pays;
     ```
     ````
 
-## Exercice 5
+## Exercice {num}`exo-bd-lab1`
 
 Une application de rencontres demande, à l'enregistrement sur son site, les
 informations suivantes: le nom, le prénom, l'email, le sexe,
@@ -538,9 +538,10 @@ select * from contact limit 4;
     ```
     ````
 
-## Exercice 6 (facultatif)
+## Exercice {num}`exo-bd-lab1` (facultatif)
 
-Reprenons la base de données des pays de l'exercice 4.
+Reprenons la base de données des pays de
+l'{numref}`exercice %s<exo-bd-lab1:pays>`.
 
 1.  Ajouter une colonne `monnaie`. Pour cela, il faut utiliser l'instruction
     `alter table`. Rechercher sur le Web comment faire.

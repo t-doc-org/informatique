@@ -44,7 +44,7 @@ def nom_de_la_fonction(paramètres):
 nom_de_la_fonction(paramètres)
 ```
 
-## Exercice 25
+## Exercice {num}`exo-py2-rev`
 
 Une fonction nommée `salutations` a été définie ci-dessous. Appeler cette
 fonction dans le programme.
@@ -70,7 +70,7 @@ salutations()
 ```
 ````
 
-## Exercice 26
+## Exercice {num}`exo-py2-rev`
 
 Une fonction nommée `affiche_somme` prend 2 paramètres numériques. Cette
 fonction additionne les paramètres et affiche le résultat.
@@ -100,7 +100,7 @@ affiche_somme(3, 7)
 ```
 ````
 
-## Exercice 27
+## Exercice {num}`exo-py2-rev`
 
 Au début du code donné ci-dessous, définir une fonction nommée `au_revoir`
 permettant simplement d'afficher le texte "À bientôt!".
@@ -134,7 +134,7 @@ while i < 20:
 ```
 ````
 
-## Exercice 28
+## Exercice {num}`exo-py2-rev`
 
 Au-dessus du code donné, définir une fonction nommée `affiche_prix_billet`
 prenant en paramètre l'âge de l'utilisateur et affichant le prix du billet de
@@ -173,7 +173,7 @@ for a in range(1, 71):
 ```
 ````
 
-## Exercice 29
+## Exercice {num}`exo-py2-rev`
 
 Indiquer l'ordre d'exécution des lignes et faire le tableau d'états du programme
 suivant:

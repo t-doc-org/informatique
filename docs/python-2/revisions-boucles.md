@@ -90,7 +90,7 @@ print("Bravo!")
 
 </td></tr></table>
 
-## Exercice 18
+## Exercice {num}`exo-py2-rev`
 
 ```{exec} python
 :linenos:
@@ -114,7 +114,7 @@ print("La somme est:", somme)
 ```
 ````
 
-## Exercice 19
+## Exercice {num}`exo-py2-rev`
 
 1. Écrire un programme en utilisant le boucle `for` qui affiche les nombres de 0
 à 9.
@@ -167,7 +167,7 @@ for nombre in range(12):
 ```
 ````
 
-## Exercice 20
+## Exercice {num}`exo-py2-rev`
 
 Indiquer l'ordre d'exécution des lignes et ce qu'affichera le programme.
 
@@ -200,7 +200,7 @@ print("a =", a, "b =", b)
 ```
 ````
 
-## Exercice 21
+## Exercice {num}`exo-py2-rev`
 
 Nous voulons créer un programme qui demande à l'utilisateur un nombre
 strictement positif. Tant que l'utilisateur entre un nombre plus petit ou égal à
@@ -236,7 +236,7 @@ print("Merci")
 ```
 ````
 
-## Exercice 22
+## Exercice {num}`exo-py2-rev`
 
 Nous souhaitons créer un programme qui compte le temps avant qu'une bombe
 explose. Pour cela, un compte à rebours commencera à 10 et ira jusqu'à 1, puis
@@ -285,7 +285,7 @@ print("BOOM")
 ```
 ````
 
-## Exercice 23
+## Exercice {num}`exo-py2-rev`
 
 Écrire un programme qui demande à l'utilisateur combien il y a de cantons en
 Suisse. Tant que la réponse n'est pas 26, le programme redemande une nouvelle
@@ -319,12 +319,12 @@ print("Bravo!")
 ```
 ````
 
-## Bonus 1
+## Bonus {num}`bon-py2-rev`
 
 Améliorer le programme de l'exercice précédent en indiquant à l'utilisateur
 s'il y a plus ou moins de cantons en fonction de sa réponse.
 
-## Exercice 24
+## Exercice {num}`exo-py2-rev`
 
 Indiquer l'ordre d'exécution des lignes et faire le tableau d'états du programme
 suivant:

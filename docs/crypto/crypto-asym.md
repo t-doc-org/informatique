@@ -125,7 +125,7 @@ des messages en toute sécurité avec Bob.
 
 6. Alice garde secret sa clé privée (5, 11, 27) et publie sa clé publique (55, 43).
 
-#### Exercice 5
+#### Exercice {num}`exo-crypto`
 
 Déterminer la clé publique et la clé privée du système RSA avec les deux nombres
 premiers suivants:\
@@ -190,7 +190,7 @@ Bob souhaite envoyer à Alice le message suivant: "salut".
    Bob transmet à Alice le cryptogramme suivant composé de 5 blocs:
    39 01 23 21 25.
 
-#### Exercice 6
+#### Exercice {num}`exo-crypto`
 
 Chiffrer le message $m = 34$ à l'aide du système RSA, avec la clé publique
 (143, 7).
@@ -230,7 +230,7 @@ Alice a reçu le cryptogramme suivant composé de 5 blocs: 39 01 23 21 25.
    1 -> a, 12 -> l, 21 -> u et 20 -> t.\
    Le message reçu est donc "salut".
 
-#### Exercice 7
+#### Exercice {num}`exo-crypto`
 
 Vous avez reçu un message chiffré $c = 122$.\
 Déchiffrer le message $m$ sachant que votre clé privée est  (13, 11, 103).

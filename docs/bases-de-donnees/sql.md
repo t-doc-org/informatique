@@ -39,7 +39,7 @@ create table stock (
 select * from stock;
 ```
 
-## Exercice 1
+## Exercice {num}`exo-bd:produit-create`
 
 Écrire la requête SQL qui permet de créer la table `produit` ci-dessous,
 sachant que `no_p` et `prix` sont des entiers et que `nom` et
@@ -96,7 +96,7 @@ Les chaînes de caractères doivent être entourées d'apostrophes
 (guillemets simples).
 ```
 
-## Exercice 2
+## Exercice {num}`exo-bd:produit-insert`
 
 Écrire les requêtes SQL qui permettent d'insérer dans la table `produit` les
 lignes suivantes:
@@ -152,7 +152,7 @@ select article from stock;
 select article, quantite from stock;
 ```
 
-## Exercice 3
+## Exercice {num}`exo-bd`
 
 Écrire la requête SQL qui permet d'afficher toutes les lignes de la table
 `produit`.
@@ -234,7 +234,7 @@ select * from stock where taille = 'M';
 select * from stock where prix_unitaire = 35;
 ```
 
-## Exercice 4
+## Exercice {num}`exo-bd`
 
 Écrire la requête SQL qui permet d'afficher toutes les colonnes du produit
 Brimnes.
@@ -278,7 +278,7 @@ suivante:
 update stock set couleur = 'bleu' where id = 3;
 ```
 
-## Exercice 5
+## Exercice {num}`exo-bd`
 
 Mettre à jour le prix du **canapé 2 places** qui ne coûte plus que 499 CHF.
 
@@ -308,7 +308,7 @@ Il est aussi possible de supprimer une ligne complète d'une table.
 delete from stock where article = 'Polo';
 ```
 
-## Exercice 6
+## Exercice {num}`exo-bd`
 
 Supprimer le produit dont le `no_p` est 3.\
 Contrôler le résultat en affichant tous les éléments de la table produit.
@@ -367,7 +367,7 @@ create table stock (
 );
 ```
 
-## Exercice 7
+## Exercice {num}`exo-bd`
 
 Créer une table `eleve` qui contient les informations des élèves: nom, prénom,
 sexe, classe, date de naissance, email, adresse, code postal, ville, téléphone.\
@@ -445,7 +445,7 @@ insert into crepe (nom, description) values
 select * from crepe;
 ```
 
-## Exercice 8
+## Exercice {num}`exo-bd`
 
 Créer une table boisson qui contient la liste des prix des boissons de la
 cafétéria.\

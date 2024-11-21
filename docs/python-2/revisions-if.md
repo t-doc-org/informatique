@@ -94,7 +94,7 @@ else:
 Dans l'exemple ci-dessus, il y a le choix entre trois types de films (action,
 comédie et horreur). Le branchement `else` gérera tous les autres cas.
 
-## Exercice 10
+## Exercice {num}`exo-py2-rev`
 
 ```{exec} python
 :when: never
@@ -123,7 +123,7 @@ else :
 ```
 ````
 
-## Exercice 11
+## Exercice {num}`exo-py2-rev`
 
 ```{exec} python
 :name: python-buffer
@@ -166,7 +166,7 @@ while True:
 print("\x0cBravo!")
 ```
 
-## Exercice 12
+## Exercice {num}`exo-py2-rev`
 
 1.  ```{exec} python
     :linenos:
@@ -223,7 +223,7 @@ print("\x0cBravo!")
       print("La division par 0 est impossible.")
     ```
 
-## Exercice 13
+## Exercice {num}`exo-py2-rev`
 
 Nous souhaitons créer un programme qui calcule le prix à payer lors de l'achat de
 canette de Red Bull dont le prix unitaire est de 1.50 CHF.
@@ -259,7 +259,7 @@ else:
 ```
 ````
 
-## Exercice 14
+## Exercice {num}`exo-py2-rev`
 
 Écrire un programme qui correspond à l'algorithme suivant:
 
@@ -294,7 +294,7 @@ else:
 ```
 ````
 
-## Exercice 15
+## Exercice {num}`exo-py2-rev`
 
 Voici trois programmes:
 
@@ -354,7 +354,7 @@ print(x)
 
 </td></tr></table>
 
-## Exercice 16
+## Exercice {num}`exo-py2-rev`
 
 Que vont afficher chacun de ces programmes?
 
@@ -407,7 +407,7 @@ print(not(a <= b))
 
 </td></tr></table>
 
-## Exercice 17
+## Exercice {num}`exo-py2-rev`
 
 Le programme suivant contient une erreur de logique. Tester le programme avec
 différentes valeurs pour trouver et corriger l'erreur.
