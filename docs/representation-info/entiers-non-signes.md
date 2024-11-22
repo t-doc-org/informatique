@@ -50,7 +50,7 @@ $$
 Convertir les nombres suivants de binaire en décimal.
 
 ```{exec} python
-:name: info-question
+:name: question
 :when: never
 :class: hidden
 async def question(*solutions, format='{}'):
@@ -66,7 +66,7 @@ async def question(*solutions, format='{}'):
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b10)
     ```
@@ -75,7 +75,7 @@ async def question(*solutions, format='{}'):
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b101)
     ```
@@ -84,7 +84,7 @@ async def question(*solutions, format='{}'):
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b1111)
     ```
@@ -93,7 +93,7 @@ async def question(*solutions, format='{}'):
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b1001)
     ```
@@ -102,7 +102,7 @@ async def question(*solutions, format='{}'):
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b0110)
     ```
@@ -111,7 +111,7 @@ async def question(*solutions, format='{}'):
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b1101)
     ```
@@ -120,7 +120,7 @@ async def question(*solutions, format='{}'):
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b1010101)
     ```
@@ -129,7 +129,7 @@ async def question(*solutions, format='{}'):
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b1100110)
     ```
@@ -170,7 +170,7 @@ Convertir les nombres suivants de décimal en binaire.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(3, format='{:b}')
     ```
@@ -179,7 +179,7 @@ Convertir les nombres suivants de décimal en binaire.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(6, format='{:b}')
     ```
@@ -188,7 +188,7 @@ Convertir les nombres suivants de décimal en binaire.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(9, format='{:b}')
     ```
@@ -197,7 +197,7 @@ Convertir les nombres suivants de décimal en binaire.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(41, format='{:b}')
     ```
@@ -206,7 +206,7 @@ Convertir les nombres suivants de décimal en binaire.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(64, format='{:b}')
     ```
@@ -215,7 +215,7 @@ Convertir les nombres suivants de décimal en binaire.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(171, format='{:b}')
     ```
@@ -224,7 +224,7 @@ Convertir les nombres suivants de décimal en binaire.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(720, format='{:b}')
     ```
@@ -233,7 +233,7 @@ Convertir les nombres suivants de décimal en binaire.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(1573, format='{:b}')
     ```
@@ -246,7 +246,7 @@ Combien de bits faut-il pour écrire les nombres suivants en base 2?
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question("4", "4bits")
     ```
@@ -255,7 +255,7 @@ Combien de bits faut-il pour écrire les nombres suivants en base 2?
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question("6", "6bits")
     ```
@@ -264,7 +264,7 @@ Combien de bits faut-il pour écrire les nombres suivants en base 2?
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question("8", "8bits")
     ```
@@ -273,7 +273,7 @@ Combien de bits faut-il pour écrire les nombres suivants en base 2?
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question("9", "9bits")
     ```
@@ -314,7 +314,7 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b10000111, format='{:x}')
     ```
@@ -323,7 +323,7 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b01011010, format='{:x}')
     ```
@@ -332,7 +332,7 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b10011111, format='{:x}')
     ```
@@ -341,7 +341,7 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b0111000111101001, format='{:x}')
     ```
@@ -350,7 +350,7 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0x3a, format='{:b}')
     ```
@@ -359,7 +359,7 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0xf4, format='{:b}')
     ```
@@ -368,7 +368,7 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0xbd, format='{:b}')
     ```
@@ -377,7 +377,7 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0x9c2e, format='{:b}')
     ```
@@ -435,7 +435,7 @@ Effectuer les additions suivantes sur 4 bits.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b0010 + 0b0011, format='{:04b}')
     ```
@@ -444,7 +444,7 @@ Effectuer les additions suivantes sur 4 bits.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b0101 + 0b1000, format='{:04b}')
     ```
@@ -453,7 +453,7 @@ Effectuer les additions suivantes sur 4 bits.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b1011 + 0b0001, format='{:04b}')
     ```
@@ -462,7 +462,7 @@ Effectuer les additions suivantes sur 4 bits.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question("overflow")
     ```
@@ -475,7 +475,7 @@ Effectuer les additions suivantes sur 8 bits.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b01100110 + 0b00110010, format='{:08b}')
     ```
@@ -484,7 +484,7 @@ Effectuer les additions suivantes sur 8 bits.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b01011111 + 0b10000000, format='{:08b}')
     ```
@@ -493,7 +493,7 @@ Effectuer les additions suivantes sur 8 bits.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b10110001 + 0b00101101, format='{:08b}')
     ```
@@ -502,7 +502,7 @@ Effectuer les additions suivantes sur 8 bits.
 
     ```{exec} python
     :when: load
-    :after: info-question
+    :after: question
     :class: hidden
     await question(0b00111100 + 0b01100101, format='{:08b}')
     ```
