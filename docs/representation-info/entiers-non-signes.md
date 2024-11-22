@@ -49,100 +49,89 @@ $$
 
 Convertir les nombres suivants de binaire en décimal.
 
-1. $10_2$
+```{exec} python
+:name: info-question
+:when: never
+:class: hidden
+async def question(*solutions, format='{}'):
+  solutions = [format.format(s) for s in solutions]
+  while True:
+    resp = await input_line("Réponse:")
+    if resp.replace(" ", "").lower() in solutions: break
+    print("\x0cEssaie encore")
+  print("\x0cBravo")
+```
+
+1.  $10_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "2": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b10)
     ```
 
-2. $101_2$
+2.  $101_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "5": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b101)
     ```
 
-3. $1111_2$
+3.  $1111_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "15": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b1111)
     ```
 
-4. $1001_2$
+4.  $1001_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "9": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b1001)
     ```
 
-5. $0110_2$
+5.  $0110_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "6": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b0110)
     ```
 
-6. $1101_2$
+6.  $1101_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "13": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b1101)
     ```
 
-7. $1010101_2$
+7.  $1010101_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "85": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b1010101)
     ```
 
-8. $1100110_2$
+8.  $1100110_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "102": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b1100110)
     ```
 
 ## Conversion décimal - binaire
@@ -161,11 +150,11 @@ plus petite ou égale au reste.
 
 Que vaut $149$ en binaire?
 
-| $2^n$             |  $2^8$ | $2^7$ | $2^6$ | $2^5$ | $2^4$ | $2^3$ | $2^2$ | $2^1$ | $2^0$ |
-| :------:          | :---:  | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-|                   | 256    | 128   | 64    | 32    | 16    | 8     | 4     | 2     | 1     |
-| $2^n \leq$ reste? | 0      | 1     | 0     | 0     | 1     | 0     | 1     | 0     | 1     |
-| Reste             | $149$  | $21$  | $21$  | $21$  | $5$   | $5$   | $1$   | $1$   | $0$   |
+| $2^n$             | $2^8$ | $2^7$ | $2^6$ | $2^5$ | $2^4$ | $2^3$ | $2^2$ | $2^1$ | $2^0$ |
+| :---------------: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+|                   | 256   | 128   | 64    | 32    | 16    | 8     | 4     | 2     | 1     |
+| $2^n \leq$ reste? | 0     | 1     | 0     | 0     | 1     | 0     | 1     | 0     | 1     |
+| Reste             | $149$ | $21$  | $21$  | $21$  | $5$   | $5$   | $1$   | $1$   | $0$   |
 
 $$149 = 10010101_2$$
 
@@ -177,159 +166,117 @@ $$149 = 10010101_2$$
 
 Convertir les nombres suivants de décimal en binaire.
 
-1. $3$
+1.  $3$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "11": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(3, format='{:b}')
     ```
 
-2. $6$
+2.  $6$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "110": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(6, format='{:b}')
     ```
 
-3. $9$
+3.  $9$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "1001": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(9, format='{:b}')
     ```
 
-4. $41$
+4.  $41$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "101001": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(41, format='{:b}')
     ```
 
-5. $64$
+5.  $64$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "1000000": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(64, format='{:b}')
     ```
 
-6. $171$
+6.  $171$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "10101011": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(171, format='{:b}')
     ```
 
-7. $720$
+7.  $720$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "1011010000": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(720, format='{:b}')
     ```
 
-8. $1573$
+8.  $1573$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "11000100101": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(1573, format='{:b}')
     ```
 
 ## Exercice {num}`exo-info`
 
 Combien de bits faut-il pour écrire les nombres suivants en base 2?
 
-1. $13$
+1.  $13$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      resp = resp.replace(" ", "").lower()
-      if resp == "4" or resp == "4bits": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question("4", "4bits")
     ```
 
-2. $37$
+2.  $37$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      resp = resp.replace(" ", "").lower()
-      if resp == "6" or resp == "6bits": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question("6", "6bits")
     ```
 
-3. $128$
+3.  $128$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      resp = resp.replace(" ", "").lower()
-      if resp == "8" or resp == "8bits": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question("8", "8bits")
     ```
 
-4. $350$
+4.  $350$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      resp = resp.replace(" ", "").lower()
-      if resp == "9" or resp == "9bits": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question("9", "9bits")
     ```
-
-
 
 ## Conversion binaire - hexadécimal
 
@@ -359,105 +306,80 @@ Que vaut A0D7 en binaire?
 
 $$A0D7_{16} = 1010\,0000\,1101\,0111_{2}$$
 
-
 ## Exercice {num}`exo-info`
 
 Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
-1. $1000\,0111_2$
+1.  $1000\,0111_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "87": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b10000111, format='{:x}')
     ```
 
-2. $0101\,1010_2$
+2.  $0101\,1010_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "5A": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b01011010, format='{:x}')
     ```
 
-3. $1001\,1111_2$
+3.  $1001\,1111_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "9F": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b10011111, format='{:x}')
     ```
 
-4. $0111\,0001\,1110\,1001_2$
+4.  $0111\,0001\,1110\,1001_2$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "71E9": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b0111000111101001, format='{:x}')
     ```
 
-5. $3A_{16}$
+5.  $3A_{16}$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "00111010": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0x3a, format='{:b}')
     ```
 
-6. $F4_{16}$
+6.  $F4_{16}$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "11110100": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0xf4, format='{:b}')
     ```
 
-7. $BD_{16}$
+7.  $BD_{16}$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "10111101": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0xbd, format='{:b}')
     ```
 
-8. $9C\,2E_{16}$
+8.  $9C\,2E_{16}$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "1001110000101110": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0x9c2e, format='{:b}')
     ```
 
 ## L'addition de nombres entiers en binaire
@@ -509,103 +431,78 @@ Un exemple coûteux d'overflow est le [vol 501 d'Ariane 5](https://fr.wikipedia.
 
 Effectuer les additions suivantes sur 4 bits.
 
-1. $0010 + 0011$
+1.  $0010 + 0011$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "0101": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b0010 + 0b0011, format='{:04b}')
     ```
 
-2. $0101 + 1000$
+2.  $0101 + 1000$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "1101": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b0101 + 0b1000, format='{:04b}')
     ```
 
-3. $1011 + 0001$
+3.  $1011 + 0001$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "1100": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b1011 + 0b0001, format='{:04b}')
     ```
 
-4. $1111 + 1000$
+4.  $1111 + 1000$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      resp = resp.lower()
-      if resp.replace(" ", "") == "overflow": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question("overflow")
     ```
 
 ## Exercice {num}`exo-info`
 
 Effectuer les additions suivantes sur 8 bits.
 
-1. $0110\,0110 + 0011\,0010$
+1.  $0110\,0110 + 0011\,0010$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "10011000": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b01100110 + 0b00110010, format='{:08b}')
     ```
 
-2. $0101\,1111 + 1000\,0000$
+2.  $0101\,1111 + 1000\,0000$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "11011111": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b01011111 + 0b10000000, format='{:08b}')
     ```
 
-3. $1011\,0001 + 0010\,1101$
+3.  $1011\,0001 + 0010\,1101$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "11011110": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b10110001 + 0b00101101, format='{:08b}')
     ```
 
-4. $0011\,1100 + 0110\,0101$
+4.  $0011\,1100 + 0110\,0101$
 
     ```{exec} python
     :when: load
+    :after: info-question
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "10100001": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b00111100 + 0b01100101, format='{:08b}')
     ```
