@@ -184,7 +184,7 @@ ultrices felis a facilisis feugiat. </p>
 
 ## Exercices
 
-### Exercice 4
+### Exercice {num}`exo-html`
 
 But: Appliquer un fichier CSS au document index.html.
 
@@ -194,14 +194,14 @@ But: Appliquer un fichier CSS au document index.html.
    `index.html`. (cf. [](#referencement))
 3. Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
 
-### Exercice 5
+### Exercice {num}`exo-html`
 
 1. Qu'est-ce qui a changé?
 2. Cliquer sur `style.css` pour que le document s'afficher et essayer de le
    comprendre.
     - À quels éléments s'appliquent les différentes propriétés?
-    - Quelle est la différence entre `h1{...}` et `#source{...}`? Quand va-t-on
-      utiliser le deuxième?
+    - Quelle est la différence entre `h1 {...}` et `#source {...}`? Quand
+      va-t-on utiliser le deuxième?
 3. Vous allez maintenant modifier cette page.Pour valider une modification:
     - Sauvegarder le document dans VSCode ({kbd}`ctrl` + {kbd}`s` ou
       {kbd}`command` + {kbd}`s`).
@@ -217,7 +217,7 @@ But: Appliquer un fichier CSS au document index.html.
    (Il faut utiliser un sélecteur de classe.)
 9. Ajouter une bordure au tableau.
 
-### Exercice 6
+### Exercice {num}`exo-html`
 
 À vous de jouer! Réfléchir à la structure de votre site internet:
 

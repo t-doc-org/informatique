@@ -15,7 +15,7 @@ Par convention, nous écrivons le texte en minuscules pour le message clair et e
 majuscules pour le cryptogramme (texte chiffré).
 ```
 
-## Exercice 1
+## Exercice {num}`exo-crypto-lab`
 
 **But:** Utilisation du chiffre de Rail Frence pour chiffrer et déchiffrer un
 message.
@@ -25,7 +25,7 @@ message.
 1. Chacun écrit un message qu'il chiffre et transmet à un autre élève.
 2. Déchiffrer le message d'un autre élève.
 
-## Exercice 2
+## Exercice {num}`exo-crypto-lab`
 
 **But:** Effectuer une analyse de fréquences pour décrypter un message codé avec un
 chiffre de César.
@@ -100,7 +100,7 @@ compte que c est une comedie (Joker)
 quoi on va tomber (Forrest Gump)
 ```
 
-## Exercice 3
+## Exercice {num}`exo-crypto-lab`
 
 **But:** Décrypter un message utilisant la substitution monoalphabétique en
 faisant une analyse de fréquences.
@@ -138,7 +138,7 @@ IMPLU St KPXOt
 distinctions sociales ne peuvent etre fondees que sur l'utilite commune.
 ```
 
-## Exercice 4
+## Exercice {num}`exo-crypto-lab`
 
 **But:** Échanger un message en utilisant le système RSA.
 

@@ -136,7 +136,7 @@ commençant par # sera ignorée lors de l'exécution du programme.
     Dès que la division est utilisée dans un calcul, le résultat sera de type
     `float`, même si le résultat de la division est un nombre entier.
 
-## Exercice 1
+## Exercice {num}`exo-py2-rev`
 
 Quel est le résultat des expressions suivantes en Python?
 
@@ -201,7 +201,7 @@ Quel est le résultat des expressions suivantes en Python?
     print("\x0cBravo!")
     ```
 
-## Exercice 2
+## Exercice {num}`exo-py2-rev`
 
 De quel type sont les données suivantes?
 
@@ -277,7 +277,7 @@ De quel type sont les données suivantes?
     print("\x0cBravo!")
     ```
 
-## Exercice 3
+## Exercice {num}`exo-py2-rev`
 
 Qu'affiche le programme suivant? Appuyer sur bouton "play" pour vérifier votre réponse.
 
@@ -289,7 +289,7 @@ aire = base * hauteur / 2
 print("L'aire du triangle est de", aire)
 ```
 
-## Exercice 4
+## Exercice {num}`exo-py2-rev`
 
 Qu'affiche le programme suivant? Faire un tableau d'états.\
 Appuyer sur bouton "play" pour vérifier votre réponse.
@@ -316,7 +316,7 @@ print(a, b)
 | a = a * 2   |28 |4  |
 ````
 
-## Exercice 5
+## Exercice {num}`exo-py2-rev`
 
 En exécutant les programmes suivants, une erreur se produit. Corriger le code à
 l'aide du message d'erreur.
@@ -365,7 +365,7 @@ l'aide du message d'erreur.
     print("La somme de a et b vaut" a + b)
     ```
 
-## Exercice 6
+## Exercice {num}`exo-py2-rev`
 
 Faire le tableau d'états du programme suivant:
 ```{exec} python

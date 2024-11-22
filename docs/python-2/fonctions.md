@@ -19,7 +19,7 @@ est préférable de placer toutes les définitions de fonctions au début du
 programme (après les imports et les définitions de variables globales).
 ```
 
-## Exemple 1
+## Exemple {num}`ex-py2`
 
 Fonction qui affiche la table de multiplication de 5:
 
@@ -44,7 +44,7 @@ Un **paramètre d'une fonction** est une variable définie dans la fonction qui
 recevra une valeur lors de chaque appel de la fonction. Ainsi le comportement
 d'une fonction varie suivant les valeurs de ses paramètres.
 
-## Exemple 2
+## Exemple {num}`ex-py2`
 
 Fonction qui affiche n'importe quelle table de multiplication:
 
@@ -59,7 +59,7 @@ nombre = 6                      # changer le valeur du nombre ici
 table_multiplication(nombre)
 ```
 
-## Exemple 3
+## Exemple {num}`ex-py2:delta`
 
 ```{exec} python
 :linenos:
@@ -86,7 +86,7 @@ La commande `return` permet de renvoyer le résultat d'une fonction et ainsi
 pouvoir le réutiliser dans la suite du programme. Pour cela, il est nécessaire
 de sauvegarder la valeur retournée dans une variable.
 
-## Exercice 1
+## Exercice {num}`exo-py2`
 
 1. Déterminer ce que font les programmes suivants.
 2. Corriger les erreurs.
@@ -169,10 +169,10 @@ print("Fin du programme")
 ```
 ````
 
-## Exercice 2
+## Exercice {num}`exo-py2:num`
 
-Modifier le code de l'exemple 3, pour afficher le nombre de solutions de
-l'équation.\
+Modifier le code de l'{numref}`exemple %s<ex-py2:delta>`, pour afficher le
+nombre de solutions de l'équation.\
 Rappel:
 - si $\Delta < 0$, il n'y a pas de solution,
 - si $\Delta = 0$, il y a une solution,
@@ -207,9 +207,10 @@ else:
 ```
 ````
 
-## Exercice 3
+## Exercice {num}`exo-py2`
 
-Compléter le code de l'exercice 1, pour calculer les solutions de l'équation.
+Compléter le code de l'{numref}`exercice %s<exo-py2:num>`, pour calculer les
+solutions de l'équation.
 
 ````{tip}
 Pour calculer la racine carrée d'un nombre, il faut utiliser la fonction
@@ -252,7 +253,7 @@ else:
 ```
 ````
 
-## Exercice 4
+## Exercice {num}`exo-py2`
 
 1. Écrire une fonction qui convertit des bits en octets.
 2. Écrire une fonction qui convertit des octets en bits.
@@ -285,7 +286,7 @@ print("La conversion de 512 octets en bits donne", nb_bits)
 ```
 ````
 
-## Exercice 5
+## Exercice {num}`exo-py2`
 
 Pour calculer l'aire totale de la figure ci-dessous:
 
@@ -318,7 +319,7 @@ print("Aire totale:", aire_totale)
 ```
 ````
 
-## Exercice 6
+## Exercice {num}`exo-py2`
 
 Pour les prochaines vacances, tu décides de partir en vacances au Japon. Tu as
 de l'argent sur ton compte épargne et l'argent que tu vas gagner en travaillant
@@ -359,7 +360,7 @@ print("Tu auras", budget_yen, "YEN.")
 ```
 ````
 
-## Exercice 7
+## Exercice {num}`exo-py2`
 
 Écrivez une fonction qui prend en paramètre un code de réduction et retourne le
 pourcentage de rabais donné par ce code de réduction. Le code déjà donné utilise
@@ -404,7 +405,7 @@ print("Le prix final est de", prix_final, "CHF.")
 ```
 ````
 
-## Exercice 8
+## Exercice {num}`exo-py2`
 
 Pour calculer le prix de l'amende à payer en cas de dépassement de vitesse,
 consulte le document suivant.
@@ -452,7 +453,7 @@ print(amende(120,120))
 ```
 ````
 
-## Exercice 9
+## Exercice {num}`exo-py2`
 
 La suite de Syracuse est une suite d'entiers naturels définie de la manière
 suivante:

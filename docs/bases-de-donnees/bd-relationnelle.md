@@ -275,7 +275,7 @@ digraph UML_Class_diagram {
 }
 ```
 
-### Exercice 9
+### Exercice {num}`exo-bd`
 
 Dessiner le schéma de la base de données relationnelle qui représente un système
 de location de trottinettes électriques.

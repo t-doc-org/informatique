@@ -17,7 +17,6 @@ Cette représentation possède deux inconvénients:
 différencier le cas où les deux nombres sont de même signe du cas où ils sont de
 signes différents.
 
-
 ## Complément à 2
 
 La notation en complément à 2 permet de remédier à ces problèmes. Les nombres
@@ -75,277 +74,130 @@ Vérification: l'addition d'un nombre et de son opposé doit donner 0.
   1 0 0 0 0    (sans tenir compte de la retenue finale)
 ```
 
-## Exercice 7
+## Exercice {num}`exo-info`
 
 Déterminer l'opposé des nombres suivants en binaire, ainsi que la valeur
 décimale de celui-ci.
 
-1. $0111_2$
+```{exec} python
+:name: question-oppose
+:when: never
+:class: hidden
+async def question(valeur, bits):
+  format = f"{{:0{bits}b}}"
+  wrap = 1 << bits
+  oppose = wrap - valeur
+  while True:
+    resp = await input_line("Opposé:")
+    if resp.replace(" ", "") == format.format(oppose) : break
+    print("\x0cEssaie encore")
+  print("\x0cL'opposé est correct.")
+  if oppose >= wrap // 2: oppose -= wrap
+  while True:
+    resp = await input_line("Valeur décimale:")
+    if resp.replace(" ", "") == str(oppose): break
+    print("\x0cEssaie encore")
+  print("\x0cBravo")
+```
+
+1.  $0111_2$
 
     ```{exec} python
     :when: load
+    :after: question-oppose
     :class: hidden
-    while True:
-      resp = await input_line("Opposé:")
-      if resp.replace(" ", "") == "1001": break
-      print("\x0cEssaie encore")
-    print("\x0cL'opposé est correct.")
-    while True:
-      resp = await input_line("Valeur décimale:")
-      if resp.replace(" ", "") == "-7": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b0111, 4)
     ```
 
-2. $0101\,1010_2$
+2.  $0101\,1010_2$
 
     ```{exec} python
     :when: load
+    :after: question-oppose
     :class: hidden
-    while True:
-      resp = await input_line("Opposé:")
-      if resp.replace(" ", "") == "10100110": break
-      print("\x0cEssaie encore")
-    print("\x0cL'opposé est correct.")
-    while True:
-      resp = await input_line("Valeur décimale:")
-      if resp.replace(" ", "") == "-90": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b01011010, 8)
     ```
 
-3. $1111_2$
+3.  $1111_2$
 
     ```{exec} python
     :when: load
+    :after: question-oppose
     :class: hidden
-    while True:
-      resp = await input_line("Opposé:")
-      if resp.replace(" ", "") == "0001": break
-      print("\x0cEssaie encore")
-    print("\x0cL'opposé est correct.")
-    while True:
-      resp = await input_line("Valeur décimale:")
-      if resp.replace(" ", "") == "1": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b1111, 4)
     ```
 
-4. $1101\,0001_2$
+4.  $1101\,0001_2$
 
     ```{exec} python
     :when: load
+    :after: question-oppose
     :class: hidden
-    while True:
-      resp = await input_line("Opposé:")
-      if resp.replace(" ", "") == "00101111": break
-      print("\x0cEssaie encore")
-    print("\x0cL'opposé est correct.")
-    while True:
-      resp = await input_line("Valeur décimale:")
-      if resp.replace(" ", "") == "47": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0b11010001, 8)
     ```
 
-## Exercice 8
+## Exercice {num}`exo-info`
 
 Répondre aux questions suivantes:
 
-1. Quel est le plus grand nombre entier non signé que nous pouvons écrire sur 4
-bits?
+```{exec} python
+:name: question-magnitude
+:when: never
+:class: hidden
+async def une_question(question, reponse):
+  while True:
+    resp = await input_line(question)
+    if resp.replace(" ", "") == str(reponse): break
+    print("\x0cEssaie encore")
+  print("\x0c", end='', flush=True)
+
+async def question(valeur_4, valeur_8, valeur_n):
+  await une_question("... sur 4 bits, en décimal?", valeur_4)
+  await une_question("... sur 4 bits, en binaire?",
+                     "{:04b}".format(valeur_4).lstrip('-'))
+  await une_question("... sur 8 bits, en décimal?", valeur_8)
+  await une_question("... sur 8 bits, en binaire?",
+                     "{:08b}".format(valeur_8).lstrip('-'))
+  await une_question("... sur n bits?", valeur_n)
+  print("\x0cBravo")
+```
+
+1.  Quel est le plus **grand** nombre entier **non signé** que nous pouvons
+    écrire...
 
     ```{exec} python
     :when: load
+    :after: question-magnitude
     :class: hidden
-    while True:
-      resp = await input_line("Réponse en décimal:")
-      if resp.replace(" ", "") == "15": break
-      print("\x0cEssaie encore")
-    print("\x0cQu'est-ce que cela donne en binaire?")
-    while True:
-      resp = await input_line("Réponse en binaire:")
-      if resp.replace(" ", "") == "1111": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question((1 << 4) - 1, (1 << 8) - 1, "2^n-1")
     ```
 
-    Et sur 8 bits?
-
+2.  Quel est le plus **petit** nombre entier **non signé** que nous pouvons
+    écrire...
 
     ```{exec} python
     :when: load
+    :after: question-magnitude
     :class: hidden
-    while True:
-      resp = await input_line("Réponse en décimal:")
-      if resp.replace(" ", "") == "255": break
-      print("\x0cEssaie encore")
-    print("\x0cQu'est-ce que cela donne en binaire?")
-    while True:
-      resp = await input_line("Réponse en binaire:")
-      if resp.replace(" ", "") == "11111111": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(0, 0, "0")
     ```
 
-    Et sur n bits?
-
+3.  Quel est le plus **grand** nombre entier **signé** que nous pouvons
+    écrire...
 
     ```{exec} python
     :when: load
+    :after: question-magnitude
     :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "2^n-1": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question((1 << (4 - 1)) - 1, (1 << (8 - 1)) - 1, "2^(n-1)-1")
     ```
 
-2. Quel est le plus petit nombre entier non signé que nous pouvons écrire sur 4
-bits?
-
+4.  Quel est le plus **petit** nombre entier **signé** que nous pouvons
+    écrire...
 
     ```{exec} python
     :when: load
+    :after: question-magnitude
     :class: hidden
-    while True:
-      resp = await input_line("Réponse en décimal:")
-      if resp.replace(" ", "") == "0": break
-      print("\x0cEssaie encore")
-    print("\x0cQu'est-ce que cela donne en binaire?")
-    while True:
-      resp = await input_line("Réponse en binaire:")
-      if resp.replace(" ", "") == "0000": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question(-(1 << (4 - 1)), -(1 << (8 - 1)), "-2^(n-1)")
     ```
-
-    Et sur 8 bits?
-
-
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "0": break
-      print("\x0cEssaie encore")
-    print("\x0cQu'est-ce que cela donne en binaire?")
-    while True:
-      resp = await input_line("Réponse en binaire:")
-      if resp.replace(" ", "") == "00000000": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-
-    Et sur n bits?
-
-
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "0": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-
-3. Quel est le plus grand nombre entier signé que nous pouvons écrire sur 4
-bits?
-
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse en décimal:")
-      if resp.replace(" ", "") == "7": break
-      print("\x0cEssaie encore")
-    print("\x0cQu'est-ce que cela donne en binaire?")
-    while True:
-      resp = await input_line("Réponse en binaire:")
-      if resp.replace(" ", "") == "0111": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-
-    Et sur 8 bits?
-
-
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse en décimal:")
-      if resp.replace(" ", "") == "127": break
-      print("\x0cEssaie encore")
-    print("\x0cQu'est-ce que cela donne en binaire?")
-    while True:
-      resp = await input_line("Réponse en binaire:")
-      if resp.replace(" ", "") == "01111111": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-
-    Et sur n bits?
-
-
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "2^(n-1)-1": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-
-4. Quel est le plus petit nombre entier signé que nous pouvons écrire sur 4
-bits?
-
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse en décimal:")
-      if resp.replace(" ", "") == "-8": break
-      print("\x0cEssaie encore")
-    print("\x0cQu'est-ce que cela donne en binaire?")
-    while True:
-      resp = await input_line("Réponse en binaire:")
-      if resp.replace(" ", "") == "1000": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-
-    Et sur 8 bits?
-
-
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse en décimal:")
-      if resp.replace(" ", "") == "-128": break
-      print("\x0cEssaie encore")
-    print("\x0cQu'est-ce que cela donne en binaire?")
-    while True:
-      resp = await input_line("Réponse en binaire:")
-      if resp.replace(" ", "") == "10000000": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-
-    Et sur n bits?
-
-
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "-2^(n-1)": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-

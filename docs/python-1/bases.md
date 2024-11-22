@@ -26,7 +26,7 @@ la console.
 print("Hello World!")
 ```
 
-### Exercice 1
+### Exercice {num}`exo-py1`
 
 Écrire un programme qui affiche exactement ce texte:
 
@@ -53,7 +53,7 @@ print("J'aime bien jouer au volley.")
 ```
 ````
 
-### Exercice 2
+### Exercice {num}`exo-py1`
 
 1. Écrire un programme qui affiche "Bonjour tout le monde!".
 2. Écrire un programme qui affiche "Je programme!".
@@ -92,7 +92,7 @@ nombres.
 | // | Division entière | 26 // 6 | 4 |
 | % | Modulo (reste de la division entière) | 26 mod 6 | 2 |
 
-### Exercice 3
+### Exercice {num}`exo-py1`
 
 1. Effectuer mentalement les 7 opérations ci-dessus avec les nombres 13 et 2.
 2. Écrire un programme qui permet d'effectuer les 7 opérations ci-dessus avec 13
@@ -132,7 +132,7 @@ print(a % b)
 ```
 ````
 
-### Exercice 4
+### Exercice {num}`exo-py1`
 
 Écrire un programme qui permet d'afficher les calculs suivants, ainsi que la
 réponse:
@@ -159,9 +159,9 @@ print("Le reste de la division de 345 par 37 est ", 345 % 37)
 ```
 ````
 
-### Exercice 5
+### Exercice {num}`exo-py1`
 
-Écrire un programme qui permet de résoudre l'exercice suivant (Ne pas oublier
+Écrire un programme qui permet de résoudre l'exercice suivant (ne pas oublier
 les phrases d'explication):
 
 1. Luc va faire des courses. Il achète deux livres à 9.30 CHF, un jeu vidéo à 59
@@ -232,7 +232,7 @@ print("Les économies de Juliette sont de", economies_Juliette, "francs.")
 ```
 ````
 
-### Exercice 6
+### Exercice {num}`exo-py1`
 
 Écrire un programme qui demande à l'utilisateur son nom, son prénom et où il
 habite. Le programme affichera:
@@ -260,7 +260,7 @@ print("Je vois que tu habites à", lieu)
 ```
 ````
 
-### Exercice 7
+### Exercice {num}`exo-py1`
 
 Écrire un programme qui demande à l'utilisateur l'année actuelle, ainsi que
 l'âge qu'il avait le 31 décembre dernier et qui calcule l'année de naissance de
@@ -287,7 +287,7 @@ print("Tu es né.e en", annee - age - 1)
 ```
 ````
 
-### Exercice 8
+### Exercice {num}`exo-py1`
 
 Écrire un programme qui convertit des mégaoctets en bits.\
 Le programme affichera:

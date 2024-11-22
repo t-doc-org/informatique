@@ -6,7 +6,7 @@
 Le but de cette section est d'entraîner les concepts vus dans les sections
 [](bd-relationnelle.md) et [](sql2.md).
 
-## Exercice 1
+## Exercice {num}`exo-bd-lab2`
 
 Nous souhaitons créer une base de données pour une bibliothèque communale. Pour
 emprunter un livre, Bob doit scanner son code-barre personnel et celui du livre.
@@ -121,7 +121,7 @@ digraph UML_Class_diagram {
 ```
 ````
 
-## Exercice 2
+## Exercice {num}`exo-bd-lab2`
 
 Créer les différentes tables: `usager`, `livre`, `auteur`, `auteur_de` et
 `emprunt`. Ne pas oublier d'indiquer le type et les attributs (`primary key`,
@@ -176,7 +176,7 @@ select * from emprunt;
 ```
 ````
 
-## Exercice 3
+## Exercice {num}`exo-bd-lab2`
 
 Toutes les requêtes de cet exercice se font dans une seule table.
 
@@ -340,7 +340,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-## Exercice 4
+## Exercice {num}`exo-bd-lab2`
 
 Formuler en français ce que nous cherchons avec les requêtes suivantes:
 
@@ -371,7 +371,7 @@ Formuler en français ce que nous cherchons avec les requêtes suivantes:
     premier décembre.
     ````
 
-## Exercice 5
+## Exercice {num}`exo-bd-lab2`
 
 Pour cet exercice, il faudra utiliser des jointures de tables.
 
