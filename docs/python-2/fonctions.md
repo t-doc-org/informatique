@@ -457,14 +457,13 @@ print(amende(120,120))
 
 La suite de Syracuse est une suite d'entiers naturels définie de la manière
 suivante:
+- si le nombre est pair, diviser par 2,
+- sinon multiplier par 3 et ajouter 1.
 
-si le nombre est pair, on le divise par 2, sinon on le multiplie par 3 et on lui
-ajoute 1.
+Cette suite à la particularité de toujours se terminer par 4, 2, 1.
 
-Cette suite à la particularité de toujours terminé se terminer par 4, 2, 1.
-
-Écrire un programme qui permet d'afficher la suite de nombre jusqu'à ce qu'on
-arrive au nombre 1.
+Écrire un programme qui demande à l'utilisateur de choisir un nombre et affiche
+la suite de Syracus (jusqu'à ce que la suite arrive à 1).
 
 ```{exec} python
 :linenos:
