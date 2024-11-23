@@ -100,39 +100,33 @@ async def question(valeur, bits):
   print("\x0cBravo")
 ```
 
+```{defaults} exec
+:when: load
+:after: question-oppose
+:class: hidden
+```
+
 1.  $0111_2$
 
     ```{exec} python
-    :when: load
-    :after: question-oppose
-    :class: hidden
     await question(0b0111, 4)
     ```
 
 2.  $0101\,1010_2$
 
     ```{exec} python
-    :when: load
-    :after: question-oppose
-    :class: hidden
     await question(0b01011010, 8)
     ```
 
 3.  $1111_2$
 
     ```{exec} python
-    :when: load
-    :after: question-oppose
-    :class: hidden
     await question(0b1111, 4)
     ```
 
 4.  $1101\,0001_2$
 
     ```{exec} python
-    :when: load
-    :after: question-oppose
-    :class: hidden
     await question(0b11010001, 8)
     ```
 
@@ -162,13 +156,16 @@ async def question(valeur_4, valeur_8, valeur_n):
   print("\x0cBravo")
 ```
 
+```{defaults} exec
+:when: load
+:after: question-magnitude
+:class: hidden
+```
+
 1.  Quel est le plus **grand** nombre entier **non signé** que nous pouvons
     écrire...
 
     ```{exec} python
-    :when: load
-    :after: question-magnitude
-    :class: hidden
     await question((1 << 4) - 1, (1 << 8) - 1, "2^n-1")
     ```
 
@@ -176,9 +173,6 @@ async def question(valeur_4, valeur_8, valeur_n):
     écrire...
 
     ```{exec} python
-    :when: load
-    :after: question-magnitude
-    :class: hidden
     await question(0, 0, "0")
     ```
 
@@ -186,9 +180,6 @@ async def question(valeur_4, valeur_8, valeur_n):
     écrire...
 
     ```{exec} python
-    :when: load
-    :after: question-magnitude
-    :class: hidden
     await question((1 << (4 - 1)) - 1, (1 << (8 - 1)) - 1, "2^(n-1)-1")
     ```
 
@@ -196,8 +187,5 @@ async def question(valeur_4, valeur_8, valeur_n):
     écrire...
 
     ```{exec} python
-    :when: load
-    :after: question-magnitude
-    :class: hidden
     await question(-(1 << (4 - 1)), -(1 << (8 - 1)), "-2^(n-1)")
     ```
