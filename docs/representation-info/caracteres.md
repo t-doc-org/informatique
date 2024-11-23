@@ -3,6 +3,10 @@
 
 # Caractères
 
+```{metadata}
+hide-solutions: true
+```
+
 Pour pouvoir écrire, afficher ou stocker un texte sur un ordinateur, il faut
 définir une représentation des caractères compréhensibles pour celui-ci. L'idée
 la plus simple est de faire correspondre à chaque caractère un numéro unique.
@@ -106,12 +110,17 @@ while True:
 print("\x0cBravo")
 ```
 
-<!--
-### Exercice {num}`exo-info`
+## Exercice {num}`exo-info`
 
 Comment peut-on transformer un lettre majuscule en lettre minuscule et
 vice-versa en utilisant le code ASCII?
--->
+
+```{solution}
+Le code de A majuscule en décimale est 65, pour a minuscule c'est 97. Il faut
+donc ajouter 32 (97-65) pour passer d'une lettre majuscule à l'équivalent en
+minuscule.
+```
+
 
 ## Unicode
 
@@ -152,13 +161,26 @@ L'Unicode du caractère é est U+00E9 qui en binaire donne **1110 1001**
 |:----:|:----:|:----:|:----:|:----:|
 |<span style="color:red">0</span>1000100| <span style="color:red">11</span>0000**11** <span style="color:red">1</span>0**101001**| <span style="color:red">0</span>1100010| <span style="color:red">0</span>1110101| <span style="color:red">0</span>1110100|
 
-<!--
-### Exercice {num}`exo-info`
+
+## Exercice {num}`exo-info`
 
 Pourquoi n'utilise-t-on pas toujours l'unicode étant donné que nous pouvons
 coder tous les caractères pour chaque langue?
 
-### Exercice {num}`exo-info`
+```{solution}
+Nous n'utilisons pas toujours le unicdoe, parce qu'il prend beaucoup de place de
+stockage : 2 octets par caractère. C'est le double par rapport au code ASCII.
+```
+
+## Exercice {num}`exo-info`
 
 Quels sont les avantages et les inconvénients des différents encodages?
--->
+
+```{solution}
+| encodage | avantages | inconvénients |
+|:--------:|:---------:|:-------------:|
+| ASCII | Prend peu de place (7 bits par lettre) | Ne permet pas d'encoder les caractères avec accents |
+| ASCII étendu | Prend peu de place (8 bits par lettre) et permet d'encoder certains accents | Pas standardisé donc différent suivant les pays |
+| Unicode | Permet d'encoder tous les caractères possibles (accents, caractères chinois, ...) | Prend beaucoup de place: 2 octets (16 bits) |
+| UTF-8 | Universel et efficace: utilise 2 octets seulement quand c'est nécessaire |  |
+```

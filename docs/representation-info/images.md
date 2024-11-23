@@ -3,6 +3,10 @@
 
 # Images
 
+```{metadata}
+hide-solutions: true
+```
+
 Nous avons vu comment représenter des nombres et des caractères. Maintenant nous
 allons nous intéresser aux images.
 
@@ -40,8 +44,7 @@ Cette image a donc besoin de 8 octets (64 bits) pour être sauvegardée en
 mémoire, car nous avons 64 cases qui ont besoin chacune d'un bit pour définir
 le noir ou le blanc. Cette image a un poids de 8 octets.
 
-<!--
-### Exercice {num}`exo-info`
+## Exercice {num}`exo-info`
 
 1. Quel est le poids de l'image ci-dessous?
 
@@ -53,7 +56,21 @@ le noir ou le blanc. Cette image a un poids de 8 octets.
 :align: center
 ```
 
-### Exercice {num}`exo-info`
+````{solution}
+1. Le poids de cette image est $1 \cdot 8 \cdot 8 = 64\, \text{bits} = 8$ octets.
+2.  ```{code-block}
+    0000 0000
+    0111 1110
+    1000 0001
+    1000 0000
+    0111 1110
+    0000 0001
+    1000 0001
+    0111 1110
+    ```
+````
+
+## Exercice {num}`exo-info`
 
 Représenter l'image en noir et blanc donnée par le code suivant:
 ```{figure} images/vide-noir-blanc-pixels.png
@@ -61,7 +78,15 @@ Représenter l'image en noir et blanc donnée par le code suivant:
 :width: 50%
 :align: center
 ```
--->
+
+````{solution}
+```{figure} images/image-noir-blanc-alien.png
+:alt: Image noir blanc alien
+:width: 30%
+:align: center
+```
+````
+
 
 ## Images en niveaux de gris
 
@@ -84,8 +109,8 @@ disposition.
 Cette image a un poids de $2 * 8 * 8 = 128$ bits qui est équivalent à 16 octets,
 car nous avons 64 cases qui ont besoin chacune de 2 bits pour définir le gris.
 
-<!--
-### Exercice {num}`exo-info`
+
+## Exercice {num}`exo-info`
 
 1. Quel est le poids de l'image ci-dessous?
 
@@ -97,7 +122,21 @@ car nous avons 64 cases qui ont besoin chacune de 2 bits pour définir le gris.
 :align: center
 ```
 
-### Exercice {num}`exo-info`
+````{solution}
+1. Le poids de cette image est $2 \cdot 8 \cdot 8 = 128\, \text{bits} = 16$ octets.
+2.  ```{code-block}
+    0101 0000 0000 0101
+    0101 0101 0101 0101
+    0001 1101 0111 0100
+    0001 1101 0111 0100
+    0101 0101 0101 0101
+    0101 0100 0001 0101
+    0101 0100 0001 0101
+    0001 1010 1010 0100
+    ```
+````
+
+## Exercice {num}`exo-info`
 
 Représenter l'image en 4 niveaux de gris donnée par le code suivant:
 
@@ -106,7 +145,14 @@ Représenter l'image en 4 niveaux de gris donnée par le code suivant:
 :width: 50%
 :align: center
 ```
--->
+
+````{solution}
+```{figure} images/image-gris-raton.png
+:alt: Image gris raton-laveur
+:width: 30%
+:align: center
+```
+````
 
 ## Images en couleurs
 
@@ -271,7 +317,6 @@ une case) codée...
     print("\x0cBravo")
     ```
 
-<!--
 ## Exercice {num}`exo-info`
 
 Quel est le code décimal et hexadécimal d'un pixel...
@@ -280,10 +325,55 @@ Quel est le code décimal et hexadécimal d'un pixel...
 3. en gris?
 4. en jaune?
 
+```{solution}
+| couleur    | code décimal | code hexadécimal |
+|:-----------|:------------:|:----------------:|
+| 1. noir    | 0/0/0        | #000000          |
+| 2. blanc   | 255/255/255  | #FFFFFF          |
+| 3. gris    | 214/214/214  | #D6D6D6          |
+| 4. jaune   | 255/255/0    | #FFFF00          |
+```
+
 ## Exercice {num}`exo-info`
 
 Quelle couleur est représentée par les codes RGB suivants?
 1. (100,50,200)
 2. (20,200,250)
 3. (50,220,50)
--->
+
+```{solution}
+
+<style>
+  .table-sol {
+      border-collapse: collapse;
+      width: 90%;
+  }
+  .cellule-couleur {
+      border: 1px solid black;
+      text-align: center;
+      padding: 8px;
+  }
+  .entete-couleur {
+      background-color: #f2f2f2;
+  }
+</style>
+
+<table class="table-sol">
+  <tr>
+    <td class="cellule-couleur">(100, 50, 200)</td>
+    <td class="cellule-couleur">Violet</td>
+    <td class="cellule-couleur" style="background-color: rgb(100, 50, 200)"></td>
+  </tr>
+  <tr>
+    <td class="cellule-couleur">(20,200,250)</td>
+    <td class="cellule-couleur">Bleu</td>
+    <td class="cellule-couleur" style="background-color: rgb(20,200,250)"></td>
+  </tr>
+  <tr>
+    <td class="cellule-couleur">(50,220,50)</td>
+    <td class="cellule-couleur">Vert</td>
+    <td class="cellule-couleur" style="background-color: rgb(50,220,50)"></td>
+  </tr>
+</table>
+
+```
