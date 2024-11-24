@@ -10,6 +10,7 @@ revisions-input
 revisions-if
 revisions-boucles
 revisions-fonctions
+erreurs
 fonctions
 fonctions-lab1
 listes-lab2
