@@ -408,7 +408,7 @@ print("Le prix final est de", prix_final, "CHF.")
 ## Exercice {num}`exo-py2`
 
 Pour calculer le prix de l'amende à payer en cas de dépassement de vitesse,
-consulte le document suivant: [Liste sanctions](sanctions-vitesse.pdf)
+consulter le document suivant: [Liste sanctions](sanctions-vitesse.pdf)
 
 
 Écrire une fonction qui retourne le prix de l'amende à payer en fonction de la
