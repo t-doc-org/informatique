@@ -408,10 +408,10 @@ print("Le prix final est de", prix_final, "CHF.")
 ## Exercice {num}`exo-py2`
 
 Pour calculer le prix de l'amende à payer en cas de dépassement de vitesse,
-consulte le document suivant.
-% Ajouter le lien sur le document
+consulte le document suivant: [Liste sanctions](sanctions-vitesse.pdf)
 
-Ecrire une fonction qui retourne le prix de l'amende à payer en fonction de la
+
+Écrire une fonction qui retourne le prix de l'amende à payer en fonction de la
 vitesse autorisée et la vitesse mesurée par le radar. Traiter seulement le cas
 où le dépassement de vitesse a lieu sur l'autoroute et n'exède pas 20 km/h.
 
