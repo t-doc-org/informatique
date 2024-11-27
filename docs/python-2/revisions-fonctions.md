@@ -175,8 +175,8 @@ for a in range(1, 71):
 
 ## Exercice {num}`exo-py2-rev`
 
-Indiquer l'ordre d'exécution des lignes et faire le tableau d'états du programme
-suivant:
+Que va afficher le programme?
+Indiquer l'ordre d'exécution des lignes.
 
 ```{exec} python
 :linenos:
