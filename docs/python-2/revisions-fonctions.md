@@ -175,7 +175,7 @@ for a in range(1, 71):
 
 ## Exercice {num}`exo-py2-rev`
 
-Que va afficher le programme?
+Que va afficher le programme?\
 Indiquer l'ordre d'exécution des lignes.
 
 ```{exec} python
@@ -193,7 +193,10 @@ print("Fin du programme")
 ```
 
 ```{solution}
-L'ordre d'exécution des ligne est le suivant:
+Python va lire les lignes 1 et 4 (les déclaration des définitions de fonctions
+  sans s'occuper du corps de la fonction).
 
-1-4-7-2-8-2-9-5-10
+L'ordre d'exécution des lignes est le suivant:
+
+7-2-8-2-9-5-10
 ```

@@ -3,10 +3,6 @@
 
 # Révisions - Boucles
 
-```{metadata}
-hide-solutions: true
-```
-
 En programmation, nous sommes souvent amenés à répéter des instructions plusieurs
 fois. Pour cela nous pouvons utiliser des boucles.
 
