@@ -60,10 +60,6 @@ async function ask(prompt) {
 
 let level = 0;
 const examples = [
-        [`\
-Écrire le programme python qui correspond à l'algorithme suivant:
-Afficher les nombres jusqu'à 50.
-`, `Utiliser une boucle for avec un seul paramètre de la fonction range.`],
     [`\ Écrire le programme python qui correspond à l'algorithme suivant:
 La longueur vaut 10. La largeur vaut 5. Calculer et afficher l'aire du
 rectangle
@@ -90,10 +86,11 @@ compte_a_rebours.
 Soustraire 1 à compte_a_rebours.
 Afficher 'BOOM'.
 `, `Utiliser une boucle while.`],
-    [`\
+        [`\
 Écrire le programme python qui correspond à l'algorithme suivant:
-Afficher les nombres jusqu'à 50.
-`, `Utiliser une boucle for.`],
+Afficher les nombres de 1 à 50.
+`, `Utiliser for i in range(n) avec un seul paramètre. Ne pas demander \
+d'afficher des lettres.`]
 ];
 
 await domLoaded;
@@ -120,8 +117,8 @@ async function generateQuestion() {
     question.replaceChildren(text("Génération d'une nouvelle question..."));
     const [ex, constraint] = examples[level];
     const q = await ask(`\
-Génère un autre exercice du même genre que l'exemple suivant, mais sois créatif \
-ou pas.
+Génère un autre exercice du même genre que l'exemple suivant sans mentionner \
+la condition dans l'énoncé, mais sois créatif ou pas.
 
 ${ex}
 
@@ -148,6 +145,7 @@ ${code}
 
 Si un cas a été traité dans le if ou un elif précédent, il n'a pas besoin \
 d'être répété, ce n'est donc pas une erreur.
+Dans la boucle for i in range(n), la boucle s'effectue de 0 à (n-1).
 S'il y a des erreurs, explique-les, mais ne donne pas la solution, sinon\
 renvoie seulement ok et rien d'autre.\
 `);
