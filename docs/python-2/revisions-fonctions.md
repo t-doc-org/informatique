@@ -195,5 +195,5 @@ print("Fin du programme")
 ```{solution}
 L'ordre d'exécution des ligne est le suivant:
 
-7-1-2-8-1-2-9-4-5-10
+1-4-7-2-8-2-9-5-10
 ```
