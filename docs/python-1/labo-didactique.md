@@ -91,14 +91,15 @@ const feedback = document.querySelector('#feedback');
 
 const correct = document.querySelector('#correct');
 const newQuestion = document.querySelector('#newQuestion');
+const help = document.querySelector('#help');
 
 // Exécute une fonction en bloquant les boutons.
 async function blocking(fn) {
-    correct.disabled = newQuestion.disabled = true;
+    correct.disabled = newQuestion.disabled = help.disabled = true;
     try {
         return await fn();
     } finally {
-        correct.disabled = newQuestion.disabled = false;
+        correct.disabled = newQuestion.disabled = help.disabled = false;
     }
 }
 
@@ -126,8 +127,9 @@ correct.addEventListener('click', async () => {
 
         // Demande la correction de la réponse.
         const fb = await ask(`\
+Si le code est vide, répondre "Tu n'as pas donné de réponse." \
 Sans s'occuper de la gestion des erreurs et des fautes d'orthographe, le code \
-suivant contient-il des erreurs de syntaxe, d'exécution ou de logique?
+contient-il des erreurs de syntaxe, d'exécution ou de logique?
 
 ${code}
 
@@ -137,15 +139,19 @@ S'il y a des erreurs, explique-les, mais ne donne pas la solution, sinon\
 renvoie seulement ok et rien d'autre.\
 `);
         if (fb === "ok") {
-            level += 1;
+            if (!mistakeMade) {
+                level += 1;
+            }
             if (level >= examples.length) {
                 question.replaceChildren(text("Bravo, tu as terminé!"));
                 return;
             }
             conversation['messages'] = [];
             feedback.classList.add('hidden');
+            mistakeMade = false;
             await generateQuestion();
         } else {
+            mistakeMade = true;
             feedback.querySelector('pre').replaceChildren(text(fb));
             feedback.classList.remove('hidden');
         }
@@ -159,8 +165,25 @@ newQuestion.addEventListener('click', async () => {
     });
 });
 
+help.addEventListener('click', async () => {
+    await blocking(async () => {
+
+        // Demande la solution de l'exercice.
+        const helpResp = await ask(`\
+Donne la solution de l'exercice en expliquant comment faire.\
+`);
+
+        feedback.querySelector('pre').replaceChildren(text(helpResp));
+        feedback.classList.remove('hidden');
+
+    });
+    correct.disabled = true;
+});
+
+let mistakeMade = false;
+
 await generateQuestion();
-correct.disabled = newQuestion.disabled = false;
+correct.disabled = newQuestion.disabled = help.disabled = false;
 </script>
 
 Site d'entrainement d'écriture de programme en Python.
@@ -176,6 +199,7 @@ Site d'entrainement d'écriture de programme en Python.
 
 <button id="correct" class="tdoc-button" disabled>Corriger</button>
 <button id="newQuestion" class="tdoc-button" disabled>Nouvelle question</button>
+<button id="help" class="tdoc-button" disabled>Aide</button>
 
 ```{exec} python
 :name: editor
@@ -184,10 +208,3 @@ Site d'entrainement d'écriture de programme en Python.
 # Écrire le code ici...
 ```
 
-<button id="help" class="tdoc-button" disabled>Aide</button>
-
-```{code-block} text
-Dans cette fenêtre apparaîtra l'aide de l'IA, c'est-à-dire la réponse du code ou
-éventuellement comment faire. Lorque les élèves appuyent sur le bouton d'aide,
-la réponse ne sera pas comptabilisée comme correcte.
-```
