@@ -60,6 +60,14 @@ async function ask(prompt) {
 
 let level = 0;
 const examples = [
+        [`\
+Écrire le programme python qui correspond à l'algorithme suivant:
+Afficher les nombres jusqu'à 50.
+`, `Utiliser une boucle for avec un seul paramètre de la fonction range.`],
+    [`\ Écrire le programme python qui correspond à l'algorithme suivant:
+La longueur vaut 10. La largeur vaut 5. Calculer et afficher l'aire du
+rectangle
+`,`Utiliser des variables et la fonction print.`],
     [`\
 Écrire le programme python qui correspond à l'algorithme suivant:
 Demander l'âge à l'utilisateur.
@@ -82,6 +90,10 @@ compte_a_rebours.
 Soustraire 1 à compte_a_rebours.
 Afficher 'BOOM'.
 `, `Utiliser une boucle while.`],
+    [`\
+Écrire le programme python qui correspond à l'algorithme suivant:
+Afficher les nombres jusqu'à 50.
+`, `Utiliser une boucle for.`],
 ];
 
 await domLoaded;
@@ -108,14 +120,15 @@ async function generateQuestion() {
     question.replaceChildren(text("Génération d'une nouvelle question..."));
     const [ex, constraint] = examples[level];
     const q = await ask(`\
-Génère un autre exercice du même genre que l'exemple suivant, mais sois ou pas \
-créatif.
+Génère un autre exercice du même genre que l'exemple suivant, mais sois créatif \
+ou pas.
 
 ${ex}
 
 Cet exercice doit suivre la condition suivante: ${constraint}
 Ne pas résoudre l'exemple et transmettre juste l'énoncé de l'exercice sans autre
 commentaire.`);
+    feedback.classList.add('hidden');
     question.replaceChildren(text(q));
 }
 
@@ -133,21 +146,23 @@ contient-il des erreurs de syntaxe, d'exécution ou de logique?
 
 ${code}
 
-Si un cas a été traité dans le if ou un elif prédécent, il n'a pas besoin \
+Si un cas a été traité dans le if ou un elif précédent, il n'a pas besoin \
 d'être répété, ce n'est donc pas une erreur.
 S'il y a des erreurs, explique-les, mais ne donne pas la solution, sinon\
 renvoie seulement ok et rien d'autre.\
 `);
         if (fb === "ok") {
+            feedback.querySelector('pre').replaceChildren("Correct!");
+            feedback.classList.remove('hidden');
             if (!mistakeMade) {
                 level += 1;
+                conversation['messages'] = [];
             }
             if (level >= examples.length) {
                 question.replaceChildren(text("Bravo, tu as terminé!"));
+                newQuestion.disabled = correct.disabled = help.disabled = true;
                 return;
             }
-            conversation['messages'] = [];
-            feedback.classList.add('hidden');
             mistakeMade = false;
             await generateQuestion();
         } else {
@@ -170,7 +185,8 @@ help.addEventListener('click', async () => {
 
         // Demande la solution de l'exercice.
         const helpResp = await ask(`\
-Donne la solution de l'exercice en expliquant comment faire.\
+Donne la solution de l'exercice en expliquant comment faire sans mentionner la \
+condition.
 `);
 
         feedback.querySelector('pre').replaceChildren(text(helpResp));
