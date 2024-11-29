@@ -111,7 +111,7 @@ Le code donné doit ensuite pouvoir s'exécuter sans problème afin d'afficher
 ```{exec} python
 :linenos:
 :editable:
-# Définitir la fonction au_revoir
+# Définir la fonction au_revoir
 ...
 
 i = 0
