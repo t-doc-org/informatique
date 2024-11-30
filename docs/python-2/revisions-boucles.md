@@ -144,6 +144,12 @@ for nombre in range(10):
 for nombre in range(10):
   print(nombre + 1)
 ```
+
+```{exec} python
+:linenos:
+for nombre in range(1, 11):
+  print(nombre)
+```
 ````
 
 3. Écrire un programme en utilisant le boucle `for` qui affiche les 12 premiers
@@ -160,6 +166,12 @@ multiples de 5.
 :linenos:
 for nombre in range(12):
   print((nombre + 1) * 5)
+```
+
+```{exec} python
+:linenos:
+for nombre in range(1, 13):
+  print(nombre * 5)
 ```
 ````
 
