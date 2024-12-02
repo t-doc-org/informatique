@@ -204,7 +204,7 @@ vérifie que le coefficient $a$ n'est pas nul. (Dans ce cas, ce n'est pas une
 # Calcule et affiche le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
   delta = b ** 2 - 4 * a * c
-  print("Le discriminant est:", delta)
+  return delta
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
 a = float(await input_line("Coefficient de x^2: "))
@@ -214,7 +214,8 @@ c = float(await input_line("Coefficient sans partie littérale: "))
 if a == 0:
   print("Ce n'est pas une équation du deuxième degré.")
 else:
-  discriminant(a, b, c)
+  delta = discriminant(a, b, c)
+  print(delta)
 ```
 ````
 
@@ -236,6 +237,7 @@ Rappel:
 ````{solution}
 ```{exec} python
 :linenos:
+:editable:
 # Calcule le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
   return b ** 2 - 4 * a * c
