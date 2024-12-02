@@ -92,6 +92,7 @@ de sauvegarder la valeur retournée dans une variable.
 
 ```{exec} python
 :linenos:
+:editable:
 # Calcule et affiche le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
   delta = b ** 2 - 4 * a * c
@@ -103,6 +104,7 @@ b = float(await input_line("Coefficient de x: "))
 c = float(await input_line("Coefficient sans partie littérale: "))
 
 delta = discriminant(a, b, c)
+print(delta)
 ```
 
 ## Exercice {num}`exo-py2`
