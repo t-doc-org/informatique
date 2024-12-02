@@ -170,7 +170,7 @@ def calcule_perimetre(cote1, cote2, cote3):
 base = 500
 demi_base = base / 2
 cote = calcule_hypotenuse(demi_base, demi_base)
-aire = calcule_aire(hypotenuse, cote)
+aire = calcule_aire(hypotenuse, demi_base)
 perimetre = calcule_perimetre(base, cote, cote)
 print("L'aire vaut" aire "et le périmètre vaut" perimetre)
 ```
