@@ -25,6 +25,7 @@ Fonction qui affiche la table de multiplication de 5:
 
 ```{exec} python
 :linenos:
+:editable:
 # définition de la fonction
 def table_multiplication_5():
   for i in range(1, 11):              # i prend les valeurs de 1 à 10
@@ -59,10 +60,11 @@ nombre = 6                      # changer la valeur du nombre ici
 table_multiplication(nombre)
 ```
 
-## Exemple {num}`ex-py2:delta`
+## Exemple {num}`ex-py2:delta1`
 
 ```{exec} python
 :linenos:
+:editable:
 # Calcule et affiche le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
   delta = b ** 2 - 4 * a * c
@@ -85,6 +87,23 @@ existe(nt).
 La commande `return` permet de renvoyer le résultat d'une fonction et ainsi
 pouvoir le réutiliser dans la suite du programme. Pour cela, il est nécessaire
 de sauvegarder la valeur retournée dans une variable.
+
+## Exemple {num}`ex-py2:delta2`
+
+```{exec} python
+:linenos:
+# Calcule et affiche le discriminant dans la résolution d'équation du 2e degré
+def discriminant(a, b, c):
+  delta = b ** 2 - 4 * a * c
+  return delta
+
+# Demande à l'utilisateur les valeurs des coefficients a, b et c
+a = float(await input_line("Coefficient de x^2: "))
+b = float(await input_line("Coefficient de x: "))
+c = float(await input_line("Coefficient sans partie littérale: "))
+
+delta = discriminant(a, b, c)
+```
 
 ## Exercice {num}`exo-py2`
 
@@ -169,7 +188,7 @@ print("Fin du programme")
 
 ## Exercice {num}`exo-py2:num1`
 
-Modifier le code de l'{numref}`exemple %s<ex-py2:delta>` pour que le programme
+Modifier le code de l'{numref}`exemple %s<ex-py2:delta2>` pour que le programme
 vérifie que le coefficient $a$ n'est pas nul. (Dans ce cas, ce n'est pas une
 équation du deuxième degré et la résolution est différente.)
 
