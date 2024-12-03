@@ -3,10 +3,6 @@
 
 # Erreurs
 
-```{metadata}
-hide-solutions: true
-```
-
 En appuyant sur le bouton {kbd}`Run`, Python va d'abord **compiler** le
 programme et ensuite l'**exécuter**.
 

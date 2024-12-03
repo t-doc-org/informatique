@@ -3,9 +3,6 @@
 
 # Révisions - Fonctions
 
-```{metadata}
-hide-solutions: true
-```
 
 En programmation, une fonction est un bloc de code (suite d'instructions) qui
 réalise une tâche. Nous en avons déjà rencontré plusieurs:
