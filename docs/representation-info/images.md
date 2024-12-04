@@ -16,7 +16,7 @@ Il existe deux types de format d'image:
 
 - le format matriciel ou bitmap (bmp, jpg, gif, png, ...)\
   L'image est composée de points appelés **pixels**[^sn1]. Ceux-ci sont
-  tellement petits que nous ne les voyons par à l'oeil nu, mais si nous
+  tellement petits que nous ne les voyons pas à l'oeil nu, mais si nous
   agrandissons l'image, les pixels deviennent visibles et l'image devient floue.
 - le format vectoriel (svg, eps, pdf)\
   L'image est composée d'objets géométriques (segments, cercles, polygones,
