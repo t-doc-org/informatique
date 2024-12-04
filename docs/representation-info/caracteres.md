@@ -3,9 +3,6 @@
 
 # Caractères
 
-```{metadata}
-hide-solutions: true
-```
 
 Pour pouvoir écrire, afficher ou stocker un texte sur un ordinateur, il faut
 définir une représentation des caractères compréhensibles pour celui-ci. L'idée

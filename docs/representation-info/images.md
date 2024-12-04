@@ -3,10 +3,6 @@
 
 # Images
 
-```{metadata}
-hide-solutions: true
-```
-
 Nous avons vu comment représenter des nombres et des caractères. Maintenant nous
 allons nous intéresser aux images.
 
