@@ -15,6 +15,9 @@ hide-solutions: true
     - Découper le code en parties qui effectuent une tâche donnée et ajouter des
     commentaire.
     - Remplacer chaque partie par une fonction.
+4. Copier, modifier, tester et exécuter le code dans Thonny ou sur
+[online-python.com](https://www.online-python.com/). Ne pas oublier de modifier
+les `await input_line()` en `input`.
 
 ```{exec} python
 :style: height: 25rem
@@ -180,9 +183,4 @@ doivent retourner l'information nécessaire pour le calcul du score.
 2. Avoir une variable pour le score.
 3. Gérer le déroulement du jeu.
 
-```{exec} python
-:linenos:
-:editable:
-# Écrire le programme ici
-```
-
+Travailler dans Thonny ou sur [online-python.com](https://www.online-python.com/).

@@ -33,3 +33,9 @@ python-2/index
 :maxdepth: 1
 logiciels/index
 ```
+
+## Références
+
+Je remercie tout particulièrement mes collèges Brice, Cathrine, Maxime, Nicolas
+et Xavier pour le partage d'idées et de ressources, ainsi que Didier Müller pour
+son site [apprendre-en-ligne.net](https://www.apprendre-en-ligne.net/index.php).

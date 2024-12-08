@@ -3,20 +3,6 @@
 
 # Notions de bases
 
-## Introduction
-
-En programmation, il est important de suivre certaines règles pour que le code
-soit lisible.
-
-1. Il est important de ne pas se répéter. Si tu copies/colles une ou des
-ligne(s), il y a une autre manière de faire qui est meilleure.
-2. Commenter le code pour expliquer ce qu'on fait. En Python, il faut utiliser
-`#` suivi du commentaire.
-3. Pour chaque exercice, créer un nouveau document et le nommer avec un nom qui
-permet de savoir ce qu'il contient (utiliser par exemple le numéro de
-l'exercice).
-4. Tester souvent (lors de l'exécution, le programme est sauvegardé).
-
 ## Fonction `print()`
 
 La fonction `print()` permet d'afficher une phrase ou la valeur d'un objet sur

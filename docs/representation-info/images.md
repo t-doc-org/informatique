@@ -337,6 +337,9 @@ Quelle couleur est représentée par les codes RGB suivants?
 2. (20,200,250)
 3. (50,220,50)
 
+
+<!-- TODO: Espace blanc dans les solutions. -->
+
 ```{solution}
 
 <style>
