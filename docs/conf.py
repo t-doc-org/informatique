@@ -14,3 +14,8 @@ myst_links_external_new_tab = True
 html_theme_options = {
     'repository_url': 'https://github.com/t-doc-org/informatique',
 }
+
+tdoc = {
+    'store_url': 'https://api.t-doc.org/store'
+                 if 'tdoc-dev' not in tags else None,
+}

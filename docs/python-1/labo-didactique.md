@@ -15,52 +15,72 @@ orphan:
 </style>
 
 <script type="module">
-import {domLoaded, text} from '../_static/tdoc/core.js';
-import {decryptSecret, pageKey} from '../_static/tdoc/crypto.js';
+import {bearerAuthorization, domLoaded, fetchJson, text, toBase64} from '../_static/tdoc/core.js';
+import {decryptSecret, pageKey, random} from '../_static/tdoc/crypto.js';
 import {findEditor} from '../_static/tdoc/editor.js';
 
-// Décrypte les informations d'identification de l'API.
-const token = await decryptSecret(await pageKey('key', 'nMHqoWnA0tvA'), {
+// Créé la clé des secrets pour les APIs.
+const key = await pageKey('key', 'nMHqoWnA0tvA');
+
+// Décrypte les informations d'identification pour l'API de logging.
+const storeUrl = tdoc.store_url || `${location.origin}/*store`;
+const storeToken = await decryptSecret(key, {
+    iv: 'vgVd4UDZlHfcA99C',
+    data: 'iZm48UGgU0I/H3tP4W4ytR1SGZQ0RDGv+mNdPCAAqZGRc2mK8/DEVttoAZ9f3mEo',
+});
+const session = await toBase64(await random(18));
+
+// Décrypte les informations d'identification pour l'API de chat.
+const completionsURL =
+    "https://im-api.proxy.c-space.net/1/ai/782/openai/chat/completions";
+const compToken = await decryptSecret(key, {
     iv: 'WhVOIKndPgFcQp8x',
     data: 'cB2+NNx58sdf5faBu+65lYUit6U2HDWA9Tt110nr+NsHxCc/T9Ael+FrE1qmylZQfB' +
           'isbrRRQg46vAZL76Rk0cGAdWM43A82YImq59xOk5el2EMsRi2VIyVXOswoJbNQ',
 });
 
-// Exécute une requête JSON sur une API.
-async function request(method, url, headers, body) {
-    const resp = await fetch(url, {
-        method, headers,
-        body: body !== undefined ? JSON.stringify(body) : undefined,
-        cache: 'no-cache', referrer: '',
-    });
-    if (resp.status !== 200) {
-        throw Error(`Request failed: ${resp.status} ${resp.statusText}`);
-    }
-    return await resp.json();
-}
-
-const completionsURL =
-    "https://im-api.proxy.c-space.net/1/ai/782/openai/chat/completions";
+let conversationId = 0;
 const conversation = {
     'model': 'llama3',
     'messages': [],
 };
 
+function logConversation(data) {
+    return fetchJson(`${storeUrl}/log`, {
+        headers: bearerAuthorization(storeToken),
+        body: {
+            'time': Date.now(), 'location': location.href, 'session': session,
+            'data': {
+                'id': conversationId,
+                'conversation': structuredClone(conversation),
+                ...data,
+            },
+        },
+    });
+}
+
 // Ajoute une question à la conversation.
 async function ask(prompt) {
     conversation['messages'].push({'content': prompt, 'role': 'user'});
-    const resp = await request('POST', completionsURL, {
-        'Authorization': `Bearer ${token}`,
-        'Content-Type': 'application/json',
-    }, conversation);
-    const msg = resp['choices'][0]['message'];
-    conversation['messages'].push(msg);
-    return msg['content'];
+    try {
+        const resp = await fetchJson(completionsURL, {
+            headers: bearerAuthorization(compToken),
+            body: conversation,
+        });
+        const msg = resp['choices'][0]['message'];
+        conversation['messages'].push(msg);
+        logConversation({'type': 'response'});
+        return msg['content'];
+    } catch (e) {
+        logConversation({'type': 'error', 'error': e.toString()});
+        throw e;
+    }
 }
 
 let level = 0;
 const examples = [
-    [`\ Écrire le programme python qui correspond à l'algorithme suivant:
+    [`\
+Écrire le programme python qui correspond à l'algorithme suivant:
 La longueur vaut 10. La largeur vaut 5. Calculer et afficher l'aire du
 rectangle
 `,`Utiliser des variables et la fonction print.`],
@@ -146,7 +166,7 @@ ${code}
 Si un cas a été traité dans le if ou un elif précédent, il n'a pas besoin \
 d'être répété, ce n'est donc pas une erreur.
 Dans la boucle for i in range(n), la boucle s'effectue de 0 à (n-1).
-S'il y a des erreurs, explique-les, mais ne donne pas la solution, sinon\
+S'il y a des erreurs, explique-les, mais ne donne pas la solution, sinon \
 renvoie seulement ok et rien d'autre.\
 `);
         if (fb === "ok") {
@@ -155,10 +175,10 @@ renvoie seulement ok et rien d'autre.\
             if (!mistakeMade) {
                 level += 1;
                 conversation['messages'] = [];
+                conversationId += 1;
             }
             if (level >= examples.length) {
                 question.replaceChildren(text("Bravo, tu as terminé!"));
-                newQuestion.disabled = correct.disabled = help.disabled = true;
                 return;
             }
             mistakeMade = false;
@@ -169,6 +189,9 @@ renvoie seulement ok et rien d'autre.\
             feedback.classList.remove('hidden');
         }
     });
+    if (level >= examples.length) {
+        newQuestion.disabled = correct.disabled = help.disabled = true;
+    }
 });
 
 newQuestion.addEventListener('click', async () => {
@@ -180,13 +203,11 @@ newQuestion.addEventListener('click', async () => {
 
 help.addEventListener('click', async () => {
     await blocking(async () => {
-
         // Demande la solution de l'exercice.
         const helpResp = await ask(`\
 Donne la solution de l'exercice en expliquant comment faire sans mentionner la \
 condition.
 `);
-
         feedback.querySelector('pre').replaceChildren(text(helpResp));
         feedback.classList.remove('hidden');
 
@@ -221,4 +242,3 @@ Site d'entrainement d'écriture de programme en Python.
 :style: max-height: 25rem
 # Écrire le code ici...
 ```
-

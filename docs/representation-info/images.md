@@ -42,9 +42,9 @@ le noir ou le blanc. Cette image a un poids de 8 octets.
 
 ## Exercice {num}`exo-info`
 
-1. Quel est le poids de l'image ci-dessous?
+1.  Quel est le poids de l'image ci-dessous?
 
-2. Quel est le code binaire de la lettre S représentée ci-dessous.
+2.  Quel est le code binaire de la lettre S représentée ci-dessous.
 
 ```{figure} images/s-pixels.png
 :alt: Image S en noir et blanc
@@ -53,7 +53,7 @@ le noir ou le blanc. Cette image a un poids de 8 octets.
 ```
 
 ````{solution}
-1. Le poids de cette image est $1 \cdot 8 \cdot 8 = 64\, \text{bits} = 8$ octets.
+1.  Le poids de cette image est $1 \cdot 8 \cdot 8 = 64\, \text{bits} = 8$ octets.
 2.  ```{code-block}
     0000 0000
     0111 1110
@@ -82,7 +82,6 @@ Représenter l'image en noir et blanc donnée par le code suivant:
 :align: center
 ```
 ````
-
 
 ## Images en niveaux de gris
 
@@ -119,7 +118,8 @@ car nous avons 64 cases qui ont besoin chacune de 2 bits pour définir le gris.
 ```
 
 ````{solution}
-1. Le poids de cette image est $2 \cdot 8 \cdot 8 = 128\, \text{bits} = 16$ octets.
+1.  Le poids de cette image est $2 \cdot 8 \cdot 8 = 128\, \text{bits} = 16$
+    octets.
 2.  ```{code-block}
     0101 0000 0000 0101
     0101 0101 0101 0101
@@ -172,154 +172,151 @@ prend rapidement beaucoup de place.
 ### Tableau des couleurs principales
 
 <style>
-  .table-couleur {
-      border-collapse: collapse;
-      width: 100%;
-  }
-  .cellule-couleur {
-      border: 1px solid black;
-      text-align: center;
-      padding: 8px;
-  }
-  .entete-couleur {
-      background-color: #f2f2f2;
-  }
+.table-couleur {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem auto;
+}
+.table-couleur th, .table-couleur td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+.table-couleur th {
+  background-color: #f2f2f2;
+}
 </style>
 
 <table class="table-couleur">
   <tr>
-    <th class="cellule-couleur entete-couleur">Couleur</th>
-    <th class="cellule-couleur entete-couleur">Nom</th>
-    <th class="cellule-couleur entete-couleur">Code hexadécimal</th>
-    <th class="cellule-couleur entete-couleur">Code décimal (R,G,B)</th>
+    <th>Couleur</th>
+    <th>Nom</th>
+    <th>Code hexadécimal</th>
+    <th>Code décimal (R,G,B)</th>
   </tr>
   <tr>
-    <td class="cellule-couleur" style="background-color: #000000;"></td>
-    <td class="cellule-couleur">Black</td>
-    <td class="cellule-couleur">#000000</td>
-    <td class="cellule-couleur">(0, 0, 0)</td>
+    <td style="background-color: #000000;"></td>
+    <td>Black</td>
+    <td>#000000</td>
+    <td>(0, 0, 0)</td>
   </tr>
   <tr>
-    <td class="cellule-couleur" style="background-color: #FFFFFF;"></td>
-    <td class="cellule-couleur">White</td>
-    <td class="cellule-couleur">#FFFFFF</td>
-    <td class="cellule-couleur">(255, 255, 255)</td>
+    <td style="background-color: #ffffff;"></td>
+    <td>White</td>
+    <td>#FFFFFF</td>
+    <td>(255, 255, 255)</td>
   </tr>
   <tr>
-    <td class="cellule-couleur" style="background-color: #FF0000;"></td>
-    <td class="cellule-couleur">Red</td>
-    <td class="cellule-couleur">#FF0000</td>
-    <td class="cellule-couleur">(255, 0, 0)</td>
+    <td style="background-color: #ff0000;"></td>
+    <td>Red</td>
+    <td>#FF0000</td>
+    <td>(255, 0, 0)</td>
   </tr>
   <tr>
-    <td class="cellule-couleur" style="background-color: #00FF00;"></td>
-    <td class="cellule-couleur">Lime</td>
-    <td class="cellule-couleur">#00FF00</td>
-    <td class="cellule-couleur">(0, 255, 0)</td>
+    <td style="background-color: #00ff00;"></td>
+    <td>Lime</td>
+    <td>#00FF00</td>
+    <td>(0, 255, 0)</td>
   </tr>
   <tr>
-    <td class="cellule-couleur" style="background-color: #0000FF;"></td>
-    <td class="cellule-couleur">Blue</td>
-    <td class="cellule-couleur">#0000FF</td>
-    <td class="cellule-couleur">(0, 0, 255)</td>
+    <td style="background-color: #0000ff;"></td>
+    <td>Blue</td>
+    <td>#0000FF</td>
+    <td>(0, 0, 255)</td>
   </tr>
   <tr>
-    <td class="cellule-couleur" style="background-color: #FFFF00;"></td>
-    <td class="cellule-couleur">Yellow</td>
-    <td class="cellule-couleur">#FFFF00</td>
-    <td class="cellule-couleur">(255, 255, 0)</td>
+    <td style="background-color: #ffff00;"></td>
+    <td>Yellow</td>
+    <td>#FFFF00</td>
+    <td>(255, 255, 0)</td>
   </tr>
   <tr>
-    <td class="cellule-couleur" style="background-color: #00FFFF;"></td>
-    <td class="cellule-couleur">Cyan</td>
-    <td class="cellule-couleur">#00FFFF</td>
-    <td class="cellule-couleur">(0, 255, 255)</td>
+    <td style="background-color: #00ffff;"></td>
+    <td>Cyan</td>
+    <td>#00FFFF</td>
+    <td>(0, 255, 255)</td>
   </tr>
   <tr>
-    <td class="cellule-couleur" style="background-color: #FF00FF;"></td>
-    <td class="cellule-couleur">Magenta</td>
-    <td class="cellule-couleur">#FF00FF</td>
-    <td class="cellule-couleur">(255, 0, 255)</td>
+    <td style="background-color: #ff00ff;"></td>
+    <td>Magenta</td>
+    <td>#FF00FF</td>
+    <td>(255, 0, 255)</td>
   </tr>
   <tr>
-    <td class="cellule-couleur" style="background-color: #C0C0C0;"></td>
-    <td class="cellule-couleur">Silver</td>
-    <td class="cellule-couleur">#C0C0C0</td>
-    <td class="cellule-couleur">(192, 192, 192)</td>
+    <td style="background-color: #c0c0c0;"></td>
+    <td>Silver</td>
+    <td>#C0C0C0</td>
+    <td>(192, 192, 192)</td>
   </tr>
   <tr>
-    <td class="cellule-couleur" style="background-color: #808080;"></td>
-    <td class="cellule-couleur">Gray</td>
-    <td class="cellule-couleur">#808080</td>
-    <td class="cellule-couleur">(128, 128, 128)</td>
+    <td style="background-color: #808080;"></td>
+    <td>Gray</td>
+    <td>#808080</td>
+    <td>(128, 128, 128)</td>
   </tr>
 </table>
 
 En général, le code RGB est noté en hexadécimal et il est précédé d'un \#.\
 Si les trois valeurs sont identiques, nous obtiendrons du gris.
 
-Sur le site suivant [Liste des couleurs](https://www.rapidtables.com/web/color/RGB_Color.html), il
+Sur le site
+"[Liste des couleurs](https://www.rapidtables.com/web/color/RGB_Color.html)", il
 y a les références de toutes les couleurs possibles.
 
 ## Exercice {num}`exo-info`
 
 Quel est le poids d'une image de 500 sur 300 pixels (1 pixel est équivalent à
 une case) codée...
-1. en noir et blanc?
+
+```{exec} python
+:name: question-poids
+:when: never
+:class: hidden
+async def question(*reponses):
+  while True:
+    resp = await input_line("Réponse en ko:")
+    if resp in reponses: break
+    print("\x0cEssaie encore")
+  print("\x0cBravo")
+```
+
+```{defaults} exec
+:when: load
+:after: question-poids
+:class: hidden
+```
+
+1.  ... en noir et blanc?
 
     ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse en ko:")
-      if resp == "18.75" or resp == "18,75": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question("18.75", "18,75")
     ```
 
-2. en 4 niveaux de gris?
+2.  ... en 4 niveaux de gris?
 
     ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse en ko:")
-      if resp == "37.5" or resp == "37,5": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question("37.5", "37,5")
     ```
 
-3. en 256 niveaux de gris?
+3.  ... en 256 niveaux de gris?
 
     ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse en ko:")
-      if resp != "150": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question("150")
     ```
 
-4. en RGB?
+4.  ... en RGB?
 
     ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse en ko:")
-      if resp != "450": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
+    await question("450")
     ```
 
 ## Exercice {num}`exo-info`
 
 Quel est le code décimal et hexadécimal d'un pixel...
-1. en noir?
-2. en blanc?
-3. en gris?
-4. en jaune?
+1. ... en noir?
+2. ... en blanc?
+3. ... en gris?
+4. ... en jaune?
 
 ```{solution}
 | couleur    | code décimal | code hexadécimal |
@@ -341,38 +338,36 @@ Quelle couleur est représentée par les codes RGB suivants?
 <!-- TODO: Espace blanc dans les solutions. -->
 
 ```{solution}
-
 <style>
-  .table-sol {
-      border-collapse: collapse;
-      width: 90%;
-  }
-  .cellule-couleur {
-      border: 1px solid black;
-      text-align: center;
-      padding: 8px;
-  }
-  .entete-couleur {
-      background-color: #f2f2f2;
-  }
+.table-sol.table-sol.table-sol {
+  border-collapse: collapse;
+  margin: 1rem auto;
+}
+.table-sol td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+.table-sol td + td + td {
+  width: 4rem;
+}
 </style>
 
 <table class="table-sol">
   <tr>
-    <td class="cellule-couleur">(100, 50, 200)</td>
-    <td class="cellule-couleur">Violet</td>
-    <td class="cellule-couleur" style="background-color: rgb(100, 50, 200)"></td>
+    <td>(100, 50, 200)</td>
+    <td>Violet</td>
+    <td style="background-color: rgb(100, 50, 200)"></td>
   </tr>
   <tr>
-    <td class="cellule-couleur">(20,200,250)</td>
-    <td class="cellule-couleur">Bleu</td>
-    <td class="cellule-couleur" style="background-color: rgb(20,200,250)"></td>
+    <td>(20,200,250)</td>
+    <td>Bleu</td>
+    <td style="background-color: rgb(20,200,250)"></td>
   </tr>
   <tr>
-    <td class="cellule-couleur">(50,220,50)</td>
-    <td class="cellule-couleur">Vert</td>
-    <td class="cellule-couleur" style="background-color: rgb(50,220,50)"></td>
+    <td>(50,220,50)</td>
+    <td>Vert</td>
+    <td style="background-color: rgb(50,220,50)"></td>
   </tr>
 </table>
-
 ```
