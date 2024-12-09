@@ -1,7 +1,11 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Notions de bases
+# Entrées et sorties
+
+```{metadata}
+hide-solutions: true
+```
 
 ## Fonction `print()`
 
@@ -9,10 +13,10 @@ La fonction `print()` permet d'afficher une phrase ou la valeur d'un objet sur
 la console.
 
 ```{exec} python
-print("Hello World!")
+print("Hello world!")
 ```
 
-### Exercice {num}`exo-py1`
+## Exercice {num}`exo-py1`
 
 Écrire un programme qui affiche exactement ce texte:
 
@@ -24,6 +28,7 @@ print("Hello World!")
 
 ```{exec} python
 :editable:
+# Écrire le programme ici
 ```
 
 % TODO: Validation de l'exercice par un vu, s'il est correctement réalisé
@@ -39,7 +44,7 @@ print("J'aime bien jouer au volley.")
 ```
 ````
 
-### Exercice {num}`exo-py1`
+## Exercice {num}`exo-py1`
 
 1. Écrire un programme qui affiche "Bonjour tout le monde!".
 2. Écrire un programme qui affiche "Je programme!".
@@ -50,6 +55,7 @@ récrire 10 fois la même chose.
 
 ```{exec} python
 :editable:
+# Écrire le programme ici
 ```
 
 ````{solution}
@@ -63,22 +69,7 @@ print("Je programme! " * 10)
 ```
 ````
 
-## Opérateurs mathématiques
-
-Les opérateurs mathématiques permettent de faire des calculs simples avec les
-nombres.
-
-| Opérateur | Nom | Exemple | Résultat |
-| :-------: | :-: | :-----: | :------: |
-| + | Addition | 3 + 4 | 7 |
-| - | Soustraction | 9 - 12 | -3 |
-| * | Multiplication | 5 * 6| 30 |
-| / | Division | 11 / 2 | 5.5 |
-| ** | Puissance | 2 ** 3 | 8 |
-| // | Division entière | 26 // 6 | 4 |
-| % | Modulo (reste de la division entière) | 26 mod 6 | 2 |
-
-### Exercice {num}`exo-py1`
+## Exercice {num}`exo-py1`
 
 1. Effectuer mentalement les 7 opérations ci-dessus avec les nombres 13 et 2.
 2. Écrire un programme qui permet d'effectuer les 7 opérations ci-dessus avec 13
@@ -91,6 +82,7 @@ par un commentaire dans le code.
 
 ```{exec} python
 :editable:
+# Écrire le programme ici
 ```
 
 ````{solution}
@@ -118,7 +110,7 @@ print(a % b)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+## Exercice {num}`exo-py1`
 
 Écrire un programme qui permet d'afficher les calculs suivants, ainsi que la
 réponse:
@@ -131,6 +123,7 @@ réponse:
 
 ```{exec} python
 :editable:
+# Écrire le programme ici
 ```
 
 ````{solution}
@@ -145,7 +138,7 @@ print("Le reste de la division de 345 par 37 est ", 345 % 37)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+## Exercice {num}`exo-py1`
 
 Écrire un programme qui permet de résoudre l'exercice suivant (ne pas oublier
 les phrases d'explication):
@@ -162,6 +155,7 @@ variables pour stocker le prix avant et après réduction).
 
 ```{exec} python
 :editable:
+# Écrire le programme ici
 ```
 
 ````{solution}
@@ -218,7 +212,7 @@ print("Les économies de Juliette sont de", economies_Juliette, "francs.")
 ```
 ````
 
-### Exercice {num}`exo-py1`
+## Exercice {num}`exo-py1`
 
 Écrire un programme qui demande à l'utilisateur son nom, son prénom et où il
 habite. Le programme affichera:
@@ -233,6 +227,7 @@ Je vois que tu habites à {afficher le lieu}.
 
 ```{exec} python
 :editable:
+# Écrire le programme ici
 ```
 
 ````{solution}
@@ -246,7 +241,7 @@ print("Je vois que tu habites à", lieu)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+## Exercice {num}`exo-py1`
 
 Écrire un programme qui demande à l'utilisateur l'année actuelle, ainsi que
 l'âge qu'il avait le 31 décembre dernier et qui calcule l'année de naissance de
@@ -262,6 +257,7 @@ Tu es né en {afficher l'année de naissance}.
 
 ```{exec} python
 :editable:
+# Écrire le programme ici
 ```
 
 ````{solution}
@@ -273,7 +269,7 @@ print("Tu es né.e en", annee - age - 1)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+## Exercice {num}`exo-py1`
 
 Écrire un programme qui convertit des mégaoctets en bits.\
 Le programme affichera:
@@ -285,6 +281,7 @@ Combien de mégaoctets veux-tu convertir en bits?
 
 ```{exec} python
 :editable:
+# Écrire le programme ici
 ```
 
 ````{solution}

@@ -7,5 +7,6 @@
 :maxdepth: 1
 introduction
 algorithme
-bases
+variables
+entrees-sorties
 ```
