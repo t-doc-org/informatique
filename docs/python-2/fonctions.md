@@ -375,11 +375,11 @@ else:
 ````{solution}
 ```{exec} python
 :linenos:
-# Convertis des bits en octets
+# Convertit des bits en octets
 def conversion_bits_octets(a):
   return a / 8
 
-# Convertis des bits en octets
+# Convertit des bits en octets
 def conversion_octets_bits(a):
   return a * 8
 
