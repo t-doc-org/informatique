@@ -13,7 +13,7 @@ hide-solutions: true
 2. Exécuter le code. Le code fait-il ce que vous pensiez?
 3. Comment structurer ce code différemment pour qu'il soit plus lisible?
     - Découper le code en parties qui effectuent une tâche donnée et ajouter des
-    commentaire.
+    commentaires.
     - Remplacer chaque partie par une fonction.
 4. Copier, modifier, tester et exécuter le code dans Thonny ou sur
 [online-python.com](https://www.online-python.com/). Ne pas oublier de modifier
