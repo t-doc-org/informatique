@@ -52,7 +52,7 @@ En Python, il existe 4 types de données primitifs.
 | **bool**  | booléen   | Résultat d'un test: Vrai ou Faux | 2<1 renvoie False  |
 
 
-## Exercice {num}`exo-var`
+## Exercice {num}`exo-py1`
 
 1.  ```{exec} python
     :linenos:
@@ -187,7 +187,7 @@ moyenne = 5.2
 promu = True
 ```
 
-## Exercice {num}`exo-var`
+## Exercice {num}`exo-py1`
 
 Ce code Python déclare 5 variables, mais contient une erreur par ligne. Trouver
 et corriger les erreurs.
@@ -243,7 +243,7 @@ nombres.
 | %         | Modulo (reste de la division entière) | 26 mod 6| 2        |
 
 
-## Exercice {num}`exo-var`
+## Exercice {num}`exo-py1`
 
 Quel est le résultat des expressions suivantes en Python?
 
@@ -346,7 +346,7 @@ print(a, b, c, d)
 
 </td></tr></table>
 
-## Exercice {num}`exo-var`
+## Exercice {num}`exo-py1`
 
 Déterminer la valeur de chacune des variables de ce programme en créant un
 tableau d'états.
@@ -379,7 +379,7 @@ print(x, y, z)
 
 ````
 
-## Exercice {num}`exo-var`
+## Exercice {num}`exo-py1`
 
 Déterminer la valeur de chacune des variables de ce programme en créant un
 tableau d'états.
@@ -413,7 +413,7 @@ print(nombe_habitants, cout, prix)
 
 ```
 
-## Exercice {num}`exo-var`
+## Exercice {num}`exo-py1`
 
 Compléter le programme ci-dessous de manière à ce qu'il permette de calculer la
 moyenne des notes principales dans la variable du même nom. La note de math est
@@ -443,7 +443,7 @@ par 3. Comme la division a la priorité sur l'addition, il ne faut pas oublier d
 régler la priorité des opérations avec des parenthèses.
 ````
 
-## Exercice {num}`exo-var`
+## Exercice {num}`exo-py1`
 Écrire un petit programme en Python permettant de calculer le volume $V$ d'un
 cylindre en fonction de son rayon et de son hauteur. Le programme contiendra les
 lignes suivantes :
@@ -497,7 +497,7 @@ mathématiques, voici les principaux.
 | \*=       | x \*= 6 | x = x * 6    |
 | /=        | x /= 6  | x = x / 6    |
 
-## Exercice {num}`exo-var`
+## Exercice {num}`exo-py1`
 Écriver un programme Python contenant une variable `x` initialisée à 10.
 Puis, compléter ce programme pour que celui-ci effectue les opérations
 suivantes:
@@ -530,7 +530,7 @@ print(x)
 ```
 ````
 
-## Exercice {num}`exo-var` (difficile)
+## Exercice {num}`exo-py1` (difficile)
 
 Liser attentivement le programme ci-dessous et expliquer, en français, ce qu'il
 fait. À quoi correspondent les variables `h1`, `h2`, et `total`.
