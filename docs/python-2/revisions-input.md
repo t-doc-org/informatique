@@ -1,7 +1,7 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Révisions - Entrées/Sorties
+# Révisions - Entrée/Sortie
 
 ## Sortie
 
@@ -14,7 +14,7 @@ prenom = "Bob"
 print("Salut", prenom, "!")
 ```
 
-## Entrées
+## Entrée
 
 Une instruction d'entrée donne la main à l'utilisateur pour saisir une donnée au
 clavier. En Python, cela se fait au moyen de la fonction `input(...)`. La valeur

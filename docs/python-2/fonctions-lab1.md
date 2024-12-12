@@ -17,7 +17,7 @@ hide-solutions: true
     - Remplacer chaque partie par une fonction.
 4. Copier, modifier, tester et exécuter le code dans Thonny ou sur
 [online-python.com](https://www.online-python.com/). Ne pas oublier de modifier
-les `await input_line()` en `input`.
+les `await input_line()` en `input()`.
 
 ```{exec} python
 :style: height: 25rem
