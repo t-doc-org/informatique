@@ -12,9 +12,37 @@ hide-solutions: true
 La fonction `print()` permet d'afficher une phrase ou la valeur d'un objet sur
 la console.
 
-```{exec} python
-print("Hello world!")
-```
+## Exemples {num}`exo-io`
+
+1. Affichage d'une chaine de caractère. Ce qui se trouve entre guillements sera
+affiché tel quel.
+
+      ```{exec} python
+      :linenos:
+      :editable:
+      print("Hello world!")
+      ```
+
+2. Affichage de la valeur d'une variable.
+
+      ```{exec} python
+      :linenos:
+      :editable:
+      a = 10
+      print(a)
+      a = a + 5
+      print(a)
+      ```
+
+3. Affichage d'une chaîne de caractère et de la valeur d'une variable. Il faut
+utiliser une virgule pour séparer les différents éléments.
+
+      ```{exec} python
+      :linenos:
+      :editable:
+      prix_choco = 17.20
+      print("Le prix de la boîte de chocolat est de", prix_choco, "CHF.")
+      ```
 
 ## Exercice {num}`exo-py1`
 
@@ -27,6 +55,7 @@ print("Hello world!")
 ```
 
 ```{exec} python
+:linenos:
 :editable:
 # Écrire le programme ici
 ```
@@ -54,6 +83,7 @@ récrire 10 fois la même chose.
 5. Ajouter un commentaire qui explique ce que tu as fait au point précédent.
 
 ```{exec} python
+:linenos:
 :editable:
 # Écrire le programme ici
 ```
@@ -69,6 +99,29 @@ print("Je programme! " * 10)
 ```
 ````
 
+### Exercice {num}`exo-py1`
+
+1.  Sans exécuter le programme ci-dessous, prédire ce qu'il affichera.
+
+```{exec} python
+:linenos:
+salutations = "Bonjour"
+print(salutations)
+print("salutations")
+```
+
+2.  Quel est l'impact des guillemets sur le mot `salutations`?
+
+
+```{solution}
+2.  Lorsque le mot `salutations` est écrit sans guillemets, il fait référence à
+la variable. L'affichage substitue donc la variable par son contenu. Lorsque des
+guillemets entourent `salutations`, alors le mot est considéré comme une chaîne
+de type caractère et le mot est alors affiché tel quel.
+```
+
+
+
 ## Exercice {num}`exo-py1`
 
 1. Effectuer mentalement les 7 opérations ci-dessus avec les nombres 13 et 2.
@@ -81,6 +134,7 @@ précédent?
 par un commentaire dans le code.
 
 ```{exec} python
+:linenos:
 :editable:
 # Écrire le programme ici
 ```
@@ -122,6 +176,7 @@ réponse:
 5. Calculer le quotient et le reste de la division de 345 par 37.
 
 ```{exec} python
+:linenos:
 :editable:
 # Écrire le programme ici
 ```
@@ -154,6 +209,7 @@ variables pour stocker le prix avant et après réduction).
 5. Arrondir les prix aux centimes.
 
 ```{exec} python
+:linenos:
 :editable:
 # Écrire le programme ici
 ```
@@ -212,6 +268,25 @@ print("Les économies de Juliette sont de", economies_Juliette, "francs.")
 ```
 ````
 
+## Fonction input()
+
+La fonction `input(...)` donne la main à l'utilisateur et attend que celui-ci
+donne une réponse et la valide en appuyant sur {kbd}`Enter`.
+
+La valeur saisie doit être obligatoirement affectée à une variable, sinon elle
+sera perdue.
+
+La valeur rentrée par l'utilisateur est stockée sous forme de
+chaîne de caractères (de type `str`). Pour effectuer des calculs, il faut la
+convertir en `int` (nombre entier) ou en `float` (nombre à vigule).
+
+```{important}
+L'utilisation de la fonction input sur ce site est différente de ce qui est
+utilisé dans d'autre logiciel.\
+`nom_variable = input("...")` -> version des autres logiciels\
+`nom_variable = await input_line("...")` -> version pour ce site
+```
+
 ## Exercice {num}`exo-py1`
 
 Écrire un programme qui demande à l'utilisateur son nom, son prénom et où il
@@ -226,6 +301,7 @@ Je vois que tu habites à {afficher le lieu}.
 ```
 
 ```{exec} python
+:linenos:
 :editable:
 # Écrire le programme ici
 ```
@@ -233,9 +309,9 @@ Je vois que tu habites à {afficher le lieu}.
 ````{solution}
 ```{exec} python
 :linenos:
-nom = await input_line("Quel est ton nom?")
-prenom = await input_line("Quel est ton prénom?")
-lieu = await input_line("Où habites-tu?")
+nom = await input_line("Quel est ton nom? ")
+prenom = await input_line("Quel est ton prénom? ")
+lieu = await input_line("Où habites-tu? ")
 print("Bonjour", prenom, nom, ", heureux de faire ta connaissance.")
 print("Je vois que tu habites à", lieu)
 ```
@@ -243,29 +319,50 @@ print("Je vois que tu habites à", lieu)
 
 ## Exercice {num}`exo-py1`
 
-Écrire un programme qui demande à l'utilisateur l'année actuelle, ainsi que
-l'âge qu'il avait le 31 décembre dernier et qui calcule l'année de naissance de
-l'utilisateur.
-
-Le programme affichera:
-
-```{code-block} text
-Quel âge avais-tu au 31 décembre?
-En quelle année sommes-nous?
-Tu es né en {afficher l'année de naissance}.
-```
+Le programme ci-dessous contient une erreur par ligne. Trouver et corriger les
+erreurs.
 
 ```{exec} python
+:linenos:
 :editable:
-# Écrire le programme ici
+print "Bienvenue dans ce nouveau programme!"
+print(nombre_de_pommes = 10)
+print("Vous devez payer" nombre_de_pommes * 1.5 "CHF")
+print(Fin du programme)
+```
+
+
+````{solution}
+```{exec} python
+:linenos:
+print("Bienvenue dans ce nouveau programme!")
+nombre_de_pommes = 10
+print("Vous devez payer", nombre_de_pommes * 1.5, "CHF")
+print("Fin du programme")
+```
+````
+
+
+## Exercice {num}`exo-py1`
+
+Le programme ci-dessous devrait permettre de calculer l'année de naissance de
+l'utilisateur. Toutefois, celui-ci contient au moins une erreur par ligne.
+Trouver et corriger les erreurs.
+
+```{exec} python
+:linenos:
+:editable:
+age = input("Quel âge as-tu? ")
+annee = input("En quelle année sommes-nous? ")
+print("Vous êtes né.e en" annee - age "ou en" annee - age - 1)
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
-age = int(await input_line("Quel âge avais-tu au 31 décembre?"))
-annee = int(await input_line("En quelle année sommes-nous?"))
-print("Tu es né.e en", annee - age - 1)
+age = int(await input_line("Quel âge as-tu? "))
+annee = int(await input_line("En quelle année sommes-nous? "))
+print("Vous êtes né.e en", annee - age, "ou en", annee - age - 1)
 ```
 ````
 
@@ -275,11 +372,12 @@ print("Tu es né.e en", annee - age - 1)
 Le programme affichera:
 
 ```{code-block} text
-Combien de mégaoctets veux-tu convertir en bits?
+Nombre de mégaoctets:
 {afficher le nombre de mégaoctets} Mo donnent {afficher le nombre de bits} bits.
 ```
 
 ```{exec} python
+:linenos:
 :editable:
 # Écrire le programme ici
 ```
@@ -287,9 +385,42 @@ Combien de mégaoctets veux-tu convertir en bits?
 ````{solution}
 ```{exec} python
 :linenos:
-nb_mo = float(await input_line("Combien de mégaoctets veux-tu convertir en bits?"))
+nb_mo = float(await input_line("Nombre de mégaoctets: "))
 # 1 octet = 8 bits
 nb_bits = int(nb_mo * 8 * 1000000)
 print(nb_mo, "Mo donnent", nb_bits, "bits.")
+```
+````
+
+## Exercice {num}`exo-py1`
+
+Écrire un programme permettant de convertir des degrés Fahrenheit en degrés
+Celsius. Pour une température en Fahrenheit $F$, on trouve son équivalent en
+Celsius $C$ avec la formule :
+
+
+$$C = \frac{F - 32}{1.8}$$
+
+
+Par exemple, si l'utilisateur entre la valeur `60.2`, alors le programme
+affichera:
+
+```{code-block} text
+Température en °F: 60.2
+Merci, 60.2 °F équivalent à 15.666666666666668 °C
+```
+
+```{exec} python
+:linenos:
+:editable:
+# Écrire le programme ici
+```
+
+````{solution}
+```{exec} python
+:linenos:
+fahrenheit = float(await input_line("Température en °F: "))
+celsius = (fahrenheit - 32) / 1.8
+print("Merci,", fahrenheit, "°F équivaut à", celsius, "°C")
 ```
 ````
