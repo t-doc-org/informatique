@@ -76,7 +76,7 @@ pas accepter les valeurs `null`.
 
 ```{exec} sql
 :then: sql-canton-select
-:editable:
+:editor: e9b14e12-14fc-4725-930f-011f19914760
 ```
 
 ```{exec} sql
@@ -116,7 +116,7 @@ insert into canton values
 
     ```{exec} sql
     :after: sql-canton
-    :editable:
+    :editor: 5e6516e0-18bb-4d38-8c90-767e1fd1f729
     ```
 
     ````{solution}
@@ -131,7 +131,7 @@ insert into canton values
 
     ```{exec} sql
     :after: sql-canton
-    :editable:
+    :editor: 57e619f9-cc9e-47d6-9cf5-a510f74465df
     ```
 
     ````{solution}
@@ -146,7 +146,7 @@ insert into canton values
 
     ```{exec} sql
     :after: sql-canton
-    :editable:
+    :editor: e584473c-6e0d-41ca-bad5-b7f1888eae10
     ```
 
     ````{solution}
@@ -161,7 +161,7 @@ insert into canton values
 
     ```{exec} sql
     :after: sql-canton
-    :editable:
+    :editor: caf9b02f-d802-4876-a1ad-0b183c6bdc41
     ```
 
     ````{solution}
@@ -176,7 +176,7 @@ insert into canton values
 
     ```{exec} sql
     :after: sql-canton
-    :editable:
+    :editor: 591d0ad5-71f4-4f8c-9281-f2639abe7a2e
     ```
 
     ````{solution}
@@ -191,7 +191,7 @@ insert into canton values
 
     ```{exec} sql
     :after: sql-canton
-    :editable:
+    :editor: 5dc7f7ee-caa7-439c-90a6-c636d8e15551
     ```
 
     ````{solution}
@@ -206,7 +206,7 @@ insert into canton values
 
     ```{exec} sql
     :after: sql-canton
-    :editable:
+    :editor: 80d34995-7472-4051-a8af-577363ee3858
     ```
 
     ````{solution}
@@ -221,7 +221,7 @@ insert into canton values
 
     ```{exec} sql
     :after: sql-canton
-    :editable:
+    :editor: cfa9c7e3-cead-4b27-9405-3644a1b27335
     ```
 
     ````{solution}
@@ -236,7 +236,7 @@ insert into canton values
 
     ```{exec} sql
     :after: sql-canton
-    :editable:
+    :editor: 931ab749-fafb-4d51-b65f-c0c6aedd893a
     ```
 
     ````{solution}
@@ -283,7 +283,7 @@ select * from pays;
 
     ```{exec} sql
     :after: sql-pays
-    :editable:
+    :editor: bcaf5478-a98e-4604-94ed-25c68d55d0ec
     ```
 
     ````{solution}
@@ -299,7 +299,7 @@ select * from pays;
     ```{exec} sql
     :after: sql-pays
     :then: sql-pays-select
-    :editable:
+    :editor: 5b17366a-b154-4efa-ab9d-8ed38cc2aba5
     ```
 
     ````{solution}
@@ -319,7 +319,7 @@ select * from pays;
     ```{exec} sql
     :after: sql-pays-delete
     :then: sql-pays-select
-    :editable:
+    :editor: fe2e31ac-65cd-4c3b-aff5-fbe2a440ccaa
     ```
 
     ````{solution}
@@ -338,7 +338,7 @@ select * from pays;
     ```{exec} sql
     :after: sql-pays-update
     :then: sql-pays-select
-    :editable:
+    :editor: ac5b265f-c615-4075-b8e0-cfb48044e4e9
     ```
 
     ````{solution}
@@ -379,7 +379,7 @@ select * from contact limit 4;
 
     ```{exec} sql
     :after: sql-contact
-    :editable:
+    :editor: 42ecaa2e-9771-490f-80f7-570a7d07bc04
     ```
 
     ````{solution}
@@ -393,7 +393,7 @@ select * from contact limit 4;
 
     ```{exec} sql
     :after: sql-contact
-    :editable:
+    :editor: 947069b0-1deb-41b0-b825-c6b7193c4961
     ```
 
     ````{solution}
@@ -415,7 +415,7 @@ select * from contact limit 4;
 
     ```{exec} sql
     :after: sql-contact
-    :editable:
+    :editor: 88542989-771f-4006-a767-e26463d78990
     ```
 
     ````{solution}
@@ -430,7 +430,7 @@ select * from contact limit 4;
 
     ```{exec} sql
     :after: sql-contact
-    :editable:
+    :editor: 22d2f5a7-59dd-4dd5-91ce-5e6486f42f1c
     ```
 
     ````{tip}
@@ -465,7 +465,7 @@ select * from contact limit 4;
 
     ```{exec} sql
     :after: sql-contact
-    :editable:
+    :editor: ac361196-2c33-4bc1-abd6-6a2d32c50983
     ```
 
     ````{solution}
@@ -479,7 +479,7 @@ select * from contact limit 4;
 
     ```{exec} sql
     :after: sql-contact
-    :editable:
+    :editor: 9925d041-a080-4cdc-8333-b6fd8b3661e3
     ```
 
     ````{solution}
@@ -494,7 +494,7 @@ select * from contact limit 4;
 
     ```{exec} sql
     :after: sql-contact
-    :editable:
+    :editor: 443ec60f-b656-4a3c-b163-e43cc0874d48
     ```
 
     ````{solution}
@@ -509,7 +509,7 @@ select * from contact limit 4;
 
     ```{exec} sql
     :after: sql-contact
-    :editable:
+    :editor: 5233a1af-688a-402a-b172-dc9925814181
     ```
 
     ````{solution}
@@ -526,7 +526,7 @@ select * from contact limit 4;
 
     ```{exec} sql
     :after: sql-contact
-    :editable:
+    :editor: 05a9de22-d729-4d16-8168-7d9023456ae7
     ```
 
     ````{solution}
@@ -553,7 +553,7 @@ l'{numref}`exercice %s<exo-bd-lab1:pays>`.
     ```{exec} sql
     :after: sql-pays-last
     :then: sql-pays-select
-    :editable:
+    :editor: 07d2ec39-ce18-4732-bd48-e886daaaadcc
     ```
 
     ````{solution}
@@ -570,7 +570,7 @@ l'{numref}`exercice %s<exo-bd-lab1:pays>`.
     ```{exec} sql
     :after: sql-pays-6-1
     :then: sql-pays-select
-    :editable:
+    :editor: a0f3cddc-3c4a-40ef-b5e2-277120730137
     ```
 
     ````{solution}
@@ -588,7 +588,7 @@ l'{numref}`exercice %s<exo-bd-lab1:pays>`.
     ```{exec} sql
     :after: sql-pays-6-2
     :then: sql-pays-select
-    :editable:
+    :editor: 24ceda93-97c4-4f78-b6c5-1c543a856ccd
     ```
 
     ````{solution}

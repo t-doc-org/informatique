@@ -93,7 +93,7 @@ Recréer la table `produit` des exercices {numref}`exo-bd:produit-create` et
 
 ```{exec} sql
 :then: sql-produit-select
-:editable:
+:editor: 3abf3878-b6c5-4e8c-83f2-6109321d980d
 ```
 
 ```{exec} sql
@@ -146,7 +146,7 @@ caractères.
 
 ```{exec} sql
 :then: sql-client-select
-:editable:
+:editor: 21f2f19d-9502-44bc-a2d5-8cb9da24f4da
 ```
 
 ````{solution}
@@ -194,7 +194,7 @@ select * from achat;
 
 ```{exec} sql
 :then: sql-achat-select
-:editable:
+:editor: 13c2d3de-26a2-4d2b-81d3-851fd1868e60
 ```
 
 ````{solution}
@@ -269,7 +269,7 @@ le client n°1.
 
 ```{exec} sql
 :after: sql-tables
-:editable:
+:editor: 7682c01c-f46a-4800-b3e1-810f7308b7e9
 ```
 
 ````{solution}
@@ -289,7 +289,7 @@ Trier les valeurs dans l'ordre alphabétique des prénoms.
 
 ```{exec} sql
 :after: sql-tables
-:editable:
+:editor: aec5da39-5a2a-4e0a-9805-1d1b8e3ff681
 ```
 
 ````{solution}
@@ -316,7 +316,7 @@ prénoms):
 
 ```{exec} sql
 :after: sql-tables
-:editable:
+:editor: 8e0be548-feef-4705-84ea-b4c916db9c8b
 ```
 
 ````{solution}

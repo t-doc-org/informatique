@@ -61,7 +61,7 @@ select * from produit;
 
 ```{exec} sql
 :then: sql-produit-select
-:editable:
+:editor: 4d2d44a5-b672-450b-bdf5-353c4c6da340
 ```
 
 ````{solution}
@@ -111,7 +111,7 @@ lignes suivantes:
 ```{exec} sql
 :after: sql-produit
 :then: sql-produit-select
-:editable:
+:editor: 75970863-78ba-4cad-8724-641257d018f3
 ```
 
 ````{solution}
@@ -159,7 +159,7 @@ select article, quantite from stock;
 
 ```{exec} sql
 :after: sql-produit-insert
-:editable:
+:editor: a2da982e-cff2-425a-8ed1-f1ae1229ad74
 ```
 
 ````{solution}
@@ -173,7 +173,7 @@ select * from produit;
 
 ```{exec} sql
 :after: sql-produit-insert
-:editable:
+:editor: 56820e63-edbf-48bd-b631-ae39461d77f0
 ```
 
 ````{solution}
@@ -188,7 +188,7 @@ produits.
 
 ```{exec} sql
 :after: sql-produit-insert
-:editable:
+:editor: 02363fe1-0838-4df0-b05f-87a7e97bd4f0
 ```
 
 
@@ -241,7 +241,7 @@ Brimnes.
 
 ```{exec} sql
 :after: sql-produit-insert
-:editable:
+:editor: bf813c8f-71a0-4aea-97d1-7e3bb5fab62a
 ```
 
 ````{solution}
@@ -256,7 +256,7 @@ Ektorp.
 
 ```{exec} sql
 :after: sql-produit-insert
-:editable:
+:editor: 72ca4a83-6c72-4e56-a617-ed6181e7a980
 ```
 
 ````{solution}
@@ -285,7 +285,7 @@ Mettre à jour le prix du **canapé 2 places** qui ne coûte plus que 499 CHF.
 ```{exec} sql
 :after: sql-produit-insert
 :then: sql-produit-select
-:editable:
+:editor: d296c57b-c340-4d2c-9712-99dd651665fc
 ```
 
 ````{solution}
@@ -316,7 +316,7 @@ Contrôler le résultat en affichant tous les éléments de la table produit.
 ```{exec} sql
 :after: sql-produit-update
 :then: sql-produit-select
-:editable:
+:editor: 81de2da2-d302-4554-b87e-cf04d1cafd3c
 ```
 
 ````{solution}
@@ -378,7 +378,7 @@ Ajouter une ligne avec vos propres informations sauf le numéro de téléphone.
 
 ```{exec} sql
 :then: sql-eleve-select
-:editable:
+:editor: db13712e-c734-47bf-af0e-3460cb6a2c9a
 ```
 
 ```{exec} sql
@@ -468,7 +468,7 @@ select * from boisson;
 ```
 
 ```{exec} sql
-:editable:
+:editor: 336d388e-1795-475e-89e5-30e7c7cb99d2
 :then: sql-boisson-select
 ```
 

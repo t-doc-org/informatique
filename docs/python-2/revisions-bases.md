@@ -322,27 +322,23 @@ En ex√©cutant les programmes suivants, une erreur se produit. Corriger le code √
 l'aide du message d'erreur.
 
 1.  ```{exec} python
-    :editable:
-    :linenos:
+    :editor:
     print("Bonjour)
     ```
 
 2.  ```{exec} python
-    :editable:
-    :linenos:
+    :editor:
     print(hello)
     ```
 
 3.  ```{exec} python
-    :editable:
-    :linenos:
+    :editor:
     age == 18
     print(age)
     ```
 
 4.  ```{exec} python
-    :editable:
-    :linenos:
+    :editor:
     longueur = 7
     largeur = 12
     perimetre = 2 * (LONGUEUR + largeur)
@@ -350,16 +346,14 @@ l'aide du message d'erreur.
     ```
 
 5.  ```{exec} python
-    :editable:
-    :linenos:
+    :editor:
     a = 10
     # afficher la valeur de a
     print("a")
     ```
 
 6.  ```{exec} python
-    :editable:
-    :linenos:
+    :editor:
     a = 10
     b = 5
     print("La somme de a et b vaut" a + b)

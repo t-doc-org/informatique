@@ -24,8 +24,7 @@ programme (après les imports et les définitions de variables globales).
 Fonction qui affiche la table de multiplication de 5:
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # définition de la fonction
 def table_multiplication_5():
   for i in range(1, 11):              # i prend les valeurs de 1 à 10
@@ -50,8 +49,7 @@ d'une fonction varie suivant les valeurs de ses paramètres.
 Fonction qui affiche n'importe quelle table de multiplication:
 
 ```{exec} python
-:editable:
-:linenos:
+:editor:
 def table_multiplication(n):
   for i in range(1, 11):
     print(n, "*", i, "=", n * i)
@@ -63,8 +61,7 @@ table_multiplication(nombre)
 ## Exemple {num}`ex-py2:delta1`
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Calcule et affiche le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
   delta = b ** 2 - 4 * a * c
@@ -91,8 +88,7 @@ de sauvegarder la valeur retournée dans une variable.
 ## Exemple {num}`ex-py2:delta2`
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Calcule et affiche le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
   delta = b ** 2 - 4 * a * c
@@ -112,8 +108,7 @@ print(delta)
 Déterminer ce que font les programmes suivants et corriger les erreurs.
 
 1.  ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     def convertit_min_sec(min):
       return min * 60
 
@@ -122,8 +117,7 @@ Déterminer ce que font les programmes suivants et corriger les erreurs.
     ```
 
 2.  ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     def convertit_sec_min(sec):
       min = sec / 60
 
@@ -132,8 +126,7 @@ Déterminer ce que font les programmes suivants et corriger les erreurs.
     ```
 
 3.  ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     def calcule_double_moins_trois(x):
       x = 2 * x
       return x
@@ -195,8 +188,7 @@ vérifie que le coefficient $a$ n'est pas nul. (Dans ce cas, ce n'est pas une
 équation du deuxième degré et la résolution est différente.)
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -231,15 +223,13 @@ Rappel:
 - si $\Delta > 0$, il y a 2 solutions.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
 ````{solution}
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Calcule le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
   return b ** 2 - 4 * a * c
@@ -281,8 +271,7 @@ print(sqrt(54))
 ````
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -323,8 +312,7 @@ la solution si $a = 0$, c'est-à-dire que l'équation donnée est une équation 
 premier degré.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -367,8 +355,7 @@ else:
 4. Convertir 512 octets en bits.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -407,8 +394,7 @@ connaissant la longueur et la largeur.
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -437,8 +423,7 @@ auras à disposition.\
 Le taux est de 1 CHF = 174 YEN.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Compléter la fonction
 def convertit_chf_en_yen(montant_chf):
 
@@ -478,8 +463,7 @@ la réduction. Les réductions sont les suivantes :
 - 0% (0) pour les autres codes
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Compléter le programme
 prix = float(await input_line("Quel est le prix de l'article ?"))
 code = await input_line("Quel est le code de réduction ?")
@@ -522,8 +506,7 @@ vitesse autorisée et la vitesse mesurée par le radar. Traiter seulement le cas
 où le dépassement de vitesse a lieu sur l'autoroute et n'exède pas 20 km/h.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Compléter le programme
 def amende(vit_aut, vit_mes):
   pass
@@ -572,8 +555,7 @@ Cette suite à la particularité de toujours se terminer par 4, 2, 1.
 la suite de Syracus (jusqu'à ce que la suite arrive à 1).
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -623,8 +605,7 @@ d'un autre nombre.
 3. contenir une fonction `est_premier()` qui teste si un nombre est premier.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -671,11 +652,10 @@ de la définition de la fonction.
 ## Exercice {num}`exo-py2`
 
 Créer une fonction `compteur()`...
-1. qui compte de 0 à un nombre donné appelé `stop`:
+1.  qui compte de 0 à un nombre donné appelé `stop`:
 
     ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     # Écrire le programme ici
     ```
 
@@ -703,11 +683,10 @@ Créer une fonction `compteur()`...
       ```
     ````
 
-2. qui compte de `start` à `stop` avec `start` < `stop`:
+2.  qui compte de `start` à `stop` avec `start` < `stop`:
 
     ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     # Écrire le programme ici
     ```
 
@@ -735,12 +714,11 @@ Créer une fonction `compteur()`...
       ```
     ````
 
-3. qui compte de `start` à `stop` avec un pas donné `step` (de 2 en 2 ou
+3.  qui compte de `start` à `stop` avec un pas donné `step` (de 2 en 2 ou
     de 3 en 3):
 
     ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     # Écrire le programme ici
     ```
 
@@ -767,6 +745,3 @@ Créer une fonction `compteur()`...
       compteur(4, 11, 3)
       ```
     ````
-
-
-

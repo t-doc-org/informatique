@@ -29,8 +29,7 @@ Le bloc d'instructions ne sera exécuté que si la condition est vraie.
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 print("Début")
 meteo = "soleil"
 if meteo == "pluie":
@@ -53,8 +52,7 @@ sinon ce sera le bloc d'instructions du `else` qui sera exécuté.
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 moyenne = 5
 if moyenne >= 4:
   print("Moyenne suffisante")
@@ -77,8 +75,7 @@ Certaines situations nécessitent de distinguer plus qu'un ou deux cas.
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 type_film = "comédie"
 
 if type_film == "action":
@@ -169,8 +166,7 @@ print("\x0cBravo!")
 ## Exercice {num}`exo-py2-rev`
 
 1.  ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     # Compléter le programme
     a = ...
     if ... :
@@ -185,8 +181,7 @@ print("\x0cBravo!")
 
     ````{solution}
     ```{exec} python
-    :editable:
-    :linenos:
+    :editor:
     a = ...                                 # choisir la valeur de a
     if a == 0 :                             # a == 0 pour la comparaison
       print("a est nul.")
@@ -198,8 +193,7 @@ print("\x0cBravo!")
     ````
 
 2.  ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     # Compléter le programme
     a = ...
     b = ...
@@ -213,8 +207,7 @@ print("\x0cBravo!")
 
     ````{solution}
     ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     a = ...                                         # choisir la valeur de a
     b = ...                                         # choisir la valeur de b
     if b != 0 :                                     # tester que b n'est pas nul
@@ -240,8 +233,7 @@ Sinon
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Modifier et compléter le programme
 prix_unitaire = ...
 nb_canettes = int(await input_line("Nombre de canettes de Red Bull à acheter?"))
@@ -274,8 +266,7 @@ Sinon
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Modifier et compléter le programme
 ... await input_line("Quel est votre âge?")
 ...
@@ -413,8 +404,7 @@ Le programme suivant contient une erreur de logique. Tester le programme avec
 différentes valeurs pour trouver et corriger l'erreur.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 age = 18
 if age >= 18:
   print("Tu payes le prix adulte.")

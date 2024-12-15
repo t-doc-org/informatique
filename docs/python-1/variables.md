@@ -193,8 +193,7 @@ Ce code Python déclare 5 variables, mais contient une erreur par ligne. Trouver
 et corriger les erreurs.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 6 = age
 message = Je suis absent
 note = 4,5
@@ -464,8 +463,7 @@ Au terme de l'exécution de ce programme, la variable `volume` devrait
 contenir la valeur `2849.55`
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le code ici
 
 # Affiche le volume

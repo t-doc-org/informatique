@@ -9,15 +9,15 @@ hide-solutions: true
 
 ## Exercice {num}`py2-lab1`
 
-1. Lire le code suivant et expliquer ce qu'il fait sans l'exécuter.
-2. Exécuter le code. Le code fait-il ce que vous pensiez?
-3. Comment structurer ce code différemment pour qu'il soit plus lisible?
+1.  Lire le code suivant et expliquer ce qu'il fait sans l'exécuter.
+2.  Exécuter le code. Le code fait-il ce que vous pensiez?
+3.  Comment structurer ce code différemment pour qu'il soit plus lisible?
     - Découper le code en parties qui effectuent une tâche donnée et ajouter des
     commentaires.
     - Remplacer chaque partie par une fonction.
-4. Copier, modifier, tester et exécuter le code dans Thonny ou sur
-[online-python.com](https://www.online-python.com/). Ne pas oublier de modifier
-les `await input_line()` en `input()`.
+4.  Copier, modifier, tester et exécuter le code dans Thonny ou sur
+    [online-python.com](https://www.online-python.com/). Ne pas oublier de
+    modifier les `await input_line()` en `input()`.
 
 ```{exec} python
 :style: height: 25rem
@@ -178,9 +178,10 @@ print("Au revoir. Merci d'avoir joué avec moi!")
 ## Exercice {num}`py2-lab1`
 
 Écrire un jeu d'énigmes qui a la structure suivante:
-1. Créer plusieurs fonctions qui gèrent la résolution des énigmes. Celles-ci
-doivent retourner l'information nécessaire pour le calcul du score.
-2. Avoir une variable pour le score.
-3. Gérer le déroulement du jeu.
+1.  Créer plusieurs fonctions qui gèrent la résolution des énigmes. Celles-ci
+    doivent retourner l'information nécessaire pour le calcul du score.
+2.  Avoir une variable pour le score.
+3.  Gérer le déroulement du jeu.
 
-Travailler dans Thonny ou sur [online-python.com](https://www.online-python.com/).
+Travailler dans Thonny ou sur
+[online-python.com](https://www.online-python.com/).

@@ -47,8 +47,7 @@ Une fonction nommée `salutations` a été définie ci-dessous. Appeler cette
 fonction dans le programme.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 def salutations():
   print("Bonjour, comment vas-tu?")
 
@@ -76,8 +75,7 @@ Appeler cette fonction 2 fois pour que le programme affiche le résultat de
 4 + 9 et celui de de 3 + 7.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 def affiche_somme(a, b):
   print(a + b)
 
@@ -106,8 +104,7 @@ Le code donné doit ensuite pouvoir s'exécuter sans problème afin d'afficher
 20 fois le message d'au revoir.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Définir la fonction au_revoir
 ...
 
@@ -145,8 +142,7 @@ Le code donné doit ensuite pouvoir s'exécuter sans erreur et afficher exacteme
 les prix des billets pour tous les âges de 1 à 70 ans.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Définir la fonction affiche_prix_billet
 ...
 

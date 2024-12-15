@@ -41,8 +41,7 @@ sur la console.
 Exemple:
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 n = 7
 if n < 10
   print("n est plus petit que 10.)
@@ -65,8 +64,7 @@ s'arrête de manière abrupte.
 Exemple:
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 a = 7
 b = 0
 print(a / b)
@@ -81,8 +79,7 @@ résultat n'est pas celui attendu.
 Exemple:
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 def addition(a, b):
   return a - b
 
@@ -98,8 +95,7 @@ Les programmes suivants contiennent tous une erreur.
 - La corriger.
 
 1.  ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     def calcule_aire(longueur, largeur):
       return longueur * largeur
 
@@ -109,8 +105,7 @@ Les programmes suivants contiennent tous une erreur.
     ```
 
 2.  ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     n = 0
     while n < 10:
     print(n)
@@ -118,19 +113,16 @@ Les programmes suivants contiennent tous une erreur.
     ```
 
 3.  ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     for i in range(9 / 2):
       print(i * 5)
     ```
 
 4.  ```{exec} python
-    :linenos:
-    :editable:
+    :editor:
     for i in range(2)
       print(i)
     ```
-
 
 ```{solution}
 1. Erreur d'exécution: la variable larg n'est pas définie.
@@ -147,10 +139,8 @@ des messages d'erreurs affichés, corriger le programme ci-dessous qui calcule
 l'aire et le périmètre d'un triangle isocèle et rectangle dont l'hypoténuse est
 connu.
 
-
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 from math import sqrt
 
 def calcule_hypotenuse(cathete1, cathete2)
@@ -184,5 +174,4 @@ l'hypoténuse du triangle de départ `base`.
 
 Erreur de logique:
 1. Le calcul du périmètre n'est pas correct, il faut additionner les trois côtés.
-
 ```

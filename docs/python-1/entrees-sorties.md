@@ -14,35 +14,32 @@ la console.
 
 ## Exemples {num}`exo-io`
 
-1. Affichage d'une chaine de caractère. Ce qui se trouve entre guillements sera
-affiché tel quel.
+1.  Affichage d'une chaine de caractère. Ce qui se trouve entre guillements sera
+    affiché tel quel.
 
-      ```{exec} python
-      :linenos:
-      :editable:
-      print("Hello world!")
-      ```
+    ```{exec} python
+    :editor:
+    print("Hello world!")
+    ```
 
-2. Affichage de la valeur d'une variable.
+2.  Affichage de la valeur d'une variable.
 
-      ```{exec} python
-      :linenos:
-      :editable:
-      a = 10
-      print(a)
-      a = a + 5
-      print(a)
-      ```
+    ```{exec} python
+    :editor:
+    a = 10
+    print(a)
+    a = a + 5
+    print(a)
+    ```
 
-3. Affichage d'une chaîne de caractère et de la valeur d'une variable. Il faut
-utiliser une virgule pour séparer les différents éléments.
+3.  Affichage d'une chaîne de caractère et de la valeur d'une variable. Il faut
+    utiliser une virgule pour séparer les différents éléments.
 
-      ```{exec} python
-      :linenos:
-      :editable:
-      prix_choco = 17.20
-      print("Le prix de la boîte de chocolat est de", prix_choco, "CHF.")
-      ```
+    ```{exec} python
+    :editor:
+    prix_choco = 17.20
+    print("Le prix de la boîte de chocolat est de", prix_choco, "CHF.")
+    ```
 
 ## Exercice {num}`exo-py1`
 
@@ -55,8 +52,7 @@ utiliser une virgule pour séparer les différents éléments.
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -83,8 +79,7 @@ récrire 10 fois la même chose.
 5. Ajouter un commentaire qui explique ce que tu as fait au point précédent.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -112,7 +107,6 @@ print("salutations")
 
 2.  Quel est l'impact des guillemets sur le mot `salutations`?
 
-
 ```{solution}
 2.  Lorsque le mot `salutations` est écrit sans guillemets, il fait référence à
 la variable. L'affichage substitue donc la variable par son contenu. Lorsque des
@@ -120,22 +114,19 @@ guillemets entourent `salutations`, alors le mot est considéré comme une chaî
 de type caractère et le mot est alors affiché tel quel.
 ```
 
-
-
 ## Exercice {num}`exo-py1`
 
-1. Effectuer mentalement les 7 opérations ci-dessus avec les nombres 13 et 2.
-2. Écrire un programme qui permet d'effectuer les 7 opérations ci-dessus avec 13
-et 2 et d'afficher le résultat. Les résultats sont-ils les mêmes qu'au point
-précédent?
-3. Faire de même avec 10 et 3.
-4. Faire de même avec 8 et 5.
-5. Que faut-il utiliser pour éviter de modifier chaque ligne? Noter la réponse
-par un commentaire dans le code.
+1.  Effectuer mentalement les 7 opérations ci-dessus avec les nombres 13 et 2.
+2.  Écrire un programme qui permet d'effectuer les 7 opérations ci-dessus avec
+    13 et 2 et d'afficher le résultat. Les résultats sont-ils les mêmes qu'au
+    point précédent?
+3.  Faire de même avec 10 et 3.
+4.  Faire de même avec 8 et 5.
+5.  Que faut-il utiliser pour éviter de modifier chaque ligne? Noter la réponse
+    par un commentaire dans le code.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -176,8 +167,7 @@ réponse:
 5. Calculer le quotient et le reste de la division de 345 par 37.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -198,19 +188,19 @@ print("Le reste de la division de 345 par 37 est ", 345 % 37)
 Écrire un programme qui permet de résoudre l'exercice suivant (ne pas oublier
 les phrases d'explication):
 
-1. Luc va faire des courses. Il achète deux livres à 9.30 CHF, un jeu vidéo à 59
-CHF et trois mangas à 13.50 CHF. Calculer le montant total des dépenses de Luc.
-2. Juliette achète un livre, deux jeux vidéo et deux mangas. Calculer le montant
-total des dépenses de Juliette.
-3. En période de soldes, les jeux vidéo sont à 50 %, les livres à 5 CHF et les
-mangas ont 6 CHF de rabais.
-4. Calculer les économies faites par chacun pendant les soldes (utiliser des
-variables pour stocker le prix avant et après réduction).
-5. Arrondir les prix aux centimes.
+1.  Luc va faire des courses. Il achète deux livres à 9.30 CHF, un jeu vidéo à
+    59 CHF et trois mangas à 13.50 CHF. Calculer le montant total des dépenses
+    de Luc.
+2.  Juliette achète un livre, deux jeux vidéo et deux mangas. Calculer le
+    montant total des dépenses de Juliette.
+3.  En période de soldes, les jeux vidéo sont à 50 %, les livres à 5 CHF et les
+    mangas ont 6 CHF de rabais.
+4.  Calculer les économies faites par chacun pendant les soldes (utiliser des
+    variables pour stocker le prix avant et après réduction).
+5.  Arrondir les prix aux centimes.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -301,8 +291,7 @@ Je vois que tu habites à {afficher le lieu}.
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -323,14 +312,12 @@ Le programme ci-dessous contient une erreur par ligne. Trouver et corriger les
 erreurs.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 print "Bienvenue dans ce nouveau programme!"
 print(nombre_de_pommes = 10)
 print("Vous devez payer" nombre_de_pommes * 1.5 "CHF")
 print(Fin du programme)
 ```
-
 
 ````{solution}
 ```{exec} python
@@ -342,7 +329,6 @@ print("Fin du programme")
 ```
 ````
 
-
 ## Exercice {num}`exo-py1`
 
 Le programme ci-dessous devrait permettre de calculer l'année de naissance de
@@ -350,8 +336,7 @@ l'utilisateur. Toutefois, celui-ci contient au moins une erreur par ligne.
 Trouver et corriger les erreurs.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 age = input("Quel âge as-tu? ")
 annee = input("En quelle année sommes-nous? ")
 print("Vous êtes né.e en" annee - age "ou en" annee - age - 1)
@@ -377,8 +362,7 @@ Nombre de mégaoctets:
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -398,9 +382,7 @@ print(nb_mo, "Mo donnent", nb_bits, "bits.")
 Celsius. Pour une température en Fahrenheit $F$, on trouve son équivalent en
 Celsius $C$ avec la formule :
 
-
 $$C = \frac{F - 32}{1.8}$$
-
 
 Par exemple, si l'utilisateur entre la valeur `60.2`, alors le programme
 affichera:
@@ -411,8 +393,7 @@ Merci, 60.2 °F équivalent à 15.666666666666668 °C
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 

@@ -24,8 +24,7 @@ for _ in range(nb_repetitions):
 </tr><tr style="vertical-align: top"><td>
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 for i in range(5):
   print(i)
 ```
@@ -67,8 +66,7 @@ while condition:
 </tr><tr style="vertical-align: top"><td>
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 nb_points = 0
 max = 10
 while nb_points < max:
@@ -116,8 +114,7 @@ print("La somme est:", somme)
 à 9.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -133,8 +130,7 @@ for nombre in range(10):
 à 10.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -156,8 +152,7 @@ for nombre in range(1, 11):
 multiples de 5.
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -225,8 +220,7 @@ Afficher "Merci"
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Compléter le programme
 n = int(await input_line("Entrer un nombre strictement positif: "))
 print("Le nombre doit être strictement positif!")
@@ -277,8 +271,7 @@ BOOM
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 
@@ -312,8 +305,7 @@ Bravo!
 ```
 
 ```{exec} python
-:linenos:
-:editable:
+:editor:
 # Écrire le programme ici
 ```
 

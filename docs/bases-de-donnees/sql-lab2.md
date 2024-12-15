@@ -130,7 +130,7 @@ Créer les différentes tables: `usager`, `livre`, `auteur`, `auteur_de` et
 ```{exec} sql
 :name: sql-biblio-resp
 :then: sql-biblio-select-usager sql-biblio-select-livre sql-biblio-select-auteur sql-biblio-select-auteur-de sql-biblio-select-emprunt
-:editable:
+:editor: a799f754-c49b-4720-bcc6-7f7745757283
 ```
 
 Pour tester que la table `usager` est correcte:
@@ -192,7 +192,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: fc843e18-92fb-4a7b-9f09-e4737fa0824c
     ```
 
     ````{solution}
@@ -206,7 +206,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 7ee8cc73-cd36-4b8e-9bcf-85c59059bb38
     ```
 
     ````{solution}
@@ -220,7 +220,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 3da8e169-c56e-4b3e-9d3d-82cc256806e5
     ```
 
     ````{solution}
@@ -235,7 +235,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 4aae8056-e4b5-4739-9f6f-fd26cfc3b586
     ```
 
     ````{solution}
@@ -250,7 +250,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 4526110e-2702-4b51-9571-f23f1a0754ca
     ```
 
     ````{solution}
@@ -265,7 +265,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 109fcc40-fcd3-454a-ae87-4bf9b22bc4b9
     ```
 
     ````{solution}
@@ -285,7 +285,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: b0b0f8d4-33d6-4245-869f-bbc02e644530
     ```
 
     ````{solution}
@@ -300,7 +300,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 2211c706-2225-4dae-9ff6-49de96daddf3
     ```
 
     ````{solution}
@@ -315,7 +315,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 0616c6ad-9994-4ddf-91cf-3ac2eb2c72d3
     ```
 
     ````{solution}
@@ -330,7 +330,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 4819faa3-950d-4e1e-bd34-63fdf69ec56c
     ```
 
     ````{solution}
@@ -379,7 +379,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: de13c942-206a-41ae-8d90-539651b7be6d
     ```
 
     ````{solution}
@@ -395,7 +395,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 42ee336b-2649-4cbe-a153-24a4c65e649b
     ```
 
     ````{solution}
@@ -412,7 +412,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 66d1dd81-af3d-45e5-9fd8-df9a5d790ea8
     ```
 
     ````{solution}
@@ -428,7 +428,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
 
       ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 69944003-3304-41eb-9f14-f0f528c0f45c
     ```
 
     ````{solution}
@@ -444,7 +444,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: cae2c8ea-f5ad-402d-9ebf-5442ce439695
     ```
 
     ````{solution}
@@ -462,7 +462,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 367e40a3-958e-4b25-a0ce-4bbd1702ba22
     ```
 
     ````{solution}
@@ -480,7 +480,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: cc19fc3f-9784-42b7-ba2b-916d5cfd53b1
     ```
 
     ````{solution}
@@ -498,7 +498,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 194c3946-e7bc-4a06-a1c6-f31659e05b52
     ```
 
     ````{solution}
@@ -515,7 +515,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
 
     ```{exec} sql
     :after: sql-biblio-insert
-    :editable:
+    :editor: 15bcd9da-308a-4d43-b324-4f697ca8f37e
     ```
 
     ````{solution}

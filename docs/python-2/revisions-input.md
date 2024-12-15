@@ -50,8 +50,7 @@ Afficher l'aire.
 ```
 
 ```{exec} python
-:editable:
-:linenos:
+:editor:
 # Compléter le programme
 largeur = await input_line(...)
 longueur = await input_line(...)
@@ -83,8 +82,7 @@ l'utilisateur. Mais, il contient au moins une erreur par ligne.\
 Trouver et corriger toutes les erreurs.
 
 ```{exec} python
-:editable:
-:linenos:
+:editor:
 # Corriger le programme
 age = await input_line("Quel âge as-tu?")
 annee = await input_line("En quelle année sommes-nous?")
@@ -104,8 +102,7 @@ Il y a des erreurs dans les programmes suivants. Expliquer et corriger le
 problème.
 
 1.  ```{exec} python
-    :editable:
-    :linenos:
+    :editor:
     # Programme qui demande son prénom à l'utilisateur
     # et lui dit bonjour en citant son prénom
     await input_line("Comment t'appelles-tu?")
@@ -118,8 +115,7 @@ problème.
     ```
 
 2.  ```{exec} python
-    :editable:
-    :linenos:
+    :editor:
     # Programme qui demande son âge à l'utilisateur
     # et calcule son âge dans 10 ans
     age = await input_line("Quel âge as-tu?")

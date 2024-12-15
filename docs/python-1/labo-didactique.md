@@ -238,7 +238,7 @@ Site d'entrainement d'écriture de programme en Python.
 
 ```{exec} python
 :name: editor
-:editable:
+:editor:
 :style: max-height: 25rem
 # Écrire le code ici...
 ```
