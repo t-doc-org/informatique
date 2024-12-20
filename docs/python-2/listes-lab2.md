@@ -193,7 +193,7 @@ quel que soit le nombre de notes ajoutées.
 2.  Tester le code en supprimant une note avant de calculer la somme.
 
 ```{exec} python
-:editor:
+:editor: 3b8cfc77-128f-4d29-99b6-1892d0e27967
 # Compléter et/ou modifier le code
 notes = [6, 5, 4.5, 5, 3.5]
 somme = 0
@@ -204,7 +204,7 @@ print(somme)
 
 ````{solution}
 ```{exec} python
-:editor:
+:linenos:
 notes = [6, 5, 4.5, 5, 3.5]
 somme = 0
 # notes.append(4)
@@ -234,7 +234,7 @@ Moyenne: 4.833333333333333
 ```
 
 ```{exec} python
-:editor:
+:editor: 5efb0258-bbea-4fcf-a6c2-d1456bf82f39
 # Compléter et/ou modifier le code
 notes = []
 somme = 0
@@ -275,7 +275,7 @@ Pour améliorer le programme, créer une fonction `calcule_moyenne(notes)` qui:
 La fonction `len(liste)` retourne le nombre d'éléments de la liste.
 
 ```{exec} python
-:editor:
+:editor: 55d1e9d3-a942-40ab-baa7-ae75477d2cd4
 notes = [3, 4.5, 5.5]
 nombre_notes = len(notes)
 print(nombre_notes)
@@ -283,7 +283,7 @@ print(nombre_notes)
 ````
 
 ```{exec} python
-:editor:
+:editor: 300b5fc7-b983-4ade-89f4-f440c52209b6
 # Compléter et/ou modifier le code
 
 # Définition de la fonction calcule_moyenne(notes)

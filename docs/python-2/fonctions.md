@@ -3,10 +3,6 @@
 
 # Fonctions
 
-```{metadata}
-hide-solutions: true
-```
-
 En programmation, une **fonction** est une bloc de code (suite d'instructions)
 permettant de réaliser une tâche donnée et auquel nous donnons un nom. Cela
 permet de découper un programme en plusieurs petites tâches plus facile à
@@ -24,7 +20,7 @@ programme (après les imports et les définitions de variables globales).
 Fonction qui affiche la table de multiplication de 5:
 
 ```{exec} python
-:editor:
+:editor: 476b2fb3-f383-4b92-8545-785da279b0fb
 # définition de la fonction
 def table_multiplication_5():
   for i in range(1, 11):              # i prend les valeurs de 1 à 10
@@ -44,12 +40,12 @@ Un **paramètre d'une fonction** est une variable définie dans la fonction qui
 recevra une valeur lors de chaque appel de la fonction. Ainsi le comportement
 d'une fonction varie suivant les valeurs de ses paramètres.
 
-## Exemple {num}`ex-py2`
+### Exemple {num}`ex-py2`
 
 Fonction qui affiche n'importe quelle table de multiplication:
 
 ```{exec} python
-:editor:
+:editor: 66a281f9-5417-419d-978d-2602139544ac
 def table_multiplication(n):
   for i in range(1, 11):
     print(n, "*", i, "=", n * i)
@@ -58,10 +54,10 @@ nombre = 6                      # changer la valeur du nombre ici
 table_multiplication(nombre)
 ```
 
-## Exemple {num}`ex-py2:delta1`
+### Exemple {num}`ex-py2:delta1`
 
 ```{exec} python
-:editor:
+:editor: b280f69c-2547-4680-98c8-2cce587c9c74
 # Calcule et affiche le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
   delta = b ** 2 - 4 * a * c
@@ -85,10 +81,10 @@ La commande `return` permet de renvoyer le résultat d'une fonction et ainsi
 pouvoir le réutiliser dans la suite du programme. Pour cela, il est nécessaire
 de sauvegarder la valeur retournée dans une variable.
 
-## Exemple {num}`ex-py2:delta2`
+### Exemple {num}`ex-py2:delta2`
 
 ```{exec} python
-:editor:
+:editor: dfb94893-8e1b-4a02-9eca-177f82e8be11
 # Calcule et affiche le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
   delta = b ** 2 - 4 * a * c
@@ -103,12 +99,12 @@ delta = discriminant(a, b, c)
 print(delta)
 ```
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 Déterminer ce que font les programmes suivants et corriger les erreurs.
 
 1.  ```{exec} python
-    :editor:
+    :editor: c0a8920d-43e3-4291-a431-6c1a7270a010
     def convertit_min_sec(min):
       return min * 60
 
@@ -117,7 +113,7 @@ Déterminer ce que font les programmes suivants et corriger les erreurs.
     ```
 
 2.  ```{exec} python
-    :editor:
+    :editor: 18de8ef0-7a6e-4b06-8302-ec701a785c9f
     def convertit_sec_min(sec):
       min = sec / 60
 
@@ -126,7 +122,7 @@ Déterminer ce que font les programmes suivants et corriger les erreurs.
     ```
 
 3.  ```{exec} python
-    :editor:
+    :editor: f9f4ceaf-ef89-4c7d-88e5-d1b34f3f0feb
     def calcule_double_moins_trois(x):
       x = 2 * x
       return x
@@ -181,14 +177,14 @@ print("Fin du programme")
 ```
 ````
 
-## Exercice {num}`exo-py2:num1`
+### Exercice {num}`exo-py2:num1`
 
 Modifier le code de l'{numref}`exemple %s<ex-py2:delta2>` pour que le programme
 vérifie que le coefficient $a$ n'est pas nul. (Dans ce cas, ce n'est pas une
 équation du deuxième degré et la résolution est différente.)
 
 ```{exec} python
-:editor:
+:editor: d0ba1a78-33a3-41b2-8405-23d7b418e656
 # Écrire le programme ici
 ```
 
@@ -213,7 +209,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py2:num2`
+### Exercice {num}`exo-py2:num2`
 
 Modifier le code de l'{numref}`exercice %s<exo-py2:num1>`, pour afficher le
 nombre de solutions de l'équation.\
@@ -223,13 +219,13 @@ Rappel:
 - si $\Delta > 0$, il y a 2 solutions.
 
 ```{exec} python
-:editor:
+:editor: 2e646990-092f-4a85-b812-9490a09bf202
 # Écrire le programme ici
 ```
 
 ````{solution}
 ```{exec} python
-:editor:
+:editor: e9afc7bb-1e35-422a-a829-c457ff480002
 # Calcule le discriminant dans la résolution d'équation du 2e degré
 def discriminant(a, b, c):
   return b ** 2 - 4 * a * c
@@ -252,7 +248,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py2:num3`
+### Exercice {num}`exo-py2:num3`
 
 Compléter le code de l'{numref}`exercice %s<exo-py2:num2>`, pour calculer les
 solutions de l'équation.
@@ -271,7 +267,7 @@ print(sqrt(54))
 ````
 
 ```{exec} python
-:editor:
+:editor: 77c5e3c2-e6de-492e-85d5-db3f440d5684
 # Écrire le programme ici
 ```
 
@@ -305,14 +301,14 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 Compléter le code de l'{numref}`exercice %s<exo-py2:num3>`, pour calculer aussi
 la solution si $a = 0$, c'est-à-dire que l'équation donnée est une équation du
 premier degré.
 
 ```{exec} python
-:editor:
+:editor: a0139bba-537f-419e-8187-76d78355d944
 # Écrire le programme ici
 ```
 
@@ -347,7 +343,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 1. Écrire une fonction qui convertit des bits en octets.
 2. Écrire une fonction qui convertit des octets en bits.
@@ -355,7 +351,7 @@ else:
 4. Convertir 512 octets en bits.
 
 ```{exec} python
-:editor:
+:editor: 6d5c5190-7949-4078-b22d-e2c84a39f4d4
 # Écrire le programme ici
 ```
 
@@ -379,7 +375,7 @@ print("La conversion de 512 octets en bits donne", nb_bits)
 ```
 ````
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 Pour calculer l'aire totale de la figure ci-dessous:
 
@@ -394,7 +390,7 @@ connaissant la longueur et la largeur.
 ```
 
 ```{exec} python
-:editor:
+:editor: 72650926-c1a9-4096-88b6-3e07b7cc9ccf
 # Écrire le programme ici
 ```
 
@@ -411,7 +407,7 @@ print("Aire totale:", aire_totale)
 ```
 ````
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 Pour les prochaines vacances, tu décides de partir en vacances au Japon. Tu as
 de l'argent sur ton compte épargne et l'argent que tu vas gagner en travaillant
@@ -423,7 +419,7 @@ auras à disposition.\
 Le taux est de 1 CHF = 174 YEN.
 
 ```{exec} python
-:editor:
+:editor: 5f6f63a3-ab47-43c5-9774-f50cabd75e94
 # Compléter la fonction
 def convertit_chf_en_yen(montant_chf):
 
@@ -451,7 +447,7 @@ print("Tu auras", budget_yen, "YEN.")
 ```
 ````
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 Écrivez une fonction qui prend en paramètre un code de réduction et retourne le
 pourcentage de rabais donné par ce code de réduction. Le code déjà donné utilise
@@ -463,8 +459,10 @@ la réduction. Les réductions sont les suivantes :
 - 0% (0) pour les autres codes
 
 ```{exec} python
-:editor:
-# Compléter le programme
+:editor: 4cb99c2b-2ac8-4cf6-9263-4a21bb0e8c8a
+def calcule_reduction(code):
+ # à compléter
+
 prix = float(await input_line("Quel est le prix de l'article ?"))
 code = await input_line("Quel est le code de réduction ?")
 
@@ -495,7 +493,7 @@ print("Le prix final est de", prix_final, "CHF.")
 ```
 ````
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 Pour calculer le prix de l'amende à payer en cas de dépassement de vitesse,
 consulter le document suivant: [Liste sanctions](sanctions-vitesse.pdf)
@@ -503,13 +501,12 @@ consulter le document suivant: [Liste sanctions](sanctions-vitesse.pdf)
 
 Écrire une fonction qui retourne le prix de l'amende à payer en fonction de la
 vitesse autorisée et la vitesse mesurée par le radar. Traiter seulement le cas
-où le dépassement de vitesse a lieu sur l'autoroute et n'exède pas 20 km/h.
+où le dépassement de vitesse a lieu sur l'autoroute et n'excède pas 25 km/h.
 
 ```{exec} python
-:editor:
-# Compléter le programme
-def amende(vit_aut, vit_mes):
-  pass
+:editor: 263a83cb-f587-44f0-bf7d-e5784f778e3f
+def amende(vit_autorisee, vit_mesuree):
+  # à compléter
 
 print(amende(120,140))
 print(amende(120,145))
@@ -520,7 +517,7 @@ print(amende(120,120))
 ```{exec} python
 :linenos:
 def amende(vit_aut, vit_mes):
-  depassement = vit_mes - vit_aut
+  depassement = vit_mesuree - vit_autorisee
   if depassement <= 0:
     return 0
   elif depassement <= 5:
@@ -542,7 +539,7 @@ print(amende(120,120))
 ```
 ````
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 La suite de Syracuse est une suite d'entiers naturels définie de la manière
 suivante:
@@ -555,7 +552,7 @@ Cette suite à la particularité de toujours se terminer par 4, 2, 1.
 la suite de Syracus (jusqu'à ce que la suite arrive à 1).
 
 ```{exec} python
-:editor:
+:editor: bce7f53a-426f-4c3f-b967-c2e41783d2ff
 # Écrire le programme ici
 ```
 
@@ -594,7 +591,7 @@ print(est_pair(107))
 ```
 ````
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 Écrire un programme qui demande à l'utilisateur un nombre entier strictement
 positif et affiche tous ses diviseurs. Ce programme doit:
@@ -605,7 +602,7 @@ d'un autre nombre.
 3. contenir une fonction `est_premier()` qui teste si un nombre est premier.
 
 ```{exec} python
-:editor:
+:editor: 91faf472-2b3d-4729-bc95-ce1c8c0d00a7
 # Écrire le programme ici
 ```
 
@@ -649,13 +646,13 @@ L'ordre des paramètres lors de l'appel de la fonction doit être le même que l
 de la définition de la fonction.
 ```
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 Créer une fonction `compteur()`...
 1.  qui compte de 0 à un nombre donné appelé `stop`:
 
     ```{exec} python
-    :editor:
+    :editor: b5114e99-47c4-40d8-93e4-7bac649c10f2
     # Écrire le programme ici
     ```
 
@@ -686,7 +683,7 @@ Créer une fonction `compteur()`...
 2.  qui compte de `start` à `stop` avec `start` < `stop`:
 
     ```{exec} python
-    :editor:
+    :editor: 4b3ebd3f-e3a6-4041-a51a-3362a1b299c3
     # Écrire le programme ici
     ```
 
@@ -718,7 +715,7 @@ Créer une fonction `compteur()`...
     de 3 en 3):
 
     ```{exec} python
-    :editor:
+    :editor: fd8b8f40-1de2-41ca-8868-6a29af56c20d
     # Écrire le programme ici
     ```
 

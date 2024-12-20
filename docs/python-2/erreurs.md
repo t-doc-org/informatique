@@ -9,9 +9,9 @@ programme et ensuite l'**exécuter**.
 ## Compilation
 
 Lors de la compilation, Python
-- lit le code,
-- vérifie qu'il ne comprend pas d'erreur de syntaxe,
-- transforme le code en un langage compréhensible pour l'ordinateur.
+1. lit le code,
+2. vérifie qu'il ne comprend pas d'erreur de syntaxe,
+3. transforme le code en un langage compréhensible pour l'ordinateur.
 
 ## Exécution
 
@@ -38,7 +38,7 @@ Si Python trouve une erreur de syntaxe, le programme s'arrête, car il ne
 comprend pas le programme et ne peut donc pas l'exécuter. L'erreur est affichée
 sur la console.
 
-Exemple:
+### Exemple {num}`ex-py2`
 
 ```{exec} python
 :editor:
@@ -61,7 +61,7 @@ par exemple:
 Si Python trouve une erreur d'exécution, il "plante", c'est-à-dire qu'il
 s'arrête de manière abrupte.
 
-Exemple:
+### Exemple {num}`ex-py2`
 
 ```{exec} python
 :editor:
@@ -76,7 +76,7 @@ print(c)
 Python ne détecte aucune erreur, le programme est compilé et exécuté, mais le
 résultat n'est pas celui attendu.
 
-Exemple:
+### Exemple {num}`ex-py2`
 
 ```{exec} python
 :editor:
@@ -87,7 +87,9 @@ c = addition(15, 18)
 print(c)
 ```
 
-## Exercice {num}`py2-erreur`
+## Exercices
+
+### Exercice {num}`py2-erreur`
 
 Les programmes suivants contiennent tous une erreur.
 - Trouver l'erreur, si possible sans exécuter le programme.
@@ -95,7 +97,7 @@ Les programmes suivants contiennent tous une erreur.
 - La corriger.
 
 1.  ```{exec} python
-    :editor:
+    :editor: 70746cc6-1686-423d-8665-570905cfc918
     def calcule_aire(longueur, largeur):
       return longueur * largeur
 
@@ -105,7 +107,7 @@ Les programmes suivants contiennent tous une erreur.
     ```
 
 2.  ```{exec} python
-    :editor:
+    :editor: bba5d2de-9a45-4200-bdd2-802d9ac2a449
     n = 0
     while n < 10:
     print(n)
@@ -113,13 +115,13 @@ Les programmes suivants contiennent tous une erreur.
     ```
 
 3.  ```{exec} python
-    :editor:
+    :editor: dc86de5e-ba35-4f9d-ba0e-c98a0520d8d4
     for i in range(9 / 2):
       print(i * 5)
     ```
 
 4.  ```{exec} python
-    :editor:
+    :editor: 6c00a493-81ee-4ff5-854b-d7d844238e6d
     for i in range(2)
       print(i)
     ```
@@ -132,7 +134,7 @@ Les programmes suivants contiennent tous une erreur.
 4. Erreur de syntaxe: il manque les :.
 ```
 
-## Exercice {num}`py2-erreur`
+### Exercice {num}`py2-erreur`
 
 Il est souvent difficile de débugger un code qui ne fonctionne pas. En s'aidant
 des messages d'erreurs affichés, corriger le programme ci-dessous qui calcule
@@ -140,7 +142,7 @@ l'aire et le périmètre d'un triangle isocèle et rectangle dont l'hypoténuse 
 connu.
 
 ```{exec} python
-:editor:
+:editor: 36bcae3e-b90a-40b1-bac0-33bea021bc99
 from math import sqrt
 
 def calcule_hypotenuse(cathete1, cathete2)
