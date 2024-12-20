@@ -25,6 +25,8 @@ des éléments de types différents 'str', 'float' et 'int'.
 Une liste est déclarée par une suite de valeurs, séparées par des virgules et
 le tout encadré par des crochets.
 
+### Exemple {num}`ex-py2`
+
 ```{exec} python
 :editor:
 matieres = [ "français", "informatique", "allemand"]
@@ -54,7 +56,7 @@ crochets sans rien à l'intérieur.
 liste_vide = []
 ```
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 1. Créer les listes suivantes en Python :
     - Les salles de classe dans lesquelles tu as des cours
@@ -64,7 +66,7 @@ liste_vide = []
 2. Afficher les trois listes.
 
 ```{exec} python
-:editor:
+:editor: bda26e73-b3dc-4d27-807c-e90f97d2ea25
 # Écrire le programme ici
 ```
 
@@ -116,7 +118,7 @@ coureurs[3] = "Burrell"
 print("La liste d'arrivée des coureurs est:", coureurs)
 ```
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 Ajouter les instructions nécessaires pour que l'affichage de la liste soit le
 suivant :
@@ -126,7 +128,7 @@ suivant :
 ```
 
 ```{exec} python
-:editor:
+:editor: b0091579-35b5-41d7-9316-81f642ff24c0
 lettres = ["A", "B", "C", "D", "E", "F"]
 # ajouter le code ici
 print(lettres)
@@ -183,7 +185,7 @@ ma_liste.count(mon_element)
 : retourne le nombre d'apparition de `mon_element` dans `ma_liste`
 
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 1.  ```{exec} python
     :linenos:
@@ -292,7 +294,7 @@ ma_liste.count(mon_element)
     print("\x0cBravo!")
     ```
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 1. Créer une liste, nommée `sports` avec les éléments suivants: `kayak`,
 `escrime` et `escalade`.
@@ -308,7 +310,7 @@ ma_liste.count(mon_element)
 11. Afficher la liste et son nombre d'éléments.
 
 ```{exec} python
-:editor:
+:editor: f9da8abf-19a5-4eba-aafd-b21e58273901
 # Écrire le programme ici
 ```
 
@@ -331,7 +333,7 @@ print(sports, len(sports))
 ```
 ````
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 1. Demander à l'utilisateur d'entrer 6 nombres et les stocker dans la liste
 'nombres'.
@@ -342,7 +344,7 @@ print(sports, len(sports))
 6. Afficher la somme des éléments.
 
 ```{exec} python
-:editor:
+:editor: 1d0149fa-92a5-4cd1-8984-1b83ed61054d
 # Écrire le programme ici
 ```
 
@@ -362,7 +364,7 @@ print(sum(nombres))
 ```
 ````
 
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 Sans exécuter le code, répondre aux questions suivantes:
 1. Que va retourner `nombres.index(5)`?
@@ -374,7 +376,7 @@ Sans exécuter le code, répondre aux questions suivantes:
 
 
 ```{exec} python
-:editor:
+:editor: 5e39f143-2a7d-4e04-a373-81b744d6015c
 # Compléter le code pour tester vos réponses
 nombres = [1, 4, 2, 1, 5, 7, 3, 1, 4, 5, 3, 1, 3, 1, 2, 5]
 ```
@@ -395,6 +397,271 @@ print(nombres)
 ```
 ````
 
+### Exercice {num}`exo-py2`
+
+Dans le programme suivant, les ingrédients d'une pizza devraient pouvoir être
+ajoutés petit à petit par l'utilisateur dans la liste `ingredients` qui contient
+la sauce tomate et la mozzarella comme base. Cet ajout se termine lorsque
+l'utilisateur écrit le texte "stop", puis tous les ingrédients sont affichés.
+
+ATTENTION: le mot stop ne doit jamais entrer dans la liste des ingrédients!
+
+Compléter le programme de manière que celui-ci corresponde à cette description.
+
+```{exec} python
+:editor: 88e9572e-051f-4e67-8244-06e475aa0133
+ingredients = ["sauce tomate", "mozzarella"]
+choix = await input_line("Ajouter un ingrédient: ")
+
+while choix != "stop":
+  # à compléter
+
+print(ingredients)
+```
+
+````{solution}
+```{exec} python
+:linenos:
+ingredients = ["sauce tomate", "mozzarella"]
+choix = await input_line("Ajouter un ingrédient: ")
+
+while choix != "stop":
+  ingredients.append(choix)
+  choix = await input_line("Ajouter un ingrédient: ")
+
+print(ingredients)
+```
+````
+
+### Exercice {num}`exo-py2`
+
+Une liste nommée meteo_semaine doit contenir les prévisions météos pour les 7
+jours d'une semaine. Cette liste doit contenir 7 éléments, chacun étant un texte
+de prévision météorologique pour un jour différent.
+
+Ces textes ont tous le format suivant:
+
+"JOUR_DE_LA_SEMAINE il fera TEMPERATURE °C" où JOUR_DE_LA_SEMAINE et PREVISION
+sont remplacés par de vraies valeurs. Par exemple, pour un mardi à 13°C, le
+texte de prévision serait "Mardi il fera 13 °C".
+
+Afin de simplifier la création de cette liste, compléter la fonction
+`ajoute_prevision` afin que celle-ci ajoute la prévision correcte à la liste
+donnée en paramètre en fonction des paramètres du jour et de la température.
+
+```{exec} python
+:editor: 14a7fcdd-ed8e-4a60-97ba-6306e81a969f
+def ajoute_prevision(liste_prevision, jour_de_la_semaine, temperature):
+  # à compléter
+
+meteo_semaine = []
+
+# ajout des prévision
+ajoute_prevision(meteo_semaine, "Lundi", "12")
+ajoute_prevision(meteo_semaine, "Mardi", "15")
+ajoute_prevision(meteo_semaine, "Mercredi", "14")
+ajoute_prevision(meteo_semaine, "Jeudi", "14")
+ajoute_prevision(meteo_semaine, "Vendredi", "12")
+ajoute_prevision(meteo_semaine, "Samedi", "10")
+ajoute_prevision(meteo_semaine, "Lundi", "8")
+
+print(meteo_semaine)
+```
+
+````{solution}
+```{exec} python
+:linenos:
+def ajoute_prevision(liste_previsions, jour_de_la_semaine, temperature):
+    prevision = jour_de_la_semaine + " il fera " + temperature + " °C"
+    liste_previsions.append(prevision)
+
+meteo_semaine = []
+
+ajoute_prevision(meteo_semaine, "Lundi", "12")
+ajoute_prevision(meteo_semaine, "Mardi", "15")
+ajoute_prevision(meteo_semaine, "Mercredi", "14")
+ajoute_prevision(meteo_semaine, "Jeudi", "14")
+ajoute_prevision(meteo_semaine, "Vendredi", "12")
+ajoute_prevision(meteo_semaine, "Samedi", "10")
+ajoute_prevision(meteo_semaine, "Lundi", "8")
+
+print(meteo_semaine)
+```
+````
+
+### Exercice {num}`exo-py2`
+
+1. Écrire une programme qui génère une liste de 1000 nombres entiers tirés au
+hasard entre 1 et 10.
+2. Déterminer le nombre d'occurences de chaque nombre.
+
+```{tip}
+Dans le module `random`, la fonction `randint(a, b)` permet de généré des
+nombres entiers aléatroires entre a (compris) et b (compris).
+
+Ne pas oublier l'import: `from random import randint`
+```
+
+```{exec} python
+:editor: b696c9ff-f357-4db6-b4e9-ff0d89d501c9
+# Écrire le programme ici
+```
+
+````{solution}
+```{exec} python
+:linenos:
+from random import randint
+
+nombres = []
+
+# Genère la liste de 50 nombres entiers
+for _ in range(1000):
+  nombres.append(randint(1, 10))
+
+for i in range(1, 11):
+  print("Nombre d'occurences de", i, ":", nombres.count(i))
+```
+````
+
+## Élément appartenant à une liste
+
+Il est possible de savoir si un élément appartient à une liste en utilisant
+l'expression suivante `element in liste` qui revoie `True` si l'élément est dans
+la liste et `False` sinon.
+
+### Exemple {num}`ex-py2`
+
+```{exec} python
+:editor:
+notes = [5, 5.5, 4, 5.5, 6]
+
+note = 5
+
+if note in notes:
+    print(note, "est dans la liste")
+else:
+    print(note, "n'est pas dans la liste")
+```
+
+### Exercice {num}`exo-py2`
+
+Le programme ci-dessous demande à l'utilisateur quel moyen de locomotion il u
+tilise pour se rendre au travail et affiche un message en conséquence.
+
+- "C'est très écologique!" lorsque l'utilisateur entre la valeur "à pied",
+"trottinette", "skateboard", ou "vélo"
+- "C'est un bon geste!" lorsque l'utilisateur entre la valeur "bus", "train", ou
+"tram"
+- "C'est acceptable!" s'il entre la valeur "voiture", "moto", "scooter",
+"sidecar", ou "vespa".
+- "Sans commentaire." s'il entre la valeur "avion"
+- "Sans avis." s'il entre une autre valeur
+
+Utilisez pour cela la notation `if ... in ...` quand cela est nécessaire.
+
+```{exec} python
+:editor: 21b10226-a456-4ab1-b04d-df9cef3aaf81
+locomotion = await input_line("Quel moyen de locomotion utilises-tu pour te rendre au travail: ")
+
+# Compléter le programme
+print("C'est très écologique!")
+print("C'est un bon geste!")
+print("C'est acceptable!")
+print("Sans commentaire.")
+print("Sans avis.")
+```
+
+````{solution}
+```{exec} python
+:linenos:
+locomotion = await input_line("Quel moyen de locomotion utilises-tu pour aller au travail: ")
+
+if locomotion in ["à pied", "trottinette", "skateboard", "vélo"]:
+    print("C'est très écologique!")
+elif locomotion in ["bus", "train", "tram"]:
+    print("C'est un bon geste!")
+elif locomotion in ["voiture", "sidecar", "vespa", "moto", "scooter"]:
+    print("C'est acceptable!")
+elif locomotion == "avion":
+    print("Sans commentaire.")
+else:
+    print("Sans avis.")
+```
+````
+
+### Exercice {num}`exo-py2`
+
+Depuis la station de métro où l'utilisateur se trouve, il peut se rendre aux
+arrêts qui se trouvent dans la liste `ligne_sud` et `ligne_nord`. Lorsque
+celui-ci entre sa destination, afficher s'il doit prendre la ligne sud, la
+ligne nord, ou s'il ne peut pas se rendre à sa destination.
+
+```{exec} python
+:editor: e77565d0-b927-412b-b3e5-e6e7e8a00c72
+destination = await input_line("Où veux-tu aller: ")
+ligne_nord = ["Châtelet", "Opéra", "République", "Bastille"]
+ligne_sud = ["Gare du Nord", "Gare de Lyon", "Saint-Michel Notre-Dame", "Auber", "Porte d'Italie"]
+
+print("Prends la ligne nord.")
+print("Prends la ligne sud.")
+print("Tu ne peux pas te rendre à cet arrêt.")
+```
+
+````{solution}
+```{exec} python
+:linenos:
+destination = await input_line("Où veux-tu aller: ")
+
+ligne_nord = ["Châtelet", "Opéra", "République", "Bastille"]
+ligne_sud = ["Gare du Nord", "Gare de Lyon", "Saint-Michel Notre-Dame",
+             "Auber", "Porte d'Italie"]
+
+if destination in ligne_nord:
+    print("Prends la ligne nord.")
+elif destination in ligne_sud:
+    print("Prends la ligne sud.")
+else:
+    print("Tu ne peux pas te rendre à cet arrêt.")
+```
+````
+
+### Exercice {num}`exo-py2`
+
+Compléter le programme ci-dessous afin que l'utilisateur puisse petit à petit
+créer une liste avec les codes postaux dans lesquels il souhaite se rendre.
+Cette liste de code postal ne doit jamais contenir de doublons! Si l'utilisateur
+essaie d'en entrer un, le programme affichera "Erreur, ce code postal est déjà
+dans la liste" et continuera ensuite normalement. Le programme s'arrête quand
+l'utilisateur entre un code postal négatif. À ce moment, la liste des codes
+postaux est simplement affichée.
+
+```{exec} python
+:editor: 61ad2b94-75ec-449a-9bb9-a9f5691fe626
+code_postaux = []
+
+code_postal = int(await input_line("Entre un code postal: "))
+
+print("Erreur, ce code postal est déjà dans la liste.")
+
+print(code_postaux)
+```
+
+````{solution}
+```{exec} python
+:linenos:
+code_postaux = []
+code_postal = int(await input_line("Entre un code postal : "))
+while code_postal >= 0:
+    if code_postal in code_postaux:
+        print("Erreur, ce code postal est déjà dans la liste.")
+    elif code_postal >= 0:
+        code_postaux.append(code_postal)
+    code_postal = int(await input_line("Entre un code postal : "))
+
+print(code_postaux)
+```
+````
+
 ## Boucles `for` avec les listes
 
 La boucle `for` permet d'accéder à tous les éléments d'une liste l'un après
@@ -407,7 +674,7 @@ l'index du dernier élément et éviter une erreur lors de l'exécution, nous
 utilisons la fonction 'len(liste)' qui retourne le nombre d'élément dans une
 liste.
 
-### Exemple {num}`ex-py2`
+#### Exemple {num}`ex-py2`
 
 ```{exec} python
 :editor:
@@ -422,7 +689,7 @@ for i in range(len(notes)):
 
 En Python, il est possible de parcourir directement les éléments d'une liste.
 
-### Exemple {num}`ex-py2`
+#### Exemple {num}`ex-py2`
 
 ```{exec} python
 :editor:
@@ -438,8 +705,7 @@ for note in notes:    # La variable note change de valeur à chaque itération
 Avant de les exécuter, déterminer ce que font les programmes suivants.
 
 1.  ```{exec} python
-    :linenos:
-    :editor:
+    :editor: 62c85fe3-5435-4c6e-8c68-c88763bc0f0e
     questions = ["Quelle est ta couleur préférée?",
                  "Quel est ton animal préféré?",
                  "Où étudies-tu?"]
@@ -456,8 +722,7 @@ Avant de les exécuter, déterminer ce que font les programmes suivants.
     ```
 
 2.  ```{exec} python
-    :linenos:
-    :editor:
+    :editor: 7f08c47a-00a7-47f8-9ce1-305e46961f22
     notes = [5.5, 3.8, 6, 6, 3.5, 4,5]
     nb_notes_insuf = 0
 
@@ -468,9 +733,7 @@ Avant de les exécuter, déterminer ce que font les programmes suivants.
     print("Tu as fait", nb_notes_insuf, "notes insuffisantes.")
     ```
 
-
-
-## Exercice {num}`exo-py2`
+### Exercice {num}`exo-py2`
 
 1. Écrire une programme qui génère une liste de 50 nombres entiers tirés au
 hasard entre 1 et 1000.
@@ -479,15 +742,8 @@ hasard entre 1 et 1000.
 3. Déterminer le minimum de la liste en définissant une fonction
 `minimum(liste)`.
 
-```{tip}
-Dans le module `random`, la fonction `randint(a, b)` permet de généré des
-nombres entiers aléatroires entre a (compris) et b (compris).
-
-Ne pas oublier l'import: `from random import randint`
-```
-
 ```{exec} python
-:editor:
+:editor: 51fa6ba6-954c-4728-ab9a-b264c595416f
 # Écrire le programme ici
 ```
 
@@ -524,32 +780,35 @@ print(nombres)
 ```
 ````
 
+### Exercice {num}`exo-py2`
 
-## Exercice {num}`exo-py2`
+Compléter le programme ci-dessous afin qu'il affiche correctement l'itinéraire
+de la manière suivante:
 
-1. Écrire une programme qui génère une liste de 1000 nombres entiers tirés au
-hasard entre 1 et 10.
-2. Déterminer le nombre d'occurences de chaque nombre.
+```{code-block} text
+Début de l'itinéraire
+Vas à Bulle
+Vas à Riaz
+Vas à Marsens
+Vas à Echarlens
+Vas à Charmey
+Tu es arrivé!
+```
 
 ```{exec} python
-:editor:
-# Écrire le programme ici
+:editor: dc635abe-c4ee-4beb-badd-02733dff234e
+itineraire = ["Bulle", "Riaz", "Marsens", "Echarlens", "Charmey"]
+
+# Compléter le programme
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
-from random import randint
-
-nombres = []
-
-# Genère la liste de 50 nombres entiers
-for _ in range(1000):
-  nombres.append(randint(1, 10))
-
-for i in range(1, 11):
-  print("Nombre d'occurences de", i, ":", nombres.count(i))
-
+itineraire = ["Bulle", "Riaz", "Marsens", "Echarlens", "Charmey"]
+print("Début de l'itinéraire")
+for ville in itineraire:
+    print("Vas à", ville)
+print("Tu es arrivé!")
 ```
-
-
+````
