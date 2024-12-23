@@ -1,7 +1,7 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Listes
+# Listes - Bases
 
 ```{metadata}
 hide-solutions: true
@@ -120,6 +120,41 @@ print("La liste d'arrivée des coureurs est:", coureurs)
 
 ### Exercice {num}`exo-py2`
 
+Complétez le programme suivant en utilisant l'indexation de manière à ce que le
+programme affiche le texte suivant:
+
+```{code-block} text
+rouge
+noir
+brun
+bleu
+```
+
+```{exec} python
+:editor: 5487e3b6-2af5-48fc-82d6-29ccd2600828
+couleurs = ["noir", "blanc", "brun", "gris", "rouge", "jaune", "bleu"]
+
+# complétez les index corrects
+print(couleurs[...])
+print(couleurs[...])
+print(couleurs[...])
+print(couleurs[...])
+```
+
+````{solution}
+```{exec} python
+:linenos:
+couleurs = ["noir", "blanc", "brun", "gris", "rouge", "jaune", "bleu"]
+print(couleurs[4])
+print(couleurs[0])
+print(couleurs[2])
+print(couleurs[6])
+```
+````
+
+
+### Exercice {num}`exo-py2`
+
 Ajoutez les instructions nécessaires pour que l'affichage de la liste soit le
 suivant:
 
@@ -145,6 +180,78 @@ lettres[2] = "W"
 # modification de la sixième lettre
 lettres[5] = "X"
 print(lettres)
+```
+````
+
+### Exercice {num}`exo-py2`
+
+Complétez le programme ci-dessous en utilisant l'indexation de manière à ce que
+le print affiche la liste suivante:
+
+```{code-block} text
+['Fribourg', 'Lausanne', 'Berne', 'Zurich', 'Genève]
+```
+
+Il vous faudra pour cela modifier les éléments de la liste villes.
+
+```{exec} python
+:editor: e0da4c93-4aed-4db0-8b9e-6155b829ad46
+villes = ["Fribourg", "Zug", "Berne", "Lugano", "Soleur"]
+
+# à modifier
+villes
+villes
+villes
+
+print(villes)
+```
+
+````{solution}
+```{exec} python
+:linenos:
+villes = ["Fribourg", "Zug", "Berne", "Lugano", "Soleur"]
+
+villes[1] = "Lausanne"
+villes[3] = "Zurich"
+villes[4] = "Genève"
+
+print(villes)
+```
+````
+
+### Exercice {num}`exo-py2`
+
+La fonction `controle_position` prend en paramètre une liste à 2 éléments
+correspondant à la position d'un personnage. Cette fonction doit afficher
+"Position correcte" si les 2 coordonnées sont strictement positives.
+
+
+```{exec} python
+:editor: 61333d65-5221-4b00-867b-736bbee822a6
+def controle_position(position):
+  # modifiez le programme ici
+  print("Position correcte")
+  print("Position incorrecte")
+
+controle_position([100, 200])
+controle_position([-100, 200])
+controle_position([100, -200])
+controle_position([0, 200])
+```
+
+````{solution}
+```{exec} python
+:linenos:
+def controle_position(position):
+  if position[0]>0 and position[1]>0:
+    print("Position correcte")
+  else:
+    print("Position incorrecte")
+
+controle_position([100, 200])
+controle_position([-100, 200])
+controle_position([100, -200])
+controle_position([0, 200])
 ```
 ````
 
@@ -523,295 +630,45 @@ for i in range(1, 11):
 ```
 ````
 
-## Élément appartenant à une liste
-
-Il est possible de savoir si un élément appartient à une liste en utilisant
-l'expression suivante `element in liste` qui revoie `True` si `element` est dans
-`liste` et `False` sinon.
+## Différence variable simple et variable de type liste
 
 ### Exemple {num}`ex-py2`
 
-```{exec} python
-:editor:
-notes = [5, 5.5, 4, 5.5, 6]
-
-note = 5
-
-if note in notes:
-    print(note, "est dans la liste")
-else:
-    print(note, "n'est pas dans la liste")
-```
-
-### Exercice {num}`exo-py2`
-
-Le programme ci-dessous demande à l'utilisateur quel moyen de locomotion il
-utilise pour se rendre au travail et affiche un message en conséquence.
-
-- "C'est très écologique!" lorsque l'utilisateur entre la valeur "à pied",
-"trottinette", "skateboard", ou "vélo"
-- "C'est un bon geste!" lorsque l'utilisateur entre la valeur "bus", "train", ou
-"tram"
-- "C'est acceptable!" s'il entre la valeur "voiture", "moto", "scooter",
-"sidecar", ou "vespa".
-- "Sans commentaire." s'il entre la valeur "avion"
-- "Sans avis." s'il entre une autre valeur
-
-Utilisez pour cela la notation `if ... in ...` quand cela est nécessaire.
-
-```{exec} python
-:editor: 21b10226-a456-4ab1-b04d-df9cef3aaf81
-locomotion = await input_line("Quel moyen de locomotion utilises-tu pour te rendre au travail: ")
-
-# Complétez le programme à partir de là
-print("C'est très écologique!")
-print("C'est un bon geste!")
-print("C'est acceptable!")
-print("Sans commentaire.")
-print("Sans avis.")
-```
-
-````{solution}
-```{exec} python
-:linenos:
-locomotion = await input_line("Quel moyen de locomotion utilises-tu pour aller au travail: ")
-
-if locomotion in ["à pied", "trottinette", "skateboard", "vélo"]:
-    print("C'est très écologique!")
-elif locomotion in ["bus", "train", "tram"]:
-    print("C'est un bon geste!")
-elif locomotion in ["voiture", "sidecar", "vespa", "moto", "scooter"]:
-    print("C'est acceptable!")
-elif locomotion == "avion":
-    print("Sans commentaire.")
-else:
-    print("Sans avis.")
-```
-````
-
-### Exercice {num}`exo-py2`
-
-Depuis la station de métro où l'utilisateur se trouve, il peut se rendre aux
-arrêts qui se trouvent dans la liste `ligne_sud` et `ligne_nord`. Lorsque
-celui-ci entre sa destination, affichez s'il doit prendre la ligne sud, la
-ligne nord, ou s'il ne peut pas se rendre à sa destination.
-
-```{exec} python
-:editor: e77565d0-b927-412b-b3e5-e6e7e8a00c72
-destination = await input_line("Où veux-tu aller: ")
-
-ligne_nord = ["Châtelet", "Opéra", "République", "Bastille"]
-ligne_sud = ["Gare du Nord", "Gare de Lyon", "Saint-Michel Notre-Dame", "Auber", "Porte d'Italie"]
-
-# Complétez le programme à partir de là
-print("Prends la ligne nord.")
-print("Prends la ligne sud.")
-print("Tu ne peux pas te rendre à cet arrêt.")
-```
-
-````{solution}
-```{exec} python
-:linenos:
-destination = await input_line("Où veux-tu aller: ")
-
-ligne_nord = ["Châtelet", "Opéra", "République", "Bastille"]
-ligne_sud = ["Gare du Nord", "Gare de Lyon", "Saint-Michel Notre-Dame",
-             "Auber", "Porte d'Italie"]
-
-if destination in ligne_nord:
-    print("Prends la ligne nord.")
-elif destination in ligne_sud:
-    print("Prends la ligne sud.")
-else:
-    print("Tu ne peux pas te rendre à cet arrêt.")
-```
-````
-
-### Exercice {num}`exo-py2`
-
-Complétez le programme ci-dessous afin que l'utilisateur puisse petit à petit
-créer une liste avec les codes postaux dans lesquels il souhaite se rendre.
-Cette liste des codes postaux ne doit jamais contenir de doublons! Si
-l'utilisateur essaie d'en entrer un, le programme affichera "Erreur, ce code
-postal est déjà dans la liste" et continuera ensuite normalement. Le programme
-s'arrête quand l'utilisateur entre un code postal négatif. À ce moment, la liste
-des codes postaux est simplement affichée.
-
-```{exec} python
-:editor: 61ad2b94-75ec-449a-9bb9-a9f5691fe626
-# Complétez le programme
-code_postaux = []
-
-code_postal = int(await input_line("Entre un code postal: "))
-
-print("Erreur, ce code postal est déjà dans la liste.")
-
-print(code_postaux)
-```
-
-````{solution}
-```{exec} python
-:linenos:
-code_postaux = []
-code_postal = int(await input_line("Entre un code postal : "))
-while code_postal >= 0:
-    if code_postal in code_postaux:
-        print("Erreur, ce code postal est déjà dans la liste.")
-    elif code_postal >= 0:
-        code_postaux.append(code_postal)
-    code_postal = int(await input_line("Entre un code postal : "))
-
-print(code_postaux)
-```
-````
-
-## Boucles `for` avec les listes
-
-La boucle `for` permet d'accéder à tous les éléments d'une liste l'un après
-l'autre.
-
-### Par position
-
-Dans ce cas, les éléments sont parcourus au moyen de leur index. Pour déterminer
-l'index du dernier élément et éviter une erreur lors de l'exécution, nous
-utilisons la fonction 'len(liste)' qui retourne le nombre d'élément dans une
-liste.
-
-#### Exemple {num}`ex-py2`
+Exécutez le code donné. Que se passe-t-il lorsque je modifie la valeur de la
+variable 'a'?
 
 ```{exec} python
 :editor:
-notes = [5, 5.5, 4, 5.5, 6]
-
-# Cette boucle parcourt tous les index de la liste de 0 à la longueur de la liste - 1
-for i in range(len(notes)):
-  print(notes[i])
+a = 5
+b = a
+print("b = a", "a:", a, "b:", b)
+a = 4
+print("a = 4", "a:", a, "b:", b)
 ```
 
-### Par élément
+En écrivant `b = a`, le programme sauvegarde la valeur que la variable `a` à ce
+moment-là dans la variable `b`. Si ensuite je modifie la valeur de la variable
+`a` cela n'a aucune incidence sur la variable 'b'.
 
-En Python, il est possible de parcourir directement les éléments d'une liste.
+### Exemple {num}`ex-py2`
 
-#### Exemple {num}`ex-py2`
+Exécutez le code donné. Que se passe-t-il lorsque je modifie la valeur de la
+variable 'liste_a'?
 
 ```{exec} python
 :editor:
-notes = [5, 5.5, 4, 5.5, 6]
-
-# Cette boucle parcourt les éléments les uns après les autres
-for note in notes:    # La variable note change de valeur à chaque itération
-  print(note)
+liste_a = [1, 2, 3]
+liste_b = liste_a
+print("liste_b = liste_a", "liste_a:", liste_a, "liste_b:", liste_b)
+liste_a[1] = 9
+print("liste_a[1] = 9", "liste_a:", liste_a, "liste_b:", liste_b)
+liste_b.append(7)
+print("liste_b.append(7)", "liste_a:", liste_a, "liste_b:", liste_b)
 ```
 
-### Exercice {num}`exo-py2`
+En écrivant `liste_b = liste_a`, le programme fait une référence de la variable
+`liste_b` vers la liste `[1, 2, 3]' qui est la même liste que la liste
+référencée par `liste_a`. Ensuite en modifiant `liste_a` avec `liste_a[1] = 9`,
+`liste_b` sera aussi modifiée, car c'est la même liste. `De même, si je modifie
+`liste_b`, `liste_a` sera aussi modifiée.
 
-Avant de les exécuter, déterminez ce que font les programmes suivants.
-
-1.  ```{exec} python
-    :editor: 62c85fe3-5435-4c6e-8c68-c88763bc0f0e
-    questions = ["Quelle est ta couleur préférée?",
-                 "Quel est ton animal préféré?",
-                 "Où étudies-tu?"]
-    reponses = []
-
-    for question in questions:
-      print(question)
-      reponse = await input_line("Réponse: ")
-      reponses.append(reponse)
-
-    print("Tes réponses: ", reponses)
-    if reponses[2] == "STX":
-      print("Tu es dans la meilleure école ;-)")
-    ```
-
-2.  ```{exec} python
-    :editor: 7f08c47a-00a7-47f8-9ce1-305e46961f22
-    notes = [5.5, 3.8, 6, 6, 3.5, 4,5]
-    nb_notes_insuf = 0
-
-    for note in notes:
-      if note < 4:
-        nb_notes_insuf += 1
-
-    print("Tu as fait", nb_notes_insuf, "notes insuffisantes.")
-    ```
-
-### Exercice {num}`exo-py2`
-
-1. Écrivez une programme qui génère une liste de 50 nombres entiers tirés au
-hasard entre 1 et 1000.
-2. Déterminez le maximum de la liste en définissant une fonction
-`maximum(liste)`.
-3. Déterminez le minimum de la liste en définissant une fonction
-`minimum(liste)`.
-
-```{exec} python
-:editor: 51fa6ba6-954c-4728-ab9a-b264c595416f
-# Écrivez le programme ici
-```
-
-````{solution}
-```{exec} python
-:linenos:
-from random import randint
-
-def maximum(listes_nombres):
-  max = 0
-  for nombre in listes_nombres:
-    if nombre > max:
-      max = nombre
-  return max
-
-def minimum(listes_nombres):
-  min = 1000
-  for nombre in listes_nombres:
-    if nombre < min:
-      min = nombre
-  return min
-
-
-nombres = []
-
-# Genère la liste de 50 nombres entiers
-for _ in range(50):
-  nombres.append(randint(1, 1000))
-
-print("Le maximum est", maximum(nombres))
-print("Le minimum est", minimum(nombres))
-print(nombres)
-
-```
-````
-
-### Exercice {num}`exo-py2`
-
-Complétez le programme ci-dessous afin qu'il affiche correctement l'itinéraire
-de la manière suivante:
-
-```{code-block} text
-Début de l'itinéraire
-Vas à Bulle
-Vas à Riaz
-Vas à Marsens
-Vas à Echarlens
-Vas à Charmey
-Tu es arrivé!
-```
-
-```{exec} python
-:editor: dc635abe-c4ee-4beb-badd-02733dff234e
-itineraire = ["Bulle", "Riaz", "Marsens", "Echarlens", "Charmey"]
-
-# Complétez le programme à partir de là
-```
-
-````{solution}
-```{exec} python
-:linenos:
-itineraire = ["Bulle", "Riaz", "Marsens", "Echarlens", "Charmey"]
-print("Début de l'itinéraire")
-for ville in itineraire:
-    print("Vas à", ville)
-print("Tu es arrivé!")
-```
-````
