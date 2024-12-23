@@ -38,22 +38,22 @@ Il existe différents exemples d'algorithmes:
 :align: center
 ```
 
-1. Aider le chien à rejoindre sa niche en utilisant les flèches: &#x2190;,
+1. Aidez le chien à rejoindre sa niche en utilisant les flèches: &#x2190;,
 &#x2192;,  &#x2191; et &#x2193;.
 
   ```{solution}
   &#x2192; &#x2192; &#x2193; &#x2192; &#x2192; &#x2192;
   ```
 
-2. Aider le chien à rejoindre sa niche en écrivant un algorithme avec des mots.
+2. Aidez le chien à rejoindre sa niche en écrivant un algorithme avec des mots.
 
   ```{solution}
   Avancer, avancer, tourner à droite, avancer, tourner à gauche, avancer,
   avancer et avancer.
   ```
 
-3. Y a-t-il des répétitions dans ton algorithme? Si oui, essayer de formuler
-autrement pour éviter les répétitions.
+3. Y a-t-il des répétitions dans ton algorithme? Si oui, essayez de formuler
+autrement pour les éviter.
 
   ```{solution}
   Avancer 2 fois, tourner à droite, avancer, tourner à gauche, avancer 3 fois.
@@ -67,7 +67,7 @@ autrement pour éviter les répétitions.
 :align: center
 ```
 
-1. Aider le chien à ramasser tous les os et à rejoindre sa niche en utilisant
+1. Aidez le chien à ramasser tous les os et à rejoindre sa niche en utilisant
 les flèches: &#x2190;, &#x2192;,  &#x2191; et &#x2193;.
 
   ```{solution}
@@ -77,7 +77,7 @@ les flèches: &#x2190;, &#x2192;,  &#x2191; et &#x2193;.
   ```
 
 
-2. Aider le chien à ramasser tous les os et à rejoindre sa niche avec des mots
+2. Aidez le chien à ramasser tous les os et à rejoindre sa niche avec des mots
 et sans répétition.
 
   ```{solution}
@@ -94,7 +94,7 @@ et sans répétition.
 :align: center
 ```
 
-1. Aider le chien à rejoindre sa niche en utilisant les flèches: &#x2190;,
+1. Aidez le chien à rejoindre sa niche en utilisant les flèches: &#x2190;,
 &#x2192;,  &#x2191; et &#x2193;.
 
   ```{solution}
@@ -103,7 +103,7 @@ et sans répétition.
   ```
 
 
-2. Aider le chien à rejoindre sa niche avec des mots et sans répétition.
+2. Aidez le chien à rejoindre sa niche avec des mots et sans répétition.
 
   ```{solution}
   Faire 2 fois: avancer, tourner à droite, avancer 2 fois, tourner à gauche\
@@ -118,7 +118,7 @@ et sans répétition.
 :align: center
 ```
 
-Aider le chien à rejoindre sa niche avec des mots et sans répétition.
+Aidez le chien à rejoindre sa niche avec des mots et sans répétition.
 
 ```{solution}
 Faire 6 fois: avancer tant que possible et tourner à droite.

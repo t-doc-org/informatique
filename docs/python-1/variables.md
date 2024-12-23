@@ -54,6 +54,8 @@ En Python, il existe 4 types de données primitifs.
 
 ## Exercice {num}`exo-py1`
 
+De quel type sont les variables suivantes:
+
 1.  ```{exec} python
     :linenos:
     :when: load
@@ -176,21 +178,21 @@ En Python, il existe 4 types de données primitifs.
 ## Affectation d'une variable
 
 L'affectation d'une variable se fait avec un nom de variable, suivi du signe `=`
-et de la valeur:
+et de la valeur.
 
 ```{exec} python
 :linenos:
 :when: never
-age = 17
-prenom = "Bob"
-moyenne = 5.2
-promu = True
+age = 17                  # La variable age est de type int
+prenom = "Bob"            # La variable prenom est de type str
+moyenne = 5.2             # La variable moyenne est de type float
+promu = True              # La variable promu est de type bool
 ```
 
 ## Exercice {num}`exo-py1`
 
-Ce code Python déclare 5 variables, mais contient une erreur par ligne. Trouver
-et corriger les erreurs.
+Ce code Python déclare 5 variables, mais contient une erreur par ligne. Trouvez
+et corrigez-les.
 
 ```{exec} python
 :editor:
@@ -347,7 +349,7 @@ print(a, b, c, d)
 
 ## Exercice {num}`exo-py1`
 
-Déterminer la valeur de chacune des variables de ce programme en créant un
+Déterminez la valeur de chacune des variables de ce programme en créant un
 tableau d'états.
 
 ```{exec} python
@@ -380,7 +382,7 @@ print(x, y, z)
 
 ## Exercice {num}`exo-py1`
 
-Déterminer la valeur de chacune des variables de ce programme en créant un
+Déterminez la valeur de chacune des variables de ce programme en créant un
 tableau d'états.
 
 ```{exec} python
@@ -414,7 +416,7 @@ print(nombe_habitants, cout, prix)
 
 ## Exercice {num}`exo-py1`
 
-Compléter le programme ci-dessous de manière à ce qu'il permette de calculer la
+Complétez le programme ci-dessous de manière à ce qu'il permette de calculer la
 moyenne des notes principales dans la variable du même nom. La note de math est
 de 4 et demi, la note de français de 6 et la note d'allemand de 5 et demi.
 
@@ -443,8 +445,8 @@ régler la priorité des opérations avec des parenthèses.
 ````
 
 ## Exercice {num}`exo-py1`
-Écrire un petit programme en Python permettant de calculer le volume $V$ d'un
-cylindre en fonction de son rayon et de son hauteur. Le programme contiendra les
+Écrivez un petit programme en Python permettant de calculer le volume d'un
+cylindre en fonction de son rayon et de sa hauteur. Le programme contiendra les
 lignes suivantes :
 
 -   Créer une variable `pi` contenant la valeur `3.14`.
@@ -496,7 +498,8 @@ mathématiques, voici les principaux.
 | /=        | x /= 6  | x = x / 6    |
 
 ## Exercice {num}`exo-py1`
-Écriver un programme Python contenant une variable `x` initialisée à 10.
+
+Écrivez un programme Python contenant une variable `x` initialisée à 10.
 Puis, compléter ce programme pour que celui-ci effectue les opérations
 suivantes:
 
@@ -530,7 +533,7 @@ print(x)
 
 ## Exercice {num}`exo-py1` (difficile)
 
-Liser attentivement le programme ci-dessous et expliquer, en français, ce qu'il
+Lisez attentivement le programme ci-dessous et expliquez, en français, ce qu'il
 fait. À quoi correspondent les variables `h1`, `h2`, et `total`.
 
 ```{exec} python

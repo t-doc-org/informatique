@@ -43,7 +43,7 @@ la console.
 
 ## Exercice {num}`exo-py1`
 
-Écrire un programme qui affiche exactement ce texte:
+Écrivez un programme qui affiche exactement ce texte:
 
 ```{exec} python
 :then: py-ex-1-sol
@@ -53,7 +53,7 @@ la console.
 
 ```{exec} python
 :editor:
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 % TODO: Validation de l'exercice par un vu, s'il est correctement réalisé
@@ -71,16 +71,16 @@ print("J'aime bien jouer au volley.")
 
 ## Exercice {num}`exo-py1`
 
-1. Écrire un programme qui affiche "Bonjour tout le monde!".
-2. Écrire un programme qui affiche "Je programme!".
-3. Écrire un programme qui affiche "Je programme! Je programme!".
-4. Écrire un programme qui affiche "Je programme! " 10 fois de suite sans
+1. Écrivez un programme qui affiche "Bonjour tout le monde!".
+2. Écrivez un programme qui affiche "Je programme!".
+3. Écrivez un programme qui affiche "Je programme! Je programme!".
+4. Écrivez un programme qui affiche "Je programme! " 10 fois de suite sans
 récrire 10 fois la même chose.
-5. Ajouter un commentaire qui explique ce que tu as fait au point précédent.
+5. Ajoutez un commentaire qui explique ce que tu as fait au point précédent.
 
 ```{exec} python
 :editor:
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -96,7 +96,7 @@ print("Je programme! " * 10)
 
 ### Exercice {num}`exo-py1`
 
-1.  Sans exécuter le programme ci-dessous, prédire ce qu'il affichera.
+1.  Sans exécuter le programme ci-dessous, prédisez ce qu'il affichera.
 
 ```{exec} python
 :linenos:
@@ -116,18 +116,18 @@ de type caractère et le mot est alors affiché tel quel.
 
 ## Exercice {num}`exo-py1`
 
-1.  Effectuer mentalement les 7 opérations ci-dessus avec les nombres 13 et 2.
-2.  Écrire un programme qui permet d'effectuer les 7 opérations ci-dessus avec
+1.  Effectuez mentalement les 7 opérations ci-dessus avec les nombres 13 et 2.
+2.  Écrivez un programme qui permet d'effectuer les 7 opérations ci-dessus avec
     13 et 2 et d'afficher le résultat. Les résultats sont-ils les mêmes qu'au
     point précédent?
-3.  Faire de même avec 10 et 3.
-4.  Faire de même avec 8 et 5.
-5.  Que faut-il utiliser pour éviter de modifier chaque ligne? Noter la réponse
+3.  Faites de même avec 10 et 3.
+4.  Faites de même avec 8 et 5.
+5.  Que faut-il utiliser pour éviter de modifier chaque ligne? Notez la réponse
     par un commentaire dans le code.
 
 ```{exec} python
 :editor:
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -157,7 +157,7 @@ print(a % b)
 
 ## Exercice {num}`exo-py1`
 
-Écrire un programme qui permet d'afficher les calculs suivants, ainsi que la
+Écrivez un programme qui permet d'afficher les calculs suivants, ainsi que la
 réponse:
 
 1. 452.52 + 27.78 =
@@ -168,7 +168,7 @@ réponse:
 
 ```{exec} python
 :editor:
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -185,7 +185,7 @@ print("Le reste de la division de 345 par 37 est ", 345 % 37)
 
 ## Exercice {num}`exo-py1`
 
-Écrire un programme qui permet de résoudre l'exercice suivant (ne pas oublier
+Écrivez un programme qui permet de résoudre l'exercice suivant (ne pas oublier
 les phrases d'explication):
 
 1.  Luc va faire des courses. Il achète deux livres à 9.30 CHF, un jeu vidéo à
@@ -201,7 +201,7 @@ les phrases d'explication):
 
 ```{exec} python
 :editor:
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -279,7 +279,7 @@ utilisé dans d'autre logiciel.\
 
 ## Exercice {num}`exo-py1`
 
-Écrire un programme qui demande à l'utilisateur son nom, son prénom et où il
+Écrivez un programme qui demande à l'utilisateur son nom, son prénom et où il
 habite. Le programme affichera:
 
 ```{code-block} text
@@ -292,7 +292,7 @@ Je vois que tu habites à {afficher le lieu}.
 
 ```{exec} python
 :editor:
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -308,8 +308,7 @@ print("Je vois que tu habites à", lieu)
 
 ## Exercice {num}`exo-py1`
 
-Le programme ci-dessous contient une erreur par ligne. Trouver et corriger les
-erreurs.
+Le programme ci-dessous contient une erreur par ligne. Trouvez et corrigez-les.
 
 ```{exec} python
 :editor:
@@ -333,7 +332,7 @@ print("Fin du programme")
 
 Le programme ci-dessous devrait permettre de calculer l'année de naissance de
 l'utilisateur. Toutefois, celui-ci contient au moins une erreur par ligne.
-Trouver et corriger les erreurs.
+Trouvez et corrigez-less.
 
 ```{exec} python
 :editor:
@@ -353,7 +352,7 @@ print("Vous êtes né.e en", annee - age, "ou en", annee - age - 1)
 
 ## Exercice {num}`exo-py1`
 
-Écrire un programme qui convertit des mégaoctets en bits.\
+Écrivez un programme qui convertit des mégaoctets en bits.\
 Le programme affichera:
 
 ```{code-block} text
@@ -363,7 +362,7 @@ Nombre de mégaoctets:
 
 ```{exec} python
 :editor:
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -378,7 +377,7 @@ print(nb_mo, "Mo donnent", nb_bits, "bits.")
 
 ## Exercice {num}`exo-py1`
 
-Écrire un programme permettant de convertir des degrés Fahrenheit en degrés
+Écrivez un programme permettant de convertir des degrés Fahrenheit en degrés
 Celsius. Pour une température en Fahrenheit $F$, on trouve son équivalent en
 Celsius $C$ avec la formule :
 
@@ -394,7 +393,7 @@ Merci, 60.2 °F équivalent à 15.666666666666668 °C
 
 ```{exec} python
 :editor:
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}

@@ -26,7 +26,7 @@ Le résultat de la comparaison est de type booléen: True ou False.
 | >=        | plus grand ou égal à | 3 >= 7  | False    |
 | <=        | plus petit ou égal à | 3 <= 7  | True     |
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Est-ce que les expressions suivantes sont `True` (vrai) ou `False` (faux)?
 
@@ -87,7 +87,7 @@ Est-ce que les expressions suivantes sont `True` (vrai) ou `False` (faux)?
     print("\x0cBravo")
     ```
 
-## Exemple avec if
+## Exemple if {num}`ex-py1`
 
 Le bloc d'instructions ne sera exécuté que si la condition est vraie.
 
@@ -109,7 +109,7 @@ print("Fin")
 Dans l'exemple ci-dessus, il ne se passe rien, la condition n'est pas vérifiée.\
 Changez la valeur de la variable `meteo` en "pluie". Que se passe-t-il?
 
-## Exemple avec if ... else
+## Exemple if ... else {num}`ex-py1`
 
 Le bloc d'instructions après le `if` sera exécuté si la condition est vraie,
 sinon ce sera le bloc d'instructions du `else` qui sera exécuté.
@@ -134,7 +134,7 @@ Dans l'exemple ci-dessus, soit la moyenne est suffisante (moyenne supérieure ou
 d'autres possibilités. Changez la valeur de la variable `moyenne` en 3. Que se
 passe-t-il?
 
-## Exemple avec if ... elif ... else
+## Exemple if ... elif ... else {num}`ex-py1`
 
 Certaines situations nécessitent de distinguer plus qu'un ou deux cas.
 
@@ -164,7 +164,7 @@ la valeur de la variable `type_film` par "action", "horreur" ou "drame". Que se
 passe-t-il?
 
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Écrivez l'algorithme suivant en Python:
 
@@ -190,7 +190,7 @@ if a < 0:
 ```
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Écrivez l'algorithme suivant en Python:
 
@@ -222,7 +222,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Reprenons l'exercice précédent. Que se passe-t-il si a = 0?
 
@@ -247,7 +247,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 ```{exec} python
 :editor: 49f2047d-751c-42d6-8832-40953fa8db92
@@ -276,7 +276,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 ```{exec} python
 :name: python-buffer
@@ -319,7 +319,7 @@ while True:
 print("\x0cBravo!")
 ```
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Écrivez un programme qui demande son âge à l'utilisateur et affiche s'il est
 majeur ou s'il est mineur.
@@ -342,7 +342,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Que vont afficher les programmes suivants?
 
@@ -392,7 +392,7 @@ Que vont afficher les programmes suivants?
       ```
       ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Le programme suivant est censé affiché le tarif appliqué en fonction de l'âge de
 l'utilisateur. Mais il contient une erreur par ligne, touvez-les et corrigez-les.
@@ -420,7 +420,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Écrivez un algorithme qui:
 - demande un nombre à l'utilisateur,
@@ -443,7 +443,7 @@ print(nombre)
 ```
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Voici trois programmes:
 
@@ -503,7 +503,7 @@ print(x)
 
 </td></tr></table>
 
-## Exercice {num}`exo-py2-rev`
+### Exercice {num}`exo-py1`
 
 Le programme suivant contient une erreur de logique. Testez le programme avec
 différentes valeurs pour trouver et corriger l'erreur.
@@ -523,3 +523,213 @@ else:
 Le `elif` ne sera jamais exécuté, car si l'âge est supérieur ou égal à 65, il
 est aussi supérieur ou égal à 18. Donc la condition du `if` sera vérifiée.
 ```
+
+### Exercice {num}`exo-py1`
+
+Un zoo pratique les tarifs suivants:
+
+- Les enfants jusqu'à 16 ans révolus payent 15 francs.
+- Les jeunes entre 16 et 20 ans payent 22 francs.
+- Les adultes à partir de 21 ans payent 28 francs.
+
+Écrivez un programme qui demande l'âge de l'utilisateur et affiche le prix à
+payer.
+
+```{exec} python
+:editor: a7451ba3-2bd7-46f5-a2c6-1ab83c16c970
+# Écrivez le programme
+```
+
+````{solution}
+```{exec} python
+age = int(await input_line("Quel est ton âge?"))
+if age < 16:
+  prix = 15
+elif age <= 20:
+  prix = 22
+else :
+  prix = 28
+print ("Pour une personne de", age, "ans, le prix à payer est de", prix, "francs.")
+```
+````
+
+## Opérateurs logiques
+
+Les opérateurs logiques permettent de combiner plusieurs conditions simples
+
+| Opérateur | Description          |
+| :-------: | :------------------: |
+| and       | retourne True si les deux conditions sont vraies |
+| or        | retourne True si une des conditions est vraie    |
+| not       | inverse le résultat, renvoie True si le résultat est faux et vice-versa |
+
+### Exemple {num}`ex-py1`
+
+(5 < 3) and (2 < 6) retourne `False`, car 5 < 3 retourne `False`.
+
+(5 < 3) or (2 < 6) retourne `True`, car 2 < 6 retourne `True`.
+
+(2 < 3) and (2 < 6) retourne `True`, car 2 < 3 retourne `True` et 2 < 6 retourne
+ `True`.
+
+(2 > 3) or (2 > 6) retourne `False`, car 2 > 3 retourne `False` et 2 > 6 retourne
+ `False`.
+
+ not(4 == 4) retourne `False`, car 4 == 4 retourne `True`.
+
+ not(3 == 4) retourne `True`, car 3 == 4 retourne `False`.
+
+### Exercice {num}`exo-py1`
+
+Une salle de trampoline pratique les tarifs suivants pour deux personnes:
+
+- Si les deux personnes sont mineures, elles payent chacune 7 francs.
+- Si une seule est mineure, elles payent un tarif de groupe de 18 francs.
+- Si les deux personnes sont majeurs, elles payent au total 25 francs.
+
+Écrivez un programme qui demande l'âge des deux personnes et affiche le prix à
+payer.
+
+```{exec} python
+:editor: b7334fbc-4c1d-42fe-bed2-d15582abd972
+age_1 = int(await input_line("Quel est l'âge de la première personne? "))
+age_2 = int(await input_line("Quel est l'âge de la deuxième personne? "))
+
+# Complétez le programme ici
+```
+
+````{solution}
+```{exec} python
+age_1 = int(await input_line("Quel est l'âge de la première personne? "))
+age_2 = int(await input_line("Quel est l'âge de la deuxième personne? "))
+
+if age_1 < 18 and age_2 < 18:
+  prix = 2 * 7
+elif age_1 < 18 or age_2 < 18:
+  prix = 18
+else:
+  prix = 25
+print("Le prix total à payer est de", prix, "francs.")
+```
+````
+
+### Exercice {num}`exo-py1`
+
+Julien souhaite s'inscrire à des séances d'équitation. Le club propose deux type
+de tarification:
+
+- Tarif A: Avec un abonnement annuel de 185 francs, la séance coûte 11 francs.
+- Tarif B: Sans abonnement, la séance coûte 17 francs.
+
+Écrivez un programme qui demande à Julien le nombre de séance qu'il voudrait
+suivre pendant l'année et afficher le tarif le plus avantageux dans ce cas.
+
+```{exec} python
+:editor: f5b7f840-9b9e-4f66-9502-36f2f995abcb
+nb_seances = int(await input_line("Nombre de séances: "))
+
+# Complétez le programme
+prixA = ...
+prixB =  ...
+
+```
+
+````{solution}
+```{exec} python
+nb_seances = int(await input_line("Nombre de séances: "))
+
+# Complétez le programme
+prix_A = 11 * nb_seances + 185
+prix_B = 17 * nb_seances
+if prix_A < prix_B:
+  print("Le tarif A est le plus avantageux.")
+elif prix_B < prix_A:
+  print("Le tarif B est le plus avantageux.")
+else:
+  print("Les deux tarifs sont équivalents.")
+```
+````
+
+### Exercice {num}`exo-py1`
+
+Écrivez un programme qui demande trois nombres à l'utilisateur et affiche le
+maximum (le plus grand).
+
+```{exec} python
+:editor: c3d6fb9b-eb5f-4e83-b662-606ac68282cf
+nombre_1 = int(await input_line("Choisir un premier nombre: "))
+nombre_2 = int(await input_line("Choisir un deuxième nombre: "))
+nombre_3 = int(await input_line("Choisir un troisième nombre: "))
+
+# Complétez le programme ici
+```
+
+````{solution}
+```{exec} python
+nombre_1 = int(await input_line("Choisir un premier nombre: "))
+nombre_2 = int(await input_line("Choisir un deuxième nombre: "))
+nombre_3 = int(await input_line("Choisir un troisième nombre: "))
+max = nombre_1
+if nombre_2 > max :
+  max = nombre_2
+if nombre_3 > max :
+  max = nombre_3
+print("Le plus grand nombre est", max)
+
+```
+````
+
+### Exercice {num}`exo-py1`
+
+Écrivez un programme qui demande un nombre à l'utilisateur et affiche s'il est
+pair ou impair.
+
+````{tip}
+:class: dropdown
+Utilisez le modulo (reste de la division entière) pour déterminer si un nombre
+est divisible par un autre nombre.
+
+```{exec} python
+:editor:
+print(14 % 5)          # Modifiez les valeurs
+```
+````
+
+```{exec} python
+:editor: 085b1907-ca58-4a00-aab4-bcde5e4092cd
+# Ecrivez le programme ici
+```
+
+````{solution}
+```{exec} python
+nombre = int(await input_line("Choisir un nombre: "))
+if nombre % 2 == 0:
+  print(nombre, "est pair.")
+else:
+  print(nombre, "est impair.")
+```
+````
+
+### Exercice {num}`exo-py1`
+
+Écrivez un programme qui demande un nombre à l'utilisateur et affiche s'il est
+divisible par 3 et 13.
+
+```{exec} python
+:editor: 1f78a8da-5f0e-452d-b427-59943fea89f2
+# Ecrivez le programme ici
+```
+
+````{solution}
+```{exec} python
+nombre = int(await input_line("Choisir un nombre: "))
+if nombre % 3 == 0 and nombre % 13 == 0:
+  print(nombre, "est divisible par 3 et 13.")
+elif nombre % 3 == 0:
+  print(nombre, "est divisible par 3.")
+elif nombre % 13 == 0:
+  print(nombre, "est divisible par 13.")
+else:
+  print(nombre, "n'est divisible ni par 3, ni par 13.")
+```
+````
