@@ -9,12 +9,12 @@ hide-solutions: true
 
 ## Exercice {num}`py2-lab2`
 
-Écrire un programme pour calculer et afficher la moyenne de 5 notes qui seront
+Écrivez un programme pour calculer et afficher la moyenne de 5 notes qui seront
 demandées à l'utilisateur.
 
 ```{exec} python
 :editor: b075239e-e061-4a9f-9b55-89d94c4693fd
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -37,7 +37,7 @@ print(moyenne)
 
 ## Exercice {num}`py2-lab2:exemple-liste`
 
-Répondre aux questions suivantes en lien avec le programme suivant:
+Répondez aux questions suivantes en lien avec le programme suivant:
 1.  Que fait `apprend(5.5)`?
 2.  Qu'affiche `print(notes[2])`?
 3.  Quelle différence y a-t-il entre `remove()` et `del`?
@@ -58,7 +58,7 @@ print(notes)
 
 ## Exercice {num}`py2-lab2`
 
-1.  Exécuter le code et vérifier les réponses de
+1.  Exécutez le code et vérifier les réponses de
     l'{numref}`exercice %s<py2-lab2:exemple-liste>`.
 
     ```{exec} python
@@ -74,7 +74,7 @@ print(notes)
     print(notes)
     ```
 
-2.  Répondre aux questions suivantes en testant dans le code ci-dessus, si
+2.  Répondez aux questions suivantes en testant dans le code ci-dessus, si
     nécessaire:
 
     1.  À quel endroit de la variable notes la fonction `append()` ajoute-t-elle
@@ -111,7 +111,7 @@ print(notes)
 
 ## Exercice {num}`py2-lab2`
 
-Écrire un programme qui demande à l'utilisateur d'entrer 10 notes qui seront
+Écrivez un programme qui demande à l'utilisateur d'entrer 10 notes qui seront
 stockées dans une liste.
 
 Le programme doit être facilement modifiable pour changer le nombre de notes à
@@ -119,7 +119,7 @@ saisir.
 
 ```{exec} python
 :editor: 91aea7d5-6f68-4532-8be2-23e6bfe939ef
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -151,7 +151,7 @@ for i in notes:
 
 ## Exercice {num}`py2-lab2`
 
-1.  Exécuter le code et vérifier les réponses de
+1.  Exécutez le code et vérifier les réponses de
     l'{numref}`exercice %s<py2-lab2:exemple-for>`.
 
     ```{exec} python
@@ -161,7 +161,7 @@ for i in notes:
       print(i)
     ```
 
-2.  Répondre aux questions suivantes en testant dans le code ci-dessus,
+2.  Répondez aux questions suivantes en testant dans le code ci-dessus,
     si nécessaire:
 
     1.  Que se passe-t-il si `i` est remplacé par `k`?
@@ -186,15 +186,15 @@ for i in notes:
 
 ## Exercice {num}`py2-lab2`
 
-Modifier le programme suivant pour qu'il calcule et affiche la somme des notes
+Modifiez le programme suivant pour qu'il calcule et affiche la somme des notes
 quel que soit le nombre de notes ajoutées.
 
-1.  Tester le code en ajoutant 2 notes avant de calculer la somme.
-2.  Tester le code en supprimant une note avant de calculer la somme.
+1.  Testez le code en ajoutant 2 notes avant de calculer la somme.
+2.  Testez le code en supprimant une note avant de calculer la somme.
 
 ```{exec} python
 :editor: 3b8cfc77-128f-4d29-99b6-1892d0e27967
-# Compléter et/ou modifier le code
+# Complétez et/ou modifiez le programme
 notes = [6, 5, 4.5, 5, 3.5]
 somme = 0
 for note in notes:
@@ -218,7 +218,7 @@ print(somme)
 
 ## Exercice {num}`py2-lab2`
 
-Compléter le programme précédent pour qu'il:
+Complétez le programme précédent pour qu'il:
 - demande à l'utilisateur le nombre de notes qu'il veut entrer,
 - lui demande d'entrer les notes,
 - calcule et affiche la moyenne des notes.
@@ -235,7 +235,7 @@ Moyenne: 4.833333333333333
 
 ```{exec} python
 :editor: 5efb0258-bbea-4fcf-a6c2-d1456bf82f39
-# Compléter et/ou modifier le code
+# Complétez et/ou modifiez le programme
 notes = []
 somme = 0
 for note in notes:
@@ -267,7 +267,7 @@ print("Moyenne: ", moyenne)
 
 ## Exercice {num}`py2-lab2`
 
-Pour améliorer le programme, créer une fonction `calcule_moyenne(notes)` qui:
+Pour améliorer le programme, créez une fonction `calcule_moyenne(notes)` qui:
 - prend en paramètre la liste des notes,
 - calcule la moyenne et la renvoie.
 
@@ -284,7 +284,7 @@ print(nombre_notes)
 
 ```{exec} python
 :editor: 300b5fc7-b983-4ade-89f4-f440c52209b6
-# Compléter et/ou modifier le code
+# Complétez et/ou modifiez le programme
 
 # Définition de la fonction calcule_moyenne(notes)
 

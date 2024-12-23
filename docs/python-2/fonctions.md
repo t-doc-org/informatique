@@ -101,7 +101,7 @@ print(delta)
 
 ### Exercice {num}`exo-py2`
 
-Déterminer ce que font les programmes suivants et corriger les erreurs.
+Déterminez ce que font les programmes suivants et corrigez les erreurs.
 
 1.  ```{exec} python
     :editor: c0a8920d-43e3-4291-a431-6c1a7270a010
@@ -179,13 +179,26 @@ print("Fin du programme")
 
 ### Exercice {num}`exo-py2:num1`
 
-Modifier le code de l'{numref}`exemple %s<ex-py2:delta2>` pour que le programme
+Modifiez le code de l'{numref}`exemple %s<ex-py2:delta2>` pour que le programme
 vérifie que le coefficient $a$ n'est pas nul. (Dans ce cas, ce n'est pas une
 équation du deuxième degré et la résolution est différente.)
 
 ```{exec} python
 :editor: d0ba1a78-33a3-41b2-8405-23d7b418e656
-# Écrire le programme ici
+# Calcule et affiche le discriminant dans la résolution d'équation du 2e degré
+def discriminant(a, b, c):
+  delta = b ** 2 - 4 * a * c
+  return delta
+
+# Demande à l'utilisateur les valeurs des coefficients a, b et c
+a = float(await input_line("Coefficient de x^2: "))
+b = float(await input_line("Coefficient de x: "))
+c = float(await input_line("Coefficient sans partie littérale: "))
+
+# Modifier le programme à partir d'ici
+
+delta = discriminant(a, b, c)
+print(delta)
 ```
 
 ````{solution}
@@ -211,7 +224,7 @@ else:
 
 ### Exercice {num}`exo-py2:num2`
 
-Modifier le code de l'{numref}`exercice %s<exo-py2:num1>`, pour afficher le
+Modifiez le code de l'{numref}`exercice %s<exo-py2:num1>`, pour afficher le
 nombre de solutions de l'équation.\
 Rappel:
 - si $\Delta < 0$, il n'y a pas de solution,
@@ -220,7 +233,16 @@ Rappel:
 
 ```{exec} python
 :editor: 2e646990-092f-4a85-b812-9490a09bf202
-# Écrire le programme ici
+# Calcule le discriminant dans la résolution d'équation du 2e degré
+def discriminant(a, b, c):
+  return b ** 2 - 4 * a * c
+
+# Demande à l'utilisateur les valeurs des coefficients a, b et c
+a = float(await input_line("Coefficient de x^2: "))
+b = float(await input_line("Coefficient de x: "))
+c = float(await input_line("Coefficient sans partie littérale: "))
+
+# Complétez le programme à partir de là
 ```
 
 ````{solution}
@@ -250,7 +272,7 @@ else:
 
 ### Exercice {num}`exo-py2:num3`
 
-Compléter le code de l'{numref}`exercice %s<exo-py2:num2>`, pour calculer les
+Complétez le code de l'{numref}`exercice %s<exo-py2:num2>`, pour calculer les
 solutions de l'équation.
 
 ````{tip}
@@ -268,7 +290,16 @@ print(sqrt(54))
 
 ```{exec} python
 :editor: 77c5e3c2-e6de-492e-85d5-db3f440d5684
-# Écrire le programme ici
+# Calcule le discriminant dans la résolution d'équation du 2e degré
+def discriminant(a, b, c):
+  return b ** 2 - 4 * a * c
+
+# Demande à l'utilisateur les valeurs des coefficients a, b et c
+a = float(await input_line("Coefficient de x^2: "))
+b = float(await input_line("Coefficient de x: "))
+c = float(await input_line("Coefficient sans partie littérale: "))
+
+# Complétez le programme à partir de là
 ```
 
 ````{solution}
@@ -303,13 +334,22 @@ else:
 
 ### Exercice {num}`exo-py2`
 
-Compléter le code de l'{numref}`exercice %s<exo-py2:num3>`, pour calculer aussi
-la solution si $a = 0$, c'est-à-dire que l'équation donnée est une équation du
-premier degré.
+Complétez le programme de l'{numref}`exercice %s<exo-py2:num3>`, pour calculer
+aussi la solution si $a = 0$, c'est-à-dire que l'équation donnée est une
+équation du premier degré.
 
 ```{exec} python
 :editor: a0139bba-537f-419e-8187-76d78355d944
-# Écrire le programme ici
+# Calcule le discriminant dans la résolution d'équation du 2e degré
+def discriminant(a, b, c):
+  return b ** 2 - 4 * a * c
+
+# Demande à l'utilisateur les valeurs des coefficients a, b et c
+a = float(await input_line("Coefficient de x^2: "))
+b = float(await input_line("Coefficient de x: "))
+c = float(await input_line("Coefficient sans partie littérale: "))
+
+# Complétez le programme à partir de là
 ```
 
 ````{solution}
@@ -345,10 +385,10 @@ else:
 
 ### Exercice {num}`exo-py2`
 
-1. Écrire une fonction qui convertit des bits en octets.
-2. Écrire une fonction qui convertit des octets en bits.
-3. Convertir 3664000 bits en octets.
-4. Convertir 512 octets en bits.
+1. Écrivez une fonction qui convertit des bits en octets.
+2. Écrivez une fonction qui convertit des octets en bits.
+3. Convertissez 3664000 bits en octets.
+4. Convertissez 512 octets en bits.
 
 ```{exec} python
 :editor: 6d5c5190-7949-4078-b22d-e2c84a39f4d4
@@ -379,9 +419,9 @@ print("La conversion de 512 octets en bits donne", nb_bits)
 
 Pour calculer l'aire totale de la figure ci-dessous:
 
-1. Écrire une fonction qui permet de calculer l'aire d'un rectangle en
+1. Écrivez une fonction qui permet de calculer l'aire d'un rectangle en
 connaissant la longueur et la largeur.
-2. Calculer l'aire totale de la figure.
+2. Calculez l'aire totale de la figure.
 
 ```{image} images/aire-rectangles.png
 :alt: Aire totale
@@ -391,7 +431,7 @@ connaissant la longueur et la largeur.
 
 ```{exec} python
 :editor: 72650926-c1a9-4096-88b6-3e07b7cc9ccf
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -409,23 +449,24 @@ print("Aire totale:", aire_totale)
 
 ### Exercice {num}`exo-py2`
 
-Pour les prochaines vacances, tu décides de partir en vacances au Japon. Tu as
-de l'argent sur ton compte épargne et l'argent que tu vas gagner en travaillant
-cet été.
+Pour les prochaines vacances, vous décidez de partir en vacances au Japon. Vous
+avez de l'argent sur un compte épargne et de l'argent que vous avez gagner en
+travaillant cet été.
 
-Écrire un programme qui permet de convertir en YEN les montants qui sont sur un
-compte épargne et sur un compte courant afin de déterminer le montant que tu
-auras à disposition.\
+Écrivez un programme qui permet de convertir en YEN les montants qui sont sur un
+compte épargne et sur un compte courant afin de déterminer le montant que vous
+aurez à disposition.\
 Le taux est de 1 CHF = 174 YEN.
 
 ```{exec} python
 :editor: 5f6f63a3-ab47-43c5-9774-f50cabd75e94
-# Compléter la fonction
 def convertit_chf_en_yen(montant_chf):
+  # à compléter
 
 compte_courant_chf = 1540
 compte_epargne_chf = 2467
 
+# Complétez le programme
 budget_yen =
 print("Tu auras", budget_yen, "YEN.")
 ```
@@ -499,8 +540,8 @@ Pour calculer le prix de l'amende à payer en cas de dépassement de vitesse,
 consulter le document suivant: [Liste sanctions](sanctions-vitesse.pdf)
 
 
-Écrire une fonction qui retourne le prix de l'amende à payer en fonction de la
-vitesse autorisée et la vitesse mesurée par le radar. Traiter seulement le cas
+Écrivez une fonction qui retourne le prix de l'amende à payer en fonction de la
+vitesse autorisée et la vitesse mesurée par le radar. Traitez seulement le cas
 où le dépassement de vitesse a lieu sur l'autoroute et n'excède pas 25 km/h.
 
 ```{exec} python
@@ -548,12 +589,18 @@ suivante:
 
 Cette suite à la particularité de toujours se terminer par 4, 2, 1.
 
-Écrire un programme qui demande à l'utilisateur de choisir un nombre et affiche
+Écrivez un programme qui demande à l'utilisateur de choisir un nombre et affiche
 la suite de Syracus (jusqu'à ce que la suite arrive à 1).
 
 ```{exec} python
 :editor: bce7f53a-426f-4c3f-b967-c2e41783d2ff
-# Écrire le programme ici
+def syracuse(n):
+  # à compléter
+
+n = int(await input_line("Choisir un nombre entier plus grand que 0."))
+
+# Complétez le programme
+
 ```
 
 ````{solution}
@@ -570,7 +617,6 @@ n = int(await input_line("Choisir un nombre entier plus grand que 0."))
 while n != 1:
   n = syracuse(n)
   print(n)
-
 ```
 ````
 
@@ -593,17 +639,26 @@ print(est_pair(107))
 
 ### Exercice {num}`exo-py2`
 
-Écrire un programme qui demande à l'utilisateur un nombre entier strictement
+Écrivez un programme qui demande à l'utilisateur un nombre entier strictement
 positif et affiche tous ses diviseurs. Ce programme doit:
 1. contenir un procédé qui vérifie que la réponse de l'utilisateur est bien un
-nombre strictement positif. Si ce n'est pas le cas, lui demander un autre nombre.
+nombre strictement positif. Si ce n'est pas le cas, lui demander un autre
+nombre.
 2. contenir une fonction `est_diviseur()` qui teste si un nombre est diviseur
 d'un autre nombre.
 3. contenir une fonction `est_premier()` qui teste si un nombre est premier.
 
 ```{exec} python
 :editor: 91faf472-2b3d-4729-bc95-ce1c8c0d00a7
-# Écrire le programme ici
+def est_diviseur(nombre, diviseur):
+  # à compléter
+
+def est_premier(nb_diviseurs):
+  # à compléter
+
+n = int(await input_line("Choisir un nombre entier strictement positif:"))
+
+# Complétez le programme
 ```
 
 ````{solution}
@@ -648,12 +703,15 @@ de la définition de la fonction.
 
 ### Exercice {num}`exo-py2`
 
-Créer une fonction `compteur()`...
+Créez une fonction `compteur()`...
 1.  qui compte de 0 à un nombre donné appelé `stop`:
 
     ```{exec} python
     :editor: b5114e99-47c4-40d8-93e4-7bac649c10f2
-    # Écrire le programme ici
+    def compteur(stop):
+      # à compléter
+
+    compteur(11)
     ```
 
     ````{solution}
@@ -684,7 +742,10 @@ Créer une fonction `compteur()`...
 
     ```{exec} python
     :editor: 4b3ebd3f-e3a6-4041-a51a-3362a1b299c3
-    # Écrire le programme ici
+    def compteur(start, stop):
+      # à compléter
+
+    compteur(4, 11)
     ```
 
     ````{solution}
@@ -716,7 +777,10 @@ Créer une fonction `compteur()`...
 
     ```{exec} python
     :editor: fd8b8f40-1de2-41ca-8868-6a29af56c20d
-    # Écrire le programme ici
+    def compteur(start, stop, step):
+      # à compléter
+
+    compteur(4, 11, 3)
     ```
 
     ````{solution}

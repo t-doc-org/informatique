@@ -58,16 +58,16 @@ liste_vide = []
 
 ### Exercice {num}`exo-py2`
 
-1. Créer les listes suivantes en Python :
+1. Créez les listes suivantes en Python :
     - Les salles de classe dans lesquelles tu as des cours
     - Les années de naissance des membres de ta famille
     - La taille en mètres de tes amis
 
-2. Afficher les trois listes.
+2. Affichez les trois listes.
 
 ```{exec} python
 :editor: bda26e73-b3dc-4d27-807c-e90f97d2ea25
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -78,7 +78,7 @@ salles = ["P207", "G107", "P214", "P-107"]
 annees_naissance = [1941, 1966, 1974, 1975, 1978, 2006]
 tailles = [1.8, 1.9, 1.96]
 
-#Affichage des listes
+# Affichage des listes
 print(salles)
 print(annees_naissance)
 print(tailles)
@@ -120,8 +120,8 @@ print("La liste d'arrivée des coureurs est:", coureurs)
 
 ### Exercice {num}`exo-py2`
 
-Ajouter les instructions nécessaires pour que l'affichage de la liste soit le
-suivant :
+Ajoutez les instructions nécessaires pour que l'affichage de la liste soit le
+suivant:
 
 ```{code-block} text
 ['B', 'B', 'W', 'D', 'E', 'X']
@@ -130,7 +130,7 @@ suivant :
 ```{exec} python
 :editor: b0091579-35b5-41d7-9316-81f642ff24c0
 lettres = ["A", "B", "C", "D", "E", "F"]
-# ajouter le code ici
+# ajoutez le code ici
 print(lettres)
 ```
 
@@ -296,22 +296,22 @@ ma_liste.count(mon_element)
 
 ### Exercice {num}`exo-py2`
 
-1. Créer une liste, nommée `sports` avec les éléments suivants: `kayak`,
+1. Créez une liste, nommée `sports` avec les éléments suivants: `kayak`,
 `escrime` et `escalade`.
-2. Afficher la liste et son nombre d'éléments.
-3. Demander cinq sports à l'utilisateur et les ajouter à la liste `sports`.
+2. Affichez la liste et son nombre d'éléments.
+3. Demandez cinq sports à l'utilisateur et ajoutez-les à la liste `sports`.
 4. Afficher la liste et son nombre d'éléments.
-5. Ajouter l'élément `tennis de table` à l'index 3.
-6. Afficher la liste et son nombre d'éléments.
-7. Effacer l'élément `escalade`.
-8. Afficher la liste et son nombre d'éléments.
-9. Quel est l'index d'`escrime`? Afficher l'index d'`escrime`.
-10. Effacer le cinquième élément de la liste.
-11. Afficher la liste et son nombre d'éléments.
+5. Ajoutez l'élément `tennis de table` à l'index 3.
+6. Affichez la liste et son nombre d'éléments.
+7. Effacez l'élément `escalade`.
+8. Affichez la liste et son nombre d'éléments.
+9. Quel est l'index d'`escrime`? Affichez l'index d'`escrime`.
+10. Effacez le cinquième élément de la liste.
+11. Affichez la liste et son nombre d'éléments.
 
 ```{exec} python
 :editor: f9da8abf-19a5-4eba-aafd-b21e58273901
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -335,7 +335,7 @@ print(sports, len(sports))
 
 ### Exercice {num}`exo-py2`
 
-1. Demander à l'utilisateur d'entrer 6 nombres et les stocker dans la liste
+1. Demandez à l'utilisateur d'entrer 6 nombres et stockez-les dans la liste
 'nombres'.
 2. Afficher la liste.
 3. Trier la liste.
@@ -345,7 +345,7 @@ print(sports, len(sports))
 
 ```{exec} python
 :editor: 1d0149fa-92a5-4cd1-8984-1b83ed61054d
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -366,7 +366,7 @@ print(sum(nombres))
 
 ### Exercice {num}`exo-py2`
 
-Sans exécuter le code, répondre aux questions suivantes:
+Sans exécuter le code, répondez aux questions suivantes:
 1. Que va retourner `nombres.index(5)`?
 2. Que va retourner `nombres.index(3)`?
 2. Que va retourner `nombres.count(1)`?
@@ -377,7 +377,7 @@ Sans exécuter le code, répondre aux questions suivantes:
 
 ```{exec} python
 :editor: 5e39f143-2a7d-4e04-a373-81b744d6015c
-# Compléter le code pour tester vos réponses
+# Complétez le code pour tester vos réponses
 nombres = [1, 4, 2, 1, 5, 7, 3, 1, 4, 5, 3, 1, 3, 1, 2, 5]
 ```
 
@@ -402,11 +402,11 @@ print(nombres)
 Dans le programme suivant, les ingrédients d'une pizza devraient pouvoir être
 ajoutés petit à petit par l'utilisateur dans la liste `ingredients` qui contient
 la sauce tomate et la mozzarella comme base. Cet ajout se termine lorsque
-l'utilisateur écrit le texte "stop", puis tous les ingrédients sont affichés.
+l'utilisateur écrit le texte "stop", ensuite tous les ingrédients sont affichés.
 
 ATTENTION: le mot stop ne doit jamais entrer dans la liste des ingrédients!
 
-Compléter le programme de manière que celui-ci corresponde à cette description.
+Complétez le programme de manière que celui-ci corresponde à cette description.
 
 ```{exec} python
 :editor: 88e9572e-051f-4e67-8244-06e475aa0133
@@ -445,7 +445,7 @@ Ces textes ont tous le format suivant:
 sont remplacés par de vraies valeurs. Par exemple, pour un mardi à 13°C, le
 texte de prévision serait "Mardi il fera 13 °C".
 
-Afin de simplifier la création de cette liste, compléter la fonction
+Afin de simplifier la création de cette liste, complétez la fonction
 `ajoute_prevision` afin que celle-ci ajoute la prévision correcte à la liste
 donnée en paramètre en fonction des paramètres du jour et de la température.
 
@@ -491,9 +491,9 @@ print(meteo_semaine)
 
 ### Exercice {num}`exo-py2`
 
-1. Écrire une programme qui génère une liste de 1000 nombres entiers tirés au
+1. Écrivez un programme qui génère une liste de 1000 nombres entiers tirés au
 hasard entre 1 et 10.
-2. Déterminer le nombre d'occurences de chaque nombre.
+2. Déterminez le nombre d'occurences de chaque nombre.
 
 ```{tip}
 Dans le module `random`, la fonction `randint(a, b)` permet de généré des
@@ -504,7 +504,7 @@ Ne pas oublier l'import: `from random import randint`
 
 ```{exec} python
 :editor: b696c9ff-f357-4db6-b4e9-ff0d89d501c9
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -526,8 +526,8 @@ for i in range(1, 11):
 ## Élément appartenant à une liste
 
 Il est possible de savoir si un élément appartient à une liste en utilisant
-l'expression suivante `element in liste` qui revoie `True` si l'élément est dans
-la liste et `False` sinon.
+l'expression suivante `element in liste` qui revoie `True` si `element` est dans
+`liste` et `False` sinon.
 
 ### Exemple {num}`ex-py2`
 
@@ -545,8 +545,8 @@ else:
 
 ### Exercice {num}`exo-py2`
 
-Le programme ci-dessous demande à l'utilisateur quel moyen de locomotion il u
-tilise pour se rendre au travail et affiche un message en conséquence.
+Le programme ci-dessous demande à l'utilisateur quel moyen de locomotion il
+utilise pour se rendre au travail et affiche un message en conséquence.
 
 - "C'est très écologique!" lorsque l'utilisateur entre la valeur "à pied",
 "trottinette", "skateboard", ou "vélo"
@@ -563,7 +563,7 @@ Utilisez pour cela la notation `if ... in ...` quand cela est nécessaire.
 :editor: 21b10226-a456-4ab1-b04d-df9cef3aaf81
 locomotion = await input_line("Quel moyen de locomotion utilises-tu pour te rendre au travail: ")
 
-# Compléter le programme
+# Complétez le programme à partir de là
 print("C'est très écologique!")
 print("C'est un bon geste!")
 print("C'est acceptable!")
@@ -593,15 +593,17 @@ else:
 
 Depuis la station de métro où l'utilisateur se trouve, il peut se rendre aux
 arrêts qui se trouvent dans la liste `ligne_sud` et `ligne_nord`. Lorsque
-celui-ci entre sa destination, afficher s'il doit prendre la ligne sud, la
+celui-ci entre sa destination, affichez s'il doit prendre la ligne sud, la
 ligne nord, ou s'il ne peut pas se rendre à sa destination.
 
 ```{exec} python
 :editor: e77565d0-b927-412b-b3e5-e6e7e8a00c72
 destination = await input_line("Où veux-tu aller: ")
+
 ligne_nord = ["Châtelet", "Opéra", "République", "Bastille"]
 ligne_sud = ["Gare du Nord", "Gare de Lyon", "Saint-Michel Notre-Dame", "Auber", "Porte d'Italie"]
 
+# Complétez le programme à partir de là
 print("Prends la ligne nord.")
 print("Prends la ligne sud.")
 print("Tu ne peux pas te rendre à cet arrêt.")
@@ -627,16 +629,17 @@ else:
 
 ### Exercice {num}`exo-py2`
 
-Compléter le programme ci-dessous afin que l'utilisateur puisse petit à petit
+Complétez le programme ci-dessous afin que l'utilisateur puisse petit à petit
 créer une liste avec les codes postaux dans lesquels il souhaite se rendre.
-Cette liste de code postal ne doit jamais contenir de doublons! Si l'utilisateur
-essaie d'en entrer un, le programme affichera "Erreur, ce code postal est déjà
-dans la liste" et continuera ensuite normalement. Le programme s'arrête quand
-l'utilisateur entre un code postal négatif. À ce moment, la liste des codes
-postaux est simplement affichée.
+Cette liste des codes postaux ne doit jamais contenir de doublons! Si
+l'utilisateur essaie d'en entrer un, le programme affichera "Erreur, ce code
+postal est déjà dans la liste" et continuera ensuite normalement. Le programme
+s'arrête quand l'utilisateur entre un code postal négatif. À ce moment, la liste
+des codes postaux est simplement affichée.
 
 ```{exec} python
 :editor: 61ad2b94-75ec-449a-9bb9-a9f5691fe626
+# Complétez le programme
 code_postaux = []
 
 code_postal = int(await input_line("Entre un code postal: "))
@@ -702,7 +705,7 @@ for note in notes:    # La variable note change de valeur à chaque itération
 
 ### Exercice {num}`exo-py2`
 
-Avant de les exécuter, déterminer ce que font les programmes suivants.
+Avant de les exécuter, déterminez ce que font les programmes suivants.
 
 1.  ```{exec} python
     :editor: 62c85fe3-5435-4c6e-8c68-c88763bc0f0e
@@ -735,16 +738,16 @@ Avant de les exécuter, déterminer ce que font les programmes suivants.
 
 ### Exercice {num}`exo-py2`
 
-1. Écrire une programme qui génère une liste de 50 nombres entiers tirés au
+1. Écrivez une programme qui génère une liste de 50 nombres entiers tirés au
 hasard entre 1 et 1000.
-2. Déterminer le maximum de la liste en définissant une fonction
+2. Déterminez le maximum de la liste en définissant une fonction
 `maximum(liste)`.
-3. Déterminer le minimum de la liste en définissant une fonction
+3. Déterminez le minimum de la liste en définissant une fonction
 `minimum(liste)`.
 
 ```{exec} python
 :editor: 51fa6ba6-954c-4728-ab9a-b264c595416f
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -782,7 +785,7 @@ print(nombres)
 
 ### Exercice {num}`exo-py2`
 
-Compléter le programme ci-dessous afin qu'il affiche correctement l'itinéraire
+Complétez le programme ci-dessous afin qu'il affiche correctement l'itinéraire
 de la manière suivante:
 
 ```{code-block} text
@@ -799,7 +802,7 @@ Tu es arrivé!
 :editor: dc635abe-c4ee-4beb-badd-02733dff234e
 itineraire = ["Bulle", "Riaz", "Marsens", "Echarlens", "Charmey"]
 
-# Compléter le programme
+# Complétez le programme à partir de là
 ```
 
 ````{solution}
