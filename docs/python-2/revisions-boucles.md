@@ -8,7 +8,7 @@ fois. Pour cela nous pouvons utiliser des boucles.
 
 ## Boucle for
 
-La boucle 'for' permet de répéter un bloc d'instructions un nombre de fois connu
+La boucle `for` permet de répéter un bloc d'instructions un nombre de fois connu
 à l'avance.
 
 ```{exec} python
