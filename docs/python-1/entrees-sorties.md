@@ -52,7 +52,7 @@ la console.
 ```
 
 ```{exec} python
-:editor:
+:editor: 39661323-0c23-419d-9d91-fadd12c137dc
 # Écrivez le programme ici
 ```
 
@@ -79,7 +79,7 @@ récrire 10 fois la même chose.
 5. Ajoutez un commentaire qui explique ce que tu as fait au point précédent.
 
 ```{exec} python
-:editor:
+:editor: 4d040bd2-fe01-409f-9b82-5edd968bd23d
 # Écrivez le programme ici
 ```
 
@@ -89,7 +89,7 @@ récrire 10 fois la même chose.
 print("Bonjour tout le monde!")
 print("Je programme!")
 print("Je programme! Je programme!")
-# Pour répéter plusieurs fois une chaine de caractère, on peut utiliser *
+# Pour répéter plusieurs fois une chaine de caractères, on peut utiliser *
 print("Je programme! " * 10)
 ```
 ````
@@ -116,17 +116,15 @@ de type caractère et le mot est alors affiché tel quel.
 
 ## Exercice {num}`exo-py1`
 
-1.  Effectuez mentalement les 7 opérations ci-dessus avec les nombres 13 et 2.
-2.  Écrivez un programme qui permet d'effectuer les 7 opérations ci-dessus avec
-    13 et 2 et d'afficher le résultat. Les résultats sont-ils les mêmes qu'au
-    point précédent?
-3.  Faites de même avec 10 et 3.
-4.  Faites de même avec 8 et 5.
-5.  Que faut-il utiliser pour éviter de modifier chaque ligne? Notez la réponse
-    par un commentaire dans le code.
+1.  Écrivez un programme qui permet d'effectuer les 4 opérations de base
+    (addition, soustraction, multiplication et division) avec les nombres 13 et
+    2 en affichant le résultat.
+2.  Nous aimerions faire de même avec 10 et 3, 8 et 5, ainsi que 15 et 29.\
+    Comment faire pour ne pas tout réécrire à chaque fois?\
+    Notez la réponse par un commentaire dans le code.
 
 ```{exec} python
-:editor:
+:editor: bbe7500d-5a86-4648-9701-5ccc08ddff8c
 # Écrivez le programme ici
 ```
 
@@ -137,21 +135,14 @@ print(13 + 2)
 print(13 - 2)
 print(13 * 2)
 print(13 / 2)
-print(13 ** 2)
-print(13 // 2)
-print(13 % 2)
 
-# Pour éviter de devoir changer les valeurs à toutes les lignes, il faut
-# utiliser des variables.
-a = 13
-b = 2
+# Il faut utiliser des variables.
+a = 13              # changer la valeur de a
+b = 2               # changer la valeur de b
 print(a + b)
 print(a - b)
 print(a * b)
 print(a / b)
-print(a ** b)
-print(a // b)
-print(a % b)
 ```
 ````
 
@@ -164,10 +155,11 @@ réponse:
 2. 5.65 * 3.4 =
 3. 4 569 - 8 532 =
 4. 56 / 3 =
-5. Calculer le quotient et le reste de la division de 345 par 37.
+5. Calculer le quotient de la division de 345 par 37.
+6. Calculer le reste de la division de 345 par 37.
 
 ```{exec} python
-:editor:
+:editor: 13d4f2e9-0a6c-4ada-891e-8c61dd9ab1d2
 # Écrivez le programme ici
 ```
 
@@ -195,13 +187,24 @@ les phrases d'explication):
     montant total des dépenses de Juliette.
 3.  En période de soldes, les jeux vidéo sont à 50 %, les livres à 5 CHF et les
     mangas ont 6 CHF de rabais.
-4.  Calculer les économies faites par chacun pendant les soldes (utiliser des
-    variables pour stocker le prix avant et après réduction).
-5.  Arrondir les prix aux centimes.
 
 ```{exec} python
-:editor:
-# Écrivez le programme ici
+:editor: 7b1c5323-09e9-4e1d-9f32-f28d9d5743d4
+# Complétez le programme
+prix_livre =
+prix_jeu =
+prix_manga =
+
+print("Montant total des achats de Luc:", ... , "francs.")
+print("Montant total des achats de Juliette:", ... , "francs.")
+
+print("Après réduction")
+prix_livre =
+prix_jeu =
+prix_manga =
+
+print("Montant total des achats de Luc avec réduction:", ... , "francs.")
+print("Montant total des achats de Juliette avec réductions:", ... , "francs.")
 ```
 
 ````{solution}
@@ -221,40 +224,10 @@ prix_livre = 5
 prix_jeu = prix_jeu * 50 / 100
 prix_manga = prix_manga - 6
 
-print("Montant total des achats de Luc:",
+print("Montant total des achats de Luc avec réductions:",
       2 * prix_livre + 1 * prix_jeu + 3 * prix_manga, "francs.")
-print("Montant total des achats de Juliette:",
+print("Montant total des achats de Juliette avec réductions:",
       1 * prix_livre + 2 * prix_jeu + 2 * prix_manga, "francs.")
-
-
-# Version améliorée
-print("*********************************************************")
-prix_livre = 9.30
-prix_jeu = 59
-prix_manga = 13.50
-
-depenses_Luc = 2 * prix_livre + 1 * prix_jeu + 3 * prix_manga
-depenses_Juliette = 1 * prix_livre + 2 * prix_jeu + 2 * prix_manga
-print("Montant total des achats de Luc:", depenses_Luc , "francs.")
-print("Montant total des achats de Juliette:", depenses_Juliette, "francs.")
-
-print("Après réductions")
-# Utiliser les variables de prix, sinon si le prix change, ça ne fonctionne plus.
-prix_livre = 5
-prix_jeu = prix_jeu * 50 / 100
-prix_manga = prix_manga - 6
-
-depenses_Luc_apres = 2 * prix_livre + 1 * prix_jeu + 3 * prix_manga
-depenses_Juliette_apres = 1 * prix_livre + 2 * prix_jeu + 2 * prix_manga
-print("Montant total des achats de Luc:", depenses_Luc_apres, "francs.")
-print("Montant total des achats de Juliette:", depenses_Juliette_apres, "francs.")
-
-# Que constate-on par rapport à certaines valeurs?
-# les nombres à virgule ne peuvent pas être tous représenté en binaire
-economies_Luc = round(depenses_Luc - depenses_Luc_apres, 2)
-economies_Juliette = round(depenses_Juliette - depenses_Juliette_apres, 2)
-print("Les économies de Luc sont de", economies_Luc, "francs.")
-print("Les économies de Juliette sont de", economies_Juliette, "francs.")
 ```
 ````
 
@@ -291,7 +264,7 @@ Je vois que tu habites à {afficher le lieu}.
 ```
 
 ```{exec} python
-:editor:
+:editor: 7bca82f8-116c-4826-9c54-4bed0bc2a8a1
 # Écrivez le programme ici
 ```
 
@@ -361,7 +334,7 @@ Nombre de mégaoctets:
 ```
 
 ```{exec} python
-:editor:
+:editor: 159755bc-7e41-48c4-9f88-0cc605a1929a
 # Écrivez le programme ici
 ```
 
@@ -392,7 +365,7 @@ Merci, 60.2 °F équivalent à 15.666666666666668 °C
 ```
 
 ```{exec} python
-:editor:
+:editor: 2fabc445-fc9f-4275-a016-aec79668c153
 # Écrivez le programme ici
 ```
 

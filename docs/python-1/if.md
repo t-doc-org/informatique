@@ -457,29 +457,13 @@ Voici trois programmes:
 
 ```{exec} python
 :linenos:
-x = -4
+x = -1
 if x < 0:
-  x += 7
-if x < 5:
-  x *= 4
-if x < 10:
-  x -= 6
-else:
-  x = 1000
-print(x)
-```
-
-</td><td style="padding-left: 1rem">
-
-```{exec} python
-:linenos:
-x = -4
-if x < 0:
-  x += 7
+  x = x + 5
 elif x < 5:
-  x *= 4
+  x = x * 3
 elif x < 10:
-  x -= 6
+  x = x - 6
 else:
   x = 1000
 print(x)
@@ -489,13 +473,29 @@ print(x)
 
 ```{exec} python
 :linenos:
-x = -4
+x = -1
 if x < 0:
-  x += 7
+  x = x + 5
+if x < 5:
+  x = x * 3
+if x < 10:
+  x = x - 6
+else:
+  x = 1000
+print(x)
+```
+
+</td><td style="padding-left: 1rem">
+
+```{exec} python
+:linenos:
+x = -1
+if x < 0:
+  x = x + 5
   if x < 5:
-    x *= 4
+    x = x * 3
     if x < 10:
-      x -= 6
+      x = x - 6
 else:
   x = 1000
 print(x)
@@ -522,6 +522,9 @@ else:
 ```{solution}
 Le `elif` ne sera jamais exécuté, car si l'âge est supérieur ou égal à 65, il
 est aussi supérieur ou égal à 18. Donc la condition du `if` sera vérifiée.
+
+Il faut donc tester les conditions par ordre croissant: enfant, adulte, retraité
+ou par ordre décroissant: retraité, adulte, enfant.
 ```
 
 ### Exercice {num}`exo-py1`
@@ -638,7 +641,6 @@ prixB =  ...
 ```{exec} python
 nb_seances = int(await input_line("Nombre de séances: "))
 
-# Complétez le programme
 prix_A = 11 * nb_seances + 185
 prix_B = 17 * nb_seances
 if prix_A < prix_B:
@@ -691,7 +693,7 @@ est divisible par un autre nombre.
 
 ```{exec} python
 :editor:
-print(14 % 5)          # Modifiez les valeurs
+print(14 % 5)          # Tester avec d'autres valeurs
 ```
 ````
 

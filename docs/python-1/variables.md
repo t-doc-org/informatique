@@ -191,7 +191,7 @@ promu = True              # La variable promu est de type bool
 
 ## Exercice {num}`exo-py1`
 
-Ce code Python déclare 5 variables, mais contient une erreur par ligne. Trouvez
+Ce programme Python déclare 5 variables, mais contient une erreur par ligne. Trouvez
 et corrigez-les.
 
 ```{exec} python
@@ -354,6 +354,7 @@ tableau d'états.
 
 ```{exec} python
 :linenos:
+:when: never
 x = 10
 y = 2
 z = y * x
@@ -366,7 +367,20 @@ y = 5
 print(x, y, z)
 ```
 
-```{solution}
+````{solution}
+```{exec} python
+:linenos:
+x = 10
+y = 2
+z = y * x
+y = z + x
+x = y - z / 2
+z = z * 2
+y = 5
+
+# Affiche les valeurs des variables
+print(x, y, z)
+```
 
 | x  | y  | z  |
 | :-:| :-:| :-:|
@@ -387,6 +401,7 @@ tableau d'états.
 
 ```{exec} python
 :linenos:
+:when: never
 nombre_habitants = 150 + 25 * 2
 cout = 100
 prix = nombre_habitants * cout
@@ -397,10 +412,25 @@ nombre_habitants = 400
 prix = prix + nombre_habitants * cout
 
 # Affiche les valeurs des variables
-print(nombe_habitants, cout, prix)
+print(nombre_habitants, cout, prix)
 ```
 
-```{solution}
+````{solution}
+```{exec} python
+:linenos:
+nombre_habitants = 150 + 25 * 2
+cout = 100
+prix = nombre_habitants * cout
+cout = cout / 2
+nombre_habitants = nombre_habitants - 100
+prix = prix + nombre_habitants * cout
+nombre_habitants = 400
+prix = prix + nombre_habitants * cout
+
+# Affiche les valeurs des variables
+print(nombre_habitants, cout, prix)
+```
+
 | nombre_habitants  | cout  | prix  |
 | :--| :--| :--|
 | 200 |  ? | ?  |
@@ -412,7 +442,7 @@ print(nombe_habitants, cout, prix)
 | 400 | 50  | 25000 |
 | 400 | 50  | 45000 |
 
-```
+````
 
 ## Exercice {num}`exo-py1`
 
@@ -421,7 +451,8 @@ moyenne des notes principales dans la variable du même nom. La note de math est
 de 4 et demi, la note de français de 6 et la note d'allemand de 5 et demi.
 
 ```{exec} python
-:linenos:
+:editor: 184beb38-78ed-48e5-89ee-2c19101727fd
+# Complétez le programme
 math =
 francais =
 allemand =
@@ -438,9 +469,14 @@ math = 4.5
 francais = 6
 allemand = 5.5
 moyenne = (math + francais + allemand) / 3
+
+# Affiche la valeur de la moyenne
+print(moyenne)
 ```
-Pour calculer la moyenne, on additionne toutes les notes avant de les diviser
-par 3. Comme la division a la priorité sur l'addition, il ne faut pas oublier de
+Pour calculer la moyenne, on additionne toutes les notes avant de diviser le
+résultat par le nombre de notes, ici 3.
+
+Comme la division a la priorité sur l'addition, il ne faut pas oublier de
 régler la priorité des opérations avec des parenthèses.
 ````
 
@@ -465,8 +501,8 @@ Au terme de l'exécution de ce programme, la variable `volume` devrait
 contenir la valeur `2849.55`
 
 ```{exec} python
-:editor:
-# Écrire le code ici
+:editor: ac388a32-91a1-438e-b082-71550202565c
+# Écrivez le programme ici
 
 # Affiche le volume
 print(volume)
@@ -480,6 +516,9 @@ hauteur = 30
 rayon = 11 / 2 #ou rayon = 5.5
 aire_disque = pi * rayon ** 2
 volume = aire_disque * hauteur
+
+# Affiche le volume
+print(volume)
 ```
 ````
 
@@ -515,6 +554,11 @@ suivantes:
 
 À la fin de l'exécution de ce programme, la variable `x` devrait contenir la
 valeur `1000`
+
+```{exec} python
+:editor: df136ddf-cd4a-4044-88f0-b061f0568d69
+# Écrivez le programme ici
+```
 
 
 ````{solution}
