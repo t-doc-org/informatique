@@ -10,4 +10,5 @@ algorithme
 variables
 entrees-sorties
 if
+for
 ```
