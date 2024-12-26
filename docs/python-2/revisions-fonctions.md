@@ -142,7 +142,7 @@ Le code donné doit ensuite pouvoir s'exécuter sans erreur et afficher exacteme
 les prix des billets pour tous les âges de 1 à 70 ans.
 
 ```{exec} python
-:editor:
+:editor: 64d9c4cf-247a-4879-b4a4-d9b923bee5b8
 # Définir la fonction affiche_prix_billet
 ...
 

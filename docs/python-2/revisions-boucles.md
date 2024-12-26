@@ -114,7 +114,7 @@ print("La somme est:", somme)
 à 9.
 
 ```{exec} python
-:editor:
+:editor: 8adfb3dd-11d5-4a49-a90b-32187bcc8fb7
 # Écrire le programme ici
 ```
 
@@ -130,7 +130,7 @@ for nombre in range(10):
 à 10.
 
 ```{exec} python
-:editor:
+:editor: 97b96b08-9d31-4b39-b1d8-970327cd87bc
 # Écrire le programme ici
 ```
 
@@ -152,7 +152,7 @@ for nombre in range(1, 11):
 multiples de 5.
 
 ```{exec} python
-:editor:
+:editor: 88007d1d-34e3-4726-8519-9da79d46861a
 # Écrire le programme ici
 ```
 
@@ -220,7 +220,7 @@ Afficher "Merci"
 ```
 
 ```{exec} python
-:editor:
+:editor: d8324808-567b-4ff5-84a3-7968443ba125
 # Compléter le programme
 n = int(await input_line("Entrer un nombre strictement positif: "))
 print("Le nombre doit être strictement positif!")
@@ -271,7 +271,7 @@ BOOM
 ```
 
 ```{exec} python
-:editor:
+:editor: 8dea2b74-1c80-4068-9508-2d2dadc0730b
 # Écrire le programme ici
 ```
 
@@ -305,7 +305,7 @@ Bravo!
 ```
 
 ```{exec} python
-:editor:
+:editor: bb46d9c0-3297-42d5-9ea6-f631893bb839
 # Écrire le programme ici
 ```
 

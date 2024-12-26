@@ -233,7 +233,7 @@ Sinon
 ```
 
 ```{exec} python
-:editor:
+:editor: 62b603f8-6468-490d-ad94-a7afe58a5e14
 # Modifier et compléter le programme
 prix_unitaire = ...
 nb_canettes = int(await input_line("Nombre de canettes de Red Bull à acheter?"))
@@ -266,7 +266,7 @@ Sinon
 ```
 
 ```{exec} python
-:editor:
+:editor: 473120c2-5476-4dd2-abf5-eba9e1cb2f97
 # Modifier et compléter le programme
 ... await input_line("Quel est votre âge?")
 ...

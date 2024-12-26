@@ -50,7 +50,7 @@ Afficher l'aire.
 ```
 
 ```{exec} python
-:editor:
+:editor: e35ab3c5-b735-4fc5-b20d-0b261633aa15
 # Compléter le programme
 largeur = await input_line(...)
 longueur = await input_line(...)
