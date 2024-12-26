@@ -11,4 +11,5 @@ variables
 entrees-sorties
 if
 for
+while
 ```

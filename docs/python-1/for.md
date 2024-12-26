@@ -115,7 +115,7 @@ print("Au revoir!")
 ```
 ````
 
-## Utilisation de la variable de la boucle`for
+## Utilisation de la variable de la boucle for
 
 La boucle `for` fait plus que juste répéter x fois un bloc d'instructions: pour
 chaque itération (passage de la boucle), la variable (dans l'exemple ci-dessous
