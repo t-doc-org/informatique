@@ -40,7 +40,7 @@ jusqu'à ce que l'utilisateur saisisse une réponse et appuye sur {kbd}`Enter`.
 
 ## Exercice {num}`exo-py2-rev`
 
-Compléter ce programme permettant de calculer l'aire d'un rectangle.
+Complétez ce programme permettant de calculer l'aire d'un rectangle.
 
 ```{code-block} text
 Demander à l'utilisateur la largeur.
@@ -51,14 +51,14 @@ Afficher l'aire.
 
 ```{exec} python
 :editor: e35ab3c5-b735-4fc5-b20d-0b261633aa15
-# Compléter le programme
+# Complétez le programme
 largeur = await input_line(...)
 longueur = await input_line(...)
 aire =
 print("L'aire vaut")
 ```
 
-Tester le code avec les valeurs 3.6 et 6.4.
+Testez le code avec les valeurs 3.6 et 6.4.
 
 ````{solution}
 ```{exec} python
@@ -83,7 +83,7 @@ Trouver et corriger toutes les erreurs.
 
 ```{exec} python
 :editor:
-# Corriger le programme
+# Corrigez le programme
 age = await input_line("Quel âge as-tu?")
 annee = await input_line("En quelle année sommes-nous?")
 print("Tu es né.e en" annee - age "ou en" annee - age - 1)
@@ -98,8 +98,7 @@ dans la parenthèse de la fonction print.
 
 ## Exercice {num}`exo-py2-rev`
 
-Il y a des erreurs dans les programmes suivants. Expliquer et corriger le
-problème.
+Il y a des erreurs dans les programmes suivants. Expliquez et corrigez-les.
 
 1.  ```{exec} python
     :editor:

@@ -43,7 +43,7 @@ nom_de_la_fonction(paramètres)
 
 ## Exercice {num}`exo-py2-rev`
 
-Une fonction nommée `salutations` a été définie ci-dessous. Appeler cette
+Une fonction nommée `salutations` a été définie ci-dessous. Appelez cette
 fonction dans le programme.
 
 ```{exec} python
@@ -51,7 +51,7 @@ fonction dans le programme.
 def salutations():
   print("Bonjour, comment vas-tu?")
 
-# Compléter l'appel de la fonction
+# Complétez l'appel de la fonction
 ...
 ```
 
@@ -71,7 +71,7 @@ salutations()
 Une fonction nommée `affiche_somme` prend 2 paramètres numériques. Cette
 fonction additionne les paramètres et affiche le résultat.
 
-Appeler cette fonction 2 fois pour que le programme affiche le résultat de
+Appelez cette fonction 2 fois pour que le programme affiche le résultat de
 4 + 9 et celui de de 3 + 7.
 
 ```{exec} python
@@ -79,7 +79,7 @@ Appeler cette fonction 2 fois pour que le programme affiche le résultat de
 def affiche_somme(a, b):
   print(a + b)
 
-# Compléter l'appel de la fonction 2 fois
+# Complétez l'appel de la fonction 2 fois
 ...
 ```
 
@@ -97,7 +97,7 @@ affiche_somme(3, 7)
 
 ## Exercice {num}`exo-py2-rev`
 
-Au début du code donné ci-dessous, définir une fonction nommée `au_revoir`
+Au début du code donné ci-dessous, définissez une fonction nommée `au_revoir`
 permettant simplement d'afficher le texte "À bientôt!".
 
 Le code donné doit ensuite pouvoir s'exécuter sans problème afin d'afficher
@@ -105,7 +105,7 @@ Le code donné doit ensuite pouvoir s'exécuter sans problème afin d'afficher
 
 ```{exec} python
 :editor:
-# Définir la fonction au_revoir
+# Définissezs la fonction au_revoir
 ...
 
 i = 0
@@ -130,7 +130,7 @@ while i < 20:
 
 ## Exercice {num}`exo-py2-rev`
 
-Au-dessus du code donné, définir une fonction nommée `affiche_prix_billet`
+Au-dessus du code donné, définissez une fonction nommée `affiche_prix_billet`
 prenant en paramètre l'âge de l'utilisateur et affichant le prix du billet de
 cinéma en fonction de cet âge.
 
@@ -143,7 +143,7 @@ les prix des billets pour tous les âges de 1 à 70 ans.
 
 ```{exec} python
 :editor: 64d9c4cf-247a-4879-b4a4-d9b923bee5b8
-# Définir la fonction affiche_prix_billet
+# Définissez la fonction affiche_prix_billet
 ...
 
 for a in range(1, 71):
@@ -169,7 +169,7 @@ for a in range(1, 71):
 ## Exercice {num}`exo-py2-rev`
 
 Que va afficher le programme?\
-Indiquer l'ordre d'exécution des lignes.
+Indiquez l'ordre d'exécution des lignes.
 
 ```{exec} python
 :linenos:

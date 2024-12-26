@@ -279,7 +279,7 @@ De quel type sont les données suivantes?
 
 ## Exercice {num}`exo-py2-rev`
 
-Qu'affiche le programme suivant? Appuyer sur bouton "play" pour vérifier votre réponse.
+Qu'affiche le programme suivant? Appuyez sur bouton "play" pour vérifier votre réponse.
 
 ```{exec} python
 :linenos:
@@ -292,7 +292,7 @@ print("L'aire du triangle est de", aire)
 ## Exercice {num}`exo-py2-rev`
 
 Qu'affiche le programme suivant? Faire un tableau d'états.\
-Appuyer sur bouton "play" pour vérifier votre réponse.
+Appuyez sur bouton "play" pour vérifier votre réponse.
 
 ```{exec} python
 :linenos:
@@ -318,7 +318,7 @@ print(a, b)
 
 ## Exercice {num}`exo-py2-rev`
 
-En exécutant les programmes suivants, une erreur se produit. Corriger le code à
+En exécutant les programmes suivants, une erreur se produit. Corrigez le code à
 l'aide du message d'erreur.
 
 1.  ```{exec} python
@@ -361,7 +361,7 @@ l'aide du message d'erreur.
 
 ## Exercice {num}`exo-py2-rev`
 
-Faire le tableau d'états du programme suivant:
+Faites le tableau d'états du programme suivant:
 ```{exec} python
 :linenos:
 a = 8

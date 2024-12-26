@@ -39,8 +39,8 @@ for i in range(5):
 </td></tr></table>
 
 1. Quelles valeurs prend la variable i?
-2. Changer le nombre de répétitions.
-3. Modifier le code pour afficher les nombres de 1 à 10?
+2. Changez le nombre de répétitions.
+3. Modifiez le code pour afficher les nombres de 1 à 10?
 
 En réalité, la boucle `for` fait plus que juste répéter x fois: pour
 chaque itération (passage de la boucle), la variable (ici nommée i) va prendre
@@ -110,12 +110,12 @@ print("La somme est:", somme)
 
 ## Exercice {num}`exo-py2-rev`
 
-1. Écrire un programme en utilisant le boucle `for` qui affiche les nombres de 0
-à 9.
+1. Écrivez un programme en utilisant le boucle `for` qui affiche les nombres de
+    0 à 9.
 
 ```{exec} python
 :editor: 8adfb3dd-11d5-4a49-a90b-32187bcc8fb7
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -126,12 +126,12 @@ for nombre in range(10):
 ```
 ````
 
-2. Écrire un programme en utilisant le boucle `for` qui affiche les nombres de 1
-à 10.
+2. Écrivez un programme en utilisant le boucle `for` qui affiche les nombres de
+    1 à 10.
 
 ```{exec} python
 :editor: 97b96b08-9d31-4b39-b1d8-970327cd87bc
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -148,8 +148,8 @@ for nombre in range(1, 11):
 ```
 ````
 
-3. Écrire un programme en utilisant le boucle `for` qui affiche les 12 premiers
-multiples de 5.
+3. Écrivez un programme en utilisant le boucle `for` qui affiche les 12 premiers
+    multiples de 5.
 
 ```{exec} python
 :editor: 88007d1d-34e3-4726-8519-9da79d46861a
@@ -172,7 +172,7 @@ for nombre in range(1, 13):
 
 ## Exercice {num}`exo-py2-rev`
 
-Indiquer l'ordre d'exécution des lignes et ce qu'affichera le programme.
+Indiquez l'ordre d'exécution des lignes et ce qu'affichera le programme.
 
 ```{exec} python
 :linenos:
@@ -209,7 +209,7 @@ Nous voulons créer un programme qui demande à l'utilisateur un nombre
 strictement positif. Tant que l'utilisateur entre un nombre plus petit ou égal à
 0, alors le programme devra lui redemander d'entrer un nouveau nombre.
 
-Écrire un programme qui correspond à l'algorithme suivant:
+Écrivez un programme qui correspond à l'algorithme suivant:
 
 ```{code-block} text
 Demander un nombre strictement positif à l'utilisateur et le stocker dans la variable n
@@ -221,7 +221,7 @@ Afficher "Merci"
 
 ```{exec} python
 :editor: d8324808-567b-4ff5-84a3-7968443ba125
-# Compléter le programme
+# Complétez le programme
 n = int(await input_line("Entrer un nombre strictement positif: "))
 print("Le nombre doit être strictement positif!")
 print("Merci")
@@ -244,7 +244,7 @@ Nous souhaitons créer un programme qui compte le temps avant qu'une bombe
 explose. Pour cela, un compte à rebours commencera à 10 et ira jusqu'à 1, puis
 le programme affichera "BOOM".
 
-Écrire un programme qui correspond à l'algorithme suivant:
+Écrivez un programme qui correspond à l'algorithme suivant:
 
 ```{code-block} text
 Initialiser une variable compte_a_rebours à 10
@@ -254,7 +254,7 @@ Tant que compte_a_rebours est plus grand que 0
 Afficher "BOOM"
 ```
 
-Ce programme doit alors afficher :
+Ce programme doit alors afficher:
 
 ```{code-block} text
 10
@@ -272,7 +272,7 @@ BOOM
 
 ```{exec} python
 :editor: 8dea2b74-1c80-4068-9508-2d2dadc0730b
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -288,7 +288,7 @@ print("BOOM")
 
 ## Exercice {num}`exo-py2-rev`
 
-Écrire un programme qui demande à l'utilisateur combien il y a de cantons en
+Écrivez un programme qui demande à l'utilisateur combien il y a de cantons en
 Suisse. Tant que la réponse n'est pas 26, le programme redemande une nouvelle
 réponse.
 
@@ -306,7 +306,7 @@ Bravo!
 
 ```{exec} python
 :editor: bb46d9c0-3297-42d5-9ea6-f631893bb839
-# Écrire le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -321,12 +321,12 @@ print("Bravo!")
 
 ## Bonus {num}`bon-py2-rev`
 
-Améliorer le programme de l'exercice précédent en indiquant à l'utilisateur
+Améliorez le programme de l'exercice précédent en indiquant à l'utilisateur
 s'il y a plus ou moins de cantons en fonction de sa réponse.
 
 ## Exercice {num}`exo-py2-rev`
 
-Indiquer l'ordre d'exécution des lignes et faire le tableau d'états du programme
+Indiquez l'ordre d'exécution des lignes et faites le tableau d'états du programme
 suivant:
 
 ```{exec} python

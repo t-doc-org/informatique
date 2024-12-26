@@ -92,9 +92,9 @@ print(c)
 ### Exercice {num}`py2-erreur`
 
 Les programmes suivants contiennent tous une erreur.
-- Trouver l'erreur, si possible sans exécuter le programme.
-- Déterminer son type (syntaxe, exécution, logique).
-- La corriger.
+- Trouvez l'erreur, si possible sans exécuter le programme.
+- Déterminez son type (syntaxe, exécution, logique).
+- Corrigez-la.
 
 1.  ```{exec} python
     :editor: 70746cc6-1686-423d-8665-570905cfc918
@@ -137,7 +137,7 @@ Les programmes suivants contiennent tous une erreur.
 ### Exercice {num}`py2-erreur`
 
 Il est souvent difficile de débugger un code qui ne fonctionne pas. En s'aidant
-des messages d'erreurs affichés, corriger le programme ci-dessous qui calcule
+des messages d'erreurs affichés, corrigez le programme ci-dessous qui calcule
 l'aire et le périmètre d'un triangle isocèle et rectangle dont l'hypoténuse est
 connu.
 

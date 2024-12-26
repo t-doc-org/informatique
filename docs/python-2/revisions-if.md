@@ -38,7 +38,7 @@ print("Fin")
 ```
 
 Dans l'exemple ci-dessus, il ne se passe rien, la condition n'est pas vérifiée.\
-Changer la météo en "pluie". Que se passe-t-il?
+Changez la météo en "pluie". Que se passe-t-il?
 
 ## Exemple avec if ... else
 
@@ -97,9 +97,9 @@ comédie et horreur). Le branchement `else` gérera tous les autres cas.
 :when: never
 :linenos:
 age = int(input("Quel âge as-tu? "))
-if age >= 18 :
+if age >= 18:
   print("Tu es majeur.")
-else :
+else:
   print("Tu es mineur.")
 ```
 
@@ -113,9 +113,9 @@ Vérifie tes réponses en exécutant le code.
 ```{exec} python
 :linenos:
 age = int(await input_line("Quel âge as-tu? "))
-if age >= 18 :
+if age >= 18:
   print("Tu es majeur.")
-else :
+else:
   print("Tu es mineur.")
 ```
 ````
@@ -167,7 +167,7 @@ print("\x0cBravo!")
 
 1.  ```{exec} python
     :editor:
-    # Compléter le programme
+    # Complétez le programme
     a = ...
     if ... :
       print("a est nul.")
@@ -177,7 +177,7 @@ print("\x0cBravo!")
       print("a est ...")
     ```
 
-    Tester la justesse de votre code avec différentes valeurs de a.
+    Testez la justesse de votre code avec différentes valeurs de a.
 
     ````{solution}
     ```{exec} python
@@ -194,7 +194,7 @@ print("\x0cBravo!")
 
 2.  ```{exec} python
     :editor:
-    # Compléter le programme
+    # Complétez le programme
     a = ...
     b = ...
     if ... :                                        # tester que b n'est pas nul
@@ -203,7 +203,7 @@ print("\x0cBravo!")
       print("La division par 0 est impossible.")
     ```
 
-    Tester la justesse de votre code avec différentes valeurs de a et de b.
+    Testez la justesse de votre code avec différentes valeurs de a et de b.
 
     ````{solution}
     ```{exec} python
@@ -221,7 +221,7 @@ print("\x0cBravo!")
 Nous souhaitons créer un programme qui calcule le prix à payer lors de l'achat de
 canette de Red Bull dont le prix unitaire est de 1.50 CHF.
 
-Écrire un programme qui correspond à l'algorithme suivant:
+Écrivez un programme qui correspond à l'algorithme suivant:
 
 ```{code-block} text
 Stocker le prix d'une canette de Red Bull dans la variable prix_unitaire
@@ -234,7 +234,7 @@ Sinon
 
 ```{exec} python
 :editor: 62b603f8-6468-490d-ad94-a7afe58a5e14
-# Modifier et compléter le programme
+# Modifiez et complétez le programme
 prix_unitaire = ...
 nb_canettes = int(await input_line("Nombre de canettes de Red Bull à acheter?"))
 ```
@@ -253,7 +253,7 @@ else:
 
 ## Exercice {num}`exo-py2-rev`
 
-Écrire un programme qui correspond à l'algorithme suivant:
+Écrivez un programme qui correspond à l'algorithme suivant:
 
 ```{code-block} text
 Demander l'âge de l'utilisateur et le stocker dans la variable age
@@ -267,7 +267,7 @@ Sinon
 
 ```{exec} python
 :editor: 473120c2-5476-4dd2-abf5-eba9e1cb2f97
-# Modifier et compléter le programme
+# Modifiez et complétez le programme
 ... await input_line("Quel est votre âge?")
 ...
 ```
@@ -291,7 +291,7 @@ Voici trois programmes:
 
 1. Quelles sont les différences?
 2. Que vont-ils afficher?
-3. Faire un ordinogramme pour chacun.
+3. Faites un ordinogramme pour chacun.
 
 <table style="width: 100%"><tr style="text-align: center">
   <th>Programme 1</th><th>Programme 2</th><th>Programme 3</th>
@@ -400,8 +400,8 @@ print(not(a <= b))
 
 ## Exercice {num}`exo-py2-rev`
 
-Le programme suivant contient une erreur de logique. Tester le programme avec
-différentes valeurs pour trouver et corriger l'erreur.
+Le programme suivant contient une erreur de logique. Testez le programme avec
+différentes valeurs pour la trouver et corrigez-la.
 
 ```{exec} python
 :editor:
