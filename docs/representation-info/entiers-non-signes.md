@@ -49,72 +49,33 @@ $$
 
 Convertir les nombres suivants de binaire en décimal.
 
-```{exec} python
-:name: question
-:when: never
-:class: hidden
-async def question(*solutions, format='{}'):
-  solutions = [format.format(s) for s in solutions]
-  while True:
-    resp = await input_line("Réponse:")
-    if resp.replace(" ", "").lower() in solutions: break
-    print("\x0cEssaie encore")
-  print("\x0cBravo")
-```
+<script>
+async function questionConv(from, to, value) {
+  const node = document.currentScript;
+  const core = await tdoc.import('tdoc/core.js');
+  const quizz = await tdoc.import('tdoc/quizz.js');
+  const prompt = core.inlineMath(
+    typeof from !== 'number' ? from :
+    from === 10 ? `${value}` :
+    `${value.toString(from).toUpperCase()}_{${from}}`);
+  quizz.question(node, prompt, resp => {
+    resp = resp.replaceAll(' ', '').toUpperCase();
+    return typeof value === 'number' ?
+      core.strToInt(resp, to) === value :
+      resp === value.toUpperCase();
+  });
+  await core.typesetMath(prompt);
+}
+</script>
 
-```{defaults} exec
-:when: load
-:after: question
-:class: hidden
-```
-
-1.  $10_2$
-
-    ```{exec} python
-    await question(0b10)
-    ```
-
-2.  $101_2$
-
-    ```{exec} python
-    await question(0b101)
-    ```
-
-3.  $1111_2$
-
-    ```{exec} python
-    await question(0b1111)
-    ```
-
-4.  $1001_2$
-
-    ```{exec} python
-    await question(0b1001)
-    ```
-
-5.  $0110_2$
-
-    ```{exec} python
-    await question(0b0110)
-    ```
-
-6.  $1101_2$
-
-    ```{exec} python
-    await question(0b1101)
-    ```
-
-7.  $1010101_2$
-
-    ```{exec} python
-    await question(0b1010101)
-    ```
-
-8.  $1100110_2$
-
-    ```{exec} python
-    await question(0b1100110)
-    ```
+1.  <script>questionConv(2, 10, 0b10);</script>
+2.  <script>questionConv(2, 10, 0b101);</script>
+3.  <script>questionConv(2, 10, 0b1111);</script>
+4.  <script>questionConv(2, 10, 0b1001);</script>
+5.  <script>questionConv(2, 10, 0b0110);</script>
+6.  <script>questionConv(2, 10, 0b1101);</script>
+7.  <script>questionConv(2, 10, 0b1010101);</script>
+8.  <script>questionConv(2, 10, 0b1100110);</script>
 
 ## Conversion décimal - binaire
 
@@ -148,81 +109,23 @@ $$149 = 10010101_2$$
 
 Convertir les nombres suivants de décimal en binaire.
 
-1.  $3$
-
-    ```{exec} python
-    await question(3, format='{:b}')
-    ```
-
-2.  $6$
-
-    ```{exec} python
-    await question(6, format='{:b}')
-    ```
-
-3.  $9$
-
-    ```{exec} python
-    await question(9, format='{:b}')
-    ```
-
-4.  $41$
-
-    ```{exec} python
-    await question(41, format='{:b}')
-    ```
-
-5.  $64$
-
-    ```{exec} python
-    await question(64, format='{:b}')
-    ```
-
-6.  $171$
-
-    ```{exec} python
-    await question(171, format='{:b}')
-    ```
-
-7.  $720$
-
-    ```{exec} python
-    await question(720, format='{:b}')
-    ```
-
-8.  $1573$
-
-    ```{exec} python
-    await question(1573, format='{:b}')
-    ```
+1.  <script>questionConv(10, 2, 3);</script>
+2.  <script>questionConv(10, 2, 6);</script>
+3.  <script>questionConv(10, 2, 9);</script>
+4.  <script>questionConv(10, 2, 41);</script>
+5.  <script>questionConv(10, 2, 64);</script>
+6.  <script>questionConv(10, 2, 171);</script>
+7.  <script>questionConv(10, 2, 720);</script>
+8.  <script>questionConv(10, 2, 1573);</script>
 
 ## Exercice {num}`exo-info`
 
 Combien de bits faut-il pour écrire les nombres suivants en base 2?
 
-1.  $13$
-
-    ```{exec} python
-    await question("4", "4bits")
-    ```
-
-2.  $37$
-
-    ```{exec} python
-    await question("6", "6bits")
-    ```
-
-3.  $128$
-
-    ```{exec} python
-    await question("8", "8bits")
-    ```
-
-4.  $350$
-
-    ```{exec} python
-    await question("9", "9bits")
-    ```
+1.  <script>questionConv('13', 10, Math.ceil(Math.log2(13 + 1)));</script>
+2.  <script>questionConv('37', 10, Math.ceil(Math.log2(37 + 1)));</script>
+3.  <script>questionConv('128', 10, Math.ceil(Math.log2(128 + 1)));</script>
+4.  <script>questionConv('350', 10, Math.ceil(Math.log2(350 + 1)));</script>
 
 ## Conversion binaire - hexadécimal
 
@@ -256,53 +159,15 @@ $$A0D7_{16} = 1010\,0000\,1101\,0111_{2}$$
 
 Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
-1.  $1000\,0111_2$
-
-    ```{exec} python
-    await question(0b10000111, format='{:x}')
-    ```
-
-2.  $0101\,1010_2$
-
-    ```{exec} python
-    await question(0b01011010, format='{:x}')
-    ```
-
-3.  $1001\,1111_2$
-
-    ```{exec} python
-    await question(0b10011111, format='{:x}')
-    ```
-
-4.  $0111\,0001\,1110\,1001_2$
-
-    ```{exec} python
-    await question(0b0111000111101001, format='{:x}')
-    ```
-
-5.  $3A_{16}$
-
-    ```{exec} python
-    await question(0x3a, format='{:b}')
-    ```
-
-6.  $F4_{16}$
-
-    ```{exec} python
-    await question(0xf4, format='{:b}')
-    ```
-
-7.  $BD_{16}$
-
-    ```{exec} python
-    await question(0xbd, format='{:b}')
-    ```
-
-8.  $9C\,2E_{16}$
-
-    ```{exec} python
-    await question(0x9c2e, format='{:b}')
-    ```
+1.  <script>questionConv('1000\\,0111_2', 16, 0b10000111);</script>
+2.  <script>questionConv('0101\\,1010_2', 16, 0b01011010);</script>
+3.  <script>questionConv('1001\\,1111_2', 16, 0b10011111);</script>
+4.  <script>questionConv('0111\\,0001\\,1110\\,1001_2', 16,
+                         0b0111000111101001);</script>
+5.  <script>questionConv(16, 2, 0x3a);</script>
+6.  <script>questionConv(16, 2, 0xf4);</script>
+7.  <script>questionConv(16, 2, 0xbd);</script>
+8.  <script>questionConv('9C\\,2E_{16}', 2, 0x9c2e);</script>
 
 ## L'addition de nombres entiers en binaire
 
@@ -353,54 +218,20 @@ Un exemple coûteux d'overflow est le [vol 501 d'Ariane 5](https://fr.wikipedia.
 
 Effectuer les additions suivantes sur 4 bits.
 
-1.  $0010 + 0011$
-
-    ```{exec} python
-    await question(0b0010 + 0b0011, format='{:04b}')
-    ```
-
-2.  $0101 + 1000$
-
-    ```{exec} python
-    await question(0b0101 + 0b1000, format='{:04b}')
-    ```
-
-3.  $1011 + 0001$
-
-    ```{exec} python
-    await question(0b1011 + 0b0001, format='{:04b}')
-    ```
-
-4.  $1111 + 1000$
-
-    ```{exec} python
-    await question("overflow")
-    ```
+1.  <script>questionConv('0010_2 + 0011_2', 2, 0b0010 + 0b0011);</script>
+2.  <script>questionConv('0101_2 + 1000_2', 2, 0b0101 + 0b1000);</script>
+3.  <script>questionConv('1011_2 + 0001_2', 2, 0b1011 + 0b0001);</script>
+4.  <script>questionConv('1111_2 + 1000_2', 2, 'overflow');</script>
 
 ## Exercice {num}`exo-info`
 
 Effectuer les additions suivantes sur 8 bits.
 
-1.  $0110\,0110 + 0011\,0010$
-
-    ```{exec} python
-    await question(0b01100110 + 0b00110010, format='{:08b}')
-    ```
-
-2.  $0101\,1111 + 1000\,0000$
-
-    ```{exec} python
-    await question(0b01011111 + 0b10000000, format='{:08b}')
-    ```
-
-3.  $1011\,0001 + 0010\,1101$
-
-    ```{exec} python
-    await question(0b10110001 + 0b00101101, format='{:08b}')
-    ```
-
-4.  $0011\,1100 + 0110\,0101$
-
-    ```{exec} python
-    await question(0b00111100 + 0b01100101, format='{:08b}')
-    ```
+1.  <script>questionConv('0110\\,0110_2 + 0011\\,0010_2', 2,
+                         0b01100110 + 0b00110010);</script>
+2.  <script>questionConv('0101\\,1111_2 + 1000\\,0000_2', 2,
+                         0b01011111 + 0b10000000);</script>
+3.  <script>questionConv('1011\\,0001_2 + 0010\\,1101_2', 2,
+                         0b10110001 + 0b00101101);</script>
+4.  <script>questionConv('0011\\,1100_2 + 0110\\,0101_2', 2,
+                         0b00111100 + 0b01100101);</script>

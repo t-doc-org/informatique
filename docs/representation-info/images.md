@@ -3,6 +3,11 @@
 
 # Images
 
+```{metadata}
+scripts:
+  - src: quizz-helpers.js
+```
+
 Nous avons vu comment représenter des nombres et des caractères. Maintenant nous
 allons nous intéresser aux images.
 
@@ -190,69 +195,47 @@ prend rapidement beaucoup de place.
 <table class="table-couleur">
   <tr>
     <th>Couleur</th>
-    <th>Nom</th>
-    <th>Code hexadécimal</th>
-    <th>Code décimal (R,G,B)</th>
+    <th>Nom</th><th>Code hexadécimal</th><th>Code décimal (R,G,B)</th>
   </tr>
   <tr>
     <td style="background-color: #000000;"></td>
-    <td>Black</td>
-    <td>#000000</td>
-    <td>(0, 0, 0)</td>
+    <td>black</td><td>#000000</td><td>(0, 0, 0)</td>
   </tr>
   <tr>
     <td style="background-color: #ffffff;"></td>
-    <td>White</td>
-    <td>#FFFFFF</td>
-    <td>(255, 255, 255)</td>
+    <td>white</td><td>#FFFFFF</td><td>(255, 255, 255)</td>
   </tr>
   <tr>
     <td style="background-color: #ff0000;"></td>
-    <td>Red</td>
-    <td>#FF0000</td>
-    <td>(255, 0, 0)</td>
+    <td>red</td><td>#FF0000</td><td>(255, 0, 0)</td>
   </tr>
   <tr>
     <td style="background-color: #00ff00;"></td>
-    <td>Lime</td>
-    <td>#00FF00</td>
-    <td>(0, 255, 0)</td>
+    <td>lime</td><td>#00FF00</td><td>(0, 255, 0)</td>
   </tr>
   <tr>
     <td style="background-color: #0000ff;"></td>
-    <td>Blue</td>
-    <td>#0000FF</td>
-    <td>(0, 0, 255)</td>
+    <td>blue</td><td>#0000FF</td><td>(0, 0, 255)</td>
   </tr>
   <tr>
     <td style="background-color: #ffff00;"></td>
-    <td>Yellow</td>
-    <td>#FFFF00</td>
-    <td>(255, 255, 0)</td>
+    <td>yellow</td><td>#FFFF00</td><td>(255, 255, 0)</td>
   </tr>
   <tr>
     <td style="background-color: #00ffff;"></td>
-    <td>Cyan</td>
-    <td>#00FFFF</td>
-    <td>(0, 255, 255)</td>
+    <td>cyan</td><td>#00FFFF</td><td>(0, 255, 255)</td>
   </tr>
   <tr>
     <td style="background-color: #ff00ff;"></td>
-    <td>Magenta</td>
-    <td>#FF00FF</td>
-    <td>(255, 0, 255)</td>
+    <td>magenta</td><td>#FF00FF</td><td>(255, 0, 255)</td>
   </tr>
   <tr>
     <td style="background-color: #c0c0c0;"></td>
-    <td>Silver</td>
-    <td>#C0C0C0</td>
-    <td>(192, 192, 192)</td>
+    <td>silver</td><td>#C0C0C0</td><td>(192, 192, 192)</td>
   </tr>
   <tr>
     <td style="background-color: #808080;"></td>
-    <td>Gray</td>
-    <td>#808080</td>
-    <td>(128, 128, 128)</td>
+    <td>gray</td><td>#808080</td><td>(128, 128, 128)</td>
   </tr>
 </table>
 
@@ -268,47 +251,20 @@ y a les références de toutes les couleurs possibles.
 Quel est le poids d'une image de 500 sur 300 pixels (1 pixel est équivalent à
 une case) codée...
 
-```{exec} python
-:name: question-poids
-:when: never
-:class: hidden
-async def question(*reponses):
-  while True:
-    resp = await input_line("Réponse en ko:")
-    if resp in reponses: break
-    print("\x0cEssaie encore")
-  print("\x0cBravo")
-```
-
-```{defaults} exec
-:when: load
-:after: question-poids
-:class: hidden
-```
-
-1.  ... en noir et blanc?
-
-    ```{exec} python
-    await question("18.75", "18,75")
-    ```
-
-2.  ... en 4 niveaux de gris?
-
-    ```{exec} python
-    await question("37.5", "37,5")
-    ```
-
-3.  ... en 256 niveaux de gris?
-
-    ```{exec} python
-    await question("150")
-    ```
-
-4.  ... en RGB?
-
-    ```{exec} python
-    await question("450")
-    ```
+1.  <script>
+    tdoc.question("... en noir et blanc? (en ko)",
+                  {"18.75": true, "18,75": true});
+    </script>
+2.  <script>
+    tdoc.question("... en 4 niveaux de gris? (en ko)",
+                  {"37.5": true, "37,5": true});
+    </script>
+3.  <script>
+    tdoc.question("... en 256 niveaux de gris? (en ko)", {"150": true});
+    </script>
+4.  <script>
+    tdoc.question("... en RGB? (en ko)", {"450": true});
+    </script>
 
 ## Exercice {num}`exo-info`
 
@@ -319,23 +275,20 @@ Quel est le code décimal et hexadécimal d'un pixel...
 4. ... en jaune?
 
 ```{solution}
-| couleur    | code décimal | code hexadécimal |
-|:-----------|:------------:|:----------------:|
-| 1. noir    | 0/0/0        | #000000          |
-| 2. blanc   | 255/255/255  | #FFFFFF          |
-| 3. gris    | 214/214/214  | #D6D6D6          |
-| 4. jaune   | 255/255/0    | #FFFF00          |
+| Couleur    | Code décimal          | Code hexadécimal |
+|:-----------|:---------------------:|:----------------:|
+| 1. noir    | (0, 0, 0)             | #000000          |
+| 2. blanc   | (255, 255, 255)       | #FFFFFF          |
+| 3. gris    | p.ex. (214, 214, 214) | #D6D6D6          |
+| 4. jaune   | (255, 255, 0)         | #FFFF00          |
 ```
 
 ## Exercice {num}`exo-info`
 
 Quelle couleur est représentée par les codes RGB suivants?
-1. (100,50,200)
-2. (20,200,250)
-3. (50,220,50)
-
-
-<!-- TODO: Espace blanc dans les solutions. -->
+1. (100, 50, 200)
+2. (20, 200, 250)
+3. (50, 220, 50)
 
 ```{solution}
 <style>
@@ -356,17 +309,17 @@ Quelle couleur est représentée par les codes RGB suivants?
 <table class="table-sol">
   <tr>
     <td>(100, 50, 200)</td>
-    <td>Violet</td>
+    <td>violet</td>
     <td style="background-color: rgb(100, 50, 200)"></td>
   </tr>
   <tr>
     <td>(20,200,250)</td>
-    <td>Bleu</td>
+    <td>bleu</td>
     <td style="background-color: rgb(20,200,250)"></td>
   </tr>
   <tr>
     <td>(50,220,50)</td>
-    <td>Vert</td>
+    <td>vert</td>
     <td style="background-color: rgb(50,220,50)"></td>
   </tr>
 </table>

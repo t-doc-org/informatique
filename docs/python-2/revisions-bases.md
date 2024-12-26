@@ -3,6 +3,11 @@
 
 # Révisions - Bases
 
+```{metadata}
+scripts:
+  - src: quizz-helpers.js
+```
+
 ## Variable
 
 Une **variable** permet de garder en mémoire des données (une valeur numérique,
@@ -17,14 +22,14 @@ Quelques règles à respecter:
   Exemple: cote_carre
 - Le nom d'une variable ne doit pas contenir de caractère accentué.
 - Le nom d'une variable doit commencer par une lettre ou le caractère de
-soulignement.
+  soulignement.
 - Le nom d'une variable ne peut contenir que les caractères alphanumériques
-(A-z 0-9 et \_)
+  (A-z 0-9 et \_)
 - Les majuscules et les minuscules font une différence.
   Exemple: mon\_age, mon\_Age, mon\_AGE sont trois variables différentes
 
 L'**affectation** d'une variable se fait avec un nom de variable, suivi
- du signe `=` et de la valeur:\
+du signe `=` et de la valeur:\
 `age = 17`.
 
 ## Opérateurs mathématiques
@@ -140,142 +145,47 @@ commençant par # sera ignorée lors de l'exécution du programme.
 
 Quel est le résultat des expressions suivantes en Python?
 
-1.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("23 // 5 = ")
-      if resp == "4": break
-      print("\x0cIl faut effectuer la division entière de 23 par 5.")
-    print("\x0cBravo!")
-    ```
+1.  <script>
+    tdoc.question('23 // 5 =', {'4': true},
+                  "Il faut effectuer la division entière de 23 par 5.");
+    </script>
 
-2.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("23 % 5 = ")
-      if resp == "3": break
-      print("\x0c% est le reste de la division entière")
-    print("\x0cBravo!")
-    ```
+2.  <script>
+    tdoc.question('23 % 5 =', {'3': true},
+                  "% est le reste de la division entière.");
+    </script>
 
-3.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("23 / 5 = ")
-      if resp == "4.6": break
-      if resp == "4,6":
-        print("\x0cEn Python, il faut utiliser des points pour les nombres à virgule.")
-      else:
-        print("\x0cIl faut effectuer la division.")
-    print("\x0cBravo!")
-    ```
+3.  <script>
+    tdoc.question('23 / 5 =', {
+      '4.6': true,
+      '4,6': "En Python, il faut utiliser des points pour les nombres à " +
+             "virgule.",
+    }, "Il faut effectuer la division.");
+    </script>
 
-4.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("10 - 2 * 5 = ")
-      if resp == "0": break
-      if resp == "40":
-        print("\x0cEn Python, l'ordre de priorité est le même qu'en maths.")
-      else:
-        print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
+4.  <script>
+    tdoc.question('10 - 2 * 5 =', {
+      '0': true,
+      '40': "En Python, l'ordre de priorité est le même qu'en maths.",
+    });
+    </script>
 
-5.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("(1 + 3 * 2)**2 - 1 = ")
-      if resp == "48": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
+5.  <script>tdoc.question('(1 + 3 * 2) ** 2 - 1 =', {'48': true});</script>
 
 ## Exercice {num}`exo-py2-rev`
 
 De quel type sont les données suivantes?
 
-1.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("\"Salut\"")
-      resp = resp.lower()
-      if resp == "str" or resp == "string": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-2.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("5.0")
-      resp = resp.lower()
-      if resp == "float" or resp == "flottant": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-3.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("5 > 7")
-      resp = resp.lower()
-      if resp == "bool" or resp == "booléen" or resp == "boolean": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-4.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("120")
-      resp = resp.lower()
-      if resp == "int" or resp == "integer": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-5.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("9 // 2")
-      resp = resp.lower()
-      if resp == "int" or resp == "integer": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-6.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("(3 + 7) / 2")
-      resp = resp.lower()
-      if resp == "float" or resp == "flottant": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
+1.  <script>tdoc.question('"Salut"', {'str': true, 'string': true});</script>
+2.  <script>tdoc.question('5.0', {'float': true, 'flottant': true});</script>
+3.  <script>
+    tdoc.question('5 > 7', {'bool': true, 'booléen': true, 'boolean': true});
+    </script>
+4.  <script>tdoc.question('120', {'int': true, 'integer': true});</script>
+5.  <script>tdoc.question('9 // 2', {'int': true, 'integer': true});</script>
+6.  <script>
+    tdoc.question('(3 + 7) / 2', {'float': true, 'flottant': true});
+    </script>
 
 ## Exercice {num}`exo-py2-rev`
 
@@ -362,6 +272,7 @@ l'aide du message d'erreur.
 ## Exercice {num}`exo-py2-rev`
 
 Faites le tableau d'états du programme suivant:
+
 ```{exec} python
 :linenos:
 a = 8

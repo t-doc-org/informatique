@@ -5,6 +5,8 @@
 
 ```{metadata}
 hide-solutions: true
+scripts:
+  - src: quizz-helpers.js
 ```
 
 En Python, une liste est une variable dans laquelle il est possible de stocker
@@ -58,12 +60,12 @@ liste_vide = []
 
 ### Exercice {num}`exo-py2`
 
-1. Créez les listes suivantes en Python :
+1.  Créez les listes suivantes en Python :
     - Les salles de classe dans lesquelles tu as des cours
     - Les années de naissance des membres de ta famille
     - La taille en mètres de tes amis
 
-2. Affichez les trois listes.
+2.  Affichez les trois listes.
 
 ```{exec} python
 :editor: bda26e73-b3dc-4d27-807c-e90f97d2ea25
@@ -152,7 +154,6 @@ print(couleurs[6])
 ```
 ````
 
-
 ### Exercice {num}`exo-py2`
 
 Ajoutez les instructions nécessaires pour que l'affichage de la liste soit le
@@ -225,7 +226,6 @@ La fonction `controle_position` prend en paramètre une liste à 2 éléments
 correspondant à la position d'un personnage. Cette fonction doit afficher
 "Position correcte" si les 2 coordonnées sont strictement positives.
 
-
 ```{exec} python
 :editor: 61333d65-5221-4b00-867b-736bbee822a6
 def controle_position(position):
@@ -294,6 +294,12 @@ ma_liste.count(mon_element)
 
 ### Exercice {num}`exo-py2`
 
+<script>
+function question(...args) {
+  tdoc.question("Que va afficher ce programme?", ...args);
+}
+</script>
+
 1.  ```{exec} python
     :linenos:
     :when: never
@@ -301,15 +307,9 @@ ma_liste.count(mon_element)
     print(liste[4])
     ```
 
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Que va afficher ce programme? ")
-      if resp.replace(" ", "") == "7": break
-      print("\x0cLe premier élément se trouve à l'index 0.")
-    print("\x0cBravo!")
-    ```
+    <script>
+    question({'7': true}, "Le premier élément se trouve à l'index 0.");
+    </script>
 
 2.  ```{exec} python
     :linenos:
@@ -319,15 +319,10 @@ ma_liste.count(mon_element)
     print(liste)
     ```
 
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Que va afficher ce programme? ")
-      if resp.replace(" ", "") == "[1,5,4,12,7,6,10,2]": break
-      print("\x0cLe premier élément se trouve à l'index 0.")
-    print("\x0cBravo!")
-    ```
+    <script>
+    question({'[1,5,4,12,7,6,10,2]': true},
+             "Le premier élément se trouve à l'index 0.");
+    </script>
 
 3.  ```{exec} python
     :linenos:
@@ -337,15 +332,11 @@ ma_liste.count(mon_element)
     print(liste)
     ```
 
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Que va afficher ce programme? ")
-      if resp.replace(" ", "") == "[1,4,12,7,6,10,2]": break
-      print("\x0cLa fonction remove(element) efface la première occurecce de l'élément donné entre parenthèse.")
-    print("\x0cBravo!")
-    ```
+    <script>
+    question({'[1,4,12,7,6,10,2]': true},
+             "La fonction remove(element) efface la première occurrence de " +
+             "l'élément donné entre parenthèses.");
+    </script>
 
 4.  ```{exec} python
     :linenos:
@@ -355,15 +346,10 @@ ma_liste.count(mon_element)
     print(liste)
     ```
 
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Que va afficher ce programme? ")
-      if resp.replace(" ", "") == "[1,2,4,5,7,9,10,12]": break
-      print("\x0cLa fonction sort() trie les éléments par ordre croissant.")
-    print("\x0cBravo!")
-    ```
+    <script>
+    question({'[1,2,4,5,7,9,10,12]': true},
+             "La fonction sort() trie les éléments par ordre croissant.");
+    </script>
 
 5.  ```{exec} python
     :linenos:
@@ -373,17 +359,11 @@ ma_liste.count(mon_element)
     print(liste)
     ```
 
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Que va afficher ce programme? ")
-      if resp.replace(" ", "") == "[1,5,12,7,9,10,2]": break
-      print("\x0cdel efface l'élément donné.")
-    print("\x0cBravo!")
-    ```
+    <script>
+    question({'[1,5,12,7,9,10,2]': true}, "del efface l'élément donné.");
+    </script>
 
-5.  ```{exec} python
+6.  ```{exec} python
     :linenos:
     :when: never
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
@@ -391,28 +371,23 @@ ma_liste.count(mon_element)
     print(liste)
     ```
 
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Que va afficher ce programme? ")
-      if resp.replace(" ", "") == "[1,6,5,4,12,7,9,10,2]": break
-      print("\x0cLa fonction insert(1, 6) insère l'élément 6 à l'index 1.")
-    print("\x0cBravo!")
-    ```
+    <script>
+    question({'[1,6,5,4,12,7,9,10,2]': true},
+             "La fonction insert(1, 6) insère l'élément 6 à l'index 1.");
+    </script>
 
 ### Exercice {num}`exo-py2`
 
-1. Créez une liste, nommée `sports` avec les éléments suivants: `kayak`,
-`escrime` et `escalade`.
-2. Affichez la liste et son nombre d'éléments.
-3. Demandez cinq sports à l'utilisateur et ajoutez-les à la liste `sports`.
-4. Afficher la liste et son nombre d'éléments.
-5. Ajoutez l'élément `tennis de table` à l'index 3.
-6. Affichez la liste et son nombre d'éléments.
-7. Effacez l'élément `escalade`.
-8. Affichez la liste et son nombre d'éléments.
-9. Quel est l'index d'`escrime`? Affichez l'index d'`escrime`.
+1.  Créez une liste, nommée `sports` avec les éléments suivants: `kayak`,
+    `escrime` et `escalade`.
+2.  Affichez la liste et son nombre d'éléments.
+3.  Demandez cinq sports à l'utilisateur et ajoutez-les à la liste `sports`.
+4.  Afficher la liste et son nombre d'éléments.
+5.  Ajoutez l'élément `tennis de table` à l'index 3.
+6.  Affichez la liste et son nombre d'éléments.
+7.  Effacez l'élément `escalade`.
+8.  Affichez la liste et son nombre d'éléments.
+9.  Quel est l'index d'`escrime`? Affichez l'index d'`escrime`.
 10. Effacez le cinquième élément de la liste.
 11. Affichez la liste et son nombre d'éléments.
 
@@ -442,13 +417,13 @@ print(sports, len(sports))
 
 ### Exercice {num}`exo-py2`
 
-1. Demandez à l'utilisateur d'entrer 6 nombres et stockez-les dans la liste
-'nombres'.
-2. Afficher la liste.
-3. Trier la liste.
-4. Afficher la liste.
-5. Inverser l'ordre des éléments.
-6. Afficher la somme des éléments.
+1.  Demandez à l'utilisateur d'entrer 6 nombres et stockez-les dans la liste
+    'nombres'.
+2.  Afficher la liste.
+3.  Trier la liste.
+4.  Afficher la liste.
+5.  Inverser l'ordre des éléments.
+6.  Afficher la somme des éléments.
 
 ```{exec} python
 :editor: 1d0149fa-92a5-4cd1-8984-1b83ed61054d
@@ -667,8 +642,7 @@ print("liste_b.append(7)", "liste_a:", liste_a, "liste_b:", liste_b)
 ```
 
 En écrivant `liste_b = liste_a`, le programme fait une référence de la variable
-`liste_b` vers la liste `[1, 2, 3]' qui est la même liste que la liste
+`liste_b` vers la liste `[1, 2, 3]` qui est la même liste que la liste
 référencée par `liste_a`. Ensuite en modifiant `liste_a` avec `liste_a[1] = 9`,
-`liste_b` sera aussi modifiée, car c'est la même liste. `De même, si je modifie
+`liste_b` sera aussi modifiée, car c'est la même liste. De même, si je modifie
 `liste_b`, `liste_a` sera aussi modifiée.
-

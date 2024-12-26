@@ -5,6 +5,8 @@
 
 ```{metadata}
 hide-solutions: true
+scripts:
+  - src: quizz-helpers.js
 ```
 
 ## Définition
@@ -33,9 +35,9 @@ Règles à respecter:
   Exemple: cote_carre
 - Le nom d'une variable ne doit pas contenir de caractère accentué.
 - Le nom d'une variable doit commencer par une lettre ou le caractère de
-soulignement.
+  soulignement.
 - Le nom d'une variable ne peut contenir que les caractères alphanumériques
-(A-z 0-9 et \_)
+  (A-z 0-9 et \_)
 - Les majuscules et les minuscules font une différence.
   Exemple: mon\_age, mon\_Age, mon\_AGE sont trois variables différentes
 ```
@@ -51,129 +53,26 @@ En Python, il existe 4 types de données primitifs.
 | **str**   | string    | Chaînes de caractères            | "Bonjour"          |
 | **bool**  | booléen   | Résultat d'un test: Vrai ou Faux | 2<1 renvoie False  |
 
-
 ## Exercice {num}`exo-py1`
 
 De quel type sont les variables suivantes:
 
-1.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("60")
-      resp = resp.lower()
-      if resp == "int" or resp == "integer": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-2.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("\"Hello Bob\"")
-      resp = resp.lower()
-      if resp == "str" or resp == "string": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-
-3.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("1.34")
-      resp = resp.lower()
-      if resp == "float" or resp == "flottant": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-4.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("True")
-      resp = resp.lower()
-      if resp == "bool" or resp == "booléen" or resp == "boolean": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-5.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("\"45\"")
-      resp = resp.lower()
-      if resp == "str" or resp == "string": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-6.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("-1.23")
-      resp = resp.lower()
-      if resp == "float" or resp == "flottant": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-7.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("\"False\"")
-      resp = resp.lower()
-      if resp == "str" or resp == "string": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-8.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("0.34")
-      resp = resp.lower()
-      if resp == "float" or resp == "flottant": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-9.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("-12")
-      resp = resp.lower()
-      if resp == "int" or resp == "integer": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
-10. ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("False")
-      resp = resp.lower()
-      if resp == "bool" or resp == "booléen" or resp == "boolean": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
+1.  <script>tdoc.question('60', {'int': true, 'integer': true});</script>
+2.  <script>
+    tdoc.question('"Hello Bob"', {'str': true, 'string': true});
+    </script>
+3.  <script>tdoc.question('1.34', {'float': true, 'flottant': true});</script>
+4.  <script>
+    tdoc.question('True', {'bool': true, 'booléen': true, 'boolean': true});
+    </script>
+5.  <script>tdoc.question('"45"', {'str': true, 'string': true});</script>
+6.  <script>tdoc.question('-1.23', {'float': true, 'flottant': true});</script>
+7.  <script>tdoc.question('"False"', {'str': true, 'string': true});</script>
+8.  <script>tdoc.question('0.34', {'float': true, 'flottant': true});</script>
+9.  <script>tdoc.question('-12', {'int': true, 'integer': true});</script>
+10. <script>
+    tdoc.question('False', {'bool': true, 'booléen': true, 'boolean': true});
+    </script>
 
 ## Affectation d'une variable
 
@@ -191,8 +90,8 @@ promu = True              # La variable promu est de type bool
 
 ## Exercice {num}`exo-py1`
 
-Ce programme Python déclare 5 variables, mais contient une erreur par ligne. Trouvez
-et corrigez-les.
+Ce programme Python déclare 5 variables, mais contient une erreur par ligne.
+Trouvez et corrigez-les.
 
 ```{exec} python
 :editor:
@@ -213,19 +112,14 @@ porte_ouverte = False
 nombre_de_voitures = 10
 ```
 
-
-1. À la création d'une variable, le nom doit toujours être à gauche du signe
-égal, et la valeur à droite.
-
-2. Une valeur de type `str` doit être entourée de guillemets.
-
-3. Une valeur de type `float` s'écrit non pas avec une virgule mais avec un
-point.
-
-4. Une valeur de type `bool` prend une majuscule à `True` et `False`.
-
+1.  À la création d'une variable, le nom doit toujours être à gauche du signe
+    égal, et la valeur à droite.
+2.  Une valeur de type `str` doit être entourée de guillemets.
+3.  Une valeur de type `float` s'écrit non pas avec une virgule mais avec un
+    point.
+4.  Une valeur de type `bool` prend une majuscule à `True` et `False`.
 5.  Les noms de variables ne peuvent pas contenir d'espaces. Généralement, en
-Python, on les remplace alors par le caractère de soulignement.
+    Python, on les remplace alors par le caractère de soulignement.
 ````
 
 ## Opérateurs mathématiques
@@ -248,67 +142,32 @@ nombres.
 
 Quel est le résultat des expressions suivantes en Python?
 
-1.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("15 // 4 = ")
-      if resp == "3": break
-      print("\x0cIl faut effectuer la division entière de 23 par 5.")
-    print("\x0cBravo!")
-    ```
+1.  <script>
+    tdoc.question('15 // 4 =', {'3': true},
+                  "Il faut effectuer la division entière de 15 par 4.");
+    </script>
 
-2.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("16 % 5 = ")
-      if resp == "1": break
-      print("\x0c% est le reste de la division entière")
-    print("\x0cBravo!")
-    ```
+2.  <script>
+    tdoc.question('16 % 5 =', {'1': true},
+                  "% est le reste de la division entière.");
+    </script>
 
-3.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("12 / 5 = ")
-      if resp == "2.4": break
-      if resp == "2,4":
-        print("\x0cEn Python, il faut utiliser des points pour les nombres à virgule.")
-      else:
-        print("\x0cIl faut effectuer la division.")
-    print("\x0cBravo!")
-    ```
+3.  <script>
+    tdoc.question('12 / 5 =', {
+      '2.4': true,
+      '2,4': "En Python, il faut utiliser des points pour les nombres à " +
+             "virgule.",
+    }, "Il faut effectuer la division.");
+    </script>
 
-4.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("4 - 3 * 2 = ")
-      if resp == "-2": break
-      if resp == "2":
-        print("\x0cEn Python, l'ordre de priorité est le même qu'en maths.")
-      else:
-        print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
+4.  <script>
+    tdoc.question('4 - 3 * 2 =', {
+      '-2': true,
+      '2': "En Python, l'ordre de priorité est le même qu'en maths.",
+    });
+    </script>
 
-5.  ```{exec} python
-    :linenos:
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("(1 + 2)**2 - 1 = ")
-      if resp == "8": break
-      print("\x0cEssaie encore.")
-    print("\x0cBravo!")
-    ```
-
+5.  <script>tdoc.question('(1 + 2) ** 2 - 1 =', {'8': true});</script>
 
 ## Exécution d'un programme
 

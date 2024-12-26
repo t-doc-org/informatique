@@ -79,113 +79,70 @@ Vérification: l'addition d'un nombre et de son opposé doit donner 0.
 Déterminer l'opposé des nombres suivants en binaire, ainsi que la valeur
 décimale de celui-ci.
 
-```{exec} python
-:name: question-oppose
-:when: never
-:class: hidden
-async def question(valeur, bits):
-  format = f"{{:0{bits}b}}"
-  wrap = 1 << bits
-  oppose = wrap - valeur
-  while True:
-    resp = await input_line("Opposé:")
-    if resp.replace(" ", "") == format.format(oppose) : break
-    print("\x0cEssaie encore")
-  print("\x0cL'opposé est correct.")
-  if oppose >= wrap // 2: oppose -= wrap
-  while True:
-    resp = await input_line("Valeur décimale:")
-    if resp.replace(" ", "") == str(oppose): break
-    print("\x0cEssaie encore")
-  print("\x0cBravo")
-```
-
-```{defaults} exec
-:when: load
-:after: question-oppose
-:class: hidden
-```
+<script>
+async function questionNeg(value, bits) {
+  let node = document.currentScript;
+  const core = await tdoc.import('tdoc/core.js');
+  const quizz = await tdoc.import('tdoc/quizz.js');
+  const wrap = 1 << bits, neg = wrap - value;
+  node = quizz.question(node, "Opposé:", resp => {
+    return core.strToInt(resp.replaceAll(' ', ''), 2) === neg;
+  });
+  const dec = neg < wrap / 2 ? neg : neg - wrap;
+  quizz.question(node, "Valeur décimale:", resp => {
+    return core.strToInt(resp.replaceAll(' ', '')) === dec;
+  });
+}
+</script>
 
 1.  $0111_2$
-
-    ```{exec} python
-    await question(0b0111, 4)
-    ```
-
+    <script>questionNeg(0b0111, 4);</script>
 2.  $0101\,1010_2$
-
-    ```{exec} python
-    await question(0b01011010, 8)
-    ```
-
+    <script>questionNeg(0b01011010, 8);</script>
 3.  $1111_2$
-
-    ```{exec} python
-    await question(0b1111, 4)
-    ```
-
+    <script>questionNeg(0b1111, 4);</script>
 4.  $1101\,0001_2$
-
-    ```{exec} python
-    await question(0b11010001, 8)
-    ```
+    <script>questionNeg(0b11010001, 8);</script>
 
 ## Exercice {num}`exo-info`
 
 Répondre aux questions suivantes:
 
-```{exec} python
-:name: question-magnitude
-:when: never
-:class: hidden
-async def une_question(question, reponse):
-  while True:
-    resp = await input_line(question)
-    if resp.replace(" ", "") == str(reponse): break
-    print("\x0cEssaie encore")
-  print("\x0c", end='', flush=True)
+<script>
+async function questionMagOne(node, prompt, value, bits, radix) {
+  const core = await tdoc.import('tdoc/core.js');
+  const quizz = await tdoc.import('tdoc/quizz.js');
+  if (bits && value < 0 && radix === 2) value += 1 << bits;
+  return quizz.question(node, prompt, resp => {
+    resp = resp.replaceAll(' ', '');
+    return (bits ? core.strToInt(resp, radix) : resp) === value;
+  });
+}
 
-async def question(valeur_4, valeur_8, valeur_n):
-  await une_question("... sur 4 bits, en décimal?", valeur_4)
-  await une_question("... sur 4 bits, en binaire?",
-                     "{:04b}".format(valeur_4).lstrip('-'))
-  await une_question("... sur 8 bits, en décimal?", valeur_8)
-  await une_question("... sur 8 bits, en binaire?",
-                     "{:08b}".format(valeur_8).lstrip('-'))
-  await une_question("... sur n bits?", valeur_n)
-  print("\x0cBravo")
-```
-
-```{defaults} exec
-:when: load
-:after: question-magnitude
-:class: hidden
-```
+async function questionMag(v4, v8, vn) {
+  let node = document.currentScript;
+  node = await questionMagOne(node, "... sur 4 bits, en décimal?", v4, 4, 10);
+  node = await questionMagOne(node, "... sur 4 bits, en binaire?", v4, 4, 2);
+  node = await questionMagOne(node, "... sur 8 bits, en décimal?", v8, 8, 10);
+  node = await questionMagOne(node, "... sur 8 bits, en binaire?", v8, 8, 2);
+  await questionMagOne(node, "... sur n bits?", vn);
+}
+</script>
 
 1.  Quel est le plus **grand** nombre entier **non signé** que nous pouvons
     écrire...
-
-    ```{exec} python
-    await question((1 << 4) - 1, (1 << 8) - 1, "2^n-1")
-    ```
+    <script>questionMag((1 << 4) - 1, (1 << 8) - 1, "2^n-1");</script>
 
 2.  Quel est le plus **petit** nombre entier **non signé** que nous pouvons
     écrire...
-
-    ```{exec} python
-    await question(0, 0, "0")
-    ```
+    <script>questionMag(0, 0, "0");</script>
 
 3.  Quel est le plus **grand** nombre entier **signé** que nous pouvons
     écrire...
-
-    ```{exec} python
-    await question((1 << (4 - 1)) - 1, (1 << (8 - 1)) - 1, "2^(n-1)-1")
-    ```
+    <script>
+    questionMag((1 << (4 - 1)) - 1, (1 << (8 - 1)) - 1, "2^(n-1)-1");
+    </script>
 
 4.  Quel est le plus **petit** nombre entier **signé** que nous pouvons
     écrire...
-
-    ```{exec} python
-    await question(-(1 << (4 - 1)), -(1 << (8 - 1)), "-2^(n-1)")
-    ```
+    <script>questionMag(-(1 << (4 - 1)), -(1 << (8 - 1)), "-2^(n-1)");</script>

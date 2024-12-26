@@ -3,7 +3,6 @@
 
 # Caractères
 
-
 Pour pouvoir écrire, afficher ou stocker un texte sur un ordinateur, il faut
 définir une représentation des caractères compréhensibles pour celui-ci. L'idée
 la plus simple est de faire correspondre à chaque caractère un numéro unique.
@@ -29,7 +28,7 @@ caractères sur 7 bits.
 Le tableau ci-dessus semble désordonné, mais si on écrit le code hexadécimal, il
 y a une certaine logique:
 - Les codes 0 à 31 ne sont pas des caractère, on les appelle les caractères de
-contrôle (ex: retour à la ligne, bip sonore);
+  contrôle (ex: retour à la ligne, bip sonore);
 - Le code 32 est l'espace;
 - Les codes 48 à 57 sont les chiffres;
 - Les codes 65 à 90 représentent les majuscules;
@@ -43,69 +42,48 @@ identique dans tous les pays.
 ## Exercice {num}`exo-info`
 
 Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
-1. INFO
 
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "494E464F": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
+<script>
+async function questionEncode(prompt) {
+    const node = document.currentScript;
+    const quizz = await tdoc.import('tdoc/quizz.js');
+    const codes = [];
+    for (let i = 0; i < prompt.length; ++i) {
+      codes.push(prompt.charCodeAt(i).toString(16).padStart(2, '0'));
+    }
+    const value = codes.join('').toUpperCase();
+    quizz.question(node, prompt, resp => {
+        resp = resp.replaceAll(' ', '').toUpperCase();
+        return resp === value;
+    });
+}
+</script>
 
-2. hello
-
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "68656C6C6F": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-
-3. Bonjour
-
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "426F6E6A6F7572": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-
-4. ;-)
-
-    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("Réponse:")
-      if resp.replace(" ", "") == "3B2D29": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
+1.  <script>questionEncode("INFO");</script>
+2.  <script>questionEncode("hello");</script>
+3.  <script>questionEncode("Bonjour");</script>
+4.  <script>questionEncode(";-)");</script>
 
 ## Exercice {num}`exo-info`
 
 Convertir le texte suivant écrit en code ASCII hexadécimal.
 
-4A 27 61 69 6D 65 20 6C 27 69 6E 66 6F 72 6D 61 74 69 71 75 65 21
+<script>
+async function questionDecode(prompt) {
+  const node = document.currentScript;
+  const quizz = await tdoc.import('tdoc/quizz.js');
+  let value = '';
+  for (const c of prompt.split(' ')) {
+    value += String.fromCharCode(Number.parseInt(c, 16));
+  }
+  quizz.question(node, prompt, resp => resp === value);
+}
+</script>
 
-```{exec} python
-:when: load
-:class: hidden
-while True:
-  resp = await input_line("Réponse:")
-  if resp == "J'aime l'informatique!": break
-  print("\x0cEssaie encore")
-print("\x0cBravo")
-```
+- <script>
+  questionDecode(
+    '4A 27 61 69 6D 65 20 6C 27 69 6E 66 6F 72 6D 61 74 69 71 75 65 21');
+  </script>
 
 ## Exercice {num}`exo-info`
 
@@ -117,7 +95,6 @@ Le code de A majuscule en décimale est 65, pour a minuscule c'est 97. Il faut
 donc ajouter 32 (97-65) pour passer d'une lettre majuscule à l'équivalent en
 minuscule.
 ```
-
 
 ## Unicode
 
@@ -139,17 +116,17 @@ spéciale doit être codé, nous utilisons pour ce caractère le Unicode.
 
 Encodage du mot **Début** avec les différents encodages:
 - ASCII\
- Le mot Début contient 5 caractères qui sont codés sur 7 bits. Nous auront donc
- besoin de $5 \cdot 7 = 35$ bits. Comme le code ASCII n'a pas d'accent,
- résultat sera **Debut**.
+  Le mot Début contient 5 caractères qui sont codés sur 7 bits. Nous auront donc
+  besoin de $5 \cdot 7 = 35$ bits. Comme le code ASCII n'a pas d'accent,
+  résultat sera **Debut**.
 - Unicode\
- Le mot Début contient 5 caractères qui sont codés sur 2 octets (16 bits). Nous
- auront donc besoin de $5 \cdot 16 = 80$ bits. Le résultat sera **Début**.
+  Le mot Début contient 5 caractères qui sont codés sur 2 octets (16 bits). Nous
+  auront donc besoin de $5 \cdot 16 = 80$ bits. Le résultat sera **Début**.
 - UTF-8\
- Le mot Début contient 5 caractères. Les caractères sans accents sont codés sur
- 8 bits (7 bits du code ASCII et un bit pour indiquer si c'est l'ASCII qui est
- utilisé ou le Unicode) et ceux avec accents sur 16 bits. nous auront donc
- besoin de $4 \cdot 8 + 1 \cdot 16 = 48$ bits. Le résultat sera **Début**.
+  Le mot Début contient 5 caractères. Les caractères sans accents sont codés sur
+  8 bits (7 bits du code ASCII et un bit pour indiquer si c'est l'ASCII qui est
+  utilisé ou le Unicode) et ceux avec accents sur 16 bits. nous auront donc
+  besoin de $4 \cdot 8 + 1 \cdot 16 = 48$ bits. Le résultat sera **Début**.
 
 Encodage mot **Début** avec l'UTF-8 en binaire:\
 L'Unicode du caractère é est U+00E9 qui en binaire donne **1110 1001**
@@ -157,7 +134,6 @@ L'Unicode du caractère é est U+00E9 qui en binaire donne **1110 1001**
 | D    | é    | b    | u    | t    |
 |:----:|:----:|:----:|:----:|:----:|
 |<span style="color:red">0</span>1000100| <span style="color:red">11</span>0000**11** <span style="color:red">1</span>0**101001**| <span style="color:red">0</span>1100010| <span style="color:red">0</span>1110101| <span style="color:red">0</span>1110100|
-
 
 ## Exercice {num}`exo-info`
 

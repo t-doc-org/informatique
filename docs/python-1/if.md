@@ -5,6 +5,8 @@
 
 ```{metadata}
 hide-solutions: true
+scripts:
+  - src: quizz-helpers.js
 ```
 
 Une instruction conditionnelle est composée d'une **condition** puis d'un
@@ -30,62 +32,14 @@ Le résultat de la comparaison est de type booléen: True ou False.
 
 Est-ce que les expressions suivantes sont `True` (vrai) ou `False` (faux)?
 
-1.    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("1 + 1 == 2")
-      if resp.replace(" ", "").lower() == "true" or resp.replace(" ", "").lower() == "vrai": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-
-2.    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("2 * 3 == 3")
-      if resp.replace(" ", "").lower() == "false" or resp.replace(" ", "").lower() == "faux": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-3.    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("2 + 3 != 4")
-      if resp.replace(" ", "").lower() == "true" or resp.replace(" ", "").lower() == "vrai": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
-
-4.    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("14 >= 15")
-      if resp.replace(" ", "").lower() == "false" or resp.replace(" ", "").lower() == "faux": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-
-5.    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("2 ** 3 == 6")
-      if resp.replace(" ", "").lower() == "false" or resp.replace(" ", "").lower() == "faux": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-
-6.    ```{exec} python
-    :when: load
-    :class: hidden
-    while True:
-      resp = await input_line("13 >= 13")
-      if resp.replace(" ", "").lower() == "true" or resp.replace(" ", "").lower() == "vrai": break
-      print("\x0cEssaie encore")
-    print("\x0cBravo")
-    ```
+1.  <script>tdoc.question("1 + 1 == 2", {'true': true, 'vrai': true});</script>
+2.  <script>tdoc.question("2 * 3 == 3", {'false': true, 'faux': true});</script>
+3.  <script>tdoc.question("2 + 3 != 4", {'true': true, 'vrai': true});</script>
+4.  <script>tdoc.question("14 >= 15", {'false': true, 'faux': true});</script>
+5.  <script>
+    tdoc.question("2 ** 3 == 6", {'false': true, 'faux': true});
+    </script>
+6.  <script>tdoc.question("13 >= 13", {'true': true, 'vrai': true});</script>
 
 ## Exemple if {num}`ex-py1`
 
@@ -162,7 +116,6 @@ Dans l'exemple ci-dessus, il y a le choix entre trois types de films (action,
 comédie et horreur). Le branchement `else` gérera tous les autres cas. Remplacer
 la valeur de la variable `type_film` par "action", "horreur" ou "drame". Que se
 passe-t-il?
-
 
 ### Exercice {num}`exo-py1`
 
@@ -278,20 +231,7 @@ else:
 
 ### Exercice {num}`exo-py1`
 
-```{exec} python
-:name: python-buffer
-:class: hidden
-from io import StringIO
-import sys
-
-old_stdout = sys.stdout
-sys.stdout = StringIO()
-```
-
-```{exec} python
-:name: python-cond-valeur
-:after: python-buffer
-:when: never
+```{code-block} python
 :linenos:
 x = 2
 if x <= -1 :
@@ -302,22 +242,11 @@ else :
   print(2 * x - 5)
 ```
 
-```{exec} python
-:linenos:
-:after: python-cond-valeur
-:when: load
-:class: hidden
-s = sys.stdout.getvalue().rstrip()
-sys.stdout = old_stdout
-while True:
-  resp = await input_line("Que va afficher ce programme?")
-  if resp == s: break
-  if resp.replace(" ", "") == "-x+2":
-    print("\x0cIl faut remplacer x par sa valeur.")
-  else:
-    print("\x0cEssaie encore.")
-print("\x0cBravo!")
-```
+<script>
+tdoc.question("Que va afficher ce programme?", {
+  '0': true, '-x+2': "Il faut remplacer x par sa valeur.",
+});
+</script>
 
 ### Exercice {num}`exo-py1`
 
