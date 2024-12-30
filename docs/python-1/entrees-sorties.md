@@ -12,7 +12,7 @@ hide-solutions: true
 La fonction `print()` permet d'afficher une phrase ou la valeur d'un objet sur
 la console.
 
-## Exemples {num}`exo-io`
+## Exemple {num}`ex-io`
 
 1.  Affichage d'une chaine de caractère. Ce qui se trouve entre guillements sera
     affiché tel quel.
