@@ -609,40 +609,91 @@ for i in range(1, 11):
 
 ### Exemple {num}`ex-py2`
 
-Exécutez le code donné. Que se passe-t-il lorsque je modifie la valeur de la
+Exécutez le code donné. Que se passe-t-il lorsqu'on modifie la valeur de la
 variable 'a'?
 
 ```{exec} python
 :editor:
 a = 5
 b = a
-print("b = a", "a:", a, "b:", b)
+print("a:", a, "b:", b)
 a = 4
-print("a = 4", "a:", a, "b:", b)
+print("a:", a, "b:", b)
 ```
 
-En écrivant `b = a`, le programme sauvegarde la valeur que la variable `a` à ce
-moment-là dans la variable `b`. Si ensuite je modifie la valeur de la variable
-`a` cela n'a aucune incidence sur la variable 'b'.
+<table style="width: 100%"><tr style="text-align: center">
+</tr><tr style="vertical-align: center"><td>
+
+`a = 5` crée une référence de la variable `a` vers la valeur `5` en mémoire.
+
+`b = a` crée une référence de la variable `b` vers la même valeur que celle
+référencée par `a`.
+
+</td><td style="padding-left: 1rem">
+
+```{image} images/ref-nombre1.png
+:alt: Références sur le même nombre
+:width: 90%
+:align: center
+```
+
+</td></tr></table>
+
+<table style="width: 100%"><tr style="text-align: center">
+</tr><tr style="vertical-align: center"><td>
+
+`a = 4` change la référence de la variable `a` vers la valeur `4` en mémoire.
+
+La référence de la variable `b` elle ne change pas.
+
+</td><td style="padding-left: 1rem">
+
+```{image} images/ref-nombre2.png
+:alt: Références sur des nombres différents
+:width: 80%
+:align: center
+```
+
+</td></tr></table>
+
 
 ### Exemple {num}`ex-py2`
 
-Exécutez le code donné. Que se passe-t-il lorsque je modifie la valeur de la
+Exécutez le code donné. Que se passe-t-il lorsqu'on modifie la valeur de la
 variable 'liste_a'?
 
 ```{exec} python
 :editor:
-liste_a = [1, 2, 3]
-liste_b = liste_a
-print("liste_b = liste_a", "liste_a:", liste_a, "liste_b:", liste_b)
-liste_a[1] = 9
-print("liste_a[1] = 9", "liste_a:", liste_a, "liste_b:", liste_b)
-liste_b.append(7)
-print("liste_b.append(7)", "liste_a:", liste_a, "liste_b:", liste_b)
+a = [1, 2, 3]
+b = a
+print("a:", a, "b:", b)
+a[1] = 9
+print("a:", a, "b:", b)
+b.append(7)
+print("a:", a, "b:", b)
 ```
 
-En écrivant `liste_b = liste_a`, le programme fait une référence de la variable
-`liste_b` vers la liste `[1, 2, 3]` qui est la même liste que la liste
-référencée par `liste_a`. Ensuite en modifiant `liste_a` avec `liste_a[1] = 9`,
-`liste_b` sera aussi modifiée, car c'est la même liste. De même, si je modifie
-`liste_b`, `liste_a` sera aussi modifiée.
+<table style="width: 100%"><tr style="text-align: center">
+</tr><tr style="vertical-align: center"><td>
+
+`a = [1, 2, 3]` crée une référence de la variable `a` vers la liste `[1, 2, 3]`
+en mémoire.
+
+`b = a` crée une référence de la variable `b` vers la même liste que celle
+référencée par `a`.
+
+</td><td style="padding-left: 1rem">
+
+```{image} images/ref-liste.png
+:alt: Références sur une liste
+:width: 90%
+:align: center
+```
+
+</td></tr></table>
+
+En modifiant le deuxième élément de la variable `a` avec `a[1] = 9`, la variable
+`b` est aussi modifiée, car c'est la même liste qui est référencée.
+
+De même `b.append(7)` modifie aussi la variable `a` (elle ajoute un élément).
+

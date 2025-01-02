@@ -98,37 +98,52 @@ minuscule.
 
 ## Unicode
 
-Une solution au problème des caractères accentués est l'Unicode, car il permet
-de représenter tous les caractères spécifiques à chaque langue. Mais pour cela,
-nous avons besoin de 2 octets pour coder un caractère, ce qui est le double par
-rapport au ASCII. Il faut donc le double de place pour stocker un texte, alors
-qu'en français, par exemple, nous n'avons besoin que de quelques caractères en
-plus par rapport au ASCII. Ce n'est donc pas optimal.
+Une solution au problème des caractères spécifiques à chaque langue, comme les
+accents, est l'Unicode. L'Unicode est une table de correspondance capable de
+représenter plus d'un million de caractères, ce qui suffit largement pour
+inclure tous les caractères de toutes les langues, ainsi que des icônes et des
+emojis. Cependant, cette capacité nécessite d'utiliser jusqu'à 3 octets pour
+encoder un seul caractère.
+
+Cela implique que le stockage d'un texte demanderait trois fois plus de mémoire
+qu'avec un encodage ASCII. Or, dans des langues comme le français, seuls
+quelques caractères supplémentaires (notamment les lettres accentuées)
+s'ajoutent à ceux déjà pris en charge par l'ASCII. Cela rend cette solution peu
+optimale.
 
 ## UTF-8
 
-L'UTF-8[^sn1] est une combinaison du code ASCII et de l'Unicode. Il est donc
-universel et efficace.
+L'UTF-8[^sn1] permet de représenter tous les caractères de l'Unicode tout en
+optimisant l'espace utilisé, grâce à une taille d'encodage variable selon le
+caractère. Les caractères les plus fréquents occupent ainsi le moins de place.
+
+- Il encode sur 8 bits (1 octet) toutes les valeurs du tableau ASCII.
+- Il encode sur 16 bits (2 octets) les caractères les plus courants des
+principales langues, comme les lettres accentuées.
+- Il encode sur 24 bits (3 octets) des caractères comme ceux utilisés en
+chinois, japonais et coréen.
+- Il encode sur 32 bits (4 octets) des éléments comme les emojis, les caractères
+mathématiques, et autres symboles.
 [^sn1]: Universal Character Set Transformation Format
 
-Nous utilisons le code ASCII pour coder le texte, mais lorsqu'un caractère
-spéciale doit être codé, nous utilisons pour ce caractère le Unicode.
+Ainsi, la taille de l'encodage varie selon les caractères utilisés. Par exemple,
+en français, les lettres sans accents seront encodées sur 8 bits, tandis que les
+lettres accentuées nécessiteront 16 bits.
 
 Encodage du mot **Début** avec les différents encodages:
 - ASCII\
   Le mot Début contient 5 caractères qui sont codés sur 7 bits. Nous auront donc
-  besoin de $5 \cdot 7 = 35$ bits. Comme le code ASCII n'a pas d'accent,
+  besoin de $5 \cdot 7 = 35$ bits. Comme le code ASCII n'a pas d'accent, le
   résultat sera **Debut**.
 - Unicode\
-  Le mot Début contient 5 caractères qui sont codés sur 2 octets (16 bits). Nous
-  auront donc besoin de $5 \cdot 16 = 80$ bits. Le résultat sera **Début**.
+  Le mot Début contient 5 caractères qui sont codés sur 3 octets (24 bits). Nous
+  auront donc besoin de $5 \cdot 24 = 120$ bits. Le résultat sera **Début**.
 - UTF-8\
   Le mot Début contient 5 caractères. Les caractères sans accents sont codés sur
-  8 bits (7 bits du code ASCII et un bit pour indiquer si c'est l'ASCII qui est
-  utilisé ou le Unicode) et ceux avec accents sur 16 bits. nous auront donc
-  besoin de $4 \cdot 8 + 1 \cdot 16 = 48$ bits. Le résultat sera **Début**.
+  8 bits et ceux avec accents sur 16 bits. nous auront donc besoin de
+  $4 \cdot 8 + 1 \cdot 16 = 48$ bits. Le résultat sera **Début**.
 
-Encodage mot **Début** avec l'UTF-8 en binaire:\
+Exemple d'encodage du mot **Début** avec l'UTF-8 en binaire:\
 L'Unicode du caractère é est U+00E9 qui en binaire donne **1110 1001**
 
 | D    | é    | b    | u    | t    |
@@ -137,12 +152,12 @@ L'Unicode du caractère é est U+00E9 qui en binaire donne **1110 1001**
 
 ## Exercice {num}`exo-info`
 
-Pourquoi n'utilise-t-on pas toujours l'unicode étant donné que nous pouvons
+Pourquoi n'utilise-t-on pas toujours l'Unicode étant donné que nous pouvons
 coder tous les caractères pour chaque langue?
 
 ```{solution}
-Nous n'utilisons pas toujours le unicdoe, parce qu'il prend beaucoup de place de
-stockage : 2 octets par caractère. C'est le double par rapport au code ASCII.
+Nous n'utilisons pas toujours l'Unicode, parce qu'il prend beaucoup de place de
+stockage : 3 octets par caractère. C'est le triple par rapport au code ASCII.
 ```
 
 ## Exercice {num}`exo-info`
@@ -154,6 +169,6 @@ Quels sont les avantages et les inconvénients des différents encodages?
 |:--------:|:---------:|:-------------:|
 | ASCII | Prend peu de place (7 bits par lettre) | Ne permet pas d'encoder les caractères avec accents |
 | ASCII étendu | Prend peu de place (8 bits par lettre) et permet d'encoder certains accents | Pas standardisé donc différent suivant les pays |
-| Unicode | Permet d'encoder tous les caractères possibles (accents, caractères chinois, ...) | Prend beaucoup de place: 2 octets (16 bits) |
-| UTF-8 | Universel et efficace: utilise 2 octets seulement quand c'est nécessaire |  |
+| Unicode | Permet d'encoder tous les caractères possibles (accents, caractères chinois, ...) | Prend beaucoup de place: 3 octets (24 bits) |
+| UTF-8 | Universel et efficace: utilise 1 octet pour les caractères les plus fréquents. 2, 3 ou 4 octets seulement quand c'est nécessaire |  |
 ```
