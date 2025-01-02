@@ -504,8 +504,8 @@ la réduction. Les réductions sont les suivantes :
 def calcule_reduction(code):
  # à compléter
 
-prix = float(await input_line("Quel est le prix de l'article ?"))
-code = await input_line("Quel est le code de réduction ?")
+prix = float(await input_line("Quel est le prix de l'article? "))
+code = await input_line("Quel est le code de réduction? ")
 
 reduction = calcule_reduction(code)
 prix_final = prix * (1 - reduction)
@@ -525,8 +525,8 @@ def calcule_reduction(code):
   else:
     return 0
 
-prix = float(await input_line("Quel est le prix de l'article ?"))
-code = await input_line("Quel est le code de réduction ?")
+prix = float(await input_line("Quel est le prix de l'article? "))
+code = await input_line("Quel est le code de réduction? ")
 
 reduction = calcule_reduction(code)
 prix_final = prix * (1 - reduction)
