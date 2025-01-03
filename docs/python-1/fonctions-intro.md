@@ -7,7 +7,7 @@
 :name: py-chess
 :when: never
 :class: hidden
-:include: chess.py
+from chess import *
 moves = []
 def deplace(dx, dy): moves.append((dx, dy))
 ```

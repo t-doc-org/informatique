@@ -5,7 +5,7 @@ import asyncio
 import enum
 import math
 
-from tdoc import svg
+from tdoc import core, svg
 
 
 class White(enum.StrEnum):
@@ -102,7 +102,7 @@ def add_spots(piece, moves):
         piece.board.spot(str(i), x, y)
 
 
-loop = asyncio.get_running_loop()
+_loop = asyncio.get_running_loop()
 
 
 async def animate(piece, moves, pause=0.1, **kwargs):
@@ -112,24 +112,24 @@ async def animate(piece, moves, pause=0.1, **kwargs):
 
 
 async def animate_move(piece, dx, dy, velocity=2.0, framerate=60):
-    start = loop.time()
+    start = _loop.time()
     ox, oy = piece.x, piece.y
     dist = math.sqrt(dx * dx + dy * dy)
     while True:
         await asyncio.sleep(1 / framerate)
-        t = loop.time() - start
+        t = _loop.time() - start
         a = velocity * t / dist
         if a >= 1: break
         piece.move(ox + a * dx, oy + a * dy)
-        await render(piece.board)
+        await core.render(piece.board)
     piece.move(ox + dx, oy + dy)
-    await render(piece.board)
+    await core.render(piece.board)
 
 
 async def render_and_check(piece, moves, solution):
     add_spots(piece, solution)
-    await render(piece.board)
+    await core.render(piece.board)
     await animate(piece, moves)
     if moves == solution:
         piece.board.success("Bravo!", -10)
-        await render(piece.board)
+        await core.render(piece.board)
