@@ -36,7 +36,7 @@ But: Mettre en forme un document texte avec des styles.
 
 1. Téléchargez le [`document sans les styles`](document-sans-styles.docx).
 2. Ouvrez-le document, activez les modifications et en utilisant
-`Enregistrez sous` sauvegardez le document en suivant les instructions données
+`Enregistrer sous` sauvegardez le document en suivant les instructions données
 par l'enseignant(e).
 
 Voici la page Web du document, vous devez mettre en forme le document Word **en
