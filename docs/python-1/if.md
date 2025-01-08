@@ -324,7 +324,7 @@ Que vont afficher les programmes suivants?
 ### Exercice {num}`exo-py1`
 
 Le programme suivant est censé affiché le tarif appliqué en fonction de l'âge de
-l'utilisateur. Mais il contient une erreur par ligne, touvez-les et corrigez-les.
+l'utilisateur. Mais il contient une erreur par ligne, trouvez-les et corrigez-les.
 
 ```{exec} python
 :editor: 55bcea11-979f-43f8-8d1c-46f102e56b2b
@@ -517,7 +517,7 @@ Une salle de trampoline pratique les tarifs suivants pour deux personnes:
 
 - Si les deux personnes sont mineures, elles payent chacune 7 francs.
 - Si une seule est mineure, elles payent un tarif de groupe de 18 francs.
-- Si les deux personnes sont majeurs, elles payent au total 25 francs.
+- Si les deux personnes sont majeures, elles payent au total 25 francs.
 
 Écrivez un programme qui demande l'âge des deux personnes et affiche le prix à
 payer.
@@ -628,7 +628,7 @@ print(14 % 5)          # Tester avec d'autres valeurs
 
 ```{exec} python
 :editor: 085b1907-ca58-4a00-aab4-bcde5e4092cd
-# Ecrivez le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -648,7 +648,7 @@ divisible par 3 et 13.
 
 ```{exec} python
 :editor: 1f78a8da-5f0e-452d-b427-59943fea89f2
-# Ecrivez le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}

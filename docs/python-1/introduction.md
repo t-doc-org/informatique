@@ -30,9 +30,10 @@ else:
 
 ## Type de langages
 
-Il existe des langage de **bas niveau** et des langages de **haut niveau**.
+Il existe des langages de **bas niveau** et des langages de **haut niveau**.
 
-Les langages de bas niveau, comme l'assembleur, sont très proches du code machine.
+Les langages de bas niveau, comme l'assembleur, sont très proches du code
+machine.
 
 ```{code-block}
 :linenos:

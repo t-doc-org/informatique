@@ -14,7 +14,7 @@ la console.
 
 ## Exemple {num}`ex-io`
 
-1.  Affichage d'une chaine de caractère. Ce qui se trouve entre guillements sera
+1.  Affichage d'une chaine de caractère. Ce qui se trouve entre guillemets sera
     affiché tel quel.
 
     ```{exec} python
@@ -241,7 +241,7 @@ sera perdue.
 
 La valeur rentrée par l'utilisateur est stockée sous forme de
 chaîne de caractères (de type `str`). Pour effectuer des calculs, il faut la
-convertir en `int` (nombre entier) ou en `float` (nombre à vigule).
+convertir en `int` (nombre entier) ou en `float` (nombre à virgule).
 
 ```{important}
 L'utilisation de la fonction input sur ce site est différente de ce qui est
@@ -305,7 +305,7 @@ print("Fin du programme")
 
 Le programme ci-dessous devrait permettre de calculer l'année de naissance de
 l'utilisateur. Toutefois, celui-ci contient au moins une erreur par ligne.
-Trouvez et corrigez-less.
+Trouvez et corrigez-les.
 
 ```{exec} python
 :editor:

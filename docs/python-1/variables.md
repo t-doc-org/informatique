@@ -11,7 +11,7 @@ scripts:
 
 ## Définition
 
-Nous pouvons nous représenté une variable comme l'association d'une étiquette
+Nous pouvons nous représenter une variable comme l'association d'une étiquette
 (nom de la variable) et d'une boîte pouvant contenir une donnée (emplacement
 dans la mémoire).
 
@@ -305,9 +305,9 @@ print(nombre_habitants, cout, prix)
 
 ## Exercice {num}`exo-py1`
 
-Complétez le programme ci-dessous de manière à ce qu'il permette de calculer la
-moyenne des notes principales dans la variable du même nom. La note de math est
-de 4 et demi, la note de français de 6 et la note d'allemand de 5 et demi.
+Complétez le programme ci-dessous de manière à ce qu'il calcule la moyenne des
+notes principales dans la variable du même nom. La note de math est de 4 et
+demi, la note de français de 6 et la note d'allemand de 5 et demi.
 
 ```{exec} python
 :editor: 184beb38-78ed-48e5-89ee-2c19101727fd
