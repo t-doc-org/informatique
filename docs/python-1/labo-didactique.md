@@ -52,6 +52,7 @@ function logConversation(data) {
             'time': Date.now(), 'location': location.href, 'session': session,
             'data': {
                 'id': conversationId,
+                'name': name.value,
                 'conversation': structuredClone(conversation),
                 ...data,
             },
@@ -82,7 +83,7 @@ const examples = [
     [`\
 Écrivez le programme python qui correspond à l'algorithme suivant, en définissant
 une variable pour chaque donnée:
-La longueur vaut 10. La largeur vaut 5. Calculer et afficher l'aire du
+La longueur vaut 10. La largeur vaut 5. Calculez et affichez l'aire du
 rectangle
 `,`Utiliser des variables et la fonction print. Mais pas de calcul avec des
 cercles`],
@@ -119,6 +120,11 @@ await domLoaded;
 
 const name = document.querySelector('#name');
 
+const nameKey = 't-doc:firstName'
+let mistakeMade = false;
+let firstName = localStorage.getItem(nameKey);
+if (firstName !== null) name.setAttribute('value', firstName);
+
 const question = document.querySelector('#question pre');
 const feedback = document.querySelector('#feedback');
 
@@ -142,7 +148,8 @@ async function generateQuestion() {
     const [ex, constraint] = examples[level];
     const q = await ask(`\
 Génère un autre exercice du même genre que l'exemple suivant sans mentionner \
-la condition dans l'énoncé, mais sois créatif ou pas.
+la condition dans l'énoncé, mais sois créatif ou pas. Utilise plutôt des CHF à \
+la place des euros. Si tu utilises des notes, la note maximale est 6.
 
 ${ex}
 
@@ -152,6 +159,13 @@ commentaire.`);
     feedback.classList.add('hidden');
     question.replaceChildren(text(q));
 }
+
+commencer.addEventListener('click', async () => {
+    await generateQuestion();
+    correct.disabled = newQuestion.disabled = help.disabled = false;
+    commencer.disabled = name.disabled = true;
+    localStorage.setItem(nameKey, name.value);
+});
 
 correct.addEventListener('click', async () => {
     await blocking(async () => {
@@ -224,17 +238,13 @@ condition.
     });
     correct.disabled = true;
 });
-
-let mistakeMade = false;
-
-await generateQuestion();
-correct.disabled = newQuestion.disabled = help.disabled = false;
 </script>
 
 Site d'entrainement d'écriture de programme en Python.
 
 <label for="name">Prénom:</label>
 <input type="text" id="name" size="20"/>
+<button id="commencer" class="tdoc-button">Commencer</button>
 
 ```{code-block} text
 :name: question
