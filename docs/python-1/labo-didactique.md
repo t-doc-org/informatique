@@ -80,40 +80,44 @@ async function ask(prompt) {
 let level = 0;
 const examples = [
     [`\
-Écrire le programme python qui correspond à l'algorithme suivant:
+Écrivez le programme python qui correspond à l'algorithme suivant, en définissant
+une variable pour chaque donnée:
 La longueur vaut 10. La largeur vaut 5. Calculer et afficher l'aire du
 rectangle
-`,`Utiliser des variables et la fonction print.`],
+`,`Utiliser des variables et la fonction print. Mais pas de calcul avec des
+cercles`],
     [`\
-Écrire le programme python qui correspond à l'algorithme suivant:
-Demander l'âge à l'utilisateur.
-S'il a plus de 18 ans, afficher qu'il est majeur, sinon afficher qu'il est
+Écrivez le programme python qui correspond à l'algorithme suivant:
+Demandez l'âge à l'utilisateur.
+S'il a plus de 18 ans, affichez qu'il est majeur, sinon affichez qu'il est
 mineur.
 `, `Il ne doit contenir qu'un if et un else.`],
     [`\
-Écrire le programme python qui correspond à l'algorithme suivant:
-Demander l'âge à l'utilisateur.
-S'il a moins de 16, afficher qu'il n'a pas le droit de boire d'alcool.
-S'il a 16 ans et moins de 18 ans, afficher qu'il a le droit de boire du vin et
+Écrivez le programme python qui correspond à l'algorithme suivant:
+Demandez l'âge à l'utilisateur.
+S'il a moins de 16, affichez qu'il n'a pas le droit de boire d'alcool.
+S'il a 16 ans et moins de 18 ans, affichez qu'il a le droit de boire du vin et
 de la bière.
-Sinon afficher qu'il a le droit de boire de l'alcool.
+Sinon affichez qu'il a le droit de boire de l'alcool.
 `, `Il doit contenir un elif.`],
     [`\
-Écrire le programme python qui correspond à l'algorithme suivant:
-Initialiser une variable compte_a_rebours à 10.
-Tant que compte_a_rebours est plus grand que 0, afficher la valeur de
+Écrivez le programme python qui correspond à l'algorithme suivant:
+Initialisez une variable compte_a_rebours à 10.
+Tant que compte_a_rebours est plus grand que 0, affichez la valeur de
 compte_a_rebours.
 Soustraire 1 à compte_a_rebours.
-Afficher 'BOOM'.
-`, `Utiliser une boucle while.`],
+Affichez 'BOOM'.
+`, `Utilisez une boucle while.`],
         [`\
-Écrire le programme python qui correspond à l'algorithme suivant:
-Afficher les nombres de 1 à 50.
+Écrivez le programme python qui correspond à l'algorithme suivant:
+Affichez les nombres de 1 à 50.
 `, `Utiliser for i in range(n) avec un seul paramètre. Ne pas demander \
 d'afficher des lettres.`]
 ];
 
 await domLoaded;
+
+const name = document.querySelector('#name');
 
 const question = document.querySelector('#question pre');
 const feedback = document.querySelector('#feedback');
@@ -152,7 +156,7 @@ commentaire.`);
 correct.addEventListener('click', async () => {
     await blocking(async () => {
         // Obtient le code de l'utilisateur à partir de l'éditeur.
-        const [editor, _] = findEditor(document.querySelector('#editor'));
+        const editor = findEditor(document.querySelector('#editor'));
         const code = editor.state.doc.toString();
 
         // Demande la correction de la réponse.
@@ -160,6 +164,12 @@ correct.addEventListener('click', async () => {
 Si le code est vide, répondre "Tu n'as pas donné de réponse." \
 Sans s'occuper de la gestion des erreurs et des fautes d'orthographe, le code \
 contient-il des erreurs de syntaxe, d'exécution ou de logique?
+On considère que la fonction suivante a été prédéfinie:
+
+async def input_line(text):
+    return input(text)
+
+Suppose que le code est exécuté dans une fonction asynchrone.
 
 ${code}
 
@@ -222,6 +232,9 @@ correct.disabled = newQuestion.disabled = help.disabled = false;
 </script>
 
 Site d'entrainement d'écriture de programme en Python.
+
+<label for="name">Prénom:</label>
+<input type="text" id="name" size="20"/>
 
 ```{code-block} text
 :name: question
