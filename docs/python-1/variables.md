@@ -12,12 +12,12 @@ scripts:
 ## Définition
 
 Nous pouvons nous représenter une variable comme l'association d'une étiquette
-(nom de la variable) et d'une boîte pouvant contenir une donnée (emplacement
+(nom de la variable) et d'une case pouvant contenir une donnée (emplacement
 dans la mémoire).
 
 ```{image} images/boites.png
 :alt: Boites de variables
-:width: 40%
+:width: 50%
 :align: center
 ```
 
