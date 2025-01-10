@@ -9,7 +9,7 @@ hide-solutions: true
 
 ## Exercice {num}`py2-lab2`
 
-Écrivez un programme pour calculer et afficher la moyenne de 5 notes qui seront
+Écrivez un programme qui calcule et affiche la moyenne de 5 notes qui seront
 demandées à l'utilisateur.
 
 ```{exec} python
