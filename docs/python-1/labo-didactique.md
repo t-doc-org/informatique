@@ -81,30 +81,34 @@ async function ask(prompt) {
 let level = 0;
 const examples = [
     [`\
-Écrivez le programme python qui correspond à l'algorithme suivant, en définissant
-une variable pour chaque donnée:
-La longueur vaut 10. La largeur vaut 5. Calculez et affichez l'aire du
-rectangle
-`,`Utiliser des variables et la fonction print. Mais pas de calcul avec des
-cercles`],
+Écrivez le programme python qui correspond à l'algorithme suivant, en \
+définissant une variable pour chaque donnée:
+La longueur vaut 10. La largeur vaut 5. Calculez et affichez l'aire du rectangle
+`,`Utiliser des variables et la fonction print. Pas de calcul avec des cercles \
+et pas de calcul de pourcentage.
+Un seul calcul à effectuer qui ne peut pas être fait de tête rapidement.`],
     [`\
 Écrivez le programme python qui correspond à l'algorithme suivant:
 Demandez l'âge à l'utilisateur.
-S'il a plus de 18 ans, affichez qu'il est majeur, sinon affichez qu'il est
+S'il a plus de 18 ans, affichez qu'il est majeur, sinon affichez qu'il est \
 mineur.
-`, `Il ne doit contenir qu'un if et un else.`],
+`, `Il ne doit contenir qu'un if et un else. La valeur utile pour le if \
+doit être indiquée. Considérer que la valeur entrée par l'utilisateur est \
+valide`],
     [`\
 Écrivez le programme python qui correspond à l'algorithme suivant:
 Demandez l'âge à l'utilisateur.
 S'il a moins de 16, affichez qu'il n'a pas le droit de boire d'alcool.
-S'il a 16 ans et moins de 18 ans, affichez qu'il a le droit de boire du vin et
+S'il a 16 ans et moins de 18 ans, affichez qu'il a le droit de boire du vin et \
 de la bière.
 Sinon affichez qu'il a le droit de boire de l'alcool.
-`, `Il doit contenir un elif.`],
+`, `Il doit contenir un elif. Les valeurs utiles pour les if, elif et else, \
+doivent être indiquée. Considérer que la valeur entrée par l'utilisateur est \
+valide`],
     [`\
 Écrivez le programme python qui correspond à l'algorithme suivant:
 Initialisez une variable compte_a_rebours à 10.
-Tant que compte_a_rebours est plus grand que 0, affichez la valeur de
+Tant que compte_a_rebours est plus grand que 0, affichez la valeur de \
 compte_a_rebours.
 Soustraire 1 à compte_a_rebours.
 Affichez 'BOOM'.
@@ -148,8 +152,9 @@ async function generateQuestion() {
     const [ex, constraint] = examples[level];
     const q = await ask(`\
 Génère un autre exercice du même genre que l'exemple suivant sans mentionner \
-la condition dans l'énoncé, mais sois créatif ou pas. Utilise plutôt des CHF à \
-la place des euros. Si tu utilises des notes, la note maximale est 6.
+la condition dans l'énoncé, mais sois créatif ou pas. L'énoncé doit avoir du \
+sense. Utilise des CHF à la place des euros. Si l'exercice parle de note de \
+l'élève considérer des notes entre 0 et 6 au dixième.
 
 ${ex}
 
@@ -175,7 +180,9 @@ correct.addEventListener('click', async () => {
 
         // Demande la correction de la réponse.
         const fb = await ask(`\
-Si le code est vide, répondre "Tu n'as pas donné de réponse." \
+Si le code est vide, répondre "Il n'y a pas de réponse."
+Si le code ne contient pas de variable, répondre "Il faut utiliser des \
+variables."
 Sans s'occuper de la gestion des erreurs et des fautes d'orthographe, le code \
 contient-il des erreurs de syntaxe, d'exécution ou de logique?
 On considère que la fonction suivante a été prédéfinie:
