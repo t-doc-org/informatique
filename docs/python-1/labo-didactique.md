@@ -12,6 +12,9 @@ orphan:
 #feedback pre {
     white-space: pre-wrap;
 }
+#level {
+    margin-left: 1rem;
+}
 </style>
 
 <script type="module">
@@ -78,8 +81,8 @@ async function ask(prompt) {
     }
 }
 
-let level = 4;
-let score = 8;
+let level = 0;
+let score = 0;
 const examples = [
     [`\
 Écrivez le programme Python qui correspond à l'algorithme suivant, en \
@@ -137,8 +140,9 @@ const question = document.querySelector('#question pre');
 const feedback = document.querySelector('#feedback');
 
 const correct = document.querySelector('#correct');
-const newQuestion = document.querySelector('#newQuestion');
+const newQuestion = document.querySelector('#new-question');
 const help = document.querySelector('#help');
+const levelNum = document.querySelector('#levelNum');
 
 // Exécute une fonction en bloquant les boutons.
 async function blocking(fn) {
@@ -152,6 +156,7 @@ async function blocking(fn) {
 
 // Génère une nouvelle question.
 async function generateQuestion() {
+    levelNum.textContent = `${level + 1}`;
     question.replaceChildren(text("Génération d'une nouvelle question..."));
     const [ex, constraint] = examples[level];
     const q = await ask(`\
@@ -274,8 +279,9 @@ Site d'entrainement d'écriture de programme en Python.
 ```
 
 <button id="correct" class="tdoc-button" disabled>Corriger</button>
-<button id="newQuestion" class="tdoc-button" disabled>Nouvelle question</button>
+<button id="new-question" class="tdoc-button" disabled>Nouvelle question</button>
 <button id="help" class="tdoc-button" disabled>Aide</button>
+<span id="level">Niveau: <span id="levelNum"></span></span>
 
 ```{exec} python
 :name: editor
