@@ -189,7 +189,7 @@ correct.addEventListener('click', async () => {
 
         // Demande la correction de la réponse.
         const fb = await ask(`\
-Si le code est vide, répondre "Il n'y a pas de réponse."
+Vérifie si le code suivant correspond à l'énoncé.
 Si le code ne contient pas de variable, répondre "Il faut utiliser des \
 variables."
 Sans s'occuper de la gestion des erreurs et des fautes d'orthographe, le code \
@@ -201,8 +201,6 @@ async def input_line(text):
 
 Suppose que le code est exécuté dans une fonction asynchrone.
 
-${code}
-
 Si un cas a été traité dans le if, par exemple if a < 4, il n'est pas \
 nécessaire elif 4 <= a < 7, a <7 est suffisant, car le cas où 4 est plus
 petit que 4 a déjà été traité dans le if. Idem pour le else, ce n'est donc pas \
@@ -211,7 +209,10 @@ une erreur.
 Dans la boucle for i in range(n), la boucle s'effectue de 0 à (n-1).
 Dans la boucle for i in range(m, n), la boucle s'effectue de m à (n-1).
 S'il y a des erreurs, explique-les, mais ne donne pas la solution, sinon \
-renvoie seulement ok et rien d'autre.\
+renvoie seulement ok et rien d'autre.
+Le code commence ici:
+
+${code}
 `);
         if (fb === "ok") {
             feedback.querySelector('pre').replaceChildren("Correct!");
