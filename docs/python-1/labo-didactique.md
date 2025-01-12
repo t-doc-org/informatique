@@ -78,17 +78,18 @@ async function ask(prompt) {
     }
 }
 
-let level = 0;
+let level = 4;
+let score = 8;
 const examples = [
     [`\
-Écrivez le programme python qui correspond à l'algorithme suivant, en \
+Écrivez le programme Python qui correspond à l'algorithme suivant, en \
 définissant une variable pour chaque donnée:
 La longueur vaut 10. La largeur vaut 5. Calculez et affichez l'aire du rectangle
 `,`Utiliser des variables et la fonction print. Pas de calcul avec des cercles \
 et pas de calcul de pourcentage.
 Un seul calcul à effectuer qui ne peut pas être fait de tête rapidement.`],
     [`\
-Écrivez le programme python qui correspond à l'algorithme suivant:
+Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez l'âge à l'utilisateur.
 S'il a plus de 18 ans, affichez qu'il est majeur, sinon affichez qu'il est \
 mineur.
@@ -96,28 +97,31 @@ mineur.
 doit être indiquée. Considérer que la valeur entrée par l'utilisateur est \
 valide`],
     [`\
-Écrivez le programme python qui correspond à l'algorithme suivant:
+Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez l'âge à l'utilisateur.
 S'il a moins de 16, affichez qu'il n'a pas le droit de boire d'alcool.
 S'il a 16 ans et moins de 18 ans, affichez qu'il a le droit de boire du vin et \
 de la bière.
 Sinon affichez qu'il a le droit de boire de l'alcool.
 `, `Il doit contenir un elif. Les valeurs utiles pour les if, elif et else, \
-doivent être indiquée. Considérer que la valeur entrée par l'utilisateur est \
-valide`],
+doivent être indiquée en précisant si c'est strictement ou inclu. Considérer que la \
+valeur entrée par l'utilisateur est valide.
+Pas de calcul à faire, juste afficher du texte.`],
     [`\
-Écrivez le programme python qui correspond à l'algorithme suivant:
+Écrivez le programme Python qui correspond à l'algorithme suivant:
 Initialisez une variable compte_a_rebours à 10.
 Tant que compte_a_rebours est plus grand que 0, affichez la valeur de \
 compte_a_rebours.
 Soustraire 1 à compte_a_rebours.
 Affichez 'BOOM'.
-`, `Utilisez une boucle while.`],
+`, `Utilisez une boucle while. Pas de demande à l'utilisateur. Pas de listes \
+Ne pas utiliser d'exemple avec des notes.`],
         [`\
-Écrivez le programme python qui correspond à l'algorithme suivant:
-Affichez les nombres de 1 à 50.
+Écrivez le programme Python qui correspond à l'un des algorithmes suivants:
+Soit affichez les nombres de 0 à 50 (inclus).
 `, `Utiliser for i in range(n) avec un seul paramètre. Ne pas demander \
-d'afficher des lettres.`]
+d'afficher des lettres. Doit générer une suite des nombres entiers qui se \
+suivent. Les valeurs de début et fin ne doivent pas être les mêmes.`]
 ];
 
 await domLoaded;
@@ -194,9 +198,13 @@ Suppose que le code est exécuté dans une fonction asynchrone.
 
 ${code}
 
-Si un cas a été traité dans le if ou un elif précédent, il n'a pas besoin \
-d'être répété, ce n'est donc pas une erreur.
+Si un cas a été traité dans le if, par exemple if a < 4, il n'est pas \
+nécessaire elif 4 <= a < 7, a <7 est suffisant, car le cas où 4 est plus
+petit que 4 a déjà été traité dans le if. Idem pour le else, ce n'est donc pas \
+une erreur.
+5.0 et 5 sont le même nombre, ce n'est donc pas une erreur.
 Dans la boucle for i in range(n), la boucle s'effectue de 0 à (n-1).
+Dans la boucle for i in range(m, n), la boucle s'effectue de m à (n-1).
 S'il y a des erreurs, explique-les, mais ne donne pas la solution, sinon \
 renvoie seulement ok et rien d'autre.\
 `);
@@ -204,9 +212,12 @@ renvoie seulement ok et rien d'autre.\
             feedback.querySelector('pre').replaceChildren("Correct!");
             feedback.classList.remove('hidden');
             if (!mistakeMade) {
-                level += 1;
-                conversation['messages'] = [];
-                conversationId += 1;
+                score += 1;
+                level = Math.floor(score / 2);
+                if (score % 2 == 0) {
+                    conversation['messages'] = [];
+                    conversationId += 1;
+                }
             }
             if (level >= examples.length) {
                 question.replaceChildren(text("Bravo, tu as terminé!"));
