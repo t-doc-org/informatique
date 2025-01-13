@@ -9,7 +9,7 @@ hide-solutions: true
 
 ## Exercice {num}`py2-lab2`
 
-Écrivez un programme qui calcule et affiche la moyenne de 5 notes qui seront
+Écrivez un programme qui calcule et afficher la moyenne de 5 notes qui seront
 demandées à l'utilisateur.
 
 ```{exec} python
@@ -38,7 +38,7 @@ print(moyenne)
 ## Exercice {num}`py2-lab2:exemple-liste`
 
 Répondez aux questions suivantes en lien avec le programme suivant:
-1.  Que fait `apprend(5.5)`?
+1.  Que fait `append(5.5)`?
 2.  Qu'affiche `print(notes[2])`?
 3.  Quelle différence y a-t-il entre `remove()` et `del`?
 
@@ -255,7 +255,7 @@ nb_notes = int(await input_line("Nombre de notes: "))
 for _ in range(nb_notes):
   notes.append(float(await input_line("Entrer note:")))
 
-# Calcule le somme des notes
+# Calcule la somme des notes
 for note in notes:
     somme += note
 
