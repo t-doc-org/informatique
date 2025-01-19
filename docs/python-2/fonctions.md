@@ -557,7 +557,7 @@ print(amende(120,120))
 ````{solution}
 ```{exec} python
 :linenos:
-def amende(vit_aut, vit_mes):
+def amende(vit_autorisee, vit_mesuree):
   depassement = vit_mesuree - vit_autorisee
   if depassement <= 0:
     return 0

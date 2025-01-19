@@ -285,7 +285,7 @@ Le programme ci-dessous contient une erreur par ligne. Trouvez et corrigez-les.
 
 ```{exec} python
 :editor:
-print "Bienvenue dans ce nouveau programme!"
+print("Bienvenue dans ce nouveau programme!")
 print(nombre_de_pommes = 10)
 print("Vous devez payer" nombre_de_pommes * 1.5 "CHF")
 print(Fin du programme)
