@@ -53,7 +53,7 @@ En Python, il existe 4 types de données primitifs.
 | **str**   | string    | Chaînes de caractères            | "Bonjour"          |
 | **bool**  | booléen   | Résultat d'un test: Vrai ou Faux | 2<1 renvoie False  |
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 De quel type sont les variables suivantes:
 
@@ -88,7 +88,7 @@ moyenne = 5.2             # La variable moyenne est de type float
 promu = True              # La variable promu est de type bool
 ```
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Ce programme Python déclare 5 variables, mais contient une erreur par ligne.
 Trouvez et corrigez-les.
@@ -138,7 +138,7 @@ nombres.
 | %         | Modulo (reste de la division entière) | 26 mod 6| 2        |
 
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Quel est le résultat des expressions suivantes en Python?
 
@@ -176,7 +176,7 @@ ligne et les effectuer. Afin de comprendre comment fonctionne un programme et
 évaluer le résultat, nous allons utiliser des tableaux d'états. Ceux-ci
 permettent de connaître à chaque ligne, la valeur des variables.
 
-## Exemple {num}`ex-var`
+### Exemple {num}`ex-var`
 
 <table style="width: 100%"><tr style="text-align: center">
   <th>Programme</th><th>Tableau d'états</th>
@@ -206,7 +206,7 @@ print(a, b, c, d)
 
 </td></tr></table>
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Déterminez la valeur de chacune des variables de ce programme en créant un
 tableau d'états.
@@ -253,7 +253,7 @@ print(x, y, z)
 
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Déterminez la valeur de chacune des variables de ce programme en créant un
 tableau d'états.
@@ -303,7 +303,7 @@ print(nombre_habitants, cout, prix)
 
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Complétez le programme ci-dessous de manière à ce qu'il calcule la moyenne des
 notes principales dans la variable du même nom. La note de math est de 4 et
@@ -339,7 +339,7 @@ Comme la division a la priorité sur l'addition, il ne faut pas oublier de
 régler la priorité des opérations avec des parenthèses.
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 Écrivez un petit programme en Python permettant de calculer le volume d'un
 cylindre en fonction de son rayon et de sa hauteur. Le programme contiendra les
 lignes suivantes :
@@ -395,7 +395,7 @@ mathématiques, voici les principaux.
 | \*=       | x \*= 6 | x = x * 6    |
 | /=        | x /= 6  | x = x / 6    |
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Écrivez un programme Python contenant une variable `x` initialisée à 10.
 Puis, compléter ce programme pour que celui-ci effectue les opérations
@@ -434,7 +434,7 @@ print(x)
 ```
 ````
 
-## Exercice {num}`exo-py1` (difficile)
+### Exercice {num}`exo-py1` (difficile)
 
 Lisez attentivement le programme ci-dessous et expliquez, en français, ce qu'il
 fait. À quoi correspondent les variables `h1`, `h2`, et `total`.
