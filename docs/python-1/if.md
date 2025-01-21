@@ -125,7 +125,7 @@ passe-t-il?
 Demander à l'utilisateur d'entrer un nombre positif
 Sauvegarder la valeur dans la variable a
 Si a est plus petit que 0 alors
-  écrire "Ce nombre n’est pas positif."
+  écrire "Ce nombre n'est pas positif."
 ```
 
 ```{exec} python
@@ -332,9 +332,9 @@ age = await input_line("Quel âge as-tu? ")
 if age > 18:
 print("Tu payes le tarif enfant.")
 elif age < 65
-  print( Tu payes le tarif adulte. )
+  print("Tu payes le tarif adulte.")
 else age >= 65:
-  print "Tu payes le tarif retraité."
+  print ("Tu payes le tarif retraité.")
 ```
 
 ````{solution}

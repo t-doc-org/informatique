@@ -155,7 +155,7 @@ réponse:
 2. 5.65 * 3.4 =
 3. 4 569 - 8 532 =
 4. 56 / 3 =
-5. Calculer le quotient de la division de 345 par 37.
+5. Calculer le quotient de la division entière de 345 par 37.
 6. Calculer le reste de la division de 345 par 37.
 
 ```{exec} python
@@ -170,7 +170,7 @@ print("452.52 + 27.78 = ", 452.52 + 27.78)
 print("5.65 * 3.4 = ", 5.65 * 3.4)
 print("4569 - 8532 = ", 4569 - 8532)
 print("56 / 3 = ", 56 / 3)
-print("Le quotient de la division de 345 par 37 est ", 345 // 37)
+print("Le quotient de la division entière de 345 par 37 est ", 345 // 37)
 print("Le reste de la division de 345 par 37 est ", 345 % 37)
 ```
 ````
