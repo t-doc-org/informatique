@@ -30,7 +30,7 @@ Il existe différents exemples d'algorithmes:
 - en mathématiques : résoudre une équation du deuxième degré, déterminer si
   un nombre est premier, etc.
 
-## Exercice {num}`exo-alg`
+### Exercice {num}`exo-alg`
 
 ```{image} images/algo-chien-1.png
 :alt: Algorithme du chien 1
@@ -59,7 +59,7 @@ autrement pour les éviter.
   Avancer 2 fois, tourner à droite, avancer, tourner à gauche, avancer 3 fois.
   ```
 
-## Exercice {num}`exo-alg`
+### Exercice {num}`exo-alg`
 
 ```{image} images/algo-chien-2.png
 :alt: Algorithme du chien 2
@@ -86,7 +86,7 @@ et sans répétition.
   fois, tourner à droite, avancer, ramasser l'os, reculer 5 fois.
   ```
 
-## Exercice {num}`exo-alg`
+### Exercice {num}`exo-alg`
 
 ```{image} images/algo-chien-3.png
 :alt: Algorithme du chien 3
@@ -110,7 +110,7 @@ et sans répétition.
   Avancer 6 fois
   ```
 
-## Exercice {num}`exo-alg`
+### Exercice {num}`exo-alg`
 
 ```{image} images/algo-chien-4.png
 :alt: Algorithme du chien 4

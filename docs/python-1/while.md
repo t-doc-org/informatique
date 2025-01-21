@@ -174,7 +174,7 @@ while i <= 5:
 ```
 ````
 
-## Exercice {num}`exo-py1:boom`
+### Exercice {num}`exo-py1:boom`
 
 Nous souhaitons créer un programme qui compte le temps avant qu'une bombe
 explose. Pour cela, un compte à rebours commencera à 10 et ira jusqu'à 1, puis
@@ -222,7 +222,7 @@ print("BOOM")
 ```
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Complétez le programme pour qu'il demande à l'utilisateur la capitale de la
 Suisse. Tant que la réponse n'est pas "Berne", le programme redemande une
@@ -261,7 +261,7 @@ print("Bravo!")
 ```
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Tout d'abord, sans les exécuter, expliquez la différence entre les deux
 programmes. Ensuite, testez-les pour vérifier votre réponse.
@@ -306,7 +306,7 @@ lui aussi exécuté une seule fois, alors qu'avec le `while`, le bloc
 d'intructions sera exécuté tant que la condition `n < 10` est vérifiée.
 ```
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Déterminez la valeur de chacune des variables de ce programme en créant un
 tableau d'états.
@@ -338,7 +338,7 @@ while x < y:
 
 ```
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Écrivez un programme dans lequel l'utilisateur peut consécutivement entrer les
 notes qu'il a faites dans une branche. À la fin, le programme affichera le
@@ -376,7 +376,7 @@ print("Vous avez fait", nb_notes_insuf, "notes insuffisantes")
 ```
 ````
 
-## Exercice {num}`exo-py1`
+### Exercice {num}`exo-py1`
 
 Reprenez l'{numref}`exercice %s<exo-py1:boom>` et modifiez le pour qu'à partir de
 3, il affiche également "Fuyez!".
