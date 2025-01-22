@@ -4,7 +4,6 @@
 # Variables
 
 ```{metadata}
-hide-solutions: true
 scripts:
   - src: quizz-helpers.js
 ```

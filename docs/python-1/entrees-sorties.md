@@ -3,10 +3,6 @@
 
 # Entrées et sorties
 
-```{metadata}
-hide-solutions: true
-```
-
 ## Fonction `print()`
 
 La fonction `print()` permet d'afficher une phrase ou la valeur d'un objet sur

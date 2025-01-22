@@ -3,10 +3,6 @@
 
 # Algorithme
 
-```{metadata}
-hide-solutions: true
-```
-
 ## Définition
 
 Un **algorithme** est une suite finie d'opérations permettant de résoudre un
