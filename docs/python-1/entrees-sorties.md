@@ -309,8 +309,8 @@ Trouvez et corrigez-les.
 
 ```{exec} python
 :editor:
-age = input("Quel âge as-tu? ")
-annee = input("En quelle année sommes-nous? ")
+age = await input_line("Quel âge as-tu? ")
+annee = await input_line("En quelle année sommes-nous? ")
 print("Vous êtes né.e en" annee - age "ou en" annee - age - 1)
 ```
 
