@@ -13,7 +13,7 @@ En Python, une liste est une variable dans laquelle il est possible de stocker
 plusieurs valeurs (de types différents).
 
 ```{code-block} text
-matieres = [ "français", "informatique", "allemand"]
+matieres = ["français", "informatique", "allemand"]
 notes = [5.7, 4.3, 5.1]
 eleves = ["2F4", "Économie et droit", 5.0, 2007]
 ```
@@ -31,7 +31,7 @@ le tout encadré par des crochets.
 
 ```{exec} python
 :editor:
-matieres = [ "français", "informatique", "allemand"]
+matieres = ["français", "informatique", "allemand"]
 notes = [5.7, 4.3, 5.1]
 eleves = ["2F4", "Économie et droit", 5.0, 2007]
 print(matieres)
@@ -104,7 +104,7 @@ notes = [5.5, 4.8, 6.0, 6.0, 3.5, 4.5]
 
 ```{important}
 Le premier élément d'une liste est toujours à l'**index 0**.
-Dans une liste de n élément, le dernier élément sera à l'**index n-1**.
+Dans une liste de n éléments, le dernier élément sera à l'**index n-1**.
 ```
 
 L'accès à un élément donné d'une liste se fait grâce à l'indexation :
