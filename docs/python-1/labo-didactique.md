@@ -94,7 +94,7 @@ Un seul calcul à effectuer qui ne peut pas être fait de tête rapidement.`],
     [`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez l'âge à l'utilisateur.
-S'il a plus de 18 ans, affichez qu'il est majeur, sinon affichez qu'il est \
+S'il a 18 ans et plus, affichez qu'il est majeur, sinon affichez qu'il est \
 mineur.
 `, `Il ne doit contenir qu'un if et un else. La valeur utile pour le if \
 doit être indiquée. Considérer que la valeur entrée par l'utilisateur est \
@@ -288,5 +288,5 @@ Site d'entrainement d'écriture de programme en Python.
 :name: editor
 :editor:
 :style: max-height: 25rem
-# Écrire le code ici...
+# Écrivez le code ici...
 ```
