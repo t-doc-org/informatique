@@ -3,10 +3,6 @@
 
 # Listes Lab - Découverte
 
-```{metadata}
-hide-solutions: true
-```
-
 ## Exercice {num}`py2-lab2`
 
 Écrivez un programme qui calcule et afficher la moyenne de 5 notes qui seront
@@ -17,7 +13,7 @@ demandées à l'utilisateur.
 # Écrivez le programme ici
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 :linenos:
 # Définition des variables
@@ -33,7 +29,7 @@ moyenne = somme_notes / 5
 # Affiche la moyenne
 print(moyenne)
 ```
-```` -->
+````
 
 ## Exercice {num}`py2-lab2:exemple-liste`
 
@@ -90,7 +86,7 @@ print(notes)
     6.  `notes` est une variable de type "list" (une liste). Comment créer une
         liste vide?
 
-<!-- ```{solution}
+```{solution}
 1.  1.  `apprend(5.5)` ajoute la note 5.5 à la fin de la liste des notes.
     2.  `print(notes[2])` affiche le 3{sup}`e` élément de la liste.
     3.  `remove()` est une fonction qui efface la première occurence de l'élément
@@ -107,7 +103,7 @@ print(notes)
     5.  `notes[i]` où `i` est un nombre entier retourne l'élément en position
         `i+1`.
     6.  Pour créer une liste vide: `notes = []`
-``` -->
+```
 
 ## Exercice {num}`py2-lab2`
 
@@ -122,7 +118,7 @@ saisir.
 # Écrivez le programme ici
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 :linenos:
 # Définition des variables
@@ -135,7 +131,7 @@ for _ in range(10):
 # Afficher la liste de notes
 print(notes)
 ```
-```` -->
+````
 
 ## Exercice {num}`py2-lab2:exemple-for`
 
@@ -168,7 +164,7 @@ for i in notes:
     2.  Quel serait un meilleur choix de nom pour `i` dans le contexte de ce
         programme?
 
-<!-- ````{solution}
+````{solution}
 1.  Le programme va afficher les éléments de la liste (les notes) les unes
     après les autres. Une note par ligne.
 2.  1.  En remplaçant partout le `i` par `k` (lignes 2 et 3), cela ne change
@@ -182,7 +178,7 @@ for i in notes:
     for note in notes:
       print(note)
     ```
-```` -->
+````
 
 ## Exercice {num}`py2-lab2`
 
@@ -202,7 +198,7 @@ for note in notes:
 print(somme)
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 :linenos:
 notes = [6, 5, 4.5, 5, 3.5]
@@ -214,7 +210,7 @@ for note in notes:
   somme += note
 print(somme)
 ```
-```` -->
+````
 
 ## Exercice {num}`py2-lab2`
 
@@ -226,7 +222,7 @@ Complétez le programme précédent pour qu'il:
 Voici un exemple d'exécution du programme:
 
 ```{code-block}
-Nombre de notes : 3
+Nombre de notes: 3
 Entrer note: 4
 Entrer note: 5
 Entrer note: 5.5
@@ -239,11 +235,11 @@ Moyenne: 4.833333333333333
 notes = []
 somme = 0
 for note in notes:
-    print(note)
+  print(note)
 print("Moyenne: ", moyenne)
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 :linenos:
 # Définition des variables
@@ -257,13 +253,13 @@ for _ in range(nb_notes):
 
 # Calcule la somme des notes
 for note in notes:
-    somme += note
+  somme += note
 
 # Calcule la moyenne des notes
 moyenne = somme / nb_notes
 print("Moyenne: ", moyenne)
 ```
-```` -->
+````
 
 ## Exercice {num}`py2-lab2`
 
@@ -301,7 +297,7 @@ moyenne =
 print("Moyenne: ", moyenne)
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 :linenos:
 # Définition de la fonction calcule_moyenne(notes)
@@ -325,4 +321,4 @@ for _ in range(nb_notes):
 moyenne = calcule_moyenne(notes)
 print("Moyenne: ", moyenne)
 ```
-```` -->
+````
