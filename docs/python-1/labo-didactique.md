@@ -64,7 +64,7 @@ function logConversation(data) {
 }
 
 // Ajoute une question à la conversation.
-async function ask(prompt) {
+async function ask(action, prompt) {
     conversation['messages'].push({'content': prompt, 'role': 'user'});
     try {
         const resp = await fetchJson(completionsURL, {
@@ -73,7 +73,7 @@ async function ask(prompt) {
         });
         const msg = resp['choices'][0]['message'];
         conversation['messages'].push(msg);
-        logConversation({'type': 'response'});
+        logConversation({'type': 'response', 'questionCount': questionCount, 'score': score, 'action': action});
         return msg['content'];
     } catch (e) {
         logConversation({'type': 'error', 'error': e.toString()});
@@ -83,6 +83,7 @@ async function ask(prompt) {
 
 let level = 0;
 let score = 0;
+let questionCount = 0;
 const examples = [
     [`\
 Écrivez le programme Python qui correspond à l'algorithme suivant, en \
@@ -156,10 +157,11 @@ async function blocking(fn) {
 
 // Génère une nouvelle question.
 async function generateQuestion() {
+    questionCount += 1;
     levelNum.textContent = `${level + 1}`;
     question.replaceChildren(text("Génération d'une nouvelle question..."));
     const [ex, constraint] = examples[level];
-    const q = await ask(`\
+    const q = await ask('new', `\
 Génère un autre exercice du même genre que l'exemple suivant sans mentionner \
 la condition dans l'énoncé, mais sois créatif ou pas. L'énoncé doit avoir du \
 sense. Utilise des CHF à la place des euros. Si l'exercice parle de note de \
@@ -188,7 +190,7 @@ correct.addEventListener('click', async () => {
         const code = editor.state.doc.toString();
 
         // Demande la correction de la réponse.
-        const fb = await ask(`\
+        const fb = await ask('correct', `\
 Vérifie si le code suivant correspond à l'énoncé.
 Si le code ne contient pas de variable, répondre "Il faut utiliser des \
 variables."
@@ -252,7 +254,7 @@ newQuestion.addEventListener('click', async () => {
 help.addEventListener('click', async () => {
     await blocking(async () => {
         // Demande la solution de l'exercice.
-        const helpResp = await ask(`\
+        const helpResp = await ask('help', `\
 Donne la solution de l'exercice en expliquant comment faire sans mentionner la \
 condition.
 `);
