@@ -207,7 +207,7 @@ else:
 # Complétez le programme
 a = ...
 if ... :
-  print("a est plus grand de 5.")
+  print("a est plus grand que 5.")
 elif ... :
   print("a est égal à 5.")
 else:
@@ -221,7 +221,7 @@ Tester la justesse de votre code avec différentes valeurs de a.
 :editor:
 a = ...                                 # choisir la valeur de a
 if a > 5 :
-  print("a est plus grand de 5.")
+  print("a est plus grand que 5.")
 elif a == 5 :                           # a == 5 pour la comparaison
   print("a est égal à 5.")
 else:
