@@ -264,7 +264,7 @@ manipuler les listes. Nous en avons vu déjà rencontrées certaines dans
 len(ma_liste)
 : retourne le nombre d'éléments de  la liste
 
-ma_liste.apppend(mon_element)
+ma_liste.append(mon_element)
 : ajoute `mon_element` à la fin de `ma_liste`
 
 ma_liste.insert(index, mon_element)
