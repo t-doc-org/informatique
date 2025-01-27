@@ -190,14 +190,14 @@ Complétez le programme ci-dessous en utilisant l'indexation de manière à ce q
 le print affiche la liste suivante:
 
 ```{code-block} text
-['Fribourg', 'Lausanne', 'Berne', 'Zurich', 'Genève]
+['Fribourg', 'Lausanne', 'Berne', 'Zurich', 'Genève']
 ```
 
 Il vous faudra pour cela modifier les éléments de la liste villes.
 
 ```{exec} python
 :editor: e0da4c93-4aed-4db0-8b9e-6155b829ad46
-villes = ["Fribourg", "Zug", "Berne", "Lugano", "Soleur"]
+villes = ["Fribourg", "Zug", "Berne", "Lugano", "Soleure"]
 
 # à modifier
 villes
@@ -210,7 +210,7 @@ print(villes)
 ````{solution}
 ```{exec} python
 :linenos:
-villes = ["Fribourg", "Zug", "Berne", "Lugano", "Soleur"]
+villes = ["Fribourg", "Zug", "Berne", "Lugano", "Soleure"]
 
 villes[1] = "Lausanne"
 villes[3] = "Zurich"
