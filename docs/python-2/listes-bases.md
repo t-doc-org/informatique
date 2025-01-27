@@ -333,7 +333,7 @@ function question(...args) {
     ```
 
     <script>
-    question({'[1,4,12,7,6,10,2]': true},
+    question({'[1,4,12,7,9,10,2]': true},
              "La fonction remove(element) efface la première occurrence de " +
              "l'élément donné entre parenthèses.");
     </script>
