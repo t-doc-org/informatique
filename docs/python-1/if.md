@@ -220,9 +220,9 @@ Tester la justesse de votre code avec différentes valeurs de a.
 ```{exec} python
 :editor:
 a = ...                                 # choisir la valeur de a
-if a > 5 :
+if a > 5:
   print("a est plus grand que 5.")
-elif a == 5 :                           # a == 5 pour la comparaison
+elif a == 5:                           # a == 5 pour la comparaison
   print("a est égal à 5.")
 else:
   print("a est plus petit que 5.")
@@ -234,9 +234,9 @@ else:
 ```{code-block} python
 :linenos:
 x = 2
-if x <= -1 :
+if x <= -1:
   print(2 * x + 1)
-elif x <=3 :
+elif x <= 3:
   print(-x + 2)
 else :
   print(2 * x - 5)
