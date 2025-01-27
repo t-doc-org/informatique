@@ -418,7 +418,7 @@ print(sports, len(sports))
 ### Exercice {num}`exo-py2`
 
 1.  Demandez à l'utilisateur d'entrer 6 nombres et stockez-les dans la liste
-    'nombres'.
+    `nombres`.
 2.  Afficher la liste.
 3.  Trier la liste.
 4.  Afficher la liste.
@@ -454,7 +454,7 @@ Sans exécuter le code, répondez aux questions suivantes:
 2. Que va retourner `nombres.count(1)`?
 3. Quelle sera la liste après l'instruction `nombres.remove(4)`?
 4. Quelle sera la liste après l'instruction `nombres.reverse()`?
-5. Quelle sera la liste après l'instruction `nombres.sort()?
+5. Quelle sera la liste après l'instruction `nombres.sort()`?
 
 
 ```{exec} python
@@ -517,7 +517,7 @@ print(ingredients)
 
 ### Exercice {num}`exo-py2`
 
-Une liste nommée meteo_semaine doit contenir les prévisions météos pour les 7
+Une liste nommée `meteo_semaine` doit contenir les prévisions météo pour les 7
 jours d'une semaine. Cette liste doit contenir 7 éléments, chacun étant un texte
 de prévision météorologique pour un jour différent.
 
@@ -610,7 +610,7 @@ for i in range(1, 11):
 ### Exemple {num}`ex-py2`
 
 Exécutez le code donné. Que se passe-t-il lorsqu'on modifie la valeur de la
-variable 'a'?
+variable `a`?
 
 ```{exec} python
 :editor:
@@ -660,7 +660,7 @@ La référence de la variable `b` elle ne change pas.
 ### Exemple {num}`ex-py2`
 
 Exécutez le code donné. Que se passe-t-il lorsqu'on modifie la valeur de la
-variable 'liste_a'?
+variable `liste_a`?
 
 ```{exec} python
 :editor:
