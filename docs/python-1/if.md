@@ -177,9 +177,9 @@ else:
 
 ### Exercice {num}`exo-py1`
 
-Reprenons l'exercice précédent. Que se passe-t-il si a = 0?
+Reprenons l'exercice précédent. Que se passe-t-il si a = b?
 
-Améliorez le programme précédent en traitant aussi le cas où a = 0.
+Améliorez le programme précédent en traitant aussi le cas où a = b.
 
 ```{exec} python
 :editor: d5a6da62-0c1a-4ea7-a1b2-910848086c35

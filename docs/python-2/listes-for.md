@@ -14,7 +14,7 @@ l'autre.
 
 Dans ce cas, les éléments sont parcourus au moyen de leur index. Pour déterminer
 l'index du dernier élément et éviter une erreur lors de l'exécution, nous
-utilisons la fonction 'len(liste)' qui retourne le nombre d'élément dans une
+utilisons la fonction `len(liste)` qui retourne le nombre d'élément dans une
 liste.
 
 ### Exemple {num}`ex-py2`
