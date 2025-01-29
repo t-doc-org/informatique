@@ -55,8 +55,10 @@ Le bloc d'instructions ne sera exécuté que si la condition est vraie.
 :editor:
 print("Début")
 meteo = "soleil"
+print("Je mets ma veste.")
 if meteo == "pluie":
   print("Je prends un parapluie.")
+print("Je pars.")
 print("Fin")
 ```
 
@@ -77,10 +79,14 @@ sinon ce sera le bloc d'instructions du `else` qui sera exécuté.
 ```{exec} python
 :editor:
 moyenne = 5
+print("La moyenne est de", moyenne)
+
 if moyenne >= 4:
   print("Moyenne suffisante")
 else:
   print("Moyenne insuffisante")
+
+print("Pour réussir, il faut travailler!")
 ```
 
 Dans l'exemple ci-dessus, soit la moyenne est suffisante (moyenne supérieure ou
@@ -101,6 +107,7 @@ Certaines situations nécessitent de distinguer plus qu'un ou deux cas.
 ```{exec} python
 :editor:
 type_film = "comédie"
+print("Le type de film est", type_film)
 
 if type_film == "action":
   print("Explosions et des cascades de folie!")
@@ -110,6 +117,8 @@ elif type_film == "horreur":
   print("Terrifiant!")
 else:
   print("Je ne connais pas.")
+
+print("Bonne séance de cinéma!")
 ```
 
 Dans l'exemple ci-dessus, il y a le choix entre trois types de films (action,
@@ -332,9 +341,9 @@ age = await input_line("Quel âge as-tu? ")
 if age > 18:
 print("Tu payes le tarif enfant.")
 elif age < 65
-  print("Tu payes le tarif adulte.")
+  print "Tu payes le tarif adulte."
 else age >= 65:
-  print ("Tu payes le tarif retraité.")
+  print(Tu payes le tarif retraité.)
 ```
 
 ````{solution}

@@ -87,6 +87,11 @@ Ensuite, tester vos réponses en les exécutant.
 ### Exercice {num}`exo-py1`
 
 1. Que fait le programme suivant?
+```{exec} python
+:editor: cdf06593-2fc5-4f68-af74-2a6113bec6dc
+for _ in range(6):
+  print("Salut")
+```
 2. Modifiez-le pour qu'il affiche 9 fois "Salut".
 3. Modifiez-le pour qu'il affiche:
     ```{code-block} text
@@ -99,11 +104,6 @@ Ensuite, tester vos réponses en les exécutant.
     ```
 4. Modifiez-le pour qu'à la fin du programme, il afficher "Au revoir!".
 
-```{exec} python
-:editor: cdf06593-2fc5-4f68-af74-2a6113bec6dc
-for _ in range(6):
-  print("Salut")
-```
 
 ````{solution}
 ```{exec} python
@@ -118,7 +118,7 @@ print("Au revoir!")
 ## Utilisation de la variable de la boucle for
 
 La boucle `for` fait plus que juste répéter x fois un bloc d'instructions: pour
-chaque itération (passage de la boucle), la variable (dans l'exemple ci-dessous
+chaque itération (passage dans la boucle), la variable (dans l'exemple ci-dessous
 nommée `i`) va prendre la valeur de l'ensemble `range(n)`, c'est-à-dire
 l'ensemble des nombres entiers de $0$ à $n$ non compris $\{0; 1; 2; ...; n-1\}$.
 Il est donc possible d'utiliser la valeur de cette variable dans la boucle.
@@ -194,7 +194,7 @@ for i in range(1, 11):
 ### Exercice {num}`exo-py1`
 
 Écrivez un programme qui calcule et affiche la somme des dix premiers nombres
-entiers.
+entiers plus grands que 0.
 
 ```{exec} python
 :editor: 861f4829-841e-48f7-8597-91d4153f3cde
@@ -238,7 +238,7 @@ Il y a plusieurs manières de faire.
 ### Exercice {num}`exo-py1`
 
 Écrivez un programme qui calcule et affiche le produit des cinq premiers nombres
-entiers.
+entiers plus grands que 0.
 
 ```{exec} python
 :editor: 165c348a-10cd-4161-8ff4-d95acfbf7e25
@@ -266,8 +266,8 @@ print(produit)
 
 ### Exercice {num}`exo-py1`
 
-Écrivez un programme qui demande à l'utilisateur un nombre entier et affiche les
-10 premiers multiples de ce nombre.
+Écrivez un programme qui demande à l'utilisateur un nombre entier positif et
+affiche les 10 premiers multiples de ce nombre.
 
 ```{exec} python
 :editor: f935054b-3ed6-4a42-9e73-e6330a770f1d
