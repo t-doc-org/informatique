@@ -16,8 +16,13 @@ Pour débuter, vous avez le code suivant:
 
 ```{exec} python
 :when: never
+# Définition des fonctions
+
+# Définition des variables
 utilisateurs = ["user1", "user2", "user3"]
 mots_de_passe = ["mdp1", "mdp2", "mpd3"]
+
+# Programme principal
 ```
 
 ## Exercice {num}`py2-lab3`
