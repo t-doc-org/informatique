@@ -31,11 +31,11 @@ Le programme ci-dessous demande à l'utilisateur quel moyen de locomotion il
 utilise pour se rendre au travail et affiche un message en conséquence.
 
 - "C'est très écologique!" lorsque l'utilisateur entre la valeur "à pied",
-"trottinette", "skateboard", ou "vélo"
-- "C'est un bon geste!" lorsque l'utilisateur entre la valeur "bus", "train", ou
+"trottinette", "skateboard" ou "vélo"
+- "C'est un bon geste!" lorsque l'utilisateur entre la valeur "bus", "train" ou
 "tram"
 - "C'est acceptable!" s'il entre la valeur "voiture", "moto", "scooter",
-"sidecar", ou "vespa".
+"sidecar" ou "vespa".
 - "Sans commentaire." s'il entre la valeur "avion"
 - "Sans avis." s'il entre une autre valeur
 
