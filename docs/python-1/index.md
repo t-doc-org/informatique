@@ -12,5 +12,6 @@ entrees-sorties
 if
 for
 while
+mini-projets
 fonctions-intro
 ```
