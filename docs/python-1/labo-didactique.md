@@ -122,7 +122,7 @@ Affichez 'BOOM'.
 Ne pas utiliser d'exemple avec des notes.`],
         [`\
 Écrivez le programme Python qui correspond à l'un des algorithmes suivants:
-Soit affichez les nombres de 0 à 50 (inclus).
+Affichez les nombres de 0 à 50 (inclus).
 `, `Utiliser for i in range(n) avec un seul paramètre. Ne pas demander \
 d'afficher des lettres. Doit générer une suite des nombres entiers qui se \
 suivent. Les valeurs de début et fin ne doivent pas être les mêmes.`]

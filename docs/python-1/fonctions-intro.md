@@ -82,7 +82,6 @@ await render_and_check(
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-tour-1-check
-:when: load
 :editor:
 for _ in range(3):
   aller_nord()
@@ -115,7 +114,6 @@ await render_and_check(
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-tour-2-check
-:when: load
 :editor:
 for _ in range(2):
   aller_est()
@@ -150,7 +148,6 @@ await render_and_check(
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-tour-3-check
-:when: load
 :editor:
 for _ in range(4):
   aller_est()
@@ -187,7 +184,6 @@ await render_and_check(
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-roi-1-check
-:when: load
 :editor:
 for _ in range(4):
   aller_est()
@@ -221,7 +217,6 @@ await render_and_check(
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-roi-2-check
-:when: load
 :editor:
 for _ in range(2):
   aller_est()
@@ -281,7 +276,6 @@ await render_and_check(
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-roi-3-check
-:when: load
 :editor:
 # Définition de la fonction
 def aller_nord_est():
