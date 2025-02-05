@@ -122,27 +122,27 @@ des codes postaux est simplement affichée.
 ```{exec} python
 :editor: 61ad2b94-75ec-449a-9bb9-a9f5691fe626
 # Complétez le programme
-code_postaux = []
+codes_postaux = []
 
 code_postal = int(await input_line("Entre un code postal: "))
 
 print("Erreur, ce code postal est déjà dans la liste.")
 
-print(code_postaux)
+print(codes_postaux)
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
-code_postaux = []
+codes_postaux = []
 code_postal = int(await input_line("Entre un code postal : "))
 while code_postal >= 0:
-    if code_postal in code_postaux:
+    if code_postal in codes_postaux:
         print("Erreur, ce code postal est déjà dans la liste.")
     elif code_postal >= 0:
-        code_postaux.append(code_postal)
+        codes_postaux.append(code_postal)
     code_postal = int(await input_line("Entre un code postal : "))
 
-print(code_postaux)
+print(codes_postaux)
 ```
 ````
