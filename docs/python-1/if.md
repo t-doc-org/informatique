@@ -4,7 +4,6 @@
 # Instructions conditionnelles
 
 ```{metadata}
-hide-solutions: true
 scripts:
   - src: quizz-helpers.js
 ```
@@ -597,18 +596,18 @@ maximum (le plus grand).
 
 ```{exec} python
 :editor: c3d6fb9b-eb5f-4e83-b662-606ac68282cf
-nombre_1 = int(await input_line("Choisir un premier nombre: "))
-nombre_2 = int(await input_line("Choisir un deuxième nombre: "))
-nombre_3 = int(await input_line("Choisir un troisième nombre: "))
+nombre_1 = float(await input_line("Choisir un premier nombre: "))
+nombre_2 = float(await input_line("Choisir un deuxième nombre: "))
+nombre_3 = float(await input_line("Choisir un troisième nombre: "))
 
 # Complétez le programme ici
 ```
 
 ````{solution}
 ```{exec} python
-nombre_1 = int(await input_line("Choisir un premier nombre: "))
-nombre_2 = int(await input_line("Choisir un deuxième nombre: "))
-nombre_3 = int(await input_line("Choisir un troisième nombre: "))
+nombre_1 = float(await input_line("Choisir un premier nombre: "))
+nombre_2 = float(await input_line("Choisir un deuxième nombre: "))
+nombre_3 = float(await input_line("Choisir un troisième nombre: "))
 max = nombre_1
 if nombre_2 > max :
   max = nombre_2
@@ -621,8 +620,8 @@ print("Le plus grand nombre est", max)
 
 ### Exercice {num}`exo-py1`
 
-Écrivez un programme qui demande un nombre à l'utilisateur et affiche s'il est
-pair ou impair.
+Écrivez un programme qui demande un nombre entier à l'utilisateur et affiche
+s'il est pair ou impair.
 
 ````{tip}
 :class: dropdown
@@ -642,7 +641,7 @@ print(14 % 5)          # Tester avec d'autres valeurs
 
 ````{solution}
 ```{exec} python
-nombre = int(await input_line("Choisir un nombre: "))
+nombre = int(await input_line("Choisir un nombre entier: "))
 if nombre % 2 == 0:
   print(nombre, "est pair.")
 else:
@@ -652,8 +651,8 @@ else:
 
 ### Exercice {num}`exo-py1`
 
-Écrivez un programme qui demande un nombre à l'utilisateur et affiche s'il est
-divisible par 3 et 13.
+Écrivez un programme qui demande un nombre entier à l'utilisateur et affiche
+s'il est divisible par 3 et 13.
 
 ```{exec} python
 :editor: 1f78a8da-5f0e-452d-b427-59943fea89f2
@@ -662,7 +661,7 @@ divisible par 3 et 13.
 
 ````{solution}
 ```{exec} python
-nombre = int(await input_line("Choisir un nombre: "))
+nombre = int(await input_line("Choisir un nombre entier: "))
 if nombre % 3 == 0 and nombre % 13 == 0:
   print(nombre, "est divisible par 3 et 13.")
 elif nombre % 3 == 0:
