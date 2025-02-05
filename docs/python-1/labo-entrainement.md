@@ -11,10 +11,9 @@ Site d'entrainement d'écriture de programme en Python.
 
 ## Exercice 1
 
-Écrivez un programme qui correspond à l'algorithme suivant, en définissant une
-variable pour chaque donnée:
+Écrivez un programme qui correspond à l'algorithme suivant:
 
-- La base d’un triangle vaut 7.6.
+- Demandez à l'utilisateur la longueur de la base d’un triangle.
 - La hauteur de ce triangle vaut 4.55.
 - Calculez et affichez l’aire du triangle
 
@@ -27,7 +26,7 @@ variable pour chaque donnée:
 ```{exec} python
 :linenos:
 # Définition des données
-base = 7.6
+base = float(await input_line("Longueur de la base du triangle: "))
 hauteur = 4.55
 
 # Calcul de l'aire du triangle
@@ -40,12 +39,10 @@ print("L'aire du triangle est :", aire)
 
 ## Exercice 2
 
-Écrivez un programme qui correspond à l'algorithme suivant, en
-définissant une variable pour chaque donnée:
+Écrivez un programme qui correspond à l'algorithme suivant:
 
-- Le prix d’un article est de 654 CHF.
-- La réduction est de 79 CHF (montant fixe).
-- Calculez et affichez le prix après réduction.
+- Demandez à l'utilisateur son âge.
+- Calculez et affichez son âge dans 22 ans.
 
 ```{exec} python
 :editor: 436b7b77-c7d6-4d7a-84a3-726a80257f26
@@ -56,14 +53,10 @@ définissant une variable pour chaque donnée:
 ```{exec} python
 :linenos:
 # Définition des données
-prix_initial = 654
-reduction = 79
-
-# Calcul du prix après réduction
-prix_final = prix_initial - reduction
+age = int(await input_line("Quel est votre âge?"))
 
 # Affichage du résultat
-print("Le prix après réduction est :", prix_final)
+print("Dans 22 ans, vous aurez:", age + 22)
 ```
 ````
 

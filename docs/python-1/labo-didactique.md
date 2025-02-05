@@ -86,12 +86,12 @@ let score = 0;
 let questionCount = 0;
 const examples = [
     [`\
-Écrivez le programme Python qui correspond à l'algorithme suivant, en \
-définissant une variable pour chaque donnée:
-La longueur vaut 10. La largeur vaut 5. Calculez et affichez l'aire du rectangle
+Écrivez le programme Python qui correspond à l'algorithme suivant:
+Demandez à l'utilisateur la longueur d'un rectangle. Sa largeur mesure 14.5.
+Calculez et affichez l'aire du rectangle.
 `,`Utiliser des variables et la fonction print. Pas de calcul avec des cercles \
 et pas de calcul de pourcentage.
-Un seul calcul à effectuer qui ne peut pas être fait de tête rapidement.`],
+Il ne doit y a voir que deux données au maximum.`],
     [`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez l'âge à l'utilisateur.
@@ -187,26 +187,22 @@ correct.addEventListener('click', async () => {
     await blocking(async () => {
         // Obtient le code de l'utilisateur à partir de l'éditeur.
         const editor = findEditor(document.querySelector('#editor'));
-        const code = editor.state.doc.toString();
+        const code = editor.state.doc.toString().replace('await input_line', 'input');
 
         // Demande la correction de la réponse.
         const fb = await ask('correct', `\
-Vérifie si le code suivant correspond à l'énoncé.
-Si le code ne contient pas de variable, répondre "Il faut utiliser des \
-variables."
+Vérifie si le code suivant correspond à l'énoncé.\
 Sans s'occuper de la gestion des erreurs et des fautes d'orthographe, le code \
 contient-il des erreurs de syntaxe, d'exécution ou de logique?
-On considère que la fonction suivante a été prédéfinie:
 
-async def input_line(text):
-    return input(text)
-
-Suppose que le code est exécuté dans une fonction asynchrone.
-
+Si une valeur est demandée à l'utilisateur et que c'est toujours un nombre
+entier comme un âge, vérifiez que la valeur a été convertie en entier par int()
+et pas en float. Si c'est un nombre à virgule comme une note ou un montant, la
+conversion doit se faire avec float().\
 Si un cas a été traité dans le if, par exemple if a < 4, il n'est pas \
-nécessaire elif 4 <= a < 7, a <7 est suffisant, car le cas où 4 est plus
-petit que 4 a déjà été traité dans le if. Idem pour le else, ce n'est donc pas \
-une erreur.
+nécessaire d'écrire elif 4 <= a < 7, a <7 est suffisant, car le cas où 4 est \
+plus petit que 4 a déjà été traité dans le if. Idem pour le else, ce n'est donc\
+pas une erreur.
 5.0 et 5 sont le même nombre, ce n'est donc pas une erreur.
 Dans la boucle for i in range(n), la boucle s'effectue de 0 à (n-1).
 Dans la boucle for i in range(m, n), la boucle s'effectue de m à (n-1).
