@@ -46,7 +46,7 @@ print("J'ai fini.")
 
 Sans les exécuter, qu'afficheront les programmes suivants?
 
-Ensuite, tester vos réponses en les exécutant.
+Ensuite, testez vos réponses en les exécutant.
 
 1.  ```{exec} python
     :linenos:
@@ -102,7 +102,7 @@ for _ in range(6):
     Salut
     Comment ça va?
     ```
-4. Modifiez-le pour qu'à la fin du programme, il afficher "Au revoir!".
+4. Modifiez-le pour qu'à la fin du programme, il affiche "Au revoir!".
 
 
 ````{solution}
@@ -382,7 +382,7 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
 ```
 
 1. Écrivez un programme qui permet de calculer le nombre de billes nécessaires
-  pour construire la pyramide de l'image (elle a 7 étages). Utiliser une boucle
+  pour construire la pyramide de l'image (elle a 7 étages). Utilisez une boucle
   `for`.
 
     ```{exec} python
