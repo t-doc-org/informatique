@@ -64,7 +64,7 @@ function logConversation(data) {
 }
 
 // Ajoute une question à la conversation.
-async function ask(action, prompt) {
+async function ask(action, attrs, prompt) {
     conversation['messages'].push({'content': prompt, 'role': 'user'});
     try {
         const resp = await fetchJson(completionsURL, {
@@ -73,62 +73,71 @@ async function ask(action, prompt) {
         });
         const msg = resp['choices'][0]['message'];
         conversation['messages'].push(msg);
-        logConversation({'type': 'response', 'questionCount': questionCount, 'score': score, 'action': action});
+        logConversation({
+            'type': 'response', 'action': action, ...attrs,
+            'level': level, 'score': score,
+        });
         return msg['content'];
     } catch (e) {
-        logConversation({'type': 'error', 'error': e.toString()});
+        logConversation({
+            'type': 'error', 'action': action, ...attrs,
+            'level': level, 'score': score,
+            'error': e.toString(),
+        });
         throw e;
     }
 }
 
 let level = 0;
 let score = 0;
-let questionCount = 0;
-const examples = [
-    [`\
+const examples = [[`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez à l'utilisateur la longueur d'un rectangle. Sa largeur mesure 14.5.
 Calculez et affichez l'aire du rectangle.
-`, `Demandez à l'utilisateur une valeur.
+`, `\
+Demandez à l'utilisateur une valeur.
 Pas de calcul avec des cercles. Pas d'exercice avec des notes.
 Un énoncé simple avec un seul calcul à effectuer.
-Il ne doit pas y avoir de if, seulement un calcul simple.`],
-    [`\
+Il ne doit pas y avoir de if, seulement un calcul simple.`,
+    ], [`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez l'âge à l'utilisateur.
 S'il a 18 ans et plus, affichez qu'il est majeur, sinon affichez qu'il est \
 mineur.
-`, `Il ne doit contenir qu'un if et un else. La valeur utile pour le if \
-doit être indiquée. Considérer que la valeur entrée par l'utilisateur est \
-valide`],
-    [`\
+`, `\
+Il ne doit contenir qu'un if et un else. La valeur utile pour le if doit être \
+indiquée. Considérer que la valeur entrée par l'utilisateur est valide`,
+    ], [`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez l'âge à l'utilisateur.
 S'il a moins de 16, affichez qu'il n'a pas le droit de boire d'alcool.
 S'il a 16 ans et moins de 18 ans, affichez qu'il a le droit de boire du vin et \
 de la bière.
 Sinon affichez qu'il a le droit de boire de l'alcool.
-`, `Il doit contenir un elif. Les valeurs utiles pour les if, elif et else, \
-doivent être indiquée en précisant si c'est strictement ou inclu. Considérer que la \
-valeur entrée par l'utilisateur est valide.
-Pas de calcul à faire, juste afficher du texte.`],
-    [`\
+`, `\
+Il doit contenir un elif. Les valeurs utiles pour les if, elif et else, \
+doivent être indiquée en précisant si c'est strictement ou inclu. Considérer \
+que la valeur entrée par l'utilisateur est valide. \
+Pas de calcul à faire, juste afficher du texte.`,
+    ], [`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Initialisez une variable compte_a_rebours à 10.
 Tant que compte_a_rebours est plus grand que 0, affichez la valeur de \
 compte_a_rebours.
 Soustraire 1 à compte_a_rebours.
 Affichez 'BOOM'.
-`, `Utilisez une boucle while. Pas de demande à l'utilisateur. Pas de listes. \
-Pas de calcul aléatoire avec le module random.
-Ne pas utiliser d'exemple avec des notes.`],
-        [`\
+`, `\
+Utilisez une boucle while. Pas de demande à l'utilisateur. Pas de listes. Pas \
+de calcul aléatoire avec le module random. Ne pas utiliser d'exemple avec des \
+notes.`,
+    ], [`\
 Écrivez le programme Python qui correspond à l'un des algorithmes suivants:
 Affichez les nombres de 0 à 50 (inclus).
-`, `Utiliser for i in range(n) avec un seul paramètre. Ne pas demander \
-d'afficher des lettres. Doit générer une suite des nombres entiers qui se \
-suivent. Les valeurs de début et fin ne doivent pas être les mêmes.`]
-];
+`, `\
+Utiliser for i in range(n) avec un seul paramètre. Ne pas demander d'afficher \
+des lettres. Doit générer une suite des nombres entiers qui se suivent. Les \
+valeurs de début et fin ne doivent pas être les mêmes.`,
+]];
 
 await domLoaded;
 
@@ -159,18 +168,18 @@ async function blocking(fn) {
 
 // Génère une nouvelle question.
 async function generateQuestion() {
-    questionCount += 1;
     levelNum.textContent = `${level + 1}`;
     question.replaceChildren(text("Génération d'une nouvelle question..."));
     const [ex, constraint] = examples[level];
-    const q = await ask('new', `\
-Génère un autre exercice du même genre que l'exemple donné ci-dessous sans mentionner \
-la condition dans l'énoncé, mais sois créatif ou pas. L'énoncé doit avoir du \
-sens. Utilise des CHF à la place des euros. Si l'exercice parle de note de \
-l'élève considérer des notes entre 0 et 6 au dixième.
+    const q = await ask('new', {}, `\
+Génère un autre exercice du même genre que l'exemple donné ci-dessous sans \
+mentionner la condition dans l'énoncé, mais sois créatif ou pas. L'énoncé doit \
+avoir du sens. Utilise des CHF à la place des euros. Si l'exercice parle de \
+note de l'élève considérer des notes entre 0 et 6 au dixième.
 
 Cet exercice doit suivre la condition suivante: ${constraint}
-Transmettre juste l'énoncé de l'exercice sans la solution et autres commentaires.
+Transmettre juste l'énoncé de l'exercice sans la solution et autres \
+commentaires.
 Ne pas résoudre l'exercice et ne pas donner d'exemple.
 Ne pas donner les conditions.
 
@@ -191,33 +200,33 @@ correct.addEventListener('click', async () => {
     await blocking(async () => {
         // Obtient le code de l'utilisateur à partir de l'éditeur.
         const editor = findEditor(document.querySelector('#editor'));
-        const code = editor.state.doc.toString().replace('await input_line', 'input');
+        const code = editor.state.doc.toString();
 
         // Demande la correction de la réponse.
-        const fb = await ask('correct', `\
+        const fb = await ask('correct', {'code': code}, `\
 Vérifie si le code suivant correspond à l'énoncé.
 Sans s'occuper de la gestion des erreurs et des fautes d'orthographe, vérifie \
 si le code contient des erreurs de syntaxe, d'exécution ou de logique.
 
-S'il n'y a pas d'erreur et que le code est ou semble correct, renvoie seulement \
-ok et rien d'autre.
+S'il n'y a pas d'erreur et que le code est ou semble correct, renvoie \
+seulement ok et rien d'autre.
 S'il y a des erreurs, explique-les sans afficher de code python.
 
 Si une valeur est demandée à l'utilisateur et que c'est toujours un nombre \
-entier comme un âge, vérifiez que la valeur a été convertie en entier par int() \
-et pas en float. Si c'est un nombre à virgule comme une note ou un montant, la \
-conversion doit se faire avec float().
+entier comme un âge, vérifiez que la valeur a été convertie en entier par \
+int() et pas en float. Si c'est un nombre à virgule comme une note ou un \
+montant, la conversion doit se faire avec float().
 Si un cas a été traité dans le if, par exemple if a < 4, il n'est pas \
 nécessaire d'écrire elif 4 <= a < 7, a <7 est suffisant, car le cas où 4 est \
-plus petit que 4 a déjà été traité dans le if. Idem pour le else, ce n'est donc\
-pas une erreur.
+plus petit que 4 a déjà été traité dans le if. Idem pour le else, ce n'est \
+donc pas une erreur.
 5.0 et 5 sont le même nombre, ce n'est donc pas une erreur.
 Dans la boucle for i in range(n), la boucle s'effectue de 0 à (n-1).
 Dans la boucle for i in range(m, n), la boucle s'effectue de m à (n-1).
 
 Le code commence ici:
 
-${code}
+${code.replace('await input_line', 'input')}
 `);
         if (fb === "ok") {
             feedback.querySelector('pre').replaceChildren("Correct!");
@@ -256,8 +265,12 @@ newQuestion.addEventListener('click', async () => {
 
 help.addEventListener('click', async () => {
     await blocking(async () => {
+        // Obtient le code de l'utilisateur à partir de l'éditeur.
+        const editor = findEditor(document.querySelector('#editor'));
+        const code = editor.state.doc.toString();
+
         // Demande la solution de l'exercice.
-        const helpResp = await ask('help', `\
+        const helpResp = await ask('help', {'code': code}, `\
 Donne la solution de l'exercice en expliquant comment faire sans mentionner la \
 condition.
 `);
