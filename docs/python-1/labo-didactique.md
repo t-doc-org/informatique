@@ -89,9 +89,10 @@ const examples = [
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez à l'utilisateur la longueur d'un rectangle. Sa largeur mesure 14.5.
 Calculez et affichez l'aire du rectangle.
-`,`Utiliser des variables et la fonction print. Pas de calcul avec des cercles \
-et pas de calcul de pourcentage.
-Il ne doit y a voir que deux données au maximum.`],
+`, `Demandez à l'utilisateur une valeur.
+Pas de calcul avec des cercles. Pas d'exercice avec des notes.
+Un énoncé simple avec un seul calcul à effectuer.
+Il ne doit pas y avoir de if, seulement un calcul simple.`],
     [`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez l'âge à l'utilisateur.
@@ -118,7 +119,8 @@ Tant que compte_a_rebours est plus grand que 0, affichez la valeur de \
 compte_a_rebours.
 Soustraire 1 à compte_a_rebours.
 Affichez 'BOOM'.
-`, `Utilisez une boucle while. Pas de demande à l'utilisateur. Pas de listes \
+`, `Utilisez une boucle while. Pas de demande à l'utilisateur. Pas de listes. \
+Pas de calcul aléatoire avec le module random.
 Ne pas utiliser d'exemple avec des notes.`],
         [`\
 Écrivez le programme Python qui correspond à l'un des algorithmes suivants:
@@ -162,16 +164,18 @@ async function generateQuestion() {
     question.replaceChildren(text("Génération d'une nouvelle question..."));
     const [ex, constraint] = examples[level];
     const q = await ask('new', `\
-Génère un autre exercice du même genre que l'exemple suivant sans mentionner \
+Génère un autre exercice du même genre que l'exemple donné ci-dessous sans mentionner \
 la condition dans l'énoncé, mais sois créatif ou pas. L'énoncé doit avoir du \
-sense. Utilise des CHF à la place des euros. Si l'exercice parle de note de \
+sens. Utilise des CHF à la place des euros. Si l'exercice parle de note de \
 l'élève considérer des notes entre 0 et 6 au dixième.
 
-${ex}
-
 Cet exercice doit suivre la condition suivante: ${constraint}
-Ne pas résoudre l'exemple et transmettre juste l'énoncé de l'exercice sans autre
-commentaire.`);
+Transmettre juste l'énoncé de l'exercice sans la solution et autres commentaires.
+Ne pas résoudre l'exercice et ne pas donner d'exemple.
+Ne pas donner les conditions.
+
+Exemple:
+${ex}`);
     feedback.classList.add('hidden');
     question.replaceChildren(text(q));
 }
@@ -191,14 +195,18 @@ correct.addEventListener('click', async () => {
 
         // Demande la correction de la réponse.
         const fb = await ask('correct', `\
-Vérifie si le code suivant correspond à l'énoncé.\
-Sans s'occuper de la gestion des erreurs et des fautes d'orthographe, le code \
-contient-il des erreurs de syntaxe, d'exécution ou de logique?
+Vérifie si le code suivant correspond à l'énoncé.
+Sans s'occuper de la gestion des erreurs et des fautes d'orthographe, vérifie \
+si le code contient des erreurs de syntaxe, d'exécution ou de logique.
 
-Si une valeur est demandée à l'utilisateur et que c'est toujours un nombre
-entier comme un âge, vérifiez que la valeur a été convertie en entier par int()
-et pas en float. Si c'est un nombre à virgule comme une note ou un montant, la
-conversion doit se faire avec float().\
+S'il n'y a pas d'erreur et que le code est ou semble correct, renvoie seulement \
+ok et rien d'autre.
+S'il y a des erreurs, explique-les sans afficher de code python.
+
+Si une valeur est demandée à l'utilisateur et que c'est toujours un nombre \
+entier comme un âge, vérifiez que la valeur a été convertie en entier par int() \
+et pas en float. Si c'est un nombre à virgule comme une note ou un montant, la \
+conversion doit se faire avec float().
 Si un cas a été traité dans le if, par exemple if a < 4, il n'est pas \
 nécessaire d'écrire elif 4 <= a < 7, a <7 est suffisant, car le cas où 4 est \
 plus petit que 4 a déjà été traité dans le if. Idem pour le else, ce n'est donc\
@@ -206,8 +214,7 @@ pas une erreur.
 5.0 et 5 sont le même nombre, ce n'est donc pas une erreur.
 Dans la boucle for i in range(n), la boucle s'effectue de 0 à (n-1).
 Dans la boucle for i in range(m, n), la boucle s'effectue de m à (n-1).
-S'il y a des erreurs, explique-les, mais ne donne pas la solution, sinon \
-renvoie seulement ok et rien d'autre.
+
 Le code commence ici:
 
 ${code}
