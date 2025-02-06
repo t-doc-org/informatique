@@ -50,7 +50,7 @@ $$
 Convertir les nombres suivants de binaire en décimal.
 
 <script>
-async function questionConv(from, to, value) {
+async function questionConv(from, to, value, alt) {
   const node = document.currentScript;
   const core = await tdoc.import('tdoc/core.js');
   const quizz = await tdoc.import('tdoc/quizz.js');
@@ -60,9 +60,15 @@ async function questionConv(from, to, value) {
     `${value.toString(from).toUpperCase()}_{${from}}`);
   quizz.question(node, prompt, resp => {
     resp = resp.replaceAll(' ', '').toUpperCase();
-    return typeof value === 'number' ?
-      core.strToInt(resp, to) === value :
-      resp === value.toUpperCase();
+    for (const sol of [value, alt]) {
+        if (sol === undefined) continue;
+        if (sol !== undefined
+            && (typeof sol === 'number' ? core.strToInt(resp, to) === sol
+                : resp === sol.toUpperCase())) {
+          return true;
+        }
+    }
+    return false;
   });
   await core.typesetMath(prompt);
 }
@@ -221,7 +227,8 @@ Effectuer les additions suivantes sur 4 bits.
 1.  <script>questionConv('0010_2 + 0011_2', 2, 0b0010 + 0b0011);</script>
 2.  <script>questionConv('0101_2 + 1000_2', 2, 0b0101 + 0b1000);</script>
 3.  <script>questionConv('1011_2 + 0001_2', 2, 0b1011 + 0b0001);</script>
-4.  <script>questionConv('1111_2 + 1000_2', 2, 'overflow');</script>
+4.  <script>questionConv('1111_2 + 1000_2', 2,
+                         (0b1111 + 0b1000) & 0b1111, 'overflow');</script>
 
 ## Exercice {num}`exo-info`
 
