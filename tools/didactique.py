@@ -5,6 +5,7 @@
 import os
 import pathlib
 import sys
+import types
 
 try:
     from tdoc.common import store
@@ -20,10 +21,6 @@ import argparse
 import datetime
 import json
 import sqlite3
-
-# TODO: Command "users", computes per-user stats
-# TODO: Per-session stats
-# TODO: Global stats
 
 
 def main(argv, stdin, stdout, stderr):
@@ -46,6 +43,14 @@ def main(argv, stdin, stdout, stderr):
     p.set_defaults(handler=cmd_sessions)
     arg = p.add_argument_group("Options").add_argument
     add_common_args(arg)
+
+    p = root.add_parser('stats', add_help=False,
+                        help="Calcule des statistiques.")
+    p.set_defaults(handler=cmd_stats)
+    arg = p.add_argument_group("Options").add_argument
+    add_common_args(arg)
+    arg('--per', dest='per', choices=['', 'name', 'session'], default='',
+        help="Groupe les sessions pour le calcul de statistiques.")
 
     cfg = parser.parse_args(argv[1:])
     color = None if cfg.color == 'auto' else cfg.color == 'true'
@@ -81,6 +86,73 @@ def cmd_sessions(cfg, sessions):
         s.write(cfg.stdout)
 
 
+def cmd_stats(cfg, sessions):
+    """Run the "stats" command."""
+    groups = {}
+    group = (lambda s: s.name) if cfg.per == 'name' \
+            else (lambda s: s.id) if cfg.per == 'session' \
+            else (lambda s: '')
+    for s in sessions.values():
+        groups.setdefault(group(s), []).append(s)
+    indent = "  " if cfg.per else ""
+    o = cfg.stdout
+    for g, ss in sorted(groups.items()):
+        if g: o.write(f"{o.CYAN}{g}:{o.NORM}\n")
+        st = stats(ss)
+        o.write(f"{indent}{o.LWHITE}Sessions:{o.NORM} {len(ss)}, durée "
+                f"{st.session_duration.min_mean_max()}\n")
+        o.write(f"{indent}{o.LWHITE}Réponses:{o.NORM} {st.answers}, "
+                f"correctes: {st.correct_answers}, "
+                f"fausses: {st.answers - st.correct_answers}\n")
+        o.write(f"{indent}{o.LWHITE}Demandes d'aide:{o.NORM} {st.helps}\n")
+        o.write(f"{indent}{o.LWHITE}Score:{o.NORM} {st.score.min_mean_max()} "
+                f"[{", ".join(str(sc) for sc in sorted(st.score))}]\n")
+
+
+def stats(sessions):
+    """Compute statistics over a set of sessions."""
+    sessions = list(sessions)
+    return types.SimpleNamespace(
+        session_duration=Sample(s.duration for s in sessions),
+        answers=sum(1 if isinstance(e, Correction) else 0
+                    for s in sessions for c in s.conversations.values()
+                    for e in c.exchanges),
+        correct_answers=sum(1 if isinstance(e, Correction) and e.passed else 0
+                            for s in sessions for c in s.conversations.values()
+                            for e in c.exchanges),
+        helps=sum(1 if isinstance(e, Help) else 0
+                  for s in sessions for c in s.conversations.values()
+                  for e in c.exchanges),
+        score=Sample(s.score for s in sessions),
+    )
+
+
+def fmt(v):
+    if v is None: return "-"
+    if isinstance(v, float): return f"{v:.1f}"
+    if isinstance(v, datetime.timedelta):
+        return str(v - datetime.timedelta(microseconds=v.microseconds))
+    return str(v)
+
+
+class Sample(list):
+    """A statistical sample of values."""
+    @property
+    def min(self): return min(self)
+
+    @property
+    def max(self): return max(self)
+
+    @property
+    def mean(self):
+        if not self: return
+        return sum(self, start=self[0].__class__()) / len(self)
+
+    def min_mean_max(self, fmt=fmt):
+        return f"min: {fmt(self.min)}, moy: {fmt(self.mean)}, " \
+               f"max: {fmt(self.max)}"
+
+
 def query(cfg):
     """Query the database, using the user-provided restrictions."""
     terms, params = [], {}
@@ -91,7 +163,7 @@ def query(cfg):
         terms.append("time < :end")
         params['end'] = value.timestamp() * 1000
     terms.append("location regexp 'https?://[^/]+(/informatique)?"
-                 "/python-1/labo-didactique\\.html\\?.*'")
+                 "/python-1/labo-didactique\\.html(\\?.*)?(#.*)?'")
     if (value := cfg.session) is not None:
         terms.append("session regexp :session")
         params['session'] = value
@@ -102,6 +174,7 @@ def query(cfg):
     # Query the database and construct an in-memory data structure.
     with store.Store(cfg.store).connect('mode=ro') as db:
         sessions = {}
+        incomplete = set()
         for time, session, data in db.execute(f"""
             select time, session, data from log
             where {' and '.join(terms)}
@@ -109,30 +182,35 @@ def query(cfg):
         """, params):
             time = datetime.datetime.fromtimestamp(time / 1000)
             data = json.loads(data)
-            cid = data['id']
             typ = data['type']
             action = data.get('action')
+            if typ == 'error':
+                et = Error
+            elif typ == 'response' and action == 'new':
+                et = Question
+            elif typ == 'response' and action == 'correct':
+                et = Correction
+            elif typ == 'response' and action == 'help':
+                et = Help
+            else:
+                cfg.stderr.write(
+                    "ATTENTION: Saut d'une entrée de log inconnue "
+                    f"[type: {typ}, action: {action}]\n")
+                continue
+            cid = data['id']
             if (s := sessions.get(session)) is None:
                 if (cid != 0 or action != 'new'
                         or len(data['conversation']['messages']) != 2):
-                    continue  # The start of the session is missing
+                    if session not in incomplete:
+                        incomplete.add(session)
+                        cfg.stderr.write(
+                            "ATTENTION: Saut d'une session incomplète "
+                            f"[id: {session}]\n")
+                    continue
                 s = sessions[session] = Session(session, time, data['name'])
             if (c := s.conversations.get(cid)) is None:
                 c = s.conversations[cid] = Conversation(s, time, cid)
-            if typ == 'error':
-                e = Error(c, time, data)
-            elif typ == 'response' and action == 'new':
-                e = Question(c, time, data)
-            elif typ == 'response' and action == 'correct':
-                e = Correction(c, time, data)
-            elif typ == 'response' and action == 'help':
-                e = Help(c, time, data)
-            else:
-                cfg.stderr.write(
-                    f"ATTENTION: Saut d'une entrée de log [type: {typ},"
-                    f" action: {action}]")
-                continue
-            c.exchanges.append(e)
+            c.exchanges.append(et(c, time, data))
     return sessions
 
 
@@ -141,10 +219,8 @@ def indented(indent, text):
     return f"{indent}{indent.join(text.splitlines(True))}"
 
 
-def time_delta(dt1, dt2):
-    """Return the time delta from dt1 to dt2, without microseconds."""
-    delta = dt2 - dt1
-    return delta - datetime.timedelta(microseconds=delta.microseconds)
+def last_value(mapping):
+    return mapping[next(reversed(mapping))]
 
 
 class Session:
@@ -163,6 +239,16 @@ class Session:
     def htime(self):
         return self.time.isoformat(sep=' ', timespec='seconds')
 
+    @property
+    def duration(self):
+        return last_value(self.conversations).exchanges[-1].time - self.time
+
+    @property
+    def score(self):
+        return max(
+            e.score + (1 if isinstance(e, Correction) and e.passed else 0)
+            for c in self.conversations.values() for e in c.exchanges)
+
 
 class Conversation:
     """A conversation with the LLM."""
@@ -170,21 +256,24 @@ class Conversation:
         self.session, self.time, self.id = session, time, id
         self.exchanges = []
 
+    @property
+    def htime(self):
+        return self.time.isoformat(sep=' ', timespec='seconds')
+
     def write(self, o, indent):
         o.write(f"{indent}{o.CYAN}Conversation:{o.NORM}"
                 f" [{self.htime}, id: {self.id}]\n")
         for e in self.exchanges:
             e.write(o, indent + "  ")
 
-    @property
-    def htime(self):
-        return self.time.isoformat(sep=' ', timespec='seconds')
-
 
 class ConversationEntry:
     """An entry in the conversation with the LLM."""
-    def __init__(self, conversation, time):
+    def __init__(self, conversation, time, data):
         self.conversation, self.time = conversation, time
+        self.action = data['action']
+        self.score = data['score']
+        self.level = data.get('level', self.score // 2)
 
     @property
     def htime(self):
@@ -198,15 +287,14 @@ class ConversationEntry:
     @property
     def elapsed(self):
         if (prev := self.prev) is None: return datetime.timedelta()
-        return time_delta(prev.time, self.time)
+        return self.time - prev.time
 
 
 class Error(ConversationEntry):
     """An error returned by the LLM."""
     def __init__(self, conversation, time, data):
-        super().__init__(conversation, time)
+        super().__init__(conversation, time, data)
         self.text = data['error'].strip()
-        self.action = data['action']
         self.code = data.get('code')
 
     def write(self, o, indent):
@@ -214,20 +302,18 @@ class Error(ConversationEntry):
                 f" [{self.htime}, action: {self.action}]\n")
         o.write(f"{indented(indent + "  ", self.text)}\n")
         if self.code is not None:
-            o.write(f"{indent}  Code:\n")
+            o.write(f"{indent}  {o.LWHITE}Code:{o.NORM}\n")
             o.write(f"{indented(indent + "    ", self.code)}\n")
 
 
 class Question(ConversationEntry):
     """A new question generated by the LLM."""
     def __init__(self, conversation, time, data):
-        super().__init__(conversation, time)
-        self.score = data['score']
-        self.level = data.get('level', self.score // 2)
+        super().__init__(conversation, time, data)
         self.text = data['conversation']['messages'][-1]['content'].strip()
 
     def write(self, o, indent):
-        elapsed = f"+{self.elapsed}, " if self.prev else ""
+        elapsed = f"+{fmt(self.elapsed)}, " if self.prev else ""
         o.write(f"{indent}{o.LCYAN}Question:{o.NORM}"
                 f" [{elapsed}niveau: {self.level + 1},"
                 f" score: {self.score}]\n")
@@ -237,35 +323,37 @@ class Question(ConversationEntry):
 class Correction(ConversationEntry):
     """The LLM response to a request for correcting an answer."""
     def __init__(self, conversation, time, data):
-        super().__init__(conversation, time)
+        super().__init__(conversation, time, data)
         self.code = data.get('code', '').rstrip()
         self.text = data['conversation']['messages'][-1]['content'].strip()
 
+    @property
+    def passed(self): return self.text == "ok"
+
     def write(self, o, indent):
-        ok = f"{o.LGREEN}OK{o.NORM}" if self.text == "ok" \
-             else f"{o.LRED}FAUX{o.NORM}"
+        ok = f"{o.LGREEN}OK{o.NORM}" if self.passed else f"{o.LRED}FAUX{o.NORM}"
         o.write(f"{indent}{o.LYELLOW}Correction:{o.NORM}"
-                f" [+{self.elapsed}, {ok}]\n")
+                f" [+{fmt(self.elapsed)}, {ok}]\n")
         indent += "  "
-        if self.text != "ok": o.write(f"{indented(indent, self.text)}\n")
+        if not self.passed: o.write(f"{indented(indent, self.text)}\n")
         if self.code:
-            o.write(f"{indent}Code:\n")
+            o.write(f"{indent}{o.LWHITE}Code:{o.NORM}\n")
             o.write(f"{indented(indent + "  ", self.code)}\n")
 
 
 class Help(ConversationEntry):
     """The LLM response to a help request."""
     def __init__(self, conversation, time, data):
-        super().__init__(conversation, time)
+        super().__init__(conversation, time, data)
         self.code = data.get('code', '').rstrip()
         self.text = data['conversation']['messages'][-1]['content'].strip()
 
     def write(self, o, indent):
-        o.write(f"{indent}{o.LMAGENTA}Aide:{o.NORM} [+{self.elapsed}]\n")
+        o.write(f"{indent}{o.LMAGENTA}Aide:{o.NORM} [+{fmt(self.elapsed)}]\n")
         indent += "  "
         o.write(f"{indented(indent, self.text)}\n")
         if self.code:
-            o.write(f"{indent}Code:\n")
+            o.write(f"{indent}{o.LWHITE}Code:{o.NORM}\n")
             o.write(f"{indented(indent + "  ", self.code)}\n")
 
 
