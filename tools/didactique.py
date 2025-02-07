@@ -17,7 +17,6 @@ except ImportError:
         [os.environ.get('TDOC_RUN', path.parent.resolve().parent / 'run.py'),
          'python', path.resolve()] + sys.argv[1:]).returncode)
 
-import argparse
 import datetime
 import json
 import sqlite3
@@ -25,11 +24,9 @@ import sqlite3
 
 def main(argv, stdin, stdout, stderr):
     """Program entry point."""
-    class Parser(argparse.ArgumentParser):
-        def _print_message(self, message, file=None):
-            super()._print_message(message, stderr)
-    parser = Parser(prog=pathlib.Path(argv[0]).name, add_help=False,
-                    description="Requêtes liées au labo de didactique.")
+    parser = util.get_arg_parser(stderr)(
+        prog=pathlib.Path(argv[0]).name, add_help=False,
+        description="Requêtes liées au labo de didactique.")
     root = parser.add_subparsers(title='Sous-commandes', dest='subcommand')
     root.required = True
 
