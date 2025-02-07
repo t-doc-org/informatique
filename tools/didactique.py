@@ -39,7 +39,20 @@ def main(argv, stdin, stdout, stderr):
         default='auto',
         help="Contrôle l'utilisation de la couleur (par défaut: %(default)s).")
 
-    p = root.add_parser('sessions', add_help=False, help="Liste les sessions.")
+    p = root.add_parser('details', add_help=False,
+                        help="Affiche le détail des sessions.")
+    p.set_defaults(handler=cmd_details)
+    arg = p.add_argument_group("Options").add_argument
+    add_common_args(arg)
+
+    p = root.add_parser('names', add_help=False,
+                        help="Liste les noms d'utilisateurs.")
+    p.set_defaults(handler=cmd_names)
+    arg = p.add_argument_group("Options").add_argument
+    add_common_args(arg)
+
+    p = root.add_parser('sessions', add_help=False,
+                        help="Liste les sessions.")
     p.set_defaults(handler=cmd_sessions)
     arg = p.add_argument_group("Options").add_argument
     add_common_args(arg)
@@ -79,11 +92,25 @@ def add_common_args(arg):
         help="Chemin d'accès de la base de données.")
 
 
-def cmd_sessions(cfg, sessions):
-    """Run the "sessions" command."""
+def cmd_details(cfg, sessions):
+    """Run the "details" command."""
     for i, s in enumerate(sessions.values()):
         if i > 0: cfg.stdout.write("\n")
         s.write(cfg.stdout)
+
+
+def cmd_names(cfg, sessions):
+    """Run the "names" command."""
+    names = set(s.name for s in sessions.values())
+    for name in sorted(set(s.name for s in sessions.values())):
+        cfg.stdout.write(f"{name}\n")
+
+
+def cmd_sessions(cfg, sessions):
+    """Run the "sessions" command."""
+    o = cfg.stdout
+    for s in sessions.values():
+        o.write(f"{o.CYAN}{s.id}{o.NORM} [{s.htime}, name: {s.name}]\n")
 
 
 def cmd_stats(cfg, sessions):
