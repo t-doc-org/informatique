@@ -3,10 +3,6 @@
 
 # Listes - Élément appartenant à une liste
 
-```{metadata}
-hide-solutions: true
-```
-
 Il est possible de savoir si un élément appartient à une liste en utilisant
 l'expression suivante `element in liste` qui revoie `True` si `element` est dans
 `liste` et `False` sinon.
