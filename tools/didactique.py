@@ -16,7 +16,7 @@ except ImportError:
     sys.exit(subprocess.run(
         [os.environ.get('TDOC_RUN', path.parent.resolve().parent / 'run.py'),
          'python', path.resolve()] + sys.argv[1:],
-        shell=os.name == 'nt').returncode)
+        shell=sys.platform == 'win32').returncode)
 
 import datetime
 import json
