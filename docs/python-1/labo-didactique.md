@@ -53,7 +53,7 @@ function logConversation(data) {
         headers: bearerAuthorization(storeToken),
         body: {
             'time': Date.now(),
-            'location': location.origin + location.pathname + location.search,
+            'location': location.origin + location.pathname,
             'session': session,
             'data': {
                 'id': conversationId,
