@@ -52,7 +52,9 @@ function logConversation(data) {
     return fetchJson(`${storeUrl}/log`, {
         headers: bearerAuthorization(storeToken),
         body: {
-            'time': Date.now(), 'location': location.href, 'session': session,
+            'time': Date.now(),
+            'location': location.origin + location.pathname + location.search,
+            'session': session,
             'data': {
                 'id': conversationId,
                 'name': name.value,
@@ -90,6 +92,7 @@ async function ask(action, attrs, prompt) {
 
 let level = 0;
 let score = 0;
+let mistakeMade = false;
 const examples = [[`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez à l'utilisateur la longueur d'un rectangle. Sa largeur mesure 14.5.
@@ -106,7 +109,7 @@ S'il a 18 ans et plus, affichez qu'il est majeur, sinon affichez qu'il est \
 mineur.
 `, `\
 Il ne doit contenir qu'un if et un else. La valeur utile pour le if doit être \
-indiquée. Considérer que la valeur entrée par l'utilisateur est valide`,
+indiquée. Considérer que la valeur entrée par l'utilisateur est valide.`,
     ], [`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez l'âge à l'utilisateur.
@@ -144,8 +147,7 @@ await domLoaded;
 const name = document.querySelector('#name');
 
 const nameKey = 't-doc:firstName'
-let mistakeMade = false;
-let firstName = localStorage.getItem(nameKey);
+const firstName = localStorage.getItem(nameKey);
 if (firstName !== null) name.setAttribute('value', firstName);
 
 const question = document.querySelector('#question pre');
@@ -171,7 +173,8 @@ async function generateQuestion() {
     levelNum.textContent = `${level + 1}`;
     question.replaceChildren(text("Génération d'une nouvelle question..."));
     const [ex, constraint] = examples[level];
-    const q = await ask('new', {}, `\
+    try {
+        const q = await ask('new', {}, `\
 Génère un autre exercice du même genre que l'exemple donné ci-dessous sans \
 mentionner la condition dans l'énoncé, mais sois créatif ou pas. L'énoncé doit \
 avoir du sens. Utilise des CHF à la place des euros. Si l'exercice parle de \
@@ -185,15 +188,19 @@ Ne pas donner les conditions.
 
 Exemple:
 ${ex}`);
-    feedback.classList.add('hidden');
-    question.replaceChildren(text(q));
+        feedback.classList.add('hidden');
+        question.replaceChildren(text(q));
+    } catch (e) {
+        question.replaceChildren(text(`ERREUR: ${e}`));
+        throw e;
+    }
 }
 
 commencer.addEventListener('click', async () => {
+    localStorage.setItem(nameKey, name.value);
     await generateQuestion();
     correct.disabled = newQuestion.disabled = help.disabled = false;
     commencer.disabled = name.disabled = true;
-    localStorage.setItem(nameKey, name.value);
 });
 
 correct.addEventListener('click', async () => {
