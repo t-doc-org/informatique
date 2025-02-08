@@ -113,15 +113,19 @@ def cmd_sessions(cfg, sessions):
 def cmd_stats(cfg, sessions):
     """Run the "stats" command."""
     groups = {}
-    group = (lambda s: s.name) if cfg.per == 'name' \
-            else (lambda s: s.id) if cfg.per == 'session' \
-            else (lambda s: '')
+    identity = lambda v: v
+    sort, group = (sorted, lambda s: s.name) if cfg.per == 'name' \
+                  else (identity, identity) if cfg.per == 'session' \
+                  else (identity, lambda s: '')
     for s in sessions.values():
         groups.setdefault(group(s), []).append(s)
     indent = "  " if cfg.per else ""
     o = cfg.stdout
-    for g, ss in sorted(groups.items()):
-        if g: o.write(f"{o.CYAN}{g}:{o.NORM}\n")
+    for g, ss in sort(groups.items()):
+        if cfg.per == 'name':
+            o.write(f"{o.CYAN}{g}{o.NORM}\n")
+        elif cfg.per == 'session':
+            o.write(f"{o.CYAN}{g.id}{o.NORM} [{g.htime}, name: {g.name}]\n")
         st = stats(ss)
         o.write(f"{indent}{o.LWHITE}Sessions:{o.NORM} {len(ss)}, durée "
                 f"{st.session_duration.min_mean_max()}\n")
@@ -254,7 +258,7 @@ class Session:
         self.conversations = {}
 
     def write(self, o):
-        o.write(f"{o.YELLOW}Session:{o.NORM} {self.name}"
+        o.write(f"{o.YELLOW}Session:{o.NORM} {o.LWHITE}{self.name}{o.NORM}"
                 f" [{self.htime}, id: {self.id}]\n")
         for c in self.conversations.values():
             c.write(o, "  ")
