@@ -15,10 +15,12 @@ except ImportError:
     import subprocess
     sys.exit(subprocess.run(
         [os.environ.get('TDOC_RUN', path.parent.resolve().parent / 'run.py'),
-         'python', path.resolve()] + sys.argv[1:]).returncode)
+         'python', path.resolve()] + sys.argv[1:],
+        shell=os.name == 'nt').returncode)
 
 import datetime
 import json
+import re
 import sqlite3
 
 
@@ -201,6 +203,9 @@ def query(cfg):
 
     # Query the database and construct an in-memory data structure.
     with store.Store(cfg.store).connect('mode=ro') as db:
+        db.create_function(
+            'regexp', 2, lambda pat, v: re.fullmatch(pat, v) is not None,
+            deterministic=True)
         sessions = {}
         incomplete = set()
         for time, session, data in db.execute(f"""
