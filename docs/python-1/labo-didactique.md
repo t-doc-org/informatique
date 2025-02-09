@@ -266,6 +266,7 @@ ${code.replace('await input_line', 'input')}
 newQuestion.addEventListener('click', async () => {
     await blocking(async () => {
         feedback.classList.add('hidden');
+        mistakeMade = false;
         await generateQuestion();
     });
 });
