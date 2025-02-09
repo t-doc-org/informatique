@@ -24,6 +24,7 @@ import re
 import sqlite3
 
 
+@util.main
 def main(argv, stdin, stdout, stderr):
     """Program entry point."""
     parser = util.get_arg_parser(stderr)(
@@ -37,6 +38,8 @@ def main(argv, stdin, stdout, stderr):
     arg('--color', dest='color', choices=['auto', 'false', 'true'],
         default='auto',
         help="Contrôle l'utilisation de la couleur (par défaut: %(default)s).")
+    arg('--debug', action='store_true', dest='debug',
+        help="Active des fonctionnalités de débogage.")
 
     p = root.add_parser('details', add_help=False,
                         help="Affiche le détail des sessions.")
@@ -391,9 +394,4 @@ class Help(ConversationEntry):
 
 
 if __name__ == '__main__':
-    try:
-        sys.exit(main(sys.argv, sys.stdin, sys.stdout, sys.stderr))
-    except SystemExit:
-        raise
-    except KeyboardInterrupt:
-        sys.exit(1)
+    main()
