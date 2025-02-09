@@ -157,12 +157,12 @@ print("Tu es arrivé!")
 
 ## Exercice {num}`exo-py2`
 
-Complétez le programme ci-dessous de sorte à ce qu'il compte combien de notes
-sont insuffisantes (c'est-à-dire inférieures à 4) dans la liste que
-l'utilisateur donne dans le input().
+Un liste de notes a été donnée par un autre utilisateur et sauvegardée dans la
+variable `notes`.
 
-Par exemple si l'utilisateur donne la liste [3, 4.5, 5, 4.7, 1, 3.9, 5.8, 2]
-alors le programme devra afficher "Vous avez 4 notes insuffisantes".
+1. Calculer le nombre de notes insuffisantes.
+2. Calculer la moyenne.
+3. Déterminer la meilleure note obtenue.
 
 Ne vous préoccupez pas de la première ligne, celle-ci permet juste de demander
 une liste à l'utilisateur et d'enregistrer le résultat dans la variable "notes".
@@ -175,10 +175,10 @@ from random import uniform, randint
 def genere_liste_notes(nb_notes):
   notes = []
   for _ in range(nb_notes):
-    notes.append(round(uniform(1.5, 6), 1))
+    notes.append(round(uniform(2, 6), 1))
   return notes
 
-notes = genere_liste_notes(randint(5, 15))
+notes = genere_liste_notes(randint(7, 15))
 ```
 
 ```{exec} python
@@ -189,8 +189,13 @@ print(notes)
 # Complétez le progamme à partir de là
 nb_notes_insuffisantes =
 
+moyenne =
 
-print(nb_notes_insuffisantes)
+meilleure_note =
+
+print("Il y a ", nb_notes_insuffisantes, "notes insuffisantes.")
+print("La moyenne est de", moyenne)
+print("La meilleure note obtenue est", meilleure_note)
 ```
 
 ````{solution}
@@ -203,5 +208,16 @@ for note in notes:
     if note < 4:
         nb_notes_insuffisantes += 1
 print(nb_notes_insuffisantes)
+moyenne = sum(notes) / len(notes)
+
+meilleure_note = 0
+for note in notes:
+    if note > meilleure_note:
+        meilleure_note = note
+
+print("Il y a ", nb_notes_insuffisantes, "notes insuffisantes.")
+print("La moyenne est de", moyenne)
+print("La meilleure note obtenue est", meilleure_note)
+
 ```
 ````
