@@ -96,14 +96,14 @@ hasard entre 1 et 1000.
 from random import randint
 
 def maximum(listes_nombres):
-  max = 0
+  max = listes_nombres[0]
   for nombre in listes_nombres:
     if nombre > max:
       max = nombre
   return max
 
 def minimum(listes_nombres):
-  min = 1000
+  min = listes_nombres[0]
   for nombre in listes_nombres:
     if nombre < min:
       min = nombre
