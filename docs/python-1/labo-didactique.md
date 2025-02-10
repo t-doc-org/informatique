@@ -168,6 +168,13 @@ async function blocking(fn) {
     }
 }
 
+function setEditorText(text) {
+    const editor = findEditor(document.querySelector('#editor'));
+    editor.dispatch(editor.state.update({
+        changes: {from: 0, to: editor.state.doc.length, insert: text},
+    }));
+}
+
 // Génère une nouvelle question.
 async function generateQuestion() {
     levelNum.textContent = `${level + 1}`;
@@ -215,6 +222,9 @@ Vérifie si le code suivant correspond à l'énoncé.
 Sans s'occuper de la gestion des erreurs et des fautes d'orthographe, vérifie \
 si le code contient des erreurs de syntaxe, d'exécution ou de logique.
 
+Si le code est vide ou ne contient qu'un commentaire, considérez cela comme une \
+erreur.
+
 S'il n'y a pas d'erreur et que le code est ou semble correct, renvoie \
 seulement ok et rien d'autre.
 S'il y a des erreurs, explique-les sans afficher de code python.
@@ -228,6 +238,7 @@ nécessaire d'écrire elif 4 <= a < 7, a <7 est suffisant, car le cas où 4 est 
 plus petit que 4 a déjà été traité dans le if. Idem pour le else, ce n'est \
 donc pas une erreur.
 5.0 et 5 sont le même nombre, ce n'est donc pas une erreur.
+2.5 et 2.50 sont le même nombre, ce n'est donc pas une erreur.
 Dans la boucle for i in range(n), la boucle s'effectue de 0 à (n-1).
 Dans la boucle for i in range(m, n), la boucle s'effectue de m à (n-1).
 
@@ -251,6 +262,7 @@ ${code.replace('await input_line', 'input')}
                 return;
             }
             mistakeMade = false;
+            setEditorText("");
             await generateQuestion();
         } else {
             mistakeMade = true;
@@ -267,6 +279,7 @@ newQuestion.addEventListener('click', async () => {
     await blocking(async () => {
         feedback.classList.add('hidden');
         mistakeMade = false;
+        setEditorText("");
         await generateQuestion();
     });
 });
