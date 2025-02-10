@@ -116,7 +116,7 @@ cree_utilisateur()
 ## Exercice {num}`py2-lab3`
 
 Complétez le programme précédent qui a pour but de vérifier l'accès à un site
-ou à une application vis l'utilisation d'un nom d'utilisateur et d'un mot de
+ou à une application via l'utilisation d'un nom d'utilisateur et d'un mot de
 passe.
 
 Le programme doit:
