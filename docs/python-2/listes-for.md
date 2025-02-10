@@ -157,15 +157,15 @@ print("Tu es arrivé!")
 
 ## Exercice {num}`exo-py2`
 
-Un liste de notes a été donnée par un autre utilisateur et sauvegardée dans la
+Une liste de notes a été donnée par un autre utilisateur et sauvegardée dans la
 variable `notes`.
 
-1. Calculer le nombre de notes insuffisantes.
-2. Calculer la moyenne.
-3. Déterminer la meilleure note obtenue.
+1. Calculez le nombre de notes insuffisantes.
+2. Calculez la moyenne.
+3. Déterminez la meilleure note obtenue.
 
 Ne vous préoccupez pas de la première ligne, celle-ci permet juste de demander
-une liste à l'utilisateur et d'enregistrer le résultat dans la variable "notes".
+une liste à l'utilisateur et d'enregistrer le résultat dans la variable `notes`.
 
 ```{exec} python
 :name: python-liste-notes
