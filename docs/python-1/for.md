@@ -402,8 +402,8 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
     ```{exec} python
     :linenos:
     nb_billes = 0
-    for i in range(1, 8):
-      nb_billes += i ** 2
+    for etage in range(1, 8):
+      nb_billes += etage ** 2
     print(nb_billes)
     ```
     ````
@@ -428,8 +428,8 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
     ```{exec} python
     :linenos:
     nb_billes = 0
-    for i in range(1, 101):
-      nb_billes += i ** 2
+    for etage in range(1, 101):
+      nb_billes += etage ** 2
     print(nb_billes)
     ```
     ````
@@ -457,8 +457,8 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
     :linenos:
     nb_etages = int(await input_line("Choisissez le nombre d'étages: "))
     nb_billes = 0
-    for i in range(1, nb_etages + 1):
-      nb_billes += i ** 2
+    for etage in range(1, nb_etages + 1):
+      nb_billes += etage ** 2
     print(nb_billes)
     ```
     ````
@@ -560,7 +560,7 @@ d'épargne 1500 CHF au taux de 2 %.
     :linenos:
     montant = float(await input_line("Montant déposé: "))
     duree = int(await input_line("Durée du placement: "))
-    taux = int(await input_line("Taux d'intérêt en %: "))
+    taux = float(await input_line("Taux d'intérêt en %: "))
     for _ in range(duree):
       montant += taux / 100 * montant
     print(montant)
@@ -570,7 +570,7 @@ d'épargne 1500 CHF au taux de 2 %.
     :linenos:
     montant = float(await input_line("Montant déposé: "))
     duree = int(await input_line("Durée du placement: "))
-    taux = int(await input_line("Taux d'intérêt en %: "))
+    taux = float(await input_line("Taux d'intérêt en %: "))
     for _ in range(duree):
       montant = (taux + 100) / 100 * montant
     print(montant)
