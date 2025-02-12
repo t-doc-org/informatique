@@ -207,7 +207,6 @@ nb_notes_insuffisantes = 0
 for note in notes:
     if note < 4:
         nb_notes_insuffisantes += 1
-print(nb_notes_insuffisantes)
 moyenne = sum(notes) / len(notes)
 
 meilleure_note = 0
@@ -215,7 +214,7 @@ for note in notes:
     if note > meilleure_note:
         meilleure_note = note
 
-print("Il y a ", nb_notes_insuffisantes, "notes insuffisantes.")
+print("Il y a", nb_notes_insuffisantes, "notes insuffisantes.")
 print("La moyenne est de", moyenne)
 print("La meilleure note obtenue est", meilleure_note)
 
