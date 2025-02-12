@@ -3,9 +3,6 @@
 
 # Boucle for
 
-```{metadata}
-hide-solutions: true
-```
 ## Répétition un bloc d'instructions
 
 La boucle `for` permet de répéter un bloc d'instructions un nombre de fois connu
