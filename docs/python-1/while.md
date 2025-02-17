@@ -6,7 +6,7 @@
 ```{metadata}
 hide-solutions: true
 ```
-## Répétition un bloc d'instructions
+## Répétition d'un bloc d'instructions
 
 La boucle while (qui signifie "tant que" en anglais) permet de répéter un bloc
 d'instructions tant qu'une condition est vraie.

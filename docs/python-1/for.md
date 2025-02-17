@@ -3,7 +3,7 @@
 
 # Boucle for
 
-## Répétition un bloc d'instructions
+## Répétition d'un bloc d'instructions
 
 La boucle `for` permet de répéter un bloc d'instructions un nombre de fois connu
 à l'avance.
