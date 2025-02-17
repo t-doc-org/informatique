@@ -329,3 +329,47 @@ print("L'algorithme de Syracuse est terminé et il se termine bien par 4, 2 et 1
 ```
 ````
 
+## Boucle `for` et boucle `while`
+
+### Exercice {num}`exo-py1`
+
+Transformez le code suivant afin d'utiliser une boucle `while` à la place de la
+boucle `for`.
+
+```{exec} python
+:editor: 5ccfcda3-f7f1-48c8-9c39-de4a7c9b254a
+for i in range(20):
+  print(i ** 2)
+```
+
+````{solution}
+```{exec} python
+n = 0
+while n < 20:
+  print(n ** 2)
+  n += 1
+```
+````
+
+### Exercice {num}`exo-py1`
+
+Transformez le code suivant afin d'utiliser une boucle `for` à la place de la
+boucle `while`.
+
+```{exec} python
+:editor: 10459e39-ee44-45d1-9d8a-2278f911e8d3
+n = 4
+while n <= 10:
+  print(2 * n)
+  n += 1
+```
+
+````{solution}
+```{exec} python
+for i in range(4, 11):
+  print(2 * i)
+```
+````
+
+
+
