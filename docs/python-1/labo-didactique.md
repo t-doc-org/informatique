@@ -45,6 +45,7 @@ const compToken = await decryptSecret(key, {
 let conversationId = 0;
 const conversation = {
     'model': 'llama3',
+    // 'model': 'mixtral8x22b',
     'messages': [],
 };
 
@@ -90,8 +91,8 @@ async function ask(action, attrs, prompt) {
     }
 }
 
-let level = 0;
-let score = 0;
+let level = 2;
+let score = 4;
 let mistakeMade = false;
 const examples = [[`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
@@ -123,6 +124,13 @@ doivent être indiquée en précisant si c'est strictement ou inclu. Considérer
 que la valeur entrée par l'utilisateur est valide. \
 Pas de calcul à faire, juste afficher du texte.`,
     ], [`\
+Écrivez le programme Python qui correspond à l'un des algorithmes suivants:
+Affichez les nombres de 0 à 50 (inclus).
+`, `\
+Utiliser for i in range(n) avec un seul paramètre. Ne pas demander d'afficher \
+des lettres. Doit générer une suite des nombres entiers qui se suivent. Les \
+valeurs de début et fin ne doivent pas être les mêmes.`,
+], [`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Initialisez une variable compte_a_rebours à 10.
 Tant que compte_a_rebours est plus grand que 0, affichez la valeur de \
@@ -133,13 +141,6 @@ Affichez 'BOOM'.
 Utilisez une boucle while. Pas de demande à l'utilisateur. Pas de listes. Pas \
 de calcul aléatoire avec le module random. Ne pas utiliser d'exemple avec des \
 notes.`,
-    ], [`\
-Écrivez le programme Python qui correspond à l'un des algorithmes suivants:
-Affichez les nombres de 0 à 50 (inclus).
-`, `\
-Utiliser for i in range(n) avec un seul paramètre. Ne pas demander d'afficher \
-des lettres. Doit générer une suite des nombres entiers qui se suivent. Les \
-valeurs de début et fin ne doivent pas être les mêmes.`,
 ]];
 
 await domLoaded;
