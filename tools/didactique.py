@@ -27,71 +27,66 @@ import sqlite3
 @util.main
 def main(argv, stdin, stdout, stderr):
     """Program entry point."""
-    parser = util.get_arg_parser(stderr)(
-        prog=pathlib.Path(argv[0]).name, add_help=False,
-        description="Requêtes liées au labo de didactique.")
-    root = parser.add_subparsers(title='Sous-commandes', dest='subcommand')
+    parser = util.get_arg_parser(stdin, stdout, stderr)(
+        prog=pathlib.Path(argv[0]).name,
+        description="Requêtes liées au labo de didactique.",
+        help_description="Affiche l'aide et termine.")
+    root = parser.add_subparsers(title='Sous-commandes')
     root.required = True
 
-    arg = parser.add_argument_group("Options").add_argument
-    arg('--help', action='help', help="Affiche ce message et termine.")
+    p = root.add_parser('details', help="Affiche le détail des sessions.")
+    p.set_defaults(handler=cmd_details)
+    add_query_options(p)
+    add_common_options(p)
+
+    p = root.add_parser('names', help="Liste les noms d'utilisateurs.")
+    p.set_defaults(handler=cmd_names)
+    add_query_options(p)
+    add_common_options(p)
+
+    p = root.add_parser('sessions', help="Liste les sessions.")
+    p.set_defaults(handler=cmd_sessions)
+    add_query_options(p)
+    add_common_options(p)
+
+    p = root.add_parser('stats', help="Calcule des statistiques.")
+    p.set_defaults(handler=cmd_stats)
+    arg = p.add_argument
+    arg('--per', dest='per', choices=['', 'name', 'session'], default='',
+        help="Groupe les sessions pour le calcul de statistiques.")
+    add_query_options(p)
+    add_common_options(p)
+
+    cfg = parser.parse_args(argv[1:])
+    return cfg.handler(cfg, query(cfg))
+
+
+def add_common_options(parser):
+    """Add common options to a parser."""
+    arg = parser.add_argument_group("Options communes").add_argument
     arg('--color', dest='color', choices=['auto', 'false', 'true'],
         default='auto',
         help="Contrôle l'utilisation de la couleur (par défaut: %(default)s).")
     arg('--debug', action='store_true', dest='debug',
         help="Active des fonctionnalités de débogage.")
 
-    p = root.add_parser('details', add_help=False,
-                        help="Affiche le détail des sessions.")
-    p.set_defaults(handler=cmd_details)
-    arg = p.add_argument_group("Options").add_argument
-    add_common_args(arg)
 
-    p = root.add_parser('names', add_help=False,
-                        help="Liste les noms d'utilisateurs.")
-    p.set_defaults(handler=cmd_names)
-    arg = p.add_argument_group("Options").add_argument
-    add_common_args(arg)
-
-    p = root.add_parser('sessions', add_help=False,
-                        help="Liste les sessions.")
-    p.set_defaults(handler=cmd_sessions)
-    arg = p.add_argument_group("Options").add_argument
-    add_common_args(arg)
-
-    p = root.add_parser('stats', add_help=False,
-                        help="Calcule des statistiques.")
-    p.set_defaults(handler=cmd_stats)
-    arg = p.add_argument_group("Options").add_argument
-    add_common_args(arg)
-    arg('--per', dest='per', choices=['', 'name', 'session'], default='',
-        help="Groupe les sessions pour le calcul de statistiques.")
-
-    cfg = parser.parse_args(argv[1:])
-    color = None if cfg.color == 'auto' else cfg.color == 'true'
-    cfg.stdout = util.AnsiStream(stdout, color)
-    cfg.stderr = util.AnsiStream(stderr, color)
-    if cfg.start is not None:
-        cfg.start = datetime.datetime.fromisoformat(cfg.start)
-    if cfg.end is not None:
-        cfg.end = datetime.datetime.fromisoformat(cfg.end)
-    return cfg.handler(cfg, query(cfg))
-
-
-def add_common_args(arg):
-    """Add common options to a parser."""
-    arg('--help', action='help', help="Affiche ce message et termine.")
-    arg('--start', metavar='WHEN', dest='start', default=None,
+def add_query_options(parser):
+    """Add request options to a parser."""
+    arg = parser.add_argument_group("Options de base de données").add_argument
+    arg('--start', metavar='WHEN', type='timestamp', dest='start', default=None,
         help="Limite la requête aux entrées après WHEN (yyyy-mm-dd HH:MM:SS).")
-    arg('--end', metavar='WHEN', dest='end', default=None,
+    arg('--end', metavar='WHEN', type='timestamp', dest='end', default=None,
         help="Limite la requête aux entrées avant WHEN (yyyy-mm-dd HH:MM:SS).")
-    arg('--name', metavar='REGEXP', dest='name', default=None,
+    arg('--name', metavar='REGEXP', type='regexp', dest='name', default=None,
         help="Limite la requête aux entrées dont le nom correspond à REGEXP.")
-    arg('--session', metavar='REGEXP', dest='session', default=None,
+    arg('--session', metavar='REGEXP', type='regexp', dest='session',
+        default=None,
         help="Limite la requête aux entrées dont l'identifiant de session "
              "correspond à REGEXP.")
-    arg('--store', metavar='PATH', dest='store', default='tmp/store.sqlite',
-        help="Chemin d'accès de la base de données.")
+    arg('--store', metavar='PATH', type='path', dest='store',
+        default='tmp/store.sqlite',
+        help="Chemin d'accès de la base de données (par défaut: %(default)s).")
 
 
 def cmd_details(cfg, sessions):
@@ -189,20 +184,20 @@ class Sample(list):
 def query(cfg):
     """Query the database, using the user-provided restrictions."""
     terms, params = [], {}
-    if (value := cfg.start) is not None:
+    if (v := cfg.start) is not None:
         terms.append(":start <= time")
-        params['start'] = value.timestamp() * 1000
-    if (value := cfg.end) is not None:
+        params['start'] = v.timestamp() * 1000
+    if (v := cfg.end) is not None:
         terms.append("time < :end")
-        params['end'] = value.timestamp() * 1000
+        params['end'] = v.timestamp() * 1000
     terms.append("location regexp 'https?://[^/]+(/informatique)?"
                  "/python-1/labo-didactique\\.html(\\?.*)?(#.*)?'")
-    if (value := cfg.session) is not None:
+    if (v := cfg.session) is not None:
         terms.append("session regexp :session")
-        params['session'] = value
-    if (value := cfg.name) is not None:
+        params['session'] = v.pattern
+    if (v := cfg.name) is not None:
         terms.append("data ->> '$.name' regexp :name")
-        params['name'] = value
+        params['name'] = v.pattern
 
     # Query the database and construct an in-memory data structure.
     with store.Store(cfg.store).connect('mode=ro') as db:

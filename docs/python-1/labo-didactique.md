@@ -35,7 +35,7 @@ const session = await toBase64(await random(18));
 
 // Décrypte les informations d'identification pour l'API de chat.
 const completionsURL =
-    "https://im-api.proxy.c-space.net/1/ai/782/openai/chat/completions";
+    "https://im-api.t-doc.org/1/ai/782/openai/chat/completions";
 const compToken = await decryptSecret(key, {
     iv: 'WhVOIKndPgFcQp8x',
     data: 'cB2+NNx58sdf5faBu+65lYUit6U2HDWA9Tt110nr+NsHxCc/T9Ael+FrE1qmylZQfB' +
