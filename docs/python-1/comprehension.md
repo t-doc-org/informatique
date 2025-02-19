@@ -187,8 +187,7 @@ print(n)
 
 Sans exécuter le programme,
 
-1. Indiquez l'ordre dans lequel les instructions seront exécutées.
-(numéros de lignes).
+1. Indiquez l'ordre dans lequel les instructions seront exécutées (numéros de lignes).
 2. Notez ce qui sera affichez sur la console.
 
 Ensuite, exécutez le programme pour vérifier votre réponse.

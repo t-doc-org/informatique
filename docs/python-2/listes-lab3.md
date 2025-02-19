@@ -122,11 +122,11 @@ passe.
 Le programme doit:
 - demander à l'utilisateur d'entrer son nom d'utilisateur et son mot de passe.
 - vérifier si les identifiants entrés sont corrects. Pour cela,
-        1. utiliser la fonction `utilisateur_existe(utilisateur)` pour savoir si
-           le nom d'utilisateur existe.
-        2. créer une fonction `mot_de_passe_correct(utilisateur, mdp)` qui
-        retourne `True` si le mot de passe passé en paramètre correspond au
-        mot de passe de l'utilisateur.
+    1. utiliser la fonction `utilisateur_existe(utilisateur)` pour savoir si
+       le nom d'utilisateur existe.
+    2. créer une fonction `mot_de_passe_correct(utilisateur, mdp)` qui
+       retourne `True` si le mot de passe passé en paramètre correspond au
+       mot de passe de l'utilisateur.
 
 Voici un exemple d'exécution du programme:
 
