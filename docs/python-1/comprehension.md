@@ -188,7 +188,7 @@ print(n)
 Sans exécuter le programme,
 
 1. Indiquez l'ordre dans lequel les instructions seront exécutées (numéros de lignes).
-2. Notez ce qui sera affichez sur la console.
+2. Notez ce qui sera affiché sur la console.
 
 Ensuite, exécutez le programme pour vérifier votre réponse.
 
@@ -209,7 +209,7 @@ print("Bonjour", nom, "vous avez", age + 1, "ans!")
 Sans exécuter le programme,
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
 (numéros de lignes).
-2. Notez ce qui sera affichez sur la console.
+2. Notez ce qui sera affiché sur la console.
 
 Ensuite, exécutez le programme pour vérifier votre réponse.
 
@@ -239,7 +239,7 @@ else:
 Sans exécuter le programme,
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
 (numéros de lignes).
-2. Notez ce qui sera affichez sur la console.
+2. Notez ce qui sera affiché sur la console.
 
 Ensuite, exécutez le programme pour vérifier votre réponse.
 
@@ -264,7 +264,7 @@ print("n =", n, "et s =", s)
 Sans exécuter le programme,
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
 (numéros de lignes).
-2. Notez ce qui sera affichez sur la console.
+2. Notez ce qui sera affiché sur la console.
 
 Ensuite, exécutez le programme pour vérifier votre réponse.
 
