@@ -43,6 +43,9 @@ class Icon:
 class Board:
     def __init__(self, width, height, cell=50):
         self.width, self.height, self.cell = width, height, cell
+        # The "Segoe UI Emoji" font that is present in the font-family inherited
+        # from <body> causes the pawn to look weird. So we have to replace the
+        # whole list.
         self.image = svg.Image(self.cell * width, self.cell * height, style="""
             display: block;
             margin: 0 auto;
@@ -55,6 +58,9 @@ class Board:
             fill: var(--pst-color-text-base);
             text-anchor: middle;
             dominant-baseline: central;
+            font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+                "Noto Sans", "Liberation Sans", Arial, sans-serif,
+                "Apple Color Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         """)
         board = self.image.group()
         for x in range(width):
