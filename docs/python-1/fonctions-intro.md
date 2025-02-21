@@ -165,7 +165,7 @@ De cette manière le code est plus lisible!
 :then: py-roi-2-check
 :editor: d788a976-e9e5-41ec-83f4-9215b0f62b19
 :when: load
-# définition de la fonction diagonals
+# définition de la fonction diagonale
 def diagonale():
   nord()
   est()
@@ -441,9 +441,10 @@ mouvement ("ne", "se", "so" ou "no") et le deuxième est le nombre de cases.
 :editor: 3177f22c-18e0-4fb0-9de3-1b1e61e9c543
 def deplace_fou(direction, nb_cases):
   # Complétez la définition de la fonction
+  pass
 
 # programme principale qui déplace le fou en suivant les numéros
-
+deplace_fou("no", 2)
 
 ```
 
@@ -480,6 +481,65 @@ deplace_fou("se", 1)
 ```
 ````
 
+```{exec} python
+:name: py-deplacements-fou
+:when: never
+:class: hidden
+def deplace_fou(direction, nb_cases):
+  if direction == "ne":
+    deplace(nb_cases, nb_cases)
+  elif direction == "se":
+    deplace(nb_cases, -nb_cases)
+  elif direction == "no":
+    deplace(-nb_cases, nb_cases)
+  elif direction == "so":
+    deplace(-nb_cases, -nb_cases)
+  else:
+    print("direction non valide")
+```
+
+## Exercice {num}`exo-py1-fct`
+
+En utilisant la fonction `deplace_fou(direction, nb_cases)` définie à l'exercice
+précédent, déplace le fou afin d'aller manger le pion noir.
+
+
+```{exec} python
+:after: py-chess py-deplacements-fou
+:then: py-fou-2-check
+:when: load
+:editor: 455b60ce-403f-4995-9e3f-98f86214fb04
+# Écrivez le programme ici
+
+```
+
+```{exec} python
+:name: py-fou-2-check
+:when: never
+:class: hidden
+board = Board(8, 8)
+board.piece(White.pawn, 4, 1)
+board.piece(White.pawn, 5, 4)
+board.piece(White.pawn, 3, 4)
+board.piece(White.pawn, 2, 3)
+board.piece(White.pawn, 4, 1)
+board.piece(White.pawn, 6, 5)
+board.piece(Black.pawn, 4, 5)
+await render_and_check(
+  board.piece(White.bishop, 5, 0), moves,
+  [(1, 1)] + [(-2, 2)] + [(-2, -2)] + [(-2, 2)] + [(3, 3)] + [(1, -1)])
+```
+
+````{solution}
+```{exec} python
+:after: py-chess
+:then: py-fou-2-check
+:editor:
+# à compléter
+```
+````
+
+
 ## Exercice {num}`exo-py1-fct`
 
 En utilisant la fonction `deplace(x, y)`, définissez une fonction
@@ -506,6 +566,8 @@ await render_and_check(
 ```
 
 ````{solution}
+Le roi se déplaçant toujours d'une seule case, un seul paramètre, la direction
+est nécessaire.
 ```{exec} python
 :after: py-chess
 :then: py-roi-4-check
@@ -539,6 +601,148 @@ deplace_roi("n")
 deplace_roi("so")
 ```
 ````
+
+## Exercice {num}`exo-py1-fct`
+
+En utilisant la fonction `deplace(x, y)`, définissez une fonction
+`deplace_cavalier` qui permet depuis le centre d'atteindre chacun des pions
+noirs. Quels paramètres sont nécessaires?
+
+
+```{exec} python
+:after: py-chess
+:then: py-cavalier-1-check
+:when: load
+:editor: a3e67fea-d5fb-4f80-8161-c63120091a6f
+# Ecrivez le programme ici
+
+
+```
+
+```{exec} python
+:name: py-cavalier-1-check
+:when: never
+:class: hidden
+await render_and_check(
+  Board(8, 8).piece(White.knight, 3, 3), moves,
+  [(-2, 1)] + [(2, -1)] + [(-1, 2)] + [(1, -2)] + [(1, 2)] + [(-1, -2)] + \
+  [(2, 1)] + [(-2, -1)] + [(2, -1)] + [(-2, 1)] + [(1, -2)] + [(-1, 2)] + \
+  [(-1, -2)] + [(1, -2)] + [(-2, -1)] + [(2, 1)])
+```
+
+````{solution}
+Le cavalier se déplaçant toujours du même nombre de cases (1 et 2), un seul
+paramètre, la direction est nécessaire.
+```{exec} python
+:after: py-chess
+:then: py-cavalier-1-check
+:editor:
+def deplace_cavalier(direction):
+  if direction == "ne":
+    deplace(1, 2)
+  elif direction == "en":
+    deplace(2, 1)
+  elif direction == "no":
+    deplace(-1, 2)
+  elif direction == "on":
+    deplace(-2, 1)
+  elif direction == "se":
+    deplace(1, -2)
+  elif direction == "es":
+    deplace(2, -1)
+  elif direction == "so":
+    deplace(-1, -2)
+  elif direction == "os":
+    deplace(-2, -1)
+  else:
+    print("direction non valide")
+
+deplace_cavalier("on")
+deplace_cavalier("es")
+deplace_cavalier("no")
+deplace_cavalier("se")
+deplace_cavalier("ne")
+deplace_cavalier("so")
+deplace_cavalier("en")
+deplace_cavalier("os")
+deplace_cavalier("es")
+deplace_cavalier("on")
+deplace_cavalier("se")
+deplace_cavalier("no")
+deplace_cavalier("so")
+deplace_cavalier("ne")
+deplace_cavalier("os")
+deplace_cavalier("en")
+```
+````
+
+```{exec} python
+:name: py-deplacements-cavalier
+:when: never
+:class: hidden
+def deplace_cavalier(direction):
+  if direction == "ne":
+    deplace(1, 2)
+  elif direction == "en":
+    deplace(2, 1)
+  elif direction == "no":
+    deplace(-1, 2)
+  elif direction == "on":
+    deplace(-2, 1)
+  elif direction == "se":
+    deplace(1, -2)
+  elif direction == "es":
+    deplace(2, -1)
+  elif direction == "so":
+    deplace(-1, -2)
+  elif direction == "os":
+    deplace(-2, -1)
+  else:
+    print("direction non valide")
+```
+
+
+## Exercice {num}`exo-py1-fct`
+
+En utilisant la fonction `deplace_cavalier(direction)`définie à l'exercice
+précédent, déplacez le cavalier pour manger tous les pions.
+
+
+```{exec} python
+:after: py-chess py-deplacements-cavalier
+:then: py-cavalier-2-check
+:when: load
+:editor: 4ceaf5be-85ee-4926-9f2d-304441b161c3
+# Ecrivez le programme ici
+
+
+```
+
+```{exec} python
+:name: py-cavalier-2-check
+:when: never
+:class: hidden
+await render_and_check(
+  Board(8, 8).piece(White.knight, 2, 0), moves,
+  [(1, 2)] + [(2, 1)] + [(-1, 2)] + [(-2, 1)] + [(1, -2)] + [(2, 1)] + [(1, -2)])
+```
+
+````{solution}
+```{exec} python
+:after: py-chess py-deplacements-cavalier
+:then: py-cavalier-2-check
+:editor:
+deplace_cavalier("ne")
+deplace_cavalier("en")
+deplace_cavalier("no")
+deplace_cavalier("on")
+deplace_cavalier("se")
+deplace_cavalier("en")
+deplace_cavalier("se")
+```
+````
+
+
 
 
 <!--
