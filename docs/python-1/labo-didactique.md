@@ -91,8 +91,8 @@ async function ask(action, attrs, prompt) {
     }
 }
 
-let level = 2;
-let score = 4;
+let level = 0;
+let score = 0;
 let mistakeMade = false;
 const examples = [[`\
 Écrivez le programme Python qui correspond à l'algorithme suivant:
@@ -121,7 +121,10 @@ Sinon affichez qu'il a le droit de boire de l'alcool.
 `, `\
 Il doit contenir un elif. Les valeurs utiles pour les if, elif et else, \
 doivent être indiquée en précisant si c'est strictement ou inclu. Considérer \
-que la valeur entrée par l'utilisateur est valide. \
+que la valeur entrée par l'utilisateur est valide. \ Utiliser la valeur précente \
+pour indiquer le prochain cas. Exemple: si a est plus petit que 7. Si \
+a est plus grand ou égal à 7 et a plus petit (ou égal à 12). \
+Les phrases à afficher doivent être courtes. \
 Pas de calcul à faire, juste afficher du texte.`,
     ], [`\
 Écrivez le programme Python qui correspond à l'un des algorithmes suivants:
@@ -230,14 +233,45 @@ S'il n'y a pas d'erreur et que le code est ou semble correct, renvoie \
 seulement ok et rien d'autre.
 S'il y a des erreurs, explique-les sans afficher de code python.
 
+Pour les codes avec des if, elif et else, les trois codes suivants sont \
+équivalents et donc corrects. Dans ce casm renvoyer seulement ok.
+code 1:
+note = float(input("Note de l'élève : "))
+if note <= 4.0 :
+    print("Insuffisant")
+elif note <= 5.5 :
+    print("Satisfaisant")
+else :
+    print("Très bien")
+
+code 2:
+note = float(input("Note de l'élève : "))
+if note <= 4.0 :
+    print("Insuffisant")
+elif note > 4.0 and note <= 5.5 :
+    print("Satisfaisant")
+else :
+    print("Très bien")
+
+code 3:
+note = float(input("Note de l'élève : "))
+if note <= 4.0 :
+    print("Insuffisant")
+elif 4.0 < note <= 5.5 :
+    print("Satisfaisant")
+else :
+    print("Très bien")
+
+La meilleure version étant le code 1.
+
+
 Si une valeur est demandée à l'utilisateur et que c'est toujours un nombre \
 entier comme un âge, vérifiez que la valeur a été convertie en entier par \
 int() et pas en float. Si c'est un nombre à virgule comme une note ou un \
 montant, la conversion doit se faire avec float().
-Si un cas a été traité dans le if, par exemple if a < 4, il n'est pas \
-nécessaire d'écrire elif 4 <= a < 7, a <7 est suffisant, car le cas où 4 est \
-plus petit que 4 a déjà été traité dans le if. Idem pour le else, ce n'est \
-donc pas une erreur.
+
+La multiplication est commutative, donc l'ordre n'a pas d'importance, cela \
+signifie que 3 * 4 donne le même résultat que 4 * 3, c'est donc correct.
 5.0 et 5 sont le même nombre, ce n'est donc pas une erreur.
 2.5 et 2.50 sont le même nombre, ce n'est donc pas une erreur.
 Dans la boucle for i in range(n), la boucle s'effectue de 0 à (n-1).
