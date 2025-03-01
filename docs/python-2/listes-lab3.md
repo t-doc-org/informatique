@@ -54,7 +54,7 @@ L'utilisateur user4 a été ajouté.
 Utilisez la syntaxe `if a in b` pour vérifier si a se trouve dans la liste b.
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 :when: never
 :linenos:
@@ -65,7 +65,7 @@ def utilisateur_existe(utilisateur):
     return False
 
 utilisateurs = ["user1", "user2", "user3"]
-mots_de_passe = ["mdp1", "mdp2", "mpd3"]
+mots_de_passe = ["mdp1", "mdp2", "mdp3"]
 
 login = input("Choisissez un nom d'utilisateur: ")
 mdp = input("Choisissez un mot de passe: ")
@@ -77,14 +77,14 @@ else:
   mots_de_passe.append(mdp)
   print("L'utilisateur", login, "a été ajouté.")
 ```
-```` -->
+````
 
 ## Exercice {num}`py2-lab3`
 
 Sauvegardez cette fonctionnalité dans la fonction `cree_utilisateur()` qui va se
 charger d'ajouter un nouvel utilisateur avec son mot de passe.
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 :when: never
 :linenos:
@@ -111,7 +111,7 @@ mots_de_passe = ["mdp1", "mdp2", "mpd3"]
 cree_utilisateur()
 
 ```
-```` -->
+````
 
 ## Exercice {num}`py2-lab3`
 
@@ -154,7 +154,7 @@ c'est-à-dire 0.
 Pensez à stocker la valeur pour pouvoir la réutiliser.
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 :linenos:
 def utilisateur_existe(utilisateur):
@@ -195,14 +195,14 @@ if utilisateur_existe(login):
 else:
   print("L'utilisateur", login, "n'existe pas.")
 ```
-```` -->
+````
 
 ## Exercice {num}`py2-lab3`
 
 Sauvegardez cette fonctionnalité dans la fonction `identification()` qui va
 simuler l'identification d'un utilisateur.
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 :linenos:
 def utilisateur_existe(utilisateur):
@@ -247,7 +247,7 @@ cree_utilisateur()
 identification()
 
 ```
-```` -->
+````
 
 ## Exercice {num}`py2-lab3`
 
@@ -270,7 +270,7 @@ infinie et continuer le programme.
 ```
 
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 :linenos:
 def utilisateur_existe(utilisateur):
@@ -327,7 +327,7 @@ while True:
     print("Choix non valide.")
 print("Au revoir!")
 ```
-```` -->
+````
 
 
 ## Exercice {num}`py2-lab3`
@@ -350,7 +350,7 @@ Utilisez `len(ma_liste)` pour récupérer la longueur de la liste et utiliser un
 boucle `for` pour parcourir tous les index.
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 :linenos:
 def utilisateur_existe(utilisateur):
@@ -408,5 +408,5 @@ while True:
 for i in range(len(utilisateurs)):
     print("Nom d'utilisateur:", utilisateurs[i], "Mot de passe:", mots_de_passe[i])
 ```
-```` -->
+````
 
