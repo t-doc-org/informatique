@@ -742,7 +742,89 @@ deplace_cavalier("se")
 ```
 ````
 
+## Exercice {num}`exo-py1-fct`
 
+En utilisant la fonction `deplace(x, y)`, définissez une fonction
+`deplace_reine`. Quels paramètres sont nécessaires?
+
+
+```{exec} python
+:after: py-chess
+:then: py-reine-2-check
+:when: load
+:editor: 27976cba-efa5-45db-9a18-9fffaf4ceeb6
+# Ecrivez le programme ici
+
+```
+
+```{exec} python
+:name: py-reine-2-check
+:when: never
+:class: hidden
+await render_and_check(
+  Board(8, 8).piece(White.queen, 3, 0), moves,
+  [(0, 7)] + [(4, -4)] + [(-2, -2)] + [(-5, 5)] + [(0, -1)])
+```
+
+````{solution}
+La reine se déplace dans toutes les directions et de plusieurs cases, deux
+paramètres sont nécessaires.
+```{exec} python
+:after: py-chess
+:then: py-reine-2-check
+:editor:
+def deplace_reine(direction, nb_cases):
+  if direction == "n":
+    deplace(0, nb_cases)
+  elif direction == "s":
+    deplace(0, -nb_cases)
+  elif direction == "e":
+    deplace(nb_cases, 0)
+  elif direction == "o":
+    deplace(-nb_cases, 0)
+  elif direction == "ne":
+    deplace(nb_cases, nb_cases)
+  elif direction == "se":
+    deplace(nb_cases, -nb_cases)
+  elif direction == "no":
+    deplace(-nb_cases, nb_cases)
+  elif direction == "so":
+    deplace(-nb_cases, -nb_cases)
+  else:
+    print("direction non valide")
+
+deplace_reine("n", 7)
+deplace_reine("se", 4)
+deplace_reine("so", 2)
+deplace_reine("no", 5)
+deplace_reine("s", 1)
+```
+````
+
+```{exec} python
+:name: py-deplacements-reine
+:when: never
+:class: hidden
+def deplace_reine(direction, nb_cases):
+  if direction == "n":
+    deplace(0, nb_cases)
+  elif direction == "s":
+    deplace(0, -nb_cases)
+  elif direction == "e":
+    deplace(nb_cases, 0)
+  elif direction == "o":
+    deplace(-nb_cases, 0)
+  elif direction == "ne":
+    deplace(nb_cases, nb_cases)
+  elif direction == "se":
+    deplace(nb_cases, -nb_cases)
+  elif direction == "no":
+    deplace(-nb_cases, nb_cases)
+  elif direction == "so":
+    deplace(-nb_cases, -nb_cases)
+  else:
+    print("direction non valide")
+```
 
 
 <!--
