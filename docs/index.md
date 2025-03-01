@@ -25,6 +25,7 @@ python-1/index
 bases-de-donnees/index
 crypto/index
 python-2/index
+donnees/index
 ```
 
 ## Divers
@@ -36,6 +37,6 @@ logiciels/index
 
 ## Références
 
-Je remercie tout particulièrement mes collèges Brice, Cathrine, Maxime, Nicolas
-et Xavier pour le partage d'idées et de ressources, ainsi que Didier Müller pour
-son site [apprendre-en-ligne.net](https://www.apprendre-en-ligne.net/index.php).
+Je remercie tout particulièrement mes collèges Brice Canvel, Cathrine Marro,
+Maxime Jan, Nicolas Martignoni et Xavier Dutoit pour le partage d'idées et de
+ressources, ainsi que Didier Müller pour son site [apprendre-en-ligne.net](https://www.apprendre-en-ligne.net/index.php).
