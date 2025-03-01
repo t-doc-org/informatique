@@ -54,14 +54,12 @@ async function questionConv(from, to, value, alt) {
   const node = document.currentScript;
   const core = await tdoc.import('tdoc/core.js');
   const quizz = await tdoc.import('tdoc/quizz.js');
-  const prompt = core.inlineMath(
-    typeof from !== 'number' ? from :
-    from === 10 ? `${value}` :
-    `${value.toString(from).toUpperCase()}_{${from}}`);
+  const prompt = typeof from !== 'number' ? `\\(${from}\\)` :
+                 from === 10 ? `\\(${value}\\)` :
+                 `\\(${value.toString(from).toUpperCase()}_{${from}}\\)`;
   quizz.question(node, prompt, resp => {
     resp = resp.replaceAll(' ', '').toUpperCase();
     for (const sol of [value, alt]) {
-        if (sol === undefined) continue;
         if (sol !== undefined
             && (typeof sol === 'number' ? core.strToInt(resp, to) === sol
                 : resp === sol.toUpperCase())) {
@@ -70,7 +68,6 @@ async function questionConv(from, to, value, alt) {
     }
     return false;
   });
-  await core.typesetMath(prompt);
 }
 </script>
 
