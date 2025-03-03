@@ -15,4 +15,5 @@ while
 mini-projets
 comprehension
 fonctions-intro
+fonctions
 ```
