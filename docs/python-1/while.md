@@ -3,9 +3,6 @@
 
 # Boucle while
 
-```{metadata}
-hide-solutions: true
-```
 ## Répétition d'un bloc d'instructions
 
 La boucle while (qui signifie "tant que" en anglais) permet de répéter un bloc
