@@ -3,9 +3,9 @@
 
 # Fonctions
 
-En programmation, une **fonction** est une bloc de code (suite d'instructions)
+En programmation, une **fonction** est un bloc de code (suite d'instructions)
 permettant de réaliser une tâche donnée et auquel nous donnons un nom. Cela
-permet de découper un programme en plusieurs petites tâches plus facile à
+permet de découper un programme en plusieurs petites tâches plus faciles à
 résoudre. Ainsi le code est plus lisible et plus facile à comprendre. Pour cela,
 il est essentiel de choisir un nom de fonction qui explique ce qu'elle fait.
 
