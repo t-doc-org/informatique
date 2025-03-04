@@ -16,4 +16,5 @@ mini-projets
 comprehension
 fonctions-intro
 fonctions
+blackjack
 ```
