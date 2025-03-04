@@ -509,7 +509,7 @@ else:
 ### Exercice {num}`exo-py1-fct`
 
 Écrivez un programme qui simule le fonctionnement d'un bancomat.
-Vous devez créer 4 fonctions:
+Vous devez créer 5 fonctions:
 
 - `affiche_solde(solde)` qui affiche le solde qui se trouve sur le compte. Cette
 fonction a un paramètre, le `solde` du compte.
