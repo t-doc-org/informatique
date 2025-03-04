@@ -29,6 +29,7 @@ class Black(enum.StrEnum):
 class Icon:
     def __init__(self, board, container, x, y, icon):
         self.board, self.container, self.icon = board, container, icon
+        board.children.append(self)
         self.container.add(icon)
         self.move(x, y)
 
@@ -37,12 +38,14 @@ class Icon:
         self.icon.x, self.icon.y = self.board.center(x, y)
 
     def remove(self):
+        self.board.children.remove(self)
         self.container.children.remove(self.icon)
 
 
 class Board:
     def __init__(self, width, height, cell=50):
         self.width, self.height, self.cell = width, height, cell
+        self.children = []
         # The "Segoe UI Emoji" font that is present in the font-family inherited
         # from <body> causes the pawn to look weird. So we have to replace the
         # whole list.
@@ -97,6 +100,16 @@ class Board:
             transform-origin: {x}px {y}px;
         """)
 
+    def lost(self, text, angle=0):
+        x, y = self.image.width / 2, self.image.height / 2
+        return self.image.text(x, y, text,
+                               style=f"""
+            font-size: {2 * self.cell}px;
+            fill: var(--pst-color-danger);
+            transform: rotate({angle}deg);
+            transform-origin: {x}px {y}px;
+        """)
+
     def __iter__(self):
         return iter(self.image)
 
@@ -114,7 +127,21 @@ _loop = asyncio.get_running_loop()
 async def animate(piece, moves, pause=0.1, **kwargs):
     for dx, dy in moves:
         await animate_move(piece, dx, dy, **kwargs)
+        if (piece.x < 0 or piece.x > piece.board.width - 1 or piece.y < 0
+                or piece.y > piece.board.height - 1):
+            return False
+        is_white = piece.icon.text in White
+        for p in piece.board.children:
+            if (p is not piece and piece.x == p.x and piece.y == p.y
+                    and (p.icon.text in White) != is_white):
+                p.remove()
+                await core.render(piece.board)
+                break
+            elif (p is not piece and piece.x == p.x and piece.y == p.y
+                    and (p.icon.text in White) == is_white):
+                return False
         await asyncio.sleep(pause)
+    return True
 
 
 async def animate_move(piece, dx, dy, velocity=2.0, framerate=60):
@@ -139,3 +166,18 @@ async def render_and_check(piece, moves, solution):
     if moves == solution:
         piece.board.success("Bravo!", -10)
         await core.render(piece.board)
+
+async def render_check_and_take(piece, moves):
+    await core.render(piece.board)
+    correct_move = await animate(piece, moves)
+    if not(correct_move):
+        piece.board.lost("Perdu!", -10)
+    else:
+        is_white = piece.icon.text in White
+        all_pieces = True
+        for p in piece.board.children:
+            if  (p.icon.text in White) != is_white:
+                all_pieces = False
+        if all_pieces:
+            piece.board.success("Bravo!", -10)
+    await core.render(piece.board)

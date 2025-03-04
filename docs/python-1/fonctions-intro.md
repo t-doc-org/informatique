@@ -3,6 +3,10 @@
 
 # Fonctions - Introduction
 
+```{metadata}
+hide-solutions: true
+```
+
 ## Déplacement des pièces
 
 Aux échecs, chaque pièce se déplace différemment:
@@ -64,10 +68,10 @@ def nord_ouest():
   deplace(-1, 1)
 ```
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
-1. Essayez de comprendre le programme en comparant le code et le résultat.
-2. Modifiez le code pour que le roi suive les numéros.
+1. Essayez de comprendre le programme en comparant le programme et le résultat.
+2. Modifiez le programme pour que le roi suive les numéros.
 
 ```{exec} python
 :after: py-chess py-deplacements
@@ -104,71 +108,69 @@ est()
 ```
 ````
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
-Le roi peut aussi se déplacer en diagonale.
-
-Écrivez le code qui permet au roi de passer pas chacun de ces numéros dans
-l'ordre (Il n'y a pas de "Bravo" qui apparaîtra même si l'exercice est réussi).
+Écrivez le programme qui permet à la tour de prendre tous les pions noirs en un
+minimum de coups.
 
 
 ```{exec} python
 :after: py-chess py-deplacements
-:then: py-roi-2-check
+:then: py-tour-1-check
 :editor: 5352b74a-be0a-46e9-966c-e61ed25c766c
 :when: load
 # Écrivez le programme ici
 ```
 
 ```{exec} python
-:name: py-roi-2-check
+:name: py-tour-1-check
 :when: never
 :class: hidden
-await render_and_check(
-  Board(8, 6).piece(White.king, 0, 0), moves,
- [(1, 1), (1, 0), (1, 0), (1, 1), (0, 1), (0, 1), (1,1)])
+board = Board(5, 5)
+board.piece(Black.pawn, 1, 1)
+board.piece(Black.pawn, 2, 1)
+board.piece(Black.pawn, 3, 2)
+board.piece(Black.pawn, 4, 3)
+await render_check_and_take(board.piece(White.rook, 0, 0), moves)
 ```
 
 ````{solution}
 ```{exec} python
 :after: py-chess py-deplacements
-:then: py-roi-2-check
+:then: py-tour-1-check
 :editor:
-nord()
-est()
-est()
 est()
 nord()
 est()
-nord()
-nord()
+est()
 nord()
 est()
+nord()
 ```
 ````
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
-Le code de l'exercice précédent contient des répétitions de suites
+Le programme de l'exercice précédent contient des répétitions de suites
 d'instructions (nord() suivi de est()), mais il n'est pas possible d'utiliser
 une boucle `for`, car il y a d'autres instructions entre.
 La solution est de définir une nouvelle fonction `diagonale()`.
 
 Résolvez l'exercice précedent en appelant la fonction `diagonale` à la place de
-répéter du code (Il n'y a pas de "Bravo" qui apparaîtra même si l'exercice est
+répéter du programme (Il n'y a pas de "Bravo" qui apparaîtra même si l'exercice est
 réussi).
 
-De cette manière le code est plus lisible!
+De cette manière le programme est plus lisible!
 
 ```{exec} python
 :after: py-chess py-deplacements
-:then: py-roi-2-check
+:then: py-tour-1-check
 :editor: d788a976-e9e5-41ec-83f4-9215b0f62b19
 :when: load
 # définition de la fonction diagonale
 def diagonale():
-  nord()
   est()
+  nord()
 
 # appel de la fonction
 diagonale()
@@ -177,32 +179,29 @@ diagonale()
 ````{solution}
 ```{exec} python
 :after: py-chess py-deplacements
-:then: py-roi-2-check
+:then: py-tour-1-check
 :editor:
 # définition de la fonction diagonals
 def diagonale():
-  nord()
   est()
+  nord()
 
 # programme principal
 diagonale()
 est()
-est()
 diagonale()
-nord()
-nord()
 diagonale()
 ```
 ````
 
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
-Pour avoir vraiment des pièces qui se déplacent en diagonale, de nouvelles
-fonctions ont été définies.
+Pour avoir des pièces qui se déplacent vraiment en diagonale comme le roi,
+de nouvelles fonctions ont été définies.
 
-1. Essayez de comprendre le programme en comparant le code et le résultat.
-2. Modifiez le code pour que le roi suive les numéros.
+1. Essayez de comprendre le programme en comparant le programme et le résultat.
+2. Modifiez le programme pour que le roi suive les numéros.
 
 ```{exec} python
 :after: py-chess py-deplacements py-deplacements-2
@@ -241,13 +240,13 @@ nord_ouest()
 ```
 ````
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
-Modifiez le code pour que la tour suive les numéros.
+Modifiez le programme pour que la tour suive les numéros.
 
 ```{exec} python
 :after: py-chess py-deplacements
-:then: py-tour-1-check
+:then: py-tour-2-check
 :when: load
 :editor: a19e71d9-284c-42e3-885f-a60f918132d7
 for _ in range(3):
@@ -255,29 +254,32 @@ for _ in range(3):
 ```
 
 ```{exec} python
-:name: py-tour-1-check
+:name: py-tour-2-check
 :when: never
 :class: hidden
 await render_and_check(
   Board(5, 4).piece(White.rook, 0, 0), moves,
-  4 * [(1, 0)] + 3 * [(0, 1)] + 2 * [(-1, 0)])
+  4 * [(1, 0)] + 2 * [(0, 1)] + 3 * [(-1, 0)] + [(0, 1)] + 2 * [(1, 0)])
 ```
 
 ````{solution}
 ```{exec} python
 :after: py-chess py-deplacements py-deplacements-2
-:then: py-tour-1-check
+:then: py-tour-2-check
 :editor:
 for _ in range(4):
   est()
-for _ in range(3):
-  nord()
 for _ in range(2):
+  nord()
+for _ in range(3):
   ouest()
+nord()
+for _ in range(2):
+  est()
 ```
 ````
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 On constate qu'il y a beaucoup de répétitions malgré l'utilisation de boucles
 `for` et cela ne représente pas réellement le déplacement de la tour qui se
@@ -293,7 +295,7 @@ fonction.
 
 ```{exec} python
 :after: py-chess py-deplacements
-:then: py-tour-1-check
+:then: py-tour-2-check
 :when: load
 :editor: a64c9b31-40ab-4001-83e3-ddc6b6f53c18
 # définition de la fonction aller_nord qui prend le nombre de cases en paramètre
@@ -308,7 +310,7 @@ aller_nord(3)
 ````{solution}
 ```{exec} python
 :after: py-chess py-deplacements py-deplacements-2
-:then: py-tour-1-check
+:then: py-tour-2-check
 :editor:
 # définitions des fonctions
 def aller_nord(nb_cases):
@@ -329,8 +331,10 @@ def aller_ouest(nb_cases):
 
 # appel de la fonction pour que le programme effectue l'action demandée
 aller_est(4)
-aller_nord(3)
-aller_ouest(2)
+aller_nord(2)
+aller_ouest(3)
+aller_nord(1)
+aller_est(2)
 ```
 ````
 
@@ -352,48 +356,53 @@ def ouest(n):
 ```
 
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 En utilisant les fonctions `nord(nb_cases)`, `sud(nb_cases)`, `est(nb_cases)` et
-`ouest(nb_cases)`, écrivez le code pour la tour suive les cases numérotées.
+`ouest(nb_cases)`, écrivez le programme pour que la tour prenne tous les pions
+noirs en un minimum de coups.
 
 ```{exec} python
 :after: py-chess py-deplacements-3
-:then: py-tour-2-check
+:then: py-tour-3-check
 :when: load
 :editor: 80e4aab5-c336-456f-9b40-c5acd3911445
 # Écrivez le programme ici
 ```
 
 ```{exec} python
-:name: py-tour-2-check
+:name: py-tour-3-check
 :when: never
 :class: hidden
-await render_and_check(
-  Board(8, 8).piece(White.rook, 0, 0), moves,
-  [(7, 0)] + [(0, 7)] + [(-7, 0)] + [(0, -7)] + [(5, 0)] + [(0, 5)] + [(-5, 0)] + [(0, -5)] + [(3, 0)] + [(0, 3)] + [(-3, 0)] + [(0, -3)])
+board = Board(5, 5)
+board.piece(Black.pawn, 0, 4)
+board.piece(Black.pawn, 3, 4)
+board.piece(Black.pawn, 3, 1)
+board.piece(Black.pawn, 1, 1)
+board.piece(Black.pawn, 1, 3)
+board.piece(Black.pawn, 2, 3)
+await render_check_and_take(board.piece(White.rook, 0, 0), moves)
 ```
 
 ````{solution}
 ```{exec} python
 :after: py-chess py-deplacements py-deplacements-3
-:then: py-tour-2-check
+:then: py-tour-3-check
 :editor:
-n = 7
-for _ in range(3):
-  est(n)
-  nord(n)
-  ouest(n)
-  sud(n)
-  n -= 2
+nord(4)
+est(3)
+sud(3)
+ouest(2)
+nord(2)
+est(1)
 ```
 ````
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 La fonction `deplace(x, y)` a été définie.
-1. Essayez de comprendre le programme en comparant le code et le résultat.
-2. Modifiez le code pour que le roi suive les numéros.
+1. Essayez de comprendre le programme en comparant le programme et le résultat.
+2. Modifiez le programme pour que le roi suive les numéros.
 
 
 ```{exec} python
@@ -427,7 +436,7 @@ deplace(6, 6)
 ```
 ````
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 En utilisant la fonction `deplace(x, y)`, définissez une fonction
 `deplace_fou(direction, nb_cases)` où le premier paramètre est la direction du
@@ -498,10 +507,10 @@ def deplace_fou(direction, nb_cases):
     print("direction non valide")
 ```
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 En utilisant la fonction `deplace_fou(direction, nb_cases)` définie à l'exercice
-précédent, déplace le fou afin d'aller manger le pion noir.
+précédent, déplace le fou prendre le pion noir.
 
 
 ```{exec} python
@@ -525,22 +534,25 @@ board.piece(White.pawn, 2, 3)
 board.piece(White.pawn, 4, 1)
 board.piece(White.pawn, 6, 5)
 board.piece(Black.pawn, 4, 5)
-await render_and_check(
-  board.piece(White.bishop, 5, 0), moves,
-  [(1, 1)] + [(-2, 2)] + [(-2, -2)] + [(-2, 2)] + [(3, 3)] + [(1, -1)])
+await render_check_and_take(board.piece(White.bishop, 5, 0), moves)
 ```
 
 ````{solution}
 ```{exec} python
-:after: py-chess
+:after: py-chess py-deplacements-fou
 :then: py-fou-2-check
 :editor:
-# à compléter
+deplace_fou("ne", 1)
+deplace_fou("no", 2)
+deplace_fou("so", 2)
+deplace_fou("no", 2)
+deplace_fou("ne", 3)
+deplace_fou("se", 1)
 ```
 ````
 
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 En utilisant la fonction `deplace(x, y)`, définissez une fonction
 `deplace_roi`. Quels paramètres sont nécessaires?
@@ -602,7 +614,7 @@ deplace_roi("so")
 ```
 ````
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 En utilisant la fonction `deplace(x, y)`, définissez une fonction
 `deplace_cavalier` qui permet depuis le centre d'atteindre chacun des pions
@@ -623,15 +635,20 @@ noirs. Quels paramètres sont nécessaires?
 :name: py-cavalier-1-check
 :when: never
 :class: hidden
-await render_and_check(
-  Board(8, 8).piece(White.knight, 3, 3), moves,
-  [(-2, 1)] + [(2, -1)] + [(-1, 2)] + [(1, -2)] + [(1, 2)] + [(-1, -2)] + \
-  [(2, 1)] + [(-2, -1)] + [(2, -1)] + [(-2, 1)] + [(1, -2)] + [(-1, 2)] + \
-  [(-1, -2)] + [(1, -2)] + [(-2, -1)] + [(2, 1)])
+board = Board(8, 8)
+board.piece(Black.pawn, 1, 4)
+board.piece(Black.pawn, 2, 5)
+board.piece(Black.pawn, 4, 5)
+board.piece(Black.pawn, 5, 4)
+board.piece(Black.pawn, 5, 2)
+board.piece(Black.pawn, 4, 1)
+board.piece(Black.pawn, 2, 1)
+board.piece(Black.pawn, 1, 2)
+await render_check_and_take(board.piece(White.knight, 3, 3), moves)
 ```
 
 ````{solution}
-Le cavalier se déplaçant toujours du même nombre de cases (1 et 2), un seul
+Le cavalier se déplaçant toujours du même nombre de cases (2 et 1), un seul
 paramètre, la direction est nécessaire.
 ```{exec} python
 :after: py-chess
@@ -702,17 +719,18 @@ def deplace_cavalier(direction):
 ```
 
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
-En utilisant la fonction `deplace_cavalier(direction)`définie à l'exercice
-précédent, déplacez le cavalier pour manger tous les pions.
+En utilisant la fonction `deplace_cavalier(direction)` définie à l'exercice
+précédent, déplacez le cavalier pour prendre tous les pions noirs en un
+minimum de coups.
 
 
 ```{exec} python
 :after: py-chess py-deplacements-cavalier
 :then: py-cavalier-2-check
 :when: load
-:editor: 4ceaf5be-85ee-4926-9f2d-304441b161c3
+:editor: 0f472020-c25d-4d14-a443-e647c6c737fe
 # Ecrivez le programme ici
 
 
@@ -722,9 +740,15 @@ précédent, déplacez le cavalier pour manger tous les pions.
 :name: py-cavalier-2-check
 :when: never
 :class: hidden
-await render_and_check(
-  Board(8, 8).piece(White.knight, 2, 0), moves,
-  [(1, 2)] + [(2, 1)] + [(-1, 2)] + [(-2, 1)] + [(1, -2)] + [(2, 1)] + [(1, -2)])
+board = Board(8, 8)
+board.piece(Black.pawn, 3, 2)
+board.piece(Black.pawn, 5, 3)
+board.piece(Black.pawn, 4, 5)
+board.piece(Black.pawn, 2, 6)
+board.piece(Black.pawn, 3, 4)
+board.piece(Black.pawn, 5, 5)
+board.piece(Black.pawn, 6, 3)
+await render_check_and_take(board.piece(White.knight, 2, 0), moves)
 ```
 
 ````{solution}
@@ -742,7 +766,7 @@ deplace_cavalier("se")
 ```
 ````
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 En utilisant la fonction `deplace(x, y)`, définissez une fonction
 `deplace_reine`. Quels paramètres sont nécessaires?
@@ -826,9 +850,151 @@ def deplace_reine(direction, nb_cases):
     print("direction non valide")
 ```
 
+## Exercice {num}`exo-py1-intro-fct`
+
+En utilisant la fonction `deplace_reine(direction, nb_cases)` définie à
+l'exercice précédent, déplacez la reine pour prendre tous les pions noirs en un
+minimum de coups.
+
+```{exec} python
+:after: py-chess py-deplacements-reine
+:then: py-reine-3-check
+:when: load
+:editor: 54d79281-f256-403d-ae1e-64e0f5bd276b
+# Ecrivez le programme ici
+
+```
+
+```{exec} python
+:name: py-reine-3-check
+:when: never
+:class: hidden
+board = Board(8, 8)
+board.piece(White.pawn, 0, 1)
+board.piece(White.pawn, 1, 2)
+board.piece(White.pawn, 2, 2)
+board.piece(White.pawn, 3, 1)
+board.piece(White.pawn, 4, 3)
+board.piece(White.pawn, 5, 1)
+board.piece(White.pawn, 6, 1)
+board.piece(White.pawn, 7, 1)
+board.piece(White.knight, 1, 0)
+board.piece(White.knight, 3, 3)
+board.piece(White.bishop, 0, 2)
+board.piece(White.bishop, 6, 3)
+board.piece(White.rook, 0, 0)
+board.piece(White.rook, 5, 0)
+board.piece(White.king, 6, 0)
+board.piece(Black.pawn, 0, 6)
+board.piece(Black.pawn, 1, 4)
+board.piece(Black.pawn, 5, 4)
+board.piece(Black.pawn, 7, 6)
+board.piece(Black.pawn, 3, 6)
+board.piece(Black.pawn, 0, 3)
+await render_check_and_take(board.piece(White.queen, 3, 0), moves)
+```
+
+````{solution}
+```{exec} python
+:after: py-chess py-deplacements-reine
+:then: py-reine-3-check
+:editor:
+
+deplace_reine("ne", 1)
+deplace_reine("no", 3)
+deplace_reine("e", 4)
+deplace_reine("ne", 2)
+deplace_reine("o", 4)
+deplace_reine("so", 3)
+deplace_reine("n", 3)
+```
+````
+
+## Exercice {num}`exo-py1-intro-fct`
+
+En utilisant la fonction `deplace_cavalier(direction)` définie à l'exercice
+précédent, déplacez le cavalier pour prendre tous les pions noirs en un minimum de coups.
+
+
+```{exec} python
+:after: py-chess py-deplacements-cavalier
+:then: py-cavalier-3-check
+:when: load
+:editor: 09e9312f-e506-4252-9d81-0452340a023e
+# Ecrivez le programme ici
+
+```
+
+```{exec} python
+:name: py-cavalier-3-check
+:when: never
+:class: hidden
+board = Board(4, 4)
+board.piece(Black.pawn, 2, 0)
+board.piece(Black.pawn, 0, 1)
+board.piece(Black.pawn, 1, 1)
+board.piece(Black.pawn, 2, 1)
+board.piece(Black.pawn, 3, 1)
+board.piece(Black.pawn, 0, 2)
+board.piece(Black.pawn, 1, 2)
+board.piece(Black.pawn, 2, 2)
+board.piece(Black.pawn, 3, 2)
+board.piece(Black.pawn, 1, 3)
+board.piece(Black.pawn, 2, 3)
+board.piece(White.rook, 0, 0)
+board.piece(White.rook, 0, 3)
+board.piece(White.rook, 3, 0)
+board.piece(White.rook, 3, 3)
+await render_check_and_take(board.piece(White.knight, 1, 0), moves)
+```
+
+````{solution}
+```{exec} python
+:after: py-chess py-deplacements-cavalier
+:then: py-cavalier-3-check
+:editor:
+deplace_cavalier("ne")
+deplace_cavalier("os")
+deplace_cavalier("es")
+deplace_cavalier("no")
+deplace_cavalier("es")
+deplace_cavalier("no")
+deplace_cavalier("so")
+deplace_cavalier("en")
+deplace_cavalier("on")
+deplace_cavalier("se")
+deplace_cavalier("on")
+```
+````
+
+## Exercice {num}`exo-py1-intro-fct`
+
+En utilisant la fonction `deplace_cavalier(direction)` définie à l'exercice
+précédent, déplacez le cavalier pour prendre tous les pions noirs en un minimum de coups.
+
+```{exec} python
+:after: py-chess py-deplacements-cavalier
+:then: py-cavalier-4-check
+:when: load
+:editor: bcb5a1f2-98ef-4e0d-85f6-c8d4d4e46ea5
+# Ecrivez le programme ici
+
+```
+
+```{exec} python
+:name: py-cavalier-4-check
+:when: never
+:class: hidden
+board = Board(5, 5)
+for i in range(5):
+  for j in range(5):
+    if i != 2 or j != 2:
+      board.piece(Black.pawn, i, j)
+await render_check_and_take(board.piece(White.knight, 2, 2), moves)
+```
 
 <!--
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 Écrivez un programme qui déplace la tour sur les cases indiquées, dans l'ordre.
 Évitez les répétitions.
@@ -862,7 +1028,7 @@ for _ in range(3):
 ```
 ````
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 Écrivez un programme qui déplace la tour sur les cases indiquées, dans l'ordre.
 Évitez les répétitions.
@@ -898,7 +1064,7 @@ for _ in range(3):
 ```
 ````
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 Écrivez un programme qui déplace le roi sur les cases indiquées, dans l'ordre.
 Évitez les répétitions.
@@ -931,7 +1097,7 @@ for _ in range(4):
 ```
 ````
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 Écrivez un programme qui déplace le roi sur les cases indiquées, dans l'ordre.
 Évitez les répétitions.
@@ -970,7 +1136,7 @@ aller_nord()
 ````
 
 ```{important}
-En observant le code de l'exercice précédent, on constate qu'il y a des suites
+En observant le programme de l'exercice précédent, on constate qu'il y a des suites
 d'instructions qui se répètent. En effet, pour se déplacer en diagonale, il faut
 toujours se déplacer une fois vers l'est et une fois vers le nord.
 
@@ -979,7 +1145,7 @@ Pour éviter les répétitions d'une suite d'instructions qui ne peuvent pas êt
 comme par exemple `aller_nord_est()`.
 ```
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 Une nouvelle fonction `aller_nord_est()` a été définie.
 1. Observez la construction de la définition d'une fonction. Comment définir une
@@ -1032,7 +1198,7 @@ for _ in range(3):
 ```` -->
 
 <!--
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 Ecrivez une fonction `deplace_roi(direction)` qui déplace un roi dans la
 direction demandée. L'argument `direction` est une chaîne de caractère contenant
@@ -1078,7 +1244,7 @@ await render_and_check(
   [(0, 1), (1, -1), (0, -1), (-1, 0)])
 ```
 
-## Exercice {num}`exo-py1-fct`
+## Exercice {num}`exo-py1-intro-fct`
 
 Utilisez la fonction `deplace_roi()` pour déplacer le roi sur les cases
 indiquées, dans l'ordre. Évitez les répétitions.
