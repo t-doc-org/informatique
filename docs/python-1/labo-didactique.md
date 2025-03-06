@@ -115,13 +115,13 @@ indiquée. Considérer que la valeur entrée par l'utilisateur est valide.`,
 Écrivez le programme Python qui correspond à l'algorithme suivant:
 Demandez l'âge à l'utilisateur.
 S'il a moins de 16, affichez qu'il n'a pas le droit de boire d'alcool.
-S'il a 16 ans et moins de 18 ans, affichez qu'il a le droit de boire du vin et \
-de la bière.
+S'il a 16 ans ou plus et moins de 18 ans, affichez qu'il a le droit de boire du \
+vin et de la bière.
 Sinon affichez qu'il a le droit de boire de l'alcool.
 `, `\
 Il doit contenir un elif. Les valeurs utiles pour les if, elif et else, \
 doivent être indiquée en précisant si c'est strictement ou inclu. Considérer \
-que la valeur entrée par l'utilisateur est valide. \ Utiliser la valeur précente \
+que la valeur entrée par l'utilisateur est valide. \ Utiliser la valeur précédente \
 pour indiquer le prochain cas. Exemple: si a est plus petit que 7. Si \
 a est plus grand ou égal à 7 et a plus petit (ou égal à 12). \
 Les phrases à afficher doivent être courtes. \
@@ -172,11 +172,15 @@ async function blocking(fn) {
     }
 }
 
-function setEditorText(text) {
+function resetEditor() {
     const editor = findEditor(document.querySelector('#editor'));
     editor.dispatch(editor.state.update({
-        changes: {from: 0, to: editor.state.doc.length, insert: text},
+        changes: {from: 0, to: editor.state.doc.length, insert: ""},
     }));
+}
+
+function focusEditor() {
+    findEditor(document.querySelector('#editor')).focus();
 }
 
 // Génère une nouvelle question.
@@ -212,6 +216,7 @@ commencer.addEventListener('click', async () => {
     await generateQuestion();
     correct.disabled = newQuestion.disabled = help.disabled = false;
     commencer.disabled = name.disabled = true;
+    focusEditor();
 });
 
 correct.addEventListener('click', async () => {
@@ -224,17 +229,18 @@ correct.addEventListener('click', async () => {
         const fb = await ask('correct', {'code': code}, `\
 Vérifie si le code suivant correspond à l'énoncé.
 Sans s'occuper de la gestion des erreurs et des fautes d'orthographe, vérifie \
-si le code contient des erreurs de syntaxe, d'exécution ou de logique.
+si le code contient des erreurs de syntaxe ou d'exécution.
 
 Si le code est vide ou ne contient qu'un commentaire, considérez cela comme une \
 erreur.
 
-S'il n'y a pas d'erreur et que le code est ou semble correct, renvoie \
-seulement ok et rien d'autre.
+S'il n'y a pas d'erreur ou que le code semble correct, renvoie seulement ok et \
+rien d'autre.
 S'il y a des erreurs, explique-les sans afficher de code python.
 
 Pour les codes avec des if, elif et else, les trois codes suivants sont \
-équivalents et donc corrects. Dans ce casm renvoyer seulement ok.
+équivalents et donc corrects. Il n'est pas nécessaire d'écrire dans le elif note > 4,
+car ce cas est déjà pris en compte dans le if. Dans ce cas renvoyer seulement ok.
 code 1:
 note = float(input("Note de l'élève : "))
 if note <= 4.0 :
@@ -262,7 +268,7 @@ elif 4.0 < note <= 5.5 :
 else :
     print("Très bien")
 
-La meilleure version étant le code 1.
+La meilleure version étant le code 1, sans la répétition de note > 4.
 
 
 Si une valeur est demandée à l'utilisateur et que c'est toujours un nombre \
@@ -272,6 +278,9 @@ montant, la conversion doit se faire avec float().
 
 La multiplication est commutative, donc l'ordre n'a pas d'importance, cela \
 signifie que 3 * 4 donne le même résultat que 4 * 3, c'est donc correct.
+Dans une suite de multiplications et de divisions, les opérations sont \
+commutatives, cela signifie que nb_km * 1.2 * 7 / 100 donne le même résultat que \
+nb_km / 100 * 1.2 * 7, c'est donc correct.
 5.0 et 5 sont le même nombre, ce n'est donc pas une erreur.
 2.5 et 2.50 sont le même nombre, ce n'est donc pas une erreur.
 Dans la boucle for i in range(n), la boucle s'effectue de 0 à (n-1).
@@ -281,7 +290,7 @@ Le code commence ici:
 
 ${code.replace('await input_line', 'input')}
 `);
-        if (fb === "ok") {
+        if (fb === "ok" || fb.endsWith("ok")) {
             feedback.querySelector('pre').replaceChildren("Correct!");
             feedback.classList.remove('hidden');
             if (!mistakeMade) {
@@ -297,12 +306,14 @@ ${code.replace('await input_line', 'input')}
                 return;
             }
             mistakeMade = false;
-            setEditorText("");
+            resetEditor();
             await generateQuestion();
+            focusEditor();
         } else {
             mistakeMade = true;
             feedback.querySelector('pre').replaceChildren(text(fb));
             feedback.classList.remove('hidden');
+            focusEditor();
         }
     });
     if (level >= examples.length) {
@@ -314,8 +325,9 @@ newQuestion.addEventListener('click', async () => {
     await blocking(async () => {
         feedback.classList.add('hidden');
         mistakeMade = false;
-        setEditorText("");
+        resetEditor();
         await generateQuestion();
+        focusEditor();
     });
 });
 
