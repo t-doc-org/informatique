@@ -177,7 +177,7 @@ Nous souhaitons créer un programme qui compte le temps avant qu'une bombe
 explose. Pour cela, un compte à rebours commencera à 10 et ira jusqu'à 1, puis
 le programme affichera "BOOM".
 
-Écrire un programme qui correspond à l'algorithme suivant:
+Écrivez un programme qui correspond à l'algorithme suivant:
 
 ```{code-block} text
 Initialiser une variable compte_a_rebours à 10
