@@ -175,38 +175,62 @@ else:
 
 ## Exercice 7
 
-Écrivez un programme qui correspond à l'algorithme suivant :
+Écrivez un programme qui affiche les nombres de 5 à 43 (inclus).
 
-- Initialisez une variable i à 1.
-- Tant que i est inférieur ou égal à 10, affichez la valeur de i.
-- Ajoutez 2 à i à chaque itération.
-- Affichez "Terminé" après la boucle.
 
 ```{exec} python
-:editor: 15410054-aac5-472f-bf50-4a180f514719
+:editor: 9cd50b1e-fdb2-417d-b3c0-eac24389a7ba
 # Écrivez le code ici...
 ```
 
 ````{solution}
+Il y a deux solutions possibles:
+
 ```{exec} python
 :linenos:
-# Initialisation de la variable i
-i = 1
+# Afficher les nombres de 5 à 43 (inclus)
+for i in range(39):
+    print(i + 5)
+```
 
-# Tant que i est inférieur ou égal à 10
-while i <= 10:
-    # Affichage de la valeur actuelle de i
+```{exec} python
+:linenos:
+# Afficher les nombres de 5 à 43 (inclus)
+for i in range(5, 44):
     print(i)
-
-    # Ajout de 2 à i
-    i += 2
-
-# Affichage de "Terminé" après la boucle
-print("Terminé")
 ```
 ````
 
 ## Exercice 8
+
+Écrivez un programme qui affiche les nombres pairs de 0 à 30 (inclus).
+
+
+```{exec} python
+:editor: b40e8f5c-8dc4-4945-9dcc-86aa6cf6ec89
+# Écrivez le code ici...
+```
+
+````{solution}
+Il y a deux solutions possibles:
+
+```{exec} python
+:linenos:
+# Il y a 15 nombres pairs
+for i in range(15):
+    print((i+1) * 2)
+```
+
+```{exec} python
+:linenos:
+# Il y a 15 nombres pairs
+for i in range(1, 16):
+    print(i * 2)
+```
+````
+
+
+## Exercice 9
 
 Écrivez un programme qui correspond à l'algorithme suivant:
 
@@ -240,58 +264,40 @@ print("Stock épuisé!")
 ```
 ````
 
-## Exercice 9
-
-Écrivez un programme qui affiche les nombres de 5 à 43 (inclus).
-
-
-```{exec} python
-:editor: 9cd50b1e-fdb2-417d-b3c0-eac24389a7ba
-# Écrivez le code ici...
-```
-
-````{solution}
-Il y a deux solutions possibles:
-
-```{exec} python
-:linenos:
-# Afficher les nombres de 5 à 43 (inclus)
-for i in range(39):
-    print(i + 5)
-```
-
-```{exec} python
-:linenos:
-# Afficher les nombres de 5 à 43 (inclus)
-for i in range(5, 44):
-    print(i)
-```
-````
 
 ## Exercice 10
 
-Écrivez un programme qui affiche les nombres pairs de 0 à 30 (inclus).
+Un jeune souhaite s'acheter un nouvel ordinateur qui coûte 1000 CHF. Il peut
+mettre de côté chaque semaine 15 CHF de son argent de poche.
 
+Écrivez un programme qui correspond à l'algorithme suivant:
+
+- Initialisez une variable montant_epargne à 0 CHF.
+- Initialisez une variable versement_hebdomadaire à 15 CHF.
+- Tant que le montant_epargne est inférieur à 1000 CHF, ajoutez le versement_hebdomadaire au montant_epargne.
+- Affichez le nombre de semaines nécessaires pour atteindre l'objectif d'épargne.
 
 ```{exec} python
-:editor: b40e8f5c-8dc4-4945-9dcc-86aa6cf6ec89
+:editor: 15410054-aac5-472f-bf50-4a180f514719
 # Écrivez le code ici...
 ```
 
 ````{solution}
-Il y a deux solutions possibles:
-
 ```{exec} python
 :linenos:
-# Il y a 15 nombres pairs
-for i in range(15):
-    print((i+1) * 2)
-```
+# Initialisation des variables
+montant_epargne = 0
+versement_hebdomadaire = 15
+nb_semaines = 0
 
-```{exec} python
-:linenos:
-# Il y a 15 nombres pairs
-for i in range(1, 16):
-    print(i * 2)
+# Tant que le montant_epargne est inférieur à 1000 CHF
+while montant_epargne < 1000:
+    # ajout du versement_hebdomadaire au montant_epargne
+    montant_epargne += versement_hebdomadaire
+    # compte le nombre de semaines
+    nb_semaines += 1
+
+# Affichage du nombre de semaines nécessaires
+print(nb_semaines)
 ```
 ````
