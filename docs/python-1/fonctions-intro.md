@@ -98,7 +98,6 @@ await render_and_check(
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-roi-1-check
-:editor:
 for _ in range(2):
   nord()
   ouest()
@@ -138,7 +137,6 @@ await render_check_and_take(board.piece(White.rook, 0, 0), moves)
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-tour-1-check
-:editor:
 est()
 nord()
 est()
@@ -180,7 +178,6 @@ diagonale()
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-tour-1-check
-:editor:
 # définition de la fonction diagonals
 def diagonale():
   est()
@@ -227,7 +224,6 @@ await render_and_check(
 ```{exec} python
 :after: py-chess py-deplacements py-deplacements-2
 :then: py-roi-3-check
-:editor:
 nord()
 nord_est()
 nord_est()
@@ -266,7 +262,6 @@ await render_and_check(
 ```{exec} python
 :after: py-chess py-deplacements py-deplacements-2
 :then: py-tour-2-check
-:editor:
 for _ in range(4):
   est()
 for _ in range(2):
@@ -311,7 +306,6 @@ aller_nord(3)
 ```{exec} python
 :after: py-chess py-deplacements py-deplacements-2
 :then: py-tour-2-check
-:editor:
 # définitions des fonctions
 def aller_nord(nb_cases):
   for _ in range(nb_cases):
@@ -388,7 +382,6 @@ await render_check_and_take(board.piece(White.rook, 0, 0), moves)
 ```{exec} python
 :after: py-chess py-deplacements py-deplacements-3
 :then: py-tour-3-check
-:editor:
 nord(4)
 est(3)
 sud(3)
@@ -428,7 +421,6 @@ await render_and_check(
 ```{exec} python
 :after: py-chess
 :then: py-reine-1-check
-:editor:
 deplace(0, 4)
 deplace(-5, 0)
 deplace(0, -3)
@@ -470,7 +462,6 @@ await render_and_check(
 ```{exec} python
 :after: py-chess
 :then: py-fou-1-check
-:editor:
 def deplace_fou(direction, nb_cases):
   if direction == "ne":
     deplace(nb_cases, nb_cases)
@@ -541,7 +532,6 @@ await render_check_and_take(board.piece(White.bishop, 5, 0), moves)
 ```{exec} python
 :after: py-chess py-deplacements-fou
 :then: py-fou-2-check
-:editor:
 deplace_fou("ne", 1)
 deplace_fou("no", 2)
 deplace_fou("so", 2)
@@ -583,7 +573,6 @@ est nécessaire.
 ```{exec} python
 :after: py-chess
 :then: py-roi-4-check
-:editor:
 def deplace_roi(direction):
   if direction == "n":
     deplace(0, 1)
@@ -653,7 +642,6 @@ paramètre, la direction est nécessaire.
 ```{exec} python
 :after: py-chess
 :then: py-cavalier-1-check
-:editor:
 def deplace_cavalier(direction):
   if direction == "ne":
     deplace(1, 2)
@@ -755,7 +743,6 @@ await render_check_and_take(board.piece(White.knight, 2, 0), moves)
 ```{exec} python
 :after: py-chess py-deplacements-cavalier
 :then: py-cavalier-2-check
-:editor:
 deplace_cavalier("ne")
 deplace_cavalier("en")
 deplace_cavalier("no")
@@ -796,7 +783,6 @@ paramètres sont nécessaires.
 ```{exec} python
 :after: py-chess
 :then: py-reine-2-check
-:editor:
 def deplace_reine(direction, nb_cases):
   if direction == "n":
     deplace(0, nb_cases)
@@ -898,8 +884,6 @@ await render_check_and_take(board.piece(White.queen, 3, 0), moves)
 ```{exec} python
 :after: py-chess py-deplacements-reine
 :then: py-reine-3-check
-:editor:
-
 deplace_reine("ne", 1)
 deplace_reine("no", 3)
 deplace_reine("e", 4)
@@ -952,7 +936,6 @@ await render_check_and_take(board.piece(White.knight, 1, 0), moves)
 ```{exec} python
 :after: py-chess py-deplacements-cavalier
 :then: py-cavalier-3-check
-:editor:
 deplace_cavalier("ne")
 deplace_cavalier("os")
 deplace_cavalier("es")
