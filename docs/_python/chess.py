@@ -26,6 +26,11 @@ class Black(enum.StrEnum):
     pawn = '\u265f'
 
 
+def color(piece):
+    return (White if piece.icon.text in White
+            else Black if piece.icon.text in Black else None)
+
+
 class Icon:
     def __init__(self, board, container, x, y, icon):
         self.board, self.container, self.icon = board, container, icon
@@ -130,16 +135,17 @@ async def animate(piece, moves, pause=0.1, **kwargs):
         if (piece.x < 0 or piece.x > piece.board.width - 1 or piece.y < 0
                 or piece.y > piece.board.height - 1):
             return False
-        is_white = piece.icon.text in White
+        piece_color = color(piece)
         for p in piece.board.children:
-            if (p is not piece and piece.x == p.x and piece.y == p.y
-                    and (p.icon.text in White) != is_white):
-                p.remove()
-                await core.render(piece.board)
-                break
-            elif (p is not piece and piece.x == p.x and piece.y == p.y
-                    and (p.icon.text in White) == is_white):
-                return False
+            p_color = color(p)
+            if (piece_color is not None and p_color is not None
+                    and p is not piece and piece.x == p.x and piece.y == p.y):
+                if p_color != piece_color:
+                    p.remove()
+                    await core.render(piece.board)
+                    break
+                else:
+                    return False
         await asyncio.sleep(pause)
     return True
 
