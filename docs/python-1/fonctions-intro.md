@@ -154,7 +154,7 @@ d'instructions (nord() suivi de est()), mais il n'est pas possible d'utiliser
 une boucle `for`, car il y a d'autres instructions entre.
 La solution est de définir une nouvelle fonction `diagonale()`.
 
-Résolvez l'exercice précedent en appelant la fonction `diagonale` à la place de
+Résolvez l'exercice précédent en appelant la fonction `diagonale` à la place de
 répéter du programme (Il n'y a pas de "Bravo" qui apparaîtra même si l'exercice est
 réussi).
 
@@ -553,7 +553,7 @@ En utilisant la fonction `deplace(x, y)`, définissez une fonction
 :then: py-roi-4-check
 :when: load
 :editor: 8b17e107-454d-48ec-a45e-a626527baa8a
-# Ecrivez le programme ici
+# Écrivez le programme ici
 
 
 ```
@@ -615,7 +615,7 @@ noirs. Quels paramètres sont nécessaires?
 :then: py-cavalier-1-check
 :when: load
 :editor: a3e67fea-d5fb-4f80-8161-c63120091a6f
-# Ecrivez le programme ici
+# Écrivez le programme ici
 
 
 ```
@@ -719,7 +719,7 @@ minimum de coups.
 :then: py-cavalier-2-check
 :when: load
 :editor: 0f472020-c25d-4d14-a443-e647c6c737fe
-# Ecrivez le programme ici
+# Écrivez le programme ici
 
 
 ```
@@ -764,7 +764,7 @@ En utilisant la fonction `deplace(x, y)`, définissez une fonction
 :then: py-reine-2-check
 :when: load
 :editor: 27976cba-efa5-45db-9a18-9fffaf4ceeb6
-# Ecrivez le programme ici
+# Écrivez le programme ici
 
 ```
 
@@ -847,7 +847,7 @@ minimum de coups.
 :then: py-reine-3-check
 :when: load
 :editor: 54d79281-f256-403d-ae1e-64e0f5bd276b
-# Ecrivez le programme ici
+# Écrivez le programme ici
 
 ```
 
@@ -905,7 +905,7 @@ précédent, déplacez le cavalier pour prendre tous les pions noirs en un minim
 :then: py-cavalier-3-check
 :when: load
 :editor: 09e9312f-e506-4252-9d81-0452340a023e
-# Ecrivez le programme ici
+# Écrivez le programme ici
 
 ```
 
@@ -960,7 +960,7 @@ précédent, déplacez le cavalier pour prendre tous les pions noirs en un minim
 :then: py-cavalier-4-check
 :when: load
 :editor: bcb5a1f2-98ef-4e0d-85f6-c8d4d4e46ea5
-# Ecrivez le programme ici
+# Écrivez le programme ici
 
 ```
 
@@ -1183,7 +1183,7 @@ for _ in range(3):
 <!--
 ## Exercice {num}`exo-py1-intro-fct`
 
-Ecrivez une fonction `deplace_roi(direction)` qui déplace un roi dans la
+Écrivez une fonction `deplace_roi(direction)` qui déplace un roi dans la
 direction demandée. L'argument `direction` est une chaîne de caractère contenant
 l'un des points cardinaux `n`, `ne`, `e`, `se`, `s`, `so`, `o` ou `no`.
 

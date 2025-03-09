@@ -400,7 +400,7 @@ L'algorithme de Luhn permet-il de détecter:
 
 ### Exercice {num}`exo-donnees`
 
-Les numéros figurant sur ces cartes de crédit sont-ils valides?
+Les cartes de crédit suivantes sont-elles valides?
 
 <table><tr><td>
 

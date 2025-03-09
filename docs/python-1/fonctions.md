@@ -12,7 +12,7 @@ hide-solutions: true
 En programmation, une **fonction** est un bloc de code (suite d'instructions)
 permettant de réaliser une tâche donnée et auquel nous donnons un nom.
 
-nous en avons déjà rencontrées plusieurs:
+Nous en avons déjà rencontrées plusieurs:
 
 - print(...): affiche sur la console ce qui est indiqué entre parenthèse
   ```{exec} python
@@ -153,7 +153,8 @@ programme juste après les imports.
 
 1. Définissez une fonction `calcule_et_affiche_perimetre_carre()`.
 2. Combien de paramètres sont-ils nécessaires?
-3. Afficher le perimetre d'un carré de côté 7, 12 et avec la variable `base`.
+3. Afficher le périmetre d'un carré de côté 7, de carré de côté 12, ainsi qu'en
+   utilisant la variable `base`.
 
 ```{exec} python
 :editor: 6871f44a-1dd8-4816-bb25-78b9e8e1e71b
@@ -185,7 +186,7 @@ calcule_et_affiche_perimetre_carre(base)
 ### Exercice {num}`exo-py1-fct`
 
 Sans les exécutez, déterminer ce que vont afficher les programmes suivants.\
-Font-il ce qui est demandé?\
+Font-ils ce qui est demandé?\
 S'il y a une erreur, expliquez et corrigez le problème.
 
 1.  Calculez l'aire d'un rectangle de côtés 20 et 100.
@@ -348,11 +349,10 @@ Complétez les programmes suivants uniquement où il y a des `...`:
 
 ### Exercice {num}`exo-py1-fct`
 
-Sans l'exécutez, déterminez ce que va afficher le progamme suivant. Ensuite,
-exécutez-le pour vérifiez votre réponse.
+Sans l'exécutez, déterminez ce que va afficher le programme suivant. Ensuite,
+exécutez-le pour vérifier votre réponse.
 
 ```{exec} python
-:editor:
 def mystery_1(z):
   z += 1
   print(z)
@@ -369,6 +369,38 @@ mystery_1(y)
 mystery_2(y)
 mystery_2(y - 10)
 print(y)
+```
+
+### Exercice {num}`exo-py1-fct`
+
+Sans l'exécutez, déterminez ce que va afficher le programme suivant. Ensuite,
+exécutez-le pour vérifier votre réponse.
+
+```{exec} python
+def mystery_1(nombre):
+    if nombre <= 4:
+        print("A")
+    if nombre >= 2:
+        print("B")
+    else:
+        print("D")
+
+def mystery_2(nombre):
+    if nombre <= 4:
+        print("A")
+    elif nombre >= 2:
+        print("B")
+    else:
+        print("D")
+
+mystery_1(1)
+mystery_2(1)
+print("----")
+mystery_1(3)
+mystery_2(3)
+print("----")
+mystery_1(5)
+mystery_2(5)
 ```
 
 ## Fonctions avec valeur de retour
@@ -402,8 +434,8 @@ print("L'aire totale vaut", aire_1 + aire_2)
 
 ### Exercice {num}`exo-py1-fct`
 
-Sans l'exécutez, déterminez ce que va afficher le progamme suivant. Ensuite,
-exécutez-le pour vérifiez votre réponse.
+Sans l'exécutez, déterminez ce que va afficher le programme suivant. Ensuite,
+exécutez-le pour vérifier votre réponse.
 
 ```{exec} python
 :editor:
@@ -468,12 +500,12 @@ else:
 ### Exercice {num}`exo-py1-fct`
 
 Écrivez un programme qui demande à l'utilisateur sa moyenne d'informatique tant
-qu'elle n'est pas valide. Définir une fonction our tester si la note est valide,
+qu'elle n'est pas valide. Définissez une fonction pour tester si la note est valide,
 c'est-à-dire si elle est comprise entre 1 et 6 inclus.
 Si la moyenne est inférieure à 4, affichez que la note est insuffisante.\
-Si la moyenne est entre 4 et 4.8 (non inclu), affichez que la note est
+Si la moyenne est entre 4 et 4.8 (non inclus), affichez que la note est
 suffisante, mais elle pourrait être meilleure.\
-Si la moyenne est supérieure à 4.7 et inférieure à 5.5 (non inclu), affichez
+Si la moyenne est supérieure à 4.7 et inférieure à 5.5 (non inclus), affichez
 que c'est du bon travail.\
 Sinon affichez que c'est de l'excellent travail.
 
