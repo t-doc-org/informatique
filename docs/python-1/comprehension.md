@@ -3,9 +3,6 @@
 
 # Compréhension de code
 
-```{metadata}
-hide-solutions: true
-```
 ## Notion de variable
 
 ### Exercice {num}`exo-py1`
