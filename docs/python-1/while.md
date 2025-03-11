@@ -124,7 +124,23 @@ print(s)
 ```
 
 ```{solution}
-Ce programme affiche les nombres paires de 2 à 50 compris.
+| boucle while | s   | i   |
+| :----------: | :-: | :-: |
+|              | 0   | ?   |
+|              | 0   | 1   |
+| 1 <= 5: Vrai | 1   | 1   |
+|              | 1   | 2   |
+| 2 <= 5: Vrai | 3   | 2   |
+|              | 3   | 3   |
+| 3 <= 5: Vrai | 6   | 3   |
+|              | 6   | 4   |
+| 4 <= 5: Vrai | 10  | 4   |
+|              | 10  | 5   |
+| 5 <= 5: Vrai | 15  | 5   |
+|              | 15  | 6   |
+
+La programme affichera 15.
+
 ```
 
 ### Exercice {num}`exo-py1`
