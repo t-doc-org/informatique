@@ -295,11 +295,17 @@ ${code.replace('await input_line', 'input')}
             feedback.classList.remove('hidden');
             if (!mistakeMade) {
                 score += 1;
-                level = Math.floor(score / 2);
-                if (score % 2 == 0) {
-                    conversation['messages'] = [];
-                    conversationId += 1;
-                }
+                // seulement une réponse correct par niveau
+                level = score;
+                conversation['messages'] = [];
+                conversationId += 1;
+
+                // deux réponses justes par niveau
+                //level = Math.floor(score / 2);
+                //if (score % 2 == 0) {
+                //    conversation['messages'] = [];
+                //    conversationId += 1;
+                //}
             }
             if (level >= examples.length) {
                 question.replaceChildren(text("Bravo, tu as terminé!"));
