@@ -14,6 +14,7 @@ for
 while
 mini-projets
 comprehension
+revisions
 fonctions-intro
 fonctions
 blackjack

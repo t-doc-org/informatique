@@ -1,13 +1,7 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Programmation - Entrainement
-
-```{metadata}
-orphan:
-```
-
-Site d'entrainement d'écriture de programme en Python.
+# Révisions
 
 ## Exercice 1
 
