@@ -239,12 +239,20 @@ La valeur rentrée par l'utilisateur est stockée sous forme de
 chaîne de caractères (de type `str`). Pour effectuer des calculs, il faut la
 convertir en `int` (nombre entier) ou en `float` (nombre à virgule).
 
-```{important}
-L'utilisation de la fonction input sur ce site est différente de ce qui est
-utilisé dans d'autre logiciel.\
-`nom_variable = input("...")` -> version des autres logiciels\
-`nom_variable = await input_line("...")` -> version pour ce site
+```{exec} python
+:when: never
+nom_variable = input("...")
 ```
+
+### Exemple {num}`ex-py1`
+
+```{exec} python
+prenom = input("Comment t'appelles-tu?")  # prenom est une chaîne de caractères
+age = int(input("Quel est ton age?"))    # age est un nombre entier
+taille = float(input("Quelle est ta taille en mètres?")) # taille est un nombre à virgule
+print(prenom, age, taille)
+```
+
 
 ### Exercice {num}`exo-py1`
 
@@ -267,9 +275,9 @@ Je vois que tu habites à {afficher le lieu}.
 ````{solution}
 ```{exec} python
 :linenos:
-nom = await input_line("Quel est ton nom? ")
-prenom = await input_line("Quel est ton prénom? ")
-lieu = await input_line("Où habites-tu? ")
+nom = input("Quel est ton nom? ")
+prenom = input("Quel est ton prénom? ")
+lieu = input("Où habites-tu? ")
 print("Bonjour", prenom, nom, ", heureux de faire ta connaissance.")
 print("Je vois que tu habites à", lieu)
 ```
@@ -305,16 +313,16 @@ Trouvez et corrigez-les.
 
 ```{exec} python
 :editor:
-age = await input_line("Quel âge as-tu? ")
-annee = await input_line("En quelle année sommes-nous? ")
+age = input("Quel âge as-tu? ")
+annee = input("En quelle année sommes-nous? ")
 print("Vous êtes né.e en" annee - age "ou en" annee - age - 1)
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
-age = int(await input_line("Quel âge as-tu? "))
-annee = int(await input_line("En quelle année sommes-nous? "))
+age = int(input("Quel âge as-tu? "))
+annee = int(input("En quelle année sommes-nous? "))
 print("Vous êtes né.e en", annee - age, "ou en", annee - age - 1)
 ```
 ````
@@ -337,7 +345,7 @@ Nombre de mégaoctets:
 ````{solution}
 ```{exec} python
 :linenos:
-nb_mo = float(await input_line("Nombre de mégaoctets: "))
+nb_mo = float(input("Nombre de mégaoctets: "))
 # 1 octet = 8 bits
 nb_bits = int(nb_mo * 8 * 1000000)
 print(nb_mo, "Mo donnent", nb_bits, "bits.")
@@ -368,7 +376,7 @@ Merci, 60.2 °F équivalent à 15.666666666666668 °C
 ````{solution}
 ```{exec} python
 :linenos:
-fahrenheit = float(await input_line("Température en °F: "))
+fahrenheit = float(input("Température en °F: "))
 celsius = (fahrenheit - 32) / 1.8
 print("Merci,", fahrenheit, "°F équivaut à", celsius, "°C")
 ```

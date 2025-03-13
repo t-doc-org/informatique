@@ -179,7 +179,7 @@ En utilisant une boucle `while`, écrivez un programme qui:
 ````{solution}
 ```{exec} python
 :linenos:
-nombre = int(await input_line("Choisissez un nombre: "))
+nombre = int(input("Choisissez un nombre: "))
 i = 1
 while i <= 5:
   print(i * nombre)
@@ -255,21 +255,21 @@ Bravo!
 
 ```{exec} python
 :editor: c5bf6458-d3df-4458-bb42-6e6edeb8125c
-capitale = await input_line("Quelle est la capitale de la Suisse?")
+capitale = input("Quelle est la capitale de la Suisse?")
 
 # Complétez le programme ici
 while ...:
-  capitale = await input_line("Faux, essaie encore!")
+  capitale = input("Faux, essaie encore!")
 print("Bravo!")
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
-capitale = await input_line("Quelle est la capitale de la Suisse?")
+capitale = input("Quelle est la capitale de la Suisse?")
 
 while capitale != "Berne":
-  capitale = await input_line("Faux, essaie encore!")
+  capitale = input("Faux, essaie encore!")
 print("Bravo!")
 ```
 ````
@@ -382,7 +382,7 @@ Vous avez fait 2 notes insuffisantes
 nb_notes_insuf = 0
 note = 0
 while note != 99:
-    note = float(await input_line("Entrez une note: "))
+    note = float(input("Entrez une note: "))
     if note >= 1 and note < 4:
         nb_notes_insuf += 1
 print("Vous avez fait", nb_notes_insuf, "notes insuffisantes")

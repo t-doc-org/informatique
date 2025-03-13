@@ -274,14 +274,14 @@ affiche les 10 premiers multiples de ce nombre.
 ````{solution}
 ```{exec} python
 :linenos:
-nombre = int(await input_line("Choisissez un nombre: "))
+nombre = int(input("Choisissez un nombre: "))
 for i in range(10):
   print(nombre * (i + 1))
 ```
 
 ```{exec} python
 :linenos:
-nombre = int(await input_line("Choisissez un nombre: "))
+nombre = int(input("Choisissez un nombre: "))
 for i in range(1, 11):
   print(nombre * i)
 ```
@@ -443,7 +443,7 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
     ````{solution}
     ```{exec} python
     :linenos:
-    nb_etages = int(await input_line("Choisissez le nombre d'étages: "))
+    nb_etages = int(input("Choisissez le nombre d'étages: "))
     nb_billes = 0
     for i in range(nb_etages):
       nb_billes += (i + 1) ** 2
@@ -452,7 +452,7 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
 
     ```{exec} python
     :linenos:
-    nb_etages = int(await input_line("Choisissez le nombre d'étages: "))
+    nb_etages = int(input("Choisissez le nombre d'étages: "))
     nb_billes = 0
     for etage in range(1, nb_etages + 1):
       nb_billes += etage ** 2
@@ -526,8 +526,8 @@ d'épargne 1500 CHF au taux de 2 %.
     ````{solution}
     ```{exec} python
     :linenos:
-    montant = float(await input_line("Montant déposé: "))
-    duree = int(await input_line("Durée du placement: "))
+    montant = float(input("Montant déposé: "))
+    duree = int(input("Durée du placement: "))
     for _ in range(duree):
       montant += 2 / 100 * montant
     print(montant)
@@ -535,8 +535,8 @@ d'épargne 1500 CHF au taux de 2 %.
 
     ```{exec} python
     :linenos:
-    montant = float(await input_line("Montant déposé: "))
-    duree = int(await input_line("Durée du placement: "))
+    montant = float(input("Montant déposé: "))
+    duree = int(input("Durée du placement: "))
     for _ in range(duree):
       montant = 102 / 100 * montant
     print(montant)
@@ -555,9 +555,9 @@ d'épargne 1500 CHF au taux de 2 %.
     ````{solution}
     ```{exec} python
     :linenos:
-    montant = float(await input_line("Montant déposé: "))
-    duree = int(await input_line("Durée du placement: "))
-    taux = float(await input_line("Taux d'intérêt en %: "))
+    montant = float(input("Montant déposé: "))
+    duree = int(input("Durée du placement: "))
+    taux = float(input("Taux d'intérêt en %: "))
     for _ in range(duree):
       montant += taux / 100 * montant
     print(montant)
@@ -565,9 +565,9 @@ d'épargne 1500 CHF au taux de 2 %.
 
     ```{exec} python
     :linenos:
-    montant = float(await input_line("Montant déposé: "))
-    duree = int(await input_line("Durée du placement: "))
-    taux = float(await input_line("Taux d'intérêt en %: "))
+    montant = float(input("Montant déposé: "))
+    duree = int(input("Durée du placement: "))
+    taux = float(input("Taux d'intérêt en %: "))
     for _ in range(duree):
       montant = (taux + 100) / 100 * montant
     print(montant)

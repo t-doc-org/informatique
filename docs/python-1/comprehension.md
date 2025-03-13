@@ -308,13 +308,13 @@ print(nombre)
 else:
 print("L'algorithme de Syracuse est terminé et il se termine bien par 4, 2 et 1!")
 if nombre % 2 == 0:
-nombre = int(await input_line("Choisissez un nombre entier: "))
+nombre = int(input("Choisissez un nombre entier: "))
 nombre = 3 * nombre + 1
 ```
 
 ````{solution}
 ```{exec} python
-nombre = int(await input_line("Choisissez un nombre entier: "))
+nombre = int(input("Choisissez un nombre entier: "))
 while nombre != 1:
   if nombre % 2 == 0:
     nombre = nombre / 2

@@ -138,14 +138,14 @@ Si a est plus petit que 0 alors
 
 ```{exec} python
 :editor: f0cd9039-aa2a-4a6e-a855-ad51d4cd557e
-a = float(await input_line("Entrez un nombre positif: "))
+a = float(input("Entrez un nombre positif: "))
 # Complétez le programme ici
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
-a = float(await input_line("Entrez un nombre positif: "))
+a = float(input("Entrez un nombre positif: "))
 if a < 0:
   print("Ce nombre n'est pas positif.")
 ```
@@ -174,8 +174,8 @@ Sinon
 ````{solution}
 ```{exec} python
 :linenos:
-a = float(await input_line("Valeur de a: "))
-b = float(await input_line("Valeur de b: "))
+a = float(input("Valeur de a: "))
+b = float(input("Valeur de b: "))
 if a < b:
   print("a est plus petit que b.")
 else:
@@ -197,8 +197,8 @@ Améliorez le programme précédent en traitant aussi le cas où a = b.
 ````{solution}
 ```{exec} python
 :linenos:
-a = float(await input_line("Valeur de a: "))
-b = float(await input_line("Valeur de b: "))
+a = float(input("Valeur de a: "))
+b = float(input("Valeur de b: "))
 if a == b:
   print("a est égal à b.")
 elif a < b:
@@ -263,14 +263,14 @@ majeur ou s'il est mineur.
 
 ```{exec} python
 :editor: c590c718-c33d-43da-a078-f7eb37502f9c
-age = int(await input_line("Quel est ton âge?"))
+age = int(input("Quel est ton âge?"))
 
 # Complétez le programme ici
 ```
 
 ````{solution}
 ```{exec} python
-age = int(await input_line("Quel est ton âge? "))
+age = int(input("Quel est ton âge? "))
 
 if age < 18:
   print("Tu es mineur.")
@@ -336,7 +336,7 @@ l'utilisateur. Mais il contient une erreur par ligne, trouvez-les et corrigez-le
 
 ```{exec} python
 :editor: 55bcea11-979f-43f8-8d1c-46f102e56b2b
-age = await input_line("Quel âge as-tu? ")
+age = input("Quel âge as-tu? ")
 if age > 18:
 print("Tu payes le tarif enfant.")
 elif age < 65
@@ -347,7 +347,7 @@ else age >= 65:
 
 ````{solution}
 ```{exec} python
-age = int(await input_line("Quel âge as-tu? "))
+age = int(input("Quel âge as-tu? "))
 if age < 18:
   print("Tu payes le tarif enfant.")
 elif age < 65:
@@ -372,7 +372,7 @@ else:
 
 ````{solution}
 ```{exec} python
-nombre = float(await input_line("Choisissez un nombre"))
+nombre = float(input("Choisissez un nombre"))
 nombre = nombre - 5.5
 if nombre < 0:
   nombre = nombre + 10
@@ -482,7 +482,7 @@ payer.
 
 ````{solution}
 ```{exec} python
-age = int(await input_line("Quel est ton âge?"))
+age = int(input("Quel est ton âge?"))
 if age < 16:
   prix = 15
 elif age <= 20:
@@ -532,16 +532,16 @@ payer.
 
 ```{exec} python
 :editor: b7334fbc-4c1d-42fe-bed2-d15582abd972
-age_1 = int(await input_line("Quel est l'âge de la première personne? "))
-age_2 = int(await input_line("Quel est l'âge de la deuxième personne? "))
+age_1 = int(input("Quel est l'âge de la première personne? "))
+age_2 = int(input("Quel est l'âge de la deuxième personne? "))
 
 # Complétez le programme ici
 ```
 
 ````{solution}
 ```{exec} python
-age_1 = int(await input_line("Quel est l'âge de la première personne? "))
-age_2 = int(await input_line("Quel est l'âge de la deuxième personne? "))
+age_1 = int(input("Quel est l'âge de la première personne? "))
+age_2 = int(input("Quel est l'âge de la deuxième personne? "))
 
 if age_1 < 18 and age_2 < 18:
   prix = 2 * 7
@@ -566,7 +566,7 @@ suivre pendant l'année et afficher le tarif le plus avantageux dans ce cas.
 
 ```{exec} python
 :editor: f5b7f840-9b9e-4f66-9502-36f2f995abcb
-nb_seances = int(await input_line("Nombre de séances: "))
+nb_seances = int(input("Nombre de séances: "))
 
 # Complétez le programme
 prixA = ...
@@ -576,7 +576,7 @@ prixB = ...
 
 ````{solution}
 ```{exec} python
-nb_seances = int(await input_line("Nombre de séances: "))
+nb_seances = int(input("Nombre de séances: "))
 
 prix_A = 11 * nb_seances + 185
 prix_B = 17 * nb_seances
@@ -596,18 +596,18 @@ maximum (le plus grand).
 
 ```{exec} python
 :editor: c3d6fb9b-eb5f-4e83-b662-606ac68282cf
-nombre_1 = float(await input_line("Choisir un premier nombre: "))
-nombre_2 = float(await input_line("Choisir un deuxième nombre: "))
-nombre_3 = float(await input_line("Choisir un troisième nombre: "))
+nombre_1 = float(input("Choisir un premier nombre: "))
+nombre_2 = float(input("Choisir un deuxième nombre: "))
+nombre_3 = float(input("Choisir un troisième nombre: "))
 
 # Complétez le programme ici
 ```
 
 ````{solution}
 ```{exec} python
-nombre_1 = float(await input_line("Choisir un premier nombre: "))
-nombre_2 = float(await input_line("Choisir un deuxième nombre: "))
-nombre_3 = float(await input_line("Choisir un troisième nombre: "))
+nombre_1 = float(input("Choisir un premier nombre: "))
+nombre_2 = float(input("Choisir un deuxième nombre: "))
+nombre_3 = float(input("Choisir un troisième nombre: "))
 max = nombre_1
 if nombre_2 > max :
   max = nombre_2
@@ -641,7 +641,7 @@ print(14 % 5)          # Tester avec d'autres valeurs
 
 ````{solution}
 ```{exec} python
-nombre = int(await input_line("Choisir un nombre entier: "))
+nombre = int(input("Choisir un nombre entier: "))
 if nombre % 2 == 0:
   print(nombre, "est pair.")
 else:
@@ -661,7 +661,7 @@ s'il est divisible par 3 et 13.
 
 ````{solution}
 ```{exec} python
-nombre = int(await input_line("Choisir un nombre entier: "))
+nombre = int(input("Choisir un nombre entier: "))
 if nombre % 3 == 0 and nombre % 13 == 0:
   print(nombre, "est divisible par 3 et 13.")
 elif nombre % 3 == 0:

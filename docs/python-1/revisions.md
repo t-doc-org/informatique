@@ -20,7 +20,7 @@
 ```{exec} python
 :linenos:
 # Définition des données
-base = float(await input_line("Longueur de la base du triangle: "))
+base = float(input("Longueur de la base du triangle: "))
 hauteur = 4.55
 
 # Calcul de l'aire du triangle
@@ -47,7 +47,7 @@ print("L'aire du triangle est :", aire)
 ```{exec} python
 :linenos:
 # Définition des données
-age = int(await input_line("Quel est votre âge?"))
+age = int(input("Quel est votre âge?"))
 
 # Affichage du résultat
 print("Dans 22 ans, vous aurez:", age + 22)
@@ -71,7 +71,7 @@ température est normale.
 ```{exec} python
 :linenos:
 # Demander la température à l'utilisateur
-temperature = float(await input_line("Entrez votre température corporelle : "))
+temperature = float(input("Entrez votre température corporelle : "))
 
 # Vérifier si l'utilisateur a de la fièvre
 if temperature >= 38:
@@ -97,7 +97,7 @@ Demandez à l'utilisateur d'entrer un nombre. Si ce nombre est égal à 0, affic
 ```{exec} python
 :linenos:
 # Demander un nombre à l'utilisateur
-nombre = float(await input_line("Entrez un nombre : "))
+nombre = float(input("Entrez un nombre : "))
 
 # Vérifier si le nombre est nul ou non
 if nombre == 0:
@@ -126,7 +126,7 @@ limite de vitesse".
 ```{exec} python
 :linenos:
 # Demander la vitesse à l'utilisateur
-vitesse = float(await input_line("Entrez votre vitesse en km/h : "))
+vitesse = float(input("Entrez votre vitesse en km/h : "))
 
 # Vérifier les différentes limites de vitesse
 if vitesse <= 50:
@@ -155,7 +155,7 @@ affichez "Il fait très froid". Si la température est comprise entre 0 et 20
 ```{exec} python
 :linenos:
 # Demander la température à l'utilisateur
-temperature = float(await input_line("Entrez la température en degrés Celsius : "))
+temperature = float(input("Entrez la température en degrés Celsius : "))
 
 # Vérifier les différentes conditions de température
 if temperature < 0:
