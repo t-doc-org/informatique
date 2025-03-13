@@ -1,0 +1,98 @@
+% Copyright 2025 Caroline Blank <caro@c-space.org>
+% SPDX-License-Identifier: CC-BY-NC-SA-4.0
+
+```{metadata}
+scripts:
+  - src: quizz-helpers.js
+```
+
+# Stockage et transmission de données
+
+## Volumes de données
+
+L'information traitée par un ordinateur (texte, image, son, vidéo) est sous
+forme de données binaires, c'est-à-dire sous la forme d'une suite de 0 ou de 1.
+Le **bit** vient de BInary digiT (b minuscule dans les notations) est l'unité la
+plus simple en informatique, représenté par le chiffre 0 ou 1.
+
+L'**octet**, en anglais byte, (o minuscule ou B majuscule dans les notations)
+est une unité composée de 8 bits. Pour faciliter la lisibilité, nous regroupons
+en général l'information par paquet de 8, 16, 32 ou 64 bits.
+
+Voici les unités standardisées depuis 1998:
+
+| Unité | Valeur en octets | Valeur en puissance de 10 |
+|-------|------------------|---------------------------|
+| Un **kilooctet** (ko ou kB) | 1 000 octets | $10^3$ octets |
+| Un **megaoctet** (Mo ou MB) | 1 000 ko | 1 000 000 octets = $10^6$ octets |
+| Un **gigaoctet** (Go ou GB) | 1 000 Mo | 1 000 000 000 octets = $10^9$ octets |
+| Un **téraoctet** (To ou TB) | 1 000 Go | 1 000 000 000 000 octets = $10^{12}$ octets |
+
+### Exercice {num}`exo-donnees`
+
+Associez à chaque type de fichier un ordre de grandeur de volume de stockage
+parmi les propositions suivantes:
+- plusieurs To
+- quelques centaines de Mo
+- quelques ko
+- plusieurs Go
+- quelques Mo
+
+1.  <script>
+    tdoc.question("Une vidéo de basse qualité de quelques minutes",
+                  {"quelquescentainesdemo": true});
+    </script>
+2.  <script>
+    tdoc.question("Un film ou un gros jeu vidéo",
+                  {"plusieursgo": true});
+    </script>
+3.  <script>
+    tdoc.question("Un fichier image ou audio mp3", {"quelquesmo": true});
+    </script>
+4.  <script>
+    tdoc.question("Un film 4K non compressé, en studio",
+                  {"plusieursto": true});
+    </script>
+5.  <script>
+    tdoc.question("Un document texte sans image ni formatage",
+                  {"quelquesko": true});
+    </script>
+
+### Exercice {num}`exo-donnees`
+
+1. <script>
+    tdoc.question("Quelle est la taille en octets d'une clé USB de 16 Go?",
+                  {"16000000000": true});
+    </script>
+
+2. <script>
+    tdoc.question("Combien de fichier MP3 de 4 Mo en moyenne peut-on stocker sur une clé USB de 16 Go?",
+                  {"4000": true});
+    </script>
+
+## Débit
+
+Le **débit** d'une transmission de données est la vitesse à laquelle les données
+sont transmises sur le réseau. Il est exprimé en kb/s (kilobits par seconde) ou
+Mb/s (Megabits par seconde).
+
+### Exercice {num}`exo-donnees`
+
+1. <script>
+    tdoc.question("Pendant une vidéo live de deux minutes avec un débit de 1,5 Mo/s, quelle quantité de données sont transmises?",
+                  {"180 Mo": true});
+    </script>
+
+2. Dans les années 90, la plupart des foyers se connectaient à Internet avec des
+   « modems 56 k », qui avaient un débit théorique maximum de 56 ko/s.
+    <script>
+    tdoc.question("Combien de temps fallait-il pour télécharger une photo de 2 Mo?",
+                  {"36 s": true});
+    </script>
+
+
+
+Allez sur le site [https://www.speedtest.net](https://www.speedtest.net) et
+mesurez le débit de votre connexion internet.
+
+
