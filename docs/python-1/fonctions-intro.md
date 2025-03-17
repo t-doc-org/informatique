@@ -155,8 +155,7 @@ une boucle `for`, car il y a d'autres instructions entre.
 La solution est de définir une nouvelle fonction `diagonale()`.
 
 Résolvez l'exercice précédent en appelant la fonction `diagonale` à la place de
-répéter du programme (Il n'y a pas de "Bravo" qui apparaîtra même si l'exercice est
-réussi).
+répéter du programme.
 
 De cette manière le programme est plus lisible!
 
