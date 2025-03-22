@@ -19,13 +19,13 @@ n'est dans certains cas pas nécessaire.
 
 ### Exemple {num}`ex-donnees`
 
-#### Carte de crédit:
+#### Carte de crédit
 
 Lorsqu'un numéro de carte de crédit est entré sur un site web, un code détecteur
 d'erreur permet de savoir si le numéro est correct ou pas. Dans ce cas, seule
 l'information de la validité du numéro est intéressante.
 
-### Connexion téléphonique
+#### Connexion téléphonique
 
 Lors d'un appel téléphonique, des erreurs peuvent se produire. Comme la
 communication est synchrone, il n'est pas possible d'utiliser un code correcteur
@@ -39,14 +39,13 @@ Lorsqu'une sonde qui se trouve sur Mars envoie un message, la latence (le délai
 de transmission) peut être plus de 22 minutes. Dans ce cas, le renvoi du
 message n'est pas une solution.
 
-### Sauvegarde de données sur un disque dur externe
+#### Sauvegarde de données sur un disque dur externe
 
 Lorsqu'une erreur est détectée lors de la copie de données sur un disque dur
 externe, il est facile de retransmettre les données. Cela est plus rapide que
 d'utiliser un code correcteur d'erreur.
 
-
-## Codes correcteur d'erreur
+## Codes correcteurs d'erreur
 
 Les exemples précédents montrent qu'il n'est souvent pas nécessaire de corriger
 des erreurs et que le simple fait de savoir est suffisant. Mais dans certains
@@ -94,7 +93,6 @@ En vous aidant de l'exemple précédent, effectuez la même analyse du code
 $H(3, 1)$ pour le message utile: 1.
 
 ```{solution}
-
 message utile: 1 -> message codé (envoyé): 111
 
 | message reçu  | nombre d'erreurs | message décodé | correct? |
@@ -114,7 +112,6 @@ $H(3, 1)$:
 
 - $C_d = 2$ et $C_c = 1$
 - Efficacité $\cong 33.3 \%$
-
 ```
 
 ### Code de Hamming
@@ -148,7 +145,6 @@ Les bits de données vont dans un ordre particulier:
 :align: center
 ```
 
-
 <table width="100%"><tr><td>
 
 $p_1$: bit de parité de $d_1$, $d_2$ et $d_4$
@@ -164,6 +160,7 @@ $p_3$: bit de parité de $d_2$, $d_3$ et $d_4$
 :width: 200px
 :align: center
 ```
+
 </td></tr></table>
 
 Vérification: Les trois parités doivent être correctes.
@@ -187,8 +184,8 @@ Vérification: Les trois parités doivent être correctes.
 :width: 200px
 :align: center
 ```
-</td></tr></table>
 
+</td></tr></table>
 
 ##### Cas 2: deux parités fausses
 
@@ -209,8 +206,8 @@ Vérification: Les trois parités doivent être correctes.
 :width: 200px
 :align: center
 ```
-</td></tr></table>
 
+</td></tr></table>
 
 ##### Cas 3: trois parités fausses
 
@@ -218,7 +215,7 @@ Vérification: Les trois parités doivent être correctes.
 
 <span style="color: #EA4335;">Parité 1</span>: $p_1$, $d_1$, $d_2$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 
-<span style="color: #34A853;">Parité 2</span>: $p_2$, $d_1$, $d_3$, $d_4$ <b><span style="color: #EA4335;">&#10003;</span></b>
+<span style="color: #34A853;">Parité 2</span>: $p_2$, $d_1$, $d_3$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 
 <span style="color: #4285F4;">Parité 3</span>: $p_3$, $d_2$, $d_3$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 
@@ -231,8 +228,8 @@ Vérification: Les trois parités doivent être correctes.
 :width: 200px
 :align: center
 ```
-</td></tr></table>
 
+</td></tr></table>
 
 Vérification des trois parités:
 
@@ -250,7 +247,6 @@ $C_d = 2$ et $C_c = 1$
 Efficacité: u = 4 et m = 7\
 $\dfrac{u}{m} = \dfrac{4}{7} \cong 57.1 \%$
 
-
 #### Exercice {num}`exo-donnees`
 
 On considère le code de Hamming $H(7, 4)$.
@@ -259,37 +255,11 @@ Pour chacun des messages utiles suivants:
 - indiquez les 3 bits de parités
 - encodez le message
 
-Exemple:
+| message utile | $p_1$ | $p_2$ | $p_3$ | message codé |
+| :-----------: | :---: | :---: | :---: | :----------: |
+| 1010          | 1     | 0     | 1     | 1011010      |
 
-|               | message utile | $p_1$ | $p_2$ | $p_3$ | message codé |
-| :-----------: | :-----------: | :---: | :---: | :---: | :----------: |
-| exemple       | 1010          | 1     | 0     | 1     | 1011010      |
-| a)            | 0111          |       |       |       |              |
-| b)            | 0001          |       |       |       |              |
-| c)            | 0010          |       |       |       |              |
-| d)            | 1011          |       |       |       |              |
-| e)            | 0011          |       |       |       |              |
-| f)            | 1100          |       |       |       |              |
-| g)            | 1110          |       |       |       |              |
-| h)            | 1111          |       |       |       |              |
-| i)            | 0110          |       |       |       |              |
-| j)            | 1101          |       |       |       |              |
-
-```{solution}
-|               | message utile | $p_1$ | $p_2$ | $p_3$ | message codé |
-| :-----------: | :-----------: | :---: | :---: | :---: | :----------: |
-| exemple       | 1010          | 1     | 0     | 1     | 1011010      |
-| a)            | 0111          | 0     | 0     | 1     | 0001111      |
-| b)            | 0001          | 1     | 1     | 1     | 1101001      |
-| c)            | 0010          | 0     | 1     | 1     | 0101010      |
-| d)            | 1011          | 0     | 1     | 0     | 0110011      |
-| e)            | 0011          | 1     | 0     | 0     | 1000011      |
-| f)            | 1100          | 0     | 1     | 1     | 0111100      |
-| g)            | 1110          | 0     | 0     | 0     | 0010110      |
-| h)            | 1111          | 1     | 1     | 1     | 1111111      |
-| i)            | 0110          | 1     | 1     | 0     | 1100110      |
-| j)            | 1101          | 1     | 0     | 0     | 1010101      |
-```
+<script>tdoc.quizzHammingEncode(3);</script>
 
 #### Exercice {num}`exo-donnees`
 
@@ -297,53 +267,12 @@ On considère le code de Hamming $H(7, 4)$.
 Pour chacun des messages reçus suivants:
 
 - indiquez si chacune des 3 parités est correcte ou fausse
+- indiquez quel bit est erroné (laissez vide s'il n'y en a pas)
 - corrigez le message reçu
-- décoder le message
-- indiquez quel bit est erroné (ou "aucun" s'il n'y en a pas)
+- décodez le message
 
-Exemple:
+| message reçu | parité&nbsp;1 | parité&nbsp;2 | parité&nbsp;3 | bit erroné | message corrigé | message décodé |
+| :----------: | :-----------: | :-----------: | :-----------: | :-------------: | :------------: | :--------: |
+| 0101001      | fausse        | correcte      | correcte      | 1          | 1101001         | 0001           |
 
-|               | message reçu | parité 1 | parité 2 | parité 3 | message corrigé | message décodé | bit erroné |
-| :-----------: | :----------: | :------: | :------: | :------: | :-------------: | :------------: | :--------: |
-| exemple       | 0101001      | fausse   | correcte | correcte | 1101001         | 0001           | 1          |
-| a)            | 1001111      |          |          |          |                 |                |            |
-| b)            | 0011101      |          |          |          |                 |                |            |
-| c)            | 1110111      |          |          |          |                 |                |            |
-| d)            | 1111000      |          |          |          |                 |                |            |
-| e)            | 1111101      |          |          |          |                 |                |            |
-| f)            | 1001001      |          |          |          |                 |                |            |
-| g)            | 1110000      |          |          |          |                 |                |            |
-| h)            | 0010101      |          |          |          |                 |                |            |
-| i)            | 0001111      |          |          |          |                 |                |            |
-| j)            | 1111111      |          |          |          |                 |                |            |
-| k)            | 1001101      |          |          |          |                 |                |            |
-| l)            | 1000100      |          |          |          |                 |                |            |
-| m)            | 1001000      |          |          |          |                 |                |            |
-| n)            | 0100010      |          |          |          |                 |                |            |
-| o)            | 1101101      |          |          |          |                 |                |            |
-| p)            | 0101111      |          |          |          |                 |                |            |
-
-```{solution}
-
-|               | message reçu | parité 1 | parité 2 | parité 3 | message corrigé | message décodé | bit erroné |
-| :-----------: | :----------: | :------: | :------: | :------: | :-------------: | :------------: | :--------: |
-| exemple       | 0101001      | fausse   | correcte | correcte | 1101001         | 0001           | 1          |
-| a)            | 1001111      | fausse   | correcte | correcte | 0001111         | 0111           | 1          |
-| b)            | 0011101      | fausse   | correcte | fausse   | 0011001         | 1001           | 5          |
-| c)            | 1110111      | correcte | correcte | fausse   | 1111111         | 1111           | 4          |
-| d)            | 1111000      | correcte | correcte | fausse   | 1110000         | 1000           | 4          |
-| e)            | 1111101      | correcte | fausse   | fausse   | 1111111         | 1111           | 6          |
-| f)            | 1001001      | correcte | fausse   | correcte | 1101001         | 0001           | 2          |
-| g)            | 1110000      | correcte | correcte | correcte | 1110000         | 1000           | aucun      |
-| h)            | 0010101      | fausse   | correcte | correcte | 1010101         | 1101           | 1          |
-| i)            | 0001111      | correcte | correcte | correcte | 0001111         | 0111           | aucun      |
-| j)            | 1111111      | correcte | correcte | correcte | 1111111         | 1111           | aucun      |
-| k)            | 1001101      | fausse   | fausse   | fausse   | 1001100         | 0100           | 7          |
-| l)            | 1000100      | correcte | correcte | fausse   | 1001100         | 0100           | 4          |
-| m)            | 1001000      | fausse   | correcte | fausse   | 1001100         | 0100           | 5          |
-| n)            | 0100010      | correcte | correcte | fausse   | 0101010         | 0010           | 4          |
-| o)            | 1101101      | fausse   | correcte | fausse   | 1101001         | 0001           | 5          |
-| p)            | 0101111      | correcte | fausse   | correcte | 0001111         | 0111           | 2          |
-
-```
-
+<script>tdoc.quizzHammingDecode(3);</script>
