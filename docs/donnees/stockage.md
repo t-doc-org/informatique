@@ -28,6 +28,22 @@ Voici les unités standardisées depuis 1998:
 | Un **gigaoctet** (Go ou GB) | 1 000 Mo | 1 000 000 000 octets = $10^9$ octets |
 | Un **téraoctet** (To ou TB) | 1 000 Go | 1 000 000 000 000 octets = $10^{12}$ octets |
 
+
+### Ordre de grandeur
+
+| Type | taille |
+| :--- | :----- |
+| Un fichier texte | 50 ko |
+| Une image pour le web | 30 ko |
+| Une musique (mp3) | 4 Mo |
+| Une photo | 6 Mo |
+| Un film | 700 Mo à 2 Go |
+| Un CD | 700 Mo |
+| Un DVD | 4.7 Go |
+| Un Blu-ray | 25 Go |
+| Une clé USB | 8 Go à 256 Go |
+| Un disque dur | 500 Go à 7 To |
+
 ### Exercice {num}`exo-donnees`
 
 Associez à chaque type de fichier un ordre de grandeur de volume de stockage

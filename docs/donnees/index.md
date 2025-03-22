@@ -9,4 +9,5 @@ erreur-detection
 erreur-correction
 magie
 stockage
+compression
 ```
