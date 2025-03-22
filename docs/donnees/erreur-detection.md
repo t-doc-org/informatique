@@ -281,7 +281,7 @@ somme et déterminez si le message est correct (répondez par oui ou non).
 
 ### Exercice {num}`exo-donnees`
 
-Sachant que le critère pour la somme de contrôle est que le somme doit être un
+Sachant que le critère pour la somme de contrôle est que la somme doit être un
 multiple de 10, encodez les messages suivants:
 
 1.  <script>tdoc.question("21416968", {"214169683": true});</script>

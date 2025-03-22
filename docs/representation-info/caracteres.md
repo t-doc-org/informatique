@@ -7,8 +7,7 @@ Pour pouvoir écrire, afficher ou stocker un texte sur un ordinateur, il faut
 définir une représentation des caractères compréhensibles pour celui-ci. L'idée
 la plus simple est de faire correspondre à chaque caractère un numéro unique.
 
-Il existe plusieurs codes utilisés, ASCII, Unicode et UTF qui sont les plus
-courants.
+Il existe plusieurs codes utilisés. ASCII et UTF-8 sont les plus courants.
 
 ## Code ASCII
 
