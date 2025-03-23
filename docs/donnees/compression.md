@@ -13,10 +13,24 @@ La compression sert à minimiser la taille d'un fichier pour limiter son poids e
 permettre une transmission plus rapide, un temps de téléchargement ou un espace
 de stockage réduit, tout en conservant au maximum sa qualité.
 
+On distingue deux catégories principales de compression:
+
+- **La compression sans perte:** Les données obtenues après décompression
+  correspondent exactement aux données de départ.
+- **La compression avec pertes:** Les données obtenues après décompression
+  présentent de légères différences par rapport aux données originales.
+
 ## Images
 
 Il existe beaucoup de formats d'image différents. Certains permettent une
-compression. Cette compression entraine parfois une perte de qualité.
+compression.
+
+- Le format **GIF** (Graphicx Interchange Format) et le format **PNG** (Portable
+  Network Graphics) sont des formats d'images compressées sans perte.
+
+- Le format **JPG** (Joint Photographic Experts Group) est un format compressé
+  avec pertes pour les photos. La compression introduit des artefacts qui
+  deviennent visibles lorsqu'elle est trop forte.
 
 ### Exemple {num}`ex-donnees`
 
@@ -70,70 +84,62 @@ P1
 
 Comment pourrait-on compressez les données de l'image ci-dessus?
 
-```{solution}
+````{solution}
 On pourrait regrouper les pixels identiques:
-P1
-40 35
+```{code-block} text
 538 * 0
 2 * 1
 37 * 0
 4 * 1
-35 * 1
+35 * 0
 6 * 1
 2 * 0
 2 * 1
 29 * 0
 ...
 ```
+````
 
 ### Exercice {num}`exo-donnees`
 
-1. Télécharger le fichier [`maison.pbm`](maison.pbm).
-2. Quelle est le poids (taille) de cette image?
-3. Compressez cette image en l'envoyant dans un fichier compressé .zip. Quelle
+1.  Télécharger le fichier [`maison.pbm`](maison.pbm).
+2.  Quelle est le poids (taille) de cette image?
+3.  Compressez cette image en l'envoyant dans un fichier compressé .zip. Quelle
     est la taille de l'image compressée?
 
-## Codage par plages
+### Codage par plages
 
 Le codage par plages (Run-Length Encoding en anglais) est un algorithme de
-compression de données qui consiste à remplacer une suite de valeurs identiques
-par une paire: valeur à répéter/nombre de répétitions:
+compression de données qui consiste à remplacer des suites de valeurs identiques
+par des paires: valeur à répéter/nombre de répétitions.
 
-### Exemple {num}`ex-donnees`
+#### Exemple {num}`ex-donnees`
 
 Données brutes: aaaaaabcccdd -> 12 caractères\
-Données codées: a6b1c3d2 -> 8 caractères (données compressées)
+Données codées: 6a1b3c2d -> 8 caractères (données compressées)
 
-Cette manière de faire n'altère pas l'image. On parle de **compression sans
-perte**.
-
-Le format **GIF** (Graphicx Interchange Format) et le format **PNG** (Portable
-Network Graphics) sont des formats déjà compressés sans perte.
-
-Le format **JPG** (Joint Photographic Experts Group) est un format compressé
-avec pertes pour les photos. Cela signifie que si la compression est trop forte,
-l'image est altérée et cela se voit.
+Cette manière de faire n'altère pas l'image, il s'agit donc d'une compression
+sans perte.
 
 ## Son
 
 À partir des années 1980, la numérisation audio a permis de stocker de la
 musique sur des supports numériques, notamment les CD (disques compacts). Comme
 pour les images, il existe des formats de compression audio sans perte, tels que
-Dolby TrueHD ou RealPlayer, qui préservent la qualité sonore mais occupent un
-espace de stockage important.
+Dolby TrueHD ou Flac, qui préservent intégralement la qualité sonore mais
+occupent un espace de stockage important.
 
 En revanche, des formats comme **MP3** ou Dolby Digital utilisent une
 compression avec perte. Ce type de compression, fondé sur des études
-psychoacoustiques, élimine définitivement certaines parties du son jugées non
-essentielles à l'écoute, afin de réduire considérablement la taille du fichier.
+psychoacoustiques, élimine certaines parties du son jugées non essentielles à
+l'écoute, afin de réduire considérablement la taille du fichier.
 
 ## Vidéo
 
 Une vidéo est une succession d'images diffusées à un certain rythme et
 accompagnées de son. La plupart des vidéos présentent un flux d'images compris
-entre 24 et 30 images par seconde, un rythme qui correspond à la persistance
-rétinienne, c'est-à-dire la capacité du cerveau à traiter un nombre limité
-d'images par seconde.
+entre 24 et 30 images par seconde, un rythme qui correspond à la capacité du
+cerveau à traiter les informations visuelles.
 
 ### Exemple {num}`ex-donnees`
 
@@ -142,18 +148,18 @@ pixels) en RGB a un poids de: $720 * 576 * 3 \cong 1.24 \textrm{ Mo}$.\
 Une seconde de film à 25 images par seconde représente:
 $25 * 1.24 \cong 31 \textrm{ Mo}$.\
 Un film de 2 heures peut atteindre:
-$31 * 2 * 3600 \cong 223\,200 \textrm{ Mo} \cong 223 \textrm{Go}$.
+$31 * 2 * 3600 \cong 223\,200 \textrm{ Mo} \cong 223 \textrm{ Go}$.
 
-Il est donc essentiel de compresser les vidéos afin d’optimiser leur stockage et
-leur transmission. Pour cela, on exploite les limites de notre perception
-visuelle et auditive en supprimant les éléments que nos sens ne distinguent pas
-clairement. Par exemple, un ensemble de pixels aux couleurs proches peut être
-remplacé par une couleur moyenne, ce qui entraîne une perte de qualité.
+Il est donc essentiel de compresser les vidéos afin de les stocker sur le
+disque, dont la capacité est de 4.7 Go. Pour cela, on exploite les limites de
+notre perception visuelle et auditive en supprimant les éléments que nos sens ne
+distinguent pas clairement. Par exemple, un ensemble de pixels aux couleurs
+proches peut être remplacé par une couleur moyenne, ce qui entraîne une perte de
+qualité.
 
 Une autre approche repose sur la similarité entre les images successives: plutôt
-que d’encoder chaque image en entier, on notifie uniquement les modifications
-par rapport à l’image précédente. Cette méthode permet une compression sans
-perte de qualité.
+que d’encoder chaque image en entier, on représente uniquement les différences
+par rapport à l’image précédente.
 
 ### Exercice {num}`exo-donnees`
 
@@ -161,13 +167,13 @@ Considérons un film en haute définition en format Blu-ray (HD: 1280 x 720 pixe
 encodé en RGB.
 
 1. Quel est le poids d'une image?
-2. Quel est le poids d'une seconde de film (à 25 images par minutes)?
+2. Quel est le poids d'une seconde de film (à 25 images par seconde)?
 3. Quel est le poids du film complet (2 heures)?
 
 ```{Solution}
 1. $1280 * 720 * 3 = 2\,764\,800 \cong 2.77 \textrm{ Mo}$
 2. $25 * 2.77 \cong 69.1 \textrm{ Mo}$
-3. $69.1 * 2 * 3600 \cong 497\,664 \textrm{ Mo} \cong 498 \textrm{Go}$
+3. $69.1 * 2 * 3600 \cong 497\,664 \textrm{ Mo} \cong 498 \textrm{ Go}$
 ```
 
 ### Exercice {num}`exo-donnees`
@@ -201,19 +207,21 @@ Le débit moyen est de 5 Mb/s pour la qualité HD et de 25 Mb/s en 4K, ce qui
 équivaut à une consommation de 3 Go par heure en HD contre 7 Go par heure en 4K.
 ```
 
-## Compression sans perte - idée
+## Codage de Huffman
 
-Les données à compresser sont des suites de symboles (bits, suites de bits,
-pixels, lettres, etc.)
+Le codage de Huffman est un algorithme de compression de données sans perte, qui
+utilise un code à longueur variable pour représenter les symboles de la source
+(bits, suites de bits, pixels, lettres, etc.)
 
-Sans compression, chaque symbole est représenté par un nombre donné de $n$ bits.
+Sans compression, chaque symbole serait représenté par un nombre fixe de $n$
+bits.
 
-Avec compression, les symboles fréquents seront codés sur moins de $n$ bits et
-les symboles rares seront codés sur plus de $n$ bits.
+Avec compression, les symboles fréquents sont codés sur moins de $n$ bits et les
+symboles rares sont codés sur plus de $n$ bits.
 
-Pour mettre en place ce système, il faut avoir une statistique de la fréquence
-d'apparition des symboles et définir un code de longueur variable (tableau de
-correspondance entre les symboles et leur codage).
+Pour mettre en place ce système, il faut calculer une statistique de la
+fréquence d'apparition des symboles et définir un code de longueur variable
+(tableau de correspondance entre les symboles et leur codage).
 
 ### Exemple {num}`ex-donnees`
 

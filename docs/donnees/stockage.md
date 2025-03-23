@@ -95,15 +95,15 @@ Mb/s (Megabits par seconde).
 ### Exercice {num}`exo-donnees`
 
 1. <script>
-    tdoc.question("Pendant une vidéo live de deux minutes avec un débit de 1,5 Mo/s, quelle quantité de données sont transmises?",
-                  {"180 Mo": true});
+    tdoc.question("Pendant une vidéo live de deux minutes avec un débit de 1,5 Mo/s, quelle quantité de données sont transmises (en Mo)?",
+                  {"180mo": true});
     </script>
 
 2. Dans les années 90, la plupart des foyers se connectaient à Internet avec des
-   « modems 56 k », qui avaient un débit théorique maximum de 56 ko/s.
+   « modems 56 k », qui avaient un débit théorique maximum de 56 kb/s.
     <script>
-    tdoc.question("Combien de temps fallait-il pour télécharger une photo de 2 Mo?",
-                  {"36 s": true});
+    tdoc.question("Combien de temps fallait-il pour télécharger une photo de 2.1 Mo?",
+                  {"300s": true, "5min": true});
     </script>
 
 
