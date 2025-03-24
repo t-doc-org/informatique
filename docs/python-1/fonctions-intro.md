@@ -399,7 +399,7 @@ La fonction `deplace(x, y)` a été définie.
 
 ```{exec} python
 :after: py-chess
-:then: py-reine-1-check
+:then: py-dame-1-check
 :when: load
 :editor: a9e3a33d-87ea-4262-a3b2-4e96bd862fac
 deplace(2, 0)
@@ -408,7 +408,7 @@ deplace(0, -3)
 ```
 
 ```{exec} python
-:name: py-reine-1-check
+:name: py-dame-1-check
 :when: never
 :class: hidden
 await render_and_check(
@@ -419,7 +419,7 @@ await render_and_check(
 ````{solution}
 ```{exec} python
 :after: py-chess
-:then: py-reine-1-check
+:then: py-dame-1-check
 deplace(0, 4)
 deplace(-5, 0)
 deplace(0, -3)
@@ -755,12 +755,12 @@ deplace_cavalier("se")
 ## Exercice {num}`exo-py1-intro-fct`
 
 En utilisant la fonction `deplace(x, y)`, définissez une fonction
-`deplace_reine`. Quels paramètres sont nécessaires?
+`deplace_dame`. Quels paramètres sont nécessaires?
 
 
 ```{exec} python
 :after: py-chess
-:then: py-reine-2-check
+:then: py-dame-2-check
 :when: load
 :editor: 27976cba-efa5-45db-9a18-9fffaf4ceeb6
 # Écrivez le programme ici
@@ -768,7 +768,7 @@ En utilisant la fonction `deplace(x, y)`, définissez une fonction
 ```
 
 ```{exec} python
-:name: py-reine-2-check
+:name: py-dame-2-check
 :when: never
 :class: hidden
 await render_and_check(
@@ -777,12 +777,12 @@ await render_and_check(
 ```
 
 ````{solution}
-La reine se déplace dans toutes les directions et de plusieurs cases, deux
+La dame se déplace dans toutes les directions et de plusieurs cases, deux
 paramètres sont nécessaires.
 ```{exec} python
 :after: py-chess
-:then: py-reine-2-check
-def deplace_reine(direction, nb_cases):
+:then: py-dame-2-check
+def deplace_dame(direction, nb_cases):
   if direction == "n":
     deplace(0, nb_cases)
   elif direction == "s":
@@ -802,19 +802,19 @@ def deplace_reine(direction, nb_cases):
   else:
     print("direction non valide")
 
-deplace_reine("n", 7)
-deplace_reine("se", 4)
-deplace_reine("so", 2)
-deplace_reine("no", 5)
-deplace_reine("s", 1)
+deplace_dame("n", 7)
+deplace_dame("se", 4)
+deplace_dame("so", 2)
+deplace_dame("no", 5)
+deplace_dame("s", 1)
 ```
 ````
 
 ```{exec} python
-:name: py-deplacements-reine
+:name: py-deplacements-dame
 :when: never
 :class: hidden
-def deplace_reine(direction, nb_cases):
+def deplace_dame(direction, nb_cases):
   if direction == "n":
     deplace(0, nb_cases)
   elif direction == "s":
@@ -837,13 +837,13 @@ def deplace_reine(direction, nb_cases):
 
 ## Exercice {num}`exo-py1-intro-fct`
 
-En utilisant la fonction `deplace_reine(direction, nb_cases)` définie à
-l'exercice précédent, déplacez la reine pour prendre tous les pions noirs en un
+En utilisant la fonction `deplace_dame(direction, nb_cases)` définie à
+l'exercice précédent, déplacez la dame pour prendre tous les pions noirs en un
 minimum de coups.
 
 ```{exec} python
-:after: py-chess py-deplacements-reine
-:then: py-reine-3-check
+:after: py-chess py-deplacements-dame
+:then: py-dame-3-check
 :when: load
 :editor: 54d79281-f256-403d-ae1e-64e0f5bd276b
 # Écrivez le programme ici
@@ -851,7 +851,7 @@ minimum de coups.
 ```
 
 ```{exec} python
-:name: py-reine-3-check
+:name: py-dame-3-check
 :when: never
 :class: hidden
 board = Board(8, 8)
@@ -881,15 +881,15 @@ await render_check_and_take(board.piece(White.queen, 3, 0), moves)
 
 ````{solution}
 ```{exec} python
-:after: py-chess py-deplacements-reine
-:then: py-reine-3-check
-deplace_reine("ne", 1)
-deplace_reine("no", 3)
-deplace_reine("e", 4)
-deplace_reine("ne", 2)
-deplace_reine("o", 4)
-deplace_reine("so", 3)
-deplace_reine("n", 3)
+:after: py-chess py-deplacements-dame
+:then: py-dame-3-check
+deplace_dame("ne", 1)
+deplace_dame("no", 3)
+deplace_dame("e", 4)
+deplace_dame("ne", 2)
+deplace_dame("o", 4)
+deplace_dame("so", 3)
+deplace_dame("n", 3)
 ```
 ````
 
