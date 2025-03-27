@@ -7,7 +7,8 @@
 :maxdepth: 1
 erreur-detection
 erreur-correction
-magie
 stockage
 compression
+labo-codes
+magie
 ```
