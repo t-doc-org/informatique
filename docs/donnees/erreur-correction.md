@@ -120,14 +120,15 @@ Le code de correction d'erreur le plus efficace est le code de Hamming. Il
 utilise plusieurs bits de parité sur des morceaux différents.
 
 Structure du code de Hamming $H(m, u)$:
-1. Il est composé de différents éléments:
+1.  Il est composé de différents éléments:
     - le message utile composé de $u$ bits
     - les $c$ bits de contrôle de parité
-  Les $u$ bits du message et les $c$ bits de contrôle sont mélangés, mais placés à
-  des endroits bien définis.
-2. Le message codé est de longueur $m = 2^u - 1$, C'est-à-dire 7, 15, 31, ...
-3. Les bits de parité $p_i$ sont en position $2^i$, avec $i = 0, 1, 2, \dots$
-4. Les bits du message $d_i$ occupent les autres places.
+
+    Les $u$ bits du message et les $c$ bits de contrôle sont mélangés, mais
+    placés à des endroits bien définis.
+2.  Le message codé est de longueur $m = 2^u - 1$, C'est-à-dire 7, 15, 31, ...
+3.  Les bits de parité $p_i$ sont en position $2^i$, avec $i = 0, 1, 2, \dots$
+4.  Les bits du message $d_i$ occupent les autres places.
 
 #### Exemple {num}`ex-donnees`
 
