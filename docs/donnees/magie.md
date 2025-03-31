@@ -125,7 +125,7 @@ j)
 </td></tr></table>
 
 
-```{solution}
+<!-- ```{solution}
 
 <table width="100%"><tr style = "vertical-align: top;"><td>
 
@@ -216,4 +216,4 @@ j)
 
 </td></tr></table>
 
-```
+``` -->

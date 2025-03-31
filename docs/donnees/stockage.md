@@ -96,14 +96,14 @@ Mb/s (Megabits par seconde).
 
 1. <script>
     tdoc.question("Pendant une vidéo live de deux minutes avec un débit de 1,5 Mo/s, quelle quantité de données sont transmises (en Mo)?",
-                  {"180mo": true});
+                  {"180": true});
     </script>
 
 2. Dans les années 90, la plupart des foyers se connectaient à Internet avec des
    « modems 56 k », qui avaient un débit théorique maximum de 56 kb/s.
     <script>
-    tdoc.question("Combien de temps fallait-il pour télécharger une photo de 2.1 Mo?",
-                  {"300s": true, "5min": true});
+    tdoc.question("Combien de temps fallait-il pour télécharger une photo de 2.1 Mo (en minutes)?",
+                  {"5": true});
     </script>
 
 
