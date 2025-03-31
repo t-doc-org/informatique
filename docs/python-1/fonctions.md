@@ -167,7 +167,8 @@ base = 10
 # complétez le code ici
 ```
 
-````{solution}
+
+<!-- ````{solution}
 ```{exec} python
 # définition de la fonction
 def calcule_et_affiche_perimetre_carre(cote):
@@ -181,7 +182,7 @@ calcule_et_affiche_perimetre_carre(7)
 calcule_et_affiche_perimetre_carre(12)
 calcule_et_affiche_perimetre_carre(base)
 ```
-````
+```` -->
 
 ### Exercice {num}`exo-py1-fct`
 
@@ -271,7 +272,7 @@ S'il y a une erreur, expliquez et corrigez le problème.
 
     calcule_et_affiche_aire_disque(4)
     ```
-
+<!--
 ````{solution}
 1. Correct.
 2. Correct.
@@ -301,7 +302,7 @@ ligne suivant au tout début de programme:
     :when: never
     from math import pi
     ```
-````
+```` -->
 
 
 ### Exercice {num}`exo-py1-fct`
@@ -479,7 +480,7 @@ else:
   print("Tu pourras voter dans", ..., "ans.")
 ```
 
-````{solution}
+<!-- ````{solution}
 ```{exec} python
 def majeur(age):
   if age >= 18 :
@@ -495,7 +496,7 @@ if majeur(age):
 else:
   print("Tu pourras voter dans", 18 - age, "ans.")
 ```
-````
+```` -->
 
 ### Exercice {num}`exo-py1-fct`
 
@@ -514,7 +515,7 @@ Sinon affichez que c'est de l'excellent travail.
 # Écrivez le programme ici
 ```
 
-````{solution}
+<!-- ````{solution}
 ```{exec} python
 def note_valide(note):
   if 1 <= note <= 6 :
@@ -536,7 +537,55 @@ elif note < 5.5:
 else:
   print("Excellent travail!")
 ```
-````
+```` -->
+
+### Exercice {num}`exo-py1-fct`
+
+Écrivez un programme qui permet de résoudre des équations du deuxième degré. Ce
+programme doit afficher le nombre de solutions et les calculer.
+
+```{exec} python
+:editor: 71c23a46-21ab-4874-a8be-1928ea37c625
+# Écrivez le programme ici
+```
+
+<!-- ````{solution}
+```{exec} python
+from math import sqrt
+
+def calcule_discriminant(a, b, c):
+  return b ** 2 - 4 * a *c
+
+def affiche_nb_solutions(delta):
+  if delta < 0:
+    print("Cette équation n'a pas solution.")
+  elif delta == 0:
+    print("Cette équation a une seule solution.")
+  else:
+    print("Cette équation a deux solutions.")
+
+# Demande à l'utilisateur les valeurs des coefficients a, b et c
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
+
+if a == 0:
+  print("Ce n'est pas une équation du deuxième degré.")
+  print("La solution de l'équation est", -c / b)
+else:
+  delta = calcule_discriminant(a, b, c)
+
+  if delta < 0:
+    print("Cette équation n'a pas solution.")
+  elif delta == 0:
+    x = -b / (2 * a)
+    print("Cette équation a une seule solution: x =", x)
+  else:
+    x_1 = (-b + sqrt(delta)) / (2 * a)
+    x_2 = (-b - sqrt(delta)) / (2 * a)
+    print("Cette équation a deux solutions: x_1 =", x_1, "et x_2 =", x_2)
+```
+```` -->
 
 ### Exercice {num}`exo-py1-fct`
 
@@ -613,7 +662,7 @@ Au revoir!
 # Écrivez le programme ici
 ```
 
-````{solution}
+<!-- ````{solution}
 ```{exec} python
 from random import randint
 
@@ -666,7 +715,7 @@ while choix != 4:
   print("-" * 30)
 print("Au revoir!")
 ```
-````
+```` -->
 
 
 
