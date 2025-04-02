@@ -17,7 +17,7 @@ On distingue deux catégories principales de compression:
 
 - **La compression sans perte:** Les données obtenues après décompression
   correspondent exactement aux données de départ.
-- **La compression avec pertes:** Les données obtenues après décompression
+- **La compression avec perte:** Les données obtenues après décompression
   présentent de légères différences par rapport aux données originales.
 
 ## Images
@@ -29,13 +29,14 @@ compression.
   Network Graphics) sont des formats d'images compressées sans perte.
 
 - Le format **JPG** (Joint Photographic Experts Group) est un format compressé
-  avec pertes pour les photos. La compression introduit des artefacts qui
+  avec perte pour les photos. La compression introduit des artefacts qui
   deviennent visibles lorsqu'elle est trop forte.
 
 ### Exemple {num}`ex-donnees`
 
 En première année, vous avez vu comment encoder une image matricielle en noir et
-blanc. Chaque pixel est représenté par un seul bit: 0 pour un pixel blanc et
+blanc. Chaque pixel est représenté par un seul bit:\
+0 pour un pixel blanc,\
 1 pour un pixel noir.
 
 Voici un exemple de fichier PBM (Portable BitMap):
@@ -104,8 +105,8 @@ On pourrait regrouper les pixels identiques:
 
 1.  Télécharger le fichier [`maison.pbm`](maison.pbm).
 2.  Quelle est le poids (taille) de cette image?
-3.  Compressez cette image en l'envoyant dans un fichier compressé .zip. Quelle
-    est la taille de l'image compressée?
+3.  Compressez cette image en l'envoyant dans un fichier compressé .zip.\
+    Quelle est la taille de l'image compressée?
 
 ### Codage par plages
 
@@ -151,9 +152,9 @@ Un film de 2 heures peut atteindre:
 $31 * 2 * 3600 \cong 223\,200 \textrm{ Mo} \cong 223 \textrm{ Go}$.
 
 Il est donc essentiel de compresser les vidéos afin de les stocker sur le
-disque, dont la capacité est de 4.7 Go. Pour cela, on exploite les limites de
-notre perception visuelle et auditive en supprimant les éléments que nos sens ne
-distinguent pas clairement. Par exemple, un ensemble de pixels aux couleurs
+disque (DVD), dont la capacité est de 4.7 Go. Pour cela, on exploite les limites
+de notre perception visuelle et auditive en supprimant les éléments que nos sens
+ne distinguent pas clairement. Par exemple, un ensemble de pixels aux couleurs
 proches peut être remplacé par une couleur moyenne, ce qui entraîne une perte de
 qualité.
 
@@ -170,7 +171,7 @@ encodé en RGB.
 2. Quel est le poids d'une seconde de film (à 25 images par seconde)?
 3. Quel est le poids du film complet (2 heures)?
 
-<!-- ```{Solution}
+<!-- ```{solution}
 1. $1280 * 720 * 3 = 2\,764\,800 \cong 2.77 \textrm{ Mo}$
 2. $25 * 2.77 \cong 69.1 \textrm{ Mo}$
 3. $69.1 * 2 * 3600 \cong 497\,664 \textrm{ Mo} \cong 498 \textrm{ Go}$
@@ -184,7 +185,7 @@ téléchargement de 500 Mb/s. Combien de temps faut-il pour télécharger un fil
 1. en Blu-ray non compressé (420 Go)?
 2. au format MPEG-4 AVC (16.2 Go)?
 
-<!-- ```{Solution}
+<!-- ```{solution}
 1. $\dfrac{420000 * 8}{500} = 6720 \textrm{ s} = 112 \textrm{ min} = 1 \textrm{ h } 52$
 2. $\dfrac{16200 * 8}{500} = 4 \textrm{ min} 19 \textrm{ s}$
 ``` -->
@@ -194,7 +195,7 @@ téléchargement de 500 Mb/s. Combien de temps faut-il pour télécharger un fil
 Netflix a diffusé ses films au format HD (1280 x 720) au lieu du format 4K
 (3840 x 2160) au printemps 2020. Pour quelle raison?
 
-<!-- ```{Solution}
+<!-- ```{solution}
 Au printemps 2020, face à la crise sanitaire, la plupart des pays européens ont
 imposé un confinement à leur population. Cela a entraîné une forte adoption du
 télétravail, augmentant considérablement les besoins en accès internet,
