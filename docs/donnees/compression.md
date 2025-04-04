@@ -112,7 +112,7 @@ On pourrait regrouper les pixels identiques:
 
 Le codage par plages (Run-Length Encoding en anglais) est un algorithme de
 compression de données qui consiste à remplacer des suites de valeurs identiques
-par des paires: valeur à répéter/nombre de répétitions.
+par des paires: nombre de répétitions/valeur à répéter.
 
 #### Exemple {num}`ex-donnees`
 
@@ -171,11 +171,11 @@ encodé en RGB.
 2. Quel est le poids d'une seconde de film (à 25 images par seconde)?
 3. Quel est le poids du film complet (2 heures)?
 
-<!-- ```{solution}
+```{solution}
 1. $1280 * 720 * 3 = 2\,764\,800 \cong 2.77 \textrm{ Mo}$
 2. $25 * 2.77 \cong 69.1 \textrm{ Mo}$
 3. $69.1 * 2 * 3600 \cong 497\,664 \textrm{ Mo} \cong 498 \textrm{ Go}$
-``` -->
+```
 
 ### Exercice {num}`exo-donnees`
 
@@ -188,8 +188,8 @@ téléchargement de 500 Mb/s. Combien de temps faut-il pour télécharger un fil
 <!-- ```{solution}
 1. $\dfrac{420000 * 8}{500} = 6720 \textrm{ s} = 112 \textrm{ min} = 1 \textrm{ h } 52$
 2. $\dfrac{16200 * 8}{500} = 4 \textrm{ min} 19 \textrm{ s}$
-``` -->
-
+```
+ -->
 ### Exercice {num}`exo-donnees`
 
 Netflix a diffusé ses films au format HD (1280 x 720) au lieu du format 4K
