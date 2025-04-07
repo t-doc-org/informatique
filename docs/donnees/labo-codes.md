@@ -19,7 +19,7 @@ Un code binaire a été défini pour coder des messages:
 
 | Mathilde | joue | un roman | anglais |
 | :------: | :--: | :------: | :-----: |
-| 1100     | 0101 | 1011     | 1101    |
+| 0011     | 0101 | 1011     | 1101    |
 
 
 ## Bit de parité
