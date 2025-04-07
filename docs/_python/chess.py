@@ -67,8 +67,7 @@ class Board:
             text-anchor: middle;
             dominant-baseline: central;
             font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-                "Noto Sans", "Liberation Sans", Arial, sans-serif,
-                "Apple Color Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+                "Noto Sans", "Liberation Sans", Arial, sans-serif;
         """)
         board = self.image.group()
         for x in range(width):
