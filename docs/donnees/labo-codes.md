@@ -11,13 +11,13 @@ Un code binaire a été défini pour coder des messages:
 |     | 00  | 01  | 10  | 11  |
 | :-: | :-: | :-: | :-: | :-: |
 | <b>00</b>  | Alice  | Bob  | Max | Mathilde |
-| <b>01</b>  | mange  | joue  | écrit | imagine |
-| <b>10</b>  | des nems  | du violon  | un programme | un roman |
+| <b>01</b>  | mange  | prépare  | écrit | imagine |
+| <b>10</b>  | un hamburger  | un texte  | un programme | un roman |
 | <b>11</b>  | végétarien  | anglais  | compliqué | épique |
 
 ### Exemple {num}`exo-labo-codes`
 
-| Mathilde | joue | un roman | anglais |
+| Mathilde | prépare | un roman | anglais |
 | :------: | :--: | :------: | :-----: |
 | 0011     | 0101 | 1011     | 1101    |
 
