@@ -452,9 +452,9 @@ def mystery_2(x):
     return x % 2
 
 y = 5
-mystery_1(y)
-mystery_2(y)
-mystery_2(2 * y)
+print(mystery_1(y))
+print(mystery_2(y))
+print(mystery_2(2 * y))
 print(y // 2)
 ```
 
