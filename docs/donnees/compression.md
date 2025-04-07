@@ -85,7 +85,7 @@ P1
 
 Comment pourrait-on compressez les données de l'image ci-dessus?
 
-<!-- ````{solution}
+````{solution}
 On pourrait regrouper les pixels identiques:
 ```{code-block} text
 538 * 0
@@ -99,7 +99,7 @@ On pourrait regrouper les pixels identiques:
 29 * 0
 ...
 ```
-```` -->
+````
 
 ### Exercice {num}`exo-donnees`
 
@@ -185,17 +185,17 @@ téléchargement de 500 Mb/s. Combien de temps faut-il pour télécharger un fil
 1. en Blu-ray non compressé (420 Go)?
 2. au format MPEG-4 AVC (16.2 Go)?
 
-<!-- ```{solution}
+```{solution}
 1. $\dfrac{420000 * 8}{500} = 6720 \textrm{ s} = 112 \textrm{ min} = 1 \textrm{ h } 52$
 2. $\dfrac{16200 * 8}{500} = 4 \textrm{ min} 19 \textrm{ s}$
 ```
- -->
+
 ### Exercice {num}`exo-donnees`
 
 Netflix a diffusé ses films au format HD (1280 x 720) au lieu du format 4K
 (3840 x 2160) au printemps 2020. Pour quelle raison?
 
-<!-- ```{solution}
+```{solution}
 Au printemps 2020, face à la crise sanitaire, la plupart des pays européens ont
 imposé un confinement à leur population. Cela a entraîné une forte adoption du
 télétravail, augmentant considérablement les besoins en accès internet,
@@ -206,7 +206,7 @@ passante et de faciliter le travail à distance.
 
 Le débit moyen est de 5 Mb/s pour la qualité HD et de 25 Mb/s en 4K, ce qui
 équivaut à une consommation de 3 Go par heure en HD contre 7 Go par heure en 4K.
-``` -->
+```
 
 ## Codage de Huffman
 

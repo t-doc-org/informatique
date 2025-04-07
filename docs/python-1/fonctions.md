@@ -168,7 +168,7 @@ base = 10
 ```
 
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 # définition de la fonction
 def calcule_et_affiche_perimetre_carre(cote):
@@ -182,7 +182,7 @@ calcule_et_affiche_perimetre_carre(7)
 calcule_et_affiche_perimetre_carre(12)
 calcule_et_affiche_perimetre_carre(base)
 ```
-```` -->
+````
 
 ### Exercice {num}`exo-py1-fct`
 
@@ -272,7 +272,7 @@ S'il y a une erreur, expliquez et corrigez le problème.
 
     calcule_et_affiche_aire_disque(4)
     ```
-<!--
+
 ````{solution}
 1. Correct.
 2. Correct.
@@ -302,7 +302,7 @@ ligne suivant au tout début de programme:
     :when: never
     from math import pi
     ```
-```` -->
+````
 
 
 ### Exercice {num}`exo-py1-fct`
@@ -480,7 +480,7 @@ else:
   print("Tu pourras voter dans", ..., "ans.")
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 def majeur(age):
   if age >= 18 :
@@ -496,7 +496,7 @@ if majeur(age):
 else:
   print("Tu pourras voter dans", 18 - age, "ans.")
 ```
-```` -->
+````
 
 ### Exercice {num}`exo-py1-fct`
 
@@ -515,7 +515,7 @@ Sinon affichez que c'est de l'excellent travail.
 # Écrivez le programme ici
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 def note_valide(note):
   if 1 <= note <= 6 :
@@ -537,7 +537,7 @@ elif note < 5.5:
 else:
   print("Excellent travail!")
 ```
-```` -->
+````
 
 ### Exercice {num}`exo-py1-fct`
 
@@ -549,7 +549,7 @@ programme doit afficher le nombre de solutions et les calculer.
 # Écrivez le programme ici
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 from math import sqrt
 
@@ -585,7 +585,7 @@ else:
     x_2 = (-b - sqrt(delta)) / (2 * a)
     print("Cette équation a deux solutions: x_1 =", x_1, "et x_2 =", x_2)
 ```
-```` -->
+````
 
 ### Exercice {num}`exo-py1-fct`
 
@@ -662,7 +662,7 @@ Au revoir!
 # Écrivez le programme ici
 ```
 
-<!-- ````{solution}
+````{solution}
 ```{exec} python
 from random import randint
 
@@ -715,7 +715,7 @@ while choix != 4:
   print("-" * 30)
 print("Au revoir!")
 ```
-```` -->
+````
 
 
 
