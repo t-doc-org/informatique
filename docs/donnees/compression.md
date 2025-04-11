@@ -172,7 +172,7 @@ encodé en RGB.
 3. Quel est le poids du film complet (2 heures)?
 
 ```{solution}
-1. $1280 * 720 * 3 = 2\,764\,800 \cong 2.77 \textrm{ Mo}$
+1. $1280 * 720 * 3 = 2\,764\,800 \textrm{ o} \cong 2.77 \textrm{ Mo}$
 2. $25 * 2.77 \cong 69.1 \textrm{ Mo}$
 3. $69.1 * 2 * 3600 \cong 497\,664 \textrm{ Mo} \cong 498 \textrm{ Go}$
 ```
