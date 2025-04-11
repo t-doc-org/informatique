@@ -124,9 +124,7 @@ j)
 
 </td></tr></table>
 
-
 ````{solution}
-
 <table width="100%"><tr style = "vertical-align: top;"><td>
 
 a)

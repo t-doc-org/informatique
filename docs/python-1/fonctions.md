@@ -501,11 +501,11 @@ else:
 
 Écrivez un programme qui demande à l'utilisateur sa moyenne d'informatique tant
 qu'elle n'est pas valide. Définissez une fonction pour tester si la note est valide,
-c'est-à-dire si elle est comprise entre 1 et 6 inclus.
+c'est-à-dire si elle est comprise entre 1 et 6 inclus.\
 Si la moyenne est inférieure à 4, affichez que la note est insuffisante.\
 Si la moyenne est entre 4 et 4.8 (non inclus), affichez que la note est
 suffisante, mais elle pourrait être meilleure.\
-Si la moyenne est supérieure à 4.7 et inférieure à 5.5 (non inclus), affichez
+Si la moyenne est supérieure ou égale à 4.8 et inférieure à 5.5 (non inclus), affichez
 que c'est du bon travail.\
 Sinon affichez que c'est de l'excellent travail.
 
@@ -554,14 +554,6 @@ from math import sqrt
 
 def calcule_discriminant(a, b, c):
   return b ** 2 - 4 * a *c
-
-def affiche_nb_solutions(delta):
-  if delta < 0:
-    print("Cette équation n'a pas solution.")
-  elif delta == 0:
-    print("Cette équation a une seule solution.")
-  else:
-    print("Cette équation a deux solutions.")
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
 a = float(input("Coefficient de x^2: "))
@@ -715,3 +707,4 @@ while choix != 4:
 print("Au revoir!")
 ```
 ````
+
