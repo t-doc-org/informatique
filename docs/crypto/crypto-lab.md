@@ -4,7 +4,7 @@
 # Cryptographie Lab
 
 ```{metadata}
-hide-solutions: true
+solutions: hide
 ```
 
 Dans le cours, nous avons vu plusieurs exemples de cryptographie symétrique et

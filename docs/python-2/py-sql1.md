@@ -4,7 +4,7 @@
 # Python et bases de données 1
 
 ```{metadata}
-hide-solutions: true
+solutions: hide
 ```
 
 Dans cette partie, vous allez apprendre à utiliser Python pour accéder à une

@@ -4,7 +4,7 @@
 # Listes - Boucles `for`
 
 ```{metadata}
-hide-solutions: true
+solutions: hide
 ```
 
 La boucle `for` permet d'accéder à tous les éléments d'une liste l'un après

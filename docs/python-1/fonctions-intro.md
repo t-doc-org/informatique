@@ -4,7 +4,7 @@
 # Fonctions - Introduction
 
 ```{metadata}
-hide-solutions: true
+solutions: hide
 ```
 
 ## Déplacement des pièces

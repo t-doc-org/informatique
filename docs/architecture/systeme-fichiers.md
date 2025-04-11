@@ -4,7 +4,7 @@
 # Système de fichiers
 
 ```{metadata}
-hide-solutions: true
+solutions: hide
 ```
 
 ## Définition

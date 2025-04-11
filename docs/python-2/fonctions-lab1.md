@@ -4,7 +4,7 @@
 # Fonctions Lab
 
 ```{metadata}
-hide-solutions: true
+solutions: hide
 ```
 
 ## Exercice {num}`py2-lab1`

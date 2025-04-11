@@ -3,9 +3,9 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 ```{metadata}
+solutions: hide
 scripts:
   - src: quizz-helpers.js
-hide-solutions: true
 ```
 
 # Détection d'erreur

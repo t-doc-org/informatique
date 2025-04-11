@@ -2,7 +2,7 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 ```{metadata}
-hide-solutions: true
+solutions: hide
 scripts:
   - src: quizz-helpers.js
 ```
@@ -59,9 +59,9 @@ IPv4 est la première version du protocole. Les adresses sont représentées sou
 la forme de quatre nombtre entiers compris entre 0 et 255 (8 bits) séparés par
 des points. Voici une adresse IPv4 publique d'un des routeurs du collège:
 
-$$156.25.4.249$$
+$$\texttt{156.25.4.249}$$
 
-Il y a $2^32$ adresses possibles soit plus de 4 milliards. Depuis 2011,
+Il y a $2^{32}$ adresses possibles soit plus de 4 milliards. Depuis 2011,
 ce n'est plus suffisant pour connecter tous les appareils à internet.
 
 Une solution est d'utiliser des adresses IP privés (non accessibles directement
@@ -80,9 +80,9 @@ des adresses et un routage plus rapide des paquets.
 Les adresses IPv6 sont représentées par huit groupes de quatre chiffres
 hexadécimaux chacun, séparés par deux points.
 
-$$0:0:0:0:0:ffff:9c19:04fb$$
+$$\texttt{0:0:0:0:0:ffff:9c19:04fb}$$
 
-IPv3 n'est pas compatible avec IPv4, ce qui a relenti son déploiement.
+IPv6 n'est pas compatible avec IPv4, ce qui a relenti son déploiement.
 Actuellement les deux systèmes sont encore utilisés.
 
 ```{youtube} kR9mCvMHWjk

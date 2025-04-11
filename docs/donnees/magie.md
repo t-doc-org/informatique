@@ -3,9 +3,9 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 ```{metadata}
+solutions: remove
 scripts:
   - src: quizz-helpers.js
-hide-solutions: true
 ```
 
 # Correction d'erreur - Magie
@@ -125,7 +125,7 @@ j)
 </td></tr></table>
 
 
-<!-- ```{solution}
+````{solution}
 
 <table width="100%"><tr style = "vertical-align: top;"><td>
 
@@ -216,4 +216,4 @@ j)
 
 </td></tr></table>
 
-``` -->
+````

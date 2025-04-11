@@ -306,28 +306,28 @@ Que vont afficher les programmes suivants?
     ```
     ````
 
-  2.  ```{exec} python
-      :when: never
-      y = 2
-      if y <= -1:
-        print(3 * y + 5)
-      elif y <= 3:
-        print(y + 4)
-      else:
-        print(y * y - 1)
-      ```
+2.  ```{exec} python
+    :when: never
+    y = 2
+    if y <= -1:
+      print(3 * y + 5)
+    elif y <= 3:
+      print(y + 4)
+    else:
+      print(y * y - 1)
+    ```
 
-      ````{solution}
-      ```{exec} python
-      y = 2
-      if y <= -1:
-        print(3 * y + 5)
-      elif y < 2:
-        print(y + 4)
-      else:
-        print(y * y - 1)
-      ```
-      ````
+    ````{solution}
+    ```{exec} python
+    y = 2
+    if y <= -1:
+      print(3 * y + 5)
+    elif y < 2:
+      print(y + 4)
+    else:
+      print(y * y - 1)
+    ```
+    ````
 
 ### Exercice {num}`exo-py1`
 

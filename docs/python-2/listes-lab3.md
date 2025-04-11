@@ -5,7 +5,7 @@
 # Listes Lab - Mini projet
 
 ```{metadata}
-hide-solutions: true
+solutions: hide
 ```
 
 Les exercices suivants vous mèneront petit à petit à simuler la création d'un

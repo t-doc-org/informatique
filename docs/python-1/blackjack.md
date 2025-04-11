@@ -4,7 +4,7 @@
 # Jeu - Blackjack
 
 ```{metadata}
-hide-solutions: true
+solutions: hide
 ```
 
 ## Introduction
