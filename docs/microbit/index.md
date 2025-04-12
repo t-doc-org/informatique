@@ -8,4 +8,5 @@
 microbit-tuto
 microbit-exo
 microbit-jeu
+microbit-fonctions
 ```
