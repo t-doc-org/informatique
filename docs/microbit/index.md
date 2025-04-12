@@ -6,4 +6,6 @@
 ```{toctree}
 :maxdepth: 1
 microbit-tuto
+microbit-exo
+microbit-jeu
 ```

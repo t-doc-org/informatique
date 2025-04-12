@@ -113,7 +113,6 @@ display.scroll("Comment vas-tu?")
 ````{solution}
 ```{exec} micropython
 :after: microbit-reset
-:editor:
 from microbit import *
 
 for _ in range(4):
@@ -176,7 +175,6 @@ Le **module microbit** contient de nombreuses images intégrées, telles que
 ````{solution}
 ```{exec} micropython
 :after: microbit-reset
-:editor:
 from microbit import *
 
 img = Image("90009:"
@@ -194,8 +192,8 @@ display.show(img)
 1.  Écrivez un programme qui affiche l'image de pacman, attend 2 secondes et
     ensuite affiche l'image d'un fantôme.
 
-2.  Modifiez le programme de 1. pour qu'il change d'images toute les secondes en
-    continu.
+2.  Modifiez le programme de la partie 1 pour qu'il change d'images toute les
+    secondes en continu.
     ````{tip}
     :class: dropdown
     Pour faire défiler les images de manière continue, on utilise une boucle
@@ -289,6 +287,7 @@ while True:
         display.show(Image.HAPPY)
     elif button_b.was_pressed():
         display.show(Image.SAD)
+    sleep(1000)
 ```
 ````
 
