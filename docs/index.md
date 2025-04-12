@@ -16,6 +16,7 @@ architecture/index
 html-css/index
 representation-info/index
 python-1/index
+microbit/index
 ```
 
 ## Cours de 2{sup}`e` année
