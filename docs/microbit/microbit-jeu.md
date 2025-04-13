@@ -2,9 +2,7 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 ```{metadata}
-hide-solutions: true
-scripts:
-  - src: quizz-helpers.js
+solutions: remove
 ```
 
 # Jeu
@@ -69,15 +67,6 @@ while True:
 
     Utilisez les valeurs de `accelerometer.get_x()` et `accelerometer.get_y()`.
 
-    ```{tip}
-    Pour déterminer le sens de déplacement du pixel, il faut déterminer
-    l'intensité la plus grande, mais malheureusement un signe est ajouté pour
-    définir le sens du mouvement.
-
-    La fonction `abs(intensite)` qui correspond à la valeur absolue, permet de
-    comparer des intensités sans devoir se soucier du sens.
-    ```
-
 3.  Après le déplacement, testez
 
     - si le pixel est sorti des dimensions de l'écran. Dans ce cas, la manche
@@ -91,7 +80,7 @@ while True:
     `nouvelle_manche()` qui va réinitiliser les valeurs des variables
     (positions de l'utilisateur et du but)
 
-5.  Ajoutez un score. Pour gagner une partie, il faut obtenir un score de 5.
+5.  Ajoutez un score. Pour gagner une partie, il faut obtenir un score de 3.
     Chaque manche réussie rapporte un point. Une manche perdue remet le score à
     zéro.
 
@@ -126,7 +115,7 @@ def nouvelle_manche():
       but_y = randint(0, 4)
 
 # initialisation des variables
-SEUIL_ACC = 30
+SEUIL_ACC = 100
 nouvelle_manche()
 score = 0
 
@@ -144,16 +133,14 @@ while True:
   ay = accelerometer.get_y()
 
   # modification la position du joueur
-  if abs(ax) > abs(ay):
-    if ax < -SEUIL_ACC:
-      x -= 1
-    elif ax > SEUIL_ACC:
-      x += 1
-  else:
-    if ay < -SEUIL_ACC:
-      y -= 1
-    elif ay > SEUIL_ACC:
-      y += 1
+  if ax < -SEUIL_ACC:
+    x -= 1
+  if ax > SEUIL_ACC:
+    x += 1
+  if ay < -SEUIL_ACC:
+    y -= 1
+  if ay > SEUIL_ACC:
+    y += 1
 
   # conditions de défaite
   if x < 0 or x > 4 or y < 0 or y > 4:
@@ -166,7 +153,7 @@ while True:
   # condition de victoire
   elif x == but_x and y == but_y:
     score += 1
-    if score >= 5:
+    if score >= 3:
       display.show(Image.HAPPY)
       music.play(music.POWER_UP)
       sleep(1000)
@@ -181,10 +168,10 @@ print("Le jeu est terminé!")
 
 ## Améliorations
 
-1.  À chaque nouvelle partie, la vitesse de déplacement doit augmenter.
-
-2.  Quand l'utilisateur appuye sur le bouton A, la partie est mise en pause.
+1.  Quand l'utilisateur appuye sur le bouton A, la partie est mise en pause.
     Pour reprendre la partie, il faut appuyer sur le bouton B.
+
+2.  À chaque nouvelle partie, la vitesse de déplacement doit augmenter.
 
 3.  Trouvez vos propres améliorations ou variantes.
 
@@ -214,7 +201,7 @@ def nouvelle_manche():
       but_y = randint(0, 4)
 
 # initialisation des variables
-SEUIL_ACC = 30
+SEUIL_ACC = 100
 nouvelle_manche()
 score = 0
 vitesse = 500
@@ -239,16 +226,14 @@ while True:
   ay = accelerometer.get_y()
 
   # modification la position du joueur
-  if abs(ax) > abs(ay):
-    if ax < -SEUIL_ACC:
-      x -= 1
-    elif ax > SEUIL_ACC:
-      x += 1
-  else:
-    if ay < -SEUIL_ACC:
-      y -= 1
-    elif ay > SEUIL_ACC:
-      y += 1
+  if ax < -SEUIL_ACC:
+    x -= 1
+  if ax > SEUIL_ACC:
+    x += 1
+  if ay < -SEUIL_ACC:
+    y -= 1
+  if ay > SEUIL_ACC:
+    y += 1
 
   # conditions de défaite
   if x < 0 or x > 4 or y < 0 or y > 4:
@@ -261,7 +246,7 @@ while True:
   # condition de victoire
   elif x == but_x and y == but_y:
     score += 1
-    if score >= 5:
+    if score >= 3:
       display.show(Image.HAPPY)
       music.play(music.POWER_UP)
       sleep(1000)
