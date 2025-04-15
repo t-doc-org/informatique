@@ -356,7 +356,7 @@ condition.
 });
 </script>
 
-Site d'entrainement d'écriture de programme en Python.
+Site d'entrainement d'écriture de programmes en Python.
 
 <label for="name">Prénom:</label>
 <input type="text" id="name" size="20"/>
