@@ -1,11 +1,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: remove
-scripts:
-  - src: quizz-helpers.js
-```
 
 # Compression
 
@@ -145,7 +140,7 @@ cerveau à traiter les informations visuelles.
 ### Exemple {num}`ex-donnees`
 
 Une image d'un film numérisé au format DVD en définition standard (720 x 576
-pixels) en RGB a un poids de: $720 * 576 * 3 \cong 1.24 \textrm{ Mo}$.\
+pixels) en RGB a un poids de: $720 * 576 * 3  = 1244160 \textrm{ octets} \cong 1.24 \textrm{ Mo}$.\
 Une seconde de film à 25 images par seconde représente:
 $25 * 1.24 \cong 31 \textrm{ Mo}$.\
 Un film de 2 heures peut atteindre:

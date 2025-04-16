@@ -3,10 +3,6 @@
 
 # Fonctions - Introduction
 
-```{metadata}
-solutions: hide
-```
-
 ## Déplacement des pièces
 
 Aux échecs, chaque pièce se déplace différemment:

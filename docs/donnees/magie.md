@@ -2,12 +2,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: remove
-scripts:
-  - src: quizz-helpers.js
-```
-
 # Correction d'erreur - Magie
 
 ## Exercice {num}`exo-donnees`

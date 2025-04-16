@@ -3,10 +3,6 @@
 
 # Fonctions
 
-```{metadata}
-solutions: remove
-```
-
 ## Introduction
 
 En programmation, une **fonction** est un bloc de code (suite d'instructions)
