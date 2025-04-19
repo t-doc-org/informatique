@@ -64,7 +64,7 @@
     function addInput(row, button) {
         const input = core.qs(row.appendChild(core.elmt`\
 <td>\
-<input autocapitalize="off" autocomplete="off" autocorrect="off"\
+<input type="text" autocapitalize="off" autocomplete="off" autocorrect="off"\
  spellcheck="false">\
 </td>`), 'input');
         core.on(input).keydown(e => {
