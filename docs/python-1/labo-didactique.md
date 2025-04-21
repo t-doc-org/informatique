@@ -359,7 +359,7 @@ condition.
 Site d'entrainement d'écriture de programmes en Python.
 
 <label for="name">Prénom:</label>
-<input type="text" id="name" size="20"/>
+<input type="text" id="name" class="tdoc" size="20"/>
 <button id="commencer" class="tdoc-button">Commencer</button>
 
 ```{code-block} text
