@@ -16,6 +16,5 @@ html_theme_options = {
 }
 
 tdoc = {
-    'store_url': 'https://api.t-doc.org/store'
-                 if 'tdoc-dev' not in tags else None,
+    'api_url': 'https://api.t-doc.org' if 'tdoc-dev' not in tags else None,
 }
