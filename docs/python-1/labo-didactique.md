@@ -26,7 +26,7 @@ import {findEditor} from '../_static/tdoc/editor.js';
 const key = await pageKey('key', 'nMHqoWnA0tvA');
 
 // Décrypte les informations d'identification pour l'API de logging.
-const api = tdoc.conf.api_url ?? '/*api';
+const api = tdoc.api_url ?? tdoc.conf.api_url ?? '/*api';
 const storeToken = await decryptSecret(key, {
     iv: 'vgVd4UDZlHfcA99C',
     data: 'iZm48UGgU0I/H3tP4W4ytR1SGZQ0RDGv+mNdPCAAqZGRc2mK8/DEVttoAZ9f3mEo',
