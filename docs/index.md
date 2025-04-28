@@ -28,6 +28,7 @@ crypto/index
 python-2/index
 donnees/index
 reseaux/index
+javascript/index
 ```
 
 ## Divers
