@@ -26,7 +26,7 @@ import {findEditor} from '../_static/tdoc/editor.js';
 const key = await pageKey('key', 'nMHqoWnA0tvA');
 
 // Décrypte les informations d'identification pour l'API de logging.
-const storeUrl = tdoc.store_url || `${location.origin}/*store`;
+const api = tdoc.api_url ?? tdoc.conf.api_url ?? '/*api';
 const storeToken = await decryptSecret(key, {
     iv: 'vgVd4UDZlHfcA99C',
     data: 'iZm48UGgU0I/H3tP4W4ytR1SGZQ0RDGv+mNdPCAAqZGRc2mK8/DEVttoAZ9f3mEo',
@@ -50,7 +50,7 @@ const conversation = {
 };
 
 function logConversation(data) {
-    return fetchJson(`${storeUrl}/log`, {
+    return fetchJson(`${api}/log`, {
         headers: bearerAuthorization(storeToken),
         body: {
             'time': Date.now(),
@@ -359,7 +359,7 @@ condition.
 Site d'entrainement d'écriture de programmes en Python.
 
 <label for="name">Prénom:</label>
-<input type="text" id="name" size="20"/>
+<input type="text" id="name" class="tdoc" size="20"/>
 <button id="commencer" class="tdoc-button">Commencer</button>
 
 ```{code-block} text

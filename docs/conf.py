@@ -8,7 +8,6 @@ copyright = "%Y Caroline Blank"
 license = 'CC-BY-NC-SA-4.0'
 language = 'fr'
 
-keep_warnings = True
 myst_links_external_new_tab = True
 
 html_theme_options = {
@@ -16,6 +15,5 @@ html_theme_options = {
 }
 
 tdoc = {
-    'store_url': 'https://api.t-doc.org/store'
-                 if 'tdoc-dev' not in tags else None,
+    'api_url': 'https://api.t-doc.org' if 'tdoc-dev' not in tags else None,
 }
