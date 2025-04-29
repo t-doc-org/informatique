@@ -24,8 +24,9 @@ l'accéléromètre, comme si vous aviez une boule en équilibre sur l'écran.
 ## Accéléromètre
 
 Le programme affiche ce que les fonctions `accelerometer.get_x()` et
-`accelerometer.get_x()` renvoient. Essayez de comprendre comment cela fonctionne
-en inclinant le microbit doucement dans différentes directions.\
+`accelerometer.get_x()` renvoient.\
+Essayez de comprendre comment cela fonctionne en inclinant le microbit doucement
+dans différentes directions.\
 Quelles sont les valeurs de x et y quand vous penchez à droite?\
 Quelles sont les valeurs de x et y quand vous penchez à gauche?\
 Quelles sont les valeurs de x et y quand vous penchez vers l'avant?\
@@ -43,46 +44,69 @@ while True:
 
 ## Fonctionnalités de base
 
-1.  Le jeu contient quatre variables globales
+````{tab-set}
+:sync-group: etape
+```{tab-item} Étape 1
+:sync: etape1
 
-    `x`: première coordonnée de la position du joueur. Au début du jeu, le joueur
-    se trouve au centre de l'écran.
+Le jeu contient quatre variables globales.
 
-    `y`: deuxième coordonnée de la position du joueur. Au début du jeu, le joueur
-    se trouve au centre de l'écran.
+`x`: première coordonnée de la position du joueur. Au début du jeu, le joueur
+se trouve au centre de l'écran.
 
-    `but_x`: première coordonnée de la position du but à atteindre. Elle est
-    déterminée aléatoirement.
+`y`: deuxième coordonnée de la position du joueur. Au début du jeu, le joueur
+se trouve au centre de l'écran.
 
-    `but_y`: deuxième coordonnée de la position du but à atteindre. Elle est
-    déterminée aléatoirement.
+`but_x`: première coordonnée de la position du but à atteindre. Elle est
+déterminée aléatoirement.
 
-    Déclarez et initialisez les quatres variables. Affichez la position du joueur
-    avec une intensité maximale et la position du but à atteindre avec une
-    intensité faible (par exemple 5).
+`but_y`: deuxième coordonnée de la position du but à atteindre. Elle est
+déterminée aléatoirement.
 
-2.  En utilisant une boucle `while True`, faites en sorte que lorsque vous
-    inclinez le micro:bit dans une direction, le pixel se déplace aussi dans
-    cette direction.
+1.  Déclarez et initialisez les quatres variables.
+2.  Affichez la position du joueur avec une intensité maximale et la position du
+    but à atteindre avec une intensité moyenne (par exemple 5).
 
-    Utilisez les valeurs de `accelerometer.get_x()` et `accelerometer.get_y()`.
+```
+```{tab-item} Étape 2
+:sync: etape2
 
-3.  Après le déplacement, testez
+En utilisant une boucle `while True`, faites en sorte que lorsque vous
+inclinez le micro:bit dans une direction, le pixel se déplace aussi dans
+cette direction.
 
-    - si le pixel est sorti des dimensions de l'écran. Dans ce cas, la manche
-     est perdue.
-    - si le pixel est arrivé au but. Dans ce cas, la manche est gagnée.
+Utilisez les valeurs de `accelerometer.get_x()` et `accelerometer.get_y()`.
 
-    Affichez une image différente pour chacun de ces cas
-    (et ajouter une musique).
+```
+```{tab-item} Étape 3
+:sync: etape3
 
-4.  Afin de pouvoir effectuer plusieurs manches à la suite, créez une fonction
-    `nouvelle_manche()` qui va réinitiliser les valeurs des variables
-    (positions de l'utilisateur et du but)
+Après le déplacement, testez
 
-5.  Ajoutez un score. Pour gagner une partie, il faut obtenir un score de 3.
-    Chaque manche réussie rapporte un point. Une manche perdue remet le score à
-    zéro.
+- si le pixel est sorti des dimensions de l'écran. Dans ce cas, la manche est
+  perdue.
+- si le pixel est arrivé au but. Dans ce cas, la manche est gagnée.
+
+Affichez une image différente pour chacun de ces cas
+(et ajouter une musique).
+
+```
+```{tab-item} Étape 4
+:sync: etape4
+
+Afin de pouvoir effectuer plusieurs manches à la suite, créez une fonction
+`nouvelle_manche()` qui va réinitiliser les valeurs des variables (positions de
+l'utilisateur et du but)
+
+```
+```{tab-item} Étape 5
+:sync: etape5
+
+Ajoutez un score. Pour gagner une partie, il faut obtenir un score de 3.\
+Chaque manche réussie rapporte un point. Une manche perdue remet le score à
+zéro.
+```
+````
 
 ## Programmation du jeu
 
