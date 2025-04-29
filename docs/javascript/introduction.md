@@ -289,7 +289,7 @@ for (const note of notes) {
 2. Elle efface le contenu des cellules (td) du tableau l'une après l'autre.
 ```
 
-### Interactions entre l'utilisateurs et la page
+### Interactions entre l'utilisateur et la page web
 
 Les événements sont des actions qui se produisent sur la page, par exemple
 lorsque l'utilisateur clique sur un bouton.
