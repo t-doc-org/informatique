@@ -95,8 +95,8 @@ Affichez une image différente pour chacun de ces cas
 :sync: etape4
 
 Afin de pouvoir effectuer plusieurs manches à la suite, créez une fonction
-`nouvelle_manche()` qui va réinitiliser les valeurs des variables (positions de
-l'utilisateur et du but)
+`nouvelle_manche()` qui va réinitialiser les valeurs des variables (positions de
+l'utilisateur et du but).
 
 ```
 ```{tab-item} Étape 5
@@ -192,7 +192,7 @@ print("Le jeu est terminé!")
 
 ## Améliorations
 
-1.  Quand l'utilisateur appuye sur le bouton A, la partie est mise en pause.
+1.  Quand l'utilisateur appuie sur le bouton A, la partie est mise en pause.
     Pour reprendre la partie, il faut appuyer sur le bouton B.
 
 2.  À chaque nouvelle partie, la vitesse de déplacement doit augmenter.

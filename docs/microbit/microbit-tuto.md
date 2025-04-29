@@ -18,9 +18,9 @@ display.clear()
 ## Introduction
 
 Le BBC micro:bit est un microcontrôleur développé par la BBC pour encourager la
-programmation dans les écoles en Angleterre. Il s'agit d'un mini ordinateur
+programmation dans les écoles en Angleterre. Il s'agit d'un mini-ordinateur
 programmable notamment en Python. En raison de son prix attractif (~15 CHF), son
-utilisation est très répendue.
+utilisation est très répandue.
 
 ### Composants du micro:bit
 
@@ -47,8 +47,8 @@ Le micro:bit contient tous les composants essentiels d'un ordinateur, à savoir
 Faites attention aux points suivants lorsque vous utilisez le micro:bit:
 
 - Le connecteur micro-USB utilisé pour programmer le micro:bit est fragile.
-  Ne forcez jamais le câble et allez y en douceur pour connecter déconnecter le
-  câble.
+  Ne forcez jamais le câble et manipulez-le en douceur pour connecter
+  déconnecter le câble.
 
 - Évitez de toucher les connecteurs (Edge Connectors) et les connecteurs à
   l'arrière. Il arrive parfois qu'on soit chargé en électricité statique
@@ -66,7 +66,7 @@ Voici la procédure pour exécuter un programme sur le micro:bit:
     est très fragile. Ne portez pas le microbit par le câble.
 
 2.  Connectez l'éditeur au micro:bit\
-    Cliquez sur l'icone **Tools** et sélectionnez **Connect**. Dans la boite de
+    Cliquez sur l'icône **Tools** et sélectionnez **Connect**. Dans la boite de
     dialogue qui s'est ouverte, sélectionnez l'élément proposé et appuyez sur
     **Connexion**.
 
@@ -125,7 +125,7 @@ for _ in range(4):
 
 Une image matricielle ou bitmap est une image composée de pixels de couleur. Dans
 le cas du micro:bit, chaque pixel est représenté par une LED qui peut être
-allumée ou éteinte, ce qui correpond à un dessin en noir et blanc.
+allumée ou éteinte, ce qui correspond à un dessin en noir et blanc.
 
 ```{figure} images/heart-microbit.png
 :alt: Image matricielle
@@ -342,13 +342,13 @@ par une LED qui a une coordonnée x et y. La coordonnée (0, 0) se trouve en hau
 ```
 
 La fonction `display.set_pixel(x, y, intensite)` permet d'appliquer la valeur de
-l'**intensite** à la LED de coordonnée (x, y). L'intensité est un nombre entre
+l'**intensité** à la LED de coordonnée (x, y). L'intensité est un nombre entre
 0 et 9 où 0 signifie que la LED est éteinte et 9 la luminosité maximale.
 
 ### Exercice {num}`exo-microbit`
 
 Écrivez un programme qui allume la LED du milieu de l'image avec la valeur
-maximale et les LED des quatre coins avec une valeur intermédaire.
+maximale et les LED des quatre coins avec une valeur intermédiaire.
 
 ```{exec} micropython
 :after: microbit-reset

@@ -4,7 +4,7 @@
 
 # Liste des fonctions
 
-Voici une liste de fonctions utiles pour le micro:bit
+Voici une liste de fonctions utiles pour le micro:bit.
 
 ## Écran
 
@@ -28,10 +28,10 @@ Voici une liste de fonctions utiles pour le micro:bit
 ## Bouttons
 
 `button_a.was_pressed()`
-: renvoie `True`si le bouton A a été enfoncé depuis le dernier appel
+: renvoie `True` si le bouton A a été enfoncé depuis le dernier appel
 
 `button_a.is_pressed()`
-: renvoie `True`si le bouton A est enfoncé maintenant
+: renvoie `True` si le bouton A est enfoncé maintenant
 
 `button_a.get_presses()`
 : renvoie le nombre de fois que le bouton A a été appuyé et remet le compteur à

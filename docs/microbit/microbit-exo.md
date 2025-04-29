@@ -113,8 +113,8 @@ from microbit import *
 Écrivez un programme qui:
 
 - allume le pixel du centre de l'écran,
-- si l'utilisateur appuye sur le bouton A, le pixel se déplace à gauche,
-- si l'utilisateur appuye sur le bouton B, le pixel se déplace à droite,
+- si l'utilisateur appuie sur le bouton A, le pixel se déplace à gauche,
+- si l'utilisateur appuie sur le bouton B, le pixel se déplace à droite,
 - si le pixel est au bord de l'écran, il ne se passe rien.
 
 
