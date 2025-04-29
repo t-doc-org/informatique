@@ -2,7 +2,7 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 ```{metadata}
-solutions: hide
+solutions: remove
 scripts:
   - src: quizz-helpers.js
 ```
@@ -11,7 +11,7 @@ scripts:
 
 Un réseau local, en anglais Local Area Network (LAN), est un réseau informatique
 au sein d'une zone géographique restreinte, généralement à l'intérieur d'un
-même bâtiment (une école, un appartement, une entrepise, etc).
+même bâtiment (une école, un appartement, une entreprise, etc.).
 
 Il permet notamment:
 
@@ -47,7 +47,7 @@ Sur le schéma, ci-dessus sont nommés différents équipements. Complétez-le
 | Serveur             | Le serveur fournit des services et des ressources aux clients. Il gère les utilisateurs et les accès et sécurise les données.|
 | Modem               | Un modem (acronyme de modulateur-démodulateur) relie un réseau local à internet. Il convertit les données numériques en signal modulé analogique (et vice-versa) qui pourra être transmis sur les lignes téléphoniques (DSL), les réseaux câblés (câble TV ou fibre optique), le réseau mobile, etc. |
 | Routeur             |  Un routeur est un appareil électronique qui sert d'intermédiaire entre deux réseaux: le réseau local et internet. Il gère la transmission de l'information (paquets) jusqu'au destinataire selon des règles définies. |
-| Passerelle          | Chaque réseau a sa manière de fonctionner (ses protocoles). Une passerelle permet à deux réseaux qui fonctionnent différemment de se comprendre. Elle permet aussi de contôler le trafic et de protéger des intrusions (pare-feu et antivirus). |
+| Passerelle          | Chaque réseau a sa manière de fonctionner (ses protocoles). Une passerelle permet à deux réseaux qui fonctionnent différemment de se comprendre. Elle permet aussi de contrôler le trafic et de protéger des intrusions (pare-feu et antivirus). |
 | Switch              | Un switch permet d'interconnecter plusieurs appareils sur un même réseau. Il gère le transfert de l'information jusqu'au destinataire en évitant les collisions.     |
 | Borne Wi-Fi         | Une borne Wi-Fi, aussi appelée point d'accès, est un appareil qui permet de se connecter à un réseau sans fil. C'est un pont entre le réseau filaire et le réseau sans fil. La borne diffuse le signal du réseau filaire sur les ondes radio. |
 | Imprimante réseau   |  Une imprimante réseau est une imprimante connectée au réseau local via un câble ou le Wi-Fi. Elle permet à plusieurs utilisateurs d'un même réseau d'imprimer des documents sans avoir de connexion directe (câble USB). |
@@ -65,7 +65,7 @@ intégrés à la box internet fournie par le fournisseur d'accès internet.
 ```{solution}
 1.  Un fournisseur d'accès internet est une entreprise qui offre une connexion
     au réseau internet. Il possède (ou loue) l'infrastructure, comme les câbles
-    et les serveurs, nécessaires à la connection.
+    et les serveurs, nécessaires à la connexion.
 
     Il s'occupe aussi d'acheminer correctement les données, fournit des services
     de sécurité et peut aussi fournir des adresses électroniques.
@@ -82,15 +82,15 @@ intégrés à la box internet fournie par le fournisseur d'accès internet.
 ## Envoi de message à l'intérieur d'un sous-réseau
 
 Dans un sous-réseau, chaque machine est reliée à un switch qui gère
-l'acheminement des paquets de l'expéditeur au destinaire:
+l'acheminement des paquets de l'expéditeur au destinataire:
 
-1.  L'expéditeur découpe ses données en paquet de bits auquels il ajoute son
+1.  L'expéditeur découpe ses données en paquet de bits auxquels il ajoute son
     adresse et l'adresse du destinataire.
 2.  Si le destinataire est dans le sous-réseau, l'expéditeur envoie le paquet
     directement au destinataire via le switch.
 3.  Si le destinataire n'est pas dans le sous-réseau, l'expéditeur envoie le
     paquet au routeur via le switch.
-4.  Le destinaire rassemble les différents paquets pour former l'ensemble des
+4.  Le destinataire rassemble les différents paquets pour former l'ensemble des
     données.
 
 

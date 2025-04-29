@@ -2,7 +2,7 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 ```{metadata}
-solutions: hide
+solutions: remove
 scripts:
   - src: quizz-helpers.js
 ```
@@ -33,10 +33,10 @@ On peut utiliser:
 Quels sont les différents supports qui permettent de transférer des données
 dans un réseau?
 
-Quels sont les avantages et les incovénients de chacun?
+Quels sont les avantages et les inconvénients de chacun?
 
 ```{solution}
-Il en existe différents: le bluetooth (ondes radio), le Wi-Fi, les câbles
+Il en existe différents: le Bluetooth (ondes radio), le Wi-Fi, les câbles
 Ethernet, la fibre optique, mais aussi les lignes téléphoniques, les satellites,
 les câbles TV, ...
 

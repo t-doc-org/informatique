@@ -2,7 +2,7 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 ```{metadata}
-solutions: hide
+solutions: remove
 scripts:
   - src: quizz-helpers.js
 ```
@@ -50,13 +50,13 @@ répartis sur le réseau utilisent l'adresse du destinataire pour assurer
 l'acheminement correct des paquets en suivant les règles du protocole IP.
 
 Ce protocole permet d'identifier et de nommer de manière uniforme et unique tous
-les appareils connectés à internet (ordinateurs, téléphones, objets connectés, etc)
+les appareils connectés à internet (ordinateurs, téléphones, objets connectés, etc.)
 grâce à son adresse IP.
 
 ### IPv4
 
 IPv4 est la première version du protocole. Les adresses sont représentées sous
-la forme de quatre nombtre entiers compris entre 0 et 255 (8 bits) séparés par
+la forme de quatre nombre entiers compris entre 0 et 255 (8 bits) séparés par
 des points. Voici une adresse IPv4 publique d'un des routeurs du collège:
 
 $$\texttt{156.25.4.249}$$
@@ -66,7 +66,7 @@ ce n'est plus suffisant pour connecter tous les appareils à internet.
 
 Une solution est d'utiliser des adresses IP privés (non accessibles directement
 depuis internet) pour les machines qui se trouvent dans un sous-réseau. Exemple,
-les adesses commençant par **10.x.x.x** ou par **192.168.x.x**.
+les adresses commençant par **10.x.x.x** ou par **192.168.x.x**.
 
 Une autre solution est de changer le système d'adressage de IPv4 en IPv6.
 
@@ -82,7 +82,7 @@ hexadécimaux chacun, séparés par deux points.
 
 $$\texttt{0:0:0:0:0:ffff:9c19:04fb}$$
 
-IPv6 n'est pas compatible avec IPv4, ce qui a relenti son déploiement.
+IPv6 n'est pas compatible avec IPv4, ce qui a ralenti son déploiement.
 Actuellement les deux systèmes sont encore utilisés.
 
 ```{youtube} kR9mCvMHWjk
@@ -90,9 +90,9 @@ Actuellement les deux systèmes sont encore utilisés.
 
 ## Adresses privées versus adresses publiques
 
-Dans un réseau local, des adresses IP privées sont attribuéss (en général sous
+Dans un réseau local, des adresses IP privées sont attribuées (en général sous
 la forme. pas 10.x.x.x) à chaque équipement (ordinateurs, tablettes, téléphones,
-imprimantes, etc), ainsi qu'au routeur du réseau. Ce routeur, pour être aussi
+imprimantes, etc.), ainsi qu'au routeur du réseau. Ce routeur, pour être aussi
 atteignable depuis internet, a également une adresse publique.
 
 Le routeur fonctionne comme le secrétariat d'une école en assurant la
@@ -137,7 +137,7 @@ Recherchez sur le web:
 
 ```{solution}
 1.  Un nom de domaine est une adresse internet d'un site web, facile à
-    commniquer. Il est unique, mais peut contenir un sous-ensemble de pages.
+    communiquer. Il est unique, mais peut contenir un sous-ensemble de pages.
     Le nom de domaine du collège est: [https://cscfr.ch](https://cscfr.ch)
     Il contient plusieurs pages:
     - [https://new.cscfr.ch/index.php/fr/](https://new.cscfr.ch/index.php/fr/)
@@ -145,7 +145,7 @@ Recherchez sur le web:
     - [https://choeur.cscfr.ch/](https://cscfr.ch)
 
 2.  Un DNS, en anglais Domain Name System, est un service qui associe les noms
-    de domaine internet à leur adresse IP, difficile à retenir ou tranmsettre.
+    de domaine internet à leur adresse IP, difficile à retenir ou transmettre.
 
 L'adresse IP du domaine [https://cscfr.ch](https://cscfr.ch) est 128.65.195.54
 ```

@@ -41,8 +41,7 @@ De quoi dépend la force d'un mot de passe?
 
 ```{solution}
 La force d'un mot de passe dépend de la longueur du mot de passe et du nombre de
-caractères possibles (minuscules, majuscules, chiffres, etc).
-
+caractères possibles (minuscules, majuscules, chiffres, etc.).
 ```
 
 ### Exercice {num}`exo-num`
@@ -52,10 +51,10 @@ Les 3 symboles suivants sont à disposition pour faire un mot de passe:
 
 Combien y a-t-il de mots de passe possibles,
 
-1. <script>tdoc.question("si la longeur du mot de passe est de 1?", {'3': true});</script>
-2. <script>tdoc.question("si la longeur du mot de passe est de 2?", {'9': true});</script>
-3. <script>tdoc.question("si la longeur du mot de passe est de 3?", {'27': true});</script>
-4. <script>tdoc.question("si la longeur du mot de passe est de 4?", {'81': true});</script>
+1. <script>tdoc.question("si la longueur du mot de passe est de 1?", {'3': true});</script>
+2. <script>tdoc.question("si la longueur du mot de passe est de 2?", {'9': true});</script>
+3. <script>tdoc.question("si la longueur du mot de passe est de 3?", {'27': true});</script>
+4. <script>tdoc.question("si la longueur du mot de passe est de 4?", {'81': true});</script>
 
 
 ### Nombre de mots de passe possibles
@@ -99,7 +98,7 @@ L'idéal est d'utiliser un mot de passe long, facile à retenir:
 En général, il est possible de réinitialiser un mot de passe avec
 1.  des questions secrètes:
     -   Ne pas utiliser des questions secrètes trop simples à deviner ou qu'on
-        peut trouver sur le web (date d'anniversaire, lieu de naissance, etc)
+        peut trouver sur le web (date d'anniversaire, lieu de naissance, etc.)
     -   Éviter de publier des informations personnelles sur le web
 
 2.  un mail de récupération:\
@@ -164,7 +163,7 @@ du site a été piratée. Les données concernant Hubert qui ont fuité sont:
     potentiellement à toutes les données de son entreprise.
 ```
 
-## Crassage de mot de passe
+## Cassage de mot de passe
 
 ### Attaque par force brute
 
@@ -172,7 +171,7 @@ Le pirate essaie toutes les combinaisons possibles jusqu'à trouver le mot de
 passe:
 
 -   Cela prend beaucoup de temps.
--   Les services limitent le nombre de tentativess et ensuite se bloquent pendant
+-   Les services limitent le nombre de tentatives et ensuite se bloquent pendant
     un certain temps.
 
 ### Attaque par dictionnaire
@@ -196,9 +195,9 @@ exploite des tables de correspondance (dictionnaires) empreinte-mot de passe
 disponibles sur le web, notamment sur le darknet. Si cela ne suffit pas, le
 pirate devra:
 
-1.  Identifier la fonction de hashage utilisée.
+1.  Identifier la fonction de hachage utilisée.
 2.  Créer son propre dictionnaire mot de passe-empreinte pour la fonction de
-    hashage trouvée en:
+    hachage trouvée en:
     -   Testant, d'abord, les mots de passe courants.
     -   Testant tous les mots de passe possibles (ce qui demande du temps et des
         ressources, mais n'est pas limité comme lors de tentatives de connexion

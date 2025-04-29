@@ -301,12 +301,12 @@ Pour définir les actions à faire, il faut utiliser la construction suivante:
 bouton.addEventListener("click", action);
 </script>
 ```
-où l'action est la fonction qui sera appellée au moment du clic sur le bouton.
+où l'action est la fonction qui sera appelée au moment du clic sur le bouton.
 
 #### Exercice {num}`exo-js`
 
-1. Quelle fonction est appellée par un clic du bouton1?
-2. Quelle fonction est appellée par un clic du bouton2?
+1. Quelle fonction est appelée par un clic du bouton1?
+2. Quelle fonction est appelée par un clic du bouton2?
 
 ```{Solution}
 1. La fonction `calculeSol()`.

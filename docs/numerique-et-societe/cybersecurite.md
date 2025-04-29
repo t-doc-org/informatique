@@ -64,7 +64,7 @@ Exemples:
 
 ### Exercice {num}`exo-num`
 
-Pour l'exemple qui vous a été attibué:
+Pour l'exemple qui vous a été attribué:
 - Donnez une définition du malware.
 - Comment se propage-t-il?
 - Quel type de dégâts peut-il provoquer?
@@ -95,7 +95,7 @@ Pour l'exemple qui vous a été attibué:
 3.  Cheval de Troie\
     Définition: Un cheval de Troie est un logiciel malveillant qui se présente
     comme un programme légitime pour tromper l'utilisateur et exécuter des
-    actions malveillantes en arrière-plan (virus, logiciel espion, etc).\
+    actions malveillantes en arrière-plan (virus, logiciel espion, etc.).\
     Propagation: Il est souvent téléchargé volontairement par l'utilisateur,
     pensant installer un programme utile ou inoffensif.\
     Type de dégâts: Vol d'informations sensibles (identifiants bancaires, mots
@@ -152,7 +152,7 @@ qui sont gratuites.
 
 ### Protéger ses données
 
-Pour protégér ses données, il faut:
+Pour protéger ses données, il faut:
 - Utiliser de bons mots de passe.
 - Garder ses mots de passe pour soi (ne pas les transmettre).
 
