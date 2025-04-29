@@ -17,6 +17,7 @@ html-css/index
 representation-info/index
 python-1/index
 microbit/index
+numerique-et-societe/index
 ```
 
 ## Cours de 2{sup}`e` année
