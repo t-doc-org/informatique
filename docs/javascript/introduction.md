@@ -25,11 +25,10 @@ apparaître ou disparaître des éléments.
 Les concepts de base (variables, entrées-sorties, instructions conditionnelles,
 boucles) sont les mêmes qu'en Python, seule la manière de les écrire change.
 
-### Exercice {num}`exo-js:exemple`
+### Exemple {num}`ex-js:exemple`
 
 Voici une page web qui permet de calculer les solutions d'une équation
-du deuxième degré. Testez la page avec quelques valeurs différentes pour a, b et
-c.
+du deuxième degré.
 
 ```{exec} html
 :when: load
@@ -156,6 +155,10 @@ function calculeSol() {
 
 ### Exercice {num}`exo-js`
 
+Testez la page avec quelques valeurs différentes pour a, b et c.
+
+### Exercice {num}`exo-js`
+
 Le code HTML est composé de 2 parties:
 - `<head>` qui est l'entête du document et contient un certain nombre
   d'informations, tel que l'encodage, le titre de l'onglet.
@@ -223,7 +226,7 @@ texte = document.getElementById("mon_input").value`
 
 #### Exercice {num}`exo-js`
 
-Trouvez les `<input>` contenus dans le code de l'{numref}`exercice %s<exo-js:exemple>`:
+Trouvez les `<input>` contenus dans le code de l'{numref}`exemple %s<ex-js:exemple>`:
 
 1.  De quel type sont-ils?
 2.  Quels sont leur identifiant?
@@ -281,7 +284,7 @@ for (const note of notes) {
 
 #### Exercice {num}`exo-js`
 
-1. À quelle ligne cette construction est-elle utilisée dans l'{numref}`exercice %s<exo-js:exemple>`.
+1. À quelle ligne cette construction est-elle utilisée dans l'{numref}`exemple %s<ex-js:exemple>`.
 2. Expliquez ce que fait cette boucle.
 
 ```{Solution}
@@ -312,3 +315,34 @@ où `action` est la fonction qui sera appelée au moment du clic sur le bouton.
 1. La fonction `calculeSol()`.
 2. La fonction `clear()`.
 ```
+
+### Affichage dynamique de texte
+
+Le message d'erreur s'affiche sur la page uniquement dans certaines conditions.
+Pour cela, un conteneur vide, muni d'un identifiant, doit être ajouté à la page
+afin de pouvoir y insérer le message si nécessaire.
+
+```{exec} html
+:when: never
+<div id="message"></div>
+```
+
+Dans le partie script, il est ainsi possible de changer la valeur du conteneur
+"message".
+
+#### Exercice {num}`exo-js`
+
+1.  À quelle ligne se trouve le conteneur pour le message d'erreur?
+2.  Qu'est-ce qui est affiché dans ce conteneur juste après le chargement de la
+    page?
+3.  À quelles lignes la valeur du conteneur est-elle modifiée?
+4.  Quelle syntaxe est utilisée pour modifier la valeur du conteneur?
+
+
+```{Solution}
+1.  À la ligne 59.
+2.  Rien ne sera afficher, car le conteneur est vide au départ.
+3.  Aux lignes 85 et 95.
+4.  `erreur.innerHTML = "..."`
+```
+
