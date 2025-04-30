@@ -223,10 +223,10 @@ texte = document.getElementById("mon_input").value`
 
 #### Exercice {num}`exo-js`
 
-Trouvez les `<input>` contenu dans le code de l'{numref}`exercice %s<exo-js:exemple>`:
+Trouvez les `<input>` contenus dans le code de l'{numref}`exercice %s<exo-js:exemple>`:
 
 1.  De quel type sont-ils?
-2.  Quelles sont leur identifiants?
+2.  Quels sont leur identifiant?
 3.  Que signifie `value="0"`?
 
 ```{solution}
@@ -238,7 +238,7 @@ Trouvez les `<input>` contenu dans le code de l'{numref}`exercice %s<exo-js:exem
 
 #### Exercice {num}`exo-js`
 
-1.  À quelles lignes récupèrent-on les valeurs entrées dans les champs de texte?
+1.  À quelles lignes récupère-t-on les valeurs entrées dans les champs de texte?
 2.  Pourquoi note-on: `Number` devant `document.getElementById("coeffA").value`
 
 ```{solution}
@@ -301,7 +301,7 @@ Pour définir les actions à faire, il faut utiliser la construction suivante:
 bouton.addEventListener("click", action);
 </script>
 ```
-où l'action est la fonction qui sera appelée au moment du clic sur le bouton.
+où `action` est la fonction qui sera appelée au moment du clic sur le bouton.
 
 #### Exercice {num}`exo-js`
 
