@@ -26,61 +26,59 @@ ci-dessous dans l'ordre.
 :sync-group: etape
 `````{tab-item} Étape 1
 :sync: etape1
-
 En utilisant les éléments HTML appropriés, commencez par créer la page statique
 de votre jeu avec un titre, les règles du jeu, ainsi que le but. Ajoutez un
 tableau de dimension 3x3.
 
 ````{tip}
 :class: dropdown
-Utiliser un tableau sans entête.
+Utilisez un tableau sans entête.
 ````
 
 `````
 `````{tab-item} Étape 2
 :sync: etape2
-
-Ajouter du style à votre page pour que:
+Ajoutez du style à votre page pour que:
 
 1. le tableau ait des bordures,
-2. la hauteur et la largeur des cellules soient de 100px,
-3. la couleur de fond des cellules soient d'une autre couleur,
+2. la hauteur et la largeur des cellules soient de 50px,
+3. la couleur de fond des cellules soit d'une autre couleur,
 4. le tableau soit centré.
 
 ````{tip}
 :class: dropdown
 Utilisez des sélecteurs de type.
 
-Pour que le tableau soit centré, il faut que les marges à droite et à gauche
-soient automatiques.
+Pour que le tableau soit centré, les marges à droite et à gauche doivent être
+automatiques.
 
 Les différents propriétés nécessaires sont:\
-`border`, `border-collapse`, `width`, `height`, `margin-left`, `margin-right`
+`border`, `border-collapse`, `width`, `height`, `margin-left`, `margin-right`,
+`margin-top`
 ````
 
 `````
 `````{tab-item} Étape 3
 :sync: etape3
-
 Dans la partie script, ajoutez la fonctionnalité suivante en définissant la
 fonction `changeEtat(event)`:
 
-Lorsqu'on clique sur une cellule du tableau, affichez dans la cellule le texte
-"clic". Cela permettra de vérifier que les clics dans les cellules sont
+Lorsque vous cliquez sur une cellule du tableau, le texte "clic" doit s'afficher
+dans celle-ci. Cela permettra de vérifier que les clics dans les cellules sont
 correctement détectés.
 
 ````{tip}
 :class: dropdown
-1.  Pour que les clics sur les cellules soient détectés, il faut utiliser
-    `addEventListener` sur chaque cellule. Pour éviter les répétitions, il faut
-    stocker toutes les cellules dans une liste et faire une boucle
-    sur chaque élément (cf {numref}`exemple %s<ex-js:exemple>`).
+1.  Pour que les clics sur les cellules soient détectés, utilisez
+    `addEventListener` sur chaque cellule. Pour éviter les répétitions, stockez
+    toutes les cellules dans une liste et faites une boucle sur chaque élément
+    (cf {numref}`exemple %s<ex-js:exemple>`).
 2.  La fonction `changeEtat(event)` a un paramètre `event` qui est déclenché par
     le clic de la souris (ou du touchpad).
     ```{exec} html
     :when: never
     function changeEtat(event) {
-        const c = event.target;    // récupère l'élément html cible
+        const c = event.target;    // récupère l'élément html ciblé par le clic
         ...
     ```
 ````
@@ -88,36 +86,34 @@ correctement détectés.
 `````
 `````{tab-item} Étape 4
 :sync: etape4
-
-Modifiez la fonction `changeEtat(event)` pour que lorsqu'on clique sur une
+Modifiez la fonction `changeEtat(event)` pour que lorsque vous cliquez sur une
 cellule, celle-ci change d'état. Si elle est allumée (colorée), elle s'éteint
 (sans couleur de fond) et vice-versa.
 
 ````{tip}
 :class: dropdown
 1.  Trouvez la propriété qui permet de changer la couleur de fond d'une cellule.
-2.  Pour changer la couleur d'une cellule, il faut pouvoir les différencier.
-    Cela se fait au moyen d'un sélecteur de classe.
-    -   dans la partie style: définir la couleur des cellules allumées
+2.  Pour changer la couleur d'une cellule, utiliser une classe "allume".
+    -   dans la partie style, définissez le style de la classe "allume"
+        (choisissez une couleur de fond).
         ```{exec} html
         :when: never
         .allume {
-        /* compléter par la propriété et la valeur désirée */
+        /* complétez par la propriété et la valeur désirée */
         }
         ```
-    -   en ajoutant la classe "allume" à la cellule pour l'allumer et en la
-        supprimant pour l'éteindre. Cela se fait au moyen de:
+    -   ajoutez la classe "allume" au `<td>` de la cellule pour l'allumer et en
+        la supprimant pour l'éteindre. Cela se fait au moyen de:
         ```{exec} html
         :when: never
         c.classList.toggle("allume");  // ajoute la classe "allume" à l'élément ou l'efface
         ```
-        Ce code doit remplacer `c.innerHTML = "clic"`.
+        Ce code doit remplacer `c.textContent = "clic"`.
 ````
 
 `````
 `````{tab-item} Étape 5
 :sync: etape5
-
 Ajoutez la fonctionnalité suivante:
 
 Au début du jeu, l'état des cellules doit être déterminé de manière aléatoire.
@@ -139,7 +135,6 @@ c.classList.add("allume");  // ajoute la classe entre parenthèse à l'élément
 `````
 `````{tab-item} Étape 6
 :sync: etape6
-
 Programmez la fin de la partie, c'est-à-dire le moment où toutes les cellules
 sont allumées:
 
@@ -150,44 +145,40 @@ sont allumées:
 
 ````{tip}
 :class: dropdown
-1.  Dans la fonction `gagne`, il faut parcourir la liste de cellules et dès
-    qu'on rencontre une cellule qui n'est pas allumée, on renvoie `False`, car
-    le but n'est pas atteint. À la fin de la fonction, on renvoie `True`, car si
-    on arrive à la fin de la fonction, cela signifie que toutes les cellules
-    sont allumées.
-2.  Pour afficher du texte sur la page, voir comment se fait l'affichage des
-    erreurs dans l'{numref}`exemple %s<ex-js:exemple>`.
+1.  Dans la fonction `gagne`, parcourez la liste des cellules et dès qu'une
+    cellule n'est pas allumée, renvoyez `False` (le but n'est pas atteint). À la
+    fin de la fonction, renvoyez `True` (toutes les cellules sont allumées).
+2.  Pour afficher du texte sur la page, regardez l'affichage de l'erreur dans
+    l'{numref}`exemple %s<ex-js:exemple>`.
 ````
 
 `````
 `````{tab-item} Étape 7
 :sync: etape7
-
 Modifiez la fonction `changeEtat(event)` pour qu'elle suive la règle du jeu,
 c'est-à-dire qu'elle modifie aussi les 4 cellules voisines (au nord, sud, est et
 ouest).
 
 ````{tip}
 :class: dropdown
-On peut convertir l'index d'une cellule en coordonnée (x, y), cela facilite
-grandement les tests pour déterminer les cases à modifier.
+Il est plus facile de travailler avec des coordonnées x et y pour le tableau
+plutôt que d'utiliser l'index. Voici le code qui permet de convertir l'index
+en coodonnées x et y:
 ```{exec} html
 const c = event.target;             // retourne l'élément ciblé
 const index = cellules.indexOf(c);  // retourne l'index de l'élément ciblé
-const x = index % larg;             // calcule la coordonnée x en fonction de la largeur
-const y = Math.trunc(index / larg); // calcule la coordonnée y en fonction de la largeur
+const x = index % larg;             // calcule la coordonnée x en fonction de l'index
+const y = Math.trunc(index / larg); // calcule la coordonnée y en fonction de l'index
 ```
-La fonction suivant permet de passer des coordonnées x et y à l'index:
+Et celui pour convertir les coordonnées x et y en index:
 ```{exec} html
-function changeCoorEnIndex(x, y) {
+function changeCoordEnIndex(x, y) {
     return y * larg + x;
 }
 ```
 ````
-
 `````
 ``````
-
 
 ```{exec} html
 :when: load
@@ -206,12 +197,10 @@ function changeCoorEnIndex(x, y) {
 </style>
 </head>
 <body>
-/* Ajout des éléments HTML */
+<!-- Ajout des éléments HTML -->
 
 <script>
 /* Ajout du JavaScript */
-
-
 
 </script>
 </body>
@@ -230,29 +219,26 @@ function changeCoorEnIndex(x, y) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Création d'un jeu</title>
 <style>
-/* Ajout des styles css */
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 100px;
-    height: 100px;
-}
-
-table, tr {
+table {
+    margin-top: 1em;
     border: 1px solid black;
     border-collapse: collapse;
     margin-left:auto;
     margin-right:auto;
 }
-
+td {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+}
 .allume {
     background: yellow;
 }
-
 #gagne {
+    margin-top: 1em;
     text-align: center;
-    font-size: 6em;
-    color: #C71585;
+    font-weight: bold;
+    color: #c71585;
 }
 </style>
 </head>
@@ -261,35 +247,29 @@ table, tr {
 
 <h2>Règles du jeu</h2>
 <p>Lorsqu'on clique sur une case, celle-ci change d'état ainsi que ses quatre
-voisines (au sud, à l'est, au nord et à l'ouest), si elles existent.</p>
+    voisines (au sud, à l'est, au nord et à l'ouest), si elles existent.</p>
 
 <h2>But</h2>
-<p>Allumer toutes les cellules.<p/>
-
-<br><br><br>
+<p>Allumer toutes les cellules.</p>
 
 <table class="cellules">
     <tr><td></td><td></td><td></td></tr>
     <tr><td></td><td></td><td></td></tr>
     <tr><td></td><td></td><td></td></tr>
 </table>
-
 <div id="gagne"></div>
 
 <script>
-/* Ajout du JavaScript */
-
-const larg = 3;
-const haut = 3;
+const larg = 3, haut = 3;
 const cellules = [...document.querySelectorAll(".cellules td")];
 
-function changeCoorEnIndex(x, y) {
+function changeCoordEnIndex(x, y) {
     return y * larg + x;
 }
 
 function gagne(liste) {
     for (const c of liste) {
-        if (!(c.className == "allume")) {
+        if (!c.classList.contains("allume")) {
             return false;
         }
     }
@@ -302,35 +282,32 @@ function changeEtat(event) {
     const index = cellules.indexOf(c);
     const x = index % larg;
     const y = Math.trunc(index / larg);
-    /* Vérifie qu'on est pas sur la première ligne */
+    cellules[changeCoordEnIndex(x, y)].classList.toggle("allume");
+    /* Vérifie qu'on n'est pas sur la première ligne */
     if (y > 0) {
-        cellules[changeCoorEnIndex(x, y-1)].classList.toggle("allume");
+        cellules[changeCoordEnIndex(x, y - 1)].classList.toggle("allume");
     }
-    /* Vérifie qu'on est pas sur la dernière ligne */
+    /* Vérifie qu'on n'est pas sur la dernière ligne */
     if (y < haut - 1) {
-        cellules[changeCoorEnIndex(x, y+1)].classList.toggle("allume");
+        cellules[changeCoordEnIndex(x, y + 1)].classList.toggle("allume");
     }
     if (x > 0) {
-        cellules[changeCoorEnIndex(x-1, y)].classList.toggle("allume");
+        cellules[changeCoordEnIndex(x - 1, y)].classList.toggle("allume");
     }
-    cellules[changeCoorEnIndex(x, y)].classList.toggle("allume");
     if (x < larg - 1) {
-        cellules[changeCoorEnIndex(x + 1, y)].classList.toggle("allume");
+        cellules[changeCoordEnIndex(x + 1, y)].classList.toggle("allume");
     }
     if (gagne(cellules)) {
-        document.getElementById("gagne").innerHTML = "Bravo, tu as gagné!"
+        document.getElementById("gagne").textContent = "Bravo, tu as gagné!"
     }
 }
 /* boucle sur toutes les cellules pour les initaliser */
 for (const c of cellules) {
     c.addEventListener("click", changeEtat);
-    const n = Math.random();
-    if (n < 0.5) {
+    if (Math.random() < 0.5) {
         c.classList.add("allume");
     }
-
 }
-
 </script>
 </body>
 </html>

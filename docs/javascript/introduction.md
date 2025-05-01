@@ -39,27 +39,29 @@ du deuxième degré.
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Équations du deuxième degré</title>
 <style>
-table, td, tr, th {
-    border: 1px solid black;
-    border-collapse: collapse;
-    margin-left:auto;
-    margin-right:auto;
+table {
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
     table-layout: fixed;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
     width: 100%;
     text-align: center;
-
 }
-
 td {
     height: 1.2em;
 }
-
 #erreur {
+    margin-top: 1em;
     text-align: center;
-    font-size: 2em;
-    color: #FF0000;
+    font-weight: bold;
+    color: #ff0000;
 }
 </style>
 </head>
@@ -70,84 +72,86 @@ td {
 <h2>Demande les coefficients a, b et c à l'utilisateur</h2>
 
 <p>Les coefficients a, b et c sont demandés à l'utilisateur au moyen de
-    l'élément HTML <b>input</b>.</p>
+    l'élément HTML <b><code>&lt;input&gt;</code></b>.</p>
 
 <p>
-a: <input type="number" id="coeffA" value="0"/>
-b: <input type="number" id="coeffB" value="0"/>
-c: <input type="number" id="coeffC" value="0"/>
+a: <input type="number" id="coeffA" value="0">
+b: <input type="number" id="coeffB" value="0">
+c: <input type="number" id="coeffC" value="0">
 <p/>
 
 <h2>Calcule des solutions</h2>
 
-<p> Pour déterminer le nombre de solutions, il faut calculer le discriminant
+<p>Pour déterminer le nombre de solutions, il faut calculer le discriminant
     (&Delta;).</p>
 
 <ul>
-    <li> Si &Delta; &lt; 0, l'équation n'a pas de solution réelle.</li>
-    <li> Si &Delta; = 0, l'équation a une solution: x = -b / 2a.</li>
-    <li> Si &Delta; &gt; 0, l'équation a deux solutions: x1 = (-b + &radic; &Delta;) / 2a et x2 = (-b - &radic; &Delta;) / 2a.</li>
+    <li>Si &Delta; &lt; 0, l'équation n'a pas de solution réelle.</li>
+    <li>Si &Delta; = 0, l'équation a une solution: x = -b / 2a.</li>
+    <li>Si &Delta; &gt; 0, l'équation a deux solutions:
+        x1 = (-b + &radic;<span style="border-top: 1px solid black">&Delta;</span>) / 2a et
+        x2 = (-b - &radic;<span style="border-top: 1px solid black">&Delta;</span>) / 2a.</li>
 </ul>
 
-<button id="bouton1">Calculer les solutions</button> <button id="bouton2">Effacer</button>
-
-<br><br>
-
-<div id="erreur"></div>
+<button id="calculer">Calculer les solutions</button>
+<button id="effacer">Effacer</button>
 
 <table class="solutions">
     <tr>
-        <th>Équation</th>
-        <th>Nombre de solutions</th>
-        <th>Solutions</th>
+        <th>Équation</th><th>Nombre de solutions</th><th>Solutions</th>
     </tr>
     <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td></td><td></td><td></td>
     </tr>
 </table>
 
+<div id="erreur"></div>
+
 <script>
+/* Créé des références pour les éléments que l'on veut modifier */
+const calculer = document.querySelector("#calculer");
+const effacer = document.querySelector("#effacer");
+const erreur = document.querySelector("#erreur");
+
 /* Stocke les cellules du tableau dans une liste */
 const cellules = [...document.querySelectorAll(".solutions td")];
 
-bouton1.addEventListener("click", calculeSol);
-bouton2.addEventListener("click", clear);
-
 function clear() {
     for (const c of cellules) {
-      c.innerHTML = "";
+      c.textContent = "";
     }
-    erreur.innerHTML = "";
+    erreur.textContent = "";
 }
+
+effacer.addEventListener("click", clear);
 
 function calculeSol() {
     clear();
     const a = Number(document.getElementById("coeffA").value);
     const b = Number(document.getElementById("coeffB").value);
     const c = Number(document.getElementById("coeffC").value);
-    cellules[0].innerHTML = a + "x&#178; + " + b + "x + " + c + " = 0";
+    cellules[0].textContent = a + "x² + " + b + "x + " + c + " = 0";
     if (a === 0) {
-        erreur.innerHTML = "Erreur: Ce n'est pas une équation du second degré.";
+        erreur.textContent = "Erreur: Ce n'est pas une équation du second degré.";
+        return;
+    }
+    const delta = b ** 2 - 4 * a * c;
+    if (delta < 0) {
+        cellules[1].textContent = "L'équation n'a pas de solution réelle.";
+        cellules[2].textContent = "/";
+    } else if (delta === 0) {
+        cellules[1].textContent = "L'équation a une solution.";
+        const x = (-b) / (2 * a);
+        cellules[2].textContent = "x = " + x;
     } else {
-        const delta = b ** 2 - 4 * a * c;
-        if (delta < 0) {
-            cellules[1].innerHTML = "L'équation n'a pas de solution réelle.";
-            cellules[2].innerHTML = "/";
-        } else if (delta === 0) {
-            cellules[1].innerHTML = "L'équation a une solution.";
-            const x = (-b) / (2 * a);
-            cellules[2].innerHTML = "x = " + x;
-        } else {
-            cellules[1].innerHTML = "L'équation a deux solutions";
-            const x1 = (-b + Math.sqrt(delta)) / (2 * a);
-            const x2 = (-b - Math.sqrt(delta)) / (2 * a);
-            cellules[2].innerHTML = "x1 = " + x1 + " et x2 = " + x2;
-        }
+        cellules[1].textContent = "L'équation a deux solutions";
+        const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        cellules[2].textContent = "x1 = " + x1 + " et x2 = " + x2;
     }
 }
 
+calculer.addEventListener("click", calculeSol);
 </script>
 </body>
 </html>
@@ -161,7 +165,7 @@ Testez la page avec quelques valeurs différentes pour a, b et c.
 
 Le code HTML est composé de 2 parties:
 - `<head>` qui est l'entête du document et contient un certain nombre
-  d'informations, tel que l'encodage, le titre de l'onglet.
+  d'informations, tels que l'encodage ou le titre de l'onglet.
 - `<body>` qui contient le contenu de la page.
 
 1.  À quelles lignes se trouve l'entête?
@@ -174,8 +178,8 @@ Le code HTML est composé de 2 parties:
 4.  Où se trouve la balise `<script>` qui permet d'intégrer du JavaScript?
 
 ```{solution}
-1. L'entête se trouve entre la ligne 3 et la ligne 28, entre les balise `<head>`et `</head>`.
-2. Le corps se trouve entre la ligne 30 et la ligne 115, entre les balise `<body>`et `</body>`.
+1. L'entête se trouve entre la ligne 3 et la ligne 30, entre les balise `<head>`et `</head>`.
+2. Le corps se trouve entre la ligne 32 et la ligne 119, entre les balise `<body>`et `</body>`.
 3. La balise `<style>` se trouve dans le `<head>`.
 4. La balise `<script>` se trouve à la fin de la balise `<body>`.
 ```
@@ -190,10 +194,10 @@ Différences:
 - Il y a des `;` à la fin des lignes.
 - Il y a des accolades à la place des `:` et de l'indentation.
 - Le mot-clé `function` est utilisé à la place de `def`.
-- Dans les instructions conditionnelle, on écrit `else if` à place de `elif`.
+- Dans les instructions conditionnelles, on écrit `else if` à place de `elif`.
 - Les conditions doivent être mises entre parenthèses.
 - Devant les variables, on ajoute le mot-clé `const` (ou `let` si la valeur change).
-- Pour comparer: === ou !==.
+- Pour comparer: === (égal) ou !== (pas égal).
 ```
 
 
@@ -219,7 +223,8 @@ En JavaScript:
 ...
 <script>
 /* Récupère la valeur du champs texte dont l'identifiant est "mon_input" */
-texte = document.getElementById("mon_input").value`
+/* Stocke la valeur dans la variable a */
+const a = document.getElementById("mon_input").value;
 </script>
 </body>
 ```
@@ -245,7 +250,7 @@ Trouvez les `<input>` contenus dans le code de l'{numref}`exemple %s<ex-js:exemp
 2.  Pourquoi note-on: `Number` devant `document.getElementById("coeffA").value`
 
 ```{solution}
-1.  Aux lignes 90 à 92.
+1.  Aux lignes 93 à 95.
 2.  La valeur retournée par la fonction `document.getElementById("coeffA").value`
     est toujours du texte, il faut donc la convertir en nombre avec la fonction
     `Number()`.
@@ -254,7 +259,7 @@ Trouvez les `<input>` contenus dans le code de l'{numref}`exemple %s<ex-js:exemp
 ### Boucle for
 
 Comme en Python, il est possible de faire une boucle for sur tous les éléments
-d'une liste (appelée tableau en JS).
+d'une liste.
 
 <table><tr style="text-align: center">
   <th>Python</th><th>JavaScript</th>
@@ -272,10 +277,10 @@ for note in notes:
 ```{exec} html
 :when: never
 <script>
-const notes = [5, 5.5, 4, 5.5, 6]
+const notes = [5, 5.5, 4, 5.5, 6];
 for (const note of notes) {
   /* Affiche la valeur sur la console */
-  console.log(note)
+  console.log(note);
 }
 </script>
 ```
@@ -288,7 +293,7 @@ for (const note of notes) {
 2. Expliquez ce que fait cette boucle.
 
 ```{Solution}
-1. Lignes 82 à 84.
+1. Lignes 83 à 85.
 2. Elle efface le contenu des cellules (td) du tableau l'une après l'autre.
 ```
 
@@ -297,23 +302,44 @@ for (const note of notes) {
 Les événements sont des actions qui se produisent sur la page, par exemple
 lorsque l'utilisateur clique sur un bouton.
 
-Pour définir les actions à faire, il faut utiliser la construction suivante:
+Pour définir les actions, il faut:
+
+1.  Dans le HTML, définir un élément qui interagira avec l'utilisateur (ici un
+    bouton).
+2.  Créer une référence sur l'élément que l'on veut modifier.
+3.  Associer l'événement (clic) à la fonction qui sera appelée (action).
 ```{exec} html
 :when: never
+<body>
+...
+<button id="identifiant">Texte affiché sur le bouton</button>
+...
 <script>
-bouton.addEventListener("click", action);
+const nom = document.querySelector("#identifiant");
+
+function action() {
+    ...
+}
+
+nom.addEventListener("click", action);
 </script>
+</body>
 ```
-où `action` est la fonction qui sera appelée au moment du clic sur le bouton.
 
 #### Exercice {num}`exo-js`
 
-1. Quelle fonction est appelée par un clic du bouton1?
-2. Quelle fonction est appelée par un clic du bouton2?
+1. À quelles lignes se trouvent les deux éléments HTML `<button>`?
+2. Quels sont les identifiants de ces deux boutons?
+3. Quelle fonction est utilisée pour créer la référence?
+4. Quelle fonction est appelée par un clic du bouton `calculer`?
+5. Quelle fonction est appelée par un clic du bouton `effacer`?
 
 ```{Solution}
-1. La fonction `calculeSol()`.
-2. La fonction `clear()`.
+1. Au lignes 59 et 60.
+2. L'identifiant du premier est "calculer" et celui du second est "effacer".
+3. document.querySelector("#calculer") et document.querySelector("#effacer")
+4. La fonction `calculeSol()`.
+5. La fonction `clear()`.
 ```
 
 ### Affichage dynamique de texte
@@ -333,16 +359,15 @@ Dans le partie script, il est ainsi possible de changer la valeur du conteneur
 #### Exercice {num}`exo-js`
 
 1.  À quelle ligne se trouve le conteneur pour le message d'erreur?
-2.  Qu'est-ce qui est affiché dans ce conteneur juste après le chargement de la
-    page?
+2.  À quelle ligne est créée la référence du conteneur?
 3.  À quelles lignes la valeur du conteneur est-elle modifiée?
 4.  Quelle syntaxe est utilisée pour modifier la valeur du conteneur?
 
 
 ```{Solution}
-1.  À la ligne 59.
-2.  Rien ne sera afficher, car le conteneur est vide au départ.
-3.  Aux lignes 85 et 95.
-4.  `erreur.innerHTML = "..."`
+1.  À la ligne 71.
+2.  À la ligne 77.
+3.  Aux lignes 86 et 98.
+4.  `erreur.textContent = "..."`
 ```
 
