@@ -294,7 +294,7 @@ for (const note of notes) {
 
 ```{Solution}
 1. Lignes 83 à 85.
-2. Elle efface le contenu des cellules (td) du tableau l'une après l'autre.
+2. Elle efface le contenu des cellules `<td>` du tableau l'une après l'autre.
 ```
 
 ### Interactions entre l'utilisateur et la page web

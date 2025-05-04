@@ -59,8 +59,8 @@ intégrés à la box internet fournie par le fournisseur d'accès internet.
 
 ### Exercice {num}`exo-reseaux`
 
-1.  Qu'est-ce qu'un fournisseur d'accès internet (FAI)s?
-2.  Citez quelques exemples de fournisseur d'accès internet en Suisse.
+1.  Qu'est-ce qu'un fournisseur d'accès internet (FAI)?
+2.  Citez quelques exemples de fournisseurs d'accès internet en Suisse.
 
 ```{solution}
 1.  Un fournisseur d'accès internet est une entreprise qui offre une connexion
@@ -79,12 +79,12 @@ intégrés à la box internet fournie par le fournisseur d'accès internet.
 ```{youtube} HPhUNJ2L8mk
 ```
 
-## Envoi de message à l'intérieur d'un sous-réseau
+## Envoi de messages à l'intérieur d'un sous-réseau
 
 Dans un sous-réseau, chaque machine est reliée à un switch qui gère
 l'acheminement des paquets de l'expéditeur au destinataire:
 
-1.  L'expéditeur découpe ses données en paquet de bits auxquels il ajoute son
+1.  L'expéditeur découpe ses données en paquets de bits auxquels il ajoute son
     adresse et l'adresse du destinataire.
 2.  Si le destinataire est dans le sous-réseau, l'expéditeur envoie le paquet
     directement au destinataire via le switch.
