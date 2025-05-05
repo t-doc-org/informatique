@@ -42,11 +42,11 @@ les câbles TV, ...
 
 Bluetooth:\
 Avantages: facile à utiliser, faible consommation d'énergie, très compatible\
-Inconvénients: faible protée et sensibilités aux interférences\
+Inconvénients: faible protée et sensibilités aux interférences
 
 Wi-Fi:\
 Avantages: mobilité et évite de devoir tirer des fils entre les équipements\
-Inconvénients: interruption de connexion, sécurité moindre et moins rapide\
+Inconvénients: interruption de connexion, sécurité moindre et moins rapide
 
 Ethernet:\
 Avantages: fiable, grande sécurité et rapide\
@@ -54,7 +54,7 @@ Inconvénients: demande la mise un place d'une infrastructure, ne convient pas
 aux appareils mobiles
 
 Fibre optique:\
-Avantages: très bon débit, transmission rapide et sécurisée
+Avantages: très bon débit, transmission rapide et sécurisée\
 Inconvénients: coût et fragilité des câbles
 
 ```
