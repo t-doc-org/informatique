@@ -209,7 +209,7 @@ En Python:
 
 ```{exec} python
 :when: never
-a = input("Texte qui s'affiche"))
+a = input("Texte qui s'affiche")
 ```
 
 En JavaScript:
