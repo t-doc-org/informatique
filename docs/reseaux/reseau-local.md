@@ -15,7 +15,7 @@ même bâtiment (une école, un appartement, une entreprise, etc.).
 
 Il permet notamment:
 
-- la communication entre tous les équipements du réseau.
+- la communication entre tous les équipements du réseau
 - l'échange d'information
 - l'accès à internet
 - l'utilisation d'une imprimante distante connectée au réseau

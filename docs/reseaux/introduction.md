@@ -42,7 +42,7 @@ les câbles TV, ...
 
 Bluetooth:\
 Avantages: facile à utiliser, faible consommation d'énergie, très compatible\
-Inconvénients: faible protée et sensibilités aux interférences
+Inconvénients: faible portée et sensibilités aux interférences
 
 Wi-Fi:\
 Avantages: mobilité et évite de devoir tirer des fils entre les équipements\
