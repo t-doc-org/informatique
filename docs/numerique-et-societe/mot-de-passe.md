@@ -46,10 +46,10 @@ caractères possibles (minuscules, majuscules, chiffres, etc.).
 
 ### Exercice {num}`exo-num`
 
-Les 3 symboles suivants sont à disposition pour faire un mot de passe:
+Les 3 symboles suivants sont à disposition pour générer un mot de passe:
 &#9733; &#9728; et &#9729;
 
-Combien y a-t-il de mots de passe possibles,
+Combien existe-il de mots de passe possibles,
 
 1. <script>tdoc.question("si la longueur du mot de passe est de 1?", {'3': true});</script>
 2. <script>tdoc.question("si la longueur du mot de passe est de 2?", {'9': true});</script>
@@ -73,18 +73,18 @@ sa longueur et la variété des caractères utilisés.
 
 ### Mauvaises pratiques
 
-Beaucoup trop d'utilisateurs ne mettent pas d'importance au choix d'un mot de passe:
+Beaucoup trop d'utilisateurs ne mettent pas d'importance au choix d'un mot de passe et:
 
-1. Laisser le mot de passe d'origine
-2. Utiliser des mots de passe communs tels que 123456, admin, password, azerty, loulou.
-3. Utiliser les mêmes mots de passe pour plusieurs services.
+1. Laisse le mot de passe d'origine
+2. Utilise des mots de passe communs tels que 123456, admin, password, azerty, loulou.
+3. Utilise les mêmes mots de passe pour plusieurs services.
 
 ### Bonnes pratiques
 
-L'idéal est d'utiliser un mot de passe long, facile à retenir:
+L'idéal est d'utiliser un mot de passe long, mais facile à retenir:
 
 1.  Utiliser une phrase:\
-    "J'aime passer mes vacances à la mer en automne"
+    "J'aime passer mes vacances à la mer en automne" ou
     "J'AimePasserMesVacancesALaMerEnAutomne"
 
 2.  Utiliser une suite de mots aléatoires:\
@@ -97,8 +97,9 @@ L'idéal est d'utiliser un mot de passe long, facile à retenir:
 
 En général, il est possible de réinitialiser un mot de passe avec
 1.  des questions secrètes:
-    -   Ne pas utiliser des questions secrètes trop simples à deviner ou qu'on
-        peut trouver sur le web (date d'anniversaire, lieu de naissance, etc.)
+    -   Ne pas utiliser des questions secrètes dont la réponse est trop simple à
+        deviner ou possible à trouver sur le web (date d'anniversaire, lieu de
+        naissance, etc.)
     -   Éviter de publier des informations personnelles sur le web
 
 2.  un mail de récupération:\
