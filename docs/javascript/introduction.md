@@ -4,7 +4,7 @@
 # JavaScript
 
 ```{metadata}
-solutions: remove
+solutions: show
 ```
 
 ## Introduction
