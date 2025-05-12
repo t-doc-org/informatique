@@ -10,7 +10,7 @@ solutions: remove
 ## Introduction
 
 Pendant ce labo, vous allez développer la version "Lights In", du jeu
-["Light Out"](https://fr.wikipedia.org/wiki/Lights_Out_(jeu)) dont le but
+["Lights Out"](https://fr.wikipedia.org/wiki/Lights_Out_(jeu)), dont le but
 est d'allumer toutes les cellules.
 
 Règle du jeu:\
