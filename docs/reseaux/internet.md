@@ -23,7 +23,7 @@ ordinateurs entre eux et qui permet aux ordinateurs de communiquer entre eux.
 
 Le **World Wide Web** qui signifie la toile d'araignée mondiale (abrégé Web) est
 un ensemble de pages, de documents et de ressources publiques, tous reliés les
-uns aux autres par des liens hypertexte
+uns aux autres par des liens hypertextes.
 ```
 
 ## Adressage
