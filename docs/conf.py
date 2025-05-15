@@ -14,6 +14,7 @@ html_theme_options = {
     'repository_url': 'https://github.com/t-doc-org/informatique',
 }
 
+# tdoc_solutions = 'dynamic'
 tdoc = {
     'api_url': 'https://api.t-doc.org' if 'tdoc-dev' not in tags else None,
 }
