@@ -3,7 +3,7 @@
 
 # Vol de données
 ```{metadata}
-solutions: remove
+solutions: dynamic
 scripts:
   - src: quizz-helpers.js
 ```

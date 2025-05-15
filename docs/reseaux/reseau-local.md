@@ -2,7 +2,7 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 ```{metadata}
-solutions: remove
+solutions: dynamic
 scripts:
   - src: quizz-helpers.js
 ```

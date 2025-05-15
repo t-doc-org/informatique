@@ -3,7 +3,7 @@
 
 # Mot de passe
 ```{metadata}
-solutions: remove
+solutions: dynamic
 scripts:
   - src: quizz-helpers.js
 ```

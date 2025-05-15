@@ -4,7 +4,7 @@
 # Cybersécurité
 
 ```{metadata}
-solutions: remove
+solutions: dynamic
 ```
 
 ## Définitions

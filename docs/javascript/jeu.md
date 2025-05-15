@@ -4,7 +4,7 @@
 # Labo - Jeu
 
 ```{metadata}
-solutions: remove
+solutions: dynamic
 ```
 
 ## Introduction
