@@ -69,17 +69,18 @@ correctement détectés.
 
 ````{tip}
 :class: dropdown
-1.  Pour que les clics sur les cellules soient détectés, utilisez
-    `addEventListener` sur chaque cellule. Pour éviter les répétitions, stockez
-    toutes les cellules dans une liste et faites une boucle sur chaque élément
-    (cf {numref}`exemple %s<ex-js:exemple>`).
-2.  La fonction `changeEtat(event)` a un paramètre `event` qui est déclenché par
-    le clic de la souris (ou du touchpad).
+Programmez les éléments suivants en javascript (dans la partie `<script>`):
+
+1.  Créez une liste des cellules.
+2.  Effectuez une boucle sur toutes les cellules pour ajouter `addEventListener`.
+3.  Définissez la fonction `changeEtat(event)` qui a un paramètre `event` qui est
+    déclenché par le clic de la souris (ou du touchpad).
     ```{exec} html
     :when: never
     function changeEtat(event) {
         const c = event.target;    // récupère l'élément html ciblé par le clic
-        ...
+        ...                        // écrit "clic" dans la cellule
+    }
     ```
 ````
 

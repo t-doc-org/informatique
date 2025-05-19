@@ -75,7 +75,7 @@ sa longueur et la variété des caractères utilisés.
 
 Beaucoup trop d'utilisateurs ne mettent pas d'importance au choix d'un mot de passe et:
 
-1. Laisse le mot de passe d'origine
+1. Laisse le mot de passe d'origine.
 2. Utilise des mots de passe communs tels que 123456, admin, password, azerty, loulou.
 3. Utilise les mêmes mots de passe pour plusieurs services.
 

@@ -43,25 +43,25 @@ du deuxième degré.
 <title>Équations du deuxième degré</title>
 <style>
 table {
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
-    table-layout: fixed;
-    border-collapse: collapse;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+  border-collapse: collapse;
 }
 table, th, td {
-    border: 1px solid black;
-    width: 100%;
-    text-align: center;
+  border: 1px solid black;
+  width: 100%;
+  text-align: center;
 }
 td {
-    height: 1.2em;
+  height: 1.2em;
 }
 #erreur {
-    margin-top: 1em;
-    text-align: center;
-    font-weight: bold;
-    color: #ff0000;
+  margin-top: 1em;
+  text-align: center;
+  font-weight: bold;
+  color: #ff0000;
 }
 </style>
 </head>
@@ -86,23 +86,23 @@ c: <input type="number" id="coeffC" value="0">
     (&Delta;).</p>
 
 <ul>
-    <li>Si &Delta; &lt; 0, l'équation n'a pas de solution réelle.</li>
-    <li>Si &Delta; = 0, l'équation a une solution: x = -b / 2a.</li>
-    <li>Si &Delta; &gt; 0, l'équation a deux solutions:
-        x1 = (-b + &radic;<span style="border-top: 1px solid black">&Delta;</span>) / 2a et
-        x2 = (-b - &radic;<span style="border-top: 1px solid black">&Delta;</span>) / 2a.</li>
+  <li>Si &Delta; &lt; 0, l'équation n'a pas de solution réelle.</li>
+  <li>Si &Delta; = 0, l'équation a une solution: x = -b / 2a.</li>
+  <li>Si &Delta; &gt; 0, l'équation a deux solutions:
+    x1 = (-b + &radic;<span style="border-top: 1px solid black">&Delta;</span>) / 2a et
+    x2 = (-b - &radic;<span style="border-top: 1px solid black">&Delta;</span>) / 2a.</li>
 </ul>
 
 <button id="calculer">Calculer les solutions</button>
 <button id="effacer">Effacer</button>
 
 <table class="solutions">
-    <tr>
-        <th>Équation</th><th>Nombre de solutions</th><th>Solutions</th>
-    </tr>
-    <tr>
-        <td></td><td></td><td></td>
-    </tr>
+  <tr>
+    <th>Équation</th><th>Nombre de solutions</th><th>Solutions</th>
+  </tr>
+  <tr>
+    <td></td><td></td><td></td>
+  </tr>
 </table>
 
 <div id="erreur"></div>
@@ -117,38 +117,38 @@ const erreur = document.querySelector("#erreur");
 const cellules = [...document.querySelectorAll(".solutions td")];
 
 function clear() {
-    for (const c of cellules) {
-      c.textContent = "";
-    }
-    erreur.textContent = "";
+  for (const c of cellules) {
+    c.textContent = "";
+  }
+  erreur.textContent = "";
 }
 
 effacer.addEventListener("click", clear);
 
 function calculeSol() {
-    clear();
-    const a = Number(document.getElementById("coeffA").value);
-    const b = Number(document.getElementById("coeffB").value);
-    const c = Number(document.getElementById("coeffC").value);
-    cellules[0].textContent = a + "x² + " + b + "x + " + c + " = 0";
-    if (a === 0) {
-        erreur.textContent = "Erreur: Ce n'est pas une équation du second degré.";
-        return;
-    }
-    const delta = b ** 2 - 4 * a * c;
-    if (delta < 0) {
-        cellules[1].textContent = "L'équation n'a pas de solution réelle.";
-        cellules[2].textContent = "/";
-    } else if (delta === 0) {
-        cellules[1].textContent = "L'équation a une solution.";
-        const x = (-b) / (2 * a);
-        cellules[2].textContent = "x = " + x;
-    } else {
-        cellules[1].textContent = "L'équation a deux solutions";
-        const x1 = (-b + Math.sqrt(delta)) / (2 * a);
-        const x2 = (-b - Math.sqrt(delta)) / (2 * a);
-        cellules[2].textContent = "x1 = " + x1 + " et x2 = " + x2;
-    }
+  clear();
+  const a = Number(document.getElementById("coeffA").value);
+  const b = Number(document.getElementById("coeffB").value);
+  const c = Number(document.getElementById("coeffC").value);
+  cellules[0].textContent = a + "x² + " + b + "x + " + c + " = 0";
+  if (a === 0) {
+    erreur.textContent = "Erreur: Ce n'est pas une équation du second degré.";
+    return;
+  }
+  const delta = b ** 2 - 4 * a * c;
+  if (delta < 0) {
+    cellules[1].textContent = "L'équation n'a pas de solution réelle.";
+    cellules[2].textContent = "/";
+  } else if (delta === 0) {
+    cellules[1].textContent = "L'équation a une solution.";
+    const x = (-b) / (2 * a);
+    cellules[2].textContent = "x = " + x;
+  } else {
+    cellules[1].textContent = "L'équation a deux solutions";
+    const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+    const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+    cellules[2].textContent = "x1 = " + x1 + " et x2 = " + x2;
+  }
 }
 
 calculer.addEventListener("click", calculeSol);
