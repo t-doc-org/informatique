@@ -69,7 +69,7 @@ correctement détectés.
 
 ````{tip}
 :class: dropdown
-Programmez les éléments suivants en javascript (dans la partie `<script>`):
+Programmez les éléments suivants en JavaScript (dans la partie `<script>`):
 
 1.  Créez une liste des cellules.
 2.  Effectuez une boucle sur toutes les cellules pour ajouter `addEventListener`.
