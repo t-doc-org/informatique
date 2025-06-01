@@ -56,7 +56,7 @@ grâce à son adresse IP.
 ### IPv4
 
 IPv4 est la première version du protocole. Les adresses sont représentées sous
-la forme de quatre nombre entiers compris entre 0 et 255 (8 bits) séparés par
+la forme de quatre nombres entiers compris entre 0 et 255 (8 bits) séparés par
 des points. Voici une adresse IPv4 publique d'un des routeurs du collège:
 
 $$\texttt{156.25.4.249}$$
@@ -91,7 +91,7 @@ Actuellement les deux systèmes sont encore utilisés.
 ## Adresses privées versus adresses publiques
 
 Dans un réseau local, des adresses IP privées sont attribuées (en général sous
-la forme. pas 10.x.x.x) à chaque équipement (ordinateurs, tablettes, téléphones,
+la forme de 10.x.x.x) à chaque équipement (ordinateurs, tablettes, téléphones,
 imprimantes, etc.), ainsi qu'au routeur du réseau. Ce routeur, pour être aussi
 atteignable depuis internet, a également une adresse publique.
 
@@ -138,7 +138,8 @@ Recherchez sur le web:
 ```{solution}
 1.  Un nom de domaine est une adresse internet d'un site web, facile à
     communiquer. Il est unique, mais peut contenir un sous-ensemble de pages.
-    Le nom de domaine du collège est: [https://cscfr.ch](https://cscfr.ch)
+    Le nom de domaine du collège est: [https://cscfr.ch](https://cscfr.ch).
+
     Il contient plusieurs pages:
     - [https://new.cscfr.ch/index.php/fr/](https://new.cscfr.ch/index.php/fr/)
     - [https://new.cscfr.ch/index.php/fr/notre-college/adresse-du-college](https://new.cscfr.ch/index.php/fr/notre-college/adresse-du-college)
@@ -148,4 +149,41 @@ Recherchez sur le web:
     de domaine internet à leur adresse IP, difficile à retenir ou transmettre.
 
 L'adresse IP du domaine [https://cscfr.ch](https://cscfr.ch) est 128.65.195.54
+```
+
+## Cables sous-marins
+
+### Exercice {num}`exo-reseaux`
+
+Répondez aux questions en lien avec la vidéo suivante:
+["Du télégraphe à Internet: l'incroyable histoire des câbles sous-marins"](https://www.nanoo.tv/link/v/2535386
+)
+
+1.  Quand et dans quel but les premiers câbles sous-marins opérationnels ont-ils
+    été posés?
+2.  Quelle est l'importance actuelle des câbles sous-marins pour le
+    fonctionnement d'Internet?
+3.  Qui sont les principaux acteurs impliqués dans le marché des câbles
+    sous-marins en 2021?
+4.  Quels sont les différents types de risques et de menaces auxquels les câbles
+    sous-marins sont confrontés?
+5.  Quelle est la durée de vie moyenne d'un câble sous-marin?
+
+```{solution}
+1.  Le premier câble télégraphique sous-marin opérationnel a été posé en 1851.
+    Il reliait la ville de Calais, en France, à celle de Douvres, au
+    Royaume-Uni. Le but était de permettre un échange rapide de messages entre
+    les deux côtés de la Manche.
+2.  Sans les câbles sous-marins, Internet ne pourrait tout simplement pas
+    fonctionner, car 99% du trafic circule par ceux-ci.
+3.  Les principaux acteurs sont les fabriquants (Nokia, Huawei Marine Networks),
+    les sociétés de pose et de maintenance, les exploitants de câbles (les
+    opérateurs télécoms) et les géants du Net (GAFAM).
+4.  Les risques sont les suivants:
+        - l'espionnage
+        - le sabotage
+        - des attaques par des requins (attirés par les ondes électriques)
+        - les chalutiers (filets de pêche)
+        - les événements naturels sous-marins (avalanche de boue)
+5.  La durée de vie moyenne est de 25 à 30 ans. Que se passe-t-il après?
 ```
