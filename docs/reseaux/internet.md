@@ -180,10 +180,10 @@ Répondez aux questions en lien avec la vidéo suivante:
     les sociétés de pose et de maintenance, les exploitants de câbles (les
     opérateurs télécoms) et les géants du Net (GAFAM).
 4.  Les risques sont les suivants:
-        - l'espionnage
-        - le sabotage
-        - des attaques par des requins (attirés par les ondes électriques)
-        - les chalutiers (filets de pêche)
-        - les événements naturels sous-marins (avalanche de boue)
+    - l'espionnage
+    - le sabotage
+    - des attaques par des requins (attirés par les ondes électriques)
+    - les chalutiers (filets de pêche)
+    - les événements naturels sous-marins (avalanche de boue)
 5.  La durée de vie moyenne est de 25 à 30 ans. Que se passe-t-il après?
 ```
