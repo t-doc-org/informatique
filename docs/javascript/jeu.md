@@ -164,7 +164,7 @@ ouest).
 :class: dropdown
 Il est plus facile de travailler avec des coordonnées x et y pour le tableau
 plutôt que d'utiliser l'index. Voici le code qui permet de convertir l'index
-en coodonnées x et y:
+en coordonnées x et y:
 ```{exec} html
 const c = event.target;             // retourne l'élément ciblé
 const index = cellules.indexOf(c);  // retourne l'index de l'élément ciblé
@@ -299,7 +299,7 @@ function changeEtat(event) {
         cellules[changeCoordEnIndex(x + 1, y)].classList.toggle("allume");
     }
     if (gagne(cellules)) {
-        document.getElementById("gagne").textContent = "Bravo, tu as gagné!"
+        document.getElementById("gagne").textContent = "Bravo, tu as gagné!";
     }
 }
 /* boucle sur toutes les cellules pour les initaliser */
