@@ -25,7 +25,7 @@ l'accéléromètre, comme si vous aviez une boule en équilibre sur l'écran.
 
 Le programme affiche ce que les fonctions `accelerometer.get_x()` et
 `accelerometer.get_x()` renvoient.\
-Essayez de comprendre comment cela fonctionne en inclinant le microbit doucement
+Essayez de comprendre comment cela fonctionne en inclinant le micro:bit doucement
 dans différentes directions.\
 Quelles sont les valeurs de x et y quand vous penchez à droite?\
 Quelles sont les valeurs de x et y quand vous penchez à gauche?\
@@ -75,8 +75,15 @@ En utilisant une boucle `while True`, faites en sorte que lorsque vous
 inclinez le micro:bit dans une direction, le pixel se déplace aussi dans
 cette direction.
 
-Utilisez les valeurs de `accelerometer.get_x()` et `accelerometer.get_y()`.
-
+1.  Interroger les capteurs:\
+    Stockez les valeurs de `accelerometer.get_x()` et `accelerometer.get_y()`
+    dans des variables `ax`et `ay`.
+2.  Définir le seuil:\
+    En vous aidant des valeurs trouvées dans la partie "Accéléromètre",
+    définissez le seuil de l'accéléromètre `SEUIL_ACC`.
+3.  Modifier la position du joueur:\
+    Testez si la valeur de la variable `ax` dépasse ou est en dessous du seuil
+    `SEUIL_ACC`, idem pour `ay`.
 ```
 ```{tab-item} Étape 3
 :sync: etape3
