@@ -150,9 +150,6 @@ SEUIL_ACC = 100
 nouvelle_manche()
 score = 0
 
-display.set_pixel(x, y, 9)
-display.set_pixel(but_x, but_y, 2)
-
 while True:
   # mise à jour de l'écran
   display.clear()
