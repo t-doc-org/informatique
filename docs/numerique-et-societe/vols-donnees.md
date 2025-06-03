@@ -123,6 +123,10 @@ Lorsque vous recevez un mail ou un sms, vérifiez:
 Si vous vous êtes fait avoir, changez les mots de passe et/ou faites bloquer les
 comptes au plus vite.
 
+### Exemple {num}`ex-num`
+
+["ABE - Hameçonnage"](https://www.nanoo.tv/link/v/LhTeiDga)
+
 ### Exercice {num}`exo-num`
 
 Effectuez les quizz sur les pages suivantes:
@@ -130,6 +134,3 @@ Effectuez les quizz sur les pages suivantes:
 1.  [Savez-vous reconnaître une tentative d'hameçonnage?](https://phishingquiz.withgoogle.com/)
 2.  [Test sur le phishing](https://www.ebas.ch/fr/test-sur-le-hameconnage/)
 
-### Exemple {num}`ex-num`
-
-["ABE - Hameçonnage"](https://www.nanoo.tv/link/v/LhTeiDga)
