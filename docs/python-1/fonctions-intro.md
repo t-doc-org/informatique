@@ -173,7 +173,7 @@ diagonale()
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-tour-1-check
-# définition de la fonction diagonals
+# définition de la fonction diagonal
 def diagonale():
   est()
   nord()
