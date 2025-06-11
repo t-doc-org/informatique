@@ -163,6 +163,14 @@ Routeur E:
 |C | B | 3 |
 |D | D | 1 |
 
+````{solution}
+```{figure} images/routage-sol.png
+:alt: Solution de routage possible
+:width: 50%
+:align: center
+```
+````
+
 ### Exercice {num}`exo-reseaux`
 
 Complétez le chemin (noms des routeurs) par lequel passe un message pour
