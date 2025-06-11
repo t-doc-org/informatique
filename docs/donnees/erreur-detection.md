@@ -323,7 +323,7 @@ L'algorithme de Luhn permet-il de détecter:
     Exemple:\
     4713, la somme vaut $8 + 7 + 2 + 3 =  20$ &#8658; correct\
     <span style="color:red">7</span><span style="color:red">4</span>13, la somme
-    vaut $1 + 4 + 4 + 2 + 3 = 14$ &#8658; caux
+    vaut $1 + 4 + 4 + 2 + 3 = 14$ &#8658; faux
 ```
 
 ### Exercice {num}`exo-donnees`
