@@ -3,8 +3,6 @@
 
 ```{metadata}
 solutions: dynamic
-scripts:
-  - src: quizz-helpers.js
 ```
 
 # Routage
@@ -77,91 +75,102 @@ Le réseau de routeurs suivant est donné.
 
 Complétez les tables de routages suivantes.
 
-Routeur B:
+```{role} input(quizz-input)
+:style: width: 3rem; text-align: center;
+:check: split trim uppercase
+```
 
+**Routeur B:**
+
+```{quizz}
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
-|A | A | 1 |
-|C | D | 2 |
-|D | | |
-|E | | |
-|F | | |
-|G | | |
-|H | | |
+| A | A | 1 |
+| C | D | 2 |
+| D | {input}`D` | {input}`1` |
+| E | {input}`A` | {input}`2` |
+| F | {input}`D` | {input}`3` |
+| G | {input}`A,D` | {input}`3` |
+| H | {input}`D` | {input}`4` |
+```
 
-Routeur F:
+**Routeur F:**
 
+```{quizz}
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
-|A | | |
-|B | | |
-|C | | |
-|D | | |
-|E | | |
-|G | | |
-|H | | |
+| A | {input}`C,H` | {input}`4` |
+| B | {input}`C` | {input}`3` |
+| C | {input}`C` | {input}`1` |
+| D | {input}`C` | {input}`2` |
+| E | {input}`C,H` | {input}`3` |
+| G | {input}`C,H` | {input}`2` |
+| H | {input}`H` | {input}`1` |
+```
 
-Routeur C:
+**Routeur C:**
 
+```{quizz}
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
-|A | | |
-|B | | |
-|D | | |
-|E | | |
-|F | | |
-|G | | |
-|H | | |
+| A | {input}`D,G` | {input}`3` |
+| B | {input}`D` | {input}`2` |
+| D | {input}`D` | {input}`1` |
+| E | {input}`G` | {input}`2` |
+| F | {input}`F` | {input}`1` |
+| G | {input}`G` | {input}`1` |
+| H | {input}`F,G` | {input}`2` |
+```
 
 ### Exercice {num}`exo-reseaux`
 
 Proposez un réseau de routeurs qui corresponde aux tables de routages données
 ci-dessous.
 
-Routeur A:
+**Routeur A:**
 
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
-|B | B | 1 |
-|C | C | 1 |
-|D | B | 2 |
-|E | B | 2 |
+| B | B | 1 |
+| C | C | 1 |
+| D | B | 2 |
+| E | B | 2 |
 
-Routeur B:
-
-| Destination | Routeur suivant | Distance |
-| :---------: | :-------------: | :------: |
-|A | A | 1 |
-|C | A | 2 |
-|D | D | 1 |
-|E | E | 1 |
-
-Routeur C:
+**Routeur B:**
 
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
-|A | A | 1 |
-|B | A | 2 |
-|D | A | 3 |
-|E | A | 3 |
+| A | A | 1 |
+| C | A | 2 |
+| D | D | 1 |
+| E | E | 1 |
 
-Routeur D:
-
-| Destination | Routeur suivant | Distance |
-| :---------: | :-------------: | :------: |
-|A | B | 2 |
-|B | B | 1 |
-|C | B | 3 |
-|E | E | 1 |
-
-Routeur E:
+**Routeur C:**
 
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
-|A | B | 2 |
-|B | B | 1 |
-|C | B | 3 |
-|D | D | 1 |
+| A | A | 1 |
+| B | A | 2 |
+| D | A | 3 |
+| E | A | 3 |
+
+**Routeur D:**
+
+| Destination | Routeur suivant | Distance |
+| :---------: | :-------------: | :------: |
+| A | B | 2 |
+| B | B | 1 |
+| C | B | 3 |
+| E | E | 1 |
+
+**Routeur E:**
+
+| Destination | Routeur suivant | Distance |
+| :---------: | :-------------: | :------: |
+| A | B | 2 |
+| B | B | 1 |
+| C | B | 3 |
+| D | D | 1 |
 
 ````{solution}
 ```{figure} images/routage-sol.png
@@ -177,61 +186,66 @@ Complétez le chemin (noms des routeurs) par lequel passe un message pour
 atteindre sa destination depuis son point de départ en regardant seulement les
 tables de routages.
 
+```{role} input(quizz-input)
+:style: width: 5rem; text-align: center;
+```
+
+```{quizz}
 | Départ | Destination | Chemin |
-| :---------: | :-------------: | :------: |
-|D | A |  |
-|C | E |  |
-|A | F |  |
-|F | A |  |
-|D | C |  |
+| :----: | :---------: | :----: |
+| D | A | {input}`DBCA` |
+| C | E | {input}`CBE` |
+| A | F | {input}`ACF` |
+| F | A | {input}`FCA` |
+| D | C | {input}`DBC` |
+```
 
-
-Routeur A:
-
-| Destination | Routeur suivant | Distance |
-| :---------: | :-------------: | :------: |
-|B | C | 2 |
-|C | C | 1 |
-|D | C | 3 |
-|E | C | 3 |
-|F | C | 2 |
-
-Routeur B:
+**Routeur A:**
 
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
-|A | C | 2 |
-|C | C | 1 |
-|D | D | 1 |
-|E | D | 1 |
-|F | C | 2 |
+| B | C | 2 |
+| C | C | 1 |
+| D | C | 3 |
+| E | C | 3 |
+| F | C | 2 |
 
-Routeur C:
-
-| Destination | Routeur suivant | Distance |
-| :---------: | :-------------: | :------: |
-|A | A | 1 |
-|B | B | 1 |
-|D | B | 2 |
-|E | B | 2 |
-|F | F | 1 |
-
-Routeur D:
+**Routeur B:**
 
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
-|A | B | 3 |
-|B | B | 1 |
-|C | B | 2 |
-|E | B | 2 |
-|F | B | 3 |
+| A | C | 2 |
+| C | C | 1 |
+| D | D | 1 |
+| E | E | 1 |
+| F | C | 2 |
 
-Routeur E:
+**Routeur C:**
 
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
-|A | B | 3 |
-|B | B | 1 |
-|C | B | 2 |
-|D | B | 2 |
-|E | B | 3 |
+| A | A | 1 |
+| B | B | 1 |
+| D | B | 2 |
+| E | B | 2 |
+| F | F | 1 |
+
+**Routeur D:**
+
+| Destination | Routeur suivant | Distance |
+| :---------: | :-------------: | :------: |
+| A | B | 3 |
+| B | B | 1 |
+| C | B | 2 |
+| E | B | 2 |
+| F | B | 3 |
+
+**Routeur E:**
+
+| Destination | Routeur suivant | Distance |
+| :---------: | :-------------: | :------: |
+| A | B | 3 |
+| B | B | 1 |
+| C | B | 2 |
+| D | B | 2 |
+| E | B | 3 |

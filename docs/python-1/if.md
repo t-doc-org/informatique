@@ -3,11 +3,6 @@
 
 # Instructions conditionnelles
 
-```{metadata}
-scripts:
-  - src: quizz-helpers.js
-```
-
 Une instruction conditionnelle est composée d'une **condition** puis d'un
 **bloc d'instructions**. La condition est une expression ou une variable logique
 évaluée par `True` ou `False`. Le bloc d'instructions s'exécute seulement si la
@@ -31,16 +26,24 @@ Le résultat de la comparaison est de type booléen: True ou False.
 
 Est-ce que les expressions suivantes sont `True` (vrai) ou `False` (faux)?
 
-1.  <script>tdoc.question("1 + 1 == 2", {'true': true, 'vrai': true});</script>
-2.  <script>tdoc.question("2 * 3 == 3", {'false': true, 'faux': true});</script>
-3.  <script>tdoc.question("2 + 3 != 4", {'true': true, 'vrai': true});</script>
-4.  <script>tdoc.question("14 >= 15", {'false': true, 'faux': true});</script>
-5.  <script>
-    tdoc.question("2 ** 3 == 6", {'false': true, 'faux': true});
-    </script>
-6.  <script>tdoc.question("13 >= 13", {'true': true, 'vrai': true});</script>
+```{role} select(quizz-select)
+:right:
+:options: |
+: True
+: False
+```
 
-## Exemple if {num}`ex-py1`
+```{quizz}
+:style: max-width: 25rem;
+1.  {select}`True`  `1 + 1 == 2`
+2.  {select}`False` `2 * 3 == 3`
+3.  {select}`True`  `2 + 3 != 4`
+4.  {select}`False` `14 >= 15`
+5.  {select}`False` `2 ** 3 == 6`
+6.  {select}`True`  `13 >= 13`
+```
+
+## Exemple {num}`ex-py1` (if)
 
 Le bloc d'instructions ne sera exécuté que si la condition est vraie.
 
@@ -64,7 +67,7 @@ print("Fin")
 Dans l'exemple ci-dessus, il ne se passe rien, la condition n'est pas vérifiée.\
 Changez la valeur de la variable `meteo` en "pluie". Que se passe-t-il?
 
-## Exemple if ... else {num}`ex-py1`
+## Exemple {num}`ex-py1` (if ... else)
 
 Le bloc d'instructions après le `if` sera exécuté si la condition est vraie,
 sinon ce sera le bloc d'instructions du `else` qui sera exécuté.
@@ -93,7 +96,7 @@ Dans l'exemple ci-dessus, soit la moyenne est suffisante (moyenne supérieure ou
 d'autres possibilités. Changez la valeur de la variable `moyenne` en 3. Que se
 passe-t-il?
 
-## Exemple if ... elif ... else {num}`ex-py1`
+## Exemple {num}`ex-py1` (if ... elif ... else)
 
 Certaines situations nécessitent de distinguer plus qu'un ou deux cas.
 
@@ -239,6 +242,15 @@ else:
 
 ### Exercice {num}`exo-py1`
 
+```{role} input(quizz-input)
+:right: width: 10rem;
+:check: json remove-whitespace
+```
+
+````{quizz}
+{input}`{"0": true, "-x+2": "Il faut remplacer x par sa valeur."}`
+Que va afficher ce programme?
+
 ```{code-block} python
 :linenos:
 x = 2
@@ -246,15 +258,10 @@ if x <= -1:
   print(2 * x + 1)
 elif x <= 3:
   print(-x + 2)
-else :
+else:
   print(2 * x - 5)
 ```
-
-<script>
-tdoc.question("Que va afficher ce programme?", {
-  '0': true, '-x+2': "Il faut remplacer x par sa valeur.",
-});
-</script>
+````
 
 ### Exercice {num}`exo-py1`
 
@@ -505,19 +512,19 @@ Les opérateurs logiques permettent de combiner plusieurs conditions simples
 
 ### Exemple {num}`ex-py1`
 
-(5 < 3) and (2 < 6) retourne `False`, car 5 < 3 retourne `False`.
+`(5 < 3) and (2 < 6)` retourne `False`, car `5 < 3` retourne `False`.
 
-(5 < 3) or (2 < 6) retourne `True`, car 2 < 6 retourne `True`.
+`(5 < 3) or (2 < 6)` retourne `True`, car `2 < 6` retourne `True`.
 
-(2 < 3) and (2 < 6) retourne `True`, car 2 < 3 retourne `True` et 2 < 6 retourne
- `True`.
+`(2 < 3) and (2 < 6)` retourne `True`, car `2 < 3` retourne `True` et `2 < 6`
+retourne `True`.
 
-(2 > 3) or (2 > 6) retourne `False`, car 2 > 3 retourne `False` et 2 > 6 retourne
- `False`.
+`(2 > 3) or (2 > 6)` retourne `False`, car `2 > 3` retourne `False` et `2 > 6`
+retourne `False`.
 
- not(4 == 4) retourne `False`, car 4 == 4 retourne `True`.
+`not (4 == 4)` retourne `False`, car `4 == 4` retourne `True`.
 
- not(3 == 4) retourne `True`, car 3 == 4 retourne `False`.
+`not (3 == 4)` retourne `True`, car `3 == 4` retourne `False`.
 
 ### Exercice {num}`exo-py1`
 
@@ -571,7 +578,6 @@ nb_seances = int(input("Nombre de séances: "))
 # Complétez le programme
 prixA = ...
 prixB = ...
-
 ```
 
 ````{solution}
@@ -614,7 +620,6 @@ if nombre_2 > max :
 if nombre_3 > max :
   max = nombre_3
 print("Le plus grand nombre est", max)
-
 ```
 ````
 

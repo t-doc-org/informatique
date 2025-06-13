@@ -42,47 +42,55 @@ identique dans tous les pays.
 
 Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
 
-<script>
-async function questionEncode(prompt) {
-    const node = document.currentScript;
-    const quizz = await tdoc.import('tdoc/quizz.js');
+<script type="module">
+const core = await tdoc.import('tdoc/core.js');
+const quizz = await tdoc.import('tdoc/quizz.js');
+
+quizz.checks.encode = args => {
+    const text = core.qs(args.field.closest('p'), 'code').textContent;
     const codes = [];
-    for (let i = 0; i < prompt.length; ++i) {
-      codes.push(prompt.charCodeAt(i).toString(16).padStart(2, '0'));
+    for (let i = 0; i < text.length; ++i) {
+      codes.push(core.toRadix(text.charCodeAt(i), 16, 2));
     }
-    const value = codes.join('').toUpperCase();
-    quizz.question(node, prompt, resp => {
-        resp = resp.replaceAll(' ', '').toUpperCase();
-        return resp === value;
-    });
-}
+    args.solution = codes.join('');
+};
+
+quizz.checks.decode = args => {
+    const text = core.qs(args.field.closest('p'), 'code').textContent;
+    let s = '';
+    for (const c of text.split(/\s+/)) {
+      s += String.fromCharCode(Number.parseInt(c, 16));
+    }
+    args.solution = s;
+};
 </script>
 
-1.  <script>questionEncode("INFO");</script>
-2.  <script>questionEncode("hello");</script>
-3.  <script>questionEncode("Bonjour");</script>
-4.  <script>questionEncode(";-)");</script>
+```{role} input(quizz-input)
+:right: width: 10rem;
+:check: encode uppercase remove-whitespace
+```
+
+```{quizz}
+:style: max-width: 25rem;
+1.  {input}`?`  `INFO`
+2.  {input}`?`  `hello`
+3.  {input}`?`  `Bonjour`
+4.  {input}`?`  `;-)`
+```
 
 ## Exercice {num}`exo-info`
 
 Convertir le texte suivant écrit en code ASCII hexadécimal.
 
-<script>
-async function questionDecode(prompt) {
-  const node = document.currentScript;
-  const quizz = await tdoc.import('tdoc/quizz.js');
-  let value = '';
-  for (const c of prompt.split(' ')) {
-    value += String.fromCharCode(Number.parseInt(c, 16));
-  }
-  quizz.question(node, prompt, resp => resp === value);
-}
-</script>
+```{role} input(quizz-input)
+:right: width: 15rem;
+:check: decode
+```
 
-- <script>
-  questionDecode(
-    '4A 27 61 69 6D 65 20 6C 27 69 6E 66 6F 72 6D 61 74 69 71 75 65 21');
-  </script>
+```{quizz}
+- {input}`?`
+  `4A 27 61 69 6D 65 20 6C 27 69 6E 66 6F 72 6D 61 74 69 71 75 65 21`
+```
 
 ## Exercice {num}`exo-info`
 

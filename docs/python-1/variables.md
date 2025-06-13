@@ -3,11 +3,6 @@
 
 # Variables
 
-```{metadata}
-scripts:
-  - src: quizz-helpers.js
-```
-
 ## Définition
 
 Nous pouvons nous représenter une variable comme l'association d'une étiquette
@@ -54,24 +49,30 @@ En Python, il existe 4 types de données primitifs.
 
 ### Exercice {num}`exo-py1`
 
-De quel type sont les variables suivantes:
+De quel type sont les valeurs suivantes?
 
-1.  <script>tdoc.question('60', {'int': true, 'integer': true});</script>
-2.  <script>
-    tdoc.question('"Hello Bob"', {'str': true, 'string': true});
-    </script>
-3.  <script>tdoc.question('1.34', {'float': true, 'flottant': true});</script>
-4.  <script>
-    tdoc.question('True', {'bool': true, 'booléen': true, 'boolean': true});
-    </script>
-5.  <script>tdoc.question('"45"', {'str': true, 'string': true});</script>
-6.  <script>tdoc.question('-1.23', {'float': true, 'flottant': true});</script>
-7.  <script>tdoc.question('"False"', {'str': true, 'string': true});</script>
-8.  <script>tdoc.question('0.34', {'float': true, 'flottant': true});</script>
-9.  <script>tdoc.question('-12', {'int': true, 'integer': true});</script>
-10. <script>
-    tdoc.question('False', {'bool': true, 'booléen': true, 'boolean': true});
-    </script>
+```{role} select(quizz-select)
+:right:
+:options: |
+: int
+: float
+: str
+: bool
+```
+
+```{quizz}
+:style: max-width: 20rem;
+1.  {select}`int`   `60`
+2.  {select}`str`   `"Hello Bob"`
+3.  {select}`float` `1.34`
+4.  {select}`bool`  `True`
+5.  {select}`str`   `"45"`
+6.  {select}`float` `-1.23`
+7.  {select}`str`   `"False"`
+8.  {select}`float` `0.34`
+9.  {select}`int`   `-12`
+10. {select}`bool`  `False`
+```
 
 ## Affectation d'une variable
 
@@ -141,32 +142,30 @@ nombres.
 
 Quel est le résultat des expressions suivantes en Python?
 
-1.  <script>
-    tdoc.question('15 // 4 =', {'3': true},
-                  "Il faut effectuer la division entière de 15 par 4.");
-    </script>
+```{role} input(quizz-input)
+:right: width: 5rem;
+:check: json trim
+```
 
-2.  <script>
-    tdoc.question('16 % 5 =', {'1': true},
-                  "% est le reste de la division entière.");
-    </script>
-
-3.  <script>
-    tdoc.question('12 / 5 =', {
-      '2.4': true,
-      '2,4': "En Python, il faut utiliser des points pour les nombres à " +
-             "virgule.",
-    }, "Il faut effectuer la division.");
-    </script>
-
-4.  <script>
-    tdoc.question('4 - 3 * 2 =', {
-      '-2': true,
-      '2': "En Python, l'ordre de priorité est le même qu'en maths.",
-    });
-    </script>
-
-5.  <script>tdoc.question('(1 + 2) ** 2 - 1 =', {'8': true});</script>
+```{quizz}
+:style: max-width: 30rem;
+1.  {input}`{"3": true}`
+    {quizz-hint}`Il faut effectuer la division entière de 15 par 4.`
+    `15 // 4`
+2.  {input}`{"1": true}`
+    {quizz-hint}`% est le reste de la division entière.`
+    `16 % 5`
+3.  {input}`{"2.4": true,
+             "2,4": "En Python, il faut utiliser un point pour les nombres à
+                     virgule."}`
+    {quizz-hint}`Il faut effectuer la division.`
+    `12 / 5`
+4.  {input}`{"-2": true,
+             "2": "En Python, l'ordre de priorité est le même qu'en maths."}`
+    `4 - 3 * 2`
+5.  {input}`{"8": true}`
+    `(1 + 2) ** 2 - 1`
+```
 
 ## Exécution d'un programme
 

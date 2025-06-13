@@ -3,8 +3,6 @@
 
 ```{metadata}
 solutions: dynamic
-scripts:
-  - src: quizz-helpers.js
 ```
 
 # Internet
@@ -102,7 +100,6 @@ l'une pour les documents déposés par les élèves et le personnel enseignant, 
 l'autre réservée au facteur qui apporte le courrier provenant de l'extérieur du
 collège.
 
-
 ```{figure} images/ip.svg
 :alt: Réseau local
 :width: 100 %
@@ -116,11 +113,10 @@ Source: [https://apprendre.modulo-info.ch](https://apprendre.modulo-info.ch/resx
 
 Dans un terminal, tapez la commande suivante qui détermine votre adresse IP:
 
-- sur Mac Os ou Linux: ipconfig getifaddr en0
-- sur Windows: ipconfig
+- sur Mac Os ou Linux: `ipconfig getifaddr en0`
+- sur Windows: `ipconfig`
 
 Obtenez-vous la même réponse? Pourquoi?
-
 
 ```{solution}
 Sur le site, l'adresse IP publique du routeur de l'école est donnée, alors
@@ -156,8 +152,7 @@ L'adresse IP du domaine [https://cscfr.ch](https://cscfr.ch) est 128.65.195.54
 ### Exercice {num}`exo-reseaux`
 
 Répondez aux questions en lien avec la vidéo suivante:
-["Du télégraphe à Internet: l'incroyable histoire des câbles sous-marins"](https://www.nanoo.tv/link/v/2535386
-)
+"[Du télégraphe à Internet: l'incroyable histoire des câbles sous-marins](https://www.nanoo.tv/link/v/2535386)"
 
 1.  Quand et dans quel but les premiers câbles sous-marins opérationnels ont-ils
     été posés?

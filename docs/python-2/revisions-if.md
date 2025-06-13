@@ -3,11 +3,6 @@
 
 # Révisions - Instructions conditionnelles
 
-```{metadata}
-scripts:
-  - src: quizz-helpers.js
-```
-
 Une instruction conditionnelle est composée d'une **condition** puis d'un
 **bloc d'instructions**. La condition est une expression ou une variable logique
 évaluée par `True` ou `False`. Le bloc d'instructions s'exécute seulement si la
@@ -127,22 +122,26 @@ else:
 
 ## Exercice {num}`exo-py2-rev`
 
+```{role} input(quizz-input)
+:right: width: 10rem;
+:check: json remove-whitespace
+```
+
+````{quizz}
+{input}`{"0": true, "-x+2": "Il faut remplacer x par sa valeur."}`
+Que va afficher ce programme?
+
 ```{code-block} python
 :linenos:
 x = 2
-if x <= -1 :
+if x <= -1:
   print(2 * x + 1)
-elif x <=3 :
+elif x <= 3:
   print(-x + 2)
-else :
+else:
   print(2 * x - 5)
 ```
-
-<script>
-tdoc.question("Que va afficher ce programme?", {
-  '0': true, '-x+2': "Il faut remplacer x par sa valeur.",
-});
-</script>
+````
 
 ## Exercice {num}`exo-py2-rev`
 

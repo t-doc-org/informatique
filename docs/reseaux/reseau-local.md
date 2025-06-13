@@ -3,8 +3,6 @@
 
 ```{metadata}
 solutions: dynamic
-scripts:
-  - src: quizz-helpers.js
 ```
 
 # Réseau local
@@ -38,9 +36,7 @@ Sur le schéma, ci-dessus sont nommés différents équipements. Complétez-le
 [tableau](reseau-local.docx) en expliquant le rôle dans le réseau local de chaque
 élément.
 
-
 ```{solution}
-
 | Nom                 | Rôle |
 | :------------------ | :--- |
 | Client (PC, laptop) | Un client est un utilisateur du réseau. Il accède, partage et utilise les ressources disponibles. |
@@ -54,7 +50,6 @@ Sur le schéma, ci-dessus sont nommés différents équipements. Complétez-le
 
 Le modem, le routeur, la passerelle, le switch et la borne Wi-Fi sont souvent
 intégrés à la box internet fournie par le fournisseur d'accès internet.
-
 ```
 
 ### Exercice {num}`exo-reseaux`
@@ -75,7 +70,6 @@ intégrés à la box internet fournie par le fournisseur d'accès internet.
 2. Swisscom, Salt, Sunrise UPC, Wingo (Réseau Swisscom), M-Budget internet (réseau Swisscom)
 ```
 
-
 ```{youtube} HPhUNJ2L8mk
 ```
 
@@ -93,10 +87,5 @@ l'acheminement des paquets de l'expéditeur au destinataire:
 4.  Le destinataire rassemble les différents paquets pour former l'ensemble des
     données.
 
-
 ```{youtube} g_C2QPCyLNY
 ```
-
-
-
-

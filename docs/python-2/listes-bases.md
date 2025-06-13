@@ -3,11 +3,6 @@
 
 # Listes - Bases
 
-```{metadata}
-scripts:
-  - src: quizz-helpers.js
-```
-
 En Python, une liste est une variable dans laquelle il est possible de stocker
 plusieurs valeurs (de types différents).
 
@@ -293,24 +288,28 @@ ma_liste.count(mon_element)
 
 ### Exercice {num}`exo-py2`
 
-<script>
-function question(...args) {
-  tdoc.question("Que va afficher ce programme?", ...args);
-}
-</script>
+```{role} input(quizz-input)
+:right: width: 15rem;
+:check: remove-whitespace
+```
 
-1.  ```{exec} python
+````{quizz}
+1.  {input}`7`
+    {quizz-hint}`Le premier élément se trouve à l'index 0.`
+    Que va afficher ce programme?
+
+    ```{exec} python
     :linenos:
     :when: never
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
     print(liste[4])
     ```
 
-    <script>
-    question({'7': true}, "Le premier élément se trouve à l'index 0.");
-    </script>
+2.  {input}`[1,5,4,12,7,6,10,2]`
+    {quizz-hint}`Le premier élément se trouve à l'index 0.`
+    Que va afficher ce programme?
 
-2.  ```{exec} python
+    ```{exec} python
     :linenos:
     :when: never
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
@@ -318,12 +317,12 @@ function question(...args) {
     print(liste)
     ```
 
-    <script>
-    question({'[1,5,4,12,7,6,10,2]': true},
-             "Le premier élément se trouve à l'index 0.");
-    </script>
+3.  {input}`[1,4,12,7,9,10,2]`
+    {quizz-hint}`La fonction remove(element) efface la première occurrence de
+    l'élément donné entre parenthèses.`
+    Que va afficher ce programme?
 
-3.  ```{exec} python
+    ```{exec} python
     :linenos:
     :when: never
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
@@ -331,13 +330,11 @@ function question(...args) {
     print(liste)
     ```
 
-    <script>
-    question({'[1,4,12,7,9,10,2]': true},
-             "La fonction remove(element) efface la première occurrence de " +
-             "l'élément donné entre parenthèses.");
-    </script>
+4.  {input}`[1,2,4,5,7,9,10,12]`
+    {quizz-hint}`La fonction sort() trie les éléments par ordre croissant.`
+    Que va afficher ce programme?
 
-4.  ```{exec} python
+    ```{exec} python
     :linenos:
     :when: never
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
@@ -345,12 +342,11 @@ function question(...args) {
     print(liste)
     ```
 
-    <script>
-    question({'[1,2,4,5,7,9,10,12]': true},
-             "La fonction sort() trie les éléments par ordre croissant.");
-    </script>
+5.  {input}`[1,5,12,7,9,10,2]`
+    {quizz-hint}`del efface l'élément donné.`
+    Que va afficher ce programme?
 
-5.  ```{exec} python
+    ```{exec} python
     :linenos:
     :when: never
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
@@ -358,22 +354,18 @@ function question(...args) {
     print(liste)
     ```
 
-    <script>
-    question({'[1,5,12,7,9,10,2]': true}, "del efface l'élément donné.");
-    </script>
+6.  {input}`[1,6,5,4,12,7,9,10,2]`
+    {quizz-hint}`La fonction insert(1, 6) insère l'élément 6 à l'index 1.`
+    Que va afficher ce programme?
 
-6.  ```{exec} python
+    ```{exec} python
     :linenos:
     :when: never
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
     liste.insert(1, 6)
     print(liste)
     ```
-
-    <script>
-    question({'[1,6,5,4,12,7,9,10,2]': true},
-             "La fonction insert(1, 6) insère l'élément 6 à l'index 1.");
-    </script>
+````
 
 ### Exercice {num}`exo-py2`
 

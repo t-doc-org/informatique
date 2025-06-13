@@ -2,10 +2,9 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Vol de données
+
 ```{metadata}
 solutions: dynamic
-scripts:
-  - src: quizz-helpers.js
 ```
 
 ## Introduction
@@ -18,7 +17,6 @@ Pour voler vos données un attaquant a besoin de deux informations:
 2.  votre authentifiant:
     Donnée privée, il faut donc trouver un moyen de l'obtenir.
 
-
 ## Ingénierie sociale
 
 L'ingénierie sociale regroupe les techniques qui consistent pour un fraudeur à
@@ -29,7 +27,6 @@ actions à des fins malveillantes.
 Le cybercriminel ne vise pas une personne précise, mais cible un grand nombre de
 personnes pour ensuite concentrer ses efforts avec celles qui semblent
 réceptives.
-
 
 ### Exemple {num}`ex-num`
 
@@ -66,7 +63,6 @@ fonctionne.
 -   En cas de doute, discutez-en avec des camarades, vos parents, vos
     enseignants, etc.
 
-
 ## Hameçonnage
 
 L'hameçonnage (ou phishing en anglais) est un type d'ingénierie sociale. La
@@ -102,13 +98,11 @@ dérober de l'argent.
 
 ````{admonition} Drôle de phénomène
 :class: dropdown
-
 ```{figure} images/bd.png
 :alt: Drôle de phénomène
 :width: 100%
 :align: center
 ```
-
 ````
 
 ### Comment se protéger?

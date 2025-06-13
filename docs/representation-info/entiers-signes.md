@@ -12,10 +12,10 @@ nombre est négatif.
 
 Cette représentation possède deux inconvénients:
 
-- le nombre 0 a deux présentations différents: 00000000 et 10000000
-- les opérations arithmétiques sont plus compliquées. Il faut notamment
-différencier le cas où les deux nombres sont de même signe du cas où ils sont de
-signes différents.
+- Le nombre 0 a deux présentations différents: 00000000 et 10000000
+- Les opérations arithmétiques sont plus compliquées. Il faut notamment
+  différencier le cas où les deux nombres sont de même signe du cas où ils sont
+  de signes différents.
 
 ## Complément à 2
 
@@ -76,73 +76,79 @@ Vérification: l'addition d'un nombre et de son opposé doit donner 0.
 
 ## Exercice {num}`exo-info`
 
+<script type="module">
+const core = await tdoc.import('tdoc/core.js');
+const quizz = await tdoc.import('tdoc/quizz.js');
+
+quizz.checks.negdec = args => {
+    args.answer = {
+      neg: v => core.strToInt(v, 2),
+      dec: v => core.strToInt(v),
+    }[args.solution](args.answer);
+    const tr = args.field.closest('tr');
+    let s = '';
+    for (const el of core.qsa(tr, 'math > mn, math > msub > mn:first-child')) {
+      s += el.textContent;
+    }
+    const value = core.strToInt(s, 2);
+    const wrap = 1 << s.length, neg = wrap - value;
+    const dec = neg < wrap / 2 ? neg : neg - wrap;
+    args.solution = {neg, dec}[args.solution];
+};
+
+quizz.checks.mag = args => {
+    const smallest = args.solution[0] === '<';
+    const signed = args.solution[1] === 's';
+    const bits = core.strToInt(args.solution.slice(2));
+    const radix = args.role === 'dec' ? 10 : 2;
+    let v = (1 << bits) - 1;
+    if (smallest) v -= (1 << bits) - 1;
+    if (signed) v -= 1 << (bits - 1);
+    if (signed && v < 0 && radix !== 10) v += 1 << bits;
+    args.answer = core.strToInt(args.answer, radix);
+    args.solution = v;
+};
+</script>
+
 Déterminer l'opposé des nombres suivants en binaire, ainsi que la valeur
 décimale de celui-ci.
 
-<script>
-async function questionNeg(value, bits) {
-  let node = document.currentScript;
-  const core = await tdoc.import('tdoc/core.js');
-  const quizz = await tdoc.import('tdoc/quizz.js');
-  const wrap = 1 << bits, neg = wrap - value;
-  node = quizz.question(node, "Opposé:", resp => {
-    return core.strToInt(resp.replaceAll(' ', ''), 2) === neg;
-  });
-  const dec = neg < wrap / 2 ? neg : neg - wrap;
-  quizz.question(node, "Valeur décimale:", resp => {
-    return core.strToInt(resp.replaceAll(' ', '')) === dec;
-  });
-}
-</script>
+```{role} input(quizz-input)
+:style: width: 6rem; text-align: center;
+:check: remove-whitespace negdec
+```
 
-1.  $0111_2$
-    <script>questionNeg(0b0111, 4);</script>
-2.  $0101\,1010_2$
-    <script>questionNeg(0b01011010, 8);</script>
-3.  $1111_2$
-    <script>questionNeg(0b1111, 4);</script>
-4.  $1101\,0001_2$
-    <script>questionNeg(0b11010001, 8);</script>
+```{quizz}
+| Nombre binaire | Opposé       | Valeur décimale |
+| :------------: | :----------: | :-------------: |
+| $0111_2$       | {input}`neg` | {input}`dec`    |
+| $0101\,1010_2$ | {input}`neg` | {input}`dec`    |
+| $1111_2$       | {input}`neg` | {input}`dec`    |
+| $1101\,0001_2$ | {input}`neg` | {input}`dec`    |
+```
 
 ## Exercice {num}`exo-info`
 
 Répondre aux questions suivantes:
 
-<script>
-async function questionMagOne(node, prompt, value, bits, radix) {
-  const core = await tdoc.import('tdoc/core.js');
-  const quizz = await tdoc.import('tdoc/quizz.js');
-  if (bits && value < 0 && radix === 2) value += 1 << bits;
-  return quizz.question(node, prompt, resp => {
-    resp = resp.replaceAll(' ', '');
-    return (bits ? core.strToInt(resp, radix) : resp) === value;
-  });
-}
+```{role} dec(quizz-input)
+:style: width: 3rem; text-align: center;
+:check: remove-whitespace mag
+```
+```{role} bin(quizz-input)
+:style: width: 6rem; text-align: center;
+:check: remove-whitespace mag
+```
+```{role} str(quizz-input)
+:style: width: 6rem; text-align: center;
+:check: remove-whitespace
+```
 
-async function questionMag(v4, v8, vn) {
-  let node = document.currentScript;
-  node = await questionMagOne(node, "... sur 4 bits, en décimal?", v4, 4, 10);
-  node = await questionMagOne(node, "... sur 4 bits, en binaire?", v4, 4, 2);
-  node = await questionMagOne(node, "... sur 8 bits, en décimal?", v8, 8, 10);
-  node = await questionMagOne(node, "... sur 8 bits, en binaire?", v8, 8, 2);
-  await questionMagOne(node, "... sur n bits?", vn);
-}
-</script>
-
-1.  Quel est le plus **grand** nombre entier **non signé** que nous pouvons
-    écrire...
-    <script>questionMag((1 << 4) - 1, (1 << 8) - 1, "2^n-1");</script>
-
-2.  Quel est le plus **petit** nombre entier **non signé** que nous pouvons
-    écrire...
-    <script>questionMag(0, 0, "0");</script>
-
-3.  Quel est le plus **grand** nombre entier **signé** que nous pouvons
-    écrire...
-    <script>
-    questionMag((1 << (4 - 1)) - 1, (1 << (8 - 1)) - 1, "2^(n-1)-1");
-    </script>
-
-4.  Quel est le plus **petit** nombre entier **signé** que nous pouvons
-    écrire...
-    <script>questionMag(-(1 << (4 - 1)), -(1 << (8 - 1)), "-2^(n-1)");</script>
+```{quizz}
+| Quel est le plus... | 4 bits, décimal | 4 bits, binaire | 8 bits, décimal | 8 bits, binaire | n bits |
+| - | :-: | :-: | :-: | :-: | :-: |
+| ... **grand** nombre entier **non signé** sur... | {dec}`>u4` | {bin}`>u4` | {dec}`>u8` | {bin}`>u8` | {str}`2^n-1` |
+| ... **petit** nombre entier **non signé** sur... | {dec}`<u4` | {bin}`<u4` | {dec}`<u8` | {bin}`<u8` | {str}`0` |
+| ... **grand** nombre entier **signé** sur...     | {dec}`>s4` | {bin}`>s4` | {dec}`>s8` | {bin}`>s8` | {str}`2^(n-1)-1` |
+| ... **petit** nombre entier **signé** sur...     | {dec}`<s4` | {bin}`<s4` | {dec}`<s8` | {bin}`<s8` | {str}`-2^(n-1)` |
+```

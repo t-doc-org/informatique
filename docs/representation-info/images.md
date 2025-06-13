@@ -3,11 +3,6 @@
 
 # Images
 
-```{metadata}
-scripts:
-  - src: quizz-helpers.js
-```
-
 Nous avons vu comment représenter des nombres et des caractères. Maintenant nous
 allons nous intéresser aux images.
 
@@ -251,20 +246,22 @@ y a les références de toutes les couleurs possibles.
 Quel est le poids d'une image de 500 sur 300 pixels (1 pixel est équivalent à
 une case) codée...
 
-1.  <script>
-    tdoc.question("... en noir et blanc? (en ko)",
-                  {"18.75": true, "18,75": true});
-    </script>
-2.  <script>
-    tdoc.question("... en 4 niveaux de gris? (en ko)",
-                  {"37.5": true, "37,5": true});
-    </script>
-3.  <script>
-    tdoc.question("... en 256 niveaux de gris? (en ko)", {"150": true});
-    </script>
-4.  <script>
-    tdoc.question("... en RGB? (en ko)", {"450": true});
-    </script>
+```{role} input(quizz-input)
+:right: width: 6rem;
+:check: json trim
+```
+
+```{quizz}
+:style: max-width: 30rem;
+1.  {input}`{"18.75": true, "18,75": true}`
+    ... en noir et blanc? (en ko)
+2.  {input}`{"37.5": true, "37,5": true}`
+    ... en 4 niveaux de gris? (en ko)
+3.  {input}`{"150": true}`
+    ... en 256 niveaux de gris? (en ko)
+4.  {input}`{"450": true}`
+    ... en RGB? (en ko)
+```
 
 ## Exercice {num}`exo-info`
 

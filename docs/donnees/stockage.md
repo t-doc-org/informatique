@@ -1,11 +1,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-scripts:
-  - src: quizz-helpers.js
-```
-
 # Stockage et transmission de données
 
 ## Volumes de données
@@ -46,45 +41,44 @@ Voici les unités standardisées depuis 1998:
 
 ### Exercice {num}`exo-donnees`
 
-Associez à chaque type de fichier un ordre de grandeur de volume de stockage
-parmi les propositions suivantes:
-- plusieurs To
-- quelques centaines de Mo
-- quelques ko
-- plusieurs Go
-- quelques Mo
+Associez à chaque type de fichier un ordre de grandeur de volume de stockage.
 
-1.  <script>
-    tdoc.question("Une vidéo de basse qualité de quelques minutes",
-                  {"quelquescentainesdemo": true});
-    </script>
-2.  <script>
-    tdoc.question("Un film ou un gros jeu vidéo",
-                  {"plusieursgo": true});
-    </script>
-3.  <script>
-    tdoc.question("Un fichier image ou audio mp3", {"quelquesmo": true});
-    </script>
-4.  <script>
-    tdoc.question("Un film 4K non compressé, en studio",
-                  {"plusieursto": true});
-    </script>
-5.  <script>
-    tdoc.question("Un document texte sans image ni formatage",
-                  {"quelquesko": true});
-    </script>
+```{role} select(quizz-select)
+:right:
+:options: |
+: quelques ko
+: quelques Mo
+: quelques centaines de Mo
+: plusieurs Go
+: plusieurs To
+```
+
+```{quizz}
+1.  {select}`quelques centaines de Mo`
+    Une vidéo de basse qualité de quelques minutes
+2.  {select}`plusieurs Go`
+    Un film ou un gros jeu vidéo
+3.  {select}`quelques Mo`
+    Un fichier image ou audio mp3
+4.  {select}`plusieurs To`
+    Un film 4K non compressé, en studio
+5.  {select}`quelques ko`
+    Un document texte sans image ni formatage
+```
 
 ### Exercice {num}`exo-donnees`
 
-1. <script>
-    tdoc.question("Quelle est la taille en octets d'une clé USB de 16 Go?",
-                  {"16000000000": true});
-    </script>
+```{role} input(quizz-input)
+:right: width: 10rem;
+```
 
-2. <script>
-    tdoc.question("Combien de fichier MP3 de 4 Mo en moyenne peut-on stocker sur une clé USB de 16 Go?",
-                  {"4000": true});
-    </script>
+```{quizz}
+1.  {input}`16000000000`
+    Quelle est la taille en octets d'une clé USB de 16 Go?
+2.  {input}`4000`
+    Combien de fichier MP3 de 4 Mo en moyenne peut-on stocker sur une clé USB de
+    16 Go?
+```
 
 ## Débit
 
@@ -94,21 +88,17 @@ Mb/s (Megabits par seconde).
 
 ### Exercice {num}`exo-donnees`
 
-1. <script>
-    tdoc.question("Pendant une vidéo live de deux minutes avec un débit de 1,5 Mo/s, quelle quantité de données sont transmises (en Mo)?",
-                  {"180": true});
-    </script>
+```{quizz}
+1.  {input}`180`
+    Pendant une vidéo live de deux minutes avec un débit de 1,5 Mo/s, quelle
+    quantité de données sont transmises (en Mo)?
+2.  Dans les années 90, la plupart des foyers se connectaient à Internet avec
+    des « modems 56 k », qui avaient un débit théorique maximum de 56 kb/s.
 
-2. Dans les années 90, la plupart des foyers se connectaient à Internet avec des
-   « modems 56 k », qui avaient un débit théorique maximum de 56 kb/s.
-    <script>
-    tdoc.question("Combien de temps fallait-il pour télécharger une photo de 2.1 Mo (en minutes)?",
-                  {"5": true});
-    </script>
-
-
+    {input}`5`
+    Combien de temps fallait-il pour télécharger une photo de 2.1 Mo (en
+    minutes)?
+```
 
 Allez sur le site [https://www.speedtest.net](https://www.speedtest.net) et
 mesurez le débit de votre connexion internet.
-
-

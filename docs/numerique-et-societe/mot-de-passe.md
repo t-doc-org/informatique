@@ -2,10 +2,9 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 # Mot de passe
+
 ```{metadata}
 solutions: dynamic
-scripts:
-  - src: quizz-helpers.js
 ```
 
 ## Introduction
@@ -23,8 +22,6 @@ Identification:
 Authentification:
 : Prouver son identité (prouver que le passeport est authentique)\
   Mot de passe, sms, empreinte digitale, …
-
-
 
 ## Force d'un mot de passe
 
@@ -51,11 +48,17 @@ Les 3 symboles suivants sont à disposition pour générer un mot de passe:
 
 Combien existe-il de mots de passe possibles,
 
-1. <script>tdoc.question("si la longueur du mot de passe est de 1?", {'3': true});</script>
-2. <script>tdoc.question("si la longueur du mot de passe est de 2?", {'9': true});</script>
-3. <script>tdoc.question("si la longueur du mot de passe est de 3?", {'27': true});</script>
-4. <script>tdoc.question("si la longueur du mot de passe est de 4?", {'81': true});</script>
+```{role} input(quizz-input)
+:right: width: 5rem;
+```
 
+```{quizz}
+:style: max-width: 35rem;
+1.  {input}`3`  si la longueur du mot de passe est de 1?
+2.  {input}`9`  si la longueur du mot de passe est de 2?
+3.  {input}`27` si la longueur du mot de passe est de 3?
+4.  {input}`81` si la longueur du mot de passe est de 4?
+```
 
 ### Nombre de mots de passe possibles
 
@@ -106,7 +109,6 @@ En général, il est possible de réinitialiser un mot de passe avec
     Avoir un mot de passe fort pour sa messagerie, car si quelqu'un a accès à
     votre messagerie, il peut réinitialiser tous vos mots de passe…
 
-
 ## Second facteur d'authentification
 
 La double authentification, aussi appelée authentification à deux facteurs (2FA),
@@ -137,7 +139,6 @@ qui réduit fortement les risques de piratage.
 -   Utiliser la double authentification lorsque c'est possible.
 -   Ne jamais transmettre son mot de passe.
 
-
 ### Exercice {num}`exo-num`
 
 Hubert possède un compte sur le site marchand boulatique.com. La base de données
@@ -149,7 +150,6 @@ du site a été piratée. Les données concernant Hubert qui ont fuité sont:
 1.  Quelles pourraient être les conséquences?
 2.  Que se passerait-il si Hubert utilise le même mot de passe pour son compte
     Microsoft 365 que celui utilisé pour le site boulatique.com?
-
 
 ```{solution}
 1.  On utilise souvent le même identifiant, comme une adresse e-mail, pour se
@@ -209,8 +209,3 @@ pirate devra:
 Nous ne pouvons pas empêcher le vol de données, mais avec des mots de passe
 robustes et différents pour chaque service, il est possible de limiter les
 dégâts.
-
-
-
-
-

@@ -3,11 +3,6 @@
 
 # Révisions - Bases
 
-```{metadata}
-scripts:
-  - src: quizz-helpers.js
-```
-
 ## Variable
 
 Une **variable** permet de garder en mémoire des données (une valeur numérique,
@@ -128,9 +123,9 @@ commençant par # sera ignorée lors de l'exécution du programme.
     print(c)
     ```
 
-    Dans une variable, seul le résultat du calcul est stocké, par conséquent, même
-    si la valeur de la variable `a` ou celle de `b` change, celle de `c` ne changera pas, tant que
-    nous nous lui affectons pas une nouvelle valeur.
+    Dans une variable, seul le résultat du calcul est stocké, par conséquent,
+    même si la valeur de la variable `a` ou celle de `b` change, celle de `c` ne
+    changera pas, tant que nous nous lui affectons pas une nouvelle valeur.
 
 5.  ```{exec} python
     :linenos:
@@ -145,51 +140,58 @@ commençant par # sera ignorée lors de l'exécution du programme.
 
 Quel est le résultat des expressions suivantes en Python?
 
-1.  <script>
-    tdoc.question('23 // 5 =', {'4': true},
-                  "Il faut effectuer la division entière de 23 par 5.");
-    </script>
+```{role} input(quizz-input)
+:right: width: 5rem;
+:check: json trim
+```
 
-2.  <script>
-    tdoc.question('23 % 5 =', {'3': true},
-                  "% est le reste de la division entière.");
-    </script>
-
-3.  <script>
-    tdoc.question('23 / 5 =', {
-      '4.6': true,
-      '4,6': "En Python, il faut utiliser des points pour les nombres à " +
-             "virgule.",
-    }, "Il faut effectuer la division.");
-    </script>
-
-4.  <script>
-    tdoc.question('10 - 2 * 5 =', {
-      '0': true,
-      '40': "En Python, l'ordre de priorité est le même qu'en maths.",
-    });
-    </script>
-
-5.  <script>tdoc.question('(1 + 3 * 2) ** 2 - 1 =', {'48': true});</script>
+```{quizz}
+:style: max-width: 30rem;
+1.  {input}`{"4": true}`
+    {quizz-hint}`Il faut effectuer la division entière de 23 par 5.`
+    `23 // 5`
+2.  {input}`{"3": true}`
+    {quizz-hint}`% est le reste de la division entière.`
+    `23 % 5`
+3.  {input}`{"4.6": true,
+             "4,6": "En Python, il faut utiliser un point pour les nombres à
+                     virgule."}`
+    {quizz-hint}`Il faut effectuer la division.`
+    `23 / 5`
+4.  {input}`{"0": true,
+             "40": "En Python, l'ordre de priorité est le même qu'en maths."}`
+    `10 - 2 * 5`
+5.  {input}`{"48": true}`
+    `(1 + 3 * 2) ** 2 - 1`
+```
 
 ## Exercice {num}`exo-py2-rev`
 
-De quel type sont les données suivantes?
+De quel type sont les expressions suivantes?
 
-1.  <script>tdoc.question('"Salut"', {'str': true, 'string': true});</script>
-2.  <script>tdoc.question('5.0', {'float': true, 'flottant': true});</script>
-3.  <script>
-    tdoc.question('5 > 7', {'bool': true, 'booléen': true, 'boolean': true});
-    </script>
-4.  <script>tdoc.question('120', {'int': true, 'integer': true});</script>
-5.  <script>tdoc.question('9 // 2', {'int': true, 'integer': true});</script>
-6.  <script>
-    tdoc.question('(3 + 7) / 2', {'float': true, 'flottant': true});
-    </script>
+```{role} select(quizz-select)
+:right:
+:options: |
+: int
+: float
+: str
+: bool
+```
+
+```{quizz}
+:style: max-width: 20rem;
+1.  {select}`str`   `"Salut"`
+2.  {select}`float` `5.0`
+3.  {select}`bool`  `5 > 7`
+4.  {select}`int`   `120`
+5.  {select}`int`   `9 // 2`
+6.  {select}`float` `(3 + 7) / 2`
+```
 
 ## Exercice {num}`exo-py2-rev`
 
-Qu'affiche le programme suivant? Appuyez sur bouton "play" pour vérifier votre réponse.
+Qu'affiche le programme suivant? Appuyez sur le bouton "play" pour vérifier
+votre réponse.
 
 ```{exec} python
 :linenos:
@@ -202,7 +204,7 @@ print("L'aire du triangle est de", aire)
 ## Exercice {num}`exo-py2-rev`
 
 Qu'affiche le programme suivant? Faire un tableau d'états.\
-Appuyez sur bouton "play" pour vérifier votre réponse.
+Appuyez sur le bouton "play" pour vérifier votre réponse.
 
 ```{exec} python
 :linenos:

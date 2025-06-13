@@ -202,34 +202,39 @@ Encodez les messages suivants.
 
 On considère le code $B(5, 4)$.
 
-1.  <script>
-    tdoc.question("Quelle est l'efficacité de ce code?",
-                  {"80%": true, "4/5": true, "0.8": true});
-    </script>
-2.  <script>
-    tdoc.question("S'il y a 1 erreur, le récepteur considère-t-il que le " +
-                  "message reçu est correct?", {"non": true});
-    </script>
-3.  <script>
-    tdoc.question("S'il y a 2 erreurs, le récepteur considère-t-il que le " +
-                  "message reçu est correct?", {"oui": true});
-    </script>
-4.  <script>
-    tdoc.question("S'il y a 3 erreurs, le récepteur considère-t-il que le " +
-                  "message reçu est correct?", {"non": true});
-    </script>
-5.  <script>
-    tdoc.question("S'il y a 4 erreurs, le récepteur considère-t-il que le " +
-                  "message reçu est correct?", {"oui": true});
-    </script>
-6.  <script>
-    tdoc.question("S'il y a 5 erreurs, le récepteur considère-t-il que le " +
-                  "message reçu est correct?", {"non": true});
-    </script>
-7.  <script>
-    tdoc.question("Quelle est la capacité de détection \\(C_d\\) de " +
-                  "\\(B(5, 4)\\)?", {"1": true});
-    </script>
+```{role} input(quizz-input)
+:right: width: 5rem;
+:check: split remove-whitespace lowercase
+```
+
+```{role} select(quizz-select)
+:right:
+:options: |
+: oui
+: non
+```
+
+```{quizz}
+1.  {input}`80%,4/5,0.8`
+    Quelle est l'efficacité de ce code?
+2.  {select}`non`
+    S'il y a 1 erreur, le récepteur considère-t-il que le message reçu est
+    correct?
+3.  {select}`oui`
+    S'il y a 2 erreurs, le récepteur considère-t-il que lemessage reçu est
+    correct?
+4.  {select}`non`
+    S'il y a 3 erreurs, le récepteur considère-t-il que le message reçu est
+    correct?
+5.  {select}`oui`
+    S'il y a 4 erreurs, le récepteur considère-t-il que le message reçu est
+    correct?
+6.  {select}`non`
+    S'il y a 5 erreurs, le récepteur considère-t-il que le message reçu est
+    correct?
+7.  {input}`1`
+    Quelle est la capacité de détection $C_d$ de $B(5, 4)$?
+```
 
 ### Exercice {num}`exo-donnees`
 

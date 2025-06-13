@@ -47,38 +47,50 @@ $$
 
 ## Exercice {num}`exo-info`
 
-Convertir les nombres suivants de binaire en décimal.
+<script type="module">
+const core = await tdoc.import('tdoc/core.js');
+const quizz = await tdoc.import('tdoc/quizz.js');
 
-<script>
-async function questionConv(from, to, value, alt) {
-  const node = document.currentScript;
-  const core = await tdoc.import('tdoc/core.js');
-  const quizz = await tdoc.import('tdoc/quizz.js');
-  const prompt = typeof from !== 'number' ? `\\(${from}\\)` :
-                 from === 10 ? `\\(${value}\\)` :
-                 `\\(${value.toString(from).toUpperCase()}_{${from}}\\)`;
-  quizz.question(node, prompt, resp => {
-    resp = resp.replaceAll(' ', '').toUpperCase();
-    for (const sol of [value, alt]) {
-        if (sol !== undefined
-            && (typeof sol === 'number' ? core.strToInt(resp, to) === sol
-                : resp === sol.toUpperCase())) {
-          return true;
-        }
+quizz.checks.conv = args => {
+    const p = args.field.closest('p');
+    const rel = core.qs(p, 'math > msub > :nth-child(2)');
+    const fradix = rel ? core.strToInt(rel.textContent): 10;
+    const tradix = core.strToInt(args.solution);
+    let s = '';
+    for (const el of core.qsa(p,
+          'math > :is(mn, mi), math > msub > :first-child')) {
+      s += el.textContent;
     }
-    return false;
-  });
-}
+    args.answer = core.strToInt(args.answer, tradix);
+    args.solution = core.strToInt(s, fradix);
+};
+
+quizz.checks.digits = args => {
+    const p = args.field.closest('p');
+    args.solution = Math.ceil(Math.log2(
+        core.strToInt(core.qs(p, 'math').textContent) + 1));
+    args.answer = core.strToInt(args.answer);
+};
 </script>
 
-1.  <script>questionConv(2, 10, 0b10);</script>
-2.  <script>questionConv(2, 10, 0b101);</script>
-3.  <script>questionConv(2, 10, 0b1111);</script>
-4.  <script>questionConv(2, 10, 0b1001);</script>
-5.  <script>questionConv(2, 10, 0b0110);</script>
-6.  <script>questionConv(2, 10, 0b1101);</script>
-7.  <script>questionConv(2, 10, 0b1010101);</script>
-8.  <script>questionConv(2, 10, 0b1100110);</script>
+Convertir les nombres suivants de binaire en décimal.
+
+```{role} input(quizz-input)
+:right: width: 5rem;
+:check: remove-whitespace conv
+```
+
+```{quizz}
+:style: max-width: 25rem;
+1.  {input}`10` $10_2$
+2.  {input}`10` $101_2$
+3.  {input}`10` $1111_2$
+4.  {input}`10` $1001_2$
+5.  {input}`10` $0110_2$
+6.  {input}`10` $1101_2$
+7.  {input}`10` $1010101_2$
+8.  {input}`10` $1100110_2$
+```
 
 ## Conversion décimal - binaire
 
@@ -112,23 +124,39 @@ $$149 = 10010101_2$$
 
 Convertir les nombres suivants de décimal en binaire.
 
-1.  <script>questionConv(10, 2, 3);</script>
-2.  <script>questionConv(10, 2, 6);</script>
-3.  <script>questionConv(10, 2, 9);</script>
-4.  <script>questionConv(10, 2, 41);</script>
-5.  <script>questionConv(10, 2, 64);</script>
-6.  <script>questionConv(10, 2, 171);</script>
-7.  <script>questionConv(10, 2, 720);</script>
-8.  <script>questionConv(10, 2, 1573);</script>
+```{role} input(quizz-input)
+:right: width: 10rem;
+:check: remove-whitespace conv
+```
+
+```{quizz}
+:style: max-width: 25rem;
+1.  {input}`2` $3$
+2.  {input}`2` $6$
+3.  {input}`2` $9$
+4.  {input}`2` $41$
+5.  {input}`2` $64$
+6.  {input}`2` $171$
+7.  {input}`2` $720$
+8.  {input}`2` $1573$
+```
 
 ## Exercice {num}`exo-info`
 
 Combien de bits faut-il pour écrire les nombres suivants en base 2?
 
-1.  <script>questionConv('13', 10, Math.ceil(Math.log2(13 + 1)));</script>
-2.  <script>questionConv('37', 10, Math.ceil(Math.log2(37 + 1)));</script>
-3.  <script>questionConv('128', 10, Math.ceil(Math.log2(128 + 1)));</script>
-4.  <script>questionConv('350', 10, Math.ceil(Math.log2(350 + 1)));</script>
+```{role} input(quizz-input)
+:right: width: 5rem;
+:check: trim digits
+```
+
+```{quizz}
+:style: max-width: 20rem;
+1.  {input}`?`  $13$
+2.  {input}`?`  $37$
+3.  {input}`?`  $128$
+4.  {input}`?`  $350$
+```
 
 ## Conversion binaire - hexadécimal
 
@@ -162,15 +190,22 @@ $$A0D7_{16} = 1010\,0000\,1101\,0111_{2}$$
 
 Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
-1.  <script>questionConv('1000\\,0111_2', 16, 0b10000111);</script>
-2.  <script>questionConv('0101\\,1010_2', 16, 0b01011010);</script>
-3.  <script>questionConv('1001\\,1111_2', 16, 0b10011111);</script>
-4.  <script>questionConv('0111\\,0001\\,1110\\,1001_2', 16,
-                         0b0111000111101001);</script>
-5.  <script>questionConv(16, 2, 0x3a);</script>
-6.  <script>questionConv(16, 2, 0xf4);</script>
-7.  <script>questionConv(16, 2, 0xbd);</script>
-8.  <script>questionConv('9C\\,2E_{16}', 2, 0x9c2e);</script>
+```{role} input(quizz-input)
+:right: width: 12rem;
+:check: remove-whitespace conv
+```
+
+```{quizz}
+:style: max-width: 35rem;
+1.  {input}`16` $1000\,0111_2$
+2.  {input}`16` $0101\,1010_2$
+3.  {input}`16` $1001\,1111_2$
+4.  {input}`16` $0111\,0001\,1110\,1001_2$
+5.  {input}`2`  $3A_{16}$
+6.  {input}`2`  $F4_{16}$
+7.  {input}`2`  $BD_{16}$
+8.  {input}`2`  $9C\,2E_{16}$
+```
 
 ## L'addition de nombres entiers en binaire
 
@@ -221,21 +256,32 @@ Un exemple coûteux d'overflow est le [vol 501 d'Ariane 5](https://fr.wikipedia.
 
 Effectuer les additions suivantes sur 4 bits.
 
-1.  <script>questionConv('0010_2 + 0011_2', 2, 0b0010 + 0b0011);</script>
-2.  <script>questionConv('0101_2 + 1000_2', 2, 0b0101 + 0b1000);</script>
-3.  <script>questionConv('1011_2 + 0001_2', 2, 0b1011 + 0b0001);</script>
-4.  <script>questionConv('1111_2 + 1000_2', 2,
-                         (0b1111 + 0b1000) & 0b1111, 'overflow');</script>
+```{role} input(quizz-input)
+:right: width: 6rem;
+:check: split remove-whitespace
+```
+
+```{quizz}
+:style: max-width: 30rem;
+1.  {input}`0101`           $0010_2 + 0011_2$
+2.  {input}`1101`           $0101_2 + 1000_2$
+3.  {input}`1100`           $1011_2 + 0001_2$
+4.  {input}`0111,overflow`  $1111_2 + 1000_2$
+```
 
 ## Exercice {num}`exo-info`
 
 Effectuer les additions suivantes sur 8 bits.
 
-1.  <script>questionConv('0110\\,0110_2 + 0011\\,0010_2', 2,
-                         0b01100110 + 0b00110010);</script>
-2.  <script>questionConv('0101\\,1111_2 + 1000\\,0000_2', 2,
-                         0b01011111 + 0b10000000);</script>
-3.  <script>questionConv('1011\\,0001_2 + 0010\\,1101_2', 2,
-                         0b10110001 + 0b00101101);</script>
-4.  <script>questionConv('0011\\,1100_2 + 0110\\,0101_2', 2,
-                         0b00111100 + 0b01100101);</script>
+```{role} input(quizz-input)
+:right: width: 8rem;
+:check: remove-whitespace
+```
+
+```{quizz}
+:style: max-width: 30rem;
+1.  {input}`10011000` $0110\,0110_2 + 0011\,0010_2$
+2.  {input}`11011111` $0101\,1111_2 + 1000\,0000_2$
+3.  {input}`11011110` $1011\,0001_2 + 0010\,1101_2$
+4.  {input}`10100001` $0011\,1100_2 + 0110\,0101_2$
+```

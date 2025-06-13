@@ -3,8 +3,6 @@
 
 ```{metadata}
 solutions: dynamic
-scripts:
-  - src: quizz-helpers.js
 ```
 
 # Réseau informatique
@@ -40,21 +38,20 @@ Il en existe différents: le Bluetooth (ondes radio), le Wi-Fi, les câbles
 Ethernet, la fibre optique, mais aussi les lignes téléphoniques, les satellites,
 les câbles TV, ...
 
-Bluetooth:\
+**Bluetooth:**\
 Avantages: facile à utiliser, faible consommation d'énergie, très compatible\
 Inconvénients: faible portée et sensibilités aux interférences
 
-Wi-Fi:\
+**Wi-Fi:**\
 Avantages: mobilité et évite de devoir tirer des fils entre les équipements\
 Inconvénients: interruption de connexion, sécurité moindre et moins rapide
 
-Ethernet:\
+**Ethernet:**\
 Avantages: fiable, grande sécurité et rapide\
 Inconvénients: demande la mise un place d'une infrastructure, ne convient pas
 aux appareils mobiles
 
-Fibre optique:\
+**Fibre optique:**\
 Avantages: très bon débit, transmission rapide et sécurisée\
 Inconvénients: coût et fragilité des câbles
-
 ```

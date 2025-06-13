@@ -7,16 +7,6 @@
     let core = tdoc.import('tdoc/core.js').then(m => { core = m; });
     let quizz = tdoc.import('tdoc/quizz.js').then(m => { quizz = m; });
 
-    // Add a quizz question checking responses against the keys of "results".
-    // Keys whose value is true are accepted. Keys with a string value display
-    // that value as a hint. If a response is not found in "results", "def" is
-    // used as the result.
-    tdoc.question = tdoc.when(quizz, (script, prompt, results, def) => {
-        return quizz.question(script, prompt, resp => {
-            return results[resp.replaceAll(' ', '').toLowerCase()] ?? def;
-        });
-    });
-
     // Get the content of the last `max` rows of the given column.
     function getPrev(table, column, max) {
         let prev = [];
