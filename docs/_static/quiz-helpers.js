@@ -5,7 +5,7 @@
 (() => {
     const debug = false;
     let core = tdoc.import('tdoc/core.js').then(m => { core = m; });
-    let quizz = tdoc.import('tdoc/quizz.js').then(m => { quizz = m; });
+    let quiz = tdoc.import('tdoc/quiz.js').then(m => { quiz = m; });
 
     // Get the content of the last `max` rows of the given column.
     function getPrev(table, column, max) {
@@ -77,9 +77,9 @@
         return p;
     }
 
-    // Generate quizz questions about parity checking.
-    tdoc.quizzParityCheck = tdoc.when(core, quizz, (script, min, max, p) => {
-        quizz.genTable(script, (table, row, button) => {
+    // Generate quiz questions about parity checking.
+    tdoc.quizParityCheck = tdoc.when(core, quiz, (script, min, max, p) => {
+        quiz.genTable(script, (table, row, button) => {
             // Generate a new random message.
             const bits = randomInt(min + 1, max + 1);
             const {msg, msgStr} = randomBinary(bits, table, 1);
@@ -102,9 +102,9 @@
         });
     });
 
-    // Generate quizz questions about parity encoding.
-    tdoc.quizzParityEncode = tdoc.when(core, quizz, (script, min, max, p) => {
-        quizz.genTable(script, (table, row, button) => {
+    // Generate quiz questions about parity encoding.
+    tdoc.quizParityEncode = tdoc.when(core, quiz, (script, min, max, p) => {
+        quiz.genTable(script, (table, row, button) => {
             // Generate a new random message.
             const bits = randomInt(min, max);
             const {msg, msgStr} = randomBinary(bits, table, 1);
@@ -155,9 +155,9 @@
         return msg + (10 - fnSum(msg) % 10 + last) % 10;
     }
 
-    function quizzSumCheck(fnSum) {
+    function quizSumCheck(fnSum) {
         return (script, min, max) => {
-            quizz.genTable(script, (table, row, button) => {
+            quiz.genTable(script, (table, row, button) => {
                 // Generate a new random message, with a 0.5 probability of
                 // being correct.
                 const msg = sumEncode(
@@ -188,15 +188,15 @@
         };
     }
 
-    // Generate quizz questions about digit sum checking.
-    tdoc.quizzDigitSumCheck = tdoc.when(core, quizz, quizzSumCheck(digitSum));
+    // Generate quiz questions about digit sum checking.
+    tdoc.quizDigitSumCheck = tdoc.when(core, quiz, quizSumCheck(digitSum));
 
-    // Generate quizz questions about Luhn sum checking.
-    tdoc.quizzLuhnSumCheck = tdoc.when(core, quizz, quizzSumCheck(luhnSum));
+    // Generate quiz questions about Luhn sum checking.
+    tdoc.quizLuhnSumCheck = tdoc.when(core, quiz, quizSumCheck(luhnSum));
 
-    function quizzSumEncode(fnSum) {
+    function quizSumEncode(fnSum) {
         return (script, min, max) => {
-            quizz.genTable(script, (table, row, button) => {
+            quiz.genTable(script, (table, row, button) => {
                 // Generate a new random message.
                 const msg = randomDecimal(randomInt(min, max));
                 const encoded = sumEncode(msg, fnSum);
@@ -218,11 +218,11 @@
         };
     }
 
-    // Generate quizz questions about digit sum encoding.
-    tdoc.quizzDigitSumEncode = tdoc.when(core, quizz, quizzSumEncode(digitSum));
+    // Generate quiz questions about digit sum encoding.
+    tdoc.quizDigitSumEncode = tdoc.when(core, quiz, quizSumEncode(digitSum));
 
-    // Generate quizz questions about digit sum encoding.
-    tdoc.quizzLuhnSumEncode = tdoc.when(core, quizz, quizzSumEncode(luhnSum));
+    // Generate quiz questions about digit sum encoding.
+    tdoc.quizLuhnSumEncode = tdoc.when(core, quiz, quizSumEncode(luhnSum));
 
     // Hamming-encode the given message.
     function hammingEncode(msg, parityBits) {
@@ -245,11 +245,11 @@
         return encoded;
     }
 
-    // Generate quizz questions about Hamming encoding.
-    tdoc.quizzHammingEncode = tdoc.when(core, quizz, (script, parityBits) => {
+    // Generate quiz questions about Hamming encoding.
+    tdoc.quizHammingEncode = tdoc.when(core, quiz, (script, parityBits) => {
         const {enable, qs, qsa, toRadix} = core;
         const dataBits = (1 << parityBits) - parityBits - 1;
-        quizz.genTable(script, (table, row, button) => {
+        quiz.genTable(script, (table, row, button) => {
             // Generate a new random message.
             const {msg, msgStr} = randomBinary(dataBits, table, 1);
             const encoded = toRadix(
@@ -304,12 +304,12 @@
         return {error, corrected, decoded};
     }
 
-    // Generate quizz questions about Hamming encoding.
-    tdoc.quizzHammingDecode = tdoc.when(core, quizz, (script, parityBits) => {
+    // Generate quiz questions about Hamming encoding.
+    tdoc.quizHammingDecode = tdoc.when(core, quiz, (script, parityBits) => {
         const {enable, qs, qsa, toRadix} = core;
         const ebits = (1 << parityBits) - 1;
         const dataBits = ebits - parityBits;
-        quizz.genTable(script, (table, row, button) => {
+        quiz.genTable(script, (table, row, button) => {
             // Generate a new random message.
             const {msg, msgStr} = randomBinary(ebits, table, 1);
             const dec = hammingDecode(msg, parityBits);

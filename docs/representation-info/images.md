@@ -246,12 +246,12 @@ y a les références de toutes les couleurs possibles.
 Quel est le poids d'une image de 500 sur 300 pixels (1 pixel est équivalent à
 une case) codée...
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 6rem;
 :check: json trim
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 30rem;
 1.  {input}`{"18.75": true, "18,75": true}`
     ... en noir et blanc? (en ko)

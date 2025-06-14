@@ -77,10 +77,9 @@ Vérification: l'addition d'un nombre et de son opposé doit donner 0.
 ## Exercice {num}`exo-info`
 
 <script type="module">
-const core = await tdoc.import('tdoc/core.js');
-const quizz = await tdoc.import('tdoc/quizz.js');
+const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
 
-quizz.checks.negdec = args => {
+quiz.checks.negdec = args => {
     args.answer = {
       neg: v => core.strToInt(v, 2),
       dec: v => core.strToInt(v),
@@ -96,7 +95,7 @@ quizz.checks.negdec = args => {
     args.solution = {neg, dec}[args.solution];
 };
 
-quizz.checks.mag = args => {
+quiz.checks.mag = args => {
     const smallest = args.solution[0] === '<';
     const signed = args.solution[1] === 's';
     const bits = core.strToInt(args.solution.slice(2));
@@ -113,12 +112,12 @@ quizz.checks.mag = args => {
 Déterminer l'opposé des nombres suivants en binaire, ainsi que la valeur
 décimale de celui-ci.
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :style: width: 6rem; text-align: center;
 :check: remove-whitespace negdec
 ```
 
-```{quizz}
+```{quiz}
 | Nombre binaire | Opposé       | Valeur décimale |
 | :------------: | :----------: | :-------------: |
 | $0111_2$       | {input}`neg` | {input}`dec`    |
@@ -131,20 +130,20 @@ décimale de celui-ci.
 
 Répondre aux questions suivantes:
 
-```{role} dec(quizz-input)
+```{role} dec(quiz-input)
 :style: width: 3rem; text-align: center;
 :check: remove-whitespace mag
 ```
-```{role} bin(quizz-input)
+```{role} bin(quiz-input)
 :style: width: 6rem; text-align: center;
 :check: remove-whitespace mag
 ```
-```{role} str(quizz-input)
+```{role} str(quiz-input)
 :style: width: 6rem; text-align: center;
 :check: remove-whitespace
 ```
 
-```{quizz}
+```{quiz}
 | Quel est le plus... | 4 bits, décimal | 4 bits, binaire | 8 bits, décimal | 8 bits, binaire | n bits |
 | - | :-: | :-: | :-: | :-: | :-: |
 | ... **grand** nombre entier **non signé** sur... | {dec}`>u4` | {bin}`>u4` | {dec}`>u8` | {bin}`>u8` | {str}`2^n-1` |

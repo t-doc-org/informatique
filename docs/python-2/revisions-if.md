@@ -122,12 +122,12 @@ else:
 
 ## Exercice {num}`exo-py2-rev`
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 10rem;
 :check: json remove-whitespace
 ```
 
-````{quizz}
+````{quiz}
 {input}`{"0": true, "-x+2": "Il faut remplacer x par sa valeur."}`
 Que va afficher ce programme?
 

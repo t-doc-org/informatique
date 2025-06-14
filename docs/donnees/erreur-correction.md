@@ -4,7 +4,7 @@
 
 ```{metadata}
 scripts:
-  - src: quizz-helpers.js
+  - src: quiz-helpers.js
 ```
 
 # Correction d'erreur
@@ -259,7 +259,7 @@ Pour chacun des messages utiles suivants:
 | :-----------: | :---: | :---: | :---: | :----------: |
 | 1010          | 1     | 0     | 1     | 1011010      |
 
-<script>tdoc.quizzHammingEncode(3);</script>
+<script>tdoc.quizHammingEncode(3);</script>
 
 #### Exercice {num}`exo-donnees`
 
@@ -275,4 +275,4 @@ Pour chacun des messages reçus suivants:
 | :----------: | :-----------: | :-----------: | :-----------: | :-------------: | :------------: | :--------: |
 | 0101001      | fausse        | correcte      | correcte      | 1          | 1101001         | 0001           |
 
-<script>tdoc.quizzHammingDecode(3);</script>
+<script>tdoc.quizHammingDecode(3);</script>

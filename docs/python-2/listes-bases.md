@@ -288,14 +288,14 @@ ma_liste.count(mon_element)
 
 ### Exercice {num}`exo-py2`
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 15rem;
 :check: remove-whitespace
 ```
 
-````{quizz}
+````{quiz}
 1.  {input}`7`
-    {quizz-hint}`Le premier élément se trouve à l'index 0.`
+    {quiz-hint}`Le premier élément se trouve à l'index 0.`
     Que va afficher ce programme?
 
     ```{exec} python
@@ -306,7 +306,7 @@ ma_liste.count(mon_element)
     ```
 
 2.  {input}`[1,5,4,12,7,6,10,2]`
-    {quizz-hint}`Le premier élément se trouve à l'index 0.`
+    {quiz-hint}`Le premier élément se trouve à l'index 0.`
     Que va afficher ce programme?
 
     ```{exec} python
@@ -318,7 +318,7 @@ ma_liste.count(mon_element)
     ```
 
 3.  {input}`[1,4,12,7,9,10,2]`
-    {quizz-hint}`La fonction remove(element) efface la première occurrence de
+    {quiz-hint}`La fonction remove(element) efface la première occurrence de
     l'élément donné entre parenthèses.`
     Que va afficher ce programme?
 
@@ -331,7 +331,7 @@ ma_liste.count(mon_element)
     ```
 
 4.  {input}`[1,2,4,5,7,9,10,12]`
-    {quizz-hint}`La fonction sort() trie les éléments par ordre croissant.`
+    {quiz-hint}`La fonction sort() trie les éléments par ordre croissant.`
     Que va afficher ce programme?
 
     ```{exec} python
@@ -343,7 +343,7 @@ ma_liste.count(mon_element)
     ```
 
 5.  {input}`[1,5,12,7,9,10,2]`
-    {quizz-hint}`del efface l'élément donné.`
+    {quiz-hint}`del efface l'élément donné.`
     Que va afficher ce programme?
 
     ```{exec} python
@@ -355,7 +355,7 @@ ma_liste.count(mon_element)
     ```
 
 6.  {input}`[1,6,5,4,12,7,9,10,2]`
-    {quizz-hint}`La fonction insert(1, 6) insère l'élément 6 à l'index 1.`
+    {quiz-hint}`La fonction insert(1, 6) insère l'élément 6 à l'index 1.`
     Que va afficher ce programme?
 
     ```{exec} python

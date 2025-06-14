@@ -51,7 +51,7 @@ En Python, il existe 4 types de données primitifs.
 
 De quel type sont les valeurs suivantes?
 
-```{role} select(quizz-select)
+```{role} select(quiz-select)
 :right:
 :options: |
 : int
@@ -60,7 +60,7 @@ De quel type sont les valeurs suivantes?
 : bool
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 20rem;
 1.  {select}`int`   `60`
 2.  {select}`str`   `"Hello Bob"`
@@ -142,23 +142,23 @@ nombres.
 
 Quel est le résultat des expressions suivantes en Python?
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 5rem;
 :check: json trim
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 30rem;
 1.  {input}`{"3": true}`
-    {quizz-hint}`Il faut effectuer la division entière de 15 par 4.`
+    {quiz-hint}`Il faut effectuer la division entière de 15 par 4.`
     `15 // 4`
 2.  {input}`{"1": true}`
-    {quizz-hint}`% est le reste de la division entière.`
+    {quiz-hint}`% est le reste de la division entière.`
     `16 % 5`
 3.  {input}`{"2.4": true,
              "2,4": "En Python, il faut utiliser un point pour les nombres à
                      virgule."}`
-    {quizz-hint}`Il faut effectuer la division.`
+    {quiz-hint}`Il faut effectuer la division.`
     `12 / 5`
 4.  {input}`{"-2": true,
              "2": "En Python, l'ordre de priorité est le même qu'en maths."}`

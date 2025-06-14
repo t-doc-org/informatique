@@ -75,14 +75,14 @@ Le réseau de routeurs suivant est donné.
 
 Complétez les tables de routages suivantes.
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :style: width: 3rem; text-align: center;
 :check: split trim uppercase
 ```
 
 **Routeur B:**
 
-```{quizz}
+```{quiz}
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
 | A | A | 1 |
@@ -96,7 +96,7 @@ Complétez les tables de routages suivantes.
 
 **Routeur F:**
 
-```{quizz}
+```{quiz}
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
 | A | {input}`C,H` | {input}`4` |
@@ -110,7 +110,7 @@ Complétez les tables de routages suivantes.
 
 **Routeur C:**
 
-```{quizz}
+```{quiz}
 | Destination | Routeur suivant | Distance |
 | :---------: | :-------------: | :------: |
 | A | {input}`D,G` | {input}`3` |
@@ -186,11 +186,11 @@ Complétez le chemin (noms des routeurs) par lequel passe un message pour
 atteindre sa destination depuis son point de départ en regardant seulement les
 tables de routages.
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :style: width: 5rem; text-align: center;
 ```
 
-```{quizz}
+```{quiz}
 | Départ | Destination | Chemin |
 | :----: | :---------: | :----: |
 | D | A | {input}`DBCA` |

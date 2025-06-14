@@ -43,7 +43,7 @@ Voici les unités standardisées depuis 1998:
 
 Associez à chaque type de fichier un ordre de grandeur de volume de stockage.
 
-```{role} select(quizz-select)
+```{role} select(quiz-select)
 :right:
 :options: |
 : quelques ko
@@ -53,7 +53,7 @@ Associez à chaque type de fichier un ordre de grandeur de volume de stockage.
 : plusieurs To
 ```
 
-```{quizz}
+```{quiz}
 1.  {select}`quelques centaines de Mo`
     Une vidéo de basse qualité de quelques minutes
 2.  {select}`plusieurs Go`
@@ -68,11 +68,11 @@ Associez à chaque type de fichier un ordre de grandeur de volume de stockage.
 
 ### Exercice {num}`exo-donnees`
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 10rem;
 ```
 
-```{quizz}
+```{quiz}
 1.  {input}`16000000000`
     Quelle est la taille en octets d'une clé USB de 16 Go?
 2.  {input}`4000`
@@ -88,7 +88,7 @@ Mb/s (Megabits par seconde).
 
 ### Exercice {num}`exo-donnees`
 
-```{quizz}
+```{quiz}
 1.  {input}`180`
     Pendant une vidéo live de deux minutes avec un débit de 1,5 Mo/s, quelle
     quantité de données sont transmises (en Mo)?

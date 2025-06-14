@@ -123,7 +123,7 @@ comptes au plus vite.
 
 ### Exercice {num}`exo-num`
 
-Effectuez les quizz sur les pages suivantes:
+Effectuez les quiz sur les pages suivantes:
 
 1.  [Savez-vous reconnaître une tentative d'hameçonnage?](https://phishingquiz.withgoogle.com/)
 2.  [Test sur le phishing](https://www.ebas.ch/fr/test-sur-le-hameconnage/)

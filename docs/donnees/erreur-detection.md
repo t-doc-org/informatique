@@ -4,7 +4,7 @@
 
 ```{metadata}
 scripts:
-  - src: quizz-helpers.js
+  - src: quiz-helpers.js
 ```
 
 # Détection d'erreur
@@ -172,7 +172,7 @@ Les messages suivants sont-ils corrects?
 | message reçu | correct? |
 | :----------: | :------: |
 
-<script>tdoc.quizzParityCheck(4, 4, 0);</script>
+<script>tdoc.quizParityCheck(4, 4, 0);</script>
 
 ### Exercice {num}`exo-donnees`
 
@@ -184,7 +184,7 @@ Les messages suivants sont-ils corrects?
 | message reçu | correct? |
 | :----------: | :------: |
 
-<script>tdoc.quizzParityCheck(4, 9, 0);</script>
+<script>tdoc.quizParityCheck(4, 9, 0);</script>
 
 ### Exercice {num}`exo-donnees`
 
@@ -196,25 +196,25 @@ Encodez les messages suivants.
 | message | message encodé |
 | :-----: | :------------: |
 
-<script>tdoc.quizzParityEncode(4, 9);</script>
+<script>tdoc.quizParityEncode(4, 9);</script>
 
 ### Exercice {num}`exo-donnees`
 
 On considère le code $B(5, 4)$.
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 5rem;
 :check: split remove-whitespace lowercase
 ```
 
-```{role} select(quizz-select)
+```{role} select(quiz-select)
 :right:
 :options: |
 : oui
 : non
 ```
 
-```{quizz}
+```{quiz}
 1.  {input}`80%,4/5,0.8`
     Quelle est l'efficacité de ce code?
 2.  {select}`non`
@@ -245,7 +245,7 @@ somme et déterminez si le message est correct.
 | message reçu | somme | correct? |
 | :----------: | :---: | :------: |
 
-<script>tdoc.quizzDigitSumCheck(4, 9);</script>
+<script>tdoc.quizDigitSumCheck(4, 9);</script>
 
 ### Exercice {num}`exo-donnees`
 
@@ -255,7 +255,7 @@ multiple de 10, encodez les messages suivants.
 | message | message encodé |
 | :-----: | :------------: |
 
-<script>tdoc.quizzDigitSumEncode(4, 9);</script>
+<script>tdoc.quizDigitSumEncode(4, 9);</script>
 
 ### Exercice {num}`exo-donnees`
 
@@ -303,7 +303,7 @@ si le message est correct.
 | message reçu | somme | correct? |
 | :----------: | :---: | :------: |
 
-<script>tdoc.quizzLuhnSumCheck(4, 9);</script>
+<script>tdoc.quizLuhnSumCheck(4, 9);</script>
 
 ### Exercice {num}`exo-donnees`
 
@@ -312,7 +312,7 @@ En utilisant l'algorithme de Luhn, encodez les messages suivants.
 | message | message encodé |
 | :-----: | :------------: |
 
-<script>tdoc.quizzLuhnSumEncode(4, 9);</script>
+<script>tdoc.quizLuhnSumEncode(4, 9);</script>
 
 ### Exercice {num}`exo-donnees`
 

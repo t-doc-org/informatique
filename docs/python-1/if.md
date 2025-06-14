@@ -26,14 +26,14 @@ Le résultat de la comparaison est de type booléen: True ou False.
 
 Est-ce que les expressions suivantes sont `True` (vrai) ou `False` (faux)?
 
-```{role} select(quizz-select)
+```{role} select(quiz-select)
 :right:
 :options: |
 : True
 : False
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 25rem;
 1.  {select}`True`  `1 + 1 == 2`
 2.  {select}`False` `2 * 3 == 3`
@@ -242,12 +242,12 @@ else:
 
 ### Exercice {num}`exo-py1`
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 10rem;
 :check: json remove-whitespace
 ```
 
-````{quizz}
+````{quiz}
 {input}`{"0": true, "-x+2": "Il faut remplacer x par sa valeur."}`
 Que va afficher ce programme?
 

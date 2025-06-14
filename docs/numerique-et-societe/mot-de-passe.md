@@ -48,11 +48,11 @@ Les 3 symboles suivants sont à disposition pour générer un mot de passe:
 
 Combien existe-il de mots de passe possibles,
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 5rem;
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 35rem;
 1.  {input}`3`  si la longueur du mot de passe est de 1?
 2.  {input}`9`  si la longueur du mot de passe est de 2?

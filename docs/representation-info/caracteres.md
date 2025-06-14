@@ -43,10 +43,9 @@ identique dans tous les pays.
 Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
 
 <script type="module">
-const core = await tdoc.import('tdoc/core.js');
-const quizz = await tdoc.import('tdoc/quizz.js');
+const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
 
-quizz.checks.encode = args => {
+quiz.checks.encode = args => {
     const text = core.qs(args.field.closest('p'), 'code').textContent;
     const codes = [];
     for (let i = 0; i < text.length; ++i) {
@@ -55,7 +54,7 @@ quizz.checks.encode = args => {
     args.solution = codes.join('');
 };
 
-quizz.checks.decode = args => {
+quiz.checks.decode = args => {
     const text = core.qs(args.field.closest('p'), 'code').textContent;
     let s = '';
     for (const c of text.split(/\s+/)) {
@@ -65,12 +64,12 @@ quizz.checks.decode = args => {
 };
 </script>
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 10rem;
 :check: encode uppercase remove-whitespace
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 25rem;
 1.  {input}`?`  `INFO`
 2.  {input}`?`  `hello`
@@ -82,12 +81,12 @@ quizz.checks.decode = args => {
 
 Convertir le texte suivant écrit en code ASCII hexadécimal.
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 15rem;
 :check: decode
 ```
 
-```{quizz}
+```{quiz}
 - {input}`?`
   `4A 27 61 69 6D 65 20 6C 27 69 6E 66 6F 72 6D 61 74 69 71 75 65 21`
 ```

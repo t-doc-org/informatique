@@ -140,23 +140,23 @@ commençant par # sera ignorée lors de l'exécution du programme.
 
 Quel est le résultat des expressions suivantes en Python?
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 5rem;
 :check: json trim
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 30rem;
 1.  {input}`{"4": true}`
-    {quizz-hint}`Il faut effectuer la division entière de 23 par 5.`
+    {quiz-hint}`Il faut effectuer la division entière de 23 par 5.`
     `23 // 5`
 2.  {input}`{"3": true}`
-    {quizz-hint}`% est le reste de la division entière.`
+    {quiz-hint}`% est le reste de la division entière.`
     `23 % 5`
 3.  {input}`{"4.6": true,
              "4,6": "En Python, il faut utiliser un point pour les nombres à
                      virgule."}`
-    {quizz-hint}`Il faut effectuer la division.`
+    {quiz-hint}`Il faut effectuer la division.`
     `23 / 5`
 4.  {input}`{"0": true,
              "40": "En Python, l'ordre de priorité est le même qu'en maths."}`
@@ -169,7 +169,7 @@ Quel est le résultat des expressions suivantes en Python?
 
 De quel type sont les expressions suivantes?
 
-```{role} select(quizz-select)
+```{role} select(quiz-select)
 :right:
 :options: |
 : int
@@ -178,7 +178,7 @@ De quel type sont les expressions suivantes?
 : bool
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 20rem;
 1.  {select}`str`   `"Salut"`
 2.  {select}`float` `5.0`

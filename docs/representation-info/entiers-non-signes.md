@@ -48,10 +48,9 @@ $$
 ## Exercice {num}`exo-info`
 
 <script type="module">
-const core = await tdoc.import('tdoc/core.js');
-const quizz = await tdoc.import('tdoc/quizz.js');
+const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
 
-quizz.checks.conv = args => {
+quiz.checks.conv = args => {
     const p = args.field.closest('p');
     const rel = core.qs(p, 'math > msub > :nth-child(2)');
     const fradix = rel ? core.strToInt(rel.textContent): 10;
@@ -65,7 +64,7 @@ quizz.checks.conv = args => {
     args.solution = core.strToInt(s, fradix);
 };
 
-quizz.checks.digits = args => {
+quiz.checks.digits = args => {
     const p = args.field.closest('p');
     args.solution = Math.ceil(Math.log2(
         core.strToInt(core.qs(p, 'math').textContent) + 1));
@@ -75,12 +74,12 @@ quizz.checks.digits = args => {
 
 Convertir les nombres suivants de binaire en décimal.
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 5rem;
 :check: remove-whitespace conv
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 25rem;
 1.  {input}`10` $10_2$
 2.  {input}`10` $101_2$
@@ -124,12 +123,12 @@ $$149 = 10010101_2$$
 
 Convertir les nombres suivants de décimal en binaire.
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 10rem;
 :check: remove-whitespace conv
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 25rem;
 1.  {input}`2` $3$
 2.  {input}`2` $6$
@@ -145,12 +144,12 @@ Convertir les nombres suivants de décimal en binaire.
 
 Combien de bits faut-il pour écrire les nombres suivants en base 2?
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 5rem;
 :check: trim digits
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 20rem;
 1.  {input}`?`  $13$
 2.  {input}`?`  $37$
@@ -190,12 +189,12 @@ $$A0D7_{16} = 1010\,0000\,1101\,0111_{2}$$
 
 Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 12rem;
 :check: remove-whitespace conv
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 35rem;
 1.  {input}`16` $1000\,0111_2$
 2.  {input}`16` $0101\,1010_2$
@@ -256,12 +255,12 @@ Un exemple coûteux d'overflow est le [vol 501 d'Ariane 5](https://fr.wikipedia.
 
 Effectuer les additions suivantes sur 4 bits.
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 6rem;
 :check: split remove-whitespace
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 30rem;
 1.  {input}`0101`           $0010_2 + 0011_2$
 2.  {input}`1101`           $0101_2 + 1000_2$
@@ -273,12 +272,12 @@ Effectuer les additions suivantes sur 4 bits.
 
 Effectuer les additions suivantes sur 8 bits.
 
-```{role} input(quizz-input)
+```{role} input(quiz-input)
 :right: width: 8rem;
 :check: remove-whitespace
 ```
 
-```{quizz}
+```{quiz}
 :style: max-width: 30rem;
 1.  {input}`10011000` $0110\,0110_2 + 0011\,0010_2$
 2.  {input}`11011111` $0101\,1111_2 + 1000\,0000_2$
