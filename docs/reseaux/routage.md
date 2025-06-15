@@ -60,8 +60,11 @@ sans bloquer les autres utilisateurs.
 
 Le routage désigne le processus par lequel un chemin est choisi pour faire
 circuler des données à travers un ou plusieurs réseaux. Cette tâche est assurée
-les routeurs, qui prennent les décisions nécessaires pour acheminer les
+par les routeurs, qui prennent les décisions nécessaires pour acheminer les
 paquets vers leur destination.
+
+```{youtube} 88JeRflty4s?si=s1N7EkW-MRw294R1
+```
 
 ### Exercice {num}`exo-reseaux`
 
@@ -91,7 +94,7 @@ Complétez les tables de routages suivantes.
 | E | {input}`A` | {input}`2` |
 | F | {input}`D` | {input}`3` |
 | G | {input}`A,D` | {input}`3` |
-| H | {input}`D` | {input}`4` |
+| H | {input}`A,D` | {input}`4` |
 ```
 
 **Routeur F:**
@@ -249,3 +252,7 @@ tables de routages.
 | C | B | 2 |
 | D | B | 2 |
 | E | B | 3 |
+
+
+```{youtube} -2TDDyjClBI
+```
