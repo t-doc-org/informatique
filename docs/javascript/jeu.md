@@ -166,6 +166,7 @@ Il est plus facile de travailler avec des coordonnées x et y pour le tableau
 plutôt que d'utiliser l'index. Voici le code qui permet de convertir l'index
 en coordonnées x et y:
 ```{exec} html
+:when: never
 const c = event.target;             // retourne l'élément ciblé
 const index = cellules.indexOf(c);  // retourne l'index de l'élément ciblé
 const x = index % larg;             // calcule la coordonnée x en fonction de l'index
@@ -173,6 +174,7 @@ const y = Math.trunc(index / larg); // calcule la coordonnée y en fonction de l
 ```
 Et celui pour convertir les coordonnées x et y en index:
 ```{exec} html
+:when: never
 function changeCoordEnIndex(x, y) {
     return y * larg + x;
 }
