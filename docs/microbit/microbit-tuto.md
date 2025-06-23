@@ -169,7 +169,6 @@ Le **module microbit** contient de nombreuses images intégrées, telles que
 2. Exécutez le programme sur le micro:bit pour vérifier votre réponse.
 3. Modifiez le programme ci-dessus pour afficher une croix sur le microbit.
 
-
 ````{solution}
 ```{exec} micropython
 :after: microbit-reset

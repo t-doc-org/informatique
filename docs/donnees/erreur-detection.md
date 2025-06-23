@@ -2,11 +2,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-scripts:
-  - src: quiz-helpers.js
-```
-
 # Détection d'erreur
 
 ## Stockage et transmission de l'information
@@ -169,10 +164,71 @@ de parité. La somme doit être paire.
 
 Les messages suivants sont-ils corrects?
 
-| message reçu | correct? |
-| :----------: | :------: |
+<script type="module">
+const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
 
-<script>tdoc.quizParityCheck(4, 4, 0);</script>
+function parity(msg) {
+    let p = 0;
+    while (msg !== 0) {
+        p ^= msg & 1;
+        msg >>= 1;
+    }
+    return p;
+}
+
+function check(min, max, p) {
+    return () => {
+        const bits = Math.floor(min + 1 + Math.random() * (max - min  + 1));
+        const msg = Math.floor(Math.random() * (1 << bits));
+        const correct = parity(msg) ^ p;
+        return {
+            msg,
+            equal(other) { return other.msg === msg; },
+            history: (max - min + 1) / 2,
+
+            msg(ph) { ph.textContent = core.toRadix(msg, 2, bits); },
+            correct(args) {
+                args.ok = {'oui': 0, 'non': 1}[args.answer] === correct;
+            },
+        };
+    };
+}
+
+function encode(min, max, p) {
+    return () => {
+        const bits = Math.floor(min + Math.random() * (max - min  + 1));
+        const msg = Math.floor(Math.random() * (1 << bits));
+        const encoded = core.toRadix((msg << 1) | (parity(msg) ^ p), 2,
+                                     bits + 1);
+        return {
+            msg,
+            equal(other) { return other.msg === msg; },
+            history: (max - min + 1) / 2,
+
+            msg(ph) { ph.textContent = core.toRadix(msg, 2, bits); },
+            encoded(args) {
+                args.ok = args.answer.trim() === encoded;
+            },
+        };
+    };
+}
+
+quiz.generator('parity-check-4', check(4, 4, 0));
+quiz.generator('parity-check-4-9', check(4, 9, 0));
+quiz.generator('parity-encode', encode(4, 9, 0));
+</script>
+
+```{role} oui-non(quiz-select)
+:options: |
+: oui
+: non
+```
+
+```{quiz} table parity-check-4
+| message reçu   | correct?           |
+| :------------: | :----------------: |
+| {quiz-ph}`msg` | {oui-non}`correct` |
+```
 
 ### Exercice {num}`exo-donnees`
 
@@ -181,10 +237,11 @@ $n$ bits et 1 bit de parité. La somme doit être paire.
 
 Les messages suivants sont-ils corrects?
 
-| message reçu | correct? |
-| :----------: | :------: |
-
-<script>tdoc.quizParityCheck(4, 9, 0);</script>
+```{quiz} table parity-check-4-9
+| message reçu   | correct?           |
+| :------------: | :----------------: |
+| {quiz-ph}`msg` | {oui-non}`correct` |
+```
 
 ### Exercice {num}`exo-donnees`
 
@@ -193,10 +250,15 @@ $n$ bits et 1 bit de parité. La somme doit être paire.
 
 Encodez les messages suivants.
 
-| message | message encodé |
-| :-----: | :------------: |
+```{role} input(quiz-input)
+:style: width: 8rem;
+```
 
-<script>tdoc.quizParityEncode(4, 9);</script>
+```{quiz} table parity-encode
+| message        | message encodé   |
+| :------------: | :--------------: |
+| {quiz-ph}`msg` | {input}`encoded` |
+```
 
 ### Exercice {num}`exo-donnees`
 
@@ -204,9 +266,8 @@ On considère le code $B(5, 4)$.
 
 ```{role} input(quiz-input)
 :right: width: 5rem;
-:check: split remove-whitespace lowercase
+:check: split remove lowercase
 ```
-
 ```{role} select(quiz-select)
 :right:
 :options: |
@@ -242,20 +303,119 @@ On ajoute à un message utile de $n$ chiffres un chiffre de contrôle pour que l
 somme soit un multiple de 10. Pour chacun des messages suivants, indiquez la
 somme et déterminez si le message est correct.
 
-| message reçu | somme | correct? |
-| :----------: | :---: | :------: |
+<script type="module">
+const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
+const debug = false;
 
-<script>tdoc.quizDigitSumCheck(4, 9);</script>
+// Compute the sum of the digits of the given message.
+function digitSum(msg) {
+    let s = 0;
+    while (msg !== 0) {
+        s += msg % 10;
+        msg = Math.floor(msg / 10);
+    }
+    return s;
+}
+
+// Compute the Luhn sum of the given message.
+function luhnSum(msg) {
+    let s = 0, double = false;
+    while (msg !== 0) {
+        let d = msg % 10;
+        if (double) d *= 2;
+        s += d % 10 + Math.floor(d / 10);
+        msg = Math.floor(msg / 10);
+        double = !double;
+    }
+    return s;
+}
+
+// Encode a message such that the given sum has `last` as the least
+// significant digit.
+function sumEncode(msg, fnSum, last = 0) {
+    msg *= 10;
+    return msg + (10 - fnSum(msg) % 10 + last) % 10;
+}
+
+// Generate a random decimal message.
+function randomDecimal(digits) {
+    const mag = 10 ** (digits - 1);
+    return Math.floor(mag + Math.random() * 9 * mag);
+}
+
+function check(fnSum, min, max) {
+    return () => {
+        // Generate a new random message, with a 0.5 probability of being
+        // correct.
+        const msg = sumEncode(
+            randomDecimal(core.randomInt(min, max)), fnSum,
+                          Math.random() < 0.5 ? 0 : core.randomInt(1, 9));
+        const sum = fnSum(msg);
+        if (debug) console.log(`${msg} => ${sum}`);
+        return {
+            msg,
+            equal(other) { return other.msg === msg; },
+            history: 10 ** (min - 1) / 2,
+
+            msg(ph) { ph.textContent = `${msg}`; },
+            sum(args) { args.ok =  args.answer.trim() === sum.toString(); },
+            correct(args) {
+                args.ok = {'oui': true, 'non': false}[args.answer]
+                          === (sum % 10 === 0);
+            },
+        };
+    };
+}
+
+function encode(fnSum, min, max) {
+    return () => {
+        // Generate a new random message.
+        const msg = randomDecimal(core.randomInt(min, max));
+        const encoded = sumEncode(msg, fnSum);
+        if (debug) console.log(`${msg} => ${encoded}`);
+        return {
+            msg,
+            equal(other) { return other.msg === msg; },
+            history: 10 ** (min - 1) / 2,
+
+            msg(ph) { ph.textContent = `${msg}`; },
+            encoded(args) {
+                args.ok = args.answer.trim() === encoded.toString();
+            },
+        };
+    };
+}
+
+quiz.generator('sum-digit-check', check(digitSum, 4, 9));
+quiz.generator('sum-digit-encode', encode(digitSum, 4, 9));
+quiz.generator('sum-luhn-check', check(luhnSum, 4, 9));
+quiz.generator('sum-luhn-encode', encode(luhnSum, 4, 9));
+</script>
+
+```{role} input(quiz-input)
+:style: width: 4rem;
+```
+
+```{quiz} table sum-digit-check
+| message reçu   | somme        | correct?           |
+| :------------: | :----------: | :----------------: |
+| {quiz-ph}`msg` | {input}`sum` | {oui-non}`correct` |
+```
 
 ### Exercice {num}`exo-donnees`
 
 Sachant que le critère pour la somme de contrôle est que la somme doit être un
 multiple de 10, encodez les messages suivants.
 
-| message | message encodé |
-| :-----: | :------------: |
+```{role} input(quiz-input)
+:style: width: 10rem;
+```
 
-<script>tdoc.quizDigitSumEncode(4, 9);</script>
+```{quiz} table sum-digit-encode
+| message        | message encodé   |
+| :------------: | :--------------: |
+| {quiz-ph}`msg` | {input}`encoded` |
+```
 
 ### Exercice {num}`exo-donnees`
 
@@ -300,19 +460,29 @@ Exemples de décodage
 Calculez la somme selon l'algorithme de Luhn des messages suivants et déterminez
 si le message est correct.
 
-| message reçu | somme | correct? |
-| :----------: | :---: | :------: |
+```{role} input(quiz-input)
+:style: width: 4rem;
+```
 
-<script>tdoc.quizLuhnSumCheck(4, 9);</script>
+```{quiz} table sum-luhn-check
+| message reçu   | somme        | correct?           |
+| :------------: | :----------: | :----------------: |
+| {quiz-ph}`msg` | {input}`sum` | {oui-non}`correct` |
+```
 
 ### Exercice {num}`exo-donnees`
 
 En utilisant l'algorithme de Luhn, encodez les messages suivants.
 
-| message | message encodé |
-| :-----: | :------------: |
+```{role} input(quiz-input)
+:style: width: 10rem;
+```
 
-<script>tdoc.quizLuhnSumEncode(4, 9);</script>
+```{quiz} table sum-luhn-encode
+| message        | message encodé   |
+| :------------: | :--------------: |
+| {quiz-ph}`msg` | {input}`encoded` |
+```
 
 ### Exercice {num}`exo-donnees`
 

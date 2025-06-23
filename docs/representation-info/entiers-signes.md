@@ -79,7 +79,7 @@ Vérification: l'addition d'un nombre et de son opposé doit donner 0.
 <script type="module">
 const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
 
-quiz.checks.negdec = args => {
+quiz.check('negdec', args => {
     args.answer = {
       neg: v => core.strToInt(v, 2),
       dec: v => core.strToInt(v),
@@ -93,9 +93,8 @@ quiz.checks.negdec = args => {
     const wrap = 1 << s.length, neg = wrap - value;
     const dec = neg < wrap / 2 ? neg : neg - wrap;
     args.solution = {neg, dec}[args.solution];
-};
-
-quiz.checks.mag = args => {
+});
+quiz.check('mag', args => {
     const smallest = args.solution[0] === '<';
     const signed = args.solution[1] === 's';
     const bits = core.strToInt(args.solution.slice(2));
@@ -106,7 +105,7 @@ quiz.checks.mag = args => {
     if (signed && v < 0 && radix !== 10) v += 1 << bits;
     args.answer = core.strToInt(args.answer, radix);
     args.solution = v;
-};
+});
 </script>
 
 Déterminer l'opposé des nombres suivants en binaire, ainsi que la valeur
@@ -114,7 +113,7 @@ décimale de celui-ci.
 
 ```{role} input(quiz-input)
 :style: width: 6rem; text-align: center;
-:check: remove-whitespace negdec
+:check: remove negdec
 ```
 
 ```{quiz}
@@ -132,15 +131,15 @@ Répondre aux questions suivantes:
 
 ```{role} dec(quiz-input)
 :style: width: 3rem; text-align: center;
-:check: remove-whitespace mag
+:check: remove mag
 ```
 ```{role} bin(quiz-input)
 :style: width: 6rem; text-align: center;
-:check: remove-whitespace mag
+:check: remove mag
 ```
 ```{role} str(quiz-input)
 :style: width: 6rem; text-align: center;
-:check: remove-whitespace
+:check: remove
 ```
 
 ```{quiz}

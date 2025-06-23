@@ -63,7 +63,7 @@ circuler des données à travers un ou plusieurs réseaux. Cette tâche est assu
 par les routeurs, qui prennent les décisions nécessaires pour acheminer les
 paquets vers leur destination.
 
-```{youtube} 88JeRflty4s?si=s1N7EkW-MRw294R1
+```{youtube} 88JeRflty4s
 ```
 
 ### Exercice {num}`exo-reseaux`

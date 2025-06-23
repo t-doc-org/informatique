@@ -2,11 +2,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-scripts:
-  - src: quiz-helpers.js
-```
-
 # Correction d'erreur
 
 ## Introduction
@@ -255,11 +250,137 @@ Pour chacun des messages utiles suivants:
 - indiquez les 3 bits de parités
 - encodez le message
 
-| message utile | $p_1$ | $p_2$ | $p_3$ | message codé |
-| :-----------: | :---: | :---: | :---: | :----------: |
-| 1010          | 1     | 0     | 1     | 1011010      |
+<script type="module">
+const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
+const debug = false;
 
-<script>tdoc.quizHammingEncode(3);</script>
+// Hamming-encode the given message.
+function hammingEncode(msg, parityBits) {
+    const ebits = (1 << parityBits) - 1;
+    const dataBits = ebits - parityBits;
+    let parity = 0, encoded = 0, mask = 1 << (dataBits - 1);
+    for (let i = 1; i <= ebits; ++i) {
+        if ((i & (i - 1)) === 0) continue;
+        const bit = (msg & mask) !== 0 ? 1 : 0;
+        encoded |= bit << (ebits - i);
+        for (let p = 0; p < parityBits; ++p) {
+            if ((i & (1 << p)) !== 0) parity ^= bit << p;
+        }
+        mask >>= 1;
+    }
+    for (let p = 0; p < parityBits; ++p) {
+        const bit = (parity & (1 << p)) !== 0 ? 1 : 0;
+        encoded |= bit << (ebits - (1 << p));
+    }
+    return encoded;
+}
+
+// Hamming-decode the given encoded message.
+function hammingDecode(encoded, parityBits) {
+    const ebits = (1 << parityBits) - 1;
+    const dataBits = ebits - parityBits;
+    let error = 0;
+    for (let i = 1; i <= ebits; ++i) {
+        for (let p = 0; p < parityBits; ++p) {
+            const bit = (encoded & (1 << (ebits - i))) !== 0 ? 1 : 0;
+            if ((i & (1 << p)) !== 0) error ^= bit << p;
+        }
+    }
+    let corrected = encoded;
+    if (error !== 0) corrected ^= 1 << (ebits - error);
+    let decoded = 0;
+    let shift = dataBits - 1;
+    for (let i = 1; i <= ebits; ++i) {
+        if ((i & (i - 1)) === 0) continue;
+        if ((corrected & (1 << (ebits - i))) !== 0) decoded |= 1 << shift;
+        shift -= 1;
+    }
+    return {error, corrected, decoded};
+}
+
+function encode(parityBits) {
+    return () => {
+        const dataBits = (1 << parityBits) - parityBits - 1;
+        const msg = Math.floor(Math.random() * (1 << dataBits));
+        const encoded = core.toRadix(hammingEncode(msg, parityBits), 2,
+                                     (1 << parityBits) - 1);
+        if (debug) {
+            console.log(`${core.toRadix(msg, 2, dataBits)} => ${encoded}`);
+        }
+        return {
+            msg,
+            equal(other) { return other.msg === msg; },
+            history: (1 << dataBits) / 2,
+
+            msg(ph) { ph.textContent = core.toRadix(msg, 2, dataBits); },
+            p(args, p) { args.ok = args.answer === encoded[(1 << p) - 1]; },
+            p1(args) { this.p(args, 0); },
+            p2(args) { this.p(args, 1); },
+            p3(args) { this.p(args, 2); },
+            encoded(args) { args.ok = args.answer.trim() === encoded; },
+        };
+    };
+}
+
+function decode(parityBits) {
+    return () => {
+        const ebits = (1 << parityBits) - 1;
+        const dataBits = ebits - parityBits;
+        const msg = Math.floor(Math.random() * (1 << ebits));
+        const dec = hammingDecode(msg, parityBits);
+        if (debug) {
+            console.log(`\
+${core.toRadix(msg, 2, ebits)} => ${core.toRadix(dec.corrected, 2, ebits)}`);
+        }
+        return {
+            msg,
+            equal(other) { return other.msg === msg; },
+            history: (1 << ebits) / 2,
+
+            msg(ph) { ph.textContent = core.toRadix(msg, 2, ebits); },
+            p(args, p) {
+                args.ok = {'correcte': 0, 'fausse': 1}[args.answer]
+                          === ((dec.error >> p) & 1);
+            },
+            p1(args) { this.p(args, 0); },
+            p2(args) { this.p(args, 1); },
+            p3(args) { this.p(args, 2); },
+            err(args) {
+                let a = args.answer.trim();
+                if (a === '') a = '0';
+                args.ok = a === dec.error.toString();
+            },
+            corrected(args) {
+                args.ok = args.answer.trim()
+                          === core.toRadix(dec.corrected, 2, ebits);
+            },
+            decoded(args) {
+                args.ok = args.answer.trim()
+                          === core.toRadix(dec.decoded, 2, dataBits);
+            },
+        };
+    };
+}
+
+quiz.generator('hamming-encode', encode(3));
+quiz.generator('hamming-decode', decode(3));
+</script>
+
+```{role} bit(quiz-select)
+:options: |
+: 0
+: 1
+```
+```{role} input(quiz-input)
+:style: width: 8rem; text-align: center;
+```
+
+```{quiz} table hamming-encode
+| message utile  | $p_1$     | $p_2$     | $p_3$     | message codé     |
+| :-----------:  | :-------: | :-------: | :-------: | :--------------: |
+| 1010           | 1         | 0         | 1         | 1011010          |
+| {quiz-ph}`msg` | {bit}`p1` | {bit}`p2` | {bit}`p3` | {input}`encoded` |
+```
 
 #### Exercice {num}`exo-donnees`
 
@@ -271,8 +392,24 @@ Pour chacun des messages reçus suivants:
 - corrigez le message reçu
 - décodez le message
 
-| message reçu | parité&nbsp;1 | parité&nbsp;2 | parité&nbsp;3 | bit erroné | message corrigé | message décodé |
-| :----------: | :-----------: | :-----------: | :-----------: | :-------------: | :------------: | :--------: |
-| 0101001      | fausse        | correcte      | correcte      | 1          | 1101001         | 0001           |
+```{role} parity(quiz-select)
+:options: |
+: correcte
+: fausse
+```
+```{role} nbit(quiz-input)
+:style: width: 3rem; text-align: center;
+```
+```{role} bin7(quiz-input)
+:style: width: 7rem; text-align: center;
+```
+```{role} bin4(quiz-input)
+:style: width: 4rem; text-align: center;
+```
 
-<script>tdoc.quizHammingDecode(3);</script>
+```{quiz} table hamming-decode
+| message reçu   | parité&nbsp;1 | parité&nbsp;2 | parité&nbsp;3 | bit erroné  | message corrigé   | message décodé  |
+| :------------: | :-----------: | :-----------: | :-----------: | :---------: | :---------------: | :-------------: |
+| 0101001        | fausse        | correcte      | correcte      | 1           | 1101001           | 0001            |
+| {quiz-ph}`msg` | {parity}`p1`  | {parity}`p2`  | {parity}`p3`  | {nbit}`err` | {bin7}`corrected` | {bin4}`decoded` |
+```

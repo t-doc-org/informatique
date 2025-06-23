@@ -124,7 +124,7 @@ else:
 
 ```{role} input(quiz-input)
 :right: width: 10rem;
-:check: json remove-whitespace
+:check: json remove
 ```
 
 ````{quiz}

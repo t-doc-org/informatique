@@ -45,28 +45,27 @@ Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
 <script type="module">
 const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
 
-quiz.checks.encode = args => {
+quiz.check('encode', args => {
     const text = core.qs(args.field.closest('p'), 'code').textContent;
     const codes = [];
     for (let i = 0; i < text.length; ++i) {
       codes.push(core.toRadix(text.charCodeAt(i), 16, 2));
     }
     args.solution = codes.join('');
-};
-
-quiz.checks.decode = args => {
+});
+quiz.check('decode', args => {
     const text = core.qs(args.field.closest('p'), 'code').textContent;
     let s = '';
     for (const c of text.split(/\s+/)) {
       s += String.fromCharCode(Number.parseInt(c, 16));
     }
     args.solution = s;
-};
+});
 </script>
 
 ```{role} input(quiz-input)
 :right: width: 10rem;
-:check: encode uppercase remove-whitespace
+:check: encode uppercase remove
 ```
 
 ```{quiz}

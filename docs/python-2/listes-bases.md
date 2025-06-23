@@ -290,7 +290,7 @@ ma_liste.count(mon_element)
 
 ```{role} input(quiz-input)
 :right: width: 15rem;
-:check: remove-whitespace
+:check: remove
 ```
 
 ````{quiz}

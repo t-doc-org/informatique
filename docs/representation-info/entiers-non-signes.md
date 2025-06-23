@@ -50,7 +50,7 @@ $$
 <script type="module">
 const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
 
-quiz.checks.conv = args => {
+quiz.check('conv', args => {
     const p = args.field.closest('p');
     const rel = core.qs(p, 'math > msub > :nth-child(2)');
     const fradix = rel ? core.strToInt(rel.textContent): 10;
@@ -62,21 +62,20 @@ quiz.checks.conv = args => {
     }
     args.answer = core.strToInt(args.answer, tradix);
     args.solution = core.strToInt(s, fradix);
-};
-
-quiz.checks.digits = args => {
+});
+quiz.check('digits', args => {
     const p = args.field.closest('p');
     args.solution = Math.ceil(Math.log2(
         core.strToInt(core.qs(p, 'math').textContent) + 1));
     args.answer = core.strToInt(args.answer);
-};
+});
 </script>
 
 Convertir les nombres suivants de binaire en décimal.
 
 ```{role} input(quiz-input)
 :right: width: 5rem;
-:check: remove-whitespace conv
+:check: remove conv
 ```
 
 ```{quiz}
@@ -125,7 +124,7 @@ Convertir les nombres suivants de décimal en binaire.
 
 ```{role} input(quiz-input)
 :right: width: 10rem;
-:check: remove-whitespace conv
+:check: remove conv
 ```
 
 ```{quiz}
@@ -191,7 +190,7 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
 ```{role} input(quiz-input)
 :right: width: 12rem;
-:check: remove-whitespace conv
+:check: remove conv
 ```
 
 ```{quiz}
@@ -257,7 +256,7 @@ Effectuer les additions suivantes sur 4 bits.
 
 ```{role} input(quiz-input)
 :right: width: 6rem;
-:check: split remove-whitespace
+:check: split remove
 ```
 
 ```{quiz}
@@ -274,7 +273,7 @@ Effectuer les additions suivantes sur 8 bits.
 
 ```{role} input(quiz-input)
 :right: width: 8rem;
-:check: remove-whitespace
+:check: remove
 ```
 
 ```{quiz}
