@@ -393,7 +393,7 @@ ma_liste.count(mon_element)
 sports = ["kayak", "escrime", "escalade"]
 print(sports, len(sports))
 for _ in range(5):
-  sport = await input_line("Entrer un sport: ")
+  sport = input("Entrer un sport: ")
   sports.append(sport)
 print(sports, len(sports))
 sports.insert(3, "tennis de table")
@@ -426,7 +426,7 @@ print(sports, len(sports))
 :linenos:
 nombres = []
 for _ in range(5):
-  n = float(await input_line("Entrer un nombre: "))
+  n = float(input("Entrer un nombre: "))
   nombres.append(n)
 print(nombres, len(nombres))
 nombres.sort()
@@ -484,7 +484,7 @@ Complétez le programme de manière que celui-ci corresponde à cette descriptio
 ```{exec} python
 :editor: 88e9572e-051f-4e67-8244-06e475aa0133
 ingredients = ["sauce tomate", "mozzarella"]
-choix = await input_line("Ajouter un ingrédient: ")
+choix = input("Ajouter un ingrédient: ")
 
 while choix != "stop":
   # à compléter
@@ -496,11 +496,11 @@ print(ingredients)
 ```{exec} python
 :linenos:
 ingredients = ["sauce tomate", "mozzarella"]
-choix = await input_line("Ajouter un ingrédient: ")
+choix = input("Ajouter un ingrédient: ")
 
 while choix != "stop":
   ingredients.append(choix)
-  choix = await input_line("Ajouter un ingrédient: ")
+  choix = input("Ajouter un ingrédient: ")
 
 print(ingredients)
 ```

@@ -112,7 +112,7 @@ else:
 Vérifie tes réponses en exécutant le code.
 ```{exec} python
 :linenos:
-age = int(await input_line("Quel âge as-tu? "))
+age = int(input("Quel âge as-tu? "))
 if age >= 18:
   print("Tu es majeur.")
 else:
@@ -216,14 +216,14 @@ Sinon
 :editor: 62b603f8-6468-490d-ad94-a7afe58a5e14
 # Modifiez et complétez le programme
 prix_unitaire = ...
-nb_canettes = int(await input_line("Nombre de canettes de Red Bull à acheter?"))
+nb_canettes = int(input("Nombre de canettes de Red Bull à acheter?"))
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
 prix_unitaire = 1.5
-nb_canettes = int(await input_line("Nombre de canettes de Red Bull à acheter?"))
+nb_canettes = int(input("Nombre de canettes de Red Bull à acheter?"))
 if nb_canettes < 0:
   print("La quantité doit être un nombre positif.")
 else:
@@ -248,14 +248,14 @@ Sinon
 ```{exec} python
 :editor: 473120c2-5476-4dd2-abf5-eba9e1cb2f97
 # Modifiez et complétez le programme
-... await input_line("Quel est votre âge?")
+... input("Quel est votre âge?")
 ...
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
-age = int(await input_line("Quel âge as-tu?"))
+age = int(input("Quel âge as-tu?"))
 if  age < 16:
   print("Tu ne peux pas acheter d'alcool.")
 elif age < 18:

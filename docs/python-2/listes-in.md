@@ -39,7 +39,7 @@ Utilisez pour cela la notation `if ... in ...` quand cela est nécessaire.
 
 ```{exec} python
 :editor: 21b10226-a456-4ab1-b04d-df9cef3aaf81
-locomotion = await input_line("Quel moyen de locomotion utilises-tu pour te rendre au travail: ")
+locomotion = input("Quel moyen de locomotion utilises-tu pour te rendre au travail: ")
 
 # Complétez le programme à partir de là
 print("C'est très écologique!")
@@ -52,7 +52,7 @@ print("Sans avis.")
 ````{solution}
 ```{exec} python
 :linenos:
-locomotion = await input_line("Quel moyen de locomotion utilises-tu pour aller au travail: ")
+locomotion = input("Quel moyen de locomotion utilises-tu pour aller au travail: ")
 
 if locomotion in ["à pied", "trottinette", "skateboard", "vélo"]:
     print("C'est très écologique!")
@@ -76,7 +76,7 @@ ligne nord, ou s'il ne peut pas se rendre à sa destination.
 
 ```{exec} python
 :editor: e77565d0-b927-412b-b3e5-e6e7e8a00c72
-destination = await input_line("Où veux-tu aller: ")
+destination = input("Où veux-tu aller: ")
 
 ligne_nord = ["Châtelet", "Opéra", "République", "Bastille"]
 ligne_sud = ["Gare du Nord", "Gare de Lyon", "Saint-Michel Notre-Dame", "Auber", "Porte d'Italie"]
@@ -90,7 +90,7 @@ print("Tu ne peux pas te rendre à cet arrêt.")
 ````{solution}
 ```{exec} python
 :linenos:
-destination = await input_line("Où veux-tu aller: ")
+destination = input("Où veux-tu aller: ")
 
 ligne_nord = ["Châtelet", "Opéra", "République", "Bastille"]
 ligne_sud = ["Gare du Nord", "Gare de Lyon", "Saint-Michel Notre-Dame",
@@ -120,7 +120,7 @@ des codes postaux est simplement affichée.
 # Complétez le programme
 codes_postaux = []
 
-code_postal = int(await input_line("Entre un code postal: "))
+code_postal = int(input("Entre un code postal: "))
 
 print("Erreur, ce code postal est déjà dans la liste.")
 
@@ -131,13 +131,13 @@ print(codes_postaux)
 ```{exec} python
 :linenos:
 codes_postaux = []
-code_postal = int(await input_line("Entre un code postal : "))
+code_postal = int(input("Entre un code postal : "))
 while code_postal >= 0:
     if code_postal in codes_postaux:
         print("Erreur, ce code postal est déjà dans la liste.")
     elif code_postal >= 0:
         codes_postaux.append(code_postal)
-    code_postal = int(await input_line("Entre un code postal : "))
+    code_postal = int(input("Entre un code postal : "))
 
 print(codes_postaux)
 ```

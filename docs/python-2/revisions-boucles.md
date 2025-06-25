@@ -222,7 +222,7 @@ Afficher "Merci"
 ```{exec} python
 :editor: d8324808-567b-4ff5-84a3-7968443ba125
 # Complétez le programme
-n = int(await input_line("Entrer un nombre strictement positif: "))
+n = int(input("Entrer un nombre strictement positif: "))
 print("Le nombre doit être strictement positif!")
 print("Merci")
 ```
@@ -230,10 +230,10 @@ print("Merci")
 ````{solution}
 ```{exec} python
 :linenos:
-n = int(await input_line("Entrer un nombre strictement positif: "))
+n = int(input("Entrer un nombre strictement positif: "))
 while n <= 0:
   print("Le nombre doit être strictement positif!")
-  n = int(await input_line("Entrer un nombre strictement positif: "))
+  n = int(input("Entrer un nombre strictement positif: "))
 print("Merci")
 ```
 ````
@@ -312,9 +312,9 @@ Bravo!
 ````{solution}
 ```{exec} python
 :linenos:
-nb_cantons = int(await input_line("Combien y a-t-il de cantons en Suisse?"))
+nb_cantons = int(input("Combien y a-t-il de cantons en Suisse?"))
 while nb_cantons != 26:
-  nb_cantons = int(await input_line("Faux, essaie encore!"))
+  nb_cantons = int(input("Faux, essaie encore!"))
 print("Bravo!")
 ```
 ````

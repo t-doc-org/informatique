@@ -15,20 +15,18 @@ solutions: hide
     - Découpez le code en parties qui effectuent une tâche donnée et ajouter des
     commentaires.
     - Remplacez chaque partie par une fonction.
-4.  Copiez, modifiez, testez et exécutez le code dans Thonny ou sur
-    [online-python.com](https://www.online-python.com/). Ne pas oublier de
-    modifier les `await input_line()` en `input()`.
+4.  Modifiez, testez et exécutez le code suivant.
 
 ```{exec} python
 :style: height: 25rem
-:linenos:
+:editor: da2f7179-98b6-40ec-a5cc-577a60d4de7a
 from random import *
 from time import *
 
 print("Bienvenue sur mon application de jeux.")
 
 while True:
-  choix = await input_line("Quel jeu veux-tu essayer?\n"
+  choix = input("Quel jeu veux-tu essayer?\n"
   " Jeu 1 [1], Jeu 2 [2] ou Jeu 3 [3] ou Quitter [q]")
   if choix == "1":
     print("Tu dois deviner un nombre entre 1 et 100 en un minimum d'essais.")
@@ -36,7 +34,7 @@ while True:
     essais = 0
     trouve = False
     while not trouve:
-      nb_propose = int(await input_line("Trouve le nombre: "))
+      nb_propose = int(input("Trouve le nombre: "))
       essais += 1
       if nb_propose < nb_secret:
         print("Le nombre est plus grand!")
@@ -57,7 +55,7 @@ while True:
     sleep(4)
     print("Multiplie le nombre par 50.")
     sleep(4)
-    deja_fete = await input_line("As-tu déjà fêté ton anniversaire cette"
+    deja_fete = input("As-tu déjà fêté ton anniversaire cette"
     " année? [oui/non]")
     if deja_fete == "oui":
       print("Ajoute 1774.")
@@ -65,13 +63,13 @@ while True:
       print("Ajoute 1775.")
     sleep(2)
     print("Soustrais ton année de naissance (par exemple, 2001).")
-    nombre = await input_line("Donne-moi le résultat final: ")
+    nombre = input("Donne-moi le résultat final: ")
     print("Tu as", nombre[1:3], "ans et le nombre que tu avais choisis au "
     "départ est", nombre[0], ".")
   elif choix == "3":
     print("Réponds à l'énigme suivante:")
     while True:
-      reponse = await input_line("Placée sous les pieds elle prête à rire.\n"
+      reponse = input("Placée sous les pieds elle prête à rire.\n"
       " Placée entre les doigts, elle a permis d'écrire.\n"
       " Elle sert d'ornement mais s'envolent au gré du vent.\n"
       " Qui est-elle? ")
@@ -96,12 +94,12 @@ from random import *
 from time import *
 
 # Définition des différents jeux
-async def trouve_un_nombre():
+def trouve_un_nombre():
   print("Tu dois deviner un nombre entre 1 et 100 en un minimum d'essais.")
   nb_secret = randint(1, 100)
   essais = 0
   while True:
-    nb_propose = int(await input_line("Trouve le nombre: "))
+    nb_propose = int(input("Trouve le nombre: "))
     essais += 1
     if nb_propose < nb_secret:
       print("Le nombre est plus grand!")
@@ -111,7 +109,7 @@ async def trouve_un_nombre():
       print("Bravo, tu as trouvé", nb_secret, "en", essais, "essais.")
       break
 
-async def devine_age():
+def devine_age():
   print("Je vais deviner ton âge!")
   print("Effectue la suite de calculs suivante:")
   sleep(4)
@@ -123,7 +121,7 @@ async def devine_age():
   sleep(4)
   print("Multiplie le nombre par 50.")
   sleep(4)
-  deja_fete = await input_line("As-tu déjà fêté ton anniversaire cette année?"
+  deja_fete = input("As-tu déjà fêté ton anniversaire cette année?"
   " [oui/non]")
   if deja_fete == "oui":
     print("Ajoute 1774.")
@@ -131,14 +129,14 @@ async def devine_age():
     print("Ajoute 1775.")
   sleep(2)
   print("Soustrais ton année de naissance (par exemple, 2001).")
-  nombre = await input_line("Donne-moi le résultat final: ")
+  nombre = input("Donne-moi le résultat final: ")
   print("Tu as", nombre[1:3], "ans et le nombre que tu avais choisis au "
   "départ est", nombre[0], ".")
 
-async def resous_enigme():
+def resous_enigme():
   print("Réponds à l'énigme suivante:")
   while True:
-    reponse = await input_line("Placée sous les pieds elle prête à rire.\n"
+    reponse = input("Placée sous les pieds elle prête à rire.\n"
       " Placée entre les doigts, elle a permis d'écrire.\n"
       " Elle sert d'ornement mais s'envolent au gré du vent.\n"
       " Qui est-elle? ")
@@ -157,7 +155,7 @@ print("Bienvenue sur mon application de jeux.")
 
 # Choix des jeux
 while True:
-  choix = await input_line("Quel jeu veux-tu essayer?\n"
+  choix = input("Quel jeu veux-tu essayer?\n"
   "Jeu 1 [1], Jeu 2 [2] ou Jeu 3 [3] ou Quitter [q] ")
   if choix == "1":
     await trouve_un_nombre()
@@ -183,5 +181,8 @@ print("Au revoir. Merci d'avoir joué avec moi!")
 2.  Utilisez une variable pour le score.
 3.  Gérez le déroulement du jeu.
 
-Travaillez dans Thonny ou sur
-[online-python.com](https://www.online-python.com/).
+```{exec} python
+:editor: e1754beb-6422-4b9a-8904-aad4a9fe001c
+
+# Écrivez le code ici
+```

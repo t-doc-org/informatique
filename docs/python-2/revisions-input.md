@@ -23,15 +23,10 @@ perdue. La valeur rentrée par l'utilisateur est stockée sous forme de chaîne 
 caractères (de type `str`). Pour effectuer des calculs, il faut la convertir en `int`
 ou en `float`.
 
-```{important}
-L'utilisation de la fonction input sur ce site est différente de ce que vous
-avez faite d'habitude.\
-`nom_variable = await input_line("...")`
-```
 
 ```{exec} python
 :linenos:
-age = int(await input_line("Quel âge as-tu?"))
+age = int(input("Quel âge as-tu?"))
 print("Dans 10 ans, tu auras", age + 10, "ans.")
 ```
 
@@ -52,8 +47,8 @@ Afficher l'aire.
 ```{exec} python
 :editor: e35ab3c5-b735-4fc5-b20d-0b261633aa15
 # Complétez le programme
-largeur = await input_line(...)
-longueur = await input_line(...)
+largeur = input(...)
+longueur = input(...)
 aire =
 print("L'aire vaut")
 ```
@@ -64,8 +59,8 @@ Testez le code avec les valeurs 3.6 et 6.4.
 ```{exec} python
 :linenos:
 # Ne pas oublier de convertir les inputs en float
-largeur = float(await input_line("Quelle est la largeur du rectangle"))
-longueur = float(await input_line("Quelle est la longueur du rectangle"))
+largeur = float(input("Quelle est la largeur du rectangle"))
+longueur = float(input("Quelle est la longueur du rectangle"))
 
 # Calcul de l'aire
 aire = largeur * longueur
@@ -84,8 +79,8 @@ Trouver et corriger toutes les erreurs.
 ```{exec} python
 :editor:
 # Corrigez le programme
-age = await input_line("Quel âge as-tu?")
-annee = await input_line("En quelle année sommes-nous?")
+age = input("Quel âge as-tu?")
+annee = input("En quelle année sommes-nous?")
 print("Tu es né.e en" annee - age "ou en" annee - age - 1)
 ```
 
@@ -104,7 +99,7 @@ Il y a des erreurs dans les programmes suivants. Expliquez et corrigez-les.
     :editor:
     # Programme qui demande son prénom à l'utilisateur
     # et lui dit bonjour en citant son prénom
-    await input_line("Comment t'appelles-tu?")
+    input("Comment t'appelles-tu?")
     print("Bonjour")
     ```
 
@@ -117,7 +112,7 @@ Il y a des erreurs dans les programmes suivants. Expliquez et corrigez-les.
     :editor:
     # Programme qui demande son âge à l'utilisateur
     # et calcule son âge dans 10 ans
-    age = await input_line("Quel âge as-tu?")
+    age = input("Quel âge as-tu?")
     print("Dans 10 ans, tu auras", age + 10)
     ```
 

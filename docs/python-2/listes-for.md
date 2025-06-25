@@ -56,7 +56,7 @@ Avant de les exécuter, déterminez ce que font les programmes suivants.
 
     for question in questions:
       print(question)
-      reponse = await input_line("Réponse: ")
+      reponse = input("Réponse: ")
       reponses.append(reponse)
 
     print("Tes réponses: ", reponses)

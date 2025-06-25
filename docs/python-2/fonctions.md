@@ -64,9 +64,9 @@ def discriminant(a, b, c):
   print("Le discriminant est:", delta)
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
-a = float(await input_line("Coefficient de x^2: "))
-b = float(await input_line("Coefficient de x: "))
-c = float(await input_line("Coefficient sans partie littérale: "))
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
 
 discriminant(a, b, c)
 ```
@@ -91,9 +91,9 @@ def discriminant(a, b, c):
   return delta
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
-a = float(await input_line("Coefficient de x^2: "))
-b = float(await input_line("Coefficient de x: "))
-c = float(await input_line("Coefficient sans partie littérale: "))
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
 
 delta = discriminant(a, b, c)
 print(delta)
@@ -191,9 +191,9 @@ def discriminant(a, b, c):
   return delta
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
-a = float(await input_line("Coefficient de x^2: "))
-b = float(await input_line("Coefficient de x: "))
-c = float(await input_line("Coefficient sans partie littérale: "))
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
 
 # Modifier le programme à partir d'ici
 
@@ -210,9 +210,9 @@ def discriminant(a, b, c):
   return delta
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
-a = float(await input_line("Coefficient de x^2: "))
-b = float(await input_line("Coefficient de x: "))
-c = float(await input_line("Coefficient sans partie littérale: "))
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
 
 if a == 0:
   print("Ce n'est pas une équation du deuxième degré.")
@@ -238,9 +238,9 @@ def discriminant(a, b, c):
   return b ** 2 - 4 * a * c
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
-a = float(await input_line("Coefficient de x^2: "))
-b = float(await input_line("Coefficient de x: "))
-c = float(await input_line("Coefficient sans partie littérale: "))
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
 
 # Complétez le programme à partir de là
 ```
@@ -253,9 +253,9 @@ def discriminant(a, b, c):
   return b ** 2 - 4 * a * c
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
-a = float(await input_line("Coefficient de x^2: "))
-b = float(await input_line("Coefficient de x: "))
-c = float(await input_line("Coefficient sans partie littérale: "))
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
 
 if a == 0:
   print("Ce n'est pas une équation du deuxième degré.")
@@ -295,9 +295,9 @@ def discriminant(a, b, c):
   return b ** 2 - 4 * a * c
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
-a = float(await input_line("Coefficient de x^2: "))
-b = float(await input_line("Coefficient de x: "))
-c = float(await input_line("Coefficient sans partie littérale: "))
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
 
 # Complétez le programme à partir de là
 ```
@@ -312,9 +312,9 @@ def discriminant(a, b, c):
   return b ** 2 - 4 * a * c
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
-a = float(await input_line("Coefficient de x^2: "))
-b = float(await input_line("Coefficient de x: "))
-c = float(await input_line("Coefficient sans partie littérale: "))
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
 
 if a == 0:
   print("Ce n'est pas une équation du deuxième degré.")
@@ -345,9 +345,9 @@ def discriminant(a, b, c):
   return b ** 2 - 4 * a * c
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
-a = float(await input_line("Coefficient de x^2: "))
-b = float(await input_line("Coefficient de x: "))
-c = float(await input_line("Coefficient sans partie littérale: "))
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
 
 # Complétez le programme à partir de là
 ```
@@ -362,9 +362,9 @@ def discriminant(a, b, c):
   return b ** 2 - 4 * a * c
 
 # Demande à l'utilisateur les valeurs des coefficients a, b et c
-a = float(await input_line("Coefficient de x^2: "))
-b = float(await input_line("Coefficient de x: "))
-c = float(await input_line("Coefficient sans partie littérale: "))
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
 
 if a == 0:
   x = -c / b
@@ -504,8 +504,8 @@ la réduction. Les réductions sont les suivantes :
 def calcule_reduction(code):
  # à compléter
 
-prix = float(await input_line("Quel est le prix de l'article? "))
-code = await input_line("Quel est le code de réduction? ")
+prix = float(input("Quel est le prix de l'article? "))
+code = input("Quel est le code de réduction? ")
 
 reduction = calcule_reduction(code)
 prix_final = prix * (1 - reduction)
@@ -525,8 +525,8 @@ def calcule_reduction(code):
   else:
     return 0
 
-prix = float(await input_line("Quel est le prix de l'article? "))
-code = await input_line("Quel est le code de réduction? ")
+prix = float(input("Quel est le prix de l'article? "))
+code = input("Quel est le code de réduction? ")
 
 reduction = calcule_reduction(code)
 prix_final = prix * (1 - reduction)
@@ -597,7 +597,7 @@ la suite de Syracus (jusqu'à ce que la suite arrive à 1).
 def syracuse(n):
   # à compléter
 
-n = int(await input_line("Choisir un nombre entier plus grand que 0."))
+n = int(input("Choisir un nombre entier plus grand que 0."))
 
 # Complétez le programme
 
@@ -612,7 +612,7 @@ def syracuse(n):
   else:
     return 3 * n + 1
 
-n = int(await input_line("Choisir un nombre entier plus grand que 0."))
+n = int(input("Choisir un nombre entier plus grand que 0."))
 
 while n != 1:
   n = syracuse(n)
@@ -656,7 +656,7 @@ def est_diviseur(nombre, diviseur):
 def est_premier(nb_diviseurs):
   # à compléter
 
-n = int(await input_line("Choisir un nombre entier strictement positif:"))
+n = int(input("Choisir un nombre entier strictement positif:"))
 
 # Complétez le programme
 ```
@@ -676,9 +676,9 @@ def est_premier(nb_diviseurs):
   else:
     return False
 
-n = int(await input_line("Choisir un nombre entier strictement positif:"))
+n = int(input("Choisir un nombre entier strictement positif:"))
 while n <= 0:
-  n = int(await input_line("Le nombre doit être stritement positif!"
+  n = int(input("Le nombre doit être stritement positif!"
         "Choisir un nombre entier strictement positif:"))
 
 nb_diviseurs = 0

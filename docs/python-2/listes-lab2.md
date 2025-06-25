@@ -22,7 +22,7 @@ somme_notes = 0
 
 # Demande des notes à l'utilisateur
 for _ in range(5):
-  somme_notes += float(await input_line("Note: "))
+  somme_notes += float(input("Note: "))
 
 # Calcule de la moyenne
 moyenne = somme_notes / 5
@@ -127,7 +127,7 @@ notes = []
 
 # Demande des notes à l'utiliateur
 for _ in range(10):
-  notes.append(float(await input_line("Note: ")))
+  notes.append(float(input("Note: ")))
 
 # Afficher la liste de notes
 print(notes)
@@ -246,11 +246,11 @@ print("Moyenne: ", moyenne)
 # Définition des variables
 notes = []
 somme = 0
-nb_notes = int(await input_line("Nombre de notes: "))
+nb_notes = int(input("Nombre de notes: "))
 
 # Demande les notes à l'utilisateur
 for _ in range(nb_notes):
-  notes.append(float(await input_line("Entrer note:")))
+  notes.append(float(input("Entrer note:")))
 
 # Calcule la somme des notes
 for note in notes:
@@ -289,9 +289,9 @@ print(nombre_notes)
 notes = []
 
 # Demande les notes à l'utilisateur
-nb_notes = int(await input_line("Nombre de notes: "))
+nb_notes = int(input("Nombre de notes: "))
 for _ in range(nb_notes):
-  notes.append(float(await input_line("Entrer note:")))
+  notes.append(float(input("Entrer note:")))
 
 # Calcule et affiche la moyenne
 moyenne =
@@ -314,9 +314,9 @@ def calcule_moyenne(notes):
 notes = []
 
 # Demande les notes à l'utilisateur
-nb_notes = int(await input_line("Nombre de notes: "))
+nb_notes = int(input("Nombre de notes: "))
 for _ in range(nb_notes):
-  notes.append(float(await input_line("Entrer note:")))
+  notes.append(float(input("Entrer note:")))
 
 # Calcule et affiche la moyenne
 moyenne = calcule_moyenne(notes)
