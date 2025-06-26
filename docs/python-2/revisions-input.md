@@ -104,7 +104,7 @@ Il y a des erreurs dans les programmes suivants. Expliquez et corrigez-les.
     ```
 
     ```{solution}
-    Lorsqu'on utilise la fonction `input_line()`, il est impératif de stocker la
+    Lorsqu'on utilise la fonction `input()`, il est impératif de stocker la
     valeur dans une variable, sinon le input ne sert à rien.
     ```
 
