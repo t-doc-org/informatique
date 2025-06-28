@@ -52,7 +52,7 @@ for _ in range(10):
   print("Hello")
 ```
 
-</td><td>
+</td><td style="padding-left: 1rem">
 
 ```{exec} python
 :editor:
@@ -139,8 +139,7 @@ print(s)
 | 5 <= 5: Vrai | 15  | 5   |
 |              | 15  | 6   |
 
-La programme affichera 15.
-
+Le programme affichera 15.
 ```
 
 ### Exercice {num}`exo-py1`
@@ -291,7 +290,7 @@ if n < 10:
   print(n)
 ```
 
-</td><td>
+</td><td style="padding-left: 1rem">
 
 ```{exec} python
 :editor:
@@ -335,7 +334,6 @@ while x < y:
 ```
 
 ```{solution}
-
 | x  | y  |
 | :-:| :-:|
 | 0  | ?  |
@@ -348,7 +346,6 @@ while x < y:
 | 6  | 8  |
 | 6  | -4 |
 | 8  | -4 |
-
 ```
 
 ### Exercice {num}`exo-py1`

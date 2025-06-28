@@ -71,7 +71,8 @@ Ensuite, testez vos réponses en les exécutant.
       print("Pile")
     print("Fin du jeu")
     ```
-3.  ```{exec} python
+
+4.  ```{exec} python
     :linenos:
     print("Lancer d'une pièce.")
     for _ in range(2):
@@ -83,14 +84,16 @@ Ensuite, testez vos réponses en les exécutant.
 
 ### Exercice {num}`exo-py1`
 
-1. Que fait le programme suivant?
-```{exec} python
-:editor: cdf06593-2fc5-4f68-af74-2a6113bec6dc
-for _ in range(6):
-  print("Salut")
-```
-2. Modifiez-le pour qu'il affiche 9 fois "Salut".
-3. Modifiez-le pour qu'il affiche:
+1.  Que fait le programme suivant?
+    ```{exec} python
+    :editor: cdf06593-2fc5-4f68-af74-2a6113bec6dc
+    for _ in range(6):
+      print("Salut")
+    ```
+
+2.  Modifiez-le pour qu'il affiche 9 fois "Salut".
+
+3.  Modifiez-le pour qu'il affiche:
     ```{code-block} text
     Salut
     Comment ça va?
@@ -99,8 +102,8 @@ for _ in range(6):
     Salut
     Comment ça va?
     ```
-4. Modifiez-le pour qu'à la fin du programme, il affiche "Au revoir!".
 
+4.  Modifiez-le pour qu'à la fin du programme, il affiche "Au revoir!".
 
 ````{solution}
 ```{exec} python
@@ -243,7 +246,6 @@ entiers plus grands que 0.
 ```
 
 ````{solution}
-
 ```{exec} python
 :linenos:
 produit = 1
@@ -316,7 +318,7 @@ for i in range(1, 21):
 
 Écrivez un programme qui affiche le résultat des calculs suivants:
 
-1. $1 + 2 + 3 + 4 + ... + 99 + 100$
+1.  $1 + 2 + 3 + 4 + ... + 99 + 100$
 
     ```{exec} python
     :editor: f281c8dd-259a-431c-8a7b-f72732aee8db
@@ -341,7 +343,7 @@ for i in range(1, 21):
     ```
     ````
 
-2. $1 + 3 + 5 + 7 + ... + 97 + 99$
+2.  $1 + 3 + 5 + 7 + ... + 97 + 99$
 
     ```{exec} python
     :editor: 6d671b57-eff1-474e-8fed-4f8ddbb5595d
@@ -378,9 +380,9 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
 :align: center
 ```
 
-1. Écrivez un programme qui permet de calculer le nombre de billes nécessaires
-  pour construire la pyramide de l'image (elle a 7 étages). Utilisez une boucle
-  `for`.
+1.  Écrivez un programme qui permet de calculer le nombre de billes nécessaires
+    pour construire la pyramide de l'image (elle a 7 étages). Utilisez une
+    boucle `for`.
 
     ```{exec} python
     :editor: e71a7353-1236-4047-8c5b-2dcd42017bfa
@@ -405,8 +407,8 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
     ```
     ````
 
-2. Modifiez le programme précédent pour calculer le nombre de billes nécessaires
-   pour construire une pyramide à 100 étages.
+2.  Modifiez le programme précédent pour calculer le nombre de billes
+    nécessaires pour construire une pyramide à 100 étages.
 
     ```{exec} python
     :editor: 277cfc59-fcf8-4667-a845-01585976347c
@@ -431,9 +433,8 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
     ```
     ````
 
-3. Modifiez le programme pour que l'utilisateur puisse choisir le nombre
-   d'étages.
-
+3.  Modifiez le programme pour que l'utilisateur puisse choisir le nombre
+    d'étages.
 
     ```{exec} python
     :editor: 6c6da905-b3ad-4971-9ac0-705facf2a1e9
@@ -465,7 +466,7 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
 Le 1{sup}`er` janvier, les parents de Chrystel ont déposé sur son livret
 d'épargne 1500 CHF au taux de 2 %.
 
-1. Écrivez un programme pour calculer le montant qu'elle aura après 1 an.
+1.  Écrivez un programme pour calculer le montant qu'elle aura après 1 an.
 
     ```{exec} python
     :editor: b0e0d36f-ab70-423e-bcaa-ed4c8007fad2
@@ -488,8 +489,8 @@ d'épargne 1500 CHF au taux de 2 %.
     ```
     ````
 
-2. Modifiez le programme précédent pour calculer le montant qu'elle aura dans 10
-   ans. Utilisez une boucle `for`.
+2.  Modifiez le programme précédent pour calculer le montant qu'elle aura dans
+    10 ans. Utilisez une boucle `for`.
 
     ```{exec} python
     :editor: eb41dc15-477c-406c-80c9-9ec9a810f924
@@ -514,9 +515,8 @@ d'épargne 1500 CHF au taux de 2 %.
     ```
     ````
 
-3. Modifiez le programme pour que l'utilisateur puisse choisir la durée (le
-   nombre d'années) et la montant initial.
-
+3.  Modifiez le programme pour que l'utilisateur puisse choisir la durée (le
+    nombre d'années) et la montant initial.
 
     ```{exec} python
     :editor: 5fcdfd6a-df26-4601-841b-a827f878979f
@@ -543,9 +543,8 @@ d'épargne 1500 CHF au taux de 2 %.
     ```
     ````
 
-4. Modifiez le programme pour que l'utilisateur puisse aussi choisir le taux
-   d'intérêt (en %).
-
+4.  Modifiez le programme pour que l'utilisateur puisse aussi choisir le taux
+    d'intérêt (en %).
 
     ```{exec} python
     :editor: 700fa29d-9736-4692-82b2-44ffce6c6d18

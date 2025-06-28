@@ -164,30 +164,33 @@ Testez la page avec quelques valeurs différentes pour a, b et c.
 ### Exercice {num}`exo-js`
 
 Le code HTML est composé de 2 parties:
-- `<head>` qui est l'entête du document et contient un certain nombre
+- `<head>`{l=html} qui est l'entête du document et contient un certain nombre
   d'informations, tels que l'encodage ou le titre de l'onglet.
-- `<body>` qui contient le contenu de la page.
+- `<body>`{l=html} qui contient le contenu de la page.
 
 1.  À quelles lignes se trouve l'entête?
 
 2.  À quelles lignes se trouve le corps du html?
 
-3.  Dans quelle partie se trouve la balise `<style>` qui permet d'intégrer le CSS
-    directement dans le document HTML?
+3.  Dans quelle partie se trouve la balise `<style>`{l=html} qui permet
+    d'intégrer le CSS directement dans le document HTML?
 
-4.  Où se trouve la balise `<script>` qui permet d'intégrer du JavaScript?
+4.  Où se trouve la balise `<script>`{l=html} qui permet d'intégrer du
+    JavaScript?
 
 ```{solution}
-1. L'entête se trouve entre la ligne 3 et la ligne 30, entre les balise `<head>`et `</head>`.
-2. Le corps se trouve entre la ligne 32 et la ligne 119, entre les balise `<body>`et `</body>`.
-3. La balise `<style>` se trouve dans le `<head>`.
-4. La balise `<script>` se trouve à la fin de la balise `<body>`.
+1.  L'entête se trouve entre la ligne 3 et la ligne 30, entre les balise
+    `<head>`{l=html} et `</head>`{l=html}.
+2.  Le corps se trouve entre la ligne 32 et la ligne 119, entre les balise
+    `<body>`{l=html} et `</body>`{l=html}.
+3.  La balise `<style>`{l=html} se trouve dans le `<head>`{l=html}.
+4.  La balise `<script>`{l=html} se trouve à la fin de la balise `<body>`{l=html}.
 ```
 
 ### Exercice {num}`exo-js`
 
-En lisant la partie `<script>` qui contient le JavaScript du code ci-dessus,
-qu'est-ce qui est différent du Python?
+En lisant la partie `<script>`{l=html} qui contient le JavaScript du code
+ci-dessus, qu'est-ce qui est différent du Python?
 
 ```{Solution}
 Différences:
@@ -197,9 +200,8 @@ Différences:
 - Dans les instructions conditionnelles, on écrit `else if` à place de `elif`.
 - Les conditions doivent être mises entre parenthèses.
 - Devant les variables, on ajoute le mot-clé `const` (ou `let` si la valeur change).
-- Pour comparer: === (égal) ou !== (pas égal).
+- Pour comparer: `===` (égal) ou `!==` (pas égal).
 ```
-
 
 ## Comparaison Python et JavaScript
 
@@ -207,15 +209,13 @@ Différences:
 
 En Python:
 
-```{exec} python
-:when: never
+```{code-block} python
 a = input("Texte qui s'affiche")
 ```
 
 En JavaScript:
 
-```{exec} html
-:when: never
+```{code-block} html
 <body>
 ...
 <!-- Ajoute une zone de saisie de texte -->
@@ -231,7 +231,8 @@ const a = document.getElementById("mon_input").value;
 
 #### Exercice {num}`exo-js`
 
-Trouvez les `<input>` contenus dans le code de l'{numref}`exemple %s<ex-js:exemple>`:
+Trouvez les `<input>`{l=html} contenus dans le code de
+l'{numref}`exemple %s<ex-js:exemple>`:
 
 1.  De quel type sont-ils?
 2.  Quels sont leur identifiant?
@@ -247,13 +248,14 @@ Trouvez les `<input>` contenus dans le code de l'{numref}`exemple %s<ex-js:exemp
 #### Exercice {num}`exo-js`
 
 1.  À quelles lignes récupère-t-on les valeurs entrées dans les champs de texte?
-2.  Pourquoi note-on: `Number` devant `document.getElementById("coeffA").value`
+2.  Pourquoi note-on: `Number` devant
+    `document.getElementById("coeffA").value`{l=javascript}?
 
 ```{solution}
 1.  Aux lignes 93 à 95.
-2.  La valeur retournée par la fonction `document.getElementById("coeffA").value`
-    est toujours du texte, il faut donc la convertir en nombre avec la fonction
-    `Number()`.
+2.  La valeur retournée par la fonction
+    `document.getElementById("coeffA").value`{l=javascript} est toujours du
+    texte, il faut donc la convertir en nombre avec la fonction `Number()`.
 ```
 
 ### Boucle for
@@ -265,8 +267,7 @@ d'une liste.
   <th>Python</th><th>JavaScript</th>
 </tr><tr><td>
 
-```{exec} python
-:when: never
+```{code-block} python
 notes = [5, 5.5, 4, 5.5, 6]
 for note in notes:
   print(note)
@@ -274,27 +275,26 @@ for note in notes:
 
 </td><td style="padding-left: 1rem">
 
-```{exec} html
-:when: never
-<script>
+```{code-block} javascript
 const notes = [5, 5.5, 4, 5.5, 6];
 for (const note of notes) {
   /* Affiche la valeur sur la console */
   console.log(note);
 }
-</script>
 ```
 
 </td></tr></table>
 
 #### Exercice {num}`exo-js`
 
-1. À quelle ligne cette construction est-elle utilisée dans l'{numref}`exemple %s<ex-js:exemple>`.
-2. Expliquez ce que fait cette boucle.
+1.  À quelle ligne cette construction est-elle utilisée dans
+    l'{numref}`exemple %s<ex-js:exemple>`.
+2.  Expliquez ce que fait cette boucle.
 
 ```{Solution}
-1. Lignes 83 à 85.
-2. Elle efface le contenu des cellules `<td>` du tableau l'une après l'autre.
+1.  Lignes 83 à 85.
+2.  Elle efface le contenu des cellules `<td>`{l=html} du tableau l'une après
+    l'autre.
 ```
 
 ### Interactions entre l'utilisateur et la page web
@@ -308,8 +308,8 @@ Pour définir les actions, il faut:
     bouton).
 2.  Créer une référence sur l'élément que l'on veut modifier.
 3.  Associer l'événement (clic) à la fonction qui sera appelée (action).
-```{exec} html
-:when: never
+
+```{code-block} html
 <body>
 ...
 <button id="identifiant">Texte affiché sur le bouton</button>
@@ -328,18 +328,19 @@ nom.addEventListener("click", action);
 
 #### Exercice {num}`exo-js`
 
-1. À quelles lignes se trouvent les deux éléments HTML `<button>`?
+1. À quelles lignes se trouvent les deux éléments HTML `<button>`{l=html}?
 2. Quels sont les identifiants de ces deux boutons?
 3. Quelle fonction est utilisée pour créer la référence?
 4. Quelle fonction est appelée par un clic du bouton `calculer`?
 5. Quelle fonction est appelée par un clic du bouton `effacer`?
 
 ```{Solution}
-1. Au lignes 59 et 60.
-2. L'identifiant du premier est "calculer" et celui du second est "effacer".
-3. document.querySelector("#calculer") et document.querySelector("#effacer")
-4. La fonction `calculeSol()`.
-5. La fonction `clear()`.
+1.  Aux lignes 59 et 60.
+2.  L'identifiant du premier est `calculer` et celui du second est `effacer`.
+3.  `document.querySelector("#calculer")`{l=javascript} et
+    `document.querySelector("#effacer")`{l=javascript}.
+4.  La fonction `calculeSol()`.
+5.  La fonction `clear()`.
 ```
 
 ### Affichage dynamique de texte
@@ -348,8 +349,7 @@ Le message d'erreur s'affiche sur la page uniquement dans certaines conditions.
 Pour cela, un conteneur vide, muni d'un identifiant, doit être ajouté à la page
 afin de pouvoir y insérer le message si nécessaire.
 
-```{exec} html
-:when: never
+```{code-block} html
 <div id="message"></div>
 ```
 
@@ -363,11 +363,9 @@ Dans le partie script, il est ainsi possible de changer la valeur du conteneur
 3.  À quelles lignes la valeur du conteneur est-elle modifiée?
 4.  Quelle syntaxe est utilisée pour modifier la valeur du conteneur?
 
-
 ```{Solution}
 1.  À la ligne 71.
 2.  À la ligne 77.
 3.  Aux lignes 86 et 98.
-4.  `erreur.textContent = "..."`
+4.  `erreur.textContent = "...";`{l=javascript}
 ```
-
