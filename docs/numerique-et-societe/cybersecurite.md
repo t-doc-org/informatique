@@ -27,11 +27,11 @@ système ou un réseau informatique. (Larousse)
 ```{solution}
 1.  Il est possible de se faire voler:
     -   des données personnelles (nom, prénom, date de naissance, numéro de
-        téléphone) -> usurpation d'identité.
+        téléphone) &rarr; usurpation d'identité.
     -   des données de connexion (mots de passe, adresses mail)
-        -> accès aux comptes en ligne
-    -   des informations financières (numéros de carte de crédit, identifiant, ...)
-        -> vol d'argent
+        &rarr; accès aux comptes en ligne
+    -   des informations financières (numéros de carte de crédit, identifiant,
+        ...) &rarr; vol d'argent
     -   des données personnelles (photos, vidéos, échanges de messages, ...)
     -   des données médicales
     -   ...

@@ -95,7 +95,7 @@ But: comprendre comment fonctionne l'apprentissage supervisé.
     à la première question.
 2.  Allez sur le site
     [Teachable Machine](https://teachablemachine.withgoogle.com/train).
-3.  Choisissez **Projet Images** -> **Modèle d'image standard**.
+3.  Choisissez **Projet Images** &rarr; **Modèle d'image standard**.
 4.  Télécharger les images de pommes: [data_pommes.zip](data_pommes.zip).
 5.  Importez les images de pommes:
     - Renommez "Class 1" en Pommes.
@@ -157,7 +157,7 @@ va déterminer le mot suivant le plus plausible.
 -   Sources manquantes ou pas vérifiées
 -   Pas de compréhension réelle
 -   Génération de réponses incorrectes (hallucinations)
--   Dépendance aux données d'entrainement -> biais (stéréotypes, préjugés)
+-   Dépendance aux données d'entrainement &rarr; biais (stéréotypes, préjugés)
 -   Confidentialité et données personnelles
 -   Création de contenus offensants ou dangereux
 -   Réglementation

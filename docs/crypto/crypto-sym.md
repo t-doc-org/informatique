@@ -118,7 +118,7 @@ trois positions):
 
 ````{solution}
 Il faut effectuer un décalage de 3 positions pour chaque lettre:\
-l -> O, a -> D, c -> F, ...
+l &rarr; O, a &rarr; D, c &rarr; F, ...
 
 <center>ODFUB SWRFH VWVBP SD</center>
 ````
@@ -133,7 +133,7 @@ c'est-à-dire avec comme clé de chiffrement un décalage de trois positions.
 ````{solution}
 Un décalage de 3 positions vers la droite a été utilisé pour coder, il faut
 donc faire une décalage vers la gauche de 3 positions pour décoder:\
-W -> t, H -> e, A -> x, ...
+W &rarr; t, H &rarr; e, A &rarr; x, ...
 
 <center>texte code avec le chiffre de cesar</center>
 ````
@@ -204,8 +204,8 @@ alphabets décalés pour {term}`chiffrer` un message.
 Chiffrons "tout est perdu" avec comme clé CRYPTO.
 1. Écrire la clé en la répétant pour qu'elle soit de même longueur que le texte
 en clair.
-2. Calculer le décalage pour chaque lettre de la clé. A->C: décalage de 2
-positions, A->R: 17 positions, ...
+2. Calculer le décalage pour chaque lettre de la clé. A&rarr;C: décalage de 2
+positions, A&rarr;R: 17 positions, ...
 3. Appliquer le décalage aux lettres du texte clair.
 
 Sans devoir calculer le décalage, on peut utiliser le

@@ -111,8 +111,8 @@ par des paires: nombre de répétitions/valeur à répéter.
 
 #### Exemple {num}`ex-donnees`
 
-Données brutes: aaaaaabcccdd -> 12 caractères\
-Données codées: 6a1b3c2d -> 8 caractères (données compressées)
+Données brutes: aaaaaabcccdd &rarr; 12 caractères\
+Données codées: 6a1b3c2d &rarr; 8 caractères (données compressées)
 
 Cette manière de faire n'altère pas l'image, il s'agit donc d'une compression
 sans perte.
@@ -232,7 +232,7 @@ Sans compression:
 | C | 10 |
 | D | 11 |
 
-Le message codé sera 00 00 ... 00 00 01 10 11 -> 206 bits
+Le message codé sera 00 00 ... 00 00 01 10 11 &rarr; 206 bits
 
 Avec compression:
 
@@ -243,4 +243,4 @@ Avec compression:
 | C | 011 |
 | D | 00 |
 
-Le message codé sera 1 1 ... 1 1 010 011 00 -> 108 bits
+Le message codé sera 1 1 ... 1 1 010 011 00 &rarr; 108 bits

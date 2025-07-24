@@ -60,7 +60,7 @@ $H(3, 1)$
 | 0             | 000          |
 | 1             | 111          |
 
-message utile: 0 -> message codé (envoyé): 000
+message utile: 0 &rarr; message codé (envoyé): 000
 
 | message reçu  | nombre d'erreurs | message décodé | correct? |
 | :-----------: | :--------------: | :------------: | :------: |
@@ -87,7 +87,7 @@ En vous aidant de l'exemple précédent, effectuez la même analyse du code
 $H(3, 1)$ pour le message utile: 1.
 
 ```{solution}
-message utile: 1 -> message codé (envoyé): 111
+message utile: 1 &rarr; message codé (envoyé): 111
 
 | message reçu  | nombre d'erreurs | message décodé | correct? |
 | :-----------: | :--------------: | :------------: | :------: |

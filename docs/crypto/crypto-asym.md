@@ -156,8 +156,8 @@ La clé privée est (13, 11, 103) et la clé publique est (143, 7).
 1. Chercher dans l'annuaire la clé publique du destinataire de la forme
    ($n$, $e$).
 2. Transformer le message (texte clair) en nombre, en remplaçant chaque lettre
-   par son code ASCII étendu. A -> 65, B -> 66, a -> 97, etc. Le message
-   est donc maintenant un nombre.
+   par son code ASCII étendu. A &rarr; 65, B &rarr; 66, a &rarr; 97, etc. Le
+   message est donc maintenant un nombre.
 3. Si le nombre ainsi obtenu est plus grand que $n$, découper le message en
    blocs de taille $m$ tel que $1 < m < n$. Ces blocs seront chiffrés et envoyés
    séparément.
@@ -173,7 +173,7 @@ Bob souhaite envoyer à Alice le message suivant: "salut".
 
 1. Bob cherche dans l'annuaire la clé publique d'Alice qui est (55, 43).
 2. Bob transforme le message en nombre:
-   s -> 19, a -> 01, l -> 12, u -> 21, t -> 20.\
+   s &rarr; 19, a &rarr; 01, l &rarr; 12, u &rarr; 21, t &rarr; 20.\
    Le message transformé donnera: 19 01 12 21 20.
 3. Comme 1901122120 > 55, Bob décide de découper en blocs d'une lettre
     (toujours inférieur ou égal à 26, donc forcément < 55).\
@@ -226,8 +226,8 @@ Alice a reçu le cryptogramme suivant composé de 5 blocs: 39 01 23 21 25.
    21: $m = 21^{27} \textrm{ mod } 55 = 21$\
    25: $m = 25^{27} \textrm{ mod } 55 = 20$
 3. Alice transforme le nombre en lettre (pour faciliter, nous avions pris le
-   rang de la lettre dans l'alphabet au lieu du code ASCII étendu): 19 -> s,
-   1 -> a, 12 -> l, 21 -> u et 20 -> t.\
+   rang de la lettre dans l'alphabet au lieu du code ASCII étendu): 19 &rarr; s,
+   1 &rarr; a, 12 &rarr; l, 21 &rarr; u et 20 &rarr; t.\
    Le message reçu est donc "salut".
 
 #### Exercice {num}`exo-crypto`

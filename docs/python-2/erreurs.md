@@ -28,10 +28,10 @@ En programmation, il existe trois types d'erreurs:
 
 Les erreurs de syntaxe sont détectées lors de la compilation. Python vérifie que
 la syntaxe est correcte:
-- les `:` sont présents et au bon endroit -> Sinon `SyntaxError`
-- une parenthèse ouverte est toujours fermée -> Sinon `SyntaxError`
-- un guillemet ouvert est toujours fermé -> Sinon `SyntaxError`
-- l'indentation est correcte -> Sinon `IndentationError`
+- les `:` sont présents et au bon endroit &rarr; Sinon `SyntaxError`
+- une parenthèse ouverte est toujours fermée &rarr; Sinon `SyntaxError`
+- un guillemet ouvert est toujours fermé &rarr; Sinon `SyntaxError`
+- l'indentation est correcte &rarr; Sinon `IndentationError`
 - ...
 
 Si Python trouve une erreur de syntaxe, le programme s'arrête, car il ne
@@ -54,9 +54,9 @@ else:
 Les erreurs d'exécution sont détectée pendant l'exécution. La syntaxe est
 correcte, mais une instruction lui demande de faire quelque chose qu'"illégal",
 par exemple:
-- une division par zero -> `ZeroDivisionError`
-- accéder à la valeur d'une variable qui n'existe pas -> `NameError`
-- appeler une fonction avec un nombre de paramètres incorrect -> `TypeError`
+- une division par zero &rarr; `ZeroDivisionError`
+- accéder à la valeur d'une variable qui n'existe pas &rarr; `NameError`
+- appeler une fonction avec un nombre de paramètres incorrect &rarr; `TypeError`
 
 Si Python trouve une erreur d'exécution, il "plante", c'est-à-dire qu'il
 s'arrête de manière abrupte.
@@ -165,15 +165,16 @@ print("L'aire vaut" aire "et le périmètre vaut" perimetre)
 
 ```{solution}
 Erreurs de syntaxe:
-1. Ligne 3: `SyntaxError: expected ':'` -> il manque les 2 points à la fin de la
-ligne.
-2. Ligne 18: `SyntaxError: invalid syntax. Perhaps you forgot a comma?` -> il
-manque une virgule entre la chaîne de caractère et le variable `aire`.
+1.  Ligne 3: `SyntaxError: expected ':'` &rarr; il manque les 2 points à la fin
+    de la ligne.
+2.  Ligne 18: `SyntaxError: invalid syntax. Perhaps you forgot a comma?` &rarr;
+    il manque une virgule entre la chaîne de caractère et le variable `aire`.
 
 Erreur d'exécution:
-1. Ligne 16: `NameError: name 'hypotenuse' is not defined` -> nous avons appelé
-l'hypoténuse du triangle de départ `base`.
+1.  Ligne 16: `NameError: name 'hypotenuse' is not defined` &rarr; nous avons
+    appelé l'hypoténuse du triangle de départ `base`.
 
 Erreur de logique:
-1. Le calcul du périmètre n'est pas correct, il faut additionner les trois côtés.
+1.  Le calcul du périmètre n'est pas correct, il faut additionner les trois
+    côtés.
 ```
