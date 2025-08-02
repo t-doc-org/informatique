@@ -12,10 +12,10 @@ scolaire.
 
 ```{toctree}
 :maxdepth: 1
-architecture/index
-html-css/index
-representation-info/index
 python-1/index
+representation-info/index
+html-css/index
+architecture/index
 microbit/index
 numerique-et-societe/index
 ```
@@ -24,9 +24,9 @@ numerique-et-societe/index
 
 ```{toctree}
 :maxdepth: 1
+python-2/index
 bases-de-donnees/index
 crypto/index
-python-2/index
 donnees/index
 reseaux/index
 javascript/index
