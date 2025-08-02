@@ -11,7 +11,7 @@ programme et ensuite l'**exécuter**.
 Lors de la compilation, Python
 1. lit le code,
 2. vérifie qu'il ne comprend pas d'erreur de syntaxe,
-3. transforme le code en un langage compréhensible pour l'ordinateur.
+3. transforme le code en un langage compréhensible par l'ordinateur.
 
 ## Exécution
 
@@ -52,7 +52,7 @@ else:
 ## Erreur d'exécution
 
 Les erreurs d'exécution sont détectée pendant l'exécution. La syntaxe est
-correcte, mais une instruction lui demande de faire quelque chose qu'"illégal",
+correcte, mais une instruction lui demande de faire quelque chose d'"illégal",
 par exemple:
 - une division par zero &rarr; `ZeroDivisionError`
 - accéder à la valeur d'une variable qui n'existe pas &rarr; `NameError`
@@ -80,11 +80,10 @@ résultat n'est pas celui attendu.
 
 ```{exec} python
 :editor:
-def addition(a, b):
-  return a - b
+def affiche_somme(a, b):
+  print("La somme de", a, "et", b, "donne", a - b)
 
-c = addition(15, 18)
-print(c)
+affiche_somme(15, 18)
 ```
 
 ## Exercices
@@ -98,12 +97,11 @@ Les programmes suivants contiennent tous une erreur.
 
 1.  ```{exec} python
     :editor: 70746cc6-1686-423d-8665-570905cfc918
-    def calcule_aire(longueur, largeur):
-      return longueur * largeur
+    def affiche_aire(longueur, largeur):
+      print(longueur * largeur)
 
     long = 10
-    aire = calcule_aire(long, larg)
-    print(aire)
+    affiche_aire(long, larg)
     ```
 
 2.  ```{exec} python
@@ -134,6 +132,27 @@ Les programmes suivants contiennent tous une erreur.
 4. Erreur de syntaxe: il manque les :.
 ```
 
+## Exercice {num}`py2-erreur`
+
+Le programme suivant contient une erreur de logique. Testez le programme avec
+différentes valeurs pour la trouver et corrigez-la.
+
+```{exec} python
+:editor:
+age = 18
+if age >= 18:
+  print("Tu payes le prix adulte.")
+elif age >= 65:
+  print("Tu payes le prix retraité")
+else:
+  print("Tu payes le prix enfant.")
+```
+
+```{solution}
+Le `elif` ne sera jamais exécuté, car si l'âge est supérieur ou égal à 65, il
+est aussi supérieur ou égal à 18. Donc la condition du `if` sera vérifiée.
+```
+
 ### Exercice {num}`py2-erreur`
 
 Il est souvent difficile de débugger un code qui ne fonctionne pas. En s'aidant
@@ -141,40 +160,47 @@ des messages d'erreurs affichés, corrigez le programme ci-dessous qui calcule
 l'aire et le périmètre d'un triangle isocèle et rectangle dont l'hypoténuse est
 connu.
 
+```{image} images/triangle_iso_rect.png
+:alt: Triangle isocèle rectangle
+:width: 50%
+:align: center
+```
+
 ```{exec} python
 :editor: 36bcae3e-b90a-40b1-bac0-33bea021bc99
 from math import sqrt
 
-def calcule_hypotenuse(cathete1, cathete2)
-  hypotenuse = sqrt(cathete1**2 + cathete2**2)
-  return hypotenuse
+def affiche_aire(base, hauteur)
+  aire_triangle = base * hauteur
+  print("L'aire vaut", aire_triangle)
 
-def calcule_aire(base, hauteur):
-  return base * hauteur / 2
-
-def calcule_perimetre(cote1, cote2, cote3):
-  return cote1 + cote2 - cote3
+def affiche_perimetre(cote1, cote2, cote3):
+  perimetre = cote1 + cote2 + cote3
+  print("Le périmètre vaut" perimetre)
 
 base = 500
-demi_base = base / 2
-cote = calcule_hypotenuse(demi_base, demi_base)
-aire = calcule_aire(hypotenuse, demi_base)
-perimetre = calcule_perimetre(base, cote, cote)
-print("L'aire vaut" aire "et le périmètre vaut" perimetre)
+cathete = base / 2
+cote = sqrt(cathete**2 + cathete**2)
+aire = affiche_aire(base, hauteur)
+perimetre = affiche_perimetre(base, cote, cote)
 ```
 
 ```{solution}
 Erreurs de syntaxe:
 1.  Ligne 3: `SyntaxError: expected ':'` &rarr; il manque les 2 points à la fin
     de la ligne.
-2.  Ligne 18: `SyntaxError: invalid syntax. Perhaps you forgot a comma?` &rarr;
-    il manque une virgule entre la chaîne de caractère et le variable `aire`.
+2.  Ligne 9: `SyntaxError: invalid syntax. Perhaps you forgot a comma?` &rarr;
+    il manque une virgule entre la chaîne de caractère et le variable `perimetre`.
 
 Erreur d'exécution:
-1.  Ligne 16: `NameError: name 'hypotenuse' is not defined` &rarr; nous avons
-    appelé l'hypoténuse du triangle de départ `base`.
+1.  Ligne 14: `NameError: name 'hauteur' is not defined` &rarr; la variable
+`hauteur` n'est pas définie, elle correspond à la variable `cathete`.
 
 Erreur de logique:
-1.  Le calcul du périmètre n'est pas correct, il faut additionner les trois
-    côtés.
+1.  Le calcul d'aire n'est pas correct, pour un rectangle la formule est
+    $\dfrac{base \cdot hauteur}{2}$.
+
+Résultat correct:\
+L'aire vaut 62500.0\
+Le périmètre vaut 1207.1067811865476
 ```
