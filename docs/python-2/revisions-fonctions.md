@@ -41,6 +41,11 @@ def nom_de_la_fonction(paramètres):
 nom_de_la_fonction(paramètres)
 ```
 
+Un paramètre (noms donnés aux éléments notés entre parenthèses dans la
+définition de la fonction) permet de transmettre une valeur à une fonction afin
+de modifier son comportement.
+
+
 ## Exercice {num}`exo-py2-rev`
 
 Une fonction nommée `salutations` a été définie ci-dessous. Appelez cette
@@ -105,7 +110,7 @@ Le code donné doit ensuite pouvoir s'exécuter sans problème afin d'afficher
 
 ```{exec} python
 :editor:
-# Définissezs la fonction au_revoir
+# Définissez la fonction au_revoir
 ...
 
 i = 0

@@ -74,7 +74,7 @@ print("L'aire vaut", aire)
 
 Le programme ci-dessous devrait permettre de calculer l'année de naissance de
 l'utilisateur. Mais, il contient au moins une erreur par ligne.\
-Trouver et corriger toutes les erreurs.
+Trouvez et corrigez toutes les erreurs.
 
 ```{exec} python
 :editor:

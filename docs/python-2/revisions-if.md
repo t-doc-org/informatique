@@ -15,7 +15,7 @@ Les opérateurs logiques permettent de combiner plusieurs conditions simples
 | Opérateur | Description          |
 | :-------: | :------------------: |
 | and       | retourne True si les deux conditions sont vraies |
-| or        | retourne True si une des conditions est vraie    |
+| or        | retourne True si au moins une des conditions est vraie    |
 | not       | inverse le résultat, renvoie True si le résultat est faux et vice-versa |
 
 ## Exemple avec if
@@ -157,7 +157,7 @@ else:
       print("a est ...")
     ```
 
-    Testez la justesse de votre code avec différentes valeurs de a.
+    Testez la justesse de votre code avec  a= -7, a = 0 et a = 11.
 
     ````{solution}
     ```{exec} python
@@ -183,7 +183,8 @@ else:
       print("La division par 0 est impossible.")
     ```
 
-    Testez la justesse de votre code avec différentes valeurs de a et de b.
+    Testez la justesse de votre code avec différentes valeurs de a et de b
+    (a = 7, b = 2 / a = 15, b = -3 / a = 0 , b = 5 / a = 12 , b = 0).
 
     ````{solution}
     ```{exec} python
@@ -378,23 +379,4 @@ print(not(a <= b))
 
 </td></tr></table>
 
-## Exercice {num}`exo-py2-rev`
 
-Le programme suivant contient une erreur de logique. Testez le programme avec
-différentes valeurs pour la trouver et corrigez-la.
-
-```{exec} python
-:editor:
-age = 18
-if age >= 18:
-  print("Tu payes le prix adulte.")
-elif age >= 65:
-  print("Tu payes le prix retraité")
-else:
-  print("Tu payes le prix enfant.")
-```
-
-```{solution}
-Le `elif` ne sera jamais exécuté, car si l'âge est supérieur ou égal à 65, il
-est aussi supérieur ou égal à 18. Donc la condition du `if` sera vérifiée.
-```
