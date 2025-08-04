@@ -316,7 +316,8 @@ for i in range(1, 21):
 
 ### Exercice {num}`exo-py1`
 
-Écrivez un programme qui affiche le résultat des calculs suivants:
+Écrivez un programme qui affiche le résultat des calculs suivants sans le noter
+explicitement:
 
 1.  $1 + 2 + 3 + 4 + ... + 99 + 100$
 

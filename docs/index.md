@@ -13,11 +13,11 @@ scolaire.
 ```{toctree}
 :maxdepth: 1
 python-1/index
-representation-info/index
+numerique-et-societe/index
 html-css/index
 architecture/index
+representation-info/index
 microbit/index
-numerique-et-societe/index
 ```
 
 ## Cours de 2{sup}`e` année
@@ -25,8 +25,8 @@ numerique-et-societe/index
 ```{toctree}
 :maxdepth: 1
 python-2/index
-bases-de-donnees/index
 crypto/index
+bases-de-donnees/index
 donnees/index
 reseaux/index
 javascript/index

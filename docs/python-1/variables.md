@@ -239,15 +239,15 @@ y = 5
 print(x, y, z)
 ```
 
-| x  | y  | z  |
-| :-:| :-:| :-:|
-| 10 | ?  | ?  |
-| 10 | 2  | ?  |
-| 10 | 2  | 20 |
-| 10 | 30 | 20 |
-| 20 | 30 | 20 |
-| 20 | 30 | 40 |
-| 20 | 5  | 40 |
+| ligne | x  | y  | z  |
+|:-----:| :-:| :-:| :-:|
+| 1 | 10 | ?  | ?  |
+| 2 | 10 | 2  | ?  |
+| 3 | 10 | 2  | 20 |
+| 4 | 10 | 30 | 20 |
+| 5 | 20 | 30 | 20 |
+| 6 | 20 | 30 | 40 |
+| 7 | 20 | 5  | 40 |
 
 ````
 
@@ -288,16 +288,16 @@ prix = prix + nombre_habitants * cout
 print(nombre_habitants, cout, prix)
 ```
 
-| nombre_habitants  | cout  | prix  |
-| :--| :--| :--|
-| 200 |  ? | ?  |
-| 200 | 100  | ? |
-| 200 | 100  | 20000 |
-| 200 | 50 | 20000 |
-| 100 | 50 | 20000 |
-| 100 | 50 | 25000 |
-| 400 | 50  | 25000 |
-| 400 | 50  | 45000 |
+| ligne | nombre_habitants  | cout  | prix  |
+|:-----:| :--| :--| :--|
+| 1 | 200 |  ? | ?  |
+| 2 | 200 | 100  | ? |
+| 3 | 200 | 100  | 20000 |
+| 4 | 200 | 50 | 20000 |
+| 5 | 100 | 50 | 20000 |
+| 6 | 100 | 50 | 25000 |
+| 7 | 400 | 50  | 25000 |
+| 8 | 400 | 50  | 45000 |
 
 ````
 
@@ -396,8 +396,8 @@ mathématiques, voici les principaux.
 ### Exercice {num}`exo-py1`
 
 Écrivez un programme Python contenant une variable `x` initialisée à 10.
-Puis, compléter ce programme pour que celui-ci effectue les opérations
-suivantes:
+Puis, complétez ce programme pour que celui-ci effectue les opérations
+suivantes en utilisant les opérateurs d'affectation combinée:
 
 -   Ajoute 3 à `x`
 
@@ -432,7 +432,7 @@ print(x)
 ```
 ````
 
-### Exercice {num}`exo-py1` (difficile)
+### Exercice {num}`exo-py1`
 
 Lisez attentivement le programme ci-dessous et expliquez, en français, ce qu'il
 fait. À quoi correspondent les variables `h1`, `h2`, et `total`.

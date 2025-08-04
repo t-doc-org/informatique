@@ -124,20 +124,27 @@ print(s)
 ```
 
 ```{solution}
-| boucle while | s   | i   |
-| :----------: | :-: | :-: |
-|              | 0   | ?   |
-|              | 0   | 1   |
-| 1 <= 5: Vrai | 1   | 1   |
-|              | 1   | 2   |
-| 2 <= 5: Vrai | 3   | 2   |
-|              | 3   | 3   |
-| 3 <= 5: Vrai | 6   | 3   |
-|              | 6   | 4   |
-| 4 <= 5: Vrai | 10  | 4   |
-|              | 10  | 5   |
-| 5 <= 5: Vrai | 15  | 5   |
-|              | 15  | 6   |
+| ligne | condition (while) | s   | i   | print |
+| :---: | :---------------: | :-: | :-: | :---: |
+| 1 |              | 0   | ?   |  |
+| 2 |              | 0   | 1   |  |
+| 3 | 1 <= 5: Vrai | 0   | 1   |  |
+| 4 |              | 1   | 1   |  |
+| 5 |              | 1   | 2   |  |
+| 3 | 2 <= 5: Vrai | 1   | 2   |  |
+| 4 |              | 3   | 2   |  |
+| 5 |              | 3   | 3   |  |
+| 3 | 3 <= 5: Vrai | 3   | 3   |  |
+| 4 |              | 6   | 3   |  |
+| 5 |              | 6   | 4   |  |
+| 3 | 4 <= 5: Vrai | 6   | 4   |  |
+| 4 |              | 10  | 4   |  |
+| 5 |              | 10  | 5   |  |
+| 3 | 5 <= 5: Vrai | 10  | 5   |  |
+| 4 |              | 15  | 5   |  |
+| 5 |              | 15  | 6   |  |
+| 3 | 6 <= 5: Faux | 15  | 6   |  |
+| 6 |              | 15  | 6   | 15 |
 
 Le programme affichera 15.
 ```
@@ -320,7 +327,7 @@ d'intructions sera exécuté tant que la condition `n < 10` est vérifiée.
 
 ### Exercice {num}`exo-py1`
 
-Déterminez la valeur de chacune des variables de ce programme en créant un
+Déterminez ce qu'affichera le programme en utilisant un
 tableau d'états.
 
 ```{exec} python
@@ -334,18 +341,27 @@ while x < y:
 ```
 
 ```{solution}
-| x  | y  |
-| :-:| :-:|
-| 0  | ?  |
-| 0  | 20 |
-| 0  | 20 |
-| 2  | 20 |
-| 2  | 16 |
-| 4  | 16 |
-| 4  | 8  |
-| 6  | 8  |
-| 6  | -4 |
-| 8  | -4 |
+| ligne | condition (while) | x  | y  | print |
+| :---: | :-------: | :-:| :-:| :---: |
+| 1 |              | 0  | ?  |  |
+| 2 |              | 0  | 20 |  |
+| 3 | 0 < 20: vrai | 0  | 20 |  |
+| 4 |              | 0  | 20 |  |
+| 5 |              | 2  | 20 |  |
+| 6 |              | 2  | 20 | 22 |
+| 3 | 2 < 20: vrai | 0  | 20 |  |
+| 4 |              | 2  | 16 |  |
+| 5 |              | 4  | 16 |  |
+| 6 |              | 4  | 16 | 20 |
+| 3 | 4 < 16: vrai | 4  | 16 |  |
+| 4 |              | 4  | 8  |  |
+| 5 |              | 6  | 8  |  |
+| 6 |              | 6  | 8 | 14 |
+| 3 | 6 < 8: vrai  | 6  | 8  |  |
+| 4 |              | 6  | -4 |  |
+| 5 |              | 8  | -4 |  |
+| 6 |              | 8  | -4 | 4 |
+| 3 | 8 < -4: faux | 8  | -4 |  |
 ```
 
 ### Exercice {num}`exo-py1`
@@ -377,18 +393,18 @@ Vous avez fait 2 notes insuffisantes
 ```{exec} python
 :linenos:
 nb_notes_insuf = 0
-note = 0
+note = float(input("Entrez une note: "))
 while note != 99:
-    note = float(input("Entrez une note: "))
     if note >= 1 and note < 4:
         nb_notes_insuf += 1
+    note = float(input("Entrez une note: "))
 print("Vous avez fait", nb_notes_insuf, "notes insuffisantes")
 ```
 ````
 
 ### Exercice {num}`exo-py1`
 
-Reprenez l'{numref}`exercice %s<exo-py1:boom>` et modifiez le pour qu'à partir de
+Reprenez l'{numref}`exercice %s<exo-py1:boom>` et modifiez-le pour qu'à partir de
 3, il affiche également "Fuyez!".
 
 ```{code-block} text
