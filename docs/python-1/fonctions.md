@@ -99,7 +99,7 @@ d'un rectangle de côtés 4 et 6. Si je souhaite calculer l'aire d'un autre
 rectangle, je dois définir une nouvelle fonction, ce qui n'est pas optimal.
 
 Afin de modifier le comportement d'une fonction, nous pouvons utiliser des
-paramètres (noms donnés aux éléments notés entre parenthèse dans la définition
+paramètres (noms donnés aux éléments notés entre parenthèses dans la définition
 de la fonction). Dans ce cours, l'appel de fonction se fera toujours avec le
 même nombre d'arguments (valeurs des paramètres) et le même ordre que les
 paramètres définis dans la fonction.

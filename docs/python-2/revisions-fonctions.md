@@ -26,8 +26,8 @@ Toutes les fonctions ci-dessus sont des fonctions intégrées, elles ont été
 prédéfinies pour nous. Nous n'avons qu'à les utiliser, sans nous soucier de
 comment elles ont été programmées.
 
-Pour éviter de répéter du code et de rendre le code plus lisible, il est utile
-de pouvoir définir nos propres fonctions. La syntaxe est la suivante:
+Pour éviter de répéter du code et rendre le code plus lisible, il est utile de
+pouvoir définir nos propres fonctions. La syntaxe est la suivante:
 
 ```{exec} python
 :when: never
@@ -40,6 +40,10 @@ def nom_de_la_fonction(paramètres):
 # Appel de la fonction dans le programme
 nom_de_la_fonction(paramètres)
 ```
+
+Un paramètre (nom donné aux éléments notés entre parenthèses dans la définition
+de la fonction) permet de transmettre une valeur à une fonction afin de modifier
+son comportement.
 
 ## Exercice {num1}`exercice-rev`
 
@@ -105,7 +109,7 @@ Le code donné doit ensuite pouvoir s'exécuter sans problème afin d'afficher
 
 ```{exec} python
 :editor:
-# Définissezs la fonction au_revoir
+# Définissez la fonction au_revoir
 ...
 
 i = 0

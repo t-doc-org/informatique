@@ -24,7 +24,7 @@ la console.
     :editor:
     a = 10
     print(a)
-    a = a + 5
+    a += 5
     print(a)
     ```
 
@@ -65,30 +65,30 @@ print("J'aime bien jouer au volley.")
 ```
 ````
 
-### Exercice {num1}`exercice`
-
-1. Écrivez un programme qui affiche "Bonjour tout le monde!".
-2. Écrivez un programme qui affiche "Je programme!".
-3. Écrivez un programme qui affiche "Je programme! Je programme!".
-4. Écrivez un programme qui affiche "Je programme! " 10 fois de suite sans
-récrire 10 fois la même chose.
-5. Ajoutez un commentaire qui explique ce que tu as fait au point précédent.
-
-```{exec} python
-:editor: 4d040bd2-fe01-409f-9b82-5edd968bd23d
-# Écrivez le programme ici
-```
-
-````{solution}
-```{exec} python
-:linenos:
-print("Bonjour tout le monde!")
-print("Je programme!")
-print("Je programme! Je programme!")
-# Pour répéter plusieurs fois une chaine de caractères, on peut utiliser *
-print("Je programme! " * 10)
-```
-````
+% ### Exercice {num1}`exercice`
+%
+% 1. Écrivez un programme qui affiche "Bonjour tout le monde!".
+% 2. Écrivez un programme qui affiche "Je programme!".
+% 3. Écrivez un programme qui affiche "Je programme! Je programme!".
+% 4. Écrivez un programme qui affiche "Je programme! " 10 fois de suite sans
+% récrire 10 fois la même chose.
+% 5. Ajoutez un commentaire qui explique ce que tu as fait au point précédent.
+%
+% ```{exec} python
+% :editor: 4d040bd2-fe01-409f-9b82-5edd968bd23d
+% # Écrivez le programme ici
+% ```
+%
+% ````{solution}
+% ```{exec} python
+% :linenos:
+% print("Bonjour tout le monde!")
+% print("Je programme!")
+% print("Je programme! Je programme!")
+% # Pour répéter plusieurs fois une chaine de caractères, on peut utiliser *
+% print("Je programme! " * 10)
+% ```
+% ````
 
 ### Exercice {num1}`exercice`
 
@@ -305,52 +305,52 @@ print("Fin du programme")
 ```
 ````
 
-### Exercice {num1}`exercice`
+% ### Exercice {num1}`exercice`
+%
+% Le programme ci-dessous devrait permettre de calculer l'année de naissance de
+% l'utilisateur. Toutefois, celui-ci contient au moins une erreur par ligne.
+% Trouvez et corrigez-les.
+%
+% ```{exec} python
+% :editor:
+% age = input("Quel âge as-tu? ")
+% annee = input("En quelle année sommes-nous? ")
+% print("Vous êtes né.e en" annee - age "ou en" annee - age - 1)
+% ```
+%
+% ````{solution}
+% ```{exec} python
+% :linenos:
+% age = int(input("Quel âge as-tu? "))
+% annee = int(input("En quelle année sommes-nous? "))
+% print("Vous êtes né.e en", annee - age, "ou en", annee - age - 1)
+% ```
+% ````
 
-Le programme ci-dessous devrait permettre de calculer l'année de naissance de
-l'utilisateur. Toutefois, celui-ci contient au moins une erreur par ligne.
-Trouvez et corrigez-les.
-
-```{exec} python
-:editor:
-age = input("Quel âge as-tu? ")
-annee = input("En quelle année sommes-nous? ")
-print("Vous êtes né.e en" annee - age "ou en" annee - age - 1)
-```
-
-````{solution}
-```{exec} python
-:linenos:
-age = int(input("Quel âge as-tu? "))
-annee = int(input("En quelle année sommes-nous? "))
-print("Vous êtes né.e en", annee - age, "ou en", annee - age - 1)
-```
-````
-
-### Exercice {num1}`exercice`
-
-Écrivez un programme qui convertit des mégaoctets en bits.\
-Le programme affichera:
-
-```{code-block} text
-Nombre de mégaoctets:
-{afficher le nombre de mégaoctets} Mo donnent {afficher le nombre de bits} bits.
-```
-
-```{exec} python
-:editor: 159755bc-7e41-48c4-9f88-0cc605a1929a
-# Écrivez le programme ici
-```
-
-````{solution}
-```{exec} python
-:linenos:
-nb_mo = float(input("Nombre de mégaoctets: "))
-# 1 octet = 8 bits
-nb_bits = int(nb_mo * 8 * 1000000)
-print(nb_mo, "Mo donnent", nb_bits, "bits.")
-```
-````
+% ### Exercice {num1}`exercice`
+%
+% Écrivez un programme qui convertit des mégaoctets en bits.\
+% Le programme affichera:
+%
+% ```{code-block} text
+% Nombre de mégaoctets:
+% {afficher le nombre de mégaoctets} Mo donnent {afficher le nombre de bits} bits.
+% ```
+%
+% ```{exec} python
+% :editor: 159755bc-7e41-48c4-9f88-0cc605a1929a
+% # Écrivez le programme ici
+% ```
+%
+% ````{solution}
+% ```{exec} python
+% :linenos:
+% nb_mo = float(input("Nombre de mégaoctets: "))
+% # 1 octet = 8 bits
+% nb_bits = int(nb_mo * 8 * 1000000)
+% print(nb_mo, "Mo donnent", nb_bits, "bits.")
+% ```
+% ````
 
 ### Exercice {num1}`exercice`
 

@@ -11,6 +11,7 @@ revisions-if
 revisions-boucles
 revisions-fonctions
 erreurs
+labo-microbit
 fonctions
 fonctions-lab1
 listes-lab2

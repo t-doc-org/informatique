@@ -188,9 +188,9 @@ else:
 
 ### Exercice {num1}`exercice`
 
-Reprenons l'exercice précédent. Que se passe-t-il si a = b?
+Reprenons l'exercice précédent. Que se passe-t-il si a est égal à b?
 
-Améliorez le programme précédent en traitant aussi le cas où a = b.
+Améliorez le programme précédent en traitant aussi le cas où a est égal à b.
 
 ```{exec} python
 :editor: d5a6da62-0c1a-4ea7-a1b2-910848086c35
@@ -215,8 +215,8 @@ else:
 
 ```{exec} python
 :editor: 49f2047d-751c-42d6-8832-40953fa8db92
-# Complétez le programme
-a = ...
+# Complétez le programme seulement où il y a les ...
+a = ...       # choisissez une valeur pour a
 if ... :
   print("a est plus grand que 5.")
 elif ... :
@@ -288,10 +288,11 @@ else:
 
 ### Exercice {num1}`exercice`
 
-Que vont afficher les programmes suivants?
+Indiquez l'ordre d'exécution et ce que vont afficher les programmes suivants?
 
 1.  ```{exec} python
     :when: never
+    :linenos:
     a = 2
     if a != 2:
       print("Rouge")
@@ -302,7 +303,10 @@ Que vont afficher les programmes suivants?
     ```
 
     ````{solution}
+    1 - 2 - 4 - 6 - 7
+
     ```{exec} python
+    :linenos:
     a = 2
     if a != 2:
       print("Rouge")
@@ -315,24 +319,30 @@ Que vont afficher les programmes suivants?
 
 2.  ```{exec} python
     :when: never
+    :linenos:
     y = 2
     if y <= -1:
-      print(3 * y + 5)
+      y = 3 * y + 5
     elif y <= 3:
-      print(y + 4)
+      y += 4
     else:
-      print(y * y - 1)
+      y = y * y - 1
+    print(y)
     ```
 
     ````{solution}
+    1 - 2 - 4 - 5 - 6 - 8
+
     ```{exec} python
+    :linenos:
     y = 2
     if y <= -1:
-      print(3 * y + 5)
-    elif y < 2:
-      print(y + 4)
+      y = 3 * y + 5
+    elif y <= 3:
+      y += 4
     else:
-      print(y * y - 1)
+      y = y * y - 1
+    print(y)
     ```
     ````
 
@@ -382,7 +392,7 @@ else:
 nombre = float(input("Choisissez un nombre"))
 nombre = nombre - 5.5
 if nombre < 0:
-  nombre = nombre + 10
+  nombre += 10
 print(nombre)
 ```
 ````
@@ -482,6 +492,12 @@ Un zoo pratique les tarifs suivants:
 Écrivez un programme qui demande l'âge de l'utilisateur et affiche le prix à
 payer.
 
+Le rendu du programme doit être le suivant:
+```{code-block} text
+Quel est ton âge? 16
+Pour une personne de 16 ans, le prix à payer est de 22 francs.
+```
+
 ```{exec} python
 :editor: a7451ba3-2bd7-46f5-a2c6-1ab83c16c970
 # Écrivez le programme
@@ -526,39 +542,39 @@ retourne `False`.
 
 `not (3 == 4)` retourne `True`, car `3 == 4` retourne `False`.
 
-### Exercice {num1}`exercice`
-
-Une salle de trampoline pratique les tarifs suivants pour deux personnes:
-
-- Si les deux personnes sont mineures, elles payent chacune 7 francs.
-- Si une seule est mineure, elles payent un tarif de groupe de 18 francs.
-- Si les deux personnes sont majeures, elles payent au total 25 francs.
-
-Écrivez un programme qui demande l'âge des deux personnes et affiche le prix à
-payer.
-
-```{exec} python
-:editor: b7334fbc-4c1d-42fe-bed2-d15582abd972
-age_1 = int(input("Quel est l'âge de la première personne? "))
-age_2 = int(input("Quel est l'âge de la deuxième personne? "))
-
-# Complétez le programme ici
-```
-
-````{solution}
-```{exec} python
-age_1 = int(input("Quel est l'âge de la première personne? "))
-age_2 = int(input("Quel est l'âge de la deuxième personne? "))
-
-if age_1 < 18 and age_2 < 18:
-  prix = 2 * 7
-elif age_1 < 18 or age_2 < 18:
-  prix = 18
-else:
-  prix = 25
-print("Le prix total à payer est de", prix, "francs.")
-```
-````
+% ### Exercice {num1}`exercice`
+%
+% Une salle de trampoline pratique les tarifs suivants pour deux personnes:
+%
+% - Si les deux personnes sont mineures, elles payent chacune 7 francs.
+% - Si une seule est mineure, elles payent un tarif de groupe de 18 francs.
+% - Si les deux personnes sont majeures, elles payent au total 25 francs.
+%
+% Écrivez un programme qui demande l'âge des deux personnes et affiche le prix à
+% payer.
+%
+% ```{exec} python
+% :editor: b7334fbc-4c1d-42fe-bed2-d15582abd972
+% age_1 = int(input("Quel est l'âge de la première personne? "))
+% age_2 = int(input("Quel est l'âge de la deuxième personne? "))
+%
+% # Complétez le programme ici
+% ```
+%
+% ````{solution}
+% ```{exec} python
+% age_1 = int(input("Quel est l'âge de la première personne? "))
+% age_2 = int(input("Quel est l'âge de la deuxième personne? "))
+%
+% if age_1 < 18 and age_2 < 18:
+%   prix = 2 * 7
+% elif age_1 < 18 or age_2 < 18:
+%   prix = 18
+% else:
+%   prix = 25
+% print("Le prix total à payer est de", prix, "francs.")
+% ```
+% ````
 
 ### Exercice {num1}`exercice`
 
