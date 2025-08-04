@@ -85,7 +85,7 @@ d'apprentissage, par exemple:
     feedback positif ou négatif en fonction de ses choix. Il apprend donc par
     expérience.
 
-### Exercice {num}`exo-num`
+### Exercice {num1}`exercice`
 
 But: comprendre comment fonctionne l'apprentissage supervisé.
 

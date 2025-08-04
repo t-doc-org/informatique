@@ -66,7 +66,7 @@ paquets vers leur destination.
 ```{youtube} 88JeRflty4s
 ```
 
-### Exercice {num}`exo-reseaux`
+### Exercice {num1}`exercice`
 
 Le réseau de routeurs suivant est donné.
 
@@ -125,7 +125,7 @@ Complétez les tables de routages suivantes.
 | H | {input}`F,G` | {input}`2` |
 ```
 
-### Exercice {num}`exo-reseaux`
+### Exercice {num1}`exercice`
 
 Proposez un réseau de routeurs qui corresponde aux tables de routages données
 ci-dessous.
@@ -183,7 +183,7 @@ ci-dessous.
 ```
 ````
 
-### Exercice {num}`exo-reseaux`
+### Exercice {num1}`exercice`
 
 Complétez le chemin (noms des routeurs) par lequel passe un message pour
 atteindre sa destination depuis son point de départ en regardant seulement les

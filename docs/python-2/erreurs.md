@@ -38,7 +38,7 @@ Si Python trouve une erreur de syntaxe, le programme s'arrête, car il ne
 comprend pas le programme et ne peut donc pas l'exécuter. L'erreur est affichée
 sur la console.
 
-### Exemple {num}`ex-py2`
+### Exemple {num1}`exemple`
 
 ```{exec} python
 :editor:
@@ -61,7 +61,7 @@ par exemple:
 Si Python trouve une erreur d'exécution, il "plante", c'est-à-dire qu'il
 s'arrête de manière abrupte.
 
-### Exemple {num}`ex-py2`
+### Exemple {num1}`exemple`
 
 ```{exec} python
 :editor:
@@ -76,7 +76,7 @@ print(c)
 Python ne détecte aucune erreur, le programme est compilé et exécuté, mais le
 résultat n'est pas celui attendu.
 
-### Exemple {num}`ex-py2`
+### Exemple {num1}`exemple`
 
 ```{exec} python
 :editor:
@@ -89,7 +89,7 @@ print(c)
 
 ## Exercices
 
-### Exercice {num}`py2-erreur`
+### Exercice {num1}`exercice`
 
 Les programmes suivants contiennent tous une erreur.
 - Trouvez l'erreur, si possible sans exécuter le programme.
@@ -134,7 +134,7 @@ Les programmes suivants contiennent tous une erreur.
 4. Erreur de syntaxe: il manque les :.
 ```
 
-### Exercice {num}`py2-erreur`
+### Exercice {num1}`exercice`
 
 Il est souvent difficile de débugger un code qui ne fonctionne pas. En s'aidant
 des messages d'erreurs affichés, corrigez le programme ci-dessous qui calcule

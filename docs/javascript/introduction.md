@@ -25,7 +25,7 @@ apparaître ou disparaître des éléments.
 Les concepts de base (variables, entrées-sorties, instructions conditionnelles,
 boucles) sont les mêmes qu'en Python, seule la manière de les écrire change.
 
-### Exemple {num}`ex-js:exemple`
+### Exemple {num1}`exemple:js-exemple`
 
 Voici une page web qui permet de calculer les solutions d'une équation
 du deuxième degré.
@@ -157,11 +157,11 @@ calculer.addEventListener("click", calculeSol);
 </html>
 ```
 
-### Exercice {num}`exo-js`
+### Exercice {num1}`exercice`
 
 Testez la page avec quelques valeurs différentes pour a, b et c.
 
-### Exercice {num}`exo-js`
+### Exercice {num1}`exercice`
 
 Le code HTML est composé de 2 parties:
 - `<head>`{l=html} qui est l'entête du document et contient un certain nombre
@@ -187,7 +187,7 @@ Le code HTML est composé de 2 parties:
 4.  La balise `<script>`{l=html} se trouve à la fin de la balise `<body>`{l=html}.
 ```
 
-### Exercice {num}`exo-js`
+### Exercice {num1}`exercice`
 
 En lisant la partie `<script>`{l=html} qui contient le JavaScript du code
 ci-dessus, qu'est-ce qui est différent du Python?
@@ -229,10 +229,10 @@ const a = document.getElementById("mon_input").value;
 </body>
 ```
 
-#### Exercice {num}`exo-js`
+#### Exercice {num1}`exercice`
 
 Trouvez les `<input>`{l=html} contenus dans le code de
-l'{numref}`exemple %s<ex-js:exemple>`:
+l'{numref}`exemple %s<exemple:js-exemple>`:
 
 1.  De quel type sont-ils?
 2.  Quels sont leur identifiant?
@@ -245,7 +245,7 @@ l'{numref}`exemple %s<ex-js:exemple>`:
 3.  `value="0"` est la valeur par défaut indiquée dans le champ de texte.
 ```
 
-#### Exercice {num}`exo-js`
+#### Exercice {num1}`exercice`
 
 1.  À quelles lignes récupère-t-on les valeurs entrées dans les champs de texte?
 2.  Pourquoi note-on: `Number` devant
@@ -285,10 +285,10 @@ for (const note of notes) {
 
 </td></tr></table>
 
-#### Exercice {num}`exo-js`
+#### Exercice {num1}`exercice`
 
 1.  À quelle ligne cette construction est-elle utilisée dans
-    l'{numref}`exemple %s<ex-js:exemple>`.
+    l'{numref}`exemple %s<exemple:js-exemple>`.
 2.  Expliquez ce que fait cette boucle.
 
 ```{Solution}
@@ -326,7 +326,7 @@ nom.addEventListener("click", action);
 </body>
 ```
 
-#### Exercice {num}`exo-js`
+#### Exercice {num1}`exercice`
 
 1. À quelles lignes se trouvent les deux éléments HTML `<button>`{l=html}?
 2. Quels sont les identifiants de ces deux boutons?
@@ -356,7 +356,7 @@ afin de pouvoir y insérer le message si nécessaire.
 Dans le partie script, il est ainsi possible de changer la valeur du conteneur
 "message".
 
-#### Exercice {num}`exo-js`
+#### Exercice {num1}`exercice`
 
 1.  À quelle ligne se trouve le conteneur pour le message d'erreur?
 2.  À quelle ligne est créée la référence du conteneur?

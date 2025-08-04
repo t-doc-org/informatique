@@ -4,7 +4,7 @@
 
 # Correction d'erreur - Magie
 
-## Exercice {num}`exo-donnees`
+## Exercice {num1}`exercice`
 
 On considère un carré de 4x4 cases qui sont soit blanches, soit noires.\
 Un carré est valide, si le nombre de case blanches (ou noires) est paires dans

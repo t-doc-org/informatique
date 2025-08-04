@@ -17,7 +17,7 @@ l'index du dernier élément et éviter une erreur lors de l'exécution, nous
 utilisons la fonction `len(liste)` qui retourne le nombre d'élément dans une
 liste.
 
-### Exemple {num}`ex-py2`
+### Exemple {num1}`exemple`
 
 ```{exec} python
 :editor:
@@ -32,7 +32,7 @@ for i in range(len(notes)):
 
 En Python, il est possible de parcourir directement les éléments d'une liste.
 
-### Exemple {num}`ex-py2`
+### Exemple {num1}`exemple`
 
 ```{exec} python
 :editor:
@@ -43,7 +43,7 @@ for note in notes:    # La variable note change de valeur à chaque itération
   print(note)
 ```
 
-## Exercice {num}`exo-py2`
+## Exercice {num1}`exercice`
 
 Avant de les exécuter, déterminez ce que font les programmes suivants.
 
@@ -76,7 +76,7 @@ Avant de les exécuter, déterminez ce que font les programmes suivants.
     print("Tu as fait", nb_notes_insuf, "notes insuffisantes.")
     ```
 
-## Exercice {num}`exo-py2`
+## Exercice {num1}`exercice`
 
 1. Écrivez une programme qui génère une liste de 50 nombres entiers tirés au
 hasard entre 1 et 1000.
@@ -122,7 +122,7 @@ print(nombres)
 ```
 ````
 
-## Exercice {num}`exo-py2`
+## Exercice {num1}`exercice`
 
 Complétez le programme ci-dessous afin qu'il affiche correctement l'itinéraire
 de la manière suivante:
@@ -155,7 +155,7 @@ print("Tu es arrivé!")
 ```
 ````
 
-## Exercice {num}`exo-py2`
+## Exercice {num1}`exercice`
 
 Une liste de notes a été donnée par un autre utilisateur et sauvegardée dans la
 variable `notes`.

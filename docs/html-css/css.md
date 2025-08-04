@@ -184,7 +184,7 @@ ultrices felis a facilisis feugiat. </p>
 
 ## Exercices
 
-### Exercice {num}`exo-html`
+### Exercice {num1}`exercice`
 
 But: Appliquer un fichier CSS au document index.html.
 
@@ -194,7 +194,7 @@ But: Appliquer un fichier CSS au document index.html.
    `index.html`. (cf. [](#referencement))
 3. Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
 
-### Exercice {num}`exo-html`
+### Exercice {num1}`exercice`
 
 1. Qu'est-ce qui a changé?
 2. Cliquer sur `style.css` pour que le document s'afficher et essayer de le
@@ -217,7 +217,7 @@ But: Appliquer un fichier CSS au document index.html.
    (Il faut utiliser un sélecteur de classe.)
 9. Ajouter une bordure au tableau.
 
-### Exercice {num}`exo-html`
+### Exercice {num1}`exercice`
 
 À vous de jouer! Réfléchir à la structure de votre site internet:
 

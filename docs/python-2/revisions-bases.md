@@ -136,7 +136,7 @@ commençant par # sera ignorée lors de l'exécution du programme.
     Dès que la division est utilisée dans un calcul, le résultat sera de type
     `float`, même si le résultat de la division est un nombre entier.
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Quel est le résultat des expressions suivantes en Python?
 
@@ -165,7 +165,7 @@ Quel est le résultat des expressions suivantes en Python?
     `(1 + 3 * 2) ** 2 - 1`
 ```
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 De quel type sont les expressions suivantes?
 
@@ -188,7 +188,7 @@ De quel type sont les expressions suivantes?
 6.  {select}`float` `(3 + 7) / 2`
 ```
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Qu'affiche le programme suivant? Appuyez sur le bouton "play" pour vérifier
 votre réponse.
@@ -201,7 +201,7 @@ aire = base * hauteur / 2
 print("L'aire du triangle est de", aire)
 ```
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Qu'affiche le programme suivant? Faire un tableau d'états.\
 Appuyez sur le bouton "play" pour vérifier votre réponse.
@@ -228,7 +228,7 @@ print(a, b)
 | a = a * 2   |28 |4  |
 ````
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 En exécutant les programmes suivants, une erreur se produit. Corrigez le code à
 l'aide du message d'erreur.
@@ -271,7 +271,7 @@ l'aide du message d'erreur.
     print("La somme de a et b vaut" a + b)
     ```
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Faites le tableau d'états du programme suivant:
 

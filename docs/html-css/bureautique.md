@@ -30,7 +30,7 @@ Un logiciel de traitement de texte n'a pas de fichier CSS, mais il y des styles
 qui permet de styliser tous ces éléments de la même manière que le faut le
 fichier CSS.
 
-## Exercice {num}`exo-html`
+## Exercice {num1}`exercice`
 
 But: Mettre en forme un document texte avec des styles.
 

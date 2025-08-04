@@ -28,7 +28,7 @@ Le cybercriminel ne vise pas une personne précise, mais cible un grand nombre d
 personnes pour ensuite concentrer ses efforts avec celles qui semblent
 réceptives.
 
-### Exemple {num}`ex-num`
+### Exemple {num1}`exemple`
 
 Un individu entre dans les locaux d'une entreprise et placarde une affiche à
 l'aspect officiel affirmant que le numéro de service de dépannage informatique a
@@ -39,7 +39,7 @@ informations confidentielles et personnelles prétextant une intervention à
 distance par exemple. De cette manière l'individu pourra avoir accès au système
 d'information de l'entreprise. (source: Wikipédia)
 
-### Exercice {num}`exo-num`
+### Exercice {num1}`exercice`
 
 Citez d'autres exemples d'ingénierie sociale et expliquez pourquoi cela
 fonctionne.
@@ -76,7 +76,7 @@ elles sont récupérées par le fraudeur, qui peut alors se connecter au vérita
 site avec les identifiants volés et accéder à des données confidentielles ou
 dérober de l'argent.
 
-### Exemple {num}`ex-num`
+### Exemple {num1}`exemple`
 
 <table><tr><td>
 
@@ -117,11 +117,11 @@ Lorsque vous recevez un mail ou un sms, vérifiez:
 Si vous vous êtes fait avoir, changez les mots de passe et/ou faites bloquer les
 comptes au plus vite.
 
-### Exemple {num}`ex-num`
+### Exemple {num1}`exemple`
 
 ["ABE - Hameçonnage"](https://www.nanoo.tv/link/v/LhTeiDga)
 
-### Exercice {num}`exo-num`
+### Exercice {num1}`exercice`
 
 Effectuez les quiz sur les pages suivantes:
 

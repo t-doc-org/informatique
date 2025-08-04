@@ -5,7 +5,7 @@
 
 ## Notion de variable
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans l'exécuter, qu'affiche ce programme si:
 
@@ -31,7 +31,7 @@ print(nombre_km, prix_location)
 3. 50 125 (passage dans le if)
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans exécuter le programme, répondez aux questions.
 
@@ -53,7 +53,7 @@ print(n+1)
 2. 20
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans l'exécuter, qu'affiche ce programme:
 
@@ -82,7 +82,7 @@ while n <= 5:
 3. /
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans l'exécuter, qu'affiche ce programme si:
 
@@ -111,7 +111,7 @@ while n <= 5:
 3. /
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans l'exécuter, qu'affiche ce programme si:
 
@@ -135,7 +135,7 @@ print(n)
 3. 9
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans l'exécuter, qu'affiche ce programme si:
 
@@ -157,7 +157,7 @@ while n <= 5:
 2. \
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans l'exécuter, qu'est-ce que le programme suivant affiche.
 
@@ -180,7 +180,7 @@ print(n)
 
 ## Ordre d'exécution
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans exécuter le programme,
 
@@ -201,7 +201,7 @@ print("Bonjour", nom, "vous avez", age + 1, "ans!")
 2. Bonjour Bob vous avez 17 ans!
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans exécuter le programme,
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
@@ -231,7 +231,7 @@ else:
 4. 1 - 2 - 4 - 5 / Ce nombre est positif.
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans exécuter le programme,
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
@@ -256,7 +256,7 @@ print("n =", n, "et s =", s)
 
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans exécuter le programme,
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
@@ -282,7 +282,7 @@ print("J'ai fini!")
    J'ai fini!
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Nous aimerions programmer l'algorithme de Syracuse:
 
@@ -327,7 +327,7 @@ print("L'algorithme de Syracuse est terminé et il se termine bien par 4, 2 et 1
 
 ## Boucle `for` et boucle `while`
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Transformez le code suivant afin d'utiliser une boucle `while` à la place de la
 boucle `for`.
@@ -347,7 +347,7 @@ while n < 20:
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Transformez le code suivant afin d'utiliser une boucle `for` à la place de la
 boucle `while`.

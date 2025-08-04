@@ -33,7 +33,7 @@ print("Dans 10 ans, tu auras", age + 10, "ans.")
 Lors de l'exécution de la ligne 1, la question est affichée. Le programme attend
 jusqu'à ce que l'utilisateur saisisse une réponse et appuye sur {kbd}`Enter`.
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Complétez ce programme permettant de calculer l'aire d'un rectangle.
 
@@ -70,7 +70,7 @@ print("L'aire vaut", aire)
 ```
 ````
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Le programme ci-dessous devrait permettre de calculer l'année de naissance de
 l'utilisateur. Mais, il contient au moins une erreur par ligne.\
@@ -91,7 +91,7 @@ Ligne 4: Il manque des virgules entre les chaînes de caractères et les nombres
 dans la parenthèse de la fonction print.
 ```
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Il y a des erreurs dans les programmes suivants. Expliquez et corrigez-les.
 

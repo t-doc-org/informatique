@@ -18,7 +18,7 @@ Hacker
 contourner les protections d'un logiciel, à s'introduire frauduleusement dans un
 système ou un réseau informatique. (Larousse)
 
-### Exercice {num}`exo-num`
+### Exercice {num1}`exercice`
 
 1.  Quels types d'informations ou de données pourriez-vous vous faire voler?
 2.  En quoi la cybersécurité est-elle devenue un enjeu majeur dans notre
@@ -62,7 +62,7 @@ Exemples:
 5. Rançongiciel (ransomware)
 6. Logiciel publicitaire (adware)
 
-### Exercice {num}`exo-num`
+### Exercice {num1}`exercice`
 
 Pour l'exemple qui vous a été attribué:
 - Donnez une définition du malware.

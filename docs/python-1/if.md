@@ -22,7 +22,7 @@ Le résultat de la comparaison est de type booléen: True ou False.
 | >=        | plus grand ou égal à | 3 >= 7  | False    |
 | <=        | plus petit ou égal à | 3 <= 7  | True     |
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Est-ce que les expressions suivantes sont `True` (vrai) ou `False` (faux)?
 
@@ -43,7 +43,7 @@ Est-ce que les expressions suivantes sont `True` (vrai) ou `False` (faux)?
 6.  {select}`True`  `13 >= 13`
 ```
 
-## Exemple {num}`ex-py1` (if)
+## Exemple {num1}`exemple` (if)
 
 Le bloc d'instructions ne sera exécuté que si la condition est vraie.
 
@@ -67,7 +67,7 @@ print("Fin")
 Dans l'exemple ci-dessus, il ne se passe rien, la condition n'est pas vérifiée.\
 Changez la valeur de la variable `meteo` en "pluie". Que se passe-t-il?
 
-## Exemple {num}`ex-py1` (if ... else)
+## Exemple {num1}`exemple` (if ... else)
 
 Le bloc d'instructions après le `if` sera exécuté si la condition est vraie,
 sinon ce sera le bloc d'instructions du `else` qui sera exécuté.
@@ -96,7 +96,7 @@ Dans l'exemple ci-dessus, soit la moyenne est suffisante (moyenne supérieure ou
 d'autres possibilités. Changez la valeur de la variable `moyenne` en 3. Que se
 passe-t-il?
 
-## Exemple {num}`ex-py1` (if ... elif ... else)
+## Exemple {num1}`exemple` (if ... elif ... else)
 
 Certaines situations nécessitent de distinguer plus qu'un ou deux cas.
 
@@ -128,7 +128,7 @@ comédie et horreur). Le branchement `else` gérera tous les autres cas. Remplac
 la valeur de la variable `type_film` par "action", "horreur" ou "drame". Que se
 passe-t-il?
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez l'algorithme suivant en Python:
 
@@ -154,7 +154,7 @@ if a < 0:
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez l'algorithme suivant en Python:
 
@@ -186,7 +186,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Reprenons l'exercice précédent. Que se passe-t-il si a = b?
 
@@ -211,7 +211,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 ```{exec} python
 :editor: 49f2047d-751c-42d6-8832-40953fa8db92
@@ -240,7 +240,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 ```{role} input(quiz-input)
 :right: width: 10rem;
@@ -263,7 +263,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui demande son âge à l'utilisateur et affiche s'il est
 majeur ou s'il est mineur.
@@ -286,7 +286,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Que vont afficher les programmes suivants?
 
@@ -336,7 +336,7 @@ Que vont afficher les programmes suivants?
     ```
     ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Le programme suivant est censé affiché le tarif appliqué en fonction de l'âge de
 l'utilisateur. Mais il contient une erreur par ligne, trouvez-les et corrigez-les.
@@ -364,7 +364,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un algorithme qui:
 - demande un nombre à l'utilisateur,
@@ -387,7 +387,7 @@ print(nombre)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Voici trois programmes:
 
@@ -447,7 +447,7 @@ print(x)
 
 </td></tr></table>
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Le programme suivant contient une erreur de logique. Testez le programme avec
 différentes valeurs pour trouver et corriger l'erreur.
@@ -471,7 +471,7 @@ Il faut donc tester les conditions par ordre croissant: enfant, adulte, retrait�
 ou par ordre décroissant: retraité, adulte, enfant.
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Un zoo pratique les tarifs suivants:
 
@@ -510,7 +510,7 @@ Les opérateurs logiques permettent de combiner plusieurs conditions simples
 | or        | retourne True si une des conditions est vraie    |
 | not       | inverse le résultat, renvoie True si le résultat est faux et vice-versa |
 
-### Exemple {num}`ex-py1`
+### Exemple {num1}`exemple`
 
 `(5 < 3) and (2 < 6)` retourne `False`, car `5 < 3` retourne `False`.
 
@@ -526,7 +526,7 @@ retourne `False`.
 
 `not (3 == 4)` retourne `True`, car `3 == 4` retourne `False`.
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Une salle de trampoline pratique les tarifs suivants pour deux personnes:
 
@@ -560,7 +560,7 @@ print("Le prix total à payer est de", prix, "francs.")
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Julien souhaite s'inscrire à des séances d'équitation. Le club propose deux type
 de tarification:
@@ -595,7 +595,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui demande trois nombres à l'utilisateur et affiche le
 maximum (le plus grand).
@@ -623,7 +623,7 @@ print("Le plus grand nombre est", max)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui demande un nombre entier à l'utilisateur et affiche
 s'il est pair ou impair.
@@ -654,7 +654,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui demande un nombre entier à l'utilisateur et affiche
 s'il est divisible par 3 et 13.

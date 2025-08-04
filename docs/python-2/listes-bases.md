@@ -21,7 +21,7 @@ des éléments de types différents 'str', 'float' et 'int'.
 Une liste est déclarée par une suite de valeurs, séparées par des virgules et
 le tout encadré par des crochets.
 
-### Exemple {num}`ex-py2`
+### Exemple {num1}`exemple`
 
 ```{exec} python
 :editor:
@@ -52,7 +52,7 @@ crochets sans rien à l'intérieur.
 liste_vide = []
 ```
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 1.  Créez les listes suivantes en Python :
     - Les salles de classe dans lesquelles tu as des cours
@@ -114,7 +114,7 @@ coureurs[3] = "Burrell"
 print("La liste d'arrivée des coureurs est:", coureurs)
 ```
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Complétez le programme suivant en utilisant l'indexation de manière à ce que le
 programme affiche le texte suivant:
@@ -148,7 +148,7 @@ print(couleurs[6])
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Ajoutez les instructions nécessaires pour que l'affichage de la liste soit le
 suivant:
@@ -178,7 +178,7 @@ print(lettres)
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Complétez le programme ci-dessous en utilisant l'indexation de manière à ce que
 le print affiche la liste suivante:
@@ -214,7 +214,7 @@ print(villes)
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 La fonction `controle_position` prend en paramètre une liste à 2 éléments
 correspondant à la position d'un personnage. Cette fonction doit afficher
@@ -286,7 +286,7 @@ ma_liste.count(mon_element)
 : retourne le nombre d'apparition de `mon_element` dans `ma_liste`
 
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 ```{role} input(quiz-input)
 :right: width: 15rem;
@@ -367,7 +367,7 @@ ma_liste.count(mon_element)
     ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 1.  Créez une liste, nommée `sports` avec les éléments suivants: `kayak`,
     `escrime` et `escalade`.
@@ -406,7 +406,7 @@ print(sports, len(sports))
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 1.  Demandez à l'utilisateur d'entrer 6 nombres et stockez-les dans la liste
     `nombres`.
@@ -437,7 +437,7 @@ print(sum(nombres))
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Sans exécuter le code, répondez aux questions suivantes:
 1. Que va retourner `nombres.index(5)`?
@@ -470,7 +470,7 @@ print(nombres)
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Dans le programme suivant, les ingrédients d'une pizza devraient pouvoir être
 ajoutés petit à petit par l'utilisateur dans la liste `ingredients` qui contient
@@ -506,7 +506,7 @@ print(ingredients)
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Une liste nommée `meteo_semaine` doit contenir les prévisions météo pour les 7
 jours d'une semaine. Cette liste doit contenir 7 éléments, chacun étant un texte
@@ -562,7 +562,7 @@ print(meteo_semaine)
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 1. Écrivez un programme qui génère une liste de 1000 nombres entiers tirés au
 hasard entre 1 et 10.
@@ -598,7 +598,7 @@ for i in range(1, 11):
 
 ## Différence variable simple et variable de type liste
 
-### Exemple {num}`ex-py2`
+### Exemple {num1}`exemple`
 
 Exécutez le code donné. Que se passe-t-il lorsqu'on modifie la valeur de la
 variable `a`?
@@ -648,7 +648,7 @@ La référence de la variable `b` elle ne change pas.
 </td></tr></table>
 
 
-### Exemple {num}`ex-py2`
+### Exemple {num1}`exemple`
 
 Exécutez le code donné. Que se passe-t-il lorsqu'on modifie la valeur de la
 variable `liste_a`?

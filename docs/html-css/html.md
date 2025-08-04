@@ -119,7 +119,7 @@ donc utiliser de l'UTF-8 que nous allons indiquer dans l'attribut charset:
 Comme cette balise ne contient pas de contenu, c'est une balise unique (pas de
 balise ouvrante et fermante).
 
-## Exercice {num}`exo-html`
+## Exercice {num1}`exercice`
 
 But: Comprendre la structure principale d'un document HTML.
 
@@ -235,7 +235,7 @@ La balise `<table>` permet de représenter des tableaux de données (tableaux en
 [Tuto](https://developer.mozilla.org/fr/docs/Web/HTML/Element/table) tables et
 tableaux
 
-## Exercice {num}`exo-html`
+## Exercice {num1}`exercice`
 
 But: Ouvrir un document HTML sur Visual Studio Code.
 
@@ -257,7 +257,7 @@ But: Ouvrir un document HTML sur Visual Studio Code.
 6. Pour voir le rendu, double-cliquer sur le fichier `index.html` de votre
    OneDrive, le fichier s'ouvrira dans le navigateur.
 
-## Exercice {num}`exo-html`
+## Exercice {num1}`exercice`
 
 But: Comprendre un document HTML simple et le modifier.\
 Vous voyez maintenant le code HTML et ce que la page affiche.

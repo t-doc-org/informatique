@@ -27,7 +27,7 @@ compression.
   avec perte pour les photos. La compression introduit des artefacts qui
   deviennent visibles lorsqu'elle est trop forte.
 
-### Exemple {num}`ex-donnees`
+### Exemple {num1}`exemple`
 
 En première année, vous avez vu comment encoder une image matricielle en noir et
 blanc. Chaque pixel est représenté par un seul bit:\
@@ -76,7 +76,7 @@ P1
 0 0 0 0 0 0 0 0 0 1 1 1 1 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 Comment pourrait-on compressez les données de l'image ci-dessus?
 
@@ -96,7 +96,7 @@ On pourrait regrouper les pixels identiques:
 ```
 ````
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 1.  Télécharger le fichier [`maison.pbm`](maison.pbm).
 2.  Quelle est le poids (taille) de cette image?
@@ -109,7 +109,7 @@ Le codage par plages (Run-Length Encoding en anglais) est un algorithme de
 compression de données qui consiste à remplacer des suites de valeurs identiques
 par des paires: nombre de répétitions/valeur à répéter.
 
-#### Exemple {num}`ex-donnees`
+#### Exemple {num1}`exemple`
 
 Données brutes: aaaaaabcccdd &rarr; 12 caractères\
 Données codées: 6a1b3c2d &rarr; 8 caractères (données compressées)
@@ -137,7 +137,7 @@ accompagnées de son. La plupart des vidéos présentent un flux d'images compri
 entre 24 et 30 images par seconde, un rythme qui correspond à la capacité du
 cerveau à traiter les informations visuelles.
 
-### Exemple {num}`ex-donnees`
+### Exemple {num1}`exemple`
 
 Une image d'un film numérisé au format DVD en définition standard (720 x 576
 pixels) en RGB a un poids de: $720 * 576 * 3  = 1244160 \textrm{ octets} \cong 1.24 \textrm{ Mo}$.\
@@ -157,7 +157,7 @@ Une autre approche repose sur la similarité entre les images successives: plut�
 que d’encoder chaque image en entier, on représente uniquement les différences
 par rapport à l’image précédente.
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 Considérons un film en haute définition en format Blu-ray (HD: 1280 x 720 pixels)
 encodé en RGB.
@@ -172,7 +172,7 @@ encodé en RGB.
 3. $69.1 * 2 * 3600 \cong 497\,664 \textrm{ Mo} \cong 498 \textrm{ Go}$
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 Vous disposez d'un accès internet en fibre optique permettant un débit de
 téléchargement de 500 Mb/s. Combien de temps faut-il pour télécharger un film:
@@ -185,7 +185,7 @@ téléchargement de 500 Mb/s. Combien de temps faut-il pour télécharger un fil
 2. $\dfrac{16200 * 8}{500} = 4 \textrm{ min} 19 \textrm{ s}$
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 Netflix a diffusé ses films au format HD (1280 x 720) au lieu du format 4K
 (3840 x 2160) au printemps 2020. Pour quelle raison?
@@ -219,7 +219,7 @@ Pour mettre en place ce système, il faut calculer une statistique de la
 fréquence d'apparition des symboles et définir un code de longueur variable
 (tableau de correspondance entre les symboles et leur codage).
 
-### Exemple {num}`ex-donnees`
+### Exemple {num1}`exemple`
 
 Données brute: AAAAA...AAAAAAAAAABCD (le A est répété 100 fois)
 

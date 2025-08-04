@@ -8,7 +8,7 @@
 La fonction `print()` permet d'afficher une phrase ou la valeur d'un objet sur
 la console.
 
-## Exemple {num}`ex-io`
+## Exemple {num1}`exemple`
 
 1.  Affichage d'une chaine de caractère. Ce qui se trouve entre guillemets sera
     affiché tel quel.
@@ -37,7 +37,7 @@ la console.
     print("Le prix de la boîte de chocolat est de", prix_choco, "CHF.")
     ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui affiche exactement ce texte:
 
@@ -65,7 +65,7 @@ print("J'aime bien jouer au volley.")
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 1. Écrivez un programme qui affiche "Bonjour tout le monde!".
 2. Écrivez un programme qui affiche "Je programme!".
@@ -90,7 +90,7 @@ print("Je programme! " * 10)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 1.  Sans exécuter le programme ci-dessous, prédisez ce qu'il affichera.
 
@@ -110,7 +110,7 @@ guillemets entourent `salutations`, alors le mot est considéré comme une chaî
 de type caractère et le mot est alors affiché tel quel.
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 1.  Écrivez un programme qui permet d'effectuer les 4 opérations de base
     (addition, soustraction, multiplication et division) avec les nombres 13 et
@@ -142,7 +142,7 @@ print(a / b)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui permet d'afficher les calculs suivants, ainsi que la
 réponse:
@@ -171,7 +171,7 @@ print("Le reste de la division de 345 par 37 est ", 345 % 37)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui permet de résoudre l'exercice suivant (ne pas oublier
 les phrases d'explication):
@@ -244,7 +244,7 @@ convertir en `int` (nombre entier) ou en `float` (nombre à virgule).
 nom_variable = input("...")
 ```
 
-### Exemple {num}`ex-py1`
+### Exemple {num1}`exemple`
 
 ```{exec} python
 prenom = input("Comment t'appelles-tu?")  # prenom est une chaîne de caractères
@@ -254,7 +254,7 @@ print(prenom, age, taille)
 ```
 
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui demande à l'utilisateur son nom, son prénom et où il
 habite. Le programme affichera:
@@ -283,7 +283,7 @@ print("Je vois que tu habites à", lieu)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Le programme ci-dessous contient une erreur par ligne. Trouvez et corrigez-les.
 
@@ -305,7 +305,7 @@ print("Fin du programme")
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Le programme ci-dessous devrait permettre de calculer l'année de naissance de
 l'utilisateur. Toutefois, celui-ci contient au moins une erreur par ligne.
@@ -327,7 +327,7 @@ print("Vous êtes né.e en", annee - age, "ou en", annee - age - 1)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui convertit des mégaoctets en bits.\
 Le programme affichera:
@@ -352,7 +352,7 @@ print(nb_mo, "Mo donnent", nb_bits, "bits.")
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme permettant de convertir des degrés Fahrenheit en degrés
 Celsius. Pour une température en Fahrenheit $F$, on trouve son équivalent en

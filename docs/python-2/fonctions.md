@@ -15,7 +15,7 @@ est préférable de placer toutes les définitions de fonctions au début du
 programme (après les imports et les définitions de variables globales).
 ```
 
-## Exemple {num}`ex-py2`
+## Exemple {num1}`exemple`
 
 Fonction qui affiche la table de multiplication de 5:
 
@@ -40,7 +40,7 @@ Un **paramètre d'une fonction** est une variable définie dans la fonction qui
 recevra une valeur lors de chaque appel de la fonction. Ainsi le comportement
 d'une fonction varie suivant les valeurs de ses paramètres.
 
-### Exemple {num}`ex-py2`
+### Exemple {num1}`exemple`
 
 Fonction qui affiche n'importe quelle table de multiplication:
 
@@ -54,7 +54,7 @@ nombre = 6                      # changer la valeur du nombre ici
 table_multiplication(nombre)
 ```
 
-### Exemple {num}`ex-py2:delta1`
+### Exemple {num1}`exemple`
 
 ```{exec} python
 :editor: b280f69c-2547-4680-98c8-2cce587c9c74
@@ -81,7 +81,7 @@ La commande `return` permet de renvoyer le résultat d'une fonction et ainsi
 pouvoir le réutiliser dans la suite du programme. Pour cela, il est nécessaire
 de sauvegarder la valeur retournée dans une variable.
 
-### Exemple {num}`ex-py2:delta2`
+### Exemple {num1}`exemple:py2-delta2`
 
 ```{exec} python
 :editor: dfb94893-8e1b-4a02-9eca-177f82e8be11
@@ -99,7 +99,7 @@ delta = discriminant(a, b, c)
 print(delta)
 ```
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Déterminez ce que font les programmes suivants et corrigez les erreurs.
 
@@ -177,11 +177,11 @@ print("Fin du programme")
 ```
 ````
 
-### Exercice {num}`exo-py2:num1`
+### Exercice {num1}`exercice:py2-num1`
 
-Modifiez le code de l'{numref}`exemple %s<ex-py2:delta2>` pour que le programme
-vérifie que le coefficient $a$ n'est pas nul. (Dans ce cas, ce n'est pas une
-équation du deuxième degré et la résolution est différente.)
+Modifiez le code de l'{numref}`exemple %s<exemple:py2-delta2>` pour que le
+programme vérifie que le coefficient $a$ n'est pas nul. (Dans ce cas, ce n'est
+pas une équation du deuxième degré et la résolution est différente.)
 
 ```{exec} python
 :editor: d0ba1a78-33a3-41b2-8405-23d7b418e656
@@ -222,10 +222,10 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py2:num2`
+### Exercice {num1}`exercice:py2-num2`
 
-Modifiez le code de l'{numref}`exercice %s<exo-py2:num1>`, pour afficher le
-nombre de solutions de l'équation.\
+Modifiez le code de l'{numref}`exercice %1s<exercice:py2-num1>`, pour afficher
+le nombre de solutions de l'équation.\
 Rappel:
 - si $\Delta < 0$, il n'y a pas de solution,
 - si $\Delta = 0$, il y a une solution,
@@ -270,10 +270,10 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py2:num3`
+### Exercice {num1}`exercice:py2-num3`
 
-Complétez le code de l'{numref}`exercice %s<exo-py2:num2>`, pour calculer les
-solutions de l'équation.
+Complétez le code de l'{numref}`exercice %s<exercice:py2-num2>`, pour calculer
+les solutions de l'équation.
 
 ````{tip}
 Pour calculer la racine carrée d'un nombre, il faut utiliser la fonction
@@ -332,11 +332,11 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
-Complétez le programme de l'{numref}`exercice %s<exo-py2:num3>`, pour calculer
-aussi la solution si $a = 0$, c'est-à-dire que l'équation donnée est une
-équation du premier degré.
+Complétez le programme de l'{numref}`exercice %s<exercice:py2-num3>`, pour
+calculer aussi la solution si $a = 0$, c'est-à-dire que l'équation donnée est
+une équation du premier degré.
 
 ```{exec} python
 :editor: a0139bba-537f-419e-8187-76d78355d944
@@ -383,7 +383,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 1. Écrivez une fonction qui convertit des bits en octets.
 2. Écrivez une fonction qui convertit des octets en bits.
@@ -415,7 +415,7 @@ print("La conversion de 512 octets en bits donne", nb_bits)
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Pour calculer l'aire totale de la figure ci-dessous:
 
@@ -447,7 +447,7 @@ print("Aire totale:", aire_totale)
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Pour les prochaines vacances, vous décidez de partir en vacances au Japon. Vous
 avez de l'argent sur un compte épargne et de l'argent que vous avez gagner en
@@ -488,7 +488,7 @@ print("Tu auras", budget_yen, "YEN.")
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Écrivez une fonction qui prend en paramètre un code de réduction et retourne le
 pourcentage de rabais donné par ce code de réduction. Le code déjà donné utilise
@@ -534,7 +534,7 @@ print("Le prix final est de", prix_final, "CHF.")
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Pour calculer le prix de l'amende à payer en cas de dépassement de vitesse,
 consulter le document suivant: [Liste sanctions](sanctions-vitesse.pdf)
@@ -580,7 +580,7 @@ print(amende(120,120))
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 La suite de Syracuse est une suite d'entiers naturels définie de la manière
 suivante:
@@ -637,7 +637,7 @@ print(est_pair(107))
 ```
 ````
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui demande à l'utilisateur un nombre entier strictement
 positif et affiche tous ses diviseurs. Ce programme doit:
@@ -701,7 +701,7 @@ L'ordre des paramètres lors de l'appel de la fonction doit être le même que l
 de la définition de la fonction.
 ```
 
-### Exercice {num}`exo-py2`
+### Exercice {num1}`exercice`
 
 Créez une fonction `compteur()`...
 1.  qui compte de 0 à un nombre donné appelé `stop`:

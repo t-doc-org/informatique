@@ -3,7 +3,7 @@
 
 # Révisions
 
-## Exercice 1
+## Exercice {num1}`exercice`
 
 Écrivez un programme qui correspond à l'algorithme suivant:
 
@@ -31,7 +31,7 @@ print("L'aire du triangle est :", aire)
 ```
 ````
 
-## Exercice 2
+## Exercice {num1}`exercice`
 
 Écrivez un programme qui correspond à l'algorithme suivant:
 
@@ -54,7 +54,7 @@ print("Dans 22 ans, vous aurez:", age + 22)
 ```
 ````
 
-## Exercice 3
+## Exercice {num1}`exercice`
 
 Écrivez un programme qui correspond à l'algorithme suivant:
 
@@ -81,7 +81,7 @@ else:
 ```
 ````
 
-## Exercice 4
+## Exercice {num1}`exercice`
 
 Écrivez un programme qui correspond à l'algorithme suivant:
 
@@ -107,7 +107,7 @@ else:
 ```
 ````
 
-## Exercice 5
+## Exercice {num1}`exercice`
 
 Écrivez un programme qui correspond à l'algorithme suivant:
 
@@ -138,7 +138,7 @@ else:
 ```
 ````
 
-## Exercice 6
+## Exercice {num1}`exercice`
 
 Écrivez un programme qui correspond à l'algorithme suivant:
 
@@ -167,7 +167,7 @@ else:
 ```
 ````
 
-## Exercice 7
+## Exercice {num1}`exercice`
 
 Écrivez un programme qui affiche les nombres de 5 à 43 (inclus).
 
@@ -195,7 +195,7 @@ for i in range(5, 44):
 ```
 ````
 
-## Exercice 8
+## Exercice {num1}`exercice`
 
 Écrivez un programme qui affiche les nombres pairs de 0 à 30 (inclus).
 
@@ -224,7 +224,7 @@ for i in range(1, 16):
 ````
 
 
-## Exercice 9
+## Exercice {num1}`exercice`
 
 Écrivez un programme qui correspond à l'algorithme suivant:
 
@@ -258,8 +258,7 @@ print("Stock épuisé!")
 ```
 ````
 
-
-## Exercice 10
+## Exercice {num1}`exercice`
 
 Un jeune souhaite s'acheter un nouvel ordinateur qui coûte 1000 CHF. Il peut
 mettre de côté chaque semaine 15 CHF de son argent de poche.

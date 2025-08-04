@@ -13,7 +13,7 @@ Un **système de fichiers** est l'organisation hiérarchique des fichiers sur un
 ordinateur, un disque dur externe, une clé USB ou n'importe quel support qui
 contient des fichiers.
 
-## Exercice {num}`exo-arch`
+## Exercice {num1}`exercice`
 
 Répondre aux questions:
 

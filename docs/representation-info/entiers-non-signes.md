@@ -45,7 +45,7 @@ $$
           &= 64 + 32 + 0 + 8 + 4 + 0 + 1 = 109
 $$
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 <script type="module">
 const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
@@ -118,7 +118,7 @@ $$149 = 10010101_2$$
 :title: Vidéo sur le binaire
 ```
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Convertir les nombres suivants de décimal en binaire.
 
@@ -139,7 +139,7 @@ Convertir les nombres suivants de décimal en binaire.
 8.  {input}`2` $1573$
 ```
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Combien de bits faut-il pour écrire les nombres suivants en base 2?
 
@@ -184,7 +184,7 @@ Que vaut A0D7 en binaire?
 
 $$A0D7_{16} = 1010\,0000\,1101\,0111_{2}$$
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 
@@ -250,7 +250,7 @@ résultat sera faux ($13 + 12 \ne 7$).
 
 Un exemple coûteux d'overflow est le [vol 501 d'Ariane 5](https://fr.wikipedia.org/wiki/Vol_501_d%27Ariane_5).
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Effectuer les additions suivantes sur 4 bits.
 
@@ -267,7 +267,7 @@ Effectuer les additions suivantes sur 4 bits.
 4.  {input}`0111,overflow`  $1111_2 + 1000_2$
 ```
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Effectuer les additions suivantes sur 8 bits.
 

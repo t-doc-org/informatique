@@ -74,7 +74,7 @@ Vérification: l'addition d'un nombre et de son opposé doit donner 0.
   1 0 0 0 0    (sans tenir compte de la retenue finale)
 ```
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 <script type="module">
 const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
@@ -125,7 +125,7 @@ décimale de celui-ci.
 | $1101\,0001_2$ | {input}`neg` | {input}`dec`    |
 ```
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Répondre aux questions suivantes:
 

@@ -16,7 +16,7 @@ for _ in range(nb_repetitions):
   ...
 ```
 
-### Exemple {num}`ex-py1`
+### Exemple {num1}`exemple`
 
 <table><tr style="text-align: center">
     <th style="width: 50%">Programme</th><th>Ordinogramme</th>
@@ -39,7 +39,7 @@ print("J'ai fini.")
 
 </td></tr></table>
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Sans les exécuter, qu'afficheront les programmes suivants?
 
@@ -82,7 +82,7 @@ Ensuite, testez vos réponses en les exécutant.
       print("Fin du jeu")
     ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 1.  Que fait le programme suivant?
     ```{exec} python
@@ -135,7 +135,7 @@ Toutes ces notations sont correctes: `for _ in range(3):`,
 valeur de la variable dans la boucle.
 ```
 
-### Exemple {num}`ex-py1`
+### Exemple {num1}`exemple`
 
 Le programme suivant affiche les nombres de 0 à 9.
 
@@ -145,7 +145,7 @@ for i in range(10):
   print(i)
 ```
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui affiche les nombres entiers de 0 jusqu'à 17 et affiche
 à la fin "J'ai fini de compter!".
@@ -164,7 +164,7 @@ print("J'ai fini de compter!")
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Modifiez le programme de l'exemple pour qu'il affiche les nombres entiers de 1 à
 10.
@@ -191,7 +191,7 @@ for i in range(1, 11):
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui calcule et affiche la somme des dix premiers nombres
 entiers plus grands que 0.
@@ -235,7 +235,7 @@ Il y a plusieurs manières de faire.
     ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui calcule et affiche le produit des cinq premiers nombres
 entiers plus grands que 0.
@@ -263,7 +263,7 @@ print(produit)
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui demande à l'utilisateur un nombre entier positif et
 affiche les 10 premiers multiples de ce nombre.
@@ -289,7 +289,7 @@ for i in range(1, 11):
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui affiche les nombres paires jusqu'à 20.
 
@@ -314,7 +314,7 @@ for i in range(1, 21):
 ```
 ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui affiche le résultat des calculs suivants:
 
@@ -370,7 +370,7 @@ for i in range(1, 21):
     ```
     ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Bob souhaite construire une pyramide à base carrée comme sur la photo.
 
@@ -461,7 +461,7 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
     ```
     ````
 
-### Exercice {num}`exo-py1`
+### Exercice {num1}`exercice`
 
 Le 1{sup}`er` janvier, les parents de Chrystel ont déposé sur son livret
 d'épargne 1500 CHF au taux de 2 %.

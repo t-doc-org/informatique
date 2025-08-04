@@ -107,7 +107,7 @@ Nom: Taylor Swift Pays: United States Label: Big Machine Records
 
 Pour les exercices suivants, vou allez travailler dans Visual Studio Code.
 
-### Exercice {num}`py-sql1`
+### Exercice {nump}`exemple`
 
 Sauvegarde du fichier `main.py`:
 
@@ -309,7 +309,7 @@ Création de la base de données:
 5. Sélectionnez `Run Query` (clic droit).
 
 
-### Exercice {num}`py-sql1`
+### Exercice {nump}`exemple`
 
 Maintenant que la base de données a été créée, vous allez pouvoir faire des
 requêtes.
@@ -339,7 +339,7 @@ for resultat in resultats:
 ```
 ````
 
-### Exercice {num}`py-sql1`
+### Exercice {nump}`exemple`
 
 Complétez le programme pour qu'il affiche la liste de tous les albums précédés
 du nom des colonnes (nom et année).
@@ -364,7 +364,7 @@ for resultat in resultats:
 ```
 ````
 
-### Exercice {num}`py-sql1`
+### Exercice {nump}`exemple`
 
 Complétez le programme pour qu'il affiche la liste de toutes les chansons
 chantées par Taylor Swift.
@@ -389,7 +389,7 @@ for resultat in resultats:
 ```
 ````
 
-### Exercice {num}`py-sql1`
+### Exercice {nump}`exemple`
 
 Complétez le programme pour qu'il affiche la liste de toutes les chansons, de
 leur interpète et le nom de l'album qui sont du genre hip-hop.
@@ -452,7 +452,7 @@ L'ajout de données se fait en trois étapes:
   base_donnees.commit()
   ```
 
-### Exercice {num}`py-sql1`
+### Exercice {nump}`exemple`
 
 1. Ajoutez dans la table `song`, la chanson **Leave Right Now** sortie en
 **2017** de l'album **Life Changes** de genre **country**.
@@ -490,7 +490,7 @@ for resultat in resultats:
 ```
 ````
 
-### Exercice {num}`py-sql1`
+### Exercice {nump}`exemple`
 
 Quand on recherche quelque chose qui n'existe pas dans la base de données,
 celle-ci retourne comme résultat une liste vide [].
@@ -545,7 +545,7 @@ for resultat in resultats:
 ```
 ````
 
-### Exercice {num}`py-sql1`
+### Exercice {nump}`exemple`
 
 Essayez d'ajouter **Kendrick Lamar** des **United States** et du label **Top
 Dawg Entertainment** dans la table. Vous devriez recevoir comme message que "ces

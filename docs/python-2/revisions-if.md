@@ -91,7 +91,7 @@ else:
 Dans l'exemple ci-dessus, il y a le choix entre trois types de films (action,
 comédie et horreur). Le branchement `else` gérera tous les autres cas.
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 ```{exec} python
 :when: never
@@ -120,7 +120,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 ```{role} input(quiz-input)
 :right: width: 10rem;
@@ -143,7 +143,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 1.  ```{exec} python
     :editor:
@@ -196,7 +196,7 @@ else:
       print("La division par 0 est impossible.")
     ```
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Nous souhaitons créer un programme qui calcule le prix à payer lors de l'achat de
 canette de Red Bull dont le prix unitaire est de 1.50 CHF.
@@ -231,7 +231,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Écrivez un programme qui correspond à l'algorithme suivant:
 
@@ -265,7 +265,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Voici trois programmes:
 
@@ -325,7 +325,7 @@ print(x)
 
 </td></tr></table>
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Que vont afficher chacun de ces programmes?
 
@@ -378,7 +378,7 @@ print(not(a <= b))
 
 </td></tr></table>
 
-## Exercice {num}`exo-py2-rev`
+## Exercice {num1}`exercice-rev`
 
 Le programme suivant contient une erreur de logique. Testez le programme avec
 différentes valeurs pour la trouver et corrigez-la.

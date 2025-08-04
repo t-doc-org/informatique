@@ -30,7 +30,7 @@ Voici un schéma qui représente l'infrastructure d'un réseau local.
 Source: [https://technopartage.jimdofree.com](https://technopartage.jimdofree.com/r%C3%A9seaux-informatiques/)
 ```
 
-### Exercice {num}`exo-reseaux`
+### Exercice {num1}`exercice`
 
 Sur le schéma, ci-dessus sont nommés différents équipements. Complétez-le
 [tableau](reseau-local.docx) en expliquant le rôle dans le réseau local de chaque
@@ -52,7 +52,7 @@ Le modem, le routeur, la passerelle, le switch et la borne Wi-Fi sont souvent
 intégrés à la box internet fournie par le fournisseur d'accès internet.
 ```
 
-### Exercice {num}`exo-reseaux`
+### Exercice {num1}`exercice`
 
 1.  Qu'est-ce qu'un fournisseur d'accès internet (FAI)?
 2.  Citez quelques exemples de fournisseurs d'accès internet en Suisse.

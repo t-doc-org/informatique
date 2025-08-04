@@ -73,7 +73,7 @@ Voici la procédure pour exécuter un programme sur le micro:bit:
 3.  Exécutez le programme sur le micro:bit\
     Appuyez sur le bouton **Run**.
 
-### Exercice {num}`exo-microbit`
+### Exercice {num1}`exercice`
 
 Le programme suivant affiche un sourire sur la matrice LED 5x5 du micro:bit.\
 Exécutez-le sur le micro:bit.
@@ -89,7 +89,7 @@ display.show(smile)
 
 ## Affichage de texte
 
-### Exercice {num}`exo-microbit`
+### Exercice {num1}`exercice`
 
 1.  Exécutez le programme suivant et répondez aux questions:
     - Que fait ce programme?
@@ -149,7 +149,7 @@ Le **module microbit** contient de nombreuses images intégrées, telles que
 `Image.PACMAN`, `Image.GHOST`, `Image.SKULL`, etc.
 
 
-### Exercice {num}`exo-microbit`
+### Exercice {num1}`exercice`
 
 1.  Sans l'exécuter, que fait le programme suivant?
     ```{exec} micropython
@@ -184,7 +184,7 @@ display.show(img)
 ```
 ````
 
-### Exercice {num}`exo-microbit`
+### Exercice {num1}`exercice`
 
 1.  Écrivez un programme qui affiche l'image de pacman, attend 2 secondes et
     ensuite affiche l'image d'un fantôme.
@@ -244,7 +244,7 @@ La fonction `was_pressed()` retourne la value `True` si le bouton a été
 enfoncé depuis le début du programme ou depuis le dernier appel de cette
 fonction.
 
-### Exemple {num}`ex-microbit`
+### Exemple {num1}`exemple`
 
 ```{exec} micropython
 :after: microbit-reset
@@ -261,7 +261,7 @@ while True:
   sleep(1000)
 ```
 
-### Exercice {num}`exo-microbit`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui affiche une image lorsque le bouton A est appuyé et
 affiche une autre image lorsque c'est le bouton B.
@@ -288,7 +288,7 @@ while True:
 ```
 ````
 
-### Exercice {num}`exo-microbit`
+### Exercice {num1}`exercice`
 
 Testez les deux programmes suivants.
 - Quelles différences y a-t-il entre les deux programmes?
@@ -344,7 +344,7 @@ La fonction `display.set_pixel(x, y, intensite)` permet d'appliquer la valeur de
 l'**intensité** à la LED de coordonnée (x, y). L'intensité est un nombre entre
 0 et 9 où 0 signifie que la LED est éteinte et 9 la luminosité maximale.
 
-### Exercice {num}`exo-microbit`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui allume la LED du milieu de l'image avec la valeur
 maximale et les LED des quatre coins avec une valeur intermédiaire.

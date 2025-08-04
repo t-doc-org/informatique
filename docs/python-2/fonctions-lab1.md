@@ -7,7 +7,7 @@
 solutions: hide
 ```
 
-## Exercice {num}`py2-lab1`
+## Exercice {nump}`exercice`
 
 1.  Lisez le code suivant et expliquez ce qu'il fait sans l'exécuter.
 2.  Exécutez le code. Le code fait-il ce que vous pensiez?
@@ -173,7 +173,7 @@ print("Au revoir. Merci d'avoir joué avec moi!")
 ```
 ````
 
-## Exercice {num}`py2-lab1`
+## Exercice {nump}`exercice`
 
 Écrivez un jeu d'énigmes qui a la structure suivante:
 1.  Créez plusieurs fonctions qui gèrent la résolution des énigmes. Celles-ci

@@ -19,8 +19,8 @@ voisines (au sud, à l'est, au nord et à l'ouest), si elles existent.
 
 ## Programmation
 
-En vous aidant de l'{numref}`exemple %s<ex-js:exemple>`, programmez les étapes
-ci-dessous dans l'ordre.
+En vous aidant de l'{numref}`exemple %s<exemple:js-exemple>`, programmez les
+étapes ci-dessous dans l'ordre.
 
 ``````{tab-set}
 :sync-group: etape
@@ -150,7 +150,7 @@ sont allumées:
     cellule n'est pas allumée, renvoyez `False` (le but n'est pas atteint). À la
     fin de la fonction, renvoyez `True` (toutes les cellules sont allumées).
 2.  Pour afficher du texte sur la page, regardez l'affichage de l'erreur dans
-    l'{numref}`exemple %s<ex-js:exemple>`.
+    l'{numref}`exemple %s<exemple:js-exemple>`.
 ````
 
 `````
@@ -172,7 +172,7 @@ const index = cellules.indexOf(c);  // retourne l'index de l'élément ciblé
 const x = index % larg;             // calcule la coordonnée x en fonction de l'index
 const y = Math.trunc(index / larg); // calcule la coordonnée y en fonction de l'index
 ```
-Et celui pour convertir les coordonnées x et y en index:
+Et celui pour convertir les coordonnées x et y en indexemple:
 ```{exec} html
 :when: never
 function changeCoordEnIndex(x, y) {

@@ -56,7 +56,7 @@ Avant de pouvoir utiliser une fonction d'un module, il faut l'importer ainsi:
 from nom_du_module import nom_de_la_fonction
 ```
 
-### Exemple {num}`ex-py1-fct`
+### Exemple {num1}`exemple`
 
 ```{exec} python
 :editor:
@@ -79,7 +79,7 @@ découper un programme en plusieurs petites tâches plus faciles à résoudre. A
 le code est plus lisible et plus facile à comprendre. Pour cela, il est
 essentiel de choisir un nom de fonction qui explique ce qu'elle fait.
 
-### Exemple {num}`ex-py1-fct`
+### Exemple {num1}`exemple`
 
 ```{exec} python
 :editor:
@@ -104,7 +104,7 @@ de la fonction). Dans ce cours, l'appel de fonction se fera toujours avec le
 même nombre d'arguments (valeurs des paramètres) et le même ordre que les
 paramètres définis dans la fonction.
 
-### Exemple {num}`ex-py1-fct`
+### Exemple {num1}`exemple`
 
 ```{exec} python
 :editor:
@@ -145,7 +145,7 @@ est préférable de placer toutes les définitions de fonctions au début du
 programme juste après les imports.
 ```
 
-### Exercice {num}`exo-py1-fct`
+### Exercice {num1}`exercice`
 
 1. Définissez une fonction `calcule_et_affiche_perimetre_carre()`.
 2. Combien de paramètres sont-ils nécessaires?
@@ -180,7 +180,7 @@ calcule_et_affiche_perimetre_carre(base)
 ```
 ````
 
-### Exercice {num}`exo-py1-fct`
+### Exercice {num1}`exercice`
 
 Sans les exécutez, déterminer ce que vont afficher les programmes suivants.\
 Font-ils ce qui est demandé?\
@@ -300,7 +300,7 @@ S'il y a une erreur, expliquez et corrigez le problème.
     ```
 ````
 
-### Exercice {num}`exo-py1-fct`
+### Exercice {num1}`exercice`
 
 Complétez les programmes suivants uniquement où il y a des `...`:
 
@@ -343,7 +343,7 @@ Complétez les programmes suivants uniquement où il y a des `...`:
     calcule_et_affiche_perimetre_cercle(...)
     ```
 
-### Exercice {num}`exo-py1-fct`
+### Exercice {num1}`exercice`
 
 Sans l'exécutez, déterminez ce que va afficher le programme suivant. Ensuite,
 exécutez-le pour vérifier votre réponse.
@@ -367,7 +367,7 @@ mystery_2(y - 10)
 print(y)
 ```
 
-### Exercice {num}`exo-py1-fct`
+### Exercice {num1}`exercice`
 
 Sans l'exécutez, déterminez ce que va afficher le programme suivant. Ensuite,
 exécutez-le pour vérifier votre réponse.
@@ -406,7 +406,7 @@ pas possible d'utiliser la valeur calculée. Il faudrait pouvoir "récupérer" l
 valeur calculée. C'est ce que fait l'instruction `return` à la fin d'une
 fonction.
 
-### Exemple {num}`ex-py1-fct`
+### Exemple {num1}`exemple`
 
 Nous souhaitons calculer l'aire totale de la figure grisée, en utilisant
 s'inspirant de `calcule_et_affiche_aire_rectangle(largeur, longueur)`
@@ -428,7 +428,7 @@ aire_2 = calcule_aire_rectangle(1, 3)       # sauvegarder la valeur dans une var
 print("L'aire totale vaut", aire_1 + aire_2)
 ```
 
-### Exercice {num}`exo-py1-fct`
+### Exercice {num1}`exercice`
 
 Sans l'exécutez, déterminez ce que va afficher le programme suivant. Ensuite,
 exécutez-le pour vérifier votre réponse.
@@ -453,7 +453,7 @@ print(mystery_2(2 * y))
 print(y // 2)
 ```
 
-### Exercice {num}`exo-py1-fct`
+### Exercice {num1}`exercice`
 
 Complétez le programme ci-dessous. Nous avons défini une fonction `majeur` pour
 tester si une personne est majeur ou pas.
@@ -493,7 +493,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py1-fct`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui demande à l'utilisateur sa moyenne d'informatique tant
 qu'elle n'est pas valide. Définissez une fonction pour tester si la note est valide,
@@ -534,7 +534,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py1-fct`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui permet de résoudre des équations du deuxième degré. Ce
 programme doit afficher le nombre de solutions et les calculer.
@@ -574,7 +574,7 @@ else:
 ```
 ````
 
-### Exercice {num}`exo-py1-fct`
+### Exercice {num1}`exercice`
 
 Écrivez un programme qui simule le fonctionnement d'un bancomat.
 Vous devez créer 5 fonctions:

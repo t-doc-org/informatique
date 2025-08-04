@@ -11,7 +11,7 @@ détecter des erreurs. Lorsqu'une erreur est détectée, nous aimerions dans
 l'idéal la corriger. Mais la correction est une opération compliquée et elle
 n'est dans certains cas pas nécessaire.
 
-### Exemple {num}`ex-donnees`
+### Exemple {num1}`exemple`
 
 #### Carte de crédit
 
@@ -51,7 +51,7 @@ Nous allons voir deux procédés qui permettent de corriger des erreurs.
 
 Chaque bit est répété $n$ fois.
 
-#### Exemple {num}`ex-donnees`
+#### Exemple {num1}`exemple`
 
 $H(3, 1)$
 
@@ -81,7 +81,7 @@ $C_d = 2$ et $C_c = 1$
 Efficacité: u = 1 et m = 3\
 $\dfrac{u}{m} = \dfrac{1}{3} \cong 33.3 \%$
 
-#### Exercice {num}`exo-donnees`
+#### Exercice {num1}`exercice`
 
 En vous aidant de l'exemple précédent, effectuez la même analyse du code
 $H(3, 1)$ pour le message utile: 1.
@@ -124,7 +124,7 @@ Structure du code de Hamming $H(m, u)$:
 3.  Les bits de parité $p_i$ sont en position $2^i$, avec $i = 0, 1, 2, \dots$
 4.  Les bits du message $d_i$ occupent les autres places.
 
-#### Exemple {num}`ex-donnees`
+#### Exemple {num1}`exemple`
 
 $H(7, 4)$
 
@@ -242,7 +242,7 @@ $C_d = 2$ et $C_c = 1$
 Efficacité: u = 4 et m = 7\
 $\dfrac{u}{m} = \dfrac{4}{7} \cong 57.1 \%$
 
-#### Exercice {num}`exo-donnees`
+#### Exercice {num1}`exercice`
 
 On considère le code de Hamming $H(7, 4)$.
 Pour chacun des messages utiles suivants:
@@ -382,7 +382,7 @@ quiz.generator('hamming-decode', decode(3));
 | {quiz-ph}`msg` | {bit}`p1` | {bit}`p2` | {bit}`p3` | {input}`encoded` |
 ```
 
-#### Exercice {num}`exo-donnees`
+#### Exercice {num1}`exercice`
 
 On considère le code de Hamming $H(7, 4)$.
 Pour chacun des messages reçus suivants:

@@ -4,7 +4,7 @@
 
 # Listes Lab - Découverte
 
-## Exercice {num}`py2-lab2`
+## Exercice {nump}`exercice`
 
 Écrivez un programme qui calcule et afficher la moyenne de 5 notes qui seront
 demandées à l'utilisateur.
@@ -32,7 +32,7 @@ print(moyenne)
 ```
 ````
 
-## Exercice {num}`py2-lab2:exemple-liste`
+## Exercice {nump}`exercice:py2-lab2-exemple-liste`
 
 Répondez aux questions suivantes en lien avec le programme suivant:
 1.  Que fait `append(5.5)`?
@@ -53,10 +53,10 @@ del notes[3]
 print(notes)
 ```
 
-## Exercice {num}`py2-lab2`
+## Exercice {nump}`exercice`
 
 1.  Exécutez le code et vérifier les réponses de
-    l'{numref}`exercice %s<py2-lab2:exemple-liste>`.
+    l'{numref}`exercice %s<exercice:py2-lab2-exemple-liste>`.
 
     ```{exec} python
     :editor:
@@ -106,7 +106,7 @@ print(notes)
     6.  Pour créer une liste vide: `notes = []`
 ```
 
-## Exercice {num}`py2-lab2`
+## Exercice {nump}`exercice`
 
 Écrivez un programme qui demande à l'utilisateur d'entrer 10 notes qui seront
 stockées dans une liste.
@@ -134,7 +134,7 @@ print(notes)
 ```
 ````
 
-## Exercice {num}`py2-lab2:exemple-for`
+## Exercice {nump}`exercice:py2-lab2-exemple-for`
 
 Que va afficher ce programme?
 
@@ -146,10 +146,10 @@ for i in notes:
   print(i)
 ```
 
-## Exercice {num}`py2-lab2`
+## Exercice {nump}`exercice`
 
 1.  Exécutez le code et vérifier les réponses de
-    l'{numref}`exercice %s<py2-lab2:exemple-for>`.
+    l'{numref}`exercice %s<exercice:py2-lab2-exemple-for>`.
 
     ```{exec} python
     :editor:
@@ -181,7 +181,7 @@ for i in notes:
     ```
 ````
 
-## Exercice {num}`py2-lab2`
+## Exercice {nump}`exercice`
 
 Modifiez le programme suivant pour qu'il calcule et affiche la somme des notes
 quel que soit le nombre de notes ajoutées.
@@ -213,7 +213,7 @@ print(somme)
 ```
 ````
 
-## Exercice {num}`py2-lab2`
+## Exercice {nump}`exercice`
 
 Complétez le programme précédent pour qu'il:
 - demande à l'utilisateur le nombre de notes qu'il veut entrer,
@@ -262,7 +262,7 @@ print("Moyenne: ", moyenne)
 ```
 ````
 
-## Exercice {num}`py2-lab2`
+## Exercice {nump}`exercice`
 
 Pour améliorer le programme, créez une fonction `calcule_moyenne(notes)` qui:
 - prend en paramètre la liste des notes,

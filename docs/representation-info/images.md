@@ -40,7 +40,7 @@ Cette image a donc besoin de 8 octets (64 bits) pour être sauvegardée en
 mémoire, car nous avons 64 cases qui ont besoin chacune d'un bit pour définir
 le noir ou le blanc. Cette image a un poids de 8 octets.
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 1.  Quel est le poids de l'image ci-dessous?
 
@@ -66,7 +66,7 @@ le noir ou le blanc. Cette image a un poids de 8 octets.
     ```
 ````
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Représenter l'image en noir et blanc donnée par le code suivant:
 ```{figure} images/vide-noir-blanc-pixels.png
@@ -105,7 +105,7 @@ Cette image a un poids de $2 * 8 * 8 = 128$ bits qui est équivalent à 16 octet
 car nous avons 64 cases qui ont besoin chacune de 2 bits pour définir le gris.
 
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 1. Quel est le poids de l'image ci-dessous?
 
@@ -132,7 +132,7 @@ car nous avons 64 cases qui ont besoin chacune de 2 bits pour définir le gris.
     ```
 ````
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Représenter l'image en 4 niveaux de gris donnée par le code suivant:
 
@@ -241,7 +241,7 @@ Sur le site
 "[Liste des couleurs](https://www.rapidtables.com/web/color/RGB_Color.html)", il
 y a les références de toutes les couleurs possibles.
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Quel est le poids d'une image de 500 sur 300 pixels (1 pixel est équivalent à
 une case) codée...
@@ -263,7 +263,7 @@ une case) codée...
     ... en RGB? (en ko)
 ```
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Quel est le code décimal et hexadécimal d'un pixel...
 1. ... en noir?
@@ -280,7 +280,7 @@ Quel est le code décimal et hexadécimal d'un pixel...
 | 4. jaune   | (255, 255, 0)         | #FFFF00          |
 ```
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Quelle couleur est représentée par les codes RGB suivants?
 1. (100, 50, 200)

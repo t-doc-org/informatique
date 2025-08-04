@@ -39,7 +39,7 @@ Voici les unités standardisées depuis 1998:
 | Une clé USB | 8 Go à 256 Go |
 | Un disque dur | 500 Go à 7 To |
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 Associez à chaque type de fichier un ordre de grandeur de volume de stockage.
 
@@ -66,7 +66,7 @@ Associez à chaque type de fichier un ordre de grandeur de volume de stockage.
     Un document texte sans image ni formatage
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 ```{role} input(quiz-input)
 :right: width: 10rem;
@@ -86,7 +86,7 @@ Le **débit** d'une transmission de données est la vitesse à laquelle les donn
 sont transmises sur le réseau. Il est exprimé en kb/s (kilobits par seconde) ou
 Mb/s (Megabits par seconde).
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 ```{quiz}
 1.  {input}`180`

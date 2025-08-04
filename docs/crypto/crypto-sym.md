@@ -71,7 +71,7 @@ V   L   L   E   N   R
 
 **Clé de chiffrement:** le nombre de lignes.
 
-#### Exercice {num}`exo-crypto`
+#### Exercice {num1}`exercice`
 
 Un texte a été chiffré avec le procédé du Chiffre de Rail Fence avec comme
 clé de chiffrement 2.\
@@ -109,7 +109,7 @@ positions. C'est-à-dire que le a est remplacé par D, b par E, etc.
 
 **Clé de chiffrement:** décalage de trois positions.
 
-#### Exercice {num}`exo-crypto`
+#### Exercice {num1}`exercice`
 
 Coder le message suivant en utilisant le chiffre de César d'origine (décalage de
 trois positions):
@@ -123,7 +123,7 @@ l &rarr; O, a &rarr; D, c &rarr; F, ...
 <center>ODFUB SWRFH VWVBP SD</center>
 ````
 
-#### Exercice {num}`exo-crypto`
+#### Exercice {num1}`exercice`
 
 Déchiffrer le texte suivant chiffré en utilisant le Chiffre de César d'origine,
 c'est-à-dire avec comme clé de chiffrement un décalage de trois positions.
@@ -270,7 +270,7 @@ Sans devoir calculer le décalage, on peut utiliser le
   - I
 ```
 
-#### Exercice {num}`exo-crypto`
+#### Exercice {num1}`exercice`
 
 Déchiffrer le message suivant, chiffré avec le Chiffre de Vigenère, sachant que
 la clé de chiffrement est **informatique**:

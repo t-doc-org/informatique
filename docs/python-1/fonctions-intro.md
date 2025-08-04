@@ -64,7 +64,7 @@ def nord_ouest():
   deplace(-1, 1)
 ```
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 1. Essayez de comprendre le programme en comparant le programme et le résultat.
 2. Modifiez le programme pour que le roi suive les numéros.
@@ -103,7 +103,7 @@ est()
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 Écrivez le programme qui permet à la tour de prendre tous les pions noirs en un
 minimum de coups.
@@ -143,7 +143,7 @@ nord()
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 Le programme de l'exercice précédent contient des répétitions de suites
 d'instructions (nord() suivi de est()), mais il n'est pas possible d'utiliser
@@ -187,7 +187,7 @@ diagonale()
 ````
 
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 Pour avoir des pièces qui se déplacent vraiment en diagonale comme le roi,
 de nouvelles fonctions ont été définies.
@@ -231,7 +231,7 @@ nord_ouest()
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 Modifiez le programme pour que la tour suive les numéros.
 
@@ -269,7 +269,7 @@ for _ in range(2):
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 On constate qu'il y a beaucoup de répétitions malgré l'utilisation de boucles
 `for` et cela ne représente pas réellement le déplacement de la tour qui se
@@ -345,7 +345,7 @@ def ouest(n):
 ```
 
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 En utilisant les fonctions `nord(nb_cases)`, `sud(nb_cases)`, `est(nb_cases)` et
 `ouest(nb_cases)`, écrivez le programme pour que la tour prenne tous les pions
@@ -386,7 +386,7 @@ est(1)
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 La fonction `deplace(x, y)` a été définie.
 1. Essayez de comprendre le programme en comparant le programme et le résultat.
@@ -423,7 +423,7 @@ deplace(6, 6)
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 En utilisant la fonction `deplace(x, y)`, définissez une fonction
 `deplace_fou(direction, nb_cases)` où le premier paramètre est la direction du
@@ -493,7 +493,7 @@ def deplace_fou(direction, nb_cases):
     print("direction non valide")
 ```
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 En utilisant la fonction `deplace_fou(direction, nb_cases)` définie à l'exercice
 précédent, déplace le fou prendre le pion noir.
@@ -537,7 +537,7 @@ deplace_fou("se", 1)
 ````
 
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 En utilisant la fonction `deplace(x, y)`, définissez une fonction
 `deplace_roi`. Quels paramètres sont nécessaires?
@@ -598,7 +598,7 @@ deplace_roi("so")
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 En utilisant la fonction `deplace(x, y)`, définissez une fonction
 `deplace_cavalier` qui permet depuis le centre d'atteindre chacun des pions
@@ -702,7 +702,7 @@ def deplace_cavalier(direction):
 ```
 
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 En utilisant la fonction `deplace_cavalier(direction)` définie à l'exercice
 précédent, déplacez le cavalier pour prendre tous les pions noirs en un
@@ -748,7 +748,7 @@ deplace_cavalier("se")
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 En utilisant la fonction `deplace(x, y)`, définissez une fonction
 `deplace_dame`. Quels paramètres sont nécessaires?
@@ -831,7 +831,7 @@ def deplace_dame(direction, nb_cases):
     print("direction non valide")
 ```
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 En utilisant la fonction `deplace_dame(direction, nb_cases)` définie à
 l'exercice précédent, déplacez la dame pour prendre tous les pions noirs en un
@@ -889,7 +889,7 @@ deplace_dame("n", 3)
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 En utilisant la fonction `deplace_cavalier(direction)` définie à l'exercice
 précédent, déplacez le cavalier pour prendre tous les pions noirs en un minimum de coups.
@@ -945,7 +945,7 @@ deplace_cavalier("on")
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 En utilisant la fonction `deplace_cavalier(direction)` définie à l'exercice
 précédent, déplacez le cavalier pour prendre tous les pions noirs en un minimum de coups.
@@ -972,7 +972,7 @@ await render_check_and_take(board.piece(White.knight, 2, 2), moves)
 ```
 
 <!--
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 Écrivez un programme qui déplace la tour sur les cases indiquées, dans l'ordre.
 Évitez les répétitions.
@@ -1006,7 +1006,7 @@ for _ in range(3):
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 Écrivez un programme qui déplace la tour sur les cases indiquées, dans l'ordre.
 Évitez les répétitions.
@@ -1042,7 +1042,7 @@ for _ in range(3):
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 Écrivez un programme qui déplace le roi sur les cases indiquées, dans l'ordre.
 Évitez les répétitions.
@@ -1075,7 +1075,7 @@ for _ in range(4):
 ```
 ````
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 Écrivez un programme qui déplace le roi sur les cases indiquées, dans l'ordre.
 Évitez les répétitions.
@@ -1123,7 +1123,7 @@ Pour éviter les répétitions d'une suite d'instructions qui ne peuvent pas êt
 comme par exemple `aller_nord_est()`.
 ```
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 Une nouvelle fonction `aller_nord_est()` a été définie.
 1. Observez la construction de la définition d'une fonction. Comment définir une
@@ -1176,7 +1176,7 @@ for _ in range(3):
 ```` -->
 
 <!--
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 Écrivez une fonction `deplace_roi(direction)` qui déplace un roi dans la
 direction demandée. L'argument `direction` est une chaîne de caractère contenant
@@ -1222,7 +1222,7 @@ await render_and_check(
   [(0, 1), (1, -1), (0, -1), (-1, 0)])
 ```
 
-## Exercice {num}`exo-py1-intro-fct`
+## Exercice {nump}`exercice`
 
 Utilisez la fonction `deplace_roi()` pour déplacer le roi sur les cases
 indiquées, dans l'ordre. Évitez les répétitions.

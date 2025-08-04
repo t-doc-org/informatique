@@ -107,7 +107,7 @@ collège.
 Source: [https://apprendre.modulo-info.ch](https://apprendre.modulo-info.ch/resx/adressage.html)
 ```
 
-### Exercice {num}`exo-reseaux`
+### Exercice {num1}`exercice`
 
 À l'aide d'un navigateur web, allez sur le site [https://test-ipv6.com/index.html.fr_FR](https://test-ipv6.com/index.html.fr_FR) et déterminez votre propre adresse IP.
 
@@ -124,7 +124,7 @@ qu'avec la commande ipconfig, c'est l'adresse privée du sous-réseau qui est
 donnée.
 ```
 
-### Exercice {num}`exo-reseaux`
+### Exercice {num1}`exercice`
 
 Recherchez sur le web:
 
@@ -149,7 +149,7 @@ L'adresse IP du domaine [https://cscfr.ch](https://cscfr.ch) est 128.65.195.54
 
 ## Cables sous-marins
 
-### Exercice {num}`exo-reseaux`
+### Exercice {num1}`exercice`
 
 Répondez aux questions en lien avec la vidéo suivante:
 "[Du télégraphe à Internet: l'incroyable histoire des câbles sous-marins](https://www.nanoo.tv/link/v/2535386)"

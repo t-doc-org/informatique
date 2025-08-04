@@ -38,7 +38,7 @@ développée pour l'anglais. Ce code a été ensuite étendu à 8 bits pour pouv
 coder plus de caractères. Le problème est que le code ASCII étendu n'est pas
 identique dans tous les pays.
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
 
@@ -76,7 +76,7 @@ quiz.check('decode', args => {
 4.  {input}`?`  `;-)`
 ```
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Convertir le texte suivant écrit en code ASCII hexadécimal.
 
@@ -90,7 +90,7 @@ Convertir le texte suivant écrit en code ASCII hexadécimal.
   `4A 27 61 69 6D 65 20 6C 27 69 6E 66 6F 72 6D 61 74 69 71 75 65 21`
 ```
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Comment peut-on transformer un lettre majuscule en lettre minuscule et
 vice-versa en utilisant le code ASCII?
@@ -155,7 +155,7 @@ L'Unicode du caractère é est U+00E9 qui en binaire donne **1110 1001**
 |:----:|:----:|:----:|:----:|:----:|
 |<span style="color:red">0</span>1000100| <span style="color:red">11</span>0000**11** <span style="color:red">1</span>0**101001**| <span style="color:red">0</span>1100010| <span style="color:red">0</span>1110101| <span style="color:red">0</span>1110100|
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Pourquoi n'utilise-t-on pas toujours l'Unicode étant donné que nous pouvons
 coder tous les caractères pour chaque langue?
@@ -165,7 +165,7 @@ Nous n'utilisons pas toujours l'Unicode, parce qu'il prend beaucoup de place de
 stockage : 3 octets par caractère. C'est le triple par rapport au code ASCII.
 ```
 
-## Exercice {num}`exo-info`
+## Exercice {num1}`exercice`
 
 Quels sont les avantages et les inconvénients des différents encodages?
 

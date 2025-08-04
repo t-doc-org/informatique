@@ -7,7 +7,7 @@ Il est possible de savoir si un élément appartient à une liste en utilisant
 l'expression suivante `element in liste` qui revoie `True` si `element` est dans
 `liste` et `False` sinon.
 
-## Exemple {num}`ex-py2`
+## Exemple {num1}`exemple`
 
 ```{exec} python
 :editor:
@@ -21,7 +21,7 @@ else:
     print(note, "n'est pas dans la liste")
 ```
 
-## Exercice {num}`exo-py2`
+## Exercice {num1}`exercice`
 
 Le programme ci-dessous demande à l'utilisateur quel moyen de locomotion il
 utilise pour se rendre au travail et affiche un message en conséquence.
@@ -67,7 +67,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py2`
+## Exercice {num1}`exercice`
 
 Depuis la station de métro où l'utilisateur se trouve, il peut se rendre aux
 arrêts qui se trouvent dans la liste `ligne_sud` et `ligne_nord`. Lorsque
@@ -105,7 +105,7 @@ else:
 ```
 ````
 
-## Exercice {num}`exo-py2`
+## Exercice {num1}`exercice`
 
 Complétez le programme ci-dessous afin que l'utilisateur puisse petit à petit
 créer une liste avec les codes postaux dans lesquels il souhaite se rendre.

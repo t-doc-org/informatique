@@ -20,7 +20,7 @@ Lors de ces opérations, il peut y avoir des erreurs.
 
 ## Erreurs de transmission
 
-### Exemple {num}`ex-donnees`
+### Exemple {num1}`exemple`
 
 Alice et Bob s'envoient des messages via Bluetooth. Ils se trouvent à une dizaine
 de mettre l'un de l'autre, la connexion n'est donc pas bonne et le message
@@ -55,7 +55,7 @@ de pouvoir garantir l'intégrité des données et donc de **détecter** et
 2.  Il faut ajouter ou répéter des informations, c'est-à-dire de la
     **redondance**.
 
-### Exemple {num}`ex-donnees`
+### Exemple {num1}`exemple`
 
 ```{iframe} https://docs.google.com/presentation/d/e/2PACX-1vQEemAMuCYvYvdxAJVRJBFD5NU8NQzasRyRpNau10iIVNGCpZSRgw_5dYTUd8EDhE8YyB_6v8b_2F37/embed?start=false&loop=false&delayms=3000
 ```
@@ -97,7 +97,7 @@ Transmission correcte
   message utile &#8658; message codé &#8658; transmission (avec erreurs) &#8658;
   message reçu &#8658; message décodé
 
-### Exemple {num}`ex-donnees`
+### Exemple {num1}`exemple`
 
 L'alphabet IRSA (International Radiotelephony Spelling Alphabet) utilise des
 mots pour représenter des lettres:
@@ -137,7 +137,7 @@ et avec une très haute probabilité que le message reçu est correct.
 Le bit de parité est un exemple de somme de contrôle.\
 Critère: il doit toujours y avoir un nombre pair de bits 1.
 
-### Exemple {num}`ex-donnees`
+### Exemple {num1}`exemple`
 
 On veut transmettre un message utile de 4 bits $B(5, 4)$.\
 $u$ = 4 bits, $c$ = 1 bit et donc $m = u + c = 4 + 1 = 5$ bits.
@@ -157,7 +157,7 @@ $$C_d = 1$$
 Efficacité:\
 $$\dfrac{u}{m} = \dfrac{4}{5} = 80 \%$$
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 On utilise un code $B(5, 4)$ où on ajoute à un message utile de 4 bits et 1 bit
 de parité. La somme doit être paire.
@@ -230,7 +230,7 @@ quiz.generator('parity-encode', encode(4, 9, 0));
 | {quiz-ph}`msg` | {oui-non}`correct` |
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 On utilise différents codes $B(n + 1, n)$ où on ajoute à un message utile de
 $n$ bits et 1 bit de parité. La somme doit être paire.
@@ -243,7 +243,7 @@ Les messages suivants sont-ils corrects?
 | {quiz-ph}`msg` | {oui-non}`correct` |
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 On utilise différents codes $B(n + 1, n)$ où on ajoute à un message utile de
 $n$ bits et 1 bit de parité. La somme doit être paire.
@@ -260,7 +260,7 @@ Encodez les messages suivants.
 | {quiz-ph}`msg` | {input}`encoded` |
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 On considère le code $B(5, 4)$.
 
@@ -297,7 +297,7 @@ On considère le code $B(5, 4)$.
     Quelle est la capacité de détection $C_d$ de $B(5, 4)$?
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 On ajoute à un message utile de $n$ chiffres un chiffre de contrôle pour que la
 somme soit un multiple de 10. Pour chacun des messages suivants, indiquez la
@@ -402,7 +402,7 @@ quiz.generator('sum-luhn-encode', encode(luhnSum, 4, 9));
 | {quiz-ph}`msg` | {input}`sum` | {oui-non}`correct` |
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 Sachant que le critère pour la somme de contrôle est que la somme doit être un
 multiple de 10, encodez les messages suivants.
@@ -417,7 +417,7 @@ multiple de 10, encodez les messages suivants.
 | {quiz-ph}`msg` | {input}`encoded` |
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 La technique de la somme de contrôle permet-elle de détecter:
 
@@ -446,7 +446,7 @@ contrôle n'est jamais doublé.
 Cet algorithme est notamment utilisé pour valider les numéros de carte de
 crédit.
 
-### Exemple {num}`ex-donnees`
+### Exemple {num1}`exemple`
 
 Exemples de décodage
 
@@ -455,7 +455,7 @@ Exemples de décodage
 | 123789       | <b>2</b>2<b>6</b>7<b>16</b>9 | 2 + 2 + 6 + 7 + 1 + 6 + 9 = 33 | non |
 | 67892        | 6<b>14</b>8<b>18</b>2 | 6 + 1 + 4 + 8 + 1 + 8 + 2 = 30 | oui |
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 Calculez la somme selon l'algorithme de Luhn des messages suivants et déterminez
 si le message est correct.
@@ -470,7 +470,7 @@ si le message est correct.
 | {quiz-ph}`msg` | {input}`sum` | {oui-non}`correct` |
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 En utilisant l'algorithme de Luhn, encodez les messages suivants.
 
@@ -484,7 +484,7 @@ En utilisant l'algorithme de Luhn, encodez les messages suivants.
 | {quiz-ph}`msg` | {input}`encoded` |
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 L'algorithme de Luhn permet-il de détecter:
 
@@ -501,7 +501,7 @@ L'algorithme de Luhn permet-il de détecter:
     vaut $1 + 4 + 4 + 2 + 3 = 14$ &#8658; faux
 ```
 
-### Exercice {num}`exo-donnees`
+### Exercice {num1}`exercice`
 
 Les cartes de crédit suivantes sont-elles valides?
 

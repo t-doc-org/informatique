@@ -86,10 +86,10 @@ create table client (
 );
 ```
 
-## Exercice {num}`exo-bd`
+## Exercice {num1}`exercice`
 
-Recréer la table `produit` des exercices {numref}`exo-bd:produit-create` et
-{numref}`exo-bd:produit-insert` en y ajoutant la clé primaire.
+Recréer la table `produit` des exercices {numref}`exercice:produit-create` et
+{numref}`exercice:produit-insert` en y ajoutant la clé primaire.
 
 ```{exec} sql
 :then: sql-produit-select
@@ -121,7 +121,7 @@ insert into produit values
 ```
 ````
 
-## Exercice {num}`exo-bd`
+## Exercice {num1}`exercice`
 
 Que se passe-t-il si on ajoute une ligne qui ne contient pas de valeur pour la
 clé primaire? Tester avec l'exemple ci-dessous.
@@ -131,7 +131,7 @@ clé primaire? Tester avec l'exemple ci-dessous.
 insert into produit (nom, description, prix) values ('Fado', 'Lampe de table', 20);
 ```
 
-## Exercice {num}`exo-bd`
+## Exercice {num1}`exercice`
 
 Créer et compléter la table `client` ci-dessous, sachant que `no_c` est un
 entier et la clé primaire, `titre`, `prenom` et `nom` sont des chaînes de
@@ -168,7 +168,7 @@ insert into client values
 ```
 ````
 
-## Exercice {num}`exo-bd`
+## Exercice {num1}`exercice`
 
 Créer la table `achat` et la compléter avec les achats effectués par les
 clients. La clé primaire est composée des deux colonnes `no_p` et `no_c`.
@@ -262,7 +262,7 @@ select nom from produit        -- sélectionne la colonne nom de la table produi
   where no_c=3;                -- critère de sélection
 ```
 
-## Exercice {num}`exo-bd`
+## Exercice {num1}`exercice`
 
 Écrire la requête SQL qui retourne le(s) nom(s) du (des) produits acheté(s) par
 le client n°1.
@@ -281,7 +281,7 @@ select nom from produit
 ```
 ````
 
-## Exercice {num}`exo-bd`
+## Exercice {num1}`exercice`
 
 Écrire la requête SQL qui retourne le titre, le prénom et le nom des clients
 ayant acheté le produit Ektorp.\
@@ -302,7 +302,7 @@ select client.titre, client.prenom, client.nom from client
 ```
 ````
 
-## Exercice {num}`exo-bd`
+## Exercice {num1}`exercice`
 
 Utiliser des jointures pour retourner la table ci-dessous (triée selon les
 prénoms):

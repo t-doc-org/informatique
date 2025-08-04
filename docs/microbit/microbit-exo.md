@@ -15,7 +15,7 @@ from microbit import *
 display.clear()
 ```
 
-## Exercice {num}`exo-microbit`
+## Exercice {num1}`exercice`
 
 1.  Écrivez un programme qui affiche un décompte: 9, 8, ... et lorsque le
     compteur est arrivé à 0, affichez "BOOM" suivi de l'image d'un crâne.
@@ -53,7 +53,7 @@ music.play(music.POWER_DOWN)
 ```
 ````
 
-## Exercice {num}`exo-microbit`
+## Exercice {num1}`exercice`
 
 1.  Écrivez un programme qui simule un lancer de dé, c'est-à-dire que lorsque
     vous secouez le micro:bit, un nombre aléatoire entre 1 et 6 doit s'afficher.
@@ -108,7 +108,7 @@ from microbit import *
     ```
 ````
 
-## Exercice {num}`exo-microbit`
+## Exercice {num1}`exercice`
 
 Écrivez un programme qui:
 
@@ -152,7 +152,7 @@ while True:
 ```
 ````
 
-## Exercice {num}`exo-microbit`
+## Exercice {num1}`exercice`
 
 Écrivez un programme qui mesure votre temps de réaction en secondes.
 

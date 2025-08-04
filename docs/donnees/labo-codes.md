@@ -15,7 +15,7 @@ Un code binaire a été défini pour coder des messages:
 | <b>10</b>  | un hamburger  | un texte  | un programme | un roman |
 | <b>11</b>  | végétarien  | anglais  | compliqué | épique |
 
-### Exemple {num}`exo-labo-codes`
+### Exemple {nump}`exemple`
 
 | Mathilde | prépare | un roman | anglais |
 | :------: | :--: | :------: | :-----: |
@@ -24,7 +24,7 @@ Un code binaire a été défini pour coder des messages:
 
 ## Bit de parité
 
-### Exercice {num}`ex-labo-codes`
+### Exercice {nump}`exercice`
 
 En utilisant les fiches transmises par l'enseignant.e:
 
@@ -35,7 +35,7 @@ En utilisant les fiches transmises par l'enseignant.e:
 
 Document pour l'enseignant.e: [`Fiche de l'élève pour la parité`](fiche-parite.pdf)
 
-### Exercice {num}`ex-labo-codes`
+### Exercice {nump}`exercice`
 
 Vous allez recevoir un message codé:
 1.  Contrôlez que le message est correct en vérifiant la parité.
@@ -45,7 +45,7 @@ Vous allez recevoir un message codé:
 
 ## Code de Hamming
 
-### Exercice {num}`ex-labo-codes`
+### Exercice {nump}`exercice`
 
 En utilisant les fiches transmises par l'enseignant.e:
 
@@ -56,7 +56,7 @@ En utilisant les fiches transmises par l'enseignant.e:
 
 Document pour l'enseignant.e: [`Fiche de l'élève pour Hamming`](fiche-hamming.pdf)
 
-### Exercice {num}`ex-labo-codes`
+### Exercice {nump}`exercice`
 
 Vous allez recevoir un message codé.
 

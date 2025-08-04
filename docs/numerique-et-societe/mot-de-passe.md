@@ -32,7 +32,7 @@ Attaque par force brute
 Force d'un mot de passe
 : Capacité à résister à une attaque par force brute.
 
-### Exercice {num}`exo-num`
+### Exercice {num1}`exercice`
 
 De quoi dépend la force d'un mot de passe?
 
@@ -41,7 +41,7 @@ La force d'un mot de passe dépend de la longueur du mot de passe et du nombre d
 caractères possibles (minuscules, majuscules, chiffres, etc.).
 ```
 
-### Exercice {num}`exo-num`
+### Exercice {num1}`exercice`
 
 Les 3 symboles suivants sont à disposition pour générer un mot de passe:
 &#9733; &#9728; et &#9729;
@@ -139,7 +139,7 @@ qui réduit fortement les risques de piratage.
 -   Utiliser la double authentification lorsque c'est possible.
 -   Ne jamais transmettre son mot de passe.
 
-### Exercice {num}`exo-num`
+### Exercice {num1}`exercice`
 
 Hubert possède un compte sur le site marchand boulatique.com. La base de données
 du site a été piratée. Les données concernant Hubert qui ont fuité sont:

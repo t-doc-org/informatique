@@ -10,7 +10,7 @@ solutions: dynamic
 Un  réseau informatique est un ensemble de machines reliées entre elles qui
 peuvent communiquer.
 
-## Exercice {num}`exo-reseaux`
+## Exercice {num1}`exercice`
 
 Vous voulez transmettre des données de votre ordinateur, par exemple un fichier
 mp3, à l'ordinateur d'un camarade.
@@ -26,7 +26,7 @@ On peut utiliser:
 - un réseau en connectant les deux ordinateurs sur le même réseau.
 ```
 
-## Exercice {num}`exo-reseaux`
+## Exercice {num1}`exercice`
 
 Quels sont les différents supports qui permettent de transférer des données
 dans un réseau?

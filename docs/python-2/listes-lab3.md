@@ -26,7 +26,7 @@ mots_de_passe = ["mdp1", "mdp2", "mpd3"]
 # Programme principal
 ```
 
-## Exercice {num}`py2-lab3`
+## Exercice {nump}`exercice`
 
 Complétez le programme ci-dessus qui a pour but d'enregistrer de nouveaux
 utilisateurs sur un site ou une application.
@@ -80,7 +80,7 @@ else:
 ```
 ````
 
-## Exercice {num}`py2-lab3`
+## Exercice {nump}`exercice`
 
 Sauvegardez cette fonctionnalité dans la fonction `cree_utilisateur()` qui va se
 charger d'ajouter un nouvel utilisateur avec son mot de passe.
@@ -114,7 +114,7 @@ cree_utilisateur()
 ```
 ````
 
-## Exercice {num}`py2-lab3`
+## Exercice {nump}`exercice`
 
 Complétez le programme précédent qui a pour but de vérifier l'accès à un site
 ou à une application via l'utilisation d'un nom d'utilisateur et d'un mot de
@@ -198,7 +198,7 @@ else:
 ```
 ````
 
-## Exercice {num}`py2-lab3`
+## Exercice {nump}`exercice`
 
 Sauvegardez cette fonctionnalité dans la fonction `identification()` qui va
 simuler l'identification d'un utilisateur.
@@ -246,11 +246,10 @@ mots_de_passe = ["mdp1", "mdp2", "mpd3"]
 
 cree_utilisateur()
 identification()
-
 ```
 ````
 
-## Exercice {num}`py2-lab3`
+## Exercice {nump}`exercice`
 
 Complétez le programme précédent pour pouvoir choisir entre trois options:
 
@@ -269,7 +268,6 @@ choix à la suite.
 Pour quitter, utiliser l'instruction `break` qui permet de sortir de la boucle
 infinie et continuer le programme.
 ```
-
 
 ````{solution}
 ```{exec} python
@@ -330,8 +328,7 @@ print("Au revoir!")
 ```
 ````
 
-
-## Exercice {num}`py2-lab3`
+## Exercice {nump}`exercice`
 
 Complétez le programme précédent pour que lorsque l'utilisateur quitte le
 programme la liste de tous les utilisateurs du système avec leur mot de passe
@@ -410,4 +407,3 @@ for i in range(len(utilisateurs)):
     print("Nom d'utilisateur:", utilisateurs[i], "Mot de passe:", mots_de_passe[i])
 ```
 ````
-
