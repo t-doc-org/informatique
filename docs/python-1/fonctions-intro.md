@@ -281,7 +281,7 @@ fonction.
 
 1. Définissez de la même manière les autres fonctions `aller_est`, `aller_ouest`
   et `aller_sud`.
-2. Résolvez l'exercice précédent en appeler les fonctions.
+2. Résolvez l'exercice précédent en appelant les fonctions.
 
 ```{exec} python
 :after: py-chess py-deplacements
@@ -390,7 +390,7 @@ est(1)
 
 La fonction `deplace(x, y)` a été définie.
 1. Essayez de comprendre le programme en comparant le programme et le résultat.
-2. Modifiez le programme pour que le roi suive les numéros.
+2. Modifiez le programme pour que la dame suive les numéros.
 
 
 ```{exec} python
@@ -435,12 +435,21 @@ mouvement ("ne", "se", "so" ou "no") et le deuxième est le nombre de cases.
 :then: py-fou-1-check
 :when: load
 :editor: 3177f22c-18e0-4fb0-9de3-1b1e61e9c543
+# remplacez les ... par la bonne direction
 def deplace_fou(direction, nb_cases):
-  # Complétez la définition de la fonction
-  pass
+  if direction == "ne":
+    deplace(nb_cases, nb_cases)
+  elif direction == "...":
+    deplace(nb_cases, -nb_cases)
+  elif direction == "...":
+    deplace(-nb_cases, nb_cases)
+  elif direction == "...":
+    deplace(-nb_cases, -nb_cases)
+  else:
+    print("direction non valide")
 
-# programme principale qui déplace le fou en suivant les numéros
-deplace_fou("no", 2)
+# complétez le programme principal qui déplace le fou en suivant les numéros
+deplace_fou("ne", 5)
 
 ```
 
@@ -496,7 +505,8 @@ def deplace_fou(direction, nb_cases):
 ## Exercice {num}`exo-py1-intro-fct`
 
 En utilisant la fonction `deplace_fou(direction, nb_cases)` définie à l'exercice
-précédent, déplace le fou prendre le pion noir.
+précédent, déplace le fou pour qu'il prenne le pion noir en évitant les cases
+avec un pion blanc.
 
 
 ```{exec} python
@@ -540,7 +550,8 @@ deplace_fou("se", 1)
 ## Exercice {num}`exo-py1-intro-fct`
 
 En utilisant la fonction `deplace(x, y)`, définissez une fonction
-`deplace_roi`. Quels paramètres sont nécessaires?
+`deplace_roi`. Le roi se déplaçant toujours d'une seule case, un seul paramètre,
+la direction, est nécessaire.
 
 
 ```{exec} python
@@ -548,9 +559,28 @@ En utilisant la fonction `deplace(x, y)`, définissez une fonction
 :then: py-roi-4-check
 :when: load
 :editor: 8b17e107-454d-48ec-a45e-a626527baa8a
-# Écrivez le programme ici
+# Complétez la fonction
+def deplace_roi(...):
+  if direction == "n":
+    deplace(0, 1)
+  elif direction == "s":
+    ...
+  elif direction == "e":
+    ...
+  elif direction == "o":
+    ...
+  elif direction == "ne":
+    ...
+  elif direction == "se":
+    ...
+  elif direction == "no":
+    ...
+  elif direction == "so":
+    ...
+  else:
+    print("direction non valide")
 
-
+# complétez le programme principal qui déplace le roi en suivant les numéros
 ```
 
 ```{exec} python
@@ -835,7 +865,7 @@ def deplace_dame(direction, nb_cases):
 
 En utilisant la fonction `deplace_dame(direction, nb_cases)` définie à
 l'exercice précédent, déplacez la dame pour prendre tous les pions noirs en un
-minimum de coups.
+minimum de coups en évitant les cases avec les pièces blanches.
 
 ```{exec} python
 :after: py-chess py-deplacements-dame
