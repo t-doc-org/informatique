@@ -505,22 +505,19 @@ L'algorithme de Luhn permet-il de détecter:
 
 Les cartes de crédit suivantes sont-elles valides?
 
-<table><tr><td>
-
-```{figure} images/carte1.png
-:alt: Carte de crédit 1
-:width: 80%
-:align: center
-```
-
-</td><td>
-
-```{figure} images/carte2.png
-:alt: Carte de crédit 2
-:width: 80%
-:align: center
-```
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- ```{figure} images/carte1.png
+  :alt: Carte de crédit 1
+  :width: 90%
+  :align: center
+  ```
+- ```{figure} images/carte2.png
+  :alt: Carte de crédit 2
+  :width: 90%
+  :align: center
+  ```
+````
 
 ```{solution}
 1.  Numéro de carte: 4703 1234 5678 9991\

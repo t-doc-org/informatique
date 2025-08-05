@@ -16,45 +16,35 @@ lire.
 
 ## Exemples
 
-<table><tr><td style="width:50%" valign="top">
-
 ### Tatouage sur le crâne
 
-L'historien grec Hérodote, raconte qu'au V{sup}`e` siècle avant Jésus-Christ,
-un certain Histiée rasa le crâne d'un de ses esclaves, y tatoua le message et
-attendit que les cheveux repoussent. Ensuite, il envoya l'esclave à Aristagoras,
-son gendre, avec la consigne de lui raser la tête.
-
-</td><td>
-
-```{figure} images/crane.jpg
-:alt: Écriture sur le crâne
-:align: center
-
-source: hareenlaks.blogspot.com
-```
-
-</td></tr></table>
-
-<table><tr><td style="width:50%" valign="top">
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- L'historien grec Hérodote, raconte qu'au V{sup}`e` siècle avant Jésus-Christ,
+  un certain Histiée rasa le crâne d'un de ses esclaves, y tatoua le message et
+  attendit que les cheveux repoussent. Ensuite, il envoya l'esclave à
+  Aristagoras, son gendre, avec la consigne de lui raser la tête.
+- ```{figure} images/crane.jpg
+  :alt: Écriture sur le crâne
+  :align: center
+  source: hareenlaks.blogspot.com
+  ```
+````
 
 ### Tablette de cire
 
-Toujours selon Hérodote, un certain Démarate, pour informer discrètement les
-Spartiates de l'attaque imminente des Perses, prit des tablettes, en racla la
-cire et grava le message secret sur le bois, puis il recouvrit le bois de cire.
-Ainsi les tablettes semblent vierges et n'attirent pas l'attention.
-
-</td><td>
-
-```{figure} images/tablette.jpg
-:alt: Tablette de cire
-:align: center
-
-photo: Peter van der Sluijs
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- Toujours selon Hérodote, un certain Démarate, pour informer discrètement les
+  Spartiates de l'attaque imminente des Perses, prit des tablettes, en racla la
+  cire et grava le message secret sur le bois, puis il recouvrit le bois de
+  cire. Ainsi les tablettes semblent vierges et n'attirent pas l'attention.
+- ```{figure} images/tablette.jpg
+  :alt: Tablette de cire
+  :width: 90%
+  photo: Peter van der Sluijs
+  ```
+````
 
 ### Boule de cire
 

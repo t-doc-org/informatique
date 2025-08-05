@@ -25,26 +25,21 @@ d'origine.
 
 ### Scytale
 
-<table><tr style="vertical-align: top"><td>
+````{list-grid}
+:style: grid-template-columns: 9fr 4fr;
+- Ce procédé était déjà utilisé pendant l'Antiquité par les Spartes. La scytale
+  est un morceau de bois autour duquel est entouré une bande de cuir ou de
+  parchemin. L'expéditeur écrit son message et déroule la bande qui est une
+  suite de lettre sans signification. Le messager amène cette bande, en générale
+  portée comme ceinture, au destinataire qui enroulera cette bande sur son bâton
+  de même diamètre pour lire le message en clair.
 
-Ce procédé était déjà utilisé pendant l'Antiquité par les Spartes. La scytale
-est un morceau de bois autour duquel est entouré une bande de cuir ou de
-parchemin. L'expéditeur écrit son message et déroule la bande qui est une suite
-de lettre sans signification. Le messager amène cette bande, en générale portée
-comme ceinture, au destinataire qui enroulera cette bande sur son bâton de même
-diamètre pour lire le message en clair.
-
-**Clé de chiffrement:** la largeur du bâton.
-
-</td><td>
-
-```{figure} images/scytale.jpg
-:alt: Scytale
-:width: 1000px
-source: [apprendre en ligne](https://www.apprendre-en-ligne.net/crypto/index-crypto-transpo.html)
-```
-
-</td></tr></table>
+  **Clé de chiffrement:** la largeur du bâton.
+- ```{figure} images/scytale.jpg
+  :alt: Scytale
+  source: [apprendre en ligne](https://www.apprendre-en-ligne.net/crypto/index-crypto-transpo.html)
+  ```
+````
 
 ### Chiffre Rail Fence
 

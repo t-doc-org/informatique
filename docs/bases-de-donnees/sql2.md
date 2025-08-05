@@ -11,65 +11,61 @@ l'attribut `primary key` en plus de `not null`. Ainsi, il sera impossible
 d'insérer une ligne dans la table si la valeur de `no_c` existe déjà dans
 celle-ci ou si elle est `null`.
 
-<table><tr style="vertical-align: top"><td>
+````{list-grid}
+:style: grid-template-columns: 3fr 7fr;
+- ```{graphviz}
+  :align: center
+  digraph UML_Class_diagram {
+    graph [
+      labelloc="t"
+      fontname="Helvetica,Arial,sans-serif"
+      fontsize="20pt"
+      layout="circo"
+    ]
+    node [
+      fontname="Helvetica,Arial,sans-serif"
+      shape=record
+      style=filled
+      fillcolor=gray95
+    ]
 
-```{graphviz}
-:align: center
-digraph UML_Class_diagram {
-  graph [
-    labelloc="t"
-    fontname="Helvetica,Arial,sans-serif"
-    fontsize="20pt"
-    layout="circo"
-  ]
-  node [
-    fontname="Helvetica,Arial,sans-serif"
-    shape=record
-    style=filled
-    fillcolor=gray95
-  ]
+    Class1 [
+      shape=plain
+      label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr><td><b>client</b></td></tr>
+        <tr><td>
+          <table border="0" cellborder="0" cellspacing="7">
+            <tr><td align="left"><u>no_c</u> (clé primaire)</td></tr>
+            <tr><td align="left" >nom</td></tr>
+            <tr><td align="left" >prenom</td></tr>
+            <tr><td align="left" >adresse</td></tr>
+            <tr><td align="left" >telephone</td></tr>
+            <tr><td align="left" >mail</td></tr>
+          </table>
+        </td></tr>
+      </table>>
+    ]
+  }
+  ```
+- ```{exec} sql
+  :then: sql-client-select
+  create table client (
+    no_c int not null primary key,  -- Ajouter aussi not null
+    nom text not null,
+    prenom text not null,
+    adresse text,
+    telephone text,
+    mail text
+  );
+  ```
 
-  Class1 [
-    shape=plain
-    label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-      <tr><td><b>client</b></td></tr>
-      <tr><td>
-        <table border="0" cellborder="0" cellspacing="7">
-          <tr><td align="left"><u>no_c</u> (clé primaire)</td></tr>
-          <tr><td align="left" >nom</td></tr>
-          <tr><td align="left" >prenom</td></tr>
-          <tr><td align="left" >adresse</td></tr>
-          <tr><td align="left" >telephone</td></tr>
-          <tr><td align="left" >mail</td></tr>
-        </table>
-      </td></tr>
-    </table>>
-  ]
-}
-```
-
-</td><td style="width: 70%">
-
-```{exec} sql
-:then: sql-client-select
-create table client (
-  no_c int not null primary key,  -- Ajouter aussi not null
-  nom text not null,
-  prenom text not null,
-  adresse text,
-  telephone text,
-  mail text
-);
-```
-
-```{exec} sql
-:name: sql-client-select
-:when: never
-:class: hidden
-select * from client;
-```
-
-</td></tr></table>
+  ```{exec} sql
+  :name: sql-client-select
+  :when: never
+  :class: hidden
+  select * from client;
+  ```
+````
 
 Si une clé primaire est définie au moyen de deux colonnes (par exemple, le nom
 et le mail), nous utilisons la notation suivante:

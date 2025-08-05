@@ -405,57 +405,51 @@ Voici trois programmes:
 2. Que vont-ils afficher?
 3. Faites un ordinogramme pour chacun.
 
-<table style="width: 100%"><tr style="text-align: center">
-  <th>Programme 1</th><th>Programme 2</th><th>Programme 3</th>
-</tr><tr style="vertical-align: top"><td>
-
-```{exec} python
-:linenos:
-x = -1
-if x < 0:
-  x = x + 5
-elif x < 5:
-  x = x * 3
-elif x < 10:
-  x = x - 6
-else:
-  x = 1000
-print(x)
-```
-
-</td><td style="padding-left: 1rem">
-
-```{exec} python
-:linenos:
-x = -1
-if x < 0:
-  x = x + 5
-if x < 5:
-  x = x * 3
-if x < 10:
-  x = x - 6
-else:
-  x = 1000
-print(x)
-```
-
-</td><td style="padding-left: 1rem">
-
-```{exec} python
-:linenos:
-x = -1
-if x < 0:
-  x = x + 5
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr 1fr;
+- # Programme 1
+  ```{exec} python
+  :linenos:
+  x = -1
+  if x < 0:
+    x = x + 5
+  elif x < 5:
+    x = x * 3
+  elif x < 10:
+    x = x - 6
+  else:
+    x = 1000
+  print(x)
+  ```
+- # Programme 2
+  ```{exec} python
+  :linenos:
+  x = -1
+  if x < 0:
+    x = x + 5
   if x < 5:
     x = x * 3
-    if x < 10:
-      x = x - 6
-else:
-  x = 1000
-print(x)
-```
-
-</td></tr></table>
+  if x < 10:
+    x = x - 6
+  else:
+    x = 1000
+  print(x)
+  ```
+- # Programme 3
+  ```{exec} python
+  :linenos:
+  x = -1
+  if x < 0:
+    x = x + 5
+    if x < 5:
+      x = x * 3
+      if x < 10:
+        x = x - 6
+  else:
+    x = 1000
+  print(x)
+  ```
+````
 
 ### Exercice {num1}`exercice`
 

@@ -78,30 +78,20 @@ dérober de l'argent.
 
 ### Exemple {num1}`exemple`
 
-<table><tr><td>
-
-```{figure} images/phishing1.png
-:alt: Exemple de phishing
-:width: 100%
-:align: center
-```
-
-</td><td>
-
-```{figure} images/phishing2.png
-:alt: Exemple de phishing (zoom)
-:width: 95%
-:align: center
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- ```{figure} images/phishing1.png
+  :alt: Exemple de phishing
+  ```
+- ```{figure} images/phishing2.png
+  :alt: Exemple de phishing (zoom)
+  ```
+````
 
 ````{admonition} Drôle de phénomène
 :class: dropdown
 ```{figure} images/bd.png
 :alt: Drôle de phénomène
-:width: 100%
-:align: center
 ```
 ````
 

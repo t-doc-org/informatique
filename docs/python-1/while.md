@@ -16,53 +16,44 @@ while condition:
   ...
 ```
 
-<table><tr style="text-align: center">
-  <th style="width: 50%">Programme</th><th>Ordinogramme</th>
-</tr><tr style="vertical-align: top"><td>
-
-```{exec} python
-:editor:
-nb_points = 0
-max = 10
-while nb_points < max:
-  print("Points:", nb_points)
-  nb_points += 3
-print("Bravo!")
-```
-
-</td><td>
-
-```{figure} images/while.png
-:alt: Ordinogramme boucle for
-:align: center
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Programme
+  ```{exec} python
+  :editor:
+  nb_points = 0
+  max = 10
+  while nb_points < max:
+    print("Points:", nb_points)
+    nb_points += 3
+  print("Bravo!")
+  ```
+- # Ordinogramme
+  ```{figure} images/while.png
+  :alt: Ordinogramme boucle for
+  ```
+````
 
 La boucle `while` peut être utilisée comme une boucle `for`. Pour cela, il faut
 définir un compteur qui va "compter" le nombre de répétitions.
 
-<table style="width: 100%"><tr style="text-align: center">
-  <th style="width: 50%">Boucle for</th><th>Boucle while</th>
-</tr><tr style="vertical-align: top"><td>
-
-```{exec} python
-:editor:
-for _ in range(10):
-  print("Hello")
-```
-
-</td><td style="padding-left: 1rem">
-
-```{exec} python
-:editor:
-compteur = 0
-while compteur < 10:
-  print("Hello")
-  compteur += 1
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Boucle for
+  ```{exec} python
+  :editor:
+  for _ in range(10):
+    print("Hello")
+  ```
+- # Boucle while
+  ```{exec} python
+  :editor:
+  compteur = 0
+  while compteur < 10:
+    print("Hello")
+    compteur += 1
+  ```
+````
 
 ```{important}
 Il ne faut pas oublier d'incrémenter (augmenter) le compteur à chaque passage
@@ -285,29 +276,25 @@ print("Bravo!")
 Tout d'abord, sans les exécuter, expliquez la différence entre les deux
 programmes. Ensuite, testez-les pour vérifier votre réponse.
 
-<table style="width: 100%"><tr style="text-align: center">
-  <th style="width: 50%">Programme 1</th><th>Programme 2</th>
-</tr><tr style="vertical-align: top"><td>
-
-```{exec} python
-:editor:
-n = 5
-if n < 10:
-  n += 1
-  print(n)
-```
-
-</td><td style="padding-left: 1rem">
-
-```{exec} python
-:editor:
-n = 5
-while n < 10:
-  n += 1
-  print(n)
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Programme 1
+  ```{exec} python
+  :editor:
+  n = 5
+  if n < 10:
+    n += 1
+    print(n)
+  ```
+- # Programme 2
+  ```{exec} python
+  :editor:
+  n = 5
+  while n < 10:
+    n += 1
+    print(n)
+  ```
+````
 
 ```{solution}
 Le programme 1 affichera:

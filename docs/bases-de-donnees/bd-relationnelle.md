@@ -65,105 +65,97 @@ avec un compteur (la valeur augmentera toujours de 1).
 
 #### Exemple - Cantons
 
-<table><tr><td valign="top">
+````{list-grid}
+:style: grid-template-columns: 3fr 7fr;
+- ```{graphviz}
+  :align: center
+  digraph UML_Class_diagram {
+    graph [
+      labelloc="t"
+      fontname="Helvetica,Arial,sans-serif"
+      fontsize="20pt"
+      layout="circo"
+    ]
+    node [
+      fontname="Helvetica,Arial,sans-serif"
+      shape=record
+      style=filled
+      fillcolor=gray95
+    ]
 
-```{graphviz}
-:align: center
-digraph UML_Class_diagram {
-  graph [
-    labelloc="t"
-    fontname="Helvetica,Arial,sans-serif"
-    fontsize="20pt"
-    layout="circo"
-  ]
-  node [
-    fontname="Helvetica,Arial,sans-serif"
-    shape=record
-    style=filled
-    fillcolor=gray95
-  ]
-
-  Class1 [
-    shape=plain
-    label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-      <tr> <td> <b>canton</b> </td> </tr>
-      <tr> <td>
-        <table border="0" cellborder="0" cellspacing="7" >
-          <tr> <td align="left"><u>nom </u> (clé primaire)</td> </tr>
-          <tr> <td align="left" >abr</td> </tr>
-          <tr> <td align="left" >chef_lieu</td> </tr>
-          <tr> <td align="left" >nb_communes</td> </tr>
-          <tr> <td align="left" >population</td> </tr>
-          <tr> <td align="left" >superficie</td> </tr>
-        </table>
-      </td> </tr>
-    </table>>
-  ]
-}
-```
-
-</td><td style="width:70%" valign="top">
-
-- Chaque canton a un nom différent et ne change pas.
-- Chaque abréviation est différente et ne change pas.
-- Les chefs-lieux sont en principe différents, mais pourrait changer.
-- Le nombre de communes peut être le même, voir même changer.
-- La population peut être la même et change.
-- La superficie peut être la même, voir même changer.
-
-</td></tr></table>
+    Class1 [
+      shape=plain
+      label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr> <td> <b>canton</b> </td> </tr>
+        <tr> <td>
+          <table border="0" cellborder="0" cellspacing="7" >
+            <tr> <td align="left"><u>nom </u> (clé primaire)</td> </tr>
+            <tr> <td align="left" >abr</td> </tr>
+            <tr> <td align="left" >chef_lieu</td> </tr>
+            <tr> <td align="left" >nb_communes</td> </tr>
+            <tr> <td align="left" >population</td> </tr>
+            <tr> <td align="left" >superficie</td> </tr>
+          </table>
+        </td> </tr>
+      </table>>
+    ]
+  }
+  ```
+- - Chaque canton a un nom différent et ne change pas.
+  - Chaque abréviation est différente et ne change pas.
+  - Les chefs-lieux sont en principe différents, mais pourrait changer.
+  - Le nombre de communes peut être le même, voir même changer.
+  - La population peut être la même et change.
+  - La superficie peut être la même, voir même changer.
+````
 
 Dans cet exemple, nous pouvons donc choisir la colonne `nom` ou `abr` comme clé
 primaire. Nous avons choisi `nom`.
 
 #### Exemple - Clients
 
-<table><tr><td valign="top">
+````{list-grid}
+:style: grid-template-columns: 3fr 7fr;
+- ```{graphviz}
+  :align: center
+  digraph UML_Class_diagram {
+    graph [
+      labelloc="t"
+      fontname="Helvetica,Arial,sans-serif"
+      fontsize="20pt"
+      layout="circo"
+    ]
+    node [
+      fontname="Helvetica,Arial,sans-serif"
+      shape=record
+      style=filled
+      fillcolor=gray95
+    ]
 
-```{graphviz}
-:align: center
-digraph UML_Class_diagram {
-  graph [
-    labelloc="t"
-    fontname="Helvetica,Arial,sans-serif"
-    fontsize="20pt"
-    layout="circo"
-  ]
-  node [
-    fontname="Helvetica,Arial,sans-serif"
-    shape=record
-    style=filled
-    fillcolor=gray95
-  ]
-
-  Class1 [
-    shape=plain
-    label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
-      <tr> <td> <b>client</b> </td> </tr>
-      <tr> <td>
-        <table border="0" cellborder="0" cellspacing="7" >
-          <tr> <td align="left"><u>no_c </u> (clé primaire)</td> </tr>
-          <tr> <td align="left" >nom</td> </tr>
-          <tr> <td align="left" >prenom</td> </tr>
-          <tr> <td align="left" >adresse</td> </tr>
-          <tr> <td align="left" >telephone</td> </tr>
-          <tr> <td align="left" >mail</td> </tr>
-        </table>
-      </td> </tr>
-    </table>>
-  ]
-}
-```
-
-</td><td style="width:70%" valign="top">
-
-- Deux clients peuvent avoir le même nom.
-- Deux clients peuvent avoir le même prénom.
-- Deux clients peuvent avoir la même adresse et elle peut changer.
-- Le téléphone peut changer.
-- Le mail peut changer.
-
-</td></tr></table>
+    Class1 [
+      shape=plain
+      label=<<table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+        <tr> <td> <b>client</b> </td> </tr>
+        <tr> <td>
+          <table border="0" cellborder="0" cellspacing="7" >
+            <tr> <td align="left"><u>no_c </u> (clé primaire)</td> </tr>
+            <tr> <td align="left" >nom</td> </tr>
+            <tr> <td align="left" >prenom</td> </tr>
+            <tr> <td align="left" >adresse</td> </tr>
+            <tr> <td align="left" >telephone</td> </tr>
+            <tr> <td align="left" >mail</td> </tr>
+          </table>
+        </td> </tr>
+      </table>>
+    ]
+  }
+  ```
+- - Deux clients peuvent avoir le même nom.
+  - Deux clients peuvent avoir le même prénom.
+  - Deux clients peuvent avoir la même adresse et elle peut changer.
+  - Le téléphone peut changer.
+  - Le mail peut changer.
+````
 
 Dans cet exemple, aucune colonne ne correspond aux critères de clé primaire
 (unique et stable). Par conséquent, il faut créer une nouvelle colonne en

@@ -274,107 +274,87 @@ Voici trois programmes:
 2. Que vont-ils afficher?
 3. Faites un ordinogramme pour chacun.
 
-<table style="width: 100%"><tr style="text-align: center">
-  <th>Programme 1</th><th>Programme 2</th><th>Programme 3</th>
-</tr><tr style="vertical-align: top"><td>
-
-```{exec} python
-:linenos:
-x = -4
-if x < 0:
-  x += 7
-if x < 5:
-  x *= 4
-if x < 10:
-  x -= 6
-else:
-  x = 1000
-print(x)
-```
-
-</td><td style="padding-left: 1rem">
-
-```{exec} python
-:linenos:
-x = -4
-if x < 0:
-  x += 7
-elif x < 5:
-  x *= 4
-elif x < 10:
-  x -= 6
-else:
-  x = 1000
-print(x)
-```
-
-</td><td style="padding-left: 1rem">
-
-```{exec} python
-:linenos:
-x = -4
-if x < 0:
-  x += 7
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr 1fr;
+- # Programme 1
+  ```{exec} python
+  :linenos:
+  x = -4
+  if x < 0:
+    x += 7
   if x < 5:
     x *= 4
-    if x < 10:
-      x -= 6
-else:
-  x = 1000
-print(x)
-```
-
-</td></tr></table>
+  if x < 10:
+    x -= 6
+  else:
+    x = 1000
+  print(x)
+  ```
+- # Programme 2
+  ```{exec} python
+  :linenos:
+  x = -4
+  if x < 0:
+    x += 7
+  elif x < 5:
+    x *= 4
+  elif x < 10:
+    x -= 6
+  else:
+    x = 1000
+  print(x)
+  ```
+- # Programme 3
+  ```{exec} python
+  :linenos:
+  x = -4
+  if x < 0:
+    x += 7
+    if x < 5:
+      x *= 4
+      if x < 10:
+        x -= 6
+  else:
+    x = 1000
+  print(x)
+  ```
+````
 
 ## Exercice {num1}`exercice-rev`
 
 Que vont afficher chacun de ces programmes?
 
-<table style="width: 100%"><tr style="text-align: center">
-  <th style="width: 50%">Programme 1</th><th>Programme 2</th>
-</tr><tr style="vertical-align: top"><td>
-
-```{exec} python
-:linenos:
-a = 22
-b = 5
-c = 1
-print((a > b) and (b <= c))
-```
-
-</td><td style="padding-left: 1rem">
-
-```{exec} python
-:linenos:
-a = 11
-b = 3
-c = 0
-print((a < b) or (c == 0))
-
-```
-
-</td></tr></table>
-
-<table style="width: 100%"><tr style="text-align: center">
-  <th style="width: 50%">Programme 3</th><th>Programme 4</th>
-</tr><tr style="vertical-align: top"><td>
-
-```{exec} python
-:linenos:
-a = 11
-b = 3
-c = 0
-print((a < b) or (c != 0))
-
-```
-
-</td><td style="padding-left: 1rem">
-
-```{exec} python
-:linenos:
-a = 1.5
-b = 3.2
-print(not(a <= b))
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Programme 1
+  ```{exec} python
+  :linenos:
+  a = 22
+  b = 5
+  c = 1
+  print((a > b) and (b <= c))
+  ```
+- # Programme 2
+  ```{exec} python
+  :linenos:
+  a = 11
+  b = 3
+  c = 0
+  print((a < b) or (c == 0))
+  ```
+- # Programme 3
+  ```{exec} python
+  :linenos:
+  a = 11
+  b = 3
+  c = 0
+  print((a < b) or (c != 0))
+  ```
+- # Programme 4
+  ```{exec} python
+  :linenos:
+  a = 1.5
+  b = 3.2
+  print(not(a <= b))
+  ```
+````

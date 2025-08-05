@@ -104,7 +104,6 @@ disposition.
 Cette image a un poids de $2 * 8 * 8 = 128$ bits qui est équivalent à 16 octets,
 car nous avons 64 cases qui ont besoin chacune de 2 bits pour définir le gris.
 
-
 ## Exercice {num1}`exercice`
 
 1. Quel est le poids de l'image ci-dessous?

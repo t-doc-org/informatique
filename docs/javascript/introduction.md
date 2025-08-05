@@ -263,27 +263,23 @@ l'{numref}`exemple %s<exemple:js-exemple>`:
 Comme en Python, il est possible de faire une boucle for sur tous les éléments
 d'une liste.
 
-<table><tr style="text-align: center">
-  <th>Python</th><th>JavaScript</th>
-</tr><tr><td>
-
-```{code-block} python
-notes = [5, 5.5, 4, 5.5, 6]
-for note in notes:
-  print(note)
-```
-
-</td><td style="padding-left: 1rem">
-
-```{code-block} javascript
-const notes = [5, 5.5, 4, 5.5, 6];
-for (const note of notes) {
-  /* Affiche la valeur sur la console */
-  console.log(note);
-}
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Python
+  ```{code-block} python
+  notes = [5, 5.5, 4, 5.5, 6]
+  for note in notes:
+    print(note)
+  ```
+- # JavaScript
+  ```{code-block} javascript
+  const notes = [5, 5.5, 4, 5.5, 6];
+  for (const note of notes) {
+    /* Affiche la valeur sur la console */
+    console.log(note);
+  }
+  ```
+````
 
 #### Exercice {num1}`exercice`
 

@@ -612,41 +612,25 @@ a = 4
 print("a:", a, "b:", b)
 ```
 
-<table style="width: 100%"><tr style="text-align: center">
-</tr><tr style="vertical-align: center"><td>
+````{list-grid}
+:style: grid-template-columns: 10fr 8fr; column-gap: 2rem;
+- <br>`a = 5` crée une référence de la variable `a` vers la valeur `5` en
+  mémoire.
 
-`a = 5` crée une référence de la variable `a` vers la valeur `5` en mémoire.
+  `b = a` crée une référence de la variable `b` vers la même valeur que celle
+  référencée par `a`.
+- ```{image} images/ref-nombre1.png
+  :alt: Références sur le même nombre
+  ```
 
-`b = a` crée une référence de la variable `b` vers la même valeur que celle
-référencée par `a`.
+- <br>`a = 4` change la référence de la variable `a` vers la valeur `4` en
+  mémoire.
 
-</td><td style="padding-left: 1rem">
-
-```{image} images/ref-nombre1.png
-:alt: Références sur le même nombre
-:width: 90%
-:align: center
-```
-
-</td></tr></table>
-
-<table style="width: 100%"><tr style="text-align: center">
-</tr><tr style="vertical-align: center"><td>
-
-`a = 4` change la référence de la variable `a` vers la valeur `4` en mémoire.
-
-La référence de la variable `b` elle ne change pas.
-
-</td><td style="padding-left: 1rem">
-
-```{image} images/ref-nombre2.png
-:alt: Références sur des nombres différents
-:width: 80%
-:align: center
-```
-
-</td></tr></table>
-
+  La référence de la variable `b` elle ne change pas.
+- ```{image} images/ref-nombre2.png
+  :alt: Références sur des nombres différents
+  ```
+````
 
 ### Exemple {num1}`exemple`
 
@@ -664,27 +648,21 @@ b.append(7)
 print("a:", a, "b:", b)
 ```
 
-<table style="width: 100%"><tr style="text-align: center">
-</tr><tr style="vertical-align: center"><td>
+````{list-grid}
+:style: grid-template-columns: 10fr 8fr; column-gap: 2rem;
+- <br>`a = [1, 2, 3]` crée une référence de la variable `a` vers la liste
+  `[1, 2, 3]` en mémoire.
 
-`a = [1, 2, 3]` crée une référence de la variable `a` vers la liste `[1, 2, 3]`
-en mémoire.
-
-`b = a` crée une référence de la variable `b` vers la même liste que celle
-référencée par `a`.
-
-</td><td style="padding-left: 1rem">
-
-```{image} images/ref-liste.png
-:alt: Références sur une liste
-:width: 90%
-:align: center
-```
-
-</td></tr></table>
+  `b = a` crée une référence de la variable `b` vers la même liste que celle
+  référencée par `a`.
+- ```{image} images/ref-liste.png
+  :alt: Références sur une liste
+  :width: 90%
+  :align: center
+  ```
+````
 
 En modifiant le deuxième élément de la variable `a` avec `a[1] = 9`, la variable
 `b` est aussi modifiée, car c'est la même liste qui est référencée.
 
 De même `b.append(7)` modifie aussi la variable `a` (elle ajoute un élément).
-

@@ -19,24 +19,19 @@ for _ in range(nb_repetitions):
   ...
 ```
 
-<table><tr style="text-align: center">
-    <th style="width: 50%">Programme</th><th>Ordinogramme</th>
-</tr><tr style="vertical-align: top"><td>
-
-```{exec} python
-:editor:
-for i in range(5):
-  print(i)
-```
-
-</td><td>
-
-```{figure} images/for.png
-:alt: Ordinogramme boucle for
-:align: center
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Programme
+  ```{exec} python
+  :editor:
+  for i in range(5):
+    print(i)
+  ```
+- # Ordinogramme
+  ```{figure} images/for.png
+  :alt: Ordinogramme boucle for
+  ```
+````
 
 1. Quelles valeurs prend la variable i?
 2. Changez le nombre de répétitions.
@@ -61,28 +56,24 @@ while condition:
   ...
 ```
 
-<table><tr style="text-align: center">
-  <th style="width: 50%">Programme</th><th>Ordinogramme</th>
-</tr><tr style="vertical-align: top"><td>
-
-```{exec} python
-:editor:
-nb_points = 0
-max = 10
-while nb_points < max:
-  print("Points:", nb_points)
-  nb_points += 3
-print("Bravo!")
-```
-
-</td><td>
-
-```{figure} images/while.png
-:alt: Ordinogramme boucle for
-:align: center
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Programme
+  ```{exec} python
+  :editor:
+  nb_points = 0
+  max = 10
+  while nb_points < max:
+    print("Points:", nb_points)
+    nb_points += 3
+  print("Bravo!")
+  ```
+- # Ordinogramme
+  ```{figure} images/while.png
+  :alt: Ordinogramme boucle for
+  :align: center
+  ```
+````
 
 ## Exercice {num1}`exercice-rev`
 

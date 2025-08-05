@@ -140,91 +140,92 @@ Les bits de données vont dans un ordre particulier:
 :align: center
 ```
 
-<table width="100%"><tr><td>
+````{list-grid}
+:style: |
+: grid-template-columns: 1fr 1fr; align-items: center;
+: margin-bottom: 0;
+- $p_1$: bit de parité de $d_1$, $d_2$ et $d_4$
 
-$p_1$: bit de parité de $d_1$, $d_2$ et $d_4$
+  $p_2$: bit de parité de $d_1$, $d_3$ et $d_4$
 
-$p_2$: bit de parité de $d_1$, $d_3$ et $d_4$
-
-$p_3$: bit de parité de $d_2$, $d_3$ et $d_4$
-
-</td><td>
-
-```{figure} images/hamming1.svg
-:alt: Bits de contrôle
-:width: 200px
-:align: center
-```
-
-</td></tr></table>
+  $p_3$: bit de parité de $d_2$, $d_3$ et $d_4$
+- ```{figure} images/hamming1.svg
+  :alt: Bits de contrôle
+  :width: 200px
+  :align: center
+  ```
+````
 
 Vérification: Les trois parités doivent être correctes.
 
 ##### Cas 1: une parité fausse
 
-<table width="100%"><tr><td>
+````{list-grid}
+:style: |
+: grid-template-columns: 1fr 1fr; align-items: center;
+: margin-bottom: 0;
+- <span style="color: #EA4335;">Parité 1:</span>
+  $p_1$, $d_1$, $d_2$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 
-<span style="color: #EA4335;">Parité 1</span>: $p_1$, $d_1$, $d_2$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
+  <span style="color: #34A853;">Parité 2:</span>
+  $p_2$, $d_1$, $d_3$, $d_4$ <b><span style="color: #34A853;">&#10003;</span></b>
 
-<span style="color: #34A853;">Parité 2</span>: $p_2$, $d_1$, $d_3$, $d_4$ <b><span style="color: #34A853;">&#10003;</span></b>
+  <span style="color: #4285F4;">Parité 3:</span>
+  $p_3$, $d_2$, $d_3$, $d_4$ <b><span style="color: #34A853;">&#10003;</span></b>
 
-<span style="color: #4285F4;">Parité 3</span>: $p_3$, $d_2$, $d_3$, $d_4$ <b><span style="color: #34A853;">&#10003;</span></b>
-
-=> $p_1$ est faux
-
-</td><td>
-
-```{figure} images/hamming2.png
-:alt: Bits de contrôle
-:width: 200px
-:align: center
-```
-
-</td></tr></table>
+  &rArr; $p_1$ est faux
+- ```{figure} images/hamming2.png
+  :alt: Bits de contrôle
+  :width: 200px
+  :align: center
+  ```
+````
 
 ##### Cas 2: deux parités fausses
 
-<table width="100%"><tr><td>
+````{list-grid}
+:style: |
+: grid-template-columns: 1fr 1fr; align-items: center;
+: margin-bottom: 0;
+- <span style="color: #EA4335;">Parité 1:</span>
+  $p_1$, $d_1$, $d_2$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 
-<span style="color: #EA4335;">Parité 1</span>: $p_1$, $d_1$, $d_2$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
+  <span style="color: #34A853;">Parité 2:</span>
+  $p_2$, $d_1$, $d_3$, $d_4$ <b><span style="color: #34A853;">&#10003;</span></b>
 
-<span style="color: #34A853;">Parité 2</span>: $p_2$, $d_1$, $d_3$, $d_4$ <b><span style="color: #34A853;">&#10003;</span></b>
+  <span style="color: #4285F4;">Parité 3:</span>
+  $p_3$, $d_2$, $d_3$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 
-<span style="color: #4285F4;">Parité 3</span>: $p_3$, $d_2$, $d_3$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
-
-=> $d_2$ est faux
-
-</td><td>
-
-```{figure} images/hamming3.png
-:alt: Bits de contrôle
-:width: 200px
-:align: center
-```
-
-</td></tr></table>
+  &rArr; $d_2$ est faux
+- ```{figure} images/hamming3.png
+  :alt: Bits de contrôle
+  :width: 200px
+  :align: center
+  ```
+````
 
 ##### Cas 3: trois parités fausses
 
-<table width="100%"><tr><td>
+````{list-grid}
+:style: |
+: grid-template-columns: 1fr 1fr; align-items: center;
+: margin-bottom: 0;
+- <span style="color: #EA4335;">Parité 1:</span>
+  $p_1$, $d_1$, $d_2$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 
-<span style="color: #EA4335;">Parité 1</span>: $p_1$, $d_1$, $d_2$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
+  <span style="color: #34A853;">Parité 2:</span>
+  $p_2$, $d_1$, $d_3$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 
-<span style="color: #34A853;">Parité 2</span>: $p_2$, $d_1$, $d_3$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
+  <span style="color: #4285F4;">Parité 3:</span>
+  $p_3$, $d_2$, $d_3$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 
-<span style="color: #4285F4;">Parité 3</span>: $p_3$, $d_2$, $d_3$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
-
-=> $d_4$ est faux
-
-</td><td>
-
-```{figure} images/hamming4.svg
-:alt: Bits de contrôle
-:width: 200px
-:align: center
-```
-
-</td></tr></table>
+  &rArr; $d_4$ est faux
+- ```{figure} images/hamming4.svg
+  :alt: Bits de contrôle
+  :width: 200px
+  :align: center
+  ```
+````
 
 Vérification des trois parités:
 

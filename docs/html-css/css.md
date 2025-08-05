@@ -17,7 +17,7 @@ La règle commence par un sélecteur qui indique à quelles balises cette règle
 doit s'appliquer. Ensuite, la liste des propriétés ainsi que leurs valeurs sont
 indiquées entre accolades.
 
-```{code} css
+```{code-block} css
 sélecteur {
   propriété1: valeur1;
   propriété2: valeur2;
@@ -26,14 +26,14 @@ sélecteur {
 
 Exemples:
 
-```{code} css
+```{code-block} css
 h1 {                      /* Cette règle définit le style du titre principal. */
   color: green;           /* La couleur du texte est verte. */
   text-align: center;     /* L'alignement du texte est centré. */
 }
 ```
 
-```{code} css
+```{code-block} css
 p {                       /* Cette règle définit le style des paragraphes. */
   font-family: verdana;   /* La police utilisée est verdana. */
   font-size: 20px;        /* La taille de la police est 20 pixels. */
@@ -52,7 +52,7 @@ La balise `<link>` a deux attributs:
 1. `rel` (précise à quoi sert le fichier référencé)
 2. `href` (chemin d'accès au document):
 
-```{code} html
+```{code-block} html
 <link href="style.css" rel="stylesheet" type="text/css"/>
 ```
 
@@ -71,7 +71,7 @@ type (`h1`, `h2`, `p`, ...).
 
 Il est de la forme:
 
-```{code} css
+```{code-block} css
 h1 {                      /* Cette règle définit le style du titre principal. */
   color: green;           /* La couleur du texte est verte. */
   text-align: center;     /* L'alignement du texte est centré. */
@@ -85,27 +85,23 @@ Ce style s'appliquera au contenu de toutes les balises `<h1>...</h1>`
 Le sélecteur d'identifiant permet d'appliquer un style à un élément précis. Pour
 cela, il faut ajouter un nouvel attribut `id` à la balise HTML concernée.
 
-<table><tr style="text-align: center">
-  <th>Fichier HTML</th><th>Fichier CSS</th>
-</tr><tr><td>
-
-```{code} html
-<p id="intro">
-Dans ce paragraphe, j'écris
-l'introduction de mon texte.
-</p>
-```
-
-</td><td style="padding-left: 1rem">
-
-```{code} css
-#intro {
-  text-align: justify;
-  color: blue;
-}
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Fichier HTML
+  ```{code-block} html
+  <p id="intro">
+  Dans ce paragraphe, j'écris l'introduction
+  de mon texte.
+  </p>
+  ```
+- # Fichier CSS
+  ```{code-block} css
+  #intro {
+    text-align: justify;
+    color: blue;
+  }
+  ```
+````
 
 Ce style ne s'appliquera qu'à un élément unique, la balise dont l'`id` est
 "intro".
@@ -116,25 +112,21 @@ Le sélecteur de classe permet d'appliquer un style à plusieurs éléments qui
 appartiennent à une même classe (groupe). Pour cela, il faut ajouter un nouvel
 attribut class à la balise HTML concernée.
 
-<table><tr style="text-align: center">
-  <th>Fichier HTML</th><th>Fichier CSS</th>
-</tr><tr><td>
-
-```{code} html
-<p class="centre">
-Le texte de ce paragraphe sera centré.
-</p>
-```
-
-</td><td style="padding-left: 1rem">
-
-```{code} css
-.centre {
-  text-align: center;
-}
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Fichier HTML
+  ```{code-block} html
+  <p class="centre">
+  Le texte de ce paragraphe sera centré.
+  </p>
+  ```
+- # Fichier CSS
+  ```{code-block} css
+  .centre {
+    text-align: center;
+  }
+  ```
+````
 
 Ce style ne s'appliquera qu'aux balises dont la classe est "centre".
 
@@ -154,33 +146,29 @@ extérieure (margin) ou la bordure (border).
 :align: center
 ```
 
-<table><tr style="text-align: center">
-  <th>Fichier HTML</th><th>Fichier CSS</th>
-</tr><tr><td>
-
-```{code} html
-<div id="mon_conteneur">
-<h2> Mon sous-titre</h2>
-<p> Lorem ipsum dolor sit amet, consectetur
-adipiscing elit. Suspendisse ut erat eu risus
-pharetra volutpat eu eget velit. Suspendisse
-ultrices felis a facilisis feugiat. </p>
-</div>
-```
-
-</td><td style="padding-left: 1rem">
-
-```{code} css
-#mon_conteneur {
-  background_color: red;
-  width: 100%;
-  height: 400px:
-  border: 2px solid;
-  padding: 1em;
-}
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Fichier HTML
+  ```{code-block} html
+  <div id="mon_conteneur">
+  <h2>Mon sous-titre</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur
+  adipiscing elit. Suspendisse ut erat eu risus
+  pharetra volutpat eu eget velit. Suspendisse
+  ultrices felis a facilisis feugiat.</p>
+  </div>
+  ```
+- # Fichier CSS
+  ```{code-block} css
+  #mon_conteneur {
+    background-color: red;
+    width: 100%;
+    height: 400px:
+    border: 2px solid;
+    padding: 1em;
+  }
+  ```
+````
 
 ## Exercices
 

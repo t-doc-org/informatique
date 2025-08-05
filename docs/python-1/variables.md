@@ -176,33 +176,29 @@ permettent de connaître à chaque ligne, la valeur des variables.
 
 ### Exemple {num1}`exemple`
 
-<table style="width: 100%"><tr style="text-align: center">
-  <th>Programme</th><th>Tableau d'états</th>
-</tr><tr style="vertical-align: top"><td>
+````{list-grid}
+:style: grid-template-columns: 1fr min-content;
+- # Programme
+  ```{exec} python
+  :linenos:
+  a = 10
+  b = 30
+  c = a + b
+  d = c * a
+  a = 2 * a
 
-```{exec} python
-:linenos:
-a = 10
-b = 30
-c = a + b
-d = c * a
-a = 2 * a
-
-# Affiche les valeurs des variables
-print(a, b, c, d)
-```
-
-</td><td style="padding-left: 1rem">
-
-| ligne | a | b | c | d |
-|:-----:|:-:|:-:|:-:|:-:|
-| 1 | 10| ? | ? | ? |
-| 2 | 10| 30| ? | ? |
-| 3 | 10| 30| 40| ? |
-| 4 | 10| 30| 40| 400|
-| 5 | 20| 30| 40| 400 |
-
-</td></tr></table>
+  # Affiche les valeurs des variables
+  print(a, b, c, d)
+  ```
+- # Tableau d'états
+  | ligne | a | b | c | d |
+  |:-----:|:-:|:-:|:-:|:-:|
+  | 1 | 10| ? | ? | ? |
+  | 2 | 10| 30| ? | ? |
+  | 3 | 10| 30| 40| ? |
+  | 4 | 10| 30| 40| 400|
+  | 5 | 20| 30| 40| 400|
+````
 
 ### Exercice {num1}`exercice`
 
@@ -224,32 +220,33 @@ y = 5
 print(x, y, z)
 ```
 
-````{solution}
-```{exec} python
-:linenos:
-x = 10
-y = 2
-z = y * x
-y = z + x
-x = y - z / 2
-z = z * 2
-y = 5
+`````{solution}
+````{list-grid}
+:style: grid-template-columns: 1fr min-content;
+- ```{exec} python
+  :linenos:
+  x = 10
+  y = 2
+  z = y * x
+  y = z + x
+  x = y - z / 2
+  z = z * 2
+  y = 5
 
-# Affiche les valeurs des variables
-print(x, y, z)
-```
-
-| ligne | x  | y  | z  |
-|:-----:| :-:| :-:| :-:|
-| 1 | 10 | ?  | ?  |
-| 2 | 10 | 2  | ?  |
-| 3 | 10 | 2  | 20 |
-| 4 | 10 | 30 | 20 |
-| 5 | 20 | 30 | 20 |
-| 6 | 20 | 30 | 40 |
-| 7 | 20 | 5  | 40 |
-
+  # Affiche les valeurs des variables
+  print(x, y, z)
+  ```
+- | ligne | x  | y  | z  |
+  |:-----:| :-:| :-:| :-:|
+  | 1 | 10 | ?  | ?  |
+  | 2 | 10 | 2  | ?  |
+  | 3 | 10 | 2  | 20 |
+  | 4 | 10 | 30 | 20 |
+  | 5 | 20 | 30 | 20 |
+  | 6 | 20 | 30 | 40 |
+  | 7 | 20 | 5  | 40 |
 ````
+`````
 
 ### Exercice {num1}`exercice`
 

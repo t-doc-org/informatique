@@ -18,26 +18,21 @@ for _ in range(nb_repetitions):
 
 ### Exemple {num1}`exemple`
 
-<table><tr style="text-align: center">
-    <th style="width: 50%">Programme</th><th>Ordinogramme</th>
-</tr><tr style="vertical-align: top"><td>
-
-```{exec} python
-:editor:
-print("Voici ma punition:")
-for _ in range(10):
-  print("Je dois faire mes devoirs.")
-print("J'ai fini.")
-```
-
-</td><td>
-
-```{figure} images/boucle-for.png
-:alt: Ordinogramme boucle for
-:align: center
-```
-
-</td></tr></table>
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Programme
+  ```{exec} python
+  :editor:
+  print("Voici ma punition:")
+  for _ in range(10):
+    print("Je dois faire mes devoirs.")
+  print("J'ai fini.")
+  ```
+- # Ordinogramme
+  ```{figure} images/boucle-for.png
+  :alt: Ordinogramme boucle for
+  ```
+````
 
 ### Exercice {num1}`exercice`
 
