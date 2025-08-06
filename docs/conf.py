@@ -12,6 +12,8 @@ myst_links_external_new_tab = True
 
 html_theme_options = {
     # 'repository_url': 'https://github.com/t-doc-org/informatique',
+    'show_navbar_depth': 2,
+    'show_toc_level': 2,
 }
 
 # tdoc_solutions = 'dynamic'
