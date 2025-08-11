@@ -2,11 +2,11 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Listes Lab - Mini projet
-
 ```{metadata}
-solutions: hide
+solutions: dynamic
 ```
+
+# Listes Lab - Mini projet
 
 Les exercices suivants vous mèneront petit à petit à simuler la création d'un
 compte et l'identification sur un site ou une application.

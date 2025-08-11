@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{metadata}
+solutions: dynamic
+```
+
 # Cryptographie symétrique
 
 La **cryptographie symétrique**, également appelée cryptographie à clé secrète,

@@ -1,11 +1,11 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Cybersécurité
-
 ```{metadata}
 solutions: dynamic
 ```
+
+# Cybersécurité
 
 ## Définitions
 

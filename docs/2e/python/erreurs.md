@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{metadata}
+solutions: dynamic
+```
+
 # Erreurs
 
 En appuyant sur le bouton {kbd}`Run`, Python va d'abord **compiler** le
@@ -157,8 +161,8 @@ est aussi supérieur ou égal à 18. Donc la condition du `if` sera vérifiée.
 
 Il est souvent difficile de débugger un code qui ne fonctionne pas. En s'aidant
 des messages d'erreurs affichés, corrigez le programme ci-dessous qui calcule
-l'aire et le périmètre d'un triangle isocèle et rectangle dont l'hypoténuse est
-connu.
+l'aire et le périmètre d'un triangle isocèle et rectangle dont la base
+(hypoténuse) est connue.
 
 ```{image} images/triangle_iso_rect.png
 :alt: Triangle isocèle rectangle

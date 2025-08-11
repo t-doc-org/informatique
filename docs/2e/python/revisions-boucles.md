@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{metadata}
+solutions: show
+```
+
 # Révisions - Boucles
 
 En programmation, nous sommes souvent amenés à répéter des instructions plusieurs

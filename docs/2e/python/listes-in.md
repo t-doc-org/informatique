@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{metadata}
+solutions: dynamic
+```
+
 # Listes - Élément appartenant à une liste
 
 Il est possible de savoir si un élément appartient à une liste en utilisant

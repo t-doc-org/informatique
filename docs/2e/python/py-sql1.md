@@ -1,11 +1,11 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Python et bases de données 1
-
 ```{metadata}
 solutions: hide
 ```
+
+# Python et bases de données 1
 
 Dans cette partie, vous allez apprendre à utiliser Python pour accéder à une
 base de données et faire des requêtes SQL.

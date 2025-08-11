@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{metadata}
+solutions: dynamic
+```
+
 # Fonctions
 
 En programmation, une **fonction** est un bloc de code (suite d'instructions)
