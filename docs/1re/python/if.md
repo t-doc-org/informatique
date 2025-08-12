@@ -691,3 +691,40 @@ else:
   print(nombre, "n'est divisible ni par 3, ni par 13.")
 ```
 ````
+
+### Exercice {num2}`exercice`
+
+Écrivez un programme qui permet de résoudre des équations du deuxième degré. Ce
+programme doit afficher le nombre de solutions et les calculer.
+
+```{exec} python
+:editor: 71c23a46-21ab-4874-a8be-1928ea37c625
+# Écrivez le programme ici
+```
+
+````{solution}
+```{exec} python
+from math import sqrt
+
+# Demande à l'utilisateur les valeurs des coefficients a, b et c
+a = float(input("Coefficient de x^2: "))
+b = float(input("Coefficient de x: "))
+c = float(input("Coefficient sans partie littérale: "))
+
+if a == 0:
+  print("Ce n'est pas une équation du deuxième degré.")
+  print("La solution de l'équation est", -c / b)
+else:
+  delta = b ** 2 - 4 * a *c
+
+  if delta < 0:
+    print("Cette équation n'a pas solution.")
+  elif delta == 0:
+    x = -b / (2 * a)
+    print("Cette équation a une seule solution: x =", x)
+  else:
+    x_1 = (-b + sqrt(delta)) / (2 * a)
+    x_2 = (-b - sqrt(delta)) / (2 * a)
+    print("Cette équation a deux solutions: x_1 =", x_1, "et x_2 =", x_2)
+```
+````

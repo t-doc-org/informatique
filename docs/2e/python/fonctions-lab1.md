@@ -1,188 +1,138 @@
-% Copyright 2024 Caroline Blank <caro@c-space.org>
+% Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 ```{metadata}
-solutions: hide
+solutions: dynamic
 ```
 
 # Fonctions Lab
 
 ## Exercice {nump}`exercice`
 
-1.  Lisez le code suivant et expliquez ce qu'il fait sans l'exécuter.
-2.  Exécutez le code. Le code fait-il ce que vous pensiez?
-3.  Comment structurer ce code différemment pour qu'il soit plus lisible?
-    - Découpez le code en parties qui effectuent une tâche donnée et ajouter des
-    commentaires.
-    - Remplacez chaque partie par une fonction.
-4.  Modifiez, testez et exécutez le code suivant.
+Écrivez un programme qui simule le fonctionnement d'un bancomat.
+Vous devez créer 5 fonctions:
+
+- `affiche_solde(solde)` qui affiche le solde qui se trouve sur le compte. Cette
+fonction a un paramètre, le `solde` du compte.
+
+- `solde_suffisant(montant, solde)` qui teste si le montant que l'utilisateur veut
+retirer est suffisant sur le compte. Cette fonction a deux paramètres, le
+`montant` que l'on veut débiter et le `solde` du compte. Elle doit renvoyer `True` ou
+`False`.
+
+- `retrait(solde)` qui effectue le retrait d'argent sur le compte. Cette fonction
+a un paramètre, le `solde` du compte. Elle doit demander le `montant` à retirer à
+l'utilisateur, tester si le solde est suffisant. Si c'est le cas, elle doit
+créditer la somme sur le solde du compte. La fonction doit renvoyer le nouveau
+`solde`.
+
+- `depot(solde)` qui effectue le dépôt d'argent sur le compte. Cette fonction
+a un paramètre, le `solde` du compte. Elle doit renvoyer le nouveau `solde`.
+
+- `choix_options()` qui permet à l'utilisateur de choisir parmi les différentes
+options. Cette fonction doit renvoyer un `choix` valide. Si le choix n'est pas
+valide, redemandez à l'utilisateur.
+
+Voici un exemple d'exécution:
+
+```{code-block} text
+Bancomat à votre disposition! Insérez votre carte.
+Choisir parmi les options suivantes:
+1 - Afficher le solde du compte
+2 - Retirer de l'argent
+3 - Déposer de l'argent
+4 - Quitter
+1
+Le solde de votre compte est de 450.60 CHF.
+Choisir parmi les options suivantes:
+1 - Afficher le solde du compte
+2 - Retirer de l'argent
+3 - Déposer de l'argent
+4 - Quitter
+2
+Combien voulez-vous retirez? 500
+Ce montant n'est pas disponible, vous avez 450.60 CHF sur votre compte.
+Choisir parmi les options suivantes:
+1 - Afficher le solde du compte
+2 - Retirer de l'argent
+3 - Déposer de l'argent
+4 - Quitter
+2
+Combien voulez-vous retirez? 100
+Il vous reste 350.60 CHF sur votre compte.
+Choisir parmi les options suivantes:
+1 - Afficher le solde du compte
+2 - Retirer de l'argent
+3 - Déposer de l'argent
+4 - Quitter
+3
+Combien voulez-vous déposer? 50
+Vous avez 400.60 CHF sur votre compte.
+Choisir parmi les options suivantes:
+1 - Afficher le solde du compte
+2 - Retirer de l'argent
+3 - Déposer de l'argent
+4 - Quitter
+4
+Au revoir!
+```
 
 ```{exec} python
-:style: height: 25rem
-:editor: da2f7179-98b6-40ec-a5cc-577a60d4de7a
-from random import *
-from time import *
-
-print("Bienvenue sur mon application de jeux.")
-
-while True:
-  choix = input("Quel jeu veux-tu essayer?\n"
-  " Jeu 1 [1], Jeu 2 [2] ou Jeu 3 [3] ou Quitter [q]")
-  if choix == "1":
-    print("Tu dois deviner un nombre entre 1 et 100 en un minimum d'essais.")
-    nb_secret = randint(1, 100)
-    essais = 0
-    trouve = False
-    while not trouve:
-      nb_propose = int(input("Trouve le nombre: "))
-      essais += 1
-      if nb_propose < nb_secret:
-        print("Le nombre est plus grand!")
-      elif nb_propose > nb_secret:
-        print("Le nombre est plus petit!")
-      else:
-        print("Bravo, tu as trouvé", nb_secret, "en", essais, "essais.")
-        trouve = True
-  elif choix == "2":
-    print("Je vais deviner ton âge!")
-    print("Effectue la suite de calculs suivante:")
-    sleep(4)
-    print("Choisis un nombre entre 2 et 10.")
-    sleep(4)
-    print("Muliplie ce nombre par 2.")
-    sleep(4)
-    print("Ajoute 5 au résultat précédent.")
-    sleep(4)
-    print("Multiplie le nombre par 50.")
-    sleep(4)
-    deja_fete = input("As-tu déjà fêté ton anniversaire cette"
-    " année? [oui/non]")
-    if deja_fete == "oui":
-      print("Ajoute 1774.")
-    else:
-      print("Ajoute 1775.")
-    sleep(2)
-    print("Soustrais ton année de naissance (par exemple, 2001).")
-    nombre = input("Donne-moi le résultat final: ")
-    print("Tu as", nombre[1:3], "ans et le nombre que tu avais choisis au "
-    "départ est", nombre[0], ".")
-  elif choix == "3":
-    print("Réponds à l'énigme suivante:")
-    while True:
-      reponse = input("Placée sous les pieds elle prête à rire.\n"
-      " Placée entre les doigts, elle a permis d'écrire.\n"
-      " Elle sert d'ornement mais s'envolent au gré du vent.\n"
-      " Qui est-elle? ")
-      if (reponse.lower() == "la plume" or reponse.lower() == "plume"
-            or reponse.lower() == "une plume"):
-        print("Bravo!")
-        break
-      else:
-        print("Essaye encore.")
-  elif choix == "q":
-    break
-  else:
-    print("Ce choix n'est pas valide.")
-
-print("Au revoir. Merci d'avoir joué avec moi!")
+:editor: 3197cc87-208c-414f-a260-2f3761c69c9e
+# Écrivez le programme ici
 ```
 
 ````{solution}
 ```{exec} python
-:linenos:
-from random import *
-from time import *
+from random import randint
 
-# Définition des différents jeux
-def trouve_un_nombre():
-  print("Tu dois deviner un nombre entre 1 et 100 en un minimum d'essais.")
-  nb_secret = randint(1, 100)
-  essais = 0
-  while True:
-    nb_propose = int(input("Trouve le nombre: "))
-    essais += 1
-    if nb_propose < nb_secret:
-      print("Le nombre est plus grand!")
-    elif nb_propose > nb_secret:
-      print("Le nombre est plus petit!")
-    else:
-      print("Bravo, tu as trouvé", nb_secret, "en", essais, "essais.")
-      break
+def affiche_solde(solde):
+  print("Le solde de votre compte est de", solde, "CHF.")
 
-def devine_age():
-  print("Je vais deviner ton âge!")
-  print("Effectue la suite de calculs suivante:")
-  sleep(4)
-  print("Choisis un nombre entre 2 et 10.")
-  sleep(4)
-  print("Muliplie ce nombre par 2.")
-  sleep(4)
-  print("Ajoute 5 au résultat précédent.")
-  sleep(4)
-  print("Multiplie le nombre par 50.")
-  sleep(4)
-  deja_fete = input("As-tu déjà fêté ton anniversaire cette année?"
-  " [oui/non]")
-  if deja_fete == "oui":
-    print("Ajoute 1774.")
+def solde_suffisant(montant, solde):
+  if montant < solde:
+    return True
   else:
-    print("Ajoute 1775.")
-  sleep(2)
-  print("Soustrais ton année de naissance (par exemple, 2001).")
-  nombre = input("Donne-moi le résultat final: ")
-  print("Tu as", nombre[1:3], "ans et le nombre que tu avais choisis au "
-  "départ est", nombre[0], ".")
+    return False
 
-def resous_enigme():
-  print("Réponds à l'énigme suivante:")
-  while True:
-    reponse = input("Placée sous les pieds elle prête à rire.\n"
-      " Placée entre les doigts, elle a permis d'écrire.\n"
-      " Elle sert d'ornement mais s'envolent au gré du vent.\n"
-      " Qui est-elle? ")
-    if (reponse.lower() == "la plume" or reponse.lower() == "plume"
-          or reponse.lower() == "une plume"):
-      print("Bravo!")
-      break
-    else:
-      print("Essaye encore.")
-
-
-# Déroulement du jeu
-
-# Phrase d'accueil
-print("Bienvenue sur mon application de jeux.")
-
-# Choix des jeux
-while True:
-  choix = input("Quel jeu veux-tu essayer?\n"
-  "Jeu 1 [1], Jeu 2 [2] ou Jeu 3 [3] ou Quitter [q] ")
-  if choix == "1":
-    await trouve_un_nombre()
-  elif choix == "2":
-    await devine_age()
-  elif choix == "3":
-    await resous_enigme()
-  elif choix == "q":
-    break
+def retrait(solde):
+  montant = float(input("Combien voulez-vous retirez?"))
+  if solde_suffisant(montant, solde):
+    solde -= montant
+    print("Il vous reste", solde, "CHF sur votre compte.")
   else:
-    print("Ce choix n'est pas valide.")
+    print("Ce montant n'est pas disponible, vous avez", solde, "CHF sur votre compte.")
+  return solde
 
-# Phrase de fin
-print("Au revoir. Merci d'avoir joué avec moi!")
+def depot(solde):
+  montant = float(input("Combien voulez-vous déposer?"))
+  solde += montant
+  print("Vous avez", solde, "CHF sur votre compte.")
+  return solde
+
+def choix_options():
+  print("Choisir parmi les options suivantes:")
+  print("1 - Afficher le solde du compte")
+  print("2 - Retirer de l'argent")
+  print("3 - Déposer de l'argent")
+  print("4 - Quitter")
+  choix = int(input())
+  while choix != 1 and choix != 2 and choix != 3 and choix != 4:
+    choix = int(input("Le choix n'est pas valide. Choisissez entre 1, 2, 3 et 4."))
+  return choix
+
+print("Bancomat à votre disposition! Insérez votre carte.")
+solde = randint(50, 600)
+choix = 0
+while choix != 4:
+  choix = choix_options()
+  if choix == 1:
+    affiche_solde(solde)
+  elif choix == 2:
+    solde = retrait(solde)
+  elif choix == 3:
+    solde = depot(solde)
+  print("-" * 30)
+print("Au revoir!")
 ```
 ````
-
-## Exercice {nump}`exercice`
-
-Écrivez un jeu d'énigmes qui a la structure suivante:
-1.  Créez plusieurs fonctions qui gèrent la résolution des énigmes. Celles-ci
-    doivent retourner l'information nécessaire pour le calcul du score.
-2.  Utilisez une variable pour le score.
-3.  Gérez le déroulement du jeu.
-
-```{exec} python
-:editor: e1754beb-6422-4b9a-8904-aad4a9fe001c
-
-# Écrivez le code ici
-```
