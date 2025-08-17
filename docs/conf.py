@@ -4,7 +4,7 @@
 from tdoc.common.defaults import *
 
 project = "Informatique"
-copyright = "%Y Caroline Blank"
+author = "Caroline Blank"
 license = 'CC-BY-NC-SA-4.0'
 language = 'fr'
 
