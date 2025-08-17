@@ -305,7 +305,6 @@ somme et déterminez si le message est correct.
 
 <script type="module">
 const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
-const debug = false;
 
 // Compute the sum of the digits of the given message.
 function digitSum(msg) {
@@ -351,7 +350,7 @@ function check(fnSum, min, max) {
             randomDecimal(core.randomInt(min, max)), fnSum,
                           Math.random() < 0.5 ? 0 : core.randomInt(1, 9));
         const sum = fnSum(msg);
-        if (debug) console.log(`${msg} => ${sum}`);
+        if (tdoc.dev) console.log(`${msg} => ${sum}`);
         return {
             msg,
             equal(other) { return other.msg === msg; },
@@ -372,7 +371,7 @@ function encode(fnSum, min, max) {
         // Generate a new random message.
         const msg = randomDecimal(core.randomInt(min, max));
         const encoded = sumEncode(msg, fnSum);
-        if (debug) console.log(`${msg} => ${encoded}`);
+        if (tdoc.dev) console.log(`${msg} => ${encoded}`);
         return {
             msg,
             equal(other) { return other.msg === msg; },

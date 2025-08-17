@@ -253,7 +253,6 @@ Pour chacun des messages utiles suivants:
 
 <script type="module">
 const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
-const debug = false;
 
 // Hamming-encode the given message.
 function hammingEncode(msg, parityBits) {
@@ -305,7 +304,7 @@ function encode(parityBits) {
         const msg = Math.floor(Math.random() * (1 << dataBits));
         const encoded = core.toRadix(hammingEncode(msg, parityBits), 2,
                                      (1 << parityBits) - 1);
-        if (debug) {
+        if (tdoc.dev) {
             console.log(`${core.toRadix(msg, 2, dataBits)} => ${encoded}`);
         }
         return {
@@ -329,7 +328,7 @@ function decode(parityBits) {
         const dataBits = ebits - parityBits;
         const msg = Math.floor(Math.random() * (1 << ebits));
         const dec = hammingDecode(msg, parityBits);
-        if (debug) {
+        if (tdoc.dev) {
             console.log(`\
 ${core.toRadix(msg, 2, ebits)} => ${core.toRadix(dec.corrected, 2, ebits)}`);
         }
