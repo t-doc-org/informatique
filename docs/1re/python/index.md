@@ -17,5 +17,6 @@ comprehension
 revisions
 fonctions-intro
 fonctions
+fonctions-dessin
 blackjack
 ```
