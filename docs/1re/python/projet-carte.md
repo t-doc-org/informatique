@@ -192,3 +192,35 @@ texte(30, 390, "Bonne année!", "blue", "40")
 %cadeau(230, 130, 50, 35, "#2367CF", "#6E23CF")
 %```
 %````
+
+%````{solution}
+%```{exec} python
+%:after: fonctions_carte
+%:then: rendu
+%:when: load
+%:class: hidden
+%from tdoc import svg
+%
+%# définition des fonctions
+%def maison():
+%  rectangle(100, 200, 150, 150, "#F7E4E1", "black")
+%  triangle((80, 200), (270, 200), (175, 100), "brown")
+%
+%# programme principal
+%img = svg.Image(600, 400, style='width: 100%; height: 100%')
+%
+%# Ajoute des éléments à l'image
+%maison()
+%
+%start = await animation_frame()
+%n = 0
+%while True:
+%  rectangle(0, 0, 600, 400, "#CCFFFF")
+%  # temps qui passe en seconde
+%  t = (await animation_frame() - start)/1000
+%  if t%1<0.5:
+%    maison()
+%  await render(img)
+%  n += 1
+%
+%````
