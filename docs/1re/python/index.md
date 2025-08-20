@@ -18,5 +18,6 @@ revisions
 fonctions-intro
 fonctions
 fonctions-dessin
+projet-carte
 blackjack
 ```
