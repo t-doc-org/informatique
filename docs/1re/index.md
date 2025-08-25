@@ -3,6 +3,16 @@
 
 # 1{sup}`re` année
 
+## Planification
+
+Le cours d'informatique a lieu en classe entière ou en demi-groupe, et cela
+change chaque semaine. Pensez à vérifier l'horaire régulièrement.
+
+```{iframe} https://docs.google.com/spreadsheets/d/1MNwFr5BhnIuX-ZVhiW4nUU5Gwjf-gOiWIvbArqHdeVI/edit?usp=sharing&rm=minimal
+```
+
+## Thèmes
+
 ```{toctree}
 :maxdepth: 1
 python/index
