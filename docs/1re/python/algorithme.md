@@ -106,7 +106,7 @@ et sans répétition.
 2. Aidez le chien à rejoindre sa niche avec des mots et sans répétition.
 
   ```{solution}
-  Faire 2 fois: avancer, tourner à droite, avancer 2 fois, tourner à gauche\
+  Faire 3 fois: avancer, tourner à droite, avancer 2 fois, tourner à gauche\
   Avancer 6 fois
   ```
 
