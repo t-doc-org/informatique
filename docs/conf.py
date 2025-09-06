@@ -16,4 +16,6 @@ html_theme_options = {
     'show_toc_level': 2,
 }
 
-# tdoc_solutions = 'dynamic'
+metadata = {
+    # 'solutions': 'dynamic',
+}
