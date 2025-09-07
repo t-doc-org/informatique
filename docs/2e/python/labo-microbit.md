@@ -245,7 +245,7 @@ fonction.
 
 ```{exec} micropython
 :after: microbit-reset
-:output-style: max-height: 10rem
+:console-style: max-height: 10rem
 from microbit import *
 
 while True:
