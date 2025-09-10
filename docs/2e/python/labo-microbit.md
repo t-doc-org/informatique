@@ -285,45 +285,6 @@ while True:
 ```
 ````
 
-### Exercice {nump}`exercice`
-
-Testez les deux programmes suivants.
-- Quelles différences y a-t-il entre les deux programmes?
-- Que fait la fonction `is_pressed()`?
-
-```{exec} micropython
-:after: microbit-reset
-from microbit import *
-
-while True:
-    if button_a.was_pressed():
-        display.show(Image.HAPPY)
-    else:
-        display.show(Image.SAD)
-    sleep(200)
-```
-
-```{exec} micropython
-:after: microbit-reset
-from microbit import *
-
-while True:
-    if button_a.is_pressed():
-        display.show(Image.HAPPY)
-    else:
-        display.show(Image.SAD)
-    sleep(200)
-````
-
-```{solution}
-La fonction `was_pressed()` détecte lorsque le bouton a été appuyé une
-fois et effectue le bloc d'instructions. Si on laisse le bouton appuyé,
-le bloc d'instructions ne sera effectué qu'une seule fois.
-
-La fonction `is_pressed()` détecte lorsque le bouton est enfoncé et
-effectue le bloc d'instructions tant que celui-ci est enfoncé.
-```
-
 ## Changement d'état d'un pixel
 
 Un pixel est un point dans une image. Sur le micro:bit un pixel est représenté
