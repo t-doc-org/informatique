@@ -94,7 +94,7 @@ display.show(smile)
     - Que fait `display.scroll("Salut!")`?
     - Que fait `sleep(2000)`?
 
-2.  Modifiez le programme pour qu'il affiche 4 fois "J'aime l'informatique!".
+2.  Modifiez le programme pour qu'il affiche 4 fois "Salut!".
 
 ```{exec} micropython
 :after: microbit-reset
@@ -112,7 +112,7 @@ display.scroll("Comment vas-tu?")
 from microbit import *
 
 for _ in range(4):
-    display.scroll("Vive l'informatique!")
+    display.scroll("Salut!")
     sleep(2000)
 ```
 ````
