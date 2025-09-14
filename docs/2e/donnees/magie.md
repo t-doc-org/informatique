@@ -85,7 +85,8 @@ qu'une seule case.
   :width: 50%
   :align: center
   ```
-- Ce carré est valide.<br><br><br><br><br><br>
+- Ce carré est valide.
+  {vspace}`5.4lh`
 - ```{figure} images/magie3-solution.png
   :alt: Magie solution exercice 3
   :width: 50%
