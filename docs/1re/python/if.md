@@ -404,7 +404,6 @@ Voici trois programmes:
 
 1. Quelles sont les différences?
 2. Que vont-ils afficher?
-3. Faites un ordinogramme pour chacun.
 
 ````{list-grid}
 :style: grid-template-columns: 1fr 1fr 1fr;
