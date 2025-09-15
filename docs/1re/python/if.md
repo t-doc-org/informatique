@@ -137,8 +137,7 @@ passe-t-il?
 Écrivez l'algorithme suivant en Python:
 
 ```{code-block} text
-Demander à l'utilisateur d'entrer un nombre positif
-Sauvegarder la valeur dans la variable a
+Demander à l'utilisateur d'entrer un nombre positif et sauvegarder la valeur dans la variable a
 Si a est plus petit que 0 alors
   écrire "Ce nombre n'est pas positif."
 ```
@@ -163,10 +162,8 @@ if a < 0:
 Écrivez l'algorithme suivant en Python:
 
 ```{code-block} text
-Demander à l'utilisateur d'entrer la valeur de a
-Sauvegarder la valeur dans la variable a
-Demander à l'utilisateur d'entrer la valeur de b
-Sauvegarder la valeur dans la variable b
+Demander à l'utilisateur d'entrer la valeur de a et sauvegarder la valeur dans la variable a
+Demander à l'utilisateur d'entrer la valeur de b et sauvegarder la valeur dans la variable b
 Si a est plus petit que b alors
   écrire "a est plus petit que b"
 Sinon
