@@ -403,7 +403,8 @@ print(nombre)
 Voici trois programmes:
 
 1. Quelles sont les différences?
-2. Que vont-ils afficher?
+2. Indiquez l'ordre d'exécution des lignes.
+3. Que vont-ils afficher?
 
 ````{list-grid}
 :style: grid-template-columns: 1fr 1fr 1fr;
