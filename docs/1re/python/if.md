@@ -332,7 +332,7 @@ Indiquez l'ordre d'exécution et ce que vont afficher les programmes suivants?
     ```
 
     ````{solution}
-    1 - 2 - 4 - 5 - 6 - 8
+    1 - 2 - 4 - 5 - 8
 
     ```{exec} python
     :linenos:
