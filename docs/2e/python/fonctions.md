@@ -72,6 +72,113 @@ meteo_du_jour = input("Quel temps fait-il aujourd'hui? (soleil/pluie/neige/autre
 conseil_meteo(meteo_du_jour)
 ```
 
+### Exercice {num2}`exercice`
+
+Créez une fonction `compteur()`...
+1.  qui compte de 0 à un nombre donné appelé `stop`:
+
+    ```{exec} python
+    :editor: b5114e99-47c4-40d8-93e4-7bac649c10f2
+    def compteur(stop):
+      # à compléter
+
+    compteur(11)
+    ```
+
+    ````{solution}
+    Version avec une boucle while
+      ```{exec} python
+      :linenos:
+      def compteur(stop):
+        i = 0
+        while i <= stop:
+          print(i)
+          i += 1
+
+      compteur(11)
+      ```
+
+     Version avec une boucle for
+      ```{exec} python
+      :linenos:
+      def compteur(stop):
+        for i in range(stop + 1):
+          print(i)
+
+      compteur(11)
+      ```
+    ````
+
+2.  qui compte de `start` à `stop` avec `start` < `stop`:
+
+    ```{exec} python
+    :editor: 4b3ebd3f-e3a6-4041-a51a-3362a1b299c3
+    def compteur(start, stop):
+      # à compléter
+
+    compteur(4, 11)
+    ```
+
+    ````{solution}
+    Version avec une boucle while
+      ```{exec} python
+      :linenos:
+      def compteur(start, stop):
+        i = start
+        while i <= stop:
+          print(i)
+          i += 1
+
+      compteur(4, 11)
+      ```
+
+     Version avec une boucle for
+      ```{exec} python
+      :linenos:
+      def compteur(start, stop):
+        for i in range(start, stop + 1):
+          print(i)
+
+      compteur(4, 11)
+      ```
+    ````
+
+3.  qui compte de `start` à `stop` avec un pas donné `step` (de 2 en 2 ou
+    de 3 en 3):
+
+    ```{exec} python
+    :editor: fd8b8f40-1de2-41ca-8868-6a29af56c20d
+    def compteur(start, stop, step):
+      # à compléter
+
+    compteur(4, 11, 3)
+    ```
+
+    ````{solution}
+    Version avec une boucle while
+      ```{exec} python
+      :linenos:
+      def compteur(start, stop, step):
+        i = start
+        while i <= stop:
+          print(i)
+          i += step
+
+      compteur(4, 11, 3)
+      ```
+
+     Version avec une boucle for
+      ```{exec} python
+      :linenos:
+      def compteur(start, stop, step):
+        for i in range(start, stop + 1, step):
+          print(i)
+
+      compteur(4, 11, 3)
+      ```
+    ````
+
+
 ### Exemple {num2}`exemple`
 
 ```{exec} python
@@ -235,7 +342,7 @@ print(y // 2)
 ### Exercice {num2}`exercice`
 
 Complétez le programme ci-dessous. Nous avons défini une fonction `majeur` pour
-tester si une personne est majeur ou pas.
+tester si une personne est majeure ou pas.
 
 ```{exec} python
 :editor: d62933bb-5602-48e8-b92e-302c5857b135
@@ -271,113 +378,6 @@ else:
   print("Tu pourras voter dans", 18 - age, "ans.")
 ```
 ````
-
-### Exercice {num2}`exercice`
-
-Créez une fonction `compteur()`...
-1.  qui compte de 0 à un nombre donné appelé `stop`:
-
-    ```{exec} python
-    :editor: b5114e99-47c4-40d8-93e4-7bac649c10f2
-    def compteur(stop):
-      # à compléter
-
-    compteur(11)
-    ```
-
-    ````{solution}
-    Version avec une boucle while
-      ```{exec} python
-      :linenos:
-      def compteur(stop):
-        i = 0
-        while i <= stop:
-          print(i)
-          i += 1
-
-      compteur(11)
-      ```
-
-     Version avec une boucle for
-      ```{exec} python
-      :linenos:
-      def compteur(stop):
-        for i in range(stop + 1):
-          print(i)
-
-      compteur(11)
-      ```
-    ````
-
-2.  qui compte de `start` à `stop` avec `start` < `stop`:
-
-    ```{exec} python
-    :editor: 4b3ebd3f-e3a6-4041-a51a-3362a1b299c3
-    def compteur(start, stop):
-      # à compléter
-
-    compteur(4, 11)
-    ```
-
-    ````{solution}
-    Version avec une boucle while
-      ```{exec} python
-      :linenos:
-      def compteur(start, stop):
-        i = start
-        while i <= stop:
-          print(i)
-          i += 1
-
-      compteur(4, 11)
-      ```
-
-     Version avec une boucle for
-      ```{exec} python
-      :linenos:
-      def compteur(start, stop):
-        for i in range(start, stop + 1):
-          print(i)
-
-      compteur(4, 11)
-      ```
-    ````
-
-3.  qui compte de `start` à `stop` avec un pas donné `step` (de 2 en 2 ou
-    de 3 en 3):
-
-    ```{exec} python
-    :editor: fd8b8f40-1de2-41ca-8868-6a29af56c20d
-    def compteur(start, stop, step):
-      # à compléter
-
-    compteur(4, 11, 3)
-    ```
-
-    ````{solution}
-    Version avec une boucle while
-      ```{exec} python
-      :linenos:
-      def compteur(start, stop, step):
-        i = start
-        while i <= stop:
-          print(i)
-          i += step
-
-      compteur(4, 11, 3)
-      ```
-
-     Version avec une boucle for
-      ```{exec} python
-      :linenos:
-      def compteur(start, stop, step):
-        for i in range(start, stop + 1, step):
-          print(i)
-
-      compteur(4, 11, 3)
-      ```
-    ````
-
 
 ### Exercice {num2}`exercice`
 
