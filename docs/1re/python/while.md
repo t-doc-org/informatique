@@ -103,10 +103,7 @@ Ce programme affiche les nombres paires de 2 à 50 compris.
 
 ### Exercice {num2}`exercice`
 
-Sans exécuter le programme, faites un tableau d'états des variables de ce
-programme.
-
-Qu'affichera-t-il?
+Sans exécuter le programme, qu'affichera-t-il?
 
 ```{exec} python
 :editor:
@@ -318,8 +315,7 @@ d'intructions sera exécuté tant que la condition `n < 10` est vérifiée.
 
 ### Exercice {num2}`exercice`
 
-Déterminez ce qu'affichera le programme en utilisant un
-tableau d'états.
+Déterminez ce qu'affichera le programme suivant.
 
 ```{exec} python
 :linenos:
@@ -386,9 +382,9 @@ Vous avez fait 2 notes insuffisantes
 nb_notes_insuf = 0
 note = float(input("Entrez une note: "))
 while note != 99:
-    if note >= 1 and note < 4:
-        nb_notes_insuf += 1
-    note = float(input("Entrez une note: "))
+  if note >= 1 and note < 4:
+    nb_notes_insuf += 1
+  note = float(input("Entrez une note: "))
 print("Vous avez fait", nb_notes_insuf, "notes insuffisantes")
 ```
 ````
@@ -425,6 +421,173 @@ while compte_a_rebours > 0:
     print(compte_a_rebours)
   compte_a_rebours -= 1
 print("BOOM")
+```
+````
+
+### Exercice {num2}`exercice`
+
+Vous empruntez 2'500 CHF à 7.9 % sous la forme d'un crédit à la consommation pour
+vous offrir un scooter.
+
+````{tab-set}
+:sync-group: etape
+```{tab-item} Étape 1
+:sync: etape1
+Calculez le montant d'intérêt à payer si vous remboursez l'entier de cette somme
+dans 40 mois.
+```
+
+```{tab-item} Étape 2
+:sync: etape2
+Calculez le montant total à payer.
+```
+
+```{tab-item} Étape 3
+:sync: etape3
+Modifiez le code pour que l'utilisateur puisse choisir le montant à emprunter et
+la durée du crédit en mois et qu'il soit possible de changer le taux d'intérêt
+facilement.
+```
+````
+
+```{exec} python
+:editor: ef2f4021-ec53-4db3-9679-39209bbcf6c1
+# Écrivez le programme ici
+```
+
+````{solution}
+Étape 1:
+
+```{exec} python
+:linenos:
+dette = 1500
+interets = dette * 7.9 / 100 * 40 / 12
+print(interets)
+```
+
+Étape 2:
+
+```{exec} python
+:linenos:
+dette = 1500
+montant_total = dette + dette * 7.9 / 100 * 40 / 12
+print(montant_total)
+```
+
+Étape 3:
+
+```{exec} python
+:linenos:
+taux = 7.9 / 100
+dette = float(input("Quel montant voulez-vous emprunter?"))
+duree = float(input("Quelle est la durée de l'emprunt?"))
+montant_total = dette + dette * taux * duree / 12
+print(montant_total)
+```
+````
+
+### Exercice {num2}`exercice`
+
+Vous achetez une voiture à 15'000 CHF avec un crédit dont le taux est de 10.5%.
+Vous pouvez rembourser 550 CHF par mois (intérêts compris).
+
+Combien de mensualités sont nécessaires pour rembourser la totalité du montant?
+
+```{exec} python
+:editor: dca83242-8a76-44d3-8dee-46815635908a
+# Écrivez le programme ici
+```
+
+````{solution}
+```{exec} python
+:linenos:
+dette = 15000
+taux = 10.5 / 100
+remboursement = 550
+nb_mensualites = 0
+while dette > 0:
+  dette += dette * taux * 1 / 12
+  nb_mensualites += 1
+  if dette >= remboursement:
+    dette -= remboursement
+    print("Après", nb_mensualites, "mois, la dette est de", dette, "CHF.")
+  else:
+    print("Le dernier versement sera de", dette, "CHF.")
+    dette = 0
+print("Nombre de mensualités nécessaires pour rembourser la dette:", nb_mensualites)
+```
+````
+
+### Exercice {num2}`exercice`
+
+Vous empruntez 3'000 CHF à 9.9% sous la forme d'un crédit à la consommation pour
+vous offrir un scooter. Quel sera le montant total payé et le montant de chaque
+mensualité si vous étalez le crédit sur 60 mois?
+
+Vous avez vu en économie que les intérêts d'un prêt à terme se calculent avec la
+formule:
+
+$\text{Intérêts} = \text{Dette} \cdot \dfrac{\text{Taux d'intérêt}}{100} \cdot \dfrac{\text{(Nombre de mois + 1)/2}}{12}$
+
+
+`````{tab-set}
+:sync-group: etape
+````{tab-item} Étape 1
+:sync: etape1
+Écrivez un programme qui calcule et affiche:
+- les intérêts (en utilisant la formule ci-dessus)
+- le montant total
+- le montant des mensualités
+````
+
+````{tab-item} Étape 2
+:sync: etape2
+Écrivez la suite du programme qui va simuler le remboursement de la dette mois
+par mois.
+```{code-block} text
+...
+--------------------------------------------
+Après 1 mois:
+Intérêts: 24.75 CHF
+Dette à la fin du mois (avec intérêts): 3024.75 CHF
+Dette après paiement de la mensualité: 2962.15 CHF
+--------------------------------------------
+Après 2 mois:
+Intérêts: 24.4377375 CHF
+Dette à la fin du mois (avec intérêts): 2986.5877375 CHF
+Dette après paiement de la mensualité: 2923.9877375 CHF
+--------------------------------------------
+...
+```
+
+````
+`````
+
+```{exec} python
+:editor: 6d28ba5f-1ced-4f5e-ac8c-0b3a35295856
+# Écrivez le programme ici
+```
+
+````{solution}
+```{exec} python
+:linenos:
+dette = 3000
+taux = 9.9 / 100
+remboursement = 62.6
+nb_mensualites = 60
+interet_total = 0
+for n in range(nb_mensualites):
+  print("--------------------------------------------")
+  print("Après", n+1, "mois:")
+  interet_mensuel = dette * taux * 1 / 12
+  print("Intérêts:", interet_mensuel, "CHF")
+  dette += interet_mensuel
+  print("Dette à la fin du mois (avec intérêts):", dette, "CHF")
+  dette -= remboursement
+  print("Dette après paiement de la mensualité:", dette, "CHF")
+  interet_total += interet_mensuel
+print("--------------------------------------------")
+print("Intérêts:", interet_total, "CHF")
 ```
 ````
 

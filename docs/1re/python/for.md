@@ -44,6 +44,7 @@ Sans les exécuter, qu'afficheront les programmes suivants?
 
 Ensuite, testez vos réponses en les exécutant.
 
+{.lower-alpha-paren}
 1.  ```{exec} python
     :linenos:
     print("Lancer d'une pièce.")
@@ -83,26 +84,43 @@ Ensuite, testez vos réponses en les exécutant.
 
 ### Exercice {num2}`exercice`
 
-1.  Que fait le programme suivant?
-    ```{exec} python
-    :editor: cdf06593-2fc5-4f68-af74-2a6113bec6dc
-    for _ in range(6):
-      print("Salut")
-    ```
+`````{tab-set}
+:sync-group: etape
+````{tab-item} Étape 1
+:sync: etape1
+Que fait le programme suivant?
+````
 
-2.  Modifiez-le pour qu'il affiche 9 fois "Salut".
+````{tab-item} Étape 2
+:sync: etape2
+Modifiez-le pour qu'il affiche 9 fois "Salut".
+````
 
-3.  Modifiez-le pour qu'il affiche:
-    ```{code-block} text
-    Salut
-    Comment ça va?
-    Salut
-    Comment ça va?
-    Salut
-    Comment ça va?
-    ```
+````{tab-item} Étape 3
+:sync: etape3
+Modifiez-le pour qu'il affiche:
+```{code-block} text
+Salut
+Comment ça va?
+Salut
+Comment ça va?
+Salut
+Comment ça va?
+```
+````
 
-4.  Modifiez-le pour qu'à la fin du programme, il affiche "Au revoir!".
+````{tab-item} Étape 3
+:sync: etape4
+Modifiez-le pour qu'à la fin du programme, il affiche "Au revoir!".
+````
+
+`````
+
+```{exec} python
+:editor: cdf06593-2fc5-4f68-af74-2a6113bec6dc
+for _ in range(6):
+  print("Salut")
+```
 
 ````{solution}
 ```{exec} python
@@ -203,6 +221,8 @@ entiers plus grands que 0.
 ````{solution}
 
 Il y a plusieurs manières de faire.
+
+{.lower-alpha-paren}
 1.  Comme ajouter 0 à une somme ne change rien, je peux effectuer le calcul
     suivant: $0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10$
 
@@ -318,6 +338,7 @@ for i in range(1, 21):
 Écrivez un programme qui affiche le résultat des calculs suivants sans le noter
 explicitement:
 
+{.lower-alpha-paren}
 1.  $1 + 2 + 3 + 4 + ... + 99 + 100$
 
     ```{exec} python
@@ -379,7 +400,7 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
 :width: 200px
 :align: center
 ```
-
+{.lower-alpha-paren}
 1.  Écrivez un programme qui permet de calculer le nombre de billes nécessaires
     pour construire la pyramide de l'image (elle a 7 étages). Utilisez une
     boucle `for`.
@@ -464,7 +485,7 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
 ### Exercice {num2}`exercice`
 
 Le 1{sup}`er` janvier, les parents de Chrystel ont déposé sur son livret
-d'épargne 1500 CHF au taux de 2 %.
+d'épargne 15 000 CHF au taux de 0.5 %.
 
 1.  Écrivez un programme pour calculer le montant qu'elle aura après 1 an.
 
@@ -476,15 +497,15 @@ d'épargne 1500 CHF au taux de 2 %.
     ````{solution}
     ```{exec} python
     :linenos:
-    montant = 1500
-    montant += 2 / 100 * montant
+    montant = 15000
+    montant += 0.5 / 100 * montant
     print(montant)
     ```
 
     ```{exec} python
     :linenos:
-    montant = 1500
-    montant = 102 / 100 * montant
+    montant = 15000
+    montant = 100.5 / 100 * montant
     print(montant)
     ```
     ````
@@ -500,17 +521,17 @@ d'épargne 1500 CHF au taux de 2 %.
     ````{solution}
     ```{exec} python
     :linenos:
-    montant = 1500
+    montant = 15000
     for _ in range(10):
-      montant += 2 / 100 * montant
+      montant += 0.5 / 100 * montant
     print(montant)
     ```
 
     ```{exec} python
     :linenos:
-    montant = 1500
+    montant = 15000
     for _ in range(10):
-      montant = 102 / 100 * montant
+      montant = 100.5 / 100 * montant
     print(montant)
     ```
     ````
@@ -529,7 +550,7 @@ d'épargne 1500 CHF au taux de 2 %.
     montant = float(input("Montant déposé: "))
     duree = int(input("Durée du placement: "))
     for _ in range(duree):
-      montant += 2 / 100 * montant
+      montant += 0.5 / 100 * montant
     print(montant)
     ```
 
@@ -538,7 +559,7 @@ d'épargne 1500 CHF au taux de 2 %.
     montant = float(input("Montant déposé: "))
     duree = int(input("Durée du placement: "))
     for _ in range(duree):
-      montant = 102 / 100 * montant
+      montant = 100.5 / 100 * montant
     print(montant)
     ```
     ````
@@ -572,3 +593,5 @@ d'épargne 1500 CHF au taux de 2 %.
     print(montant)
     ```
     ````
+
+
