@@ -109,7 +109,7 @@ Comment ça va?
 ```
 ````
 
-````{tab-item} Étape 3
+````{tab-item} Étape 4
 :sync: etape4
 Modifiez-le pour qu'à la fin du programme, il affiche "Au revoir!".
 ````
