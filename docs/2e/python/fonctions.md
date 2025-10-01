@@ -352,7 +352,7 @@ def majeur(age):
   else:
     return False
 
-# Demandez son âge à l'utiliateur
+# Demandez son âge à l'utilisateur
 age = ...
 
 if majeur(age):
