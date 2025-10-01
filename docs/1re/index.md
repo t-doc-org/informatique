@@ -21,4 +21,5 @@ html-css/index
 architecture/index
 representation-info/index
 microbit/index
+objectifs/index
 ```
