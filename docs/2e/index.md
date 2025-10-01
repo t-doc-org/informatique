@@ -21,4 +21,5 @@ bases-de-donnees/index
 donnees/index
 reseaux/index
 javascript/index
+objectifs/index
 ```
