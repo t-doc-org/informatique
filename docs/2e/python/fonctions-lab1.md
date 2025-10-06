@@ -90,7 +90,7 @@ def affiche_solde(solde):
   print("Le solde de votre compte est de", solde, "CHF.")
 
 def solde_suffisant(montant, solde):
-  if montant < solde:
+  if montant <= solde:
     return True
   else:
     return False
