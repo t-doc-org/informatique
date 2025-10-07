@@ -310,7 +310,7 @@ for i in range(1, 11):
 
 ### Exercice {num2}`exercice`
 
-Écrivez un programme qui affiche les nombres paires jusqu'à 20.
+Écrivez un programme qui affiche les nombres pairs jusqu'à 20.
 
 ```{exec} python
 :editor: c0a8317f-b8d9-465b-85f6-2865f32d4d6e
