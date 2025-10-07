@@ -627,7 +627,7 @@ nombre_2 = float(input("Choisir un deuxième nombre: "))
 nombre_3 = float(input("Choisir un troisième nombre: "))
 if nombre_1 > nombre_2 and nombre_1 > nombre_3:
   print("Le plus grand nombre est", nombre_1)
-elif nombre_2 > nombre_1 and nombre_2 > nombre_3::
+elif nombre_2 > nombre_1 and nombre_2 > nombre_3:
   print("Le plus grand nombre est", nombre_2)
 else:
   print("Le plus grand nombre est", nombre_3)
