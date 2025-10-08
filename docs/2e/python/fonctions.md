@@ -507,7 +507,7 @@ print("Le prix final est de", prix_final, "CHF.")
 ### Exercice {num2}`exercice`
 
 Pour calculer le prix de l'amende à payer en cas de dépassement de vitesse,
-consulter le document suivant: [Liste sanctions](sanctions-vitesse.pdf)
+consultez le document suivant: [Liste sanctions](sanctions-vitesse.pdf)
 
 
 Écrivez une fonction qui retourne le prix de l'amende à payer en fonction de la
@@ -543,11 +543,13 @@ def amende(vit_autorisee, vit_mesuree):
   elif depassement <= 25:
     return 260
   else:
+    print("La sanction sera plus qu'une amende.")
     return -100
 
 print(amende(120,140))
 print(amende(120,145))
 print(amende(120,120))
+print(amende(120, 180))
 ```
 ````
 
@@ -602,7 +604,7 @@ def est_diviseur(nombre, diviseur):
     return False
 
 def est_premier(nb_diviseurs):
-  if n == 2:
+  if nb_diviseurs == 2:
     return True
   else:
     return False
