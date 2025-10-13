@@ -18,7 +18,7 @@ eleves = ["2F4", "Économie et droit", 5.0, 2007]
 
 La liste `matieres` ne contient que des éléments de type `str`. La liste `notes`
 ne contient que des éléments de type `float`. Mais la liste `eleves` contient
-des éléments de types différents 'str', 'float' et 'int'.
+des éléments de types différents `str`, `float` et `int`.
 
 ## Création d'une liste
 
@@ -59,9 +59,9 @@ liste_vide = []
 ### Exercice {num2}`exercice`
 
 1.  Créez les listes suivantes en Python :
-    - Les salles de classe dans lesquelles tu as des cours
-    - Les années de naissance des membres de ta famille
-    - La taille en mètres de tes amis
+    - La liste des salles de classe dans lesquelles tu as des cours.
+    - La liste des années de naissance des membres de ta famille.
+    - La liste de la taille en mètres de tes amis.
 
 2.  Affichez les trois listes.
 
@@ -163,8 +163,13 @@ suivant:
 
 ```{exec} python
 :editor: b0091579-35b5-41d7-9316-81f642ff24c0
+# ne pas modifier
 lettres = ["A", "B", "C", "D", "E", "F"]
-# ajoutez le code ici
+
+# à modifier et à compléter
+lettres[...] = ...
+
+# ne pas modifier
 print(lettres)
 ```
 
@@ -191,17 +196,14 @@ le print affiche la liste suivante:
 ['Fribourg', 'Lausanne', 'Berne', 'Zurich', 'Genève']
 ```
 
-Il vous faudra pour cela modifier les éléments de la liste villes.
-
 ```{exec} python
 :editor: e0da4c93-4aed-4db0-8b9e-6155b829ad46
+# ne pas modifier
 villes = ["Fribourg", "Zug", "Berne", "Lugano", "Soleure"]
 
-# à modifier
-villes
-villes
-villes
+# complétez le code ici
 
+# ne pas modifier
 print(villes)
 ```
 
@@ -231,6 +233,7 @@ def controle_position(position):
   print("Position correcte")
   print("Position incorrecte")
 
+# ne pas modifier le code ci-dessous
 controle_position([100, 200])
 controle_position([-100, 200])
 controle_position([100, -200])
@@ -376,7 +379,7 @@ ma_liste.count(mon_element)
 1.  Créez une liste, nommée `sports` avec les éléments suivants: `kayak`,
     `escrime` et `escalade`.
 2.  Affichez la liste et son nombre d'éléments.
-3.  Demandez cinq sports à l'utilisateur et ajoutez-les à la liste `sports`.
+3.  Demandez trois sports à l'utilisateur et ajoutez-les à la liste `sports`.
 4.  Afficher la liste et son nombre d'éléments.
 5.  Ajoutez l'élément `tennis de table` à l'index 3.
 6.  Affichez la liste et son nombre d'éléments.
@@ -396,7 +399,7 @@ ma_liste.count(mon_element)
 :linenos:
 sports = ["kayak", "escrime", "escalade"]
 print(sports, len(sports))
-for _ in range(5):
+for _ in range(3):
   sport = input("Entrer un sport: ")
   sports.append(sport)
 print(sports, len(sports))
@@ -414,11 +417,11 @@ print(sports, len(sports))
 
 1.  Demandez à l'utilisateur d'entrer 6 nombres et stockez-les dans la liste
     `nombres`.
-2.  Afficher la liste.
-3.  Trier la liste.
-4.  Afficher la liste.
-5.  Inverser l'ordre des éléments.
-6.  Afficher la somme des éléments.
+2.  Affichez la liste.
+3.  Triez la liste.
+4.  Affichez la liste.
+5.  Inversez l'ordre des éléments.
+6.  Affichez la somme des éléments.
 
 ```{exec} python
 :editor: 1d0149fa-92a5-4cd1-8984-1b83ed61054d

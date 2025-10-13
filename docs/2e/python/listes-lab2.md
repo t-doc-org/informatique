@@ -10,7 +10,7 @@ solutions: dynamic
 
 ## Exercice {nump}`exercice`
 
-Écrivez un programme qui calcule et afficher la moyenne de 5 notes qui seront
+Écrivez un programme qui calcule et affiche la moyenne de 5 notes qui seront
 demandées à l'utilisateur.
 
 ```{exec} python
@@ -38,7 +38,7 @@ print(moyenne)
 
 ## Exercice {nump}`exercice:py2-lab2-exemple-liste`
 
-Répondez aux questions suivantes en lien avec le programme suivant:
+Répondez aux questions en lien avec le programme suivant:
 1.  Que fait `append(5.5)`?
 2.  Qu'affiche `print(notes[2])`?
 3.  Quelle différence y a-t-il entre `remove()` et `del`?
@@ -228,9 +228,9 @@ Voici un exemple d'exécution du programme:
 
 ```{code-block}
 Nombre de notes: 3
-Entrer note: 4
-Entrer note: 5
-Entrer note: 5.5
+Entrez une note: 4
+Entrez une note: 5
+Entrez une note: 5.5
 Moyenne: 4.833333333333333
 ```
 
@@ -254,7 +254,7 @@ nb_notes = int(input("Nombre de notes: "))
 
 # Demande les notes à l'utilisateur
 for _ in range(nb_notes):
-  notes.append(float(input("Entrer note:")))
+  notes.append(float(input("Entrez une note:")))
 
 # Calcule la somme des notes
 for note in notes:

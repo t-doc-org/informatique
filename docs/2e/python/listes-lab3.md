@@ -8,39 +8,26 @@ solutions: dynamic
 
 # Listes Lab - Mini projet
 
-Les exercices suivants vous mèneront petit à petit à simuler la création d'un
-compte et l'identification sur un site ou une application.
+Le but de cet exercice est de créer étape par étape une simulation de la
+création d'un compte et l'identification sur un site ou une application.
 
-Pour cet exercice, travaillez avec Visual Studio Code.
+``````{tab-set}
+:sync-group: etape
+`````{tab-item} Étape 1
+:sync: etape1
+**Enregistrement d'un nouvel utilisateur**
 
-Pour débuter, vous avez le code suivant:
+Complétez le programme ci-dessous:
 
-```{exec} python
-:when: never
-# Définition des fonctions
-
-# Définition des variables
-utilisateurs = ["user1", "user2", "user3"]
-mots_de_passe = ["mdp1", "mdp2", "mpd3"]
-
-# Programme principal
-```
-
-## Exercice {nump}`exercice`
-
-Complétez le programme ci-dessus qui a pour but d'enregistrer de nouveaux
-utilisateurs sur un site ou une application.
-
-Le programme doit:
-- demander à l'utilisateur de choisir un nom d'utilisateur et un mot de passe.
-- créer un fonction `utilisateur_existe(utilisateur)` qui retourne `True` si
-  l'utilisateur passé en paramètre existe dans la liste `utilisateurs`.
-- si le nom d'utilisateur n'existe pas encore, ajouter le nom d'utilisateur dans
-  la liste `utilisateurs` et le mot de passe dans celle `mots_de_passe`.
+1.  demandez à l'utilisateur de choisir un nom d'utilisateur et un mot de passe.
+2.  créez un fonction `utilisateur_existe(utilisateur)` qui retourne `True` si
+    l'utilisateur passé en paramètre existe dans la liste `utilisateurs`.
+3.  si le nom d'utilisateur n'existe pas encore, ajoutez le nom d'utilisateur
+    dans la liste `utilisateurs` et le mot de passe dans celle `mots_de_passe`.
 
 Voici un exemple d'exécution du programme:
 
-```{code-block} text
+````{code-block} text
 Choisissez un nom d'utilisateur: user1
 Choisissez un mot de passe: hfhf
 Cet utilisateur existe déjà.
@@ -48,12 +35,12 @@ Cet utilisateur existe déjà.
 Choisissez un nom d'utilisateur: user4
 Choisissez un mot de passe: mdp4
 L'utilisateur user4 a été ajouté.
-```
+````
 
-```{tip}
+````{tip}
 :class: dropdown
 Utilisez la syntaxe `if a in b` pour vérifier si a se trouve dans la liste b.
-```
+````
 
 ````{solution}
 ```{exec} python
@@ -65,11 +52,7 @@ def utilisateur_existe(utilisateur):
   else:
     return False
 
-utilisateurs = ["user1", "user2", "user3"]
-mots_de_passe = ["mdp1", "mdp2", "mdp3"]
-
-login = input("Choisissez un nom d'utilisateur: ")
-mdp = input("Choisissez un mot de passe: ")
+...
 
 if utilisateur_existe(login):
   print("Cet utilisateur existe déjà.")
@@ -79,8 +62,10 @@ else:
   print("L'utilisateur", login, "a été ajouté.")
 ```
 ````
-
-## Exercice {nump}`exercice`
+`````
+`````{tab-item} Étape 2
+:sync: etape2
+**Fonction pour créer un utilisateur**
 
 Sauvegardez cette fonctionnalité dans la fonction `cree_utilisateur()` qui va se
 charger d'ajouter un nouvel utilisateur avec son mot de passe.
@@ -90,10 +75,7 @@ charger d'ajouter un nouvel utilisateur avec son mot de passe.
 :when: never
 :linenos:
 def utilisateur_existe(utilisateur):
-  if utilisateur in utilisateurs:
-    return True
-  else:
-    return False
+  ...
 
 def cree_utilisateur():
   login = input("Choisissez un nom d'utilisateur: ")
@@ -106,28 +88,25 @@ def cree_utilisateur():
     mots_de_passe.append(mdp)
     print("L'utilisateur", login, "a été ajouté.")
 
-utilisateurs = ["user1", "user2", "user3"]
-mots_de_passe = ["mdp1", "mdp2", "mpd3"]
+...
 
 cree_utilisateur()
-
 ```
 ````
+`````
+`````{tab-item} Étape 3
+:sync: etape3
+**Identification d'un utilisateur**
 
-## Exercice {nump}`exercice`
+Complétez le programme ci-dessous:
 
-Complétez le programme précédent qui a pour but de vérifier l'accès à un site
-ou à une application via l'utilisation d'un nom d'utilisateur et d'un mot de
-passe.
-
-Le programme doit:
-- demander à l'utilisateur d'entrer son nom d'utilisateur et son mot de passe.
-- vérifier si les identifiants entrés sont corrects. Pour cela,
-    1. utiliser la fonction `utilisateur_existe(utilisateur)` pour savoir si
-       le nom d'utilisateur existe.
-    2. créer une fonction `mot_de_passe_correct(utilisateur, mdp)` qui
-       retourne `True` si le mot de passe passé en paramètre correspond au
-       mot de passe de l'utilisateur.
+1.  demandez à l'utilisateur d'entrer son nom d'utilisateur et son mot de passe.
+2.  vérifiez si les identifiants entrés sont corrects. Pour cela,
+    -   utiliser la fonction `utilisateur_existe(utilisateur)` pour savoir si
+        le nom d'utilisateur existe.
+    -   créer une fonction `mot_de_passe_correct(utilisateur, mdp)` qui
+        retourne `True` si le mot de passe passé en paramètre correspond au
+        mot de passe de l'utilisateur.
 
 Voici un exemple d'exécution du programme:
 
@@ -157,12 +136,10 @@ Pensez à stocker la valeur pour pouvoir la réutiliser.
 
 ````{solution}
 ```{exec} python
+:when: never
 :linenos:
 def utilisateur_existe(utilisateur):
-  if utilisateur in utilisateurs:
-    return True
-  else:
-    return False
+  ...
 
 def mot_de_passe_correct(utilisateur, mdp):
   index = utilisateurs.index(utilisateur)
@@ -172,21 +149,9 @@ def mot_de_passe_correct(utilisateur, mdp):
     return False
 
 def cree_utilisateur():
-  login = input("Choisissez un nom d'utilisateur: ")
-  mdp = input("Choisissez un mot de passe: ")
+  ...
 
-  if utilisateur_existe(login):
-    print("Cet utilisateur existe déjà.")
-  else:
-    utilisateurs.append(login)
-    mots_de_passe.append(mdp)
-    print("L'utilisateur", login, "a été ajouté.")
-
-utilisateurs = ["user1", "user2", "user3"]
-mots_de_passe = ["mdp1", "mdp2", "mpd3"]
-
-login = input("Entrez votre nom d'utilisateur: ")
-mdp = input("Entrez votre mot de passe: ")
+...
 
 if utilisateur_existe(login):
   if mot_de_passe_correct(login, mdp):
@@ -197,38 +162,26 @@ else:
   print("L'utilisateur", login, "n'existe pas.")
 ```
 ````
-
-## Exercice {nump}`exercice`
+`````
+`````{tab-item} Étape 4
+:sync: etape4
+**Fonction pour l'identification**
 
 Sauvegardez cette fonctionnalité dans la fonction `identification()` qui va
 simuler l'identification d'un utilisateur.
 
 ````{solution}
 ```{exec} python
+:when: never
 :linenos:
 def utilisateur_existe(utilisateur):
-  if utilisateur in utilisateurs:
-    return True
-  else:
-    return False
+  ...
 
 def mot_de_passe_correct(utilisateur, mdp):
-  index = utilisateurs.index(utilisateur)
-  if mdp == mots_de_passe[index]:
-    return True
-  else:
-    return False
+  ...
 
 def cree_utilisateur():
-  login = input("Choisissez un nom d'utilisateur: ")
-  mdp = input("Choisissez un mot de passe: ")
-
-  if utilisateur_existe(login):
-    print("Cet utilisateur existe déjà.")
-  else:
-    utilisateurs.append(login)
-    mots_de_passe.append(mdp)
-    print("L'utilisateur", login, "a été ajouté.")
+  ...
 
 def identification():
   login = input("Entrez votre nom d'utilisateur: ")
@@ -241,15 +194,14 @@ def identification():
   else:
     print("L'utilisateur", login, "n'existe pas.")
 
-utilisateurs = ["user1", "user2", "user3"]
-mots_de_passe = ["mdp1", "mdp2", "mpd3"]
-
-cree_utilisateur()
+...
 identification()
 ```
 ````
-
-## Exercice {nump}`exercice`
+`````
+`````{tab-item} Étape 5
+:sync: etape5
+**Menu à choix**
 
 Complétez le programme précédent pour pouvoir choisir entre trois options:
 
@@ -271,44 +223,21 @@ infinie et continuer le programme.
 
 ````{solution}
 ```{exec} python
+:when: never
 :linenos:
 def utilisateur_existe(utilisateur):
-  if utilisateur in utilisateurs:
-    return True
-  else:
-    return False
+  ...
 
 def mot_de_passe_correct(utilisateur, mdp):
-  index = utilisateurs.index(utilisateur)
-  if mdp == mots_de_passe[index]:
-    return True
-  else:
-    return False
+  ...
 
 def cree_utilisateur():
-  login = input("Choisissez un nom d'utilisateur: ")
-  mdp = input("Choisissez un mot de passe: ")
-
-  if utilisateur_existe(login):
-    print("Cet utilisateur existe déjà.")
-  else:
-    utilisateurs.append(login)
-    mots_de_passe.append(mdp)
-    print("L'utilisateur", login, "a été ajouté.")
+  ...
 
 def identification():
-  login = input("Entrez votre nom d'utilisateur: ")
-  mdp = input("Entrez votre mot de passe: ")
-  if utilisateur_existe(login):
-    if mot_de_passe_correct(login, mdp):
-      print("Bienvenu(e) sur le site.")
-    else:
-      print("Le mot de passe est incorrect.")
-  else:
-    print("L'utilisateur", login, "n'existe pas.")
+  ...
 
-utilisateurs = ["user1", "user2", "user3"]
-mots_de_passe = ["mdp1", "mdp2", "mpd3"]
+...
 
 while True:
   print("Que voulez-vous faire ?")
@@ -327,8 +256,10 @@ while True:
 print("Au revoir!")
 ```
 ````
-
-## Exercice {nump}`exercice`
+`````
+`````{tab-item} Étape 6
+:sync: etape6
+**Affichage des listes**
 
 Complétez le programme précédent pour que lorsque l'utilisateur quitte le
 programme la liste de tous les utilisateurs du système avec leur mot de passe
@@ -346,6 +277,19 @@ Nom d'utilisateur: user3 Mot de passe: mdp3
 :class: dropdown
 Utilisez `len(ma_liste)` pour récupérer la longueur de la liste et utiliser une
 boucle `for` pour parcourir tous les index.
+```
+`````
+``````
+
+```{exec} python
+:editor: 4cb48b0f-84fd-4681-a491-6aad56663022
+# Définition des fonctions
+
+# Définition des variables
+utilisateurs = ["user1", "user2", "user3"]
+mots_de_passe = ["mdp1", "mdp2", "mpd3"]
+
+# Programme principal
 ```
 
 ````{solution}
@@ -386,8 +330,8 @@ def identification():
   else:
     print("L'utilisateur", login, "n'existe pas.")
 
-utilisateurs = ["user1", "user2", "user3"]
-mots_de_passe = ["mdp1", "mdp2", "mpd3"]
+utilisateurs = []
+mots_de_passe = []
 
 while True:
   print("Que voulez-vous faire ?")

@@ -139,7 +139,7 @@ code_postal = int(input("Entre un code postal : "))
 while code_postal >= 0:
     if code_postal in codes_postaux:
         print("Erreur, ce code postal est déjà dans la liste.")
-    elif code_postal >= 0:
+    else:
         codes_postaux.append(code_postal)
     code_postal = int(input("Entre un code postal : "))
 
