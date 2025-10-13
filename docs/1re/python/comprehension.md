@@ -9,7 +9,7 @@ solutions: dynamic
 
 ## Notion de variable
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice`
 
 Sans l'exécuter, qu'affiche ce programme si:
 
@@ -35,7 +35,7 @@ print(nombre_km, prix_location)
 3. 50 125 (passage dans le if)
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice`
 
 Sans exécuter le programme, répondez aux questions.
 
@@ -57,7 +57,28 @@ print(n+1)
 2. 20
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice`
+
+Sans l'exécuter, qu'est-ce que le programme suivant affiche.
+
+Ensuite, exécutez le programme pour vérifier votre réponse.
+
+```{exec} python
+:editor:
+n = 6
+n *= 3
+for _ in range(4):
+  n = n + 2
+  n = n / 2
+n = n - 5
+print(n)
+```
+
+```{solution}
+-2.0
+```
+
+### Exercice {nump}`exercice` (boucle while)
 
 Sans l'exécuter, qu'affiche ce programme:
 
@@ -86,7 +107,7 @@ while n <= 5:
 3. /
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice` (boucle while)
 
 Sans l'exécuter, qu'affiche ce programme si:
 
@@ -115,7 +136,7 @@ while n <= 5:
 3. /
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice` (boucle while)
 
 Sans l'exécuter, qu'affiche ce programme si:
 
@@ -139,7 +160,7 @@ print(n)
 3. 9
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice` (boucle while)
 
 Sans l'exécuter, qu'affiche ce programme si:
 
@@ -161,30 +182,9 @@ while n <= 5:
 2. \
 ```
 
-### Exercice {num2}`exercice`
-
-Sans l'exécuter, qu'est-ce que le programme suivant affiche.
-
-Ensuite, exécutez le programme pour vérifier votre réponse.
-
-```{exec} python
-:editor:
-n = 6
-n *= 3
-for _ in range(4):
-  n = n + 2
-  n = n / 2
-n = n - 5
-print(n)
-```
-
-```{solution}
--2.0
-```
-
 ## Ordre d'exécution
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice`
 
 Sans exécuter le programme,
 
@@ -205,7 +205,7 @@ print("Bonjour", nom, "vous avez", age + 1, "ans!")
 2. Bonjour Bob vous avez 17 ans!
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice`
 
 Sans exécuter le programme,
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
@@ -235,7 +235,7 @@ else:
 4. 1 - 2 - 4 - 5 / Ce nombre est positif.
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice`
 
 Sans exécuter le programme,
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
@@ -260,7 +260,7 @@ print("n =", n, "et s =", s)
 
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice` (boucle while)
 
 Sans exécuter le programme,
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
@@ -286,7 +286,7 @@ print("J'ai fini!")
    J'ai fini!
 ```
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice` (boucle while)
 
 Nous aimerions programmer l'algorithme de Syracuse:
 
@@ -331,7 +331,7 @@ print("L'algorithme de Syracuse est terminé et il se termine bien par 4, 2 et 1
 
 ## Boucle `for` et boucle `while`
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice` (boucle while)
 
 Transformez le code suivant afin d'utiliser une boucle `while` à la place de la
 boucle `for`.
@@ -351,7 +351,7 @@ while n < 20:
 ```
 ````
 
-### Exercice {num2}`exercice`
+### Exercice {nump}`exercice` (boucle while)
 
 Transformez le code suivant afin d'utiliser une boucle `for` à la place de la
 boucle `while`.

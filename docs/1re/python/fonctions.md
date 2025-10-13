@@ -152,8 +152,8 @@ programme juste après les imports.
 ### Exercice {num2}`exercice`
 
 1. Définissez une fonction `calcule_et_affiche_perimetre_carre()`.
-2. Combien de paramètres sont-ils nécessaires?
-3. Afficher le périmetre d'un carré de côté 7, de carré de côté 12, ainsi qu'en
+2. Combien de paramètres sont nécessaires?
+3. Affichez le périmetre d'un carré de côté 7, d'un carré de côté 12, ainsi qu'en
    utilisant la variable `base`.
 
 ```{exec} python
@@ -186,7 +186,7 @@ calcule_et_affiche_perimetre_carre(base)
 
 ### Exercice {num2}`exercice`
 
-Sans les exécutez, déterminer ce que vont afficher les programmes suivants.\
+Sans les exécuter, déterminez ce que vont afficher les programmes suivants.\
 Font-ils ce qui est demandé?\
 S'il y a une erreur, expliquez et corrigez le problème.
 
@@ -329,7 +329,6 @@ Complétez les programmes suivants uniquement où il y a des `...`:
       perimetre = 4 * ...
       print(perimetre)
 
-    c = 7
     calcule_et_affiche_perimetre_carre(11)
     ```
 
@@ -349,7 +348,7 @@ Complétez les programmes suivants uniquement où il y a des `...`:
 
 ### Exercice {num2}`exercice`
 
-Sans l'exécutez, déterminez ce que va afficher le programme suivant. Ensuite,
+Sans l'exécuter, déterminez ce que va afficher le programme suivant. Ensuite,
 exécutez-le pour vérifier votre réponse.
 
 ```{exec} python
@@ -373,7 +372,7 @@ print(y)
 
 ### Exercice {num2}`exercice`
 
-Sans l'exécutez, déterminez ce que va afficher le programme suivant. Ensuite,
+Sans l'exécuter, déterminez ce que va afficher le programme suivant. Ensuite,
 exécutez-le pour vérifier votre réponse.
 
 ```{exec} python
