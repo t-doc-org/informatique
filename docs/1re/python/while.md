@@ -187,8 +187,8 @@ while i <= 5:
 
 ### Exercice {num2}`exercice:py1-boom`
 
-Nous souhaitons créer un programme qui compte le temps avant qu'une bo
-be explose. Pour cela, un compte à rebours commencera à 10 et ira jusqu'à 1, puis
+Nous souhaitons créer un programme qui compte le temps avant qu'une bombe
+explose. Pour cela, un compte à rebours commencera à 10 et ira jusqu'à 1, puis
 le programme affichera "BOOM".
 
 Écrivez un programme qui correspond à l'algorithme suivant:
