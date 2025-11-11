@@ -25,7 +25,7 @@ Le code **doit** contenir:
 - des variables avec des noms appropriés,
 - des fonctions avec paramètres,
 - des boucles pour éviter les répétitions,
-- des fonctions conditionnelles.
+- des intructions conditionnelles.
 
 Le code **doit** être:
 - organisé correctement (import, définitions de fonction, programme principal),

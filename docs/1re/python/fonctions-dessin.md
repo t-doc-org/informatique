@@ -127,12 +127,12 @@ Pour avoir un plus grand choix, utilisez la valeur hexadécimale, par exemple
 Ajoutez du gazon devant la maison et un soleil.
 ```
 ```{tab-item} Étape 3
-:sync: etape2
+:sync: etape3
 Ajoutez une porte et une fenêtre à la maison. Cet ajout doit se faire dans la
 fonction `maison`.
 ```
 ```{tab-item} Étape 4
-:sync: etape2
+:sync: etape4
 Ajoutez une cheminée et de la fumée.\
 Pour la fumée, créez une fonction `fumee` qui a un paramètre de manière à
 pouvoir choisir/changer la quantité de fumée.
@@ -140,7 +140,7 @@ pouvoir choisir/changer la quantité de fumée.
 L'ordre de dessin des éléments a de l'importance.
 ```
 ```{tab-item} Étape 5
-:sync: etape2
+:sync: etape5
 Ajoutez une barrière en définissant une nouvelle fonction `barriere`.
 
 - Évitez les répétitions en utilisant une boucle.
@@ -150,10 +150,24 @@ Ajoutez une barrière en définissant une nouvelle fonction `barriere`.
     - sa couleur
 ```
 ```{tab-item} Étape 6
-:sync: etape2
+:sync: etape6
 Ajoutez un texte sur l'image.
 ```
+```{tab-item} Étape 7
+:sync: etape7
+Ajoutez un arbre en définissant une nouvelle fonction `arbre`.
+
+- Utilisez des paramètres pour pouvoir modifier:
+    - son emplacement
+    - sa taille
+
+- Ajoutez des pommes sur l'arbre:
+    - en demandant à l'utilisateur le nombre de pommes
+    - en les plaçant aléatoirement
+
+```
 ````
+
 
 
 ```{exec} python
@@ -179,7 +193,24 @@ maison()
 :after: fonctions_dessin_svg
 :then: rendu
 :when: load
+# imports
+from random import randint
+
 # définition des fonctions
+def pommes(n, x, y, rayon):
+  for i in range(n):
+    xp = randint(1, rayon)
+    yp = randint(1, rayon)
+    cercle(x + xp, y + yp, 10, "red")
+
+def arbre(x, y, taille):
+  larg_tronc = taille/4
+  rayon = taille * 1/2
+  rectangle(x, y, larg_tronc, taille, "#8B4513")
+  cercle(x + larg_tronc/2, y, rayon, "#228B22" )
+  nb_pommes = int(input("Combien de pommes souhaites-tu mettre sur l'arbre?"))
+  pommes(nb_pommes, x + larg_tronc/2 - rayon/2, y - rayon/2 , int(rayon))
+
 def barriere(x, y, longueur, couleur):
   rectangle(x, y, longueur, 10, couleur)
   rectangle(x, y+25, longueur, 10, couleur)
@@ -220,10 +251,13 @@ def maison():
 creation_image(600,400, "#DAF5F3")
 
 # Ajoute des éléments à l'image
+# soleil
 cercle(530, 70, 50, "yellow")
+# gazon
 rectangle(0, 300, 600, 150, "#006400")
 maison()
 barriere(300, 250, 250, "#8B0000")
 barriere(10, 250, 80, "#8B4513")
+arbre(370, 200, 150)
 texte(140, 190, "Bienvenue", "black", 15)
 ```
