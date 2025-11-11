@@ -27,12 +27,12 @@ Nous en avons déjà rencontrées plusieurs:
 - int(...): convertit ce qui est entre parenthèse en nombre entier
   ```{exec} python
   :when: never
-  age = int(input("Quel est ton âge?))
+  age = int(input("Quel est ton âge?"))
   ```
 - float(...): convertit ce qui est entre parenthèse en nombre à virgule
   ```{exec} python
   :when: never
-  prix = float(input("Quel est le prix de l'article?""))
+  prix = float(input("Quel est le prix de l'article?"))
   ```
 - range(...): renvoie une liste de nombres (de 0 à la valeur entre parenthèse - 1)
   ```{exec} python
