@@ -113,7 +113,10 @@ Ajoute du texte sur l'image.
 :sync-group: etape
 ```{tab-item} Étape 1
 :sync: etape1
-Changez la couleur du fond de l'image, de la maison et du toit.
+Changez la couleur:
+  1. du fond de l'image,
+  2. de la maison,
+  3. du toit.
 
 Il existe une liste de couleurs de base définies: "black", "white", "blue",
 "red", "yellow", "green", gray", etc.
@@ -124,7 +127,7 @@ Pour avoir un plus grand choix, utilisez la valeur hexadécimale, par exemple
 ```
 ```{tab-item} Étape 2
 :sync: etape2
-Ajoutez du gazon devant la maison et un soleil.
+Ajoutez du gazon devant la maison (rectangle) et un soleil (cercle).
 ```
 ```{tab-item} Étape 3
 :sync: etape3
@@ -134,13 +137,27 @@ fonction `maison`.
 ```{tab-item} Étape 4
 :sync: etape4
 Ajoutez une cheminée et de la fumée.\
-Pour la fumée, créez une fonction `fumee` qui a un paramètre de manière à
-pouvoir choisir/changer la quantité de fumée.
+Pour la fumée, créez une fonction `fumee` qui demande à l'utilisateur le nombre
+de nuages de fumée (entre 1 et 4).
+
+Vérifiez que l'utilisateur a bien donné une réponse entre 1 et 4.
 
 L'ordre de dessin des éléments a de l'importance.
 ```
 ```{tab-item} Étape 5
 :sync: etape5
+Ajoutez un texte sur l'image.
+```
+```{tab-item} Étape 6
+:sync: etape6
+Ajoutez un pommier en définissant une nouvelle fonction `pommier`.
+
+Ajoutez 5 pommes sur l'arbre qui apparaissent de manière aléatoire sur le
+pommier à chaque exécution.
+
+```
+```{tab-item} Étape 7
+:sync: etape7
 Ajoutez une barrière en définissant une nouvelle fonction `barriere`.
 
 - Évitez les répétitions en utilisant une boucle.
@@ -148,23 +165,6 @@ Ajoutez une barrière en définissant une nouvelle fonction `barriere`.
     - son emplacement
     - sa longueur
     - sa couleur
-```
-```{tab-item} Étape 6
-:sync: etape6
-Ajoutez un texte sur l'image.
-```
-```{tab-item} Étape 7
-:sync: etape7
-Ajoutez un arbre en définissant une nouvelle fonction `arbre`.
-
-- Utilisez des paramètres pour pouvoir modifier:
-    - son emplacement
-    - sa taille
-
-- Ajoutez des pommes sur l'arbre:
-    - en demandant à l'utilisateur le nombre de pommes
-    - en les plaçant aléatoirement
-
 ```
 ````
 
@@ -197,46 +197,68 @@ maison()
 from random import randint
 
 # définition des fonctions
-def pommes(n, x, y, rayon):
-  for i in range(n):
-    xp = randint(1, rayon)
-    yp = randint(1, rayon)
-    cercle(x + xp, y + yp, 10, "red")
+# Cette fonction affiche ou non les pommes de manière aléatoire
+def pommes():
+  if randint(0,1) == 0:
+    cercle(360, 200, 10, "red")
+  if randint(0,1) == 0:
+    cercle(420, 190, 10, "red")
+  if randint(0,1) == 0:
+    cercle(400, 220, 10, "red")
+  if randint(0,1) == 0:
+    cercle(370, 250, 10, "red")
+  if randint(0,1) == 0:
+    cercle(410, 260, 10, "red")
 
-def arbre(x, y, taille):
-  larg_tronc = taille/4
+def pommier():
+  taille = 120
+  x = 370
+  y = 220
+  larg_tronc = taille/3
   rayon = taille * 1/2
+  # tronc
   rectangle(x, y, larg_tronc, taille, "#8B4513")
+  # feuilles
   cercle(x + larg_tronc/2, y, rayon, "#228B22" )
-  nb_pommes = int(input("Combien de pommes souhaites-tu mettre sur l'arbre?"))
-  pommes(nb_pommes, x + larg_tronc/2 - rayon/2, y - rayon/2 , int(rayon))
+  pommes()
 
 def barriere(x, y, longueur, couleur):
+  # les deux barres horizontales
   rectangle(x, y, longueur, 10, couleur)
   rectangle(x, y+25, longueur, 10, couleur)
+  # les barres horizontales
   poteau_x = x + 10
   while poteau_x < x + longueur - 10:
     rectangle(poteau_x, y-10, 15, 65, couleur)
     poteau_x += 20
 
-def fumee(n):
+def fumee():
+  # demande un nombre à l'utilisateur et vérifie que la valeur est ok
+  n = int(input("Nombre de nuages de fumée (entre 1 et 4)?"))
+  while n < 1 or n > 4:
+    n = int(input("Nombre de nuages de fumée (entre 1 et 4)?"))
+  # position du nuage de fumée
   x = 220
   y = 100
+  # dimension du nuage de fumée
   rx = 10
   ry = 5
   for i in range(n):
     ellipse(x, y, rx, ry, "white")
-    x *= 1.1
-    y *= 0.9
+    # le nuage se déplace vers la droite et vers le haut
+    x += 10
+    y -= 20
+    # le nuage grossit
     rx += 4
     ry += 2
 
 def cheminee():
   rectangle(200, 110, 20, 40, "gray")
-  fumee(7)
+  fumee()
 
 def maison():
   rectangle(100, 200, 150, 150, "#E8AF35")
+  # toit
   cheminee()
   triangle((80, 200), (270, 200), (175, 100), "silver")
   # porte
@@ -256,8 +278,8 @@ cercle(530, 70, 50, "yellow")
 # gazon
 rectangle(0, 300, 600, 150, "#006400")
 maison()
+texte(140, 190, "Bienvenue", "black", 15)
 barriere(300, 250, 250, "#8B0000")
 barriere(10, 250, 80, "#8B4513")
-arbre(370, 200, 150)
-texte(140, 190, "Bienvenue", "black", 15)
+pommier()
 ```
