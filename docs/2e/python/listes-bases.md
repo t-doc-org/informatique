@@ -594,7 +594,7 @@ from random import randint
 
 nombres = []
 
-# Genère la liste de 50 nombres entiers
+# Genère la liste de 1000 nombres entiers
 for _ in range(1000):
   nombres.append(randint(1, 10))
 
