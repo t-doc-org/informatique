@@ -13,26 +13,28 @@ et votre imagination.
 
 ## Consignes
 
-La carte **doit** contenir:
-- un ou plusieurs motifs qui se répètent,
-- au moins un motif répété avec des nuances (changement de couleur, de taille,
-  etc.) effectués au moyen de paramètres,
-- au moins une forme avec une bordure,
-- des couleurs personnalisées,
-- une partie aléatoire (fonction `randint` du module random).
-
-Le code **doit** contenir:
-- des variables avec des noms appropriés,
-- des fonctions avec paramètres,
-- des boucles pour éviter les répétitions,
-- des instructions conditionnelles,
-- au moins une interaction avec l'utilisateur.
-
-Le code **doit** être:
-- organisé correctement (import, définitions de fonction, programme principal),
-- modulaire (décomposition en fonctions avec/sans paramètres),
-- commenté,
-- fonctionnel (sans bogue majeur).
+| Critères | Points |
+| :------- | :----: |
+|**Le dessin contient** | |
+|un ou plusieurs motifs qui se répètent| **1 pt**|
+|au moins un motif répété avec des nuances (changement de couleur, de taille, etc.) effectués au moyen de paramètres| **1 pt**|
+|au moins une forme avec une bordure | **0.5 pt** |
+|des couleurs personnalisées |**0.5 pt** |
+|des variables avec des noms appropriés| **1 pt** |
+|des fonctions avec/sans paramètres| **3 pts** |
+|des boucles pour éviter les répétitions| **2 pts**|
+|des instructions conditionnelles| **2 pts** |
+|au moins une interaction avec l'utilisateur| **2 pts**|
+|**Le code doit être**|
+|organisé correctement (import, définitions de fonction, programme principal) | **1 pt**|
+|modulaire (décomposition en fonctions avec/sans paramètres) | **2 pts** |
+|commenté | **1 pt**|
+|fonctionnel (sans bogue majeur)| **1 pt**|
+|**Fonctionnalités additionnelles** | |
+|une partie aléatoire (fonction `randint` du module `random`)| **2 pts** |
+|un élément animé (déplacement, clignotement, etc.)| **2 pts** |
+| Le dessin est dans le thème, suffisamment complexe et original | **3 pts** |
+|**Total** | **25 pts** |
 
 ```{exec} python
 :name: fonctions_carte
@@ -202,26 +204,17 @@ texte(30, 390, "Bonne année!", "blue", "40")
 %:class: hidden
 %from tdoc import svg
 %
-%# définition des fonctions
-%def maison():
-%  rectangle(100, 200, 150, 150, "#F7E4E1", "black")
-%  triangle((80, 200), (270, 200), (175, 100), "brown")
+%def maison(x, y):
+%  rectangle(x, y, 150, 150, "gray", "black")
+%  triangle((x, y), (x+150, y), (x+80, y-100), "brown")
 %
-%# programme principal
-%img = svg.Image(600, 400, style='width: 100%; height: 100%')
+%creation_image(600, 400, "#f0ffffff")
 %
-%# Ajoute des éléments à l'image
-%maison()
-%
-%start = await animation_frame()
-%n = 0
+%x = 0
 %while True:
-%  rectangle(0, 0, 600, 400, "#CCFFFF")
-%  # temps qui passe en seconde
-%  t = (await animation_frame() - start)/1000
-%  if t%1<0.5:
-%    maison()
-%  await render(img)
-%  n += 1
-%
+%  maison(x, 200)
+%  render(img)
+%  creation_image(600, 400, "#f0ffffff")
+%  x += 10
+%  sleep(1)
 %````
