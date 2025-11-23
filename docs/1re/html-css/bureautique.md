@@ -35,9 +35,9 @@ fichier CSS.
 But: Mettre en forme un document texte avec des styles.
 
 1. Téléchargez le [`document sans les styles`](document-sans-styles.docx).
-2. Ouvrez-le document, activez les modifications et en utilisant
-`Enregistrer sous` sauvegardez le document en suivant les instructions données
-par l'enseignant(e).
+2. Ouvrez-le document, activez les modifications et sauvegardez le document en
+sélectionnant `Enregistrer sous` et en suivant les instructions données
+par l'enseignant(e) pour le nom du fichier et l'emplacement de la sauvegarde.
 
 Voici la page Web du document, vous devez mettre en forme le document Word **en
 utilisant les styles** en suivant les indications suivantes:
