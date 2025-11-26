@@ -4,8 +4,8 @@
 ```{metadata}
 subject: "Informatique 2e année"
 ```
-
-# Programmation en Python
+(eval-python1)=
+# Programmation en Python 1
 
 ## Révisions
 
