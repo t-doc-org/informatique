@@ -263,35 +263,34 @@ manipuler les listes. Nous en avons vu déjà rencontrées certaines dans
 [](listes-lab2.md).
 
 len(ma_liste)
-: retourne le nombre d'éléments de  la liste
+: retourne le nombre d'éléments de `ma_liste`
 
 ma_liste.append(mon_element)
 : ajoute `mon_element` à la fin de `ma_liste`
 
 ma_liste.insert(index, mon_element)
-: ajoute `mon_element` à l'`index` spécifié
+: ajoute `mon_element` à l'`index` spécifié de `ma_liste`
 
 ma_liste.remove(mon_element)
-: efface la première occurence de `mon_element`
+: efface la première occurrence de `mon_element` dans `ma_liste`
 
 del ma_liste[index]
 : supprime l'élément de `ma_liste` qui se trouve à l'`index` spécifié
 
 ma_liste.index(mon_element)
-: retourne l'index de la première occurance de `mon_element`
+: retourne l'index de la première occurrence de `mon_element` dans `ma_liste`
 
 sum(ma_liste)
-: retourne la somme de tous les éléments de la liste
+: retourne la somme de tous les éléments de `ma_liste`
 
 ma_liste.sort()
-: trie la liste par ordre croissant
+: trie `ma_liste` par ordre croissant
 
 ma_liste.reverse()
-: inverse l'ordre des éléments
+: inverse l'ordre des éléments de `ma_liste`
 
 ma_liste.count(mon_element)
 : retourne le nombre d'apparition de `mon_element` dans `ma_liste`
-
 
 ### Exercice {num2}`exercice`
 
