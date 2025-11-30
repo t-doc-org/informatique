@@ -157,6 +157,8 @@ texte(30, 390, "Bonne année!", "blue", "40")
 :after: fonctions_carte
 :then: rendu
 :editor: 5139828d-3e35-495e-bae3-9c95e5dcb1fe
+:reset: hide
+:style: max-height: 80vh
 # Écrivez le programme ici
 ```
 
