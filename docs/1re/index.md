@@ -16,10 +16,10 @@ change chaque semaine. Pensez à vérifier l'horaire régulièrement.
 ```{toctree}
 :maxdepth: 1
 python/index
-numerique-et-societe/index
 html-css/index
 architecture/index
 representation-info/index
+numerique-et-societe/index
 microbit/index
 objectifs/index
 ```

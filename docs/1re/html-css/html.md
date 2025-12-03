@@ -121,10 +121,68 @@ balise ouvrante et fermante).
 
 ## Exercice {num2}`exercice`
 
-But: Comprendre la structure principale d'un document HTML.
+Notez la balise qui indique:
 
-```{iframe} https://learningapps.org/watch?v=pxjjqttb224
-:style: height: 530px
+```{role} input(quiz-input)
+:right: width: 12rem;
+:check: json trim
+```
+
+```{quiz}
+:style: max-width: 42rem;
+1.  {input}`{"<html>": true}`
+    ... le début d'un document HTML?
+2.  {input}`{"</h1>": true}`
+    ... la fin d'un titre principal?
+3.  {input}`{"<head>": true}`
+    ... la début de l'entête du document?
+4.  {input}`{"</body>": true}`
+    ... la fin du contenu (corps) de la page?
+5.  {input}`{"<h2>": true}`
+    ... le début d'un titre de niveau 2?
+6.  {input}`{"</p>": true}`
+    ... la fin d'un paragraphe?
+7.  {input}`{"<title>": true}`
+    ... le début du titre de la page indiqué dans l'onglet?
+8.  {input}`{"<meta charset="utf-8">": true, "<meta charset="UTF-8">": true}`
+    ... que l'encodage utilisé est l'`utf-8`?
+```
+
+## Exercice {num2}`exercice`
+
+Dans quelle partie les balises suivantes se trouvent-t-elles?
+
+```{role} input(quiz-input)
+:right: width: 6rem;
+:check: json trim
+```
+
+```{role} choix(quiz-select)
+:right:
+:options: |
+: <html></html>
+: <head></head>
+: <body></body>
+```
+
+```{quiz}
+:style: max-width: 28rem;
+1.  {choix}`<body></body>`
+    `<p>...</p>`
+2.  {choix}`<head></head>`
+    `<meta charset="utf-8">`
+3.  {choix}`<html></html>`
+    `<head>...</head>`
+4.  {choix}`<body></body>`
+    `<h2>...</h2>`
+5.  {choix}`<html></html>`
+    `<body>...</body>`
+6.  {choix}`<body></body>`
+    `<h1>...</h1>`
+7.  {choix}`<head></head>`
+    `<title>...</title>`
+8.  {choix}`<body></body>`
+    `<h4>...</h4>`
 ```
 
 (hyperliens)=
@@ -181,8 +239,8 @@ Il existe deux types de listes:
 ## Images
 
 La balise `<img>` permet d'insérer une image sur une page Web. Dans l'attribut
-`src`, il faut indiquer le lien vers l'image, soit une URL, soit le chemin
-local.
+`src` (abréviation pour source), il faut indiquer le lien vers l'image, soit une
+URL, soit le chemin local.
 
 - {html}`<img src="mon_image.png">` (dans le même répertoire)
 - {html}`<img src="images/mon_image.png">` (dans un sous-répertoire)
@@ -237,59 +295,151 @@ tableaux
 
 ## Exercice {num2}`exercice`
 
-But: Ouvrir un document HTML sur Visual Studio Code.
+````{tab-set}
+:sync-group: etape
+```{tab-item} Étape 1
+:sync: etape1
+Voici le code HTML d'une page simple.
 
-[Installation de Visual Studio Code](/logiciels/vscode.md)
-
-1. Sur OneDrive, dans le dossier `Informatique/HTML-CSS`, créer un dossier
-   `exercices`.
-2. Télécharger le fichier [`index.html`](index.html) et le sauvegarder sur
-   OneDrive dans le dossier créé en 1.
-3. Ouvrir VSCode.
-4. Dans VSCode choisir "Ouvrir le dossier..."" et sélectionner le dossier
-   `Informatique/HTML-CSS/exercices` de votre OneDrive.
-   ```{figure} images/ouvrir.png
-   :alt: Ouvrir le dossier
-   :width: 50%
-   :align: center
-   ```
-5. Sélectionner le fichier `index.html` et le code HTML s'affiche.
-6. Pour voir le rendu, double-cliquer sur le fichier `index.html` de votre
-   OneDrive, le fichier s'ouvrira dans le navigateur.
-
-## Exercice {num2}`exercice`
-
-But: Comprendre un document HTML simple et le modifier.\
-Vous voyez maintenant le code HTML et ce que la page affiche.
-
-1. Qu'est-ce que vous comprenez de cette page?
-2. Vous allez maintenant modifier cette page. Pour valider une modification:
-    - Sauvegarder le document dans VSCode ({kbd}`ctrl` + {kbd}`s` ou
-      {kbd}`command` + {kbd}`s`).
-    - Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
-      ```{figure} images/actualiser.png
-      :alt: Actualiser la page
-      :width: 30%
-      :align: center
-      ```
-3. Modifier le titre et le premier paragraphe pour remplacer "Collège du Sud"
+1.  Qu'est-ce que vous comprenez de cette page?
+2.  Imaginez-vous à quoi elle va ressembler. Quels éléments vont s'afficher?
+3.  Appuyez sur le bouton `Run` pour afficher la page.
+```
+```{tab-item} Étape 2
+:sync: etape2
+Modifiez le titre et le premier paragraphe pour remplacer "Collège du Sud"
    par "Collège Sainte-Croix".
-4. Modifier la partie présentation pour avoir les informations qui
-   correspondent au Collège Sainte-Croix. Changer aussi le lien vers le site de
-   l'école. (cf. [](#hyperliens))
-5. Compléter la liste de vos cours avec: Économie et droit, Biologie, ...
-6. Changer la liste de vos cours par une liste numérotée. (cf. [](#listes))
-7. Ajouter un sous-titre "Ma classe" et un paragraphe avec quelques
-   informations.
-8. Ajouter une image du Collège Sainte-Croix:
-    - Créer un dossier `images` en cliquant sur l'icone "Nouveau dossier".
-      ```{figure} images/dossier.png
-      :alt: Nouveau dossier
-      :width: 40%
-      :align: center
-      ```
-    - Télécharger l'image que vous avez choisie et la sauvegarder dans le
-      dossier `images`.
-    - Noter le code HTML nécessaire. (cf. [](#images))
-    - Ne pas oublier d'indiquer la source.
-9. Faire un tableau de votre horaire.
+```
+```{tab-item} Étape 3
+:sync: etape3
+Modifiez la partie présentation pour avoir les informations qui correspondent à
+celles du Collège Sainte-Croix. Changez aussi le lien vers le site de l'école.
+(cf. [](#hyperliens))
+```
+```{tab-item} Étape 4
+:sync: etape4
+Complétez la liste de vos cours avec: Économie et droit, Biologie, ...
+```
+```{tab-item} Étape 5
+:sync: etape5
+Changez la liste de vos cours par une liste numérotée. (cf. [](#listes))
+```
+```{tab-item} Étape 6
+:sync: etape6
+Ajoutez un sous-titre "Ma classe" et un paragraphe avec quelques informations.
+```
+```{tab-item} Étape 7
+:sync: etape7
+Ajoutez une image du collège en ajustant la largeur. (cf. [](#images))
+```
+```{tab-item} Étape 8
+:sync: etape8
+Ajoutez un sous-titre "Mon horaire" et un tableau de votre horaire.
+```
+```{tab-item} Étape 9
+:sync: etape8
+Utilisez un tableau pour afficher la présentation du collège à côté de la photo.
+```
+````
+
+```{exec} html
+:editor:
+:style: height: 14rem;
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Nom de la page</title>
+  </head>
+  <body>
+    <h1>Collège du Sud</h1>
+    <p>Voici ma première page Web sur le collège du Sud!</p>
+    <h2>Présentation</h2>
+    <p>Le collège du Sud est un établissement fribourgeois du secondaire du 2e degré. Il offre actuellement 3 filières d’études: un gymnase, une école de commerce et une école de culture générale. Il reçoit des étudiant-e-s de 16 à 20 ans, qui proviennent essentiellement des districts de la Gruyère et de la Veveyse, mais aussi de la Glâne.</p>
+    <p id="source">Source: <a href="https://collegedusud.ch" target="_blank">Site internet du collège du Sud</a><p/>
+    <h2>Mes cours</h2>
+    <ul>
+      <li>Français</li>
+      <li>Allemand</li>
+      <li>Anglais</li>
+      <li>Maths</li>
+    </ul>
+  </body>
+</html>
+```
+
+````{solution}
+```{exec} html
+:when: load
+:editor:
+:style: height: 14rem;
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Nom de la page</title>
+  </head>
+  <body>
+    <h1>Collège Sainte-Croix</h1>
+    <p>Voici ma première page Web sur le collège Sainte-Croix!</p>
+    <h2>Présentation</h2>
+    <table>
+    <tr>
+    <td>
+    <p>Le collège Sainte_Croix est un établissement fribourgeois du secondaire du 2e degré. Il fait partie
+    des trois collèges de la ville de Fribourg avec Gambach et Saint-Michel.</p>
+    <p id="source">Source: <a href="https://cscfr.ch" target="_blank">Site internet du collège Sainte-Croix</a><p/>
+    </td>
+    <td>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Sainte-Croix_%28Fribourg%29%2C_vue_g%C3%A9n%C3%A9rale.png" width="300">
+    </td>
+    </tr>
+    <table>
+    <h2>Mes cours</h2>
+    <ol>
+      <li>Français</li>
+      <li>Allemand</li>
+      <li>Anglais</li>
+      <li>Maths</li>
+      <li>Informatique</li>
+      <li>Économie et droit</li>
+      <li>Géographie</li>
+      <li>Histoire</li>
+      <li>Biologie</li>
+      <li>Chimie</li>
+      <li>Arts visuels ou musique</li>
+    </ol>
+    <h2>Ma classe</h2>
+    <p>Je suis en 1F... La classe est composée de ... filles et ... garçons.</p>
+    <h2>Mon horaire</h2>
+    <table>
+    <tr>
+      <th>Heures</th>
+      <th>Lundi</th>
+      <th>Mardi</th>
+      <th>...</th>
+    </tr>
+    <tr>
+      <th>08:05-08:50</th>
+      <td>français</td>
+      <td>maths</td>
+      <td>....</td>
+    </tr>
+    <tr>
+      <th>08:55-09:40</th>
+      <td>informatique</td>
+      <td>Géographie</td>
+      <td>....</td>
+    </tr>
+    <tr>
+      <th>09:45-10:30</th>
+      <td>allemand</td>
+      <td>économie et droit</td>
+      <td>....</td>
+    </tr>
+  </table>
+  </body>
+</html>
+```
+
+````
