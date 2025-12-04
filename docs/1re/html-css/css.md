@@ -78,7 +78,113 @@ h1 {                      /* Cette règle définit le style du titre principal. 
 }
 ```
 
-Ce style s'appliquera au contenu de toutes les balises `<h1>...</h1>`
+Ce style s'appliquera au contenu de toutes les balises `<h1>...</h1>`.
+
+## Exercice {num2}`exercice`
+
+Le contenu d'un page a été défini en HTML de la manière suivante.
+
+```{exec} html
+:name: selecteur-type
+:when: never
+:style: height: 30rem;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Le Labrador</title>
+</head>
+<body>
+    <h1>Le Labrador</h1>
+
+    <h2>Origine et caractéristiques</h2>
+
+    <p>Le Labrador est une race de chien originaire du Canada, plus précisément
+    de Terre-Neuve. Il est connu pour son tempérament amical, son intelligence
+    et sa grande capacité d'adaptation.</p>
+
+    <h3>Caractéristiques</h3>
+    <table>
+      <tr>
+        <th>Taille</th><th>Poids</th><th>Espérance de vie</th><th>Couleurs</td>
+      </tr>
+      <tr>
+        <td>54 à 57 cm</td><td>25 à 36 kg</td><td>10 à 14 ans</td>
+        <td>Noir, jaune, chocolat</td>
+      </tr>
+    </table>
+
+    <h2>Comportement et utilisation</h2>
+    <p>Très sociable, le Labrador est souvent utilisé comme chien guide pour les
+    personnes malvoyantes, mais aussi comme chien de sauvetage et compagnon
+    familial.</p>
+
+    <h2>Photo</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Labrador_Retriever_portrait.jpg/1024px-Labrador_Retriever_portrait.jpg">
+</body>
+</html>
+```
+
+Au moyen du CSS, modifiez les éléments suivants:
+
+1.  Le titre principal doit être en bleu et centré.
+2.  Les sous-titres de niveau 2 doivent être en couleur. [choix de couleurs](https://htmlcolorcodes.com/color-names/)
+3.  La table doit avoir une bordure (attributs: `border` et `border-collapse`).
+4.  La table doit prendre `100%` de la largeur de la page.
+5.  L'image doit avoir une largeur de `300px`.
+6.  La famille de la police `font-family` des paragraphes doit être "Goudy
+    Bookletter 1911".
+7.  La couleur de fond `background-color` doit être "cornsilk".
+
+```{exec} html
+:editor: 76fa6122-75cd-449c-a539-d4141d082c56
+:after: selecteur-type
+:when: load
+:reset: hide
+<style>
+/*  Écrivez le CSS ici */
+</style>
+```
+
+````{solution}
+```{exec} html
+:editor:
+:after: selecteur-type
+:when: load
+:reset: hide
+<style>
+h1 {
+  color: blue;
+  text-align: center;
+}
+
+h2 {
+  color: deepskyblue;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+}
+
+img {
+  width: 300px;
+}
+
+p {
+  font-family: "Goudy Bookletter 1911";
+}
+
+html {
+  background-color: cornsilk;
+}
+</style>
+```
+````
 
 ### Sélecteur d'identifiant
 
@@ -105,6 +211,382 @@ cela, il faut ajouter un nouvel attribut `id` à la balise HTML concernée.
 
 Ce style ne s'appliquera qu'à un élément unique, la balise dont l'`id` est
 "intro".
+
+## Exercice {num2}`exercice`
+
+Le contenu d'un page a été défini en HTML de la manière suivante.
+
+```{exec} html
+:name: selecteur-id
+:when: never
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+  background-color: lightgrey;
+}
+
+p {
+  text-align: justify;
+}
+
+#intro {
+  font-weight: bold;
+}
+
+#evolution {
+  background-color: orange;
+}
+
+</style>
+```
+
+
+Au moyen du CSS, modifiez les éléments suivants:
+
+1.  Le premier paragraphe doit être en gras et justifié.
+2.  Le dernier tableau doit avoir la couleur de fond 'orange'.
+
+```{exec} html
+:editor: 7abfb302-7e87-4061-85ba-7ccf0a2ad1b1
+:after: selecteur-id
+:when: load
+:style: height: 30rem;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Histoire du smartphone</title>
+</head>
+<body>
+  <h1>Histoire du smartphone</h1>
+
+  <p>
+    Le smartphone résulte de la fusion entre la téléphonie mobile,
+    l'informatique et l'Internet. En quelques décennies, il est passé d'un outil
+    centré sur les appels et SMS à une plateforme polyvalente pour communiquer,
+    créer, apprendre et travailler partout.
+  </p>
+
+  <p>
+    Dans les années 1990, les PDA (assistants personnels) popularisent l'agenda
+    et la prise de notes dans la poche, mais les capacités cellulaires restent
+    limitées. En 1994, l'IBM Simon réunit téléphone, écran tactile et
+    applications simples — un précurseur du smartphone. Début 2000, BlackBerry
+    et Nokia généralisent l'e‑mail mobile et les services de données pour les
+    pros.
+  </p>
+
+  <table>
+    <tr>
+      <th>Année</th>
+      <th>Événement</th>
+      <th>Impact</th>
+    </tr>
+    <tr>
+      <td>1994</td>
+      <td>IBM Simon Personal Communicator</td>
+      <td>Première convergence téléphone + écran tactile + apps simples</td>
+    </tr>
+    <tr>
+      <td>1999</td>
+      <td>Nokia 7110 (WAP)</td>
+      <td>Première navigation web mobile grand public (WAP)</td>
+    </tr>
+    <tr>
+      <td>2002</td>
+      <td>BlackBerry 5810 / Nokia 7650</td>
+      <td>E‑mail “push”, photo intégrée, convergence téléphonie‑PDA</td>
+    </tr>
+  </table>
+
+  <p>
+    En 2007, l'iPhone démocratise l'écran capacitif multi‑touch et une interface
+    pensée pour le doigt. À partir de 2008, les boutiques d'apps (App Store,
+    Android Market/Google Play) accélèrent l'innovation. Les réseaux 3G puis 4G
+    rendent la vidéo, la navigation et le cloud réellement fluides.
+  </p>
+
+  <p>
+    Les puces (SoC) regroupent CPU, GPU, NPU et modem, gagnant en puissance et
+    en efficacité énergétique. La photographie mobile progresse: capteurs plus
+    grands, multiples focales, HDR et traitement computationnel. La sécurité
+    s'améliore avec chiffrement, biométrie et mises à jour OTA, favorisant
+    paiements et identités numériques.
+  </p>
+
+  <table>
+    <tr>
+      <th>Année</th>
+      <th>Événement</th>
+      <th>Impact</th>
+    </tr>
+    <tr>
+      <td>2007</td>
+      <td>iPhone (multi‑touch capacitif)</td>
+      <td>Nouveau paradigme d'interface et navigation web avancée</td>
+    </tr>
+    <tr>
+      <td>2008</td>
+      <td>Android (HTC Dream) + boutiques d'apps</td>
+      <td>Écosystèmes ouverts et distribution massive d'applications</td>
+    </tr>
+    <tr>
+      <td>2010</td>
+      <td>Déploiements 4G LTE</td>
+      <td>Haut débit mobile : streaming, cloud, visiophonie</td>
+    </tr>
+    <tr>
+      <td>2019–2021</td>
+      <td>Commercialisation large de la 5G</td>
+      <td>Latence réduite, débits élevés, nouveaux usages temps réel</td>
+    </tr>
+  </table>
+
+  <p>
+    De L'IBM Simon aux appareils 5G d'aujourd'hui, l'histoire du smartphone
+    illustre une accélération continue des usages et des technologies. L'avenir
+    mêlera encore plus d'IA embarquée, d'efficacité énergétique, de connectivité
+    et de services, au service d'expériences mobiles toujours plus riches.
+  </p>
+
+  <table>
+  <caption>Évolutions clés par domaine</caption>
+    <tr>
+      <th>Domaine</th>
+      <th>Début</th>
+      <th>Tendance actuelle</th>
+      <th>Bénéfice principal</th>
+    </tr>
+    <tr>
+      <td>Écran</td>
+      <td>Résistif, petites diagonales, 320×480</td>
+      <td>OLED/AMOLED, 90–120 Hz, haute définition, HDR</td>
+      <td>Confort, fluidité, meilleurs contrastes et couleurs</td>
+    </tr>
+    <tr>
+      <td>Réseau</td>
+      <td>2G (GPRS/EDGE)</td>
+      <td>4G avancée et 5G (selon régions)</td>
+      <td>Débits/latence pour vidéo, cloud, jeux en ligne</td>
+    </tr>
+    <tr>
+      <td>Puissance</td>
+      <td>CPU monocœur, GPU limité</td>
+      <td>SoC multi‑cœurs, GPU puissants, NPU/IA</td>
+      <td>Apps riches, IA embarquée, efficacité énergétique</td>
+    </tr>
+    <tr>
+      <td>Photo</td>
+      <td>VGA / 1 MP, sans HDR</td>
+      <td>Capteurs plus grands, multi‑objectifs, HDR/Night Mode</td>
+      <td>Qualité d'image, zoom polyvalent, basse lumière</td>
+    </tr>
+    <tr>
+      <td>Batterie et charge</td>
+      <td>Autonomie modeste, charge lente</td>
+      <td>Optimisations logicielles, charge rapide/sans fil</td>
+      <td>Moins d'interruptions, usage intensif soutenu</td>
+    </tr>
+    <tr>
+      <td>Sécurité</td>
+      <td>Code PIN basique</td>
+      <td>Chiffrement par défaut, biométrie (empreinte/visage)</td>
+      <td>Protection des données et des paiements</td>
+    </tr>
+    <tr>
+      <td>Logiciels et écosystèmes</td>
+      <td>Peu d'apps, API limitées</td>
+      <td>App stores, mises à jour OTA, services cloud</td>
+      <td>Fonctionnalités continues et connectées</td>
+    </tr>
+    <tr>
+      <td>Matériaux</td>
+      <td>Plastiques variés</td>
+      <td>Aluminium, verre renforcé, normes IP67/IP68</td>
+      <td>Durabilité, résistance à l'eau et à la poussière</td>
+    </tr>
+  </table>
+
+
+</body>
+</html>
+```
+
+````{solution}
+```{exec} html
+:editor:
+:after: selecteur-id
+:when: load
+:style: height: 30rem;
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Histoire du smartphone</title>
+</head>
+<body>
+  <h1>Histoire du smartphone</h1>
+
+  <p id="intro">
+    Le smartphone résulte de la fusion entre la téléphonie mobile,
+    l'informatique et l'Internet. En quelques décennies, il est passé d'un outil
+    centré sur les appels et SMS à une plateforme polyvalente pour communiquer,
+    créer, apprendre et travailler partout.
+  </p>
+
+  <p>
+    Dans les années 1990, les PDA (assistants personnels) popularisent l'agenda
+    et la prise de notes dans la poche, mais les capacités cellulaires restent
+    limitées. En 1994, l'IBM Simon réunit téléphone, écran tactile et
+    applications simples — un précurseur du smartphone. Début 2000, BlackBerry
+    et Nokia généralisent l'e‑mail mobile et les services de données pour les
+    pros.
+  </p>
+
+  <table>
+    <tr>
+      <th>Année</th>
+      <th>Événement</th>
+      <th>Impact</th>
+    </tr>
+    <tr>
+      <td>1994</td>
+      <td>IBM Simon Personal Communicator</td>
+      <td>Première convergence téléphone + écran tactile + apps simples</td>
+    </tr>
+    <tr>
+      <td>1999</td>
+      <td>Nokia 7110 (WAP)</td>
+      <td>Première navigation web mobile grand public (WAP)</td>
+    </tr>
+    <tr>
+      <td>2002</td>
+      <td>BlackBerry 5810 / Nokia 7650</td>
+      <td>E‑mail “push”, photo intégrée, convergence téléphonie‑PDA</td>
+    </tr>
+  </table>
+
+  <p>
+    En 2007, l'iPhone démocratise l'écran capacitif multi‑touch et une interface
+    pensée pour le doigt. À partir de 2008, les boutiques d'apps (App Store,
+    Android Market/Google Play) accélèrent l'innovation. Les réseaux 3G puis 4G
+    rendent la vidéo, la navigation et le cloud réellement fluides.
+  </p>
+
+  <p>
+    Les puces (SoC) regroupent CPU, GPU, NPU et modem, gagnant en puissance et
+    en efficacité énergétique. La photographie mobile progresse: capteurs plus
+    grands, multiples focales, HDR et traitement computationnel. La sécurité
+    s'améliore avec chiffrement, biométrie et mises à jour OTA, favorisant
+    paiements et identités numériques.
+  </p>
+
+  <table>
+    <tr>
+      <th>Année</th>
+      <th>Événement</th>
+      <th>Impact</th>
+    </tr>
+    <tr>
+      <td>2007</td>
+      <td>iPhone (multi‑touch capacitif)</td>
+      <td>Nouveau paradigme d'interface et navigation web avancée</td>
+    </tr>
+    <tr>
+      <td>2008</td>
+      <td>Android (HTC Dream) + boutiques d'apps</td>
+      <td>Écosystèmes ouverts et distribution massive d'applications</td>
+    </tr>
+    <tr>
+      <td>2010</td>
+      <td>Déploiements 4G LTE</td>
+      <td>Haut débit mobile : streaming, cloud, visiophonie</td>
+    </tr>
+    <tr>
+      <td>2019–2021</td>
+      <td>Commercialisation large de la 5G</td>
+      <td>Latence réduite, débits élevés, nouveaux usages temps réel</td>
+    </tr>
+  </table>
+
+  <p>
+    De L'IBM Simon aux appareils 5G d'aujourd'hui, l'histoire du smartphone
+    illustre une accélération continue des usages et des technologies. L'avenir
+    mêlera encore plus d'IA embarquée, d'efficacité énergétique, de connectivité
+    et de services, au service d'expériences mobiles toujours plus riches.
+  </p>
+
+  <table id="evolution">
+  <caption>Évolutions clés par domaine</caption>
+    <tr>
+      <th>Domaine</th>
+      <th>Début</th>
+      <th>Tendance actuelle</th>
+      <th>Bénéfice principal</th>
+    </tr>
+    <tr>
+      <td>Écran</td>
+      <td>Résistif, petites diagonales, 320×480</td>
+      <td>OLED/AMOLED, 90–120 Hz, haute définition, HDR</td>
+      <td>Confort, fluidité, meilleurs contrastes et couleurs</td>
+    </tr>
+    <tr>
+      <td>Réseau</td>
+      <td>2G (GPRS/EDGE)</td>
+      <td>4G avancée et 5G (selon régions)</td>
+      <td>Débits/latence pour vidéo, cloud, jeux en ligne</td>
+    </tr>
+    <tr>
+      <td>Puissance</td>
+      <td>CPU monocœur, GPU limité</td>
+      <td>SoC multi‑cœurs, GPU puissants, NPU/IA</td>
+      <td>Apps riches, IA embarquée, efficacité énergétique</td>
+    </tr>
+    <tr>
+      <td>Photo</td>
+      <td>VGA / 1 MP, sans HDR</td>
+      <td>Capteurs plus grands, multi‑objectifs, HDR/Night Mode</td>
+      <td>Qualité d'image, zoom polyvalent, basse lumière</td>
+    </tr>
+    <tr>
+      <td>Batterie et charge</td>
+      <td>Autonomie modeste, charge lente</td>
+      <td>Optimisations logicielles, charge rapide/sans fil</td>
+      <td>Moins d'interruptions, usage intensif soutenu</td>
+    </tr>
+    <tr>
+      <td>Sécurité</td>
+      <td>Code PIN basique</td>
+      <td>Chiffrement par défaut, biométrie (empreinte/visage)</td>
+      <td>Protection des données et des paiements</td>
+    </tr>
+    <tr>
+      <td>Logiciels et écosystèmes</td>
+      <td>Peu d'apps, API limitées</td>
+      <td>App stores, mises à jour OTA, services cloud</td>
+      <td>Fonctionnalités continues et connectées</td>
+    </tr>
+    <tr>
+      <td>Matériaux</td>
+      <td>Plastiques variés</td>
+      <td>Aluminium, verre renforcé, normes IP67/IP68</td>
+      <td>Durabilité, résistance à l'eau et à la poussière</td>
+    </tr>
+  </table>
+
+
+</body>
+</html>
+```
+````
+
+
+
 
 ### Sélecteur par classe
 
