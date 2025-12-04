@@ -150,7 +150,7 @@ Notez la balise qui indique:
 
 ## Exercice {num2}`exercice`
 
-Dans quelle partie les balises suivantes se trouvent-t-elles?
+Dans quelle partie les balises suivantes se trouvent-elles?
 
 ```{role} input(quiz-input)
 :right: width: 6rem;
