@@ -7,6 +7,13 @@ solutions: dynamic
 
 # Cryptographie symétrique
 
+## Introduction
+
+```{iframe} https://view.genially.com/68a5883499046bf67cdb9028
+```
+
+## Définition
+
 La **cryptographie symétrique**, également appelée cryptographie à clé secrète,
 est la méthode de chiffrement la plus ancienne. Elle repose sur l'utilisation
 d'une même clé pour {term}`chiffrer` et {term}`déchiffrer` un message.
