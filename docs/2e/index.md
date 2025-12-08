@@ -22,4 +22,5 @@ donnees/index
 reseaux/index
 javascript/index
 objectifs/index
+evaluations-formatives/index
 ```
