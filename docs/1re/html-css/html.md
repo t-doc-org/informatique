@@ -337,8 +337,13 @@ Ajoutez une image du collège en ajustant la largeur. (cf. [](#images))
 Ajoutez un sous-titre "Mon horaire" et un tableau de votre horaire.
 ```
 ```{tab-item} Étape 9
-:sync: etape8
+:sync: etape9
 Utilisez un tableau pour afficher la présentation du collège à côté de la photo.
+```
+```{tab-item} Étape 10
+:sync: etape10
+Changez le titre de la page (onglet de navigation) pour qu'il affiche "Mon
+collège".
 ```
 ````
 
@@ -377,7 +382,7 @@ Utilisez un tableau pour afficher la présentation du collège à côté de la p
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Nom de la page</title>
+    <title>Mon collège</title>
   </head>
   <body>
     <h1>Collège Sainte-Croix</h1>

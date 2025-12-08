@@ -92,7 +92,7 @@ Le contenu d'un page a été défini en HTML de la manière suivante.
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Le Labrador</title>
+    <title>Labrador</title>
 </head>
 <body>
     <h1>Le Labrador</h1>
@@ -121,6 +121,8 @@ Le contenu d'un page a été défini en HTML de la manière suivante.
 
     <h2>Photo</h2>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Labrador_Retriever_portrait.jpg/1024px-Labrador_Retriever_portrait.jpg">
+
+    <p>Source: texte généré par Copilot.</p>
 </body>
 </html>
 ```
@@ -128,7 +130,7 @@ Le contenu d'un page a été défini en HTML de la manière suivante.
 Au moyen du CSS, modifiez les éléments suivants:
 
 1.  Le titre principal doit être en bleu et centré.
-2.  Les sous-titres de niveau 2 doivent être en couleur. [choix de couleurs](https://htmlcolorcodes.com/color-names/)
+2.  Les sous-titres de niveau 2 doivent être en couleur ([choix de couleurs](https://htmlcolorcodes.com/color-names/)).
 3.  La table doit avoir une bordure (attributs: `border` et `border-collapse`).
 4.  La table doit prendre `100%` de la largeur de la page.
 5.  L'image doit avoir une largeur de `300px`.
@@ -249,7 +251,7 @@ p {
 Au moyen du CSS, modifiez les éléments suivants:
 
 1.  Le premier paragraphe doit être en gras et justifié.
-2.  Le dernier tableau doit avoir la couleur de fond 'orange'.
+2.  Le dernier tableau doit avoir la couleur de fond "orange".
 
 ```{exec} html
 :editor: 7abfb302-7e87-4061-85ba-7ccf0a2ad1b1
@@ -260,7 +262,7 @@ Au moyen du CSS, modifiez les éléments suivants:
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Histoire du smartphone</title>
+  <title>Smartphone - Histoire</title>
 </head>
 <body>
   <h1>Histoire du smartphone</h1>
@@ -412,7 +414,7 @@ Au moyen du CSS, modifiez les éléments suivants:
     </tr>
   </table>
 
-
+  <p>Source: texte généré par Copilot.</p>
 </body>
 </html>
 ```
@@ -579,13 +581,11 @@ Au moyen du CSS, modifiez les éléments suivants:
     </tr>
   </table>
 
-
+  <p>Source: texte généré par Copilot.</p>
 </body>
 </html>
 ```
 ````
-
-
 
 
 ### Sélecteur par classe
@@ -611,6 +611,152 @@ attribut class à la balise HTML concernée.
 ````
 
 Ce style ne s'appliquera qu'aux balises dont la classe est "centre".
+
+## Exercice {num2}`exercice`
+
+Le contenu d'un page a été défini en HTML de la manière suivante.
+
+```{exec} html
+:name: selecteur-classe
+:when: never
+<style>
+td {
+  padding: 30px;
+  vertical-align: top;
+}
+
+.centre {
+  text-align: center;
+}
+
+</style>
+```
+
+
+Au moyen du CSS, modifiez les éléments suivants:
+
+1.  Le titre doit être centré.
+2.  Le texte à droite de l'image doit être centré.
+3.  L'image doit être centrée, ainsi sa source.
+
+```{exec} html
+:editor: 4b0c4093-3e13-461a-9bdd-426319a4344e
+:after: selecteur-classe
+:when: load
+:style: height: 30rem;
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Drapeau Suisse</title>
+  </head>
+  <body>
+    <h1>La Suisse</h1>
+    <p>
+      La Suisse est un pays situé au coeur de l’Europe, connu pour ses montagnes majestueuses
+      comme les Alpes et le Jura, ses lacs pittoresques et ses villes cosmopolites telles que
+      Zurich, Genève et Berne (la capitale).
+    </p>
+    <p>
+      Elle est réputée pour sa neutralité politique, son système démocratique unique,
+      ses banques, son chocolat et ses montres de haute précision.
+      La Suisse est composée de 26 cantons et possède quatre langues officielles :
+      l’allemand, le français, l’italien et le romanche.
+    </p>
+    <p>
+      Grâce à sa diversité culturelle et géographique, la Suisse attire des millions de visiteurs
+      chaque année et reste un symbole de stabilité et de prospérité en Europe.
+    </p>
+
+    <h2>Drapeau</h2>
+    <table>
+      <tr>
+        <td>
+          <p>
+            Le drapeau suisse est rouge avec une croix blanche au centre.
+            Il est unique car il est de forme carrée, contrairement à la plupart des drapeaux
+            nationaux. La croix blanche symbolise la neutralité, la paix et l’unité du pays.
+          </p>
+          <p>
+            Le rouge représente le courage et la force.
+            Ce drapeau est reconnu dans le monde entier et est un symbole fort de la
+            Confédération suisse.
+          </p>
+        </td>
+        <td>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg" width="200">
+          <p>source: <a href= "https://fr.wikipedia.org/wiki/Suisse">Wikipédia</a></p>
+        </td>
+      </tr>
+    </table>
+
+    <p>Source: texte généré par Copilot.</p>
+  </body>
+</html>
+```
+
+````{solution}
+```{exec} html
+:editor:
+:after: selecteur-classe
+:when: load
+:style: height: 30rem;
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Drapeau Suisse</title>
+  </head>
+  <body>
+    <h1 class="centre">La Suisse</h1>
+    <p>
+      La Suisse est un pays situé au cœur de l’Europe, connu pour ses montagnes majestueuses
+      comme les Alpes et le Jura, ses lacs pittoresques et ses villes cosmopolites telles que
+      Zurich, Genève et Berne (la capitale).
+    </p>
+    <p>
+      Elle est réputée pour sa neutralité politique, son système démocratique unique,
+      ses banques, son chocolat et ses montres de haute précision.
+      La Suisse est composée de 26 cantons et possède quatre langues officielles :
+      l’allemand, le français, l’italien et le romanche.
+    </p>
+    <p>
+      Grâce à sa diversité culturelle et géographique, la Suisse attire des millions de visiteurs
+      chaque année et reste un symbole de stabilité et de prospérité en Europe.
+    </p>
+
+    <h2>Drapeau</h2>
+    <table>
+      <tr>
+        <td>
+          <div class="centre">
+          <p>
+            Le drapeau suisse est rouge avec une croix blanche au centre.
+            Il est unique car il est de forme carrée, contrairement à la plupart des drapeaux
+            nationaux. La croix blanche symbolise la neutralité, la paix et l’unité du pays.
+          </p>
+          <p>
+            Le rouge représente le courage et la force.
+            Ce drapeau est reconnu dans le monde entier et est un symbole fort de la
+            Confédération suisse.
+          </p>
+          </div>
+        </td>
+        <td>
+          <div class="centre">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg" width="200">
+          <p>source: <a href= "https://fr.wikipedia.org/wiki/Suisse">Wikipédia</a></p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <p>Source: texte généré par Copilot.</p>
+  </body>
+</html>
+```
+````
+
 
 [Tuto](https://developer.mozilla.org/fr/docs/Learn/Getting_started_with_the_web/CSS_basics)
 bases du CSS.
@@ -651,52 +797,6 @@ extérieure (margin) ou la bordure (border).
   }
   ```
 ````
-
-## Exercices
-
-### Exercice {num2}`exercice`
-
-But: Appliquer un fichier CSS au document index.html.
-
-1. Télécharger le fichier [`style.css`](style.css) et le sauvegarder sur
-   OneDrive dans le dossier "Informatique/HTML-CSS/exercices".
-2. Ajouter le référencement à la page `style.css` dans le `<head>` du document
-   `index.html`. (cf. [](#referencement))
-3. Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
-
-### Exercice {num2}`exercice`
-
-1. Qu'est-ce qui a changé?
-2. Cliquer sur `style.css` pour que le document s'afficher et essayer de le
-   comprendre.
-    - À quels éléments s'appliquent les différentes propriétés?
-    - Quelle est la différence entre `h1 {...}` et `#source {...}`? Quand
-      va-t-on utiliser le deuxième?
-3. Vous allez maintenant modifier cette page.Pour valider une modification:
-    - Sauvegarder le document dans VSCode ({kbd}`ctrl` + {kbd}`s` ou
-      {kbd}`command` + {kbd}`s`).
-    - Actualiser la page du navigateur (appuyer sur {kbd}`F5`).
-4. Modifier la couleur des titres et des sous-titres. Vous pouvez utiliser
-   les noms en anglais ou le code RGB.\
-   [Liste des couleurs](https://www.rapidtables.com/web/color/RGB_Color.html)
-5. Modifier la police de caractère (font) des titres (pas des sous-titres) en
-   "fantasy".
-6. Modifier la couleur de fond de la page HTML.
-7. Ajouter une couleur de fond aux titres et aux sous-titres.
-8. Modifier le code pour que toutes les sources s'affichent en gris foncé.
-   (Il faut utiliser un sélecteur de classe.)
-9. Ajouter une bordure au tableau.
-
-### Exercice {num2}`exercice`
-
-À vous de jouer! Réfléchir à la structure de votre site internet:
-
-1. Quelles seront les différentes pages?
-2. Nommer la première page de votre site `index.html`. Vous pouvez en créer
-   d'autres et les référencer avec des liens pour pouvoir naviguer entre les
-   différentes pages de votre site. (cf. [](#hyperliens))
-3. Quel sera le style de votre site? Pouvez-vous le réaliser avec les outils vus
-   en classe? Sinon rechercher sur internet comment faire.
 
 ## Liens utiles
 
