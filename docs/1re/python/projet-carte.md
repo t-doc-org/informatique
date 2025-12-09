@@ -17,11 +17,13 @@ et votre imagination.
 | :------- | :----: |
 |**Le dessin contient** | |
 |un ou plusieurs motifs qui se répètent| **1 pt**|
-|au moins un motif répété avec des nuances (changement de couleur, de taille, etc.) effectués au moyen de paramètres| **1 pt**|
+|au moins un motif répété avec des nuances (changement de couleur, de taille, etc.) <br> effectués au moyen de paramètres| **1 pt**|
 |au moins une forme avec une bordure | **0.5 pt** |
 |des couleurs personnalisées |**0.5 pt** |
+|du texte |**0.5 pt** |
+|**Le code contient** | |
 |des variables avec des noms appropriés| **1 pt** |
-|des fonctions avec/sans paramètres| **3 pts** |
+|des fonctions avec/sans paramètres| **2.5 pts** |
 |des boucles pour éviter les répétitions| **2 pts**|
 |des instructions conditionnelles| **2 pts** |
 |au moins une interaction avec l'utilisateur| **2 pts**|
