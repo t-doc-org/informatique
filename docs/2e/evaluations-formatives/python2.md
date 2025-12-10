@@ -13,17 +13,15 @@ solution: dynamic
 L'instruction pour créer une liste vide est ...
 
 -   ```{exec} python
-    :editor:
     :when: never
     liste = 0
     ```
--   ```{exec} python
-    :editor:
+-   :
+    ```{exec} python
     :when: never
     liste = []
     ```
 -   ```{exec} python
-    :editor:
     :when: never
     liste = [0]
     ```
@@ -34,17 +32,15 @@ L'instruction pour créer une liste vide est ...
 L'instruction pour afficher le premier élément d'une liste est ...
 
 -   ```{exec} python
-    :editor:
     :when: never
     print(liste[-1])
     ```
 -   ```{exec} python
-    :editor:
     :when: never
     print(liste[1])
     ```
--   ```{exec} python
-    :editor:
+-   :
+    ```{exec} python
     :when: never
     print(liste[0])
     ```
@@ -55,18 +51,17 @@ L'instruction pour afficher le premier élément d'une liste est ...
 :number: none
 L'instruction pour afficher le dernier élément d'une liste est ...
 
--   ```{exec} python
-    :editor:
+-   :
+    ```{exec} python
     :when: never
     print(liste[-1])
     ```
 -   ```{exec} python
-    :editor:
     :when: never
     print(liste[len(liste)])
     ```
--   ```{exec} python
-    :editor:
+-   :
+    ```{exec} python
     :when: never
     print(liste[len(liste)-1])
     ```
@@ -77,13 +72,12 @@ L'instruction pour afficher le dernier élément d'une liste est ...
 :number: none
 L'instruction suivante ...
 ```{exec} python
-:editor:
 :when: never
 notes.insert(4, 3)
 ```
 
 -   insère la note `4` à l'index 3.
--   insère la note `3` à l'index 4.
+-   : insère la note `3` à l'index 4.
 -   insère la note `4` à l'index 2.
 ````
 
@@ -91,12 +85,11 @@ notes.insert(4, 3)
 :number: none
 L'instruction suivante ...
 ```{exec} python
-:editor:
 :when: never
 del notes[5]
 ```
 
--   efface l'élément à l'index 5.
+-   :efface l'élément à l'index 5.
 -   efface la première occurence de la note 5.
 -   efface toutes les notes 5 de la liste.
 ````
@@ -105,7 +98,6 @@ del notes[5]
 :number: none
 Qu'affiche le programme suivant?
 ```{exec} python
-:editor:
 :when: never
 liste = [2, 1, 7, 3]
 liste.sort()
@@ -113,14 +105,13 @@ liste.sort()
 
 -   [1, 2, 3, 7]
 -   [2, 1, 7, 3]
--   rien
+-   :rien
 ````
 
 ````{poll} 8d7b302a-dca7-42bf-bb19-709b18a2576e
 :number: none
 Qu'affiche le programme suivant?
 ```{exec} python
-:editor:
 :when: never
 liste = [6, 2, 5, 3]
 liste.reverse()
@@ -128,7 +119,7 @@ print(liste)
 ```
 
 -   [6, 5, 3, 2]
--   [3, 5, 2, 6]
+-   :[3, 5, 2, 6]
 -   [6, 2, 5, 3]
 ````
 
@@ -136,7 +127,6 @@ print(liste)
 :number: none
 Qu'affiche le programme suivant?
 ```{exec} python
-:editor:
 :when: never
 liste = [3, 2, 8, 7]
 print(liste.sum())
@@ -144,14 +134,13 @@ print(liste.sum())
 
 -   4
 -   20
--   une erreur
+-   :une erreur
 ````
 
 ````{poll} 0a8d842e-686b-4a88-8de0-95e7a34abc52
 :number: none
 Qu'affiche le programme suivant?
 ```{exec} python
-:editor:
 :when: never
 liste = [3, 2, 6, 7, 1, 3, 4, 8]
 for nombre in liste:
@@ -159,7 +148,8 @@ for nombre in liste:
     print(nombre)
 ```
 
--   ```{code} text
+-   :
+    ```{code} text
     3
     7
     1
@@ -180,7 +170,6 @@ for nombre in liste:
 :number: none
 Qu'affiche le programme suivant?
 ```{exec} python
-:editor:
 :when: never
 liste = [3, 2, 6, 7, 1, 3, 4, 8]
 for n in range(5):
@@ -202,7 +191,8 @@ for n in range(5):
     4
     5
     ```
--   ```{code} text
+-   :
+    ```{code} text
     1
     2
     3
@@ -212,25 +202,22 @@ for n in range(5):
 
 
 ````{poll} e98776eb-27fe-40d4-9066-9e7853c6964b
-:mode: multi
 :number: none
-L'instruction pour afficher générer un nombre entier aléatoire entre 3 inclu et
-7 inclu est ...
+L'instruction pour générer un nombre entier aléatoire entre 3 inclu et 7 inclu
+est ...
 
 -   ```{exec} python
-    :editor:
     :when: never
     from random import randint
     nombre = randint(2, 7)
     ```
--   ```{exec} python
-    :editor:
+-   :
+    ```{exec} python
     :when: never
     from random import randint
     nombre = randint(3, 7)
     ```
 -   ```{exec} python
-    :editor:
     :when: never
     from random import randint
     nombre = randint(3, 8)
