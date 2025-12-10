@@ -287,7 +287,7 @@ boucle `for` pour parcourir tous les index.
 
 # Définition des variables
 utilisateurs = ["user1", "user2", "user3"]
-mots_de_passe = ["mdp1", "mdp2", "mpd3"]
+mots_de_passe = ["mdp1", "mdp2", "mdp3"]
 
 # Programme principal
 ```
