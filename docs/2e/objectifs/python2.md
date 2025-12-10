@@ -7,7 +7,7 @@ subject: "Informatique 2e année"
 
 # Programmation en Python 2
 
-Les objectifs de l'évaluation [](#eval-python1) sont considérés comme acquis.
+Les objectifs de l'évaluation [](#eval-python1-2e) sont considérés comme acquis.
 
 ## Listes
 

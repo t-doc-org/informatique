@@ -6,4 +6,5 @@
 ```{toctree}
 :maxdepth: 1
 python1
+python2
 ```

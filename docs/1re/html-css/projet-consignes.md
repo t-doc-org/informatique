@@ -3,17 +3,17 @@
 
 # Projet - Consignes
 
-But: Créer un site web sur un sujet d'informatique.
+But: Créer un site web sur un livre
 
 Le site doit être composé de:
 
-- Plusieurs pages Web (format .html), chaque élève s'occupe de faire au moins deux pages.
+- Une page contenu plusieurs sections accessibles depuis un menu. (format html).
 - Un fichier CSS (format .css).
 
 ## Marche à suivre
 
-Pour travailler en groupe, vous allez utiliser **Visual Studio Code**.
-Le document Word et les fichiers de votre site doivent toujours être sauvegardés dans le dossier partagé sur OneDrive.
+Le document Word et les fichiers de votre site doivent toujours être sauvegardés
+dans le dossier partagé sur OneDrive.
 
 ### Avant la création du site
 
