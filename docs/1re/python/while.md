@@ -196,7 +196,7 @@ le programme affichera "BOOM".
 ```{code-block} text
 Initialiser une variable compte_a_rebours à 10
 Tant que compte_a_rebours est plus grand que 0
-    Afficher La valeur de compte_a_rebours
+    Afficher la valeur de compte_a_rebours
     Retirer 1 à compte_a_rebours
 Afficher "BOOM"
 ```
