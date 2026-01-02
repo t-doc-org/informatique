@@ -7,10 +7,10 @@
 :maxdepth: 1
 donnees
 sql
-sql-lab1
+sql-ex1
 bd-relationnelle
 sql2
-sql-lab2
+sql-ex2
 type-donnees
 requetes
 vscode
