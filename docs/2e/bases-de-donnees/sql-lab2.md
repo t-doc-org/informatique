@@ -5,7 +5,7 @@
 solutions: dynamic
 ```
 
-# SQL Lab 2
+# SQL - Exercices (2)
 
 Le but de cette section est d'entraîner les concepts vus dans les sections
 [](bd-relationnelle.md) et [](sql2.md).
@@ -19,10 +19,10 @@ auteur, un éditeur, un ISBN qui est unique et une année de sortie. Un usager a
 un nom, un prénom, une adresse, un code postal, une ville, un email et un
 code-barre personnel. De chaque auteur, nous connaissons le nom et le prénom.
 
-1. Déterminer les différentes tables nécessaires.
-2. Déterminer les colonnes de chaque table.
-3. Déterminer les clés primaires et étrangères.
-4. Dessiner le schéma relationnel.
+1. Déterminez les différentes tables nécessaires.
+2. Déterminez les colonnes de chaque table.
+3. Déterminez les clés primaires et étrangères.
+4. Dessinez le schéma relationnel.
 
 ````{solution}
 ```{graphviz}
@@ -127,8 +127,8 @@ digraph UML_Class_diagram {
 
 ## Exercice {nump}`exercice`
 
-Créer les différentes tables: `usager`, `livre`, `auteur`, `auteur_de` et
-`emprunt`. Ne pas oublier d'indiquer le type et les attributs (`primary key`,
+Créez les différentes tables: `usager`, `livre`, `auteur`, `auteur_de` et
+`emprunt`. N'oubliez pas d'indiquer le type et les attributs (`primary key`,
 `not null`, etc.) quand c'est nécessaire.
 
 ```{exec} sql
@@ -192,7 +192,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 :class: hidden
 ```
 
-1.  Écrire une requête SQL qui retourne tous les livres.
+1.  Écrivez une requête SQL qui retourne tous les livres.
 
     ```{exec} sql
     :after: sql-biblio-insert
@@ -206,7 +206,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-2.  Écrire une requête SQL qui retourne tous les noms des usagers.
+2.  Écrivez une requête SQL qui retourne tous les noms des usagers.
 
     ```{exec} sql
     :after: sql-biblio-insert
@@ -220,7 +220,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-3.  Écrire une requête SQL qui retourne tous les éditeurs sans doublons.
+3.  Écrivez une requête SQL qui retourne tous les éditeurs sans doublons.
 
     ```{exec} sql
     :after: sql-biblio-insert
@@ -234,7 +234,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-4.  Écrire une requête SQL qui retourne le titre et l'année des livres publiés
+4.  Écrivez une requête SQL qui retourne le titre et l'année des livres publiés
     avant 1980.
 
     ```{exec} sql
@@ -249,7 +249,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-5.  Écrire une requête SQL qui retourne le titre des livres dont le titre
+5.  Écrivez une requête SQL qui retourne le titre des livres dont le titre
     commence par le mot "Astérix".
 
     ```{exec} sql
@@ -264,7 +264,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-6.  Écrire une requête SQL qui retourne le titre des livres dont le titre
+6.  Écrivez une requête SQL qui retourne le titre des livres dont le titre
     contient le mot "Astérix".
 
     ```{exec} sql
@@ -280,7 +280,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ````
 
 
-7.  Écrire une requête SQL qui retourne l'isbn des livres à rendre avant le 31
+7.  Écrivez une requête SQL qui retourne l'isbn des livres à rendre avant le 31
     décembre 2024.
 
     ```{tip}
@@ -299,7 +299,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-8.  Écrire une requête SQL qui retourne le nom et le prénom de tous les auteurs
+8.  Écrivez une requête SQL qui retourne le nom et le prénom de tous les auteurs
     triés par ordre alphabétique.
 
     ```{exec} sql
@@ -314,7 +314,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-9.  Écrire une requête SQL qui retourne le nom, le prénom et l'adresse des usagers
+9.  Écrivez une requête SQL qui retourne le nom, le prénom et l'adresse des usagers
     vivant à Fribourg.
 
     ```{exec} sql
@@ -329,7 +329,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
     ```
     ````
 
-10. Écrire une requête SQL qui retourne l'année et le titre des livres publiés
+10. Écrivez une requête SQL qui retourne l'année et le titre des livres publiés
     entre 2012 et 2015.
 
     ```{exec} sql
@@ -379,7 +379,7 @@ Formuler en français ce que nous cherchons avec les requêtes suivantes:
 
 Pour cet exercice, il faudra utiliser des jointures de tables.
 
-1.  Écrire une requête SQL qui retourne le titre des livres empruntés.
+1.  Écrivez une requête SQL qui retourne le titre des livres empruntés.
 
     ```{exec} sql
     :after: sql-biblio-insert
@@ -394,7 +394,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     ```
     ````
 
-2.  Écrire une requête SQL qui retourne le titre des livres empruntés à rendre
+2.  Écrivez une requête SQL qui retourne le titre des livres empruntés à rendre
     après le 15 décembre.
 
     ```{exec} sql
@@ -411,7 +411,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     ```
     ````
 
-3.  Écrire une requête SQL qui retourne le nom et le prénom des usagers qui ont
+3.  Écrivez une requête SQL qui retourne le nom et le prénom des usagers qui ont
     emprunté des livres.
 
     ```{exec} sql
@@ -427,7 +427,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     ```
     ````
 
-    Les mêmes noms et prénoms apparaissent plusieurs fois, supprimer les
+    Les mêmes noms et prénoms apparaissent plusieurs fois, supprimez les
     doublons.
 
       ```{exec} sql
@@ -443,8 +443,8 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     ```
     ````
 
-4.  Écrire une requête SQL qui retourne le nom et le prénom de l'auteur du livre
-    "La Mort d'Ivan Ilitch".
+4.  Écrivez une requête SQL qui retourne le nom et le prénom de l'auteur du
+    livre "La Mort d'Ivan Ilitch".
 
     ```{exec} sql
     :after: sql-biblio-insert
@@ -461,7 +461,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     ```
     ````
 
-5.  Écrire une requête SQL qui retourne le nom et le prénom de l'usager qui a
+5.  Écrivez une requête SQL qui retourne le nom et le prénom de l'usager qui a
     emprunté "Jack Barron et l'Éternité".
 
     ```{exec} sql
@@ -479,8 +479,8 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     ```
     ````
 
-6.  Écrire une requête SQL qui retourne le titre et la date de retour des livres
-    empruntés par Philippe Dubois.
+6.  Écrivez une requête SQL qui retourne le titre et la date de retour des
+    livres empruntés par Philippe Dubois.
 
     ```{exec} sql
     :after: sql-biblio-insert
@@ -497,7 +497,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     ```
     ````
 
-7.  Écrire une requête SQL qui retourne le titre des livres publiés avant
+7.  Écrivez une requête SQL qui retourne le titre des livres publiés avant
     "Astérix chez les Bretons".
 
     ```{exec} sql
@@ -514,7 +514,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     ```
     ````
 
-8.  **Challenge**: Écrire une requête SQL qui retourne le nom et le prénom des
+8.  **Challenge**: Écrivez une requête SQL qui retourne le nom et le prénom des
     auteurs des livres de la question précédente sans doublons.
 
     ```{exec} sql

@@ -88,7 +88,7 @@ create table client (
 
 ## Exercice {num2}`exercice`
 
-Recréer la table `produit` des exercices {numref}`exercice:produit-create` et
+Recréez la table `produit` des exercices {numref}`exercice:produit-create` et
 {numref}`exercice:produit-insert` en y ajoutant la clé primaire.
 
 ```{exec} sql
@@ -124,7 +124,7 @@ insert into produit values
 ## Exercice {num2}`exercice`
 
 Que se passe-t-il si on ajoute une ligne qui ne contient pas de valeur pour la
-clé primaire? Tester avec l'exemple ci-dessous.
+clé primaire? Testez avec l'exemple ci-dessous.
 
 ```{exec} sql
 :after: sql-produit
@@ -133,7 +133,7 @@ insert into produit (nom, description, prix) values ('Fado', 'Lampe de table', 2
 
 ## Exercice {num2}`exercice`
 
-Créer et compléter la table `client` ci-dessous, sachant que `no_c` est un
+Créez et complétez la table `client` ci-dessous, sachant que `no_c` est un
 entier et la clé primaire, `titre`, `prenom` et `nom` sont des chaînes de
 caractères.
 
@@ -170,7 +170,7 @@ insert into client values
 
 ## Exercice {num2}`exercice`
 
-Créer la table `achat` et la compléter avec les achats effectués par les
+Créez la table `achat` et complétez-la avec les achats effectués par les
 clients. La clé primaire est composée des deux colonnes `no_p` et `no_c`.
 
 1. Alan Turing a acheté le canapé 2 places Ektrop.
@@ -264,7 +264,7 @@ select nom from produit        -- sélectionne la colonne nom de la table produi
 
 ## Exercice {num2}`exercice`
 
-Écrire la requête SQL qui retourne le(s) nom(s) du (des) produits acheté(s) par
+Écrivez la requête SQL qui retourne le(s) nom(s) du (des) produits acheté(s) par
 le client n°1.
 
 ```{exec} sql
@@ -283,9 +283,9 @@ select nom from produit
 
 ## Exercice {num2}`exercice`
 
-Écrire la requête SQL qui retourne le titre, le prénom et le nom des clients
+Écrivez la requête SQL qui retourne le titre, le prénom et le nom des clients
 ayant acheté le produit Ektorp.\
-Trier les valeurs dans l'ordre alphabétique des prénoms.
+Triez les valeurs dans l'ordre alphabétique des prénoms.
 
 ```{exec} sql
 :after: sql-tables
@@ -304,7 +304,7 @@ select client.titre, client.prenom, client.nom from client
 
 ## Exercice {num2}`exercice`
 
-Utiliser des jointures pour retourner la table ci-dessous (triée selon les
+Utilisez des jointures pour retourner la table ci-dessous (triée selon les
 prénoms):
 
 ```{exec} sql

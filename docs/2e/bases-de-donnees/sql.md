@@ -45,7 +45,7 @@ select * from stock;
 
 ## Exercice {num2}`exercice:produit-create`
 
-Écrire la requête SQL qui permet de créer la table `produit` ci-dessous,
+Écrivez la requête SQL qui permet de créer la table `produit` ci-dessous,
 sachant que `no_p` et `prix` sont des entiers et que `nom` et
 `description` sont des chaînes de caractères:
 
@@ -102,7 +102,7 @@ Les chaînes de caractères doivent être entourées d'apostrophes
 
 ## Exercice {num2}`exercice:produit-insert`
 
-Écrire les requêtes SQL qui permettent d'insérer dans la table `produit` les
+Écrivez les requêtes SQL qui permettent d'insérer dans la table `produit` les
 lignes suivantes:
 
 ```{exec} sql
@@ -158,7 +158,7 @@ select article, quantite from stock;
 
 ## Exercice {num2}`exercice`
 
-Écrire la requête SQL qui permet d'afficher toutes les lignes de la table
+Écrivez la requête SQL qui permet d'afficher toutes les lignes de la table
 `produit`.
 
 ```{exec} sql
@@ -173,7 +173,7 @@ select * from produit;
 ```
 ````
 
-Écrire la requête SQL qui permet d'afficher le `nom` de tous les produits.
+Écrivez la requête SQL qui permet d'afficher le `nom` de tous les produits.
 
 ```{exec} sql
 :after: sql-produit-insert
@@ -187,7 +187,7 @@ select nom from produit;
 ```
 ````
 
-Écrire la requête SQL qui permet d'afficher le `nom` et le `prix` de tous les
+Écrivez la requête SQL qui permet d'afficher le `nom` et le `prix` de tous les
 produits.
 
 ```{exec} sql
@@ -240,7 +240,7 @@ select * from stock where prix_unitaire = 35;
 
 ## Exercice {num2}`exercice`
 
-Écrire la requête SQL qui permet d'afficher toutes les colonnes du produit
+Écrivez la requête SQL qui permet d'afficher toutes les colonnes du produit
 Brimnes.
 
 ```{exec} sql
@@ -255,7 +255,7 @@ select * from produit where nom = 'Brimnes';
 ```
 ````
 
-Écrire la requête SQL qui permet d'afficher uniquement la description du produit
+Écrivez la requête SQL qui permet d'afficher uniquement la description du produit
 Ektorp.
 
 ```{exec} sql
@@ -284,7 +284,7 @@ update stock set couleur = 'bleu' where id = 3;
 
 ## Exercice {num2}`exercice`
 
-Mettre à jour le prix du **canapé 2 places** qui ne coûte plus que 499 CHF.
+Mettez à jour le prix du **canapé 2 places** qui ne coûte plus que 499 CHF.
 
 ```{exec} sql
 :after: sql-produit-insert
@@ -314,8 +314,8 @@ delete from stock where article = 'Polo';
 
 ## Exercice {num2}`exercice`
 
-Supprimer le produit dont le `no_p` est 3.\
-Contrôler le résultat en affichant tous les éléments de la table produit.
+Supprimez le produit dont le `no_p` est 3.\
+Contrôlez le résultat en affichant tous les éléments de la table produit.
 
 ```{exec} sql
 :after: sql-produit-update
@@ -373,12 +373,12 @@ create table stock (
 
 ## Exercice {num2}`exercice`
 
-Créer une table `eleve` qui contient les informations des élèves: nom, prénom,
+Créez une table `eleve` qui contient les informations des élèves: nom, prénom,
 sexe, classe, date de naissance, email, adresse, code postal, ville, téléphone.\
 Quelles sont les colonnes obligatoires?\
-Écrire la requête qui permet de créer cette table en choisissant le type
+Écrivez la requête qui permet de créer cette table en choisissant le type
 adapté pour chaque colonne.\
-Ajouter une ligne avec vos propres informations sauf le numéro de téléphone.
+Ajoutez une ligne avec vos propres informations sauf le numéro de téléphone.
 
 ```{exec} sql
 :then: sql-eleve-select
@@ -451,11 +451,11 @@ select * from crepe;
 
 ## Exercice {num2}`exercice`
 
-Créer une table boisson qui contient la liste des prix des boissons de la
+Créez une table boisson qui contient la liste des prix des boissons de la
 cafétéria.\
-Écrire la requête qui permet de créer la table ci-dessous en utilisant une
+Écrivez la requête qui permet de créer la table ci-dessous en utilisant une
 valeur par défaut.\
-Insérer les données du tableau ci-dessous.
+Insérez les données du tableau ci-dessous.
 
 ```{exec} sql
 :after: sql-boisson

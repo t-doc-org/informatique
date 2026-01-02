@@ -5,7 +5,7 @@
 solutions: dynamic
 ```
 
-# SQL Lab 1
+# SQL - Exercices (1)
 
 Le but de cette section est d'entraîner les concepts vus dans la section
 [](sql.md).
@@ -22,7 +22,8 @@ select * from canton;
 
 ## Exercice {nump}`exercice`
 
-Indiquer ce qu'afficheront les requêtes suivantes:
+Sans les exécutez, indiquez ce qu'afficheront les requêtes suivantes et vérifiez
+ensuite vos réponses.
 
 1.  ```{exec} sql
     :after: sql-canton
@@ -75,8 +76,8 @@ Voici à nouveau la table `canton`.
 select * from canton;
 ```
 
-Créer et compléter la table `canton` avec des requêtes SQL. La table ne doit
-pas accepter les valeurs `null`.
+Créez et complétez la table `canton`, comme ci-dessus, avec des requêtes SQL. La
+table ne doit pas accepter les valeurs `null`.
 
 ```{exec} sql
 :then: sql-canton-select
@@ -115,7 +116,7 @@ insert into canton values
 
 ## Exercice {nump}`exercice`
 
-1.  Écrire une requête SQL qui retourne toutes les colonnes du canton dont le
+1.  Écrivez une requête SQL qui retourne toutes les colonnes du canton dont le
     chef-lieu est Bellinzone.
 
     ```{exec} sql
@@ -130,7 +131,7 @@ insert into canton values
     ```
     ````
 
-2.  Écrire une requête SQL qui retourne toutes les colonnes des cantons dont la
+2.  Écrivez une requête SQL qui retourne toutes les colonnes des cantons dont la
     population est inférieure à 300'000 habitants.
 
     ```{exec} sql
@@ -145,7 +146,7 @@ insert into canton values
     ```
     ````
 
-3.  Écrire une requête SQL qui retourne toutes les colonnes des cantons dans
+3.  Écrivez une requête SQL qui retourne toutes les colonnes des cantons dans
     l'ordre alphabétique des abréviations.
 
     ```{exec} sql
@@ -160,7 +161,7 @@ insert into canton values
     ```
     ````
 
-4.  Écrire une requête SQL qui retourne le nom, l'abréviation et le chef-lieu
+4.  Écrivez une requête SQL qui retourne le nom, l'abréviation et le chef-lieu
     des cantons.
 
     ```{exec} sql
@@ -174,7 +175,7 @@ insert into canton values
     select nom, abr, chef_lieu from canton;
     ```
 
-5.  Écrire une requête SQL qui retourne le nom, l'abréviation et le chef-lieu
+5.  Écrivez une requête SQL qui retourne le nom, l'abréviation et le chef-lieu
     des cantons ordonnés selon le nombre d'habitants du plus grand au plus
     petit.
 
@@ -190,7 +191,7 @@ insert into canton values
     ```
     ````
 
-6.  Écrire une requête SQL qui retourne toutes les colonnes des cantons qui ont
+6.  Écrivez une requête SQL qui retourne toutes les colonnes des cantons qui ont
     plus de 100 communes et une population inférieure à 500'000 habitants.
 
     ```{exec} sql
@@ -205,7 +206,7 @@ insert into canton values
     ```
     ````
 
-7.  Écrire une requête SQL qui retourne toutes les colonnes des cantons dont le
+7.  Écrivez une requête SQL qui retourne toutes les colonnes des cantons dont le
     chef-lieu est Altdorf ou le nombre de communes supérieur ou égal à 150.
 
     ```{exec} sql
@@ -220,7 +221,7 @@ insert into canton values
     ```
     ````
 
-8.  Écrire une requête SQL qui retourne le nom des cantons dont l'abréviation
+8.  Écrivez une requête SQL qui retourne le nom des cantons dont l'abréviation
     n'est pas FR.
 
     ```{exec} sql
@@ -235,7 +236,7 @@ insert into canton values
     ```
     ````
 
-9.  Écrire une requête SQL qui retourne le nom et l'abréviation des cantons dont
+9.  Écrivez une requête SQL qui retourne le nom et l'abréviation des cantons dont
     la population se trouve entre 300'000 et 500'000 habitants.
 
     ```{exec} sql
@@ -283,7 +284,7 @@ insert into pays values
 select * from pays;
 ```
 
-1.  Afficher le contenu de la table `pays`.
+1.  Affichez le contenu de la table `pays`.
 
     ```{exec} sql
     :after: sql-pays
@@ -297,7 +298,7 @@ select * from pays;
     ```
     ````
 
-2.  La Yougoslavie n'existe plus depuis de nombreuses années. Supprimer cette
+2.  La Yougoslavie n'existe plus depuis de nombreuses années. Supprimez cette
     ligne.
 
     ```{exec} sql
@@ -315,7 +316,7 @@ select * from pays;
     ```
     ````
 
-3.  Corriger les deux erreurs qui se sont produites lors de la création de la
+3.  Corrigez les deux erreurs qui se sont produites lors de la création de la
     base de donnée.
     - La capitale de la Suisse n'est pas Zurich.
     - L'abréviation de l'allemagne n'est pas **AL**, mais **DE**.
@@ -336,7 +337,7 @@ select * from pays;
     ```
     ````
 
-4.  Compléter la colonne nourriture par un plat connu pour la France et pour
+4.  Complétez la colonne nourriture par un plat connu pour la France et pour
     l'Italie.
 
     ```{exec} sql
@@ -379,7 +380,7 @@ select * from contact limit 4;
 :class: hidden
 ```
 
-1.  Rechercher l'email de toutes les personnes célibataires.
+1.  Recherchez l'email de toutes les personnes célibataires.
 
     ```{exec} sql
     :after: sql-contact
@@ -393,7 +394,7 @@ select * from contact limit 4;
     ```
     ````
 
-2.  Recherche toutes les personnes qui habitent à Lausanne.
+2.  Recherchez toutes les personnes qui habitent à Lausanne.
 
     ```{exec} sql
     :after: sql-contact
@@ -407,7 +408,7 @@ select * from contact limit 4;
     ```
     ````
 
-3.  Rechercher toutes les personnes qui habitent à Val-d'Illiez.
+3.  Recherchez toutes les personnes qui habitent à Val-d'Illiez.
 
     ```{tip}
     Le guillemet simple est utilisé en SQL pour indiquer le début et la fin
@@ -429,7 +430,7 @@ select * from contact limit 4;
     ```
     ````
 
-4.  Rechercher toutes les personnes qui habitent dans la région lausannoise (le
+4.  Recherchez toutes les personnes qui habitent dans la région lausannoise (le
     code postal doit commencer par 10..).
 
     ```{exec} sql
@@ -438,18 +439,18 @@ select * from contact limit 4;
     ```
 
     ````{tip}
-    Pour chercher des chaînes de caractères dans un mot, utiliser le mot
+    Pour chercher des chaînes de caractères dans un mot, utilisez le mot
     réservé `like` et les caractères `%` pour remplacer plusieurs caractères
     ou `_` qui remplace un seul caractère.
 
-    Pour trouver tous les contacts dont le prénom commence par Ma, utiliser:
+    Pour trouver tous les contacts dont le prénom commence par Ma, utilisez:
     ```{exec} sql
     :after: sql-contact
     select * from contact where prenom like 'Ma%';
     ```
 
     Pour trouver toutes les Laur**e** ou les Laur**a** dans la liste de
-    contacts, utiliser:
+    contacts, utilisez:
 
     ```{exec} sql
     :after: sql-contact
@@ -464,7 +465,7 @@ select * from contact limit 4;
     ```
     ````
 
-5.  Rechercher le nom, le prénom et la date de naissance de toutes les personnes
+5.  Recherchez le nom, le prénom et la date de naissance de toutes les personnes
     nées en 1995.
 
     ```{exec} sql
@@ -479,7 +480,7 @@ select * from contact limit 4;
     ```
     ````
 
-6.  Rechercher les contacts qui aiment le cinéma.
+6.  Recherchez les contacts qui aiment le cinéma.
 
     ```{exec} sql
     :after: sql-contact
@@ -493,7 +494,7 @@ select * from contact limit 4;
     ```
     ````
 
-7.  Rechercher le nom, le prénom et la date de naissance de toutes les personnes
+7.  Recherchez le nom, le prénom et la date de naissance de toutes les personnes
     nées en juin.
 
     ```{exec} sql
@@ -508,7 +509,7 @@ select * from contact limit 4;
     ```
     ````
 
-8.  Rechercher tous les hommes qui sont célibataires et qui habitent dans la
+8.  Recherchez tous les hommes qui sont célibataires et qui habitent dans la
     région genevoise (12..).
 
     ```{exec} sql
@@ -525,7 +526,7 @@ select * from contact limit 4;
     ```
     ````
 
-9.  Rechercher toutes les femmes qui sont divorcées et qui sont nées entre 1984
+9.  Recherchez toutes les femmes qui sont divorcées et qui sont nées entre 1984
     et 1994.
 
     ```{exec} sql
@@ -547,11 +548,11 @@ select * from contact limit 4;
 Reprenons la base de données des pays de
 l'{numref}`exercice %s<exercice:bd-lab1-pays>`.
 
-1.  Ajouter une colonne `monnaie`. Pour cela, il faut utiliser l'instruction
-    `alter table`. Rechercher sur le Web comment faire.
+1.  Ajoutez une colonne `monnaie`. Pour cela, il faut utiliser l'instruction
+    `alter table`. Recherchez sur le Web comment faire.
 
     ```{tip}
-    Utiliser une valeur par défaut pour la colonne `monnaie`.
+    Utilisez une valeur par défaut pour la colonne `monnaie`.
     ```
 
     ```{exec} sql
@@ -569,7 +570,7 @@ l'{numref}`exercice %s<exercice:bd-lab1-pays>`.
     ```
     ````
 
-2.  Compléter cette nouvelle colonne pour chaque pays.
+2.  Complétez cette nouvelle colonne pour chaque pays.
 
     ```{exec} sql
     :after: sql-pays-6-1
@@ -587,7 +588,7 @@ l'{numref}`exercice %s<exercice:bd-lab1-pays>`.
     ```
     ````
 
-3.  Supprimer la colonne `nourriture`.
+3.  Supprimez la colonne `nourriture`.
 
     ```{exec} sql
     :after: sql-pays-6-2
