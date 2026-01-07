@@ -20,10 +20,10 @@ majuscules pour le cryptogramme (texte chiffré).
 **But:** Utilisation du chiffre de Rail Frence pour chiffrer et déchiffrer un
 message.
 
-Écrire un message pour un camarade de classe avec une clé de chiffrement de 3:
+Écrivez un message pour un camarade de classe avec une clé de chiffrement de 3:
 
 1. Chacun écrit un message qu'il chiffre et transmet à un autre élève.
-2. Déchiffrer le message d'un autre élève.
+2. Déchiffrez le message d'un autre élève.
 
 ## Exercice {nump}`exercice`
 
@@ -57,10 +57,10 @@ Groupe 6:\
 QFANJ HJXYH TRRJZ SJGTN YJIJH MTHTQ FYXTS SJXFN YOFRF NXXZW VZTNT
 SAFYT RGJW
 
-1. Faire une analyse de fréquences. Vous pouvez utiliser le site suivant pour
+1. Faites une analyse de fréquences. Vous pouvez utiliser le site suivant pour
    l'[analyse de fréquences](https://www.dcode.fr/analyse-frequences).
-2. Déterminer la clé de chiffrement.
-3. Déchiffrer le message.
+2. Déterminez la clé de chiffrement.
+3. Déchiffrez le message.
 
 ```{solution}
 1. GOQVS NEISJ CHFSQ VWSBO RSDCG SEISZ EISGD SHWHS GPCAP SGDOF HCIHR OBGAC BXOFR
@@ -105,7 +105,7 @@ quoi on va tomber (Forrest Gump)
 **But:** Décrypter un message utilisant la substitution monoalphabétique en
 faisant une analyse de fréquences.
 
-Décrypter à l'aide de l'analyse de fréquences, le cryptogramme suivant,
+Décryptez à l'aide de l'analyse de fréquences, le cryptogramme suivant,
 chiffré par une substitution monoalphabétique (cas général):
 
 ZRJ VDAARJ CLWJJRCK RK ERARMHRCK ZWIHRJ RK RULMP RC EHDWKJ. ZRJ EWJKWCBKWDCJ
@@ -119,7 +119,7 @@ Les espaces et la ponctuation ont été laissés pour faciliter l'exercice.
 2. Décrypter le message.
 
 ````{tip}
-Écrire un programme python qui permet de remplacer les lettres les unes après
+Écrivez un programme python qui permet de remplacer les lettres les unes après
 les autres.
 ```{code-block} python
 :linenos:
@@ -143,22 +143,22 @@ distinctions sociales ne peuvent etre fondees que sur l'utilite commune.
 **But:** Échanger un message en utilisant le système RSA.
 
 1. Création des clés:
-    - Calculer votre clé privée.
-    - Calculer et transmettre votre clé publique.
+    - Calculez votre clé privée.
+    - Calculez et transmettez votre clé publique.
 
 ```{tip}
-Utiliser [WolframAlpha](https://www.wolframalpha.com/) comme aide pour les
+Utilisez [WolframAlpha](https://www.wolframalpha.com/) comme aide pour les
 calculs.
 ```
 
 2. Chiffrement du message:
-    - Écrire un message (une petite phrase avec majuscule, espaces et
+    - Écrivez un message (une petite phrase avec majuscule, espaces et
       ponctuations).
-    - Transformer le message en nombre en utilisant le code ASCII étendu
+    - Transformez le message en nombre en utilisant le code ASCII étendu
       correspondant à chaque caractère. Utiliser le tableau suivant:
       [Code ASCII](images/code-ascii.pdf).
-    - Chiffrer le message avec la bonne clé.
-    - Transmettre le message chiffré au bon groupe.
+    - Chiffrez le message avec la bonne clé.
+    - Transmettez le message chiffré au bon groupe.
 
 3. Déchiffrement d'un autre message:
-    - Déchiffrer le message reçu.
+    - Déchiffrez le message reçu.
