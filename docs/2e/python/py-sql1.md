@@ -105,7 +105,7 @@ Nom: Taylor Swift Pays: United States Label: Big Machine Records
 ...
 ```
 
-Pour les exercices suivants, vou allez travailler dans Visual Studio Code.
+Pour les exercices suivants, vous allez travailler dans Visual Studio Code.
 
 ### Exercice {nump}`exemple`
 
@@ -330,7 +330,7 @@ base_donnees = sqlite3.connect("music.sqlite")
 # Exécution de la requête de sélection
 requete = base_donnees.execute("select * from artist;")
 
-# Lecture des données
+# Récupération du résultat de la requête
 resultats = requete.fetchall()
 
 # Affichage des résultats ligne par ligne avec nom de colonnes
@@ -355,7 +355,7 @@ base_donnees = sqlite3.connect("music.sqlite")
 # Exécution de la requête de sélection
 requete = base_donnees.execute("select * from album;")
 
-# Lecture des données
+# Récupération du résultat de la requête
 resultats = requete.fetchall()
 
 # Affichage des résultats ligne par ligne avec nom de colonnes
@@ -380,7 +380,7 @@ base_donnees = sqlite3.connect("music.sqlite")
 # Exécution de la requête de sélection
 requete = base_donnees.execute("select sings_song from sings where sings_artist = 'Taylor Swift';")
 
-# Lecture des données
+# Récupération du résultat de la requête
 resultats = requete.fetchall()
 
 # Affichage des résultats ligne par ligne:
@@ -405,7 +405,7 @@ base_donnees = sqlite3.connect("music.sqlite")
 # Exécution de la requête de sélection
 requete = base_donnees.execute("select sings_song, sings_artist, song_album from sings join song on sings_song = song_name where song_genre = 'hip-hop';")
 
-# Lecture des données
+# Récupération du résultat de la requête
 resultats = requete.fetchall()
 
 # Affichage des résultats ligne par ligne avec nom de colonnes
@@ -481,7 +481,7 @@ base_donnees.commit()
 # Exécution de la requête de sélection
 requete = base_donnees.execute("select sings_song from sings where sings_artist = 'Thomas Rhett';")
 
-# Lecture des données
+# Récupération du résultat de la requête
 resultats = requete.fetchall()
 
 # Affichage des résultats ligne par ligne
@@ -536,7 +536,7 @@ else:
 # Exécution de la requête de sélection
 requete = base_donnees.execute("select sings_song from sings where sings_artist = 'Kendrick Lamar';")
 
-# Lecture des données
+# Récupération du résultat de la requête
 resultats = requete.fetchall()
 
 # Affichage des résultats ligne par ligne:
