@@ -14,5 +14,4 @@ sql-ex2
 sql-py
 type-donnees
 requetes
-vscode
 ```
