@@ -99,11 +99,11 @@ premiers.
 Pour que le chiffrement RSA soit sûr, il faut utiliser des clés de taille
 suffisamment grande. Les nombres choisis devront avoir plus de 100 chiffres.
 
-1. Choisir deux nombres premiers $p$ et $q$.
-2. Calculer $n = p \cdot q$.
-3. Calculer $\phi = (p - 1) \cdot (q - 1)$.
-4. Choisir un nombre premier $e$ tel que $\phi \textrm{ mod } e \ne 0$.
-5. Rechercher $d$, $d \ne e$ tel que $(e \cdot d) \textrm{ mod } \phi = 1$.
+1. Choisissez deux nombres premiers $p$ et $q$.
+2. Calculez $n = p \cdot q$.
+3. Calculez $\phi = (p - 1) \cdot (q - 1)$.
+4. Choisissez un nombre premier $e$ tel que $\phi \textrm{ mod } e \ne 0$.<br>
+5. Recherchez $d$, $d \ne e$ tel que $(e \cdot d) \textrm{ mod } \phi = 1$.
 
 La clé publique sera composée des nombres $n$ et $e$, notée ($n$, $e$).
 
@@ -117,21 +117,21 @@ des messages en toute sécurité avec Bob.
 1. Alice choisit $p = 5$ et $q = 11$.
 2. Alice calcule $n = p \cdot q = 5 \cdot 11 = 55$.
 3. Alice calcule $\phi = (p - 1) \cdot (q - 1) = 4 \cdot 10 = 40$.
-4. Alice choisit $e = 43$, car $40 \textrm{ mod } 43 = 40 \ne 0$.
-5. Alice cherche $d$, $d \ne 43$ tel que $(43 \cdot d) \textrm{ mod } 40 = 1$.\
+4. Alice choisit $e = 3$, car $40 \textrm{ mod } 3 = 1 \ne 0$.
+5. Alice cherche $d$, $d \ne 3$ tel que $(3 \cdot d) \textrm{ mod } 40 = 1$.\
    Essais:\
-   $d = 3 \quad \quad (43 \cdot 3) \textrm{ mod } 40 = 129 \textrm{ mod } 40 = 9 \;\, \quad \quad$ &#10060; \
-   $d = 4 \quad \quad (43 \cdot 4) \textrm{ mod } 40 = 172 \textrm{ mod } 40 = 12 \quad \quad$ &#10060; \
-   $d = 5 \quad \quad (43 \cdot 5) \textrm{ mod } 40 = 215 \textrm{ mod } 40 = 15 \quad \quad$ &#10060; \
-   $d = 6 \quad \quad (43 \cdot 6) \textrm{ mod } 40 = 258 \textrm{ mod } 40 = 18 \quad \quad$ &#10060; \
+   $d = 3 \quad \quad (3 \cdot 3) \textrm{ mod } 40 = 9 \textrm{ mod } 40 = 9 \;\, \quad \quad$ &#10060; \
+   $d = 4 \quad \quad (3 \cdot 4) \textrm{ mod } 40 = 12 \textrm{ mod } 40 = 12 \quad \quad$ &#10060; \
+   $d = 5 \quad \quad (3 \cdot 5) \textrm{ mod } 40 = 15 \textrm{ mod } 40 = 15 \quad \quad$ &#10060; \
+   $d = 6 \quad \quad (3 \cdot 6) \textrm{ mod } 40 = 18 \textrm{ mod } 40 = 18 \quad \quad$ &#10060; \
    $d = \dots $ \
-   $d = 27 \quad \;\, (43 \cdot 27) \textrm{ mod } 40 = 1161 \textrm{ mod } 40 = 1 \quad \;\,$ &#9989;
+   $d = 27 \quad \;\, (3 \cdot 27) \textrm{ mod } 40 = 81 \textrm{ mod } 40 = 1 \quad \;\,$ &#9989;
 
 6. Alice garde secret sa clé privée (5, 11, 27) et publie sa clé publique (55, 43).
 
 #### Exercice {num2}`exercice`
 
-Déterminer la clé publique et la clé privée du système RSA avec les deux nombres
+Déterminez la clé publique et la clé privée du système RSA avec les deux nombres
 premiers suivants:\
 $p = 13$ et $q = 11$.
 
@@ -157,12 +157,12 @@ La clé privée est (13, 11, 103) et la clé publique est (143, 7).
 
 #### Méthode
 
-1. Chercher dans l'annuaire la clé publique du destinataire de la forme
+1. Cherchez dans l'annuaire la clé publique du destinataire de la forme
    ($n$, $e$).
-2. Transformer le message (texte clair) en nombre, en remplaçant chaque lettre
+2. Transformez le message (texte clair) en nombre, en remplaçant chaque lettre
    par son code ASCII étendu. A &rarr; 65, B &rarr; 66, a &rarr; 97, etc. Le
    message est donc maintenant un nombre.
-3. Si le nombre ainsi obtenu est plus grand que $n$, découper le message en
+3. Si le nombre ainsi obtenu est plus grand que $n$, découpez le message en
    blocs de taille $m$ tel que $1 < m < n$. Ces blocs seront chiffrés et envoyés
    séparément.
 4. Le cryptogramme correspond au nombre $c$ calculé en utilisant
@@ -196,7 +196,7 @@ Bob souhaite envoyer à Alice le message suivant: "salut".
 
 #### Exercice {num2}`exercice`
 
-Chiffrer le message $m = 34$ à l'aide du système RSA, avec la clé publique
+Chiffrez le message $m = 34$ à l'aide du système RSA, avec la clé publique
 (143, 7).
 
 ```{solution}
@@ -211,10 +211,10 @@ Le message chiffré est 122.
 
 #### Méthode
 
-1. Utiliser la clé privée ($p$, $q$, $d$).
-2. Déchiffrer chacun des blocs reçus avec la formule suivante:
+1. Utilisez la clé privée ($p$, $q$, $d$).
+2. Déchiffrez chacun des blocs reçus avec la formule suivante:
     $ m = c^d \textrm{ mod } n $.
-3. Transformer le nombre en lettre, c'est-à-dire remplacer chaque code ASCII
+3. Transformez le nombre en lettre, c'est-à-dire remplacez chaque code ASCII
     étendu par la lettre correspondante.
 
 #### Exemple
@@ -237,7 +237,7 @@ Alice a reçu le cryptogramme suivant composé de 5 blocs: 39 01 23 21 25.
 #### Exercice {num2}`exercice`
 
 Vous avez reçu un message chiffré $c = 122$.\
-Déchiffrer le message $m$ sachant que votre clé privée est  (13, 11, 103).
+Déchiffrez le message $m$ sachant que votre clé privée est  (13, 11, 103).
 
 ```{solution}
 1. La clé privée est (13, 11, 103).

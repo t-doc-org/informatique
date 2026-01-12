@@ -81,7 +81,7 @@ V   L   L   E   N   R
 
 Un texte a été chiffré avec le procédé du Chiffre de Rail Fence avec comme
 clé de chiffrement 2.\
-Déchiffrer le texte suivant:
+Déchiffrez le texte suivant:
 
 <center>LCYTG AHEYE RQESF CLAEH FRRAR PORPI SMTIU ETAIE DCIFE</center>
 
@@ -117,7 +117,7 @@ positions. C'est-à-dire que le a est remplacé par D, b par E, etc.
 
 #### Exercice {num2}`exercice`
 
-Coder le message suivant en utilisant le chiffre de César d'origine (décalage de
+Codez le message suivant en utilisant le chiffre de César d'origine (décalage de
 trois positions):
 
 <center>La crypto, c'est sympa!</center>
@@ -131,7 +131,7 @@ l &rarr; O, a &rarr; D, c &rarr; F, ...
 
 #### Exercice {num2}`exercice`
 
-Déchiffrer le texte suivant chiffré en utilisant le Chiffre de César d'origine,
+Déchiffrez le texte suivant chiffré en utilisant le Chiffre de César d'origine,
 c'est-à-dire avec comme clé de chiffrement un décalage de trois positions.
 
 <center>WHAWH FRGHD YHFOH FKLII UHGHF HVDU</center>
@@ -278,7 +278,7 @@ Sans devoir calculer le décalage, on peut utiliser le
 
 #### Exercice {num2}`exercice`
 
-Déchiffrer le message suivant, chiffré avec le Chiffre de Vigenère, sachant que
+Déchiffrez le message suivant, chiffré avec le Chiffre de Vigenère, sachant que
 la clé de chiffrement est **informatique**:
 
 <center>ARXOD QONDH YXWV</center>
