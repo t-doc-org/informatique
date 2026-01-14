@@ -201,7 +201,7 @@ Chiffrez le message $m = 34$ à l'aide du système RSA, avec la clé publique
 
 ```{solution}
 1. $n = 143$ et $e = 7$
-2. $34 < 143$ , donc pas besoin découper le message.
+2. $34 < 143$ , donc pas besoin de découper le message.
 3. Chiffrer le message: $c = 34^{7} \textrm{ mod } 143 = 122$.
 
 Le message chiffré est 122.

@@ -94,7 +94,7 @@ LJBAF B\
 **Texte clair:** avant je me disais que ma vie etait une tragedie je me rends
 compte que c est une comedie (Joker)
 
-6. QFANJ HJXYH TRRJZ SJGTN YJIJH MTHTQ FYXTS SJXFN YOFRF NXXZW VZTNT SAFYT RGJW
+6. QFANJ HJXYH TRRJZ SJGTN YJIJH MTHTQ FYXTS SJXFN YOFRF NXXZW VZTNT SAFYT RGJW\
 **Clé:** décalage de 5\
 **Texte clair:** la vie c est comme une boite de chocolats on ne sait jamais sur
 quoi on va tomber (Forrest Gump)
@@ -136,6 +136,8 @@ IMPLU St KPXOt
 ```{solution}
 **Texte clair:** les hommes naissent et demeurent libres et egaux en droits. les
 distinctions sociales ne peuvent etre fondees que sur l'utilite commune.
+
+Article 1 de la Déclaration des Droits de l'homme et du Citoyen de 1789.
 ```
 
 ## Exercice {nump}`exercice`
@@ -153,7 +155,7 @@ calculs.
 
 2. Chiffrement du message:
     - Écrivez un message (une petite phrase avec majuscule, espaces et
-      ponctuations).
+      ponctuations entre 6 et 15 caractères).
     - Transformez le message en nombre en utilisant le code ASCII étendu
       correspondant à chaque caractère. Utiliser le tableau suivant:
       [Code ASCII](images/code-ascii.pdf).
@@ -162,3 +164,62 @@ calculs.
 
 3. Déchiffrement d'un autre message:
     - Déchiffrez le message reçu.
+
+```{solution}
+Quelques calculs de clés:
+
+1.  $p=101$ et q=$151$<br>
+    $n = 101 \cdot 151 = 15251$<br>
+    $\phi = 100 \cdot 150 = 15000$<br>
+    $15000 \textrm{ mod } e \neq 0$ La valeur la plus petite possible est $e=7$<br>
+    $7 \cdot 15000  \textrm{ mod } d = 1 $ La valeur la plus petite possible est $d=2143$<br>
+    La clé privée est (101, 151, 2143) et la clé publique est (15251, 7).
+2.  $p=89$ et q=$167$<br>
+    $n = 89 \cdot 167 = 14863$<br>
+    $\phi = 88 \cdot 166 = 14608$<br>
+    $14608 \textrm{ mod } e \neq 0$ La valeur la plus petite possible est $e=3$<br>
+    $3 \cdot 14608  \textrm{ mod } d = 1 $ La valeur la plus petite possible est $d=9739$<br>
+    La clé privée est (89, 167, 9739) et la clé publique est (14863, 3).
+3.  $p=79$ et q=$191$<br>
+    $n = 79 \cdot 191 = 15089$<br>
+    $\phi = 78 \cdot 190 = 14820$<br>
+    $14820 \textrm{ mod } e \neq 0$ La valeur la plus petite possible est $e=7$<br>
+    $7 \cdot 14820  \textrm{ mod } d = 1 $ La valeur la plus petite possible est $d=12703$<br>
+    La clé privée est (79, 191, 12703) et la clé publique est (15089, 7).
+4.  $p=83$ et q=$179$<br>
+    $n = 83 \cdot 179 = 14857$<br>
+    $\phi = 82 \cdot 178 = 14596$<br>
+    $14596 \textrm{ mod } e \neq 0$ La valeur la plus petite possible est $e=3$<br>
+    $3 \cdot 14596  \textrm{ mod } d = 1 $ La valeur la plus petite possible est $d=9731$<br>
+    La clé privée est (83, 179, 9731) et la clé publique est (14857, 3).
+5.  $p=103$ et q=$149$<br>
+    $n = 103 \cdot 149 = 15347$<br>
+    $\phi = 102 \cdot 148 = 15096$<br>
+    $15096 \textrm{ mod } e \neq 0$ La valeur la plus petite possible est $e=5$<br>
+    $5 \cdot 15096  \textrm{ mod } d = 1 $ La valeur la plus petite possible est $d=12077$<br>
+    La clé privée est (103, 149, 12077) et la clé publique est (15347, 5).
+6.  $p=97$ et q=$157$<br>
+    $n = 97 \cdot 157 = 15229$<br>
+    $\phi = 96 \cdot 156 = 14976$<br>
+    $14976 \textrm{ mod } e \neq 0$ La valeur la plus petite possible est $e=5$<br>
+    $5 \cdot 14976  \textrm{ mod } d = 1 $ La valeur la plus petite possible est $d=11981$<br>
+    La clé privée est (97, 157, 11981) et la clé publique est (15229, 5).
+
+**Chiffrement de "Hello!":**
+
+Code ASCII: 072 101 108 108 111 033
+
+Chiffrement avec la clé privée (97, 157, 11981) et la clé publique (15229, 5):
+
+$072^5 \textrm{ mod } 15229 = 12266$\
+$101^5 \textrm{ mod } 15229 = 4128$\
+$108^5 \textrm{ mod } 15229 = 6530$\
+$108^5 \textrm{ mod } 15229 = 6530$\
+$111^5 \textrm{ mod } 15229 = 12860$\
+$33^5 \textrm{ mod } 15229 = 12092$
+
+Les caractères seront envoyés les uns après les autres, il y aura donc 6
+messages envoyés:\
+12266 4128 6530 6530 12860 12092
+
+```
