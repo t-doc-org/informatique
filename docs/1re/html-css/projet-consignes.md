@@ -3,7 +3,7 @@
 
 # Projet - Consignes
 
-But: Créer un site web sur une personnalité, un livre ou un hobby.
+But: Créer un site web sur une personnalité, un livre ou un hobby / une passion.
 
 Le site doit être composé de:
 
