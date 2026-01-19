@@ -131,7 +131,7 @@ Notez la balise qui indique:
 ```{quiz}
 :style: max-width: 42rem;
 1.  {input}`{"<html>": true}`
-    ... le début d'un document HTML?
+    ... le début de la partie HTML?
 2.  {input}`{"</h1>": true}`
     ... la fin d'un titre principal?
 3.  {input}`{"<head>": true}`
