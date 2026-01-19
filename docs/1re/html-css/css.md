@@ -255,6 +255,7 @@ Au moyen du CSS, modifiez les éléments suivants:
 
 ```{exec} html
 :editor: 7abfb302-7e87-4061-85ba-7ccf0a2ad1b1
+:reset: hide
 :after: selecteur-id
 :when: load
 :style: height: 30rem;
@@ -641,6 +642,7 @@ Au moyen du CSS, modifiez les éléments suivants:
 
 ```{exec} html
 :editor: 4b0c4093-3e13-461a-9bdd-426319a4344e
+:reset: hide
 :after: selecteur-classe
 :when: load
 :style: height: 30rem;

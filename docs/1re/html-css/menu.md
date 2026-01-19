@@ -21,18 +21,19 @@ Créez un menu en haut d'une page qui permet de naviguer entre différentes page
 :sync-group: etape
 ```{tab-item} Étape 1
 :sync: etape1
-Créez une liste non-numérotée qui contient les noms des différentes sections de
-la page. Le premier élément est "Haut de page".
+Dans le fichier HTML, créez une liste non-numérotée qui contient les noms des
+différentes sections de la page. Le premier élément est "Haut de page".
 ```
 ```{tab-item} Étape 2
 :sync: etape2
 Dans la partie CSS, le formatage du menu a déjà été défini au moyen d'un
-sélecteur de classe. Pour que celui-ci s'applique au menu, ajoutez la classe
-`menu` à l'élément `<ul>` de la liste.
+sélecteur de classe. Pour que celui-ci s'applique au menu, ajoutez, dans le
+fichier HTML, la classe `menu` à l'élément `<ul>` de la liste.
 ```
 ```{tab-item} Étape 3
 :sync: etape3
-Pour ajouter les références aux différentes sections, il faut
+Pour ajouter les références aux différentes sections, il faut, dans le fichier
+HTML:
 
 1.  Ajouter un identifiant à chaque section qui est référencée dans le menu.
 2.  Ajouter une référence à la section correspondante dans le menu.
@@ -52,6 +53,7 @@ Modifiez la couleur du menu, du texte, etc.
 
 ```{exec} html
 :editor: 775b3aa8-74b0-4ac9-9233-3c9779c4dac5
+:reset: hide
 :after: barre-navigation
 :when: load
 :style: height: 30rem;
@@ -152,6 +154,7 @@ Modifiez la couleur du menu, du texte, etc.
 
 ```{exec} html
 :editor: f027de1b-d4ad-442f-9c13-f3d3494c802b
+:reset: hide
 :name: barre-navigation
 :when: never
 <style>
