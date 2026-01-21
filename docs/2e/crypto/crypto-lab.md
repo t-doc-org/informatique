@@ -17,7 +17,7 @@ majuscules pour le cryptogramme (texte chiffré).
 
 ## Exercice {nump}`exercice`
 
-**But:** Utilisation du chiffre de Rail Frence pour chiffrer et déchiffrer un
+**But:** Utilisation du chiffre de Rail Fence pour chiffrer et déchiffrer un
 message.
 
 Écrivez un message pour un camarade de classe avec une clé de chiffrement de 3:
