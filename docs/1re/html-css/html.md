@@ -135,7 +135,7 @@ Notez la balise qui indique:
 2.  {input}`{"</h1>": true}`
     ... la fin d'un titre principal?
 3.  {input}`{"<head>": true}`
-    ... la début de l'entête du document?
+    ... le début de l'entête du document?
 4.  {input}`{"</body>": true}`
     ... la fin du contenu (corps) de la page?
 5.  {input}`{"<h2>": true}`
