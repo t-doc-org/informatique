@@ -38,7 +38,7 @@
 |-------------------------------------------------------------------------------|--------|--------|-------|
 | Le contenu du site web est exact et argumenté :                               | 3      | 3      | 9     |
 | - le thème traité dans son ensemble                                           |        |        |       |
-| - les éléments essentiels sont identifiés                                     |        |        |       |
+| - le public cible est respecté                                                |        |        |       |
 | - les explications données sont claires et correctes                          |        |        |       |
 | - le thème est adéquatement structuré (sections, etc.)                        |        |        |       |
 | Les sources sont mentionnées au moyen d'hyperliens (y compris les images)     | 3      | 1      | 3     |
