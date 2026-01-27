@@ -249,7 +249,7 @@ Cette balise peut contenir aussi les attributs height ou width qui permettent de
 déterminer la hauteur et/ou la largeur de l'image en pixels.
 
 ```{code} html
-<img src= "images/mon_image.png" width="300" height="200">
+<img src= "images/mon_image.png" width="300">
 ```
 
 [Tuto](https://developer.mozilla.org/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
