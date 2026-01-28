@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{metadata}
+solutions: dynamic
+```
+
 # Type de données
 
 Lors de la création de tables en SQL, il faut déterminer le type des colonnes.
@@ -58,6 +62,10 @@ Les nombres réels:
 
 Remplir le tableau dans le document joint
 [Exercice sur les types](exercice-types.docx).
+
+```{solution}
+[Solution exercice sur les types](exercice-types-corrige.pdf)
+```
 
 (null)=
 ## Valeur null
