@@ -13,12 +13,12 @@ type de données qu'il contient (`.txt`, `.docx`, `.pdf`, `.png`, `.jpg`, `.mp3`
 `.py`).
 
 ```{tip}
-Pour retrouver facilement ses documents:
+Pour retrouver facilement vos documents:
 
-1.  Utiliser une hiérarchie de dossiers adéquate.\
+1.  Utilisez une hiérarchie de dossiers adéquate.\
     Exemples: 1ère année, 2e année, maths, informatique, programmation, bases de
     données
-2.  Choisir des noms de fichiers qui permettent de savoir ce qu'ils
+2.  Choisissez des noms de fichiers qui permettent de savoir ce qu'ils
     contiennent.\
     Exemples: ex1, théorie, exercices
 ```
