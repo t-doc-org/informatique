@@ -181,7 +181,7 @@ p {
   font-family: "Goudy Bookletter 1911";
 }
 
-html {
+body {
   background-color: cornsilk;
 }
 </style>
