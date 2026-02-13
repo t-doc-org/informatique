@@ -17,7 +17,7 @@ dans le dossier partagé sur OneDrive nommé `PRENOM projet html`.
 
 ### Avant la création du site
 
-1.  Définissez les différents thèmes que vous allez aborder.
+1.  Définissez les différents parties de votre sujet que vous allez aborder.
 2.  Complétez, si nécessaire, les sources déjà trouvées (au minimum 5).
 3.  Lisez les sources et faites des résumés dans le document Word.
 4.  Réfléchissez à la structure et au design du site:
@@ -36,7 +36,7 @@ Cette partie sera faite pas à pas ensemble en classe.
         - un fichier `style.css`
         - un dossier `images`
 
-### Débuter avec le site Web
+### Début avec le site Web
 
 1.  Commencez par la page de contenu (`index.html`) sans vous souciez du CSS.
 2.  Séparez le contenu qui se trouvera dans `index.html` de la mise en page et
@@ -53,8 +53,21 @@ Cette partie sera faite pas à pas ensemble en classe.
 
 ## Sources
 
-Les sources doivent être indiquées à la fin de chaque paragraphe ou chaque
-section au moyen d'un hyperlien.
+Les sources doivent être indiquées dans la section `Références`, dernière section
+de votre menu.
+
+### Exemples
+
+Livres:
+
+NAVARRO, Morgane, PATINO, Bruno. *9 secondes, la civilisation du poisson rouge*. Paris : Dupuis, 2026.
+
+Documents web:
+
+BLANK, Caroline. «HTML et CSS», 2026. Consulté le 14 février 2026.
+[\<https://informatique.t-doc.org/1re/html-css/index.html\>](https://informatique.t-doc.org/1re/html-css/index.html).
+
+
 
 ## Règlement concernant l'utilisation de l'intelligence artificielle et du Web
 
