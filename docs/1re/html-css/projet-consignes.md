@@ -60,13 +60,16 @@ de votre menu.
 
 Livres:
 
-NAVARRO, Morgane, PATINO, Bruno. *9 secondes, la civilisation du poisson rouge*. Paris : Dupuis, 2026.
+NAVARRO, Morgane, PATINO, Bruno. *9 secondes, la civilisation du poisson rouge*. Marcinelle : Dupuis, 2026.
 
 Documents web:
 
 BLANK, Caroline. «HTML et CSS», 2026. Consulté le 14 février 2026.
 [\<https://informatique.t-doc.org/1re/html-css/index.html\>](https://informatique.t-doc.org/1re/html-css/index.html).
 
+Vidéos:
+
+TAIEB, John. *Comment fonctionne un site web?* Youtube, 2016.
 
 
 ## Règlement concernant l'utilisation de l'intelligence artificielle et du Web
