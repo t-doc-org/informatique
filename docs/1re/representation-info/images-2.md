@@ -26,7 +26,6 @@ allons nous intéresser aux images.
 </style>
 
 <div class="box">
-<div>
 <textarea class="tdoc-code">
 P1
 10 10
@@ -41,17 +40,11 @@ P1
 0 0 1 1 1 1 1 1 0 0
 0 0 0 0 0 0 0 0 0 0
 </textarea>
-</div>
-
-<div><button class="tdoc-btn-convertir">Convertir</button></div>
-
-<div class="image">
-
-</div>
+<button class="tdoc-btn-convertir">Convertir</button>
+<div class="image"></div>
 </div>
 
 <div class="box">
-<div>
 <textarea class="tdoc-code">
 P2
 8 8
@@ -65,28 +58,35 @@ P2
 3 2 0 1 1 0 2 3
 3 3 1 1 1 1 3 3
 </textarea>
+<button class="tdoc-btn-convertir">Convertir</button>
+<div class="image"></div>
 </div>
 
-<div><button class="tdoc-btn-convertir">Convertir</button></div>
-
-<div class="image">
-
-</div>
+<div class="box">
+<textarea class="tdoc-code">
+P3
+3 2
+255
+255 0 0 0 255 0 0 0 255
+255 255 0 0 0 0 255 255 255
+</textarea>
+<button class="tdoc-btn-convertir">Convertir</button>
+<div class="image"></div>
 </div>
 
 
 
 <script>
-function afficher(encodage) {
+function afficher(encodage, el) {
   switch (encodage[0]) {
     case "P1":
-      afficherPBM(encodage);
+      afficherPBM(encodage, el);
       break;
     case "P2":
-      afficherPGM(encodage);
+      afficherPGM(encodage, el);
       break;
     case "P3":
-      afficherPPM(encodage);
+      afficherPPM(encodage, el);
       break;
     default:
       document.querySelector('.image').innerHTML = "Erreur dans le format.";
@@ -94,7 +94,7 @@ function afficher(encodage) {
   }
 }
 
-function afficherPBM(encodage) {
+function afficherPBM(encodage, el) {
   nb_meta = 3;
   const w = largeur * encodage[1], h = largeur * encodage[2];
   let svg;
@@ -110,10 +110,10 @@ function afficherPBM(encodage) {
     }
     svg += '</svg>';
   }
-  document.querySelector('.image').innerHTML = svg;
+  el.innerHTML = svg;
 }
 
-function afficherPGM(encodage) {
+function afficherPGM(encodage, el) {
   nb_meta = 4;
   const w = largeur * encodage[1], h = largeur * encodage[2];
   let svg;
@@ -130,10 +130,10 @@ function afficherPGM(encodage) {
     }
     svg += '</svg>';
   }
-  document.querySelector('.image').innerHTML = svg;
+  el.innerHTML = svg;
 }
 
-function afficherPPM(encodage) {
+function afficherPPM(encodage, el) {
   nb_meta = 4;
   const w = largeur * encodage[1], h = largeur * encodage[2];
   let svg;
@@ -150,15 +150,19 @@ function afficherPPM(encodage) {
     }
     svg += '</svg>';
   }
-  document.querySelector('.image').innerHTML = svg;
+  el.innerHTML = svg;
 }
 
 const largeur = 20;
-let btn_convertir = document.querySelector('.tdoc-btn-convertir');
-btn_convertir.addEventListener('click', function() {
-  let text = document.querySelector('.tdoc-code').value;
-  const encodage = text.trim().split(/[\n, ]/);
-  afficher(encodage);
+
+const buttons = document.querySelectorAll('.tdoc-btn-convertir');
+for (const btn of buttons) {
+  btn.addEventListener('click', function(e) {
+    let text = e.target.previousElementSibling.value;
+    const encodage = text.trim().split(/[\n, ]/);
+    console.log(encodage);
+    afficher(encodage, e.target.nextElementSibling);
 });
+}
 
 </script>
