@@ -17,8 +17,8 @@ change chaque semaine. Pensez à vérifier l'horaire régulièrement.
 :maxdepth: 1
 python/index
 html-css/index
-architecture/index
 representation-info/index
+architecture/index
 numerique-et-societe/index
 microbit/index
 objectifs/index
