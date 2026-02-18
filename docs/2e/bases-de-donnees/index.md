@@ -8,6 +8,7 @@
 donnees
 sql
 sql-ex1
+excel
 bd-relationnelle
 sql2
 sql-ex2
