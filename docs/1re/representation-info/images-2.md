@@ -10,6 +10,46 @@ solutions: dynamic
 Nous avons vu comment représenter des nombres et des caractères. Maintenant nous
 allons nous intéresser aux images.
 
+```{exec} pnm
+:editor:
+P1
+10 10
+0 0 0 0 0 0 0 0 0 0
+0 0 1 1 1 1 1 1 0 0
+0 1 1 0 0 0 0 1 1 0
+0 1 0 0 0 0 0 0 1 0
+0 1 0 0 0 0 0 0 1 0
+0 1 0 0 0 0 0 0 1 0
+0 1 0 0 0 0 0 0 1 0
+0 1 1 0 0 0 0 1 1 0
+0 0 1 1 1 1 1 1 0 0
+0 0 0 0 0 0 0 0 0 0
+```
+
+```{exec} pnm
+:editor:
+P2
+8 8
+3
+3 2 3 3 3 3 2 3
+2 2 1 2 2 1 2 2
+2 2 2 2 2 2 2 2
+1 2 0 2 2 0 2 1
+2 2 0 2 2 0 2 2
+1 2 2 2 2 2 2 1
+3 2 0 1 1 0 2 3
+3 3 1 1 1 1 3 3
+```
+
+```{exec} pnm
+:editor:
+P3
+3 2
+255
+255 0 0 0 255 0 0 0 255
+255 255 0 0 0 0 255 255 255
+```
+
 <style>
 .box > * {
   margin: 10px;
