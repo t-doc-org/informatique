@@ -5,6 +5,38 @@ import {Runner, UserError} from './exec.js';
 
 const largeur = 20;
 
+const formats = {
+    'P1': {
+        nb_meta: 3,
+        vpp: 1,
+        couleur: (encodage, index) => {
+            return encodage[index] === '1' ? '#000000':'#ffffff';
+        },
+    },
+     'P2': {
+        nb_meta: 4,
+        vpp: 1,
+        couleur: (encodage, index) => {
+            const n = nuance(encodage[index], encodage[3]);
+            return `#${n}${n}${n}`;
+        },
+     },
+     'P3': {
+        nb_meta: 4,
+        vpp: 3,
+        couleur: (encodage, index) => {
+                return `\
+#${nuance(encodage[index], encodage[3])}\
+${nuance(encodage[index + 1], encodage[3])}\
+${nuance(encodage[index + 2], encodage[3])}`;
+        },
+     },
+};
+
+function nuance(v, max) {
+    return Math.round(v * 255 / max).toString(16).padStart(2, '0');
+}
+
 class PnmRunner extends Runner {
     static name = 'pnm';
 
@@ -24,26 +56,15 @@ class PnmRunner extends Runner {
         this.replaceOutputs();
         const blocks = [];
         for (const {code} of this.codeBlocks()) blocks.push(code);
-        const text = blocks.join('');
-        const encodage = text.trim().split(/[\n, ]/);
-        console.log(encodage);
-        const svg = this.generer(encodage);
-        this.output.render('001', svg);
+        this.output.render('001', this.generer(blocks.join('')));
     }
 
-    generer(encodage) {
-        switch (encodage[0]) {
-        case "P1": return this.genererPBM(encodage);
-        case "P2": return this.genererPGM(encodage);
-        case "P3": return this.genererPPM(encodage);
-        default: throw new UserError("Erreur dans le format.");
-        }
-    }
-
-    genererPBM(encodage) {
-        const nb_meta = 3;
+    generer(text) {
+        const encodage = text.trim().split(/[\n ]+/);
+        const {nb_meta, vpp, couleur} = formats[encodage[0]] ?? {};
+        if (!nb_meta) throw new UserError("Erreur dans le format.");
         const w = largeur * encodage[1], h = largeur * encodage[2];
-        if (encodage.length !== encodage[1] * encodage[2] + nb_meta) {
+        if (encodage.length !== encodage[1] * encodage[2] * vpp + nb_meta) {
             throw new UserError(`\
 Le nombre de données ne correspond pas aux dimensions de l'image annoncée.`);
         }
@@ -52,61 +73,10 @@ Le nombre de données ne correspond pas aux dimensions de l'image annoncée.`);
  xmlns="http://www.w3.org/2000/svg">`;
         for (let j = 0; j < encodage[2]; j++) {
             for (let i = 0; i < encodage[1]; i++) {
-                let couleur = encodage[nb_meta + j * encodage[1] + i] === '1' ?
-                              '#000000':'#ffffff';
+                const index = nb_meta + vpp * (j * encodage[1] + i);
                 svg += `\
 <rect x="${i * largeur}" y="${j * largeur}" width="${largeur}"\
- height="${largeur}" fill="${couleur}"/>`;
-            }
-        }
-        svg += '</svg>';
-        return svg;
-    }
-
-    genererPGM(encodage) {
-        const nb_meta = 4;
-        const w = largeur * encodage[1], h = largeur * encodage[2];
-        if (encodage.length !== encodage[1] * encodage[2] + nb_meta) {
-            throw new UserError(`\
-Le nombre de données ne correspond pas aux dimensions de l'image annoncée.`);
-        }
-        let svg = `\
-<svg class="pnm" width="${w}" height="${h}"\
- xmlns="http://www.w3.org/2000/svg">`;
-        for (let j = 0; j < encodage[2]; j++) {
-            for (let i = 0; i < encodage[1]; i++) {
-                let nuance = Math.round(encodage[nb_meta + j * encodage[1] + i]
-                                        * 255 / encodage[3]);
-                let couleur = `rgb(${nuance} ${nuance} ${nuance})`;
-                svg += `\
-<rect x="${i * largeur}" y="${j * largeur}" width="${largeur}"\
- height="${largeur}" fill="${couleur}"/>`;
-            }
-        }
-        svg += '</svg>';
-        return svg;
-    }
-
-    genererPPM(encodage) {
-        const nb_meta = 4;
-        const w = largeur * encodage[1], h = largeur * encodage[2];
-        if (encodage.length !== encodage[1] * encodage[2] * 3 + nb_meta) {
-            throw new UserError(`\
-Le nombre de données ne correspond pas aux dimensions de l'image annoncée.`);
-        }
-        let svg = `\
-<svg class="pnm" width="${w}" height="${h}"\
- xmlns="http://www.w3.org/2000/svg">`;
-        for (let j = 0; j < encodage[2]; j++) {
-            for (let i = 0; i < encodage[1]; i++) {
-                let index = nb_meta + j * encodage[1] * 3 + i * 3;
-                let couleur = `\
-rgb(${encodage[index] * 255 / encodage[3]}\
- ${encodage[index + 1] * 255 / encodage[3]}\
- ${encodage[index + 2] * 255 / encodage[3]})`;
-                svg += `\
-<rect x="${i * largeur}" y="${j * largeur}" width="${largeur}"\
- height="${largeur}" fill="${couleur}"/>`;
+ height="${largeur}" fill="${couleur(encodage, index)}"/>`;
             }
         }
         svg += '</svg>';
