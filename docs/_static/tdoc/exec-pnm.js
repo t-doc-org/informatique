@@ -10,7 +10,7 @@ const formats = {
     'P1': {
         nb_meta: 3,
         vpp: 1,
-        couleur: (encodage, index) => {
+        couleur: (encodage, index, max) => {
             const v = strToInt(encodage[index]);
             if (v === undefined || (v !== 0 && v !== 1)) {
                 throw new UserError("Valeur de pixel non valide.");
@@ -21,28 +21,24 @@ const formats = {
      'P2': {
         nb_meta: 4,
         vpp: 1,
-        couleur: (encodage, index) => {
-            const n = nuance(encodage[index], encodage[3]);
+        couleur: (encodage, index, max) => {
+            const n = nuance(encodage[index], max);
             return `#${n}${n}${n}`;
         },
      },
      'P3': {
         nb_meta: 4,
         vpp: 3,
-        couleur: (encodage, index) => {
+        couleur: (encodage, index, max) => {
                 return `\
-#${nuance(encodage[index], encodage[3])}\
-${nuance(encodage[index + 1], encodage[3])}\
-${nuance(encodage[index + 2], encodage[3])}`;
+#${nuance(encodage[index], max)}\
+${nuance(encodage[index + 1], max)}\
+${nuance(encodage[index + 2], max)}`;
         },
      },
 };
 
 function nuance(v, max) {
-    max = strToInt(max);
-    if (max === undefined || max <= 0) {
-        throw new UserError("Valeur maximale non valide.");
-    }
     v = strToInt(v);
     if (v === undefined || v < 0 || v > max) {
         throw new UserError("Valeur de pixel non valide.");
@@ -84,23 +80,30 @@ class PnmRunner extends Runner {
         if (h === undefined || h <= 0) {
             throw new UserError("Hauteur non valide.");
         }
+        let max;
+        if (nb_meta > 3) {
+            max = strToInt(encodage[3]);
+            if (max === undefined || max <= 0) {
+                throw new UserError("Valeur maximale non valide.");
+            }
+        }
         if (encodage.length !== w * h * vpp + nb_meta) {
             throw new UserError(`\
 Le nombre de données ne correspond pas aux dimensions de l'image annoncée.`);
         }
-        let svg = `\
+        const svg = [`\
 <svg class="pnm" width="${w * largeur}" height="${h * largeur}"\
- xmlns="http://www.w3.org/2000/svg">`;
+ xmlns="http://www.w3.org/2000/svg">`];
         for (let j = 0; j < h; j++) {
             for (let i = 0; i < w; i++) {
                 const index = nb_meta + vpp * (j * w + i);
-                svg += `\
+                svg.push(`\
 <rect x="${i * largeur}" y="${j * largeur}" width="${largeur}"\
- height="${largeur}" fill="${couleur(encodage, index)}"/>`;
+ height="${largeur}" fill="${couleur(encodage, index, max)}"/>`);
             }
         }
-        svg += '</svg>';
-        return svg;
+        svg.push('</svg>');
+        return svg.join('');
     }
 }
 
