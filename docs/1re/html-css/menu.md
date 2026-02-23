@@ -205,7 +205,7 @@ html {
     <title>Titre de la page</title>
   </head>
 <body>
-    <ul class=menu>
+    <ul class="menu">
       <li><a href="#home">Haut de page</a></li>
       <li><a href="#section1">Section 1</a></li>
       <li><a href="#section2">Section 2</a></li>
