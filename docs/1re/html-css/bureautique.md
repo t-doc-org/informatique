@@ -26,9 +26,9 @@ Voici les éléments principaux d'un texte:
 | hyperlien            | `<a href=...>`      |
 | image                | `<img src=...>`     |
 
-Un logiciel de traitement de texte n'a pas de fichier CSS, mais il y des styles
-qui permet de styliser tous ces éléments de la même manière que le faut le
-fichier CSS.
+Un logiciel de traitement de texte n'utilise pas de fichier CSS, mais il propose
+des styles qui permettent de mettre en forme les éléments de manière similaire à
+ce que ferait une feuille de style CSS.
 
 ## Exercice {num2}`exercice`
 
@@ -52,12 +52,13 @@ utilisant les styles** en suivant les indications suivantes:
 ![image](images/bureautique.png){.hidden}
 
 3. Titres et les sous-titres
-    Le type de police de caractères de tous les titres et sous-titres soit être
+
+    Le type de police de caractères de tous les titres et sous-titres doit être
     "Arial".
 
     - Le titre `<h1>` doit être en gras et centré. De plus, il faut ajouter un
       espace d'au moins 12 pt après.
-    - Les sous-titres `<h2>` doit être en gras De plus, il faut ajouter un
+    - Les sous-titres `<h2>` doivent être en gras. De plus, il faut ajouter un
       espace d'au moins 12 pt avant.
     - Les sous-titres `<h3>` peuvent conserver le formatage standard, mais en
       "Arial".
