@@ -9,6 +9,7 @@ introduction
 entiers-non-signes
 entiers-signes
 caracteres
+couleurs
 images
 images-2
 ```
