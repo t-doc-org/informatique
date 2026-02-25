@@ -16,7 +16,7 @@ nombre est négatif.
 
 Cette représentation possède deux inconvénients:
 
-- Le nombre 0 a deux présentations différents: 00000000 et 10000000
+- Le nombre 0 a deux présentations différentes: 00000000 et 10000000
 - Les opérations arithmétiques sont plus compliquées. Il faut notamment
   différencier le cas où les deux nombres sont de même signe du cas où ils sont
   de signes différents.
@@ -57,9 +57,9 @@ sont obtenus selon le tableau ci-dessous:
 
 ## Opposé d'un nombre
 
-Pour déterminer l'opposé d'un nombre, il faut:
-1. Inverser tous les bits (0 $\rightarrow$ 1 et 1 $\rightarrow$ 0);
-2. Additionner 1.
+Pour déterminer l'opposé d'un nombre:
+1. Inversez tous les bits (0 $\rightarrow$ 1 et 1 $\rightarrow$ 0);
+2. Additionnez 1.
 
 L'opposé de $0101_2$ est $1011_2$. En effet,
 ```{code-block} text
@@ -112,7 +112,7 @@ quiz.check('mag', args => {
 });
 </script>
 
-Déterminer l'opposé des nombres suivants en binaire, ainsi que la valeur
+Déterminez l'opposé des nombres suivants en binaire, ainsi que la valeur
 décimale de celui-ci.
 
 ```{role} input(quiz-input)
@@ -121,17 +121,27 @@ décimale de celui-ci.
 ```
 
 ```{quiz}
-| Nombre binaire | Opposé       | Valeur décimale |
-| :------------: | :----------: | :-------------: |
-| $0111_2$       | {input}`neg` | {input}`dec`    |
-| $0101\,1010_2$ | {input}`neg` | {input}`dec`    |
-| $1111_2$       | {input}`neg` | {input}`dec`    |
-| $1101\,0001_2$ | {input}`neg` | {input}`dec`    |
+| Nombre binaire | Opposé en binaire | Opposé en décimal |
+| :------------: | :---------------: | :---------------: |
+| $0111_2$       | {input}`neg`      | {input}`dec`      |
+| $0101\,1010_2$ | {input}`neg`      | {input}`dec`      |
+| $1111_2$       | {input}`neg`      | {input}`dec`      |
+| $1101\,0001_2$ | {input}`neg`      | {input}`dec`      |
+```
+
+```{solution}
+| Nombre binaire | Opposé en binaire | Opposé en décimal |
+| :------------: | :---------------: | :---------------: |
+| $0111_2$       | $1001_2$          | $-7$              |
+| $0101\,1010_2$ | $1010\,0110_2$    | $-90$             |
+| $1111_2$       | $0001_2$          | $1$               |
+| $1101\,0001_2$ | $0010\,1111_2$    | $47$              |
+
 ```
 
 ## Exercice {num2}`exercice`
 
-Répondre aux questions suivantes:
+Répondez aux questions suivantes:
 
 ```{role} dec(quiz-input)
 :style: width: 3rem; text-align: center;
@@ -149,8 +159,17 @@ Répondre aux questions suivantes:
 ```{quiz}
 | Quel est le plus... | 4 bits, décimal | 4 bits, binaire | 8 bits, décimal | 8 bits, binaire | n bits |
 | - | :-: | :-: | :-: | :-: | :-: |
-| ... **grand** nombre entier **non signé** sur... | {dec}`>u4` | {bin}`>u4` | {dec}`>u8` | {bin}`>u8` | {str}`2^n-1` |
 | ... **petit** nombre entier **non signé** sur... | {dec}`<u4` | {bin}`<u4` | {dec}`<u8` | {bin}`<u8` | {str}`0` |
+| ... **grand** nombre entier **non signé** sur... | {dec}`>u4` | {bin}`>u4` | {dec}`>u8` | {bin}`>u8` | {str}`2^n-1` |
 | ... **grand** nombre entier **signé** sur...     | {dec}`>s4` | {bin}`>s4` | {dec}`>s8` | {bin}`>s8` | {str}`2^(n-1)-1` |
 | ... **petit** nombre entier **signé** sur...     | {dec}`<s4` | {bin}`<s4` | {dec}`<s8` | {bin}`<s8` | {str}`-2^(n-1)` |
+```
+
+```{solution}
+| Quel est le plus... | 4 bits, décimal | 4 bits, binaire | 8 bits, décimal | 8 bits, binaire | n bits |
+| - | :-: | :-: | :-: | :-: | :-: |
+| ... **petit** nombre entier **non signé** sur... | $0$ | $0000_2$ | $0$ | $0000\,0000_2$ | $0$ |
+| ... **grand** nombre entier **non signé** sur... | $15$ | $1111_2$ | $255$ | $1111\,1111_2$ | $2^n-1$ |
+| ... **grand** nombre entier **signé** sur...     | $7$ | $0111_2$ | $127$ | $0111\,1111_2$ | $2^{n-1}-1$ |
+| ... **petit** nombre entier **signé** sur...     | $-8$ | $1000_2$ | $-128$ | $1000\,0000_2$ | $-2^{n-1}$ |
 ```

@@ -30,8 +30,8 @@ caractères sur 7 bits.
 
 Le tableau ci-dessus semble désordonné, mais si on écrit le code hexadécimal, il
 y a une certaine logique:
-- Les codes 0 à 31 ne sont pas des caractère, on les appelle les caractères de
-  contrôle (ex: retour à la ligne, bip sonore);
+- Les codes 0 à 31 ne sont pas des caractères à proprement parler, on les
+  appelle les caractères de contrôle (ex: retour à la ligne, bip sonore);
 - Le code 32 est l'espace;
 - Les codes 48 à 57 sont les chiffres;
 - Les codes 65 à 90 représentent les majuscules;
@@ -44,7 +44,7 @@ identique dans tous les pays.
 
 ## Exercice {num2}`exercice`
 
-Convertir les chaînes de caractères en utilisant le code ASCII hexadécimal.
+Convertissez les chaînes de caractères en utilisant le code ASCII hexadécimal.
 
 <script type="module">
 const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
@@ -80,9 +80,16 @@ quiz.check('decode', args => {
 4.  {input}`?`  `;-)`
 ```
 
+```{solution}
+1.  INFO = $49\,4E\,46\,4F$
+2.  hello = $68\,65\,6C\,6C\,6F$
+3.  Bonjour = $42\,6F\,6E\,6A\,6F\,75\,72$
+4.  ;-) = $3B\,2D\,29$
+```
+
 ## Exercice {num2}`exercice`
 
-Convertir le texte suivant écrit en code ASCII hexadécimal.
+Convertissez le texte suivant écrit en code ASCII hexadécimal.
 
 ```{role} input(quiz-input)
 :right: width: 15rem;
@@ -92,6 +99,10 @@ Convertir le texte suivant écrit en code ASCII hexadécimal.
 ```{quiz}
 - {input}`?`
   `4A 27 61 69 6D 65 20 6C 27 69 6E 66 6F 72 6D 61 74 69 71 75 65 21`
+```
+
+```{solution}
+J'aime l'informatique!
 ```
 
 ## Exercice {num2}`exercice`
@@ -149,7 +160,7 @@ Encodage du mot **Début** avec les différents encodages:
   auront donc besoin de $5 \cdot 24 = 120$ bits. Le résultat sera **Début**.
 - UTF-8\
   Le mot Début contient 5 caractères. Les caractères sans accents sont codés sur
-  8 bits et ceux avec accents sur 16 bits. nous auront donc besoin de
+  8 bits et ceux avec accents sur 16 bits. Nous auront donc besoin de
   $4 \cdot 8 + 1 \cdot 16 = 48$ bits. Le résultat sera **Début**.
 
 Exemple d'encodage du mot **Début** avec l'UTF-8 en binaire:\

@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{metadata}
+solutions: dynamic
+```
+
 # Nombres entiers non signés
 
 Dans un premier temps, nous travaillerons avec les nombres entiers positifs,
@@ -35,10 +39,10 @@ $100 \neq 100_2$, l'un est 100 et l'autre 4 en base 2.
 
 ## Conversion binaire - décimal
 
-Pour convertir un nombre binaire en nombre décimal, il faut:
-1. Écrire le nombre sous forme de puissances de 2,
-2. Calculer les valeurs,
-3. Additionner le tout.
+Pour convertir un nombre binaire en nombre décimal:
+1. Écrivez le nombre sous forme de puissances de 2,
+2. Calculez les valeurs,
+3. Additionnez le tout.
 
 $$
 1101101_2 &= 1 \cdot 2^6 + 1 \cdot 2^5 + 0 \cdot 2^4 + 1 \cdot 2^3 + 1 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0\\
@@ -71,7 +75,7 @@ quiz.check('digits', args => {
 });
 </script>
 
-Convertir les nombres suivants de binaire en décimal.
+Convertissez les nombres suivants de binaire en décimal.
 
 ```{role} input(quiz-input)
 :right: width: 5rem;
@@ -90,6 +94,11 @@ Convertir les nombres suivants de binaire en décimal.
 8.  {input}`10` $1100110_2$
 ```
 
+```{solution}
+$10_2 = 2$, $101_2 = 5$, $1111_2 = 15$, $1001_2 = 9$, $0110_2 = 6$,
+$1101_2 = 13$, $1010101_2 = 85$, $1100110_2 = 102$
+```
+
 ## Conversion décimal - binaire
 
 Pour convertir un nombre décimal en nombre binaire, il existe plusieurs
@@ -98,11 +107,11 @@ méthodes.
 Le but est de décomposer le nombre décimal en puissances de 2. Pour cela nous
 allons nous aider d'un tableau:
 
-1. Noter les puissances de 2 dans le tableau.
-2. Depuis la gauche, déterminer pour chaque colonne si la puissance de 2 est
-plus petite ou égale au reste.
-3. Calculer le reste.
-4. Passer à la colonne suivante.
+1.  Notez les puissances de 2 dans le tableau (ordre croissant depuis la droite).
+2.  Depuis la gauche, déterminez pour chaque colonne si la puissance de 2 est
+    plus petite ou égale au reste.
+3.  Calculez le reste.
+4.  Passez à la colonne suivante.
 
 Que vaut $149$ en binaire?
 
@@ -120,7 +129,7 @@ $$149 = 10010101_2$$
 
 ## Exercice {num2}`exercice`
 
-Convertir les nombres suivants de décimal en binaire.
+Convertissez les nombres suivants de décimal en binaire.
 
 ```{role} input(quiz-input)
 :right: width: 10rem;
@@ -139,9 +148,16 @@ Convertir les nombres suivants de décimal en binaire.
 8.  {input}`2` $1573$
 ```
 
+```{solution}
+$3 = 11_2$, $6 = 110_2$, $9 = 1001_2$, $41 = 10\,1001_2$, $64 = 100\,0000_2$,
+$171 = 1010\,1011_2$, $720 = 10\,1101\,0000_2$, $1573 = 110\,0010\,0101_2$
+```
+
 ## Exercice {num2}`exercice`
 
 Combien de bits faut-il pour écrire les nombres suivants en base 2?
+
+Exemple: Pour écrire $9$, j'ai besoin de $4$ bits, car $9 = 1001_2$
 
 ```{role} input(quiz-input)
 :right: width: 5rem;
@@ -154,6 +170,13 @@ Combien de bits faut-il pour écrire les nombres suivants en base 2?
 2.  {input}`?`  $37$
 3.  {input}`?`  $128$
 4.  {input}`?`  $350$
+```
+
+```{solution}
+1.  $13 < 15$ -> Il faut 4 bits.
+2.  $37 < 64$ -> Il faut 6 bits.
+3.  $128 < 256$ -> Il faut 8 bits.
+4.  $350 < 512$ -> Il faut 9 bits.
 ```
 
 ## Conversion binaire - hexadécimal
@@ -186,7 +209,7 @@ $$A0D7_{16} = 1010\,0000\,1101\,0111_{2}$$
 
 ## Exercice {num2}`exercice`
 
-Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
+Convertissez les nombres suivants de binaire en hexadécimal ou vice-versa.
 
 ```{role} input(quiz-input)
 :right: width: 12rem;
@@ -203,6 +226,17 @@ Convertir les nombres suivants de binaire en hexadécimal ou vice-versa.
 6.  {input}`2`  $F4_{16}$
 7.  {input}`2`  $BD_{16}$
 8.  {input}`2`  $9C\,2E_{16}$
+```
+
+```{solution}
+1. $1000\,0111_2 = 87_{16}$
+2. $0101\,1010_2 = 5A_{16}$
+3. $1001\,1111_2 = 9F_{16}$
+4. $0111\,0001\,1110\,1001_2=71E9_{16}$
+5. $3A_{16} = 0011\,1010_2$
+6. $F4_{16} = 1111\,0100_2$
+7. $BD_{16} = 1011\,1101_2$
+8. $9C\,2E_{16} = 1001\,1100\,0010\,1110_2$
 ```
 
 ## L'addition de nombres entiers en binaire
@@ -252,7 +286,7 @@ Un exemple coûteux d'overflow est le [vol 501 d'Ariane 5](https://fr.wikipedia.
 
 ## Exercice {num2}`exercice`
 
-Effectuer les additions suivantes sur 4 bits.
+Effectuez les additions suivantes sur 4 bits.
 
 ```{role} input(quiz-input)
 :right: width: 6rem;
@@ -267,9 +301,16 @@ Effectuer les additions suivantes sur 4 bits.
 4.  {input}`0111,overflow`  $1111_2 + 1000_2$
 ```
 
+```{solution}
+1.  $0010 + 0011 = 0101$
+2.  $0101 + 1000 = 1101$
+3.  $1011 + 0001 = 1100$
+4.  $1111 + 1000 = 0111$ Overflow!
+```
+
 ## Exercice {num2}`exercice`
 
-Effectuer les additions suivantes sur 8 bits.
+Effectuez les additions suivantes sur 8 bits.
 
 ```{role} input(quiz-input)
 :right: width: 8rem;
@@ -282,4 +323,11 @@ Effectuer les additions suivantes sur 8 bits.
 2.  {input}`11011111` $0101\,1111_2 + 1000\,0000_2$
 3.  {input}`11011110` $1011\,0001_2 + 0010\,1101_2$
 4.  {input}`10100001` $0011\,1100_2 + 0110\,0101_2$
+```
+
+```{solution}
+1.  $0110\,0110 + 0011\,0010 = 1001\,1000$
+2.  $0101\,1111 + 1000\,0000 = 1101\,1111$
+3.  $1011\,0001 + 0010\,1101 = 1101\,1110$
+4.  $0011\,1100 + 0110\,0101 = 1010\,0001$
 ```
