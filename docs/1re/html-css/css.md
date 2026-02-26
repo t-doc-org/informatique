@@ -637,8 +637,8 @@ td {
 Au moyen du CSS, modifiez les éléments suivants:
 
 1.  Le titre doit être centré.
-2.  Le texte à droite de l'image doit être centré.
-3.  L'image doit être centrée, ainsi sa source.
+2.  Le texte à gauche de l'image doit être centré.
+3.  L'image doit être centrée, ainsi que sa source.
 
 ```{exec} html
 :editor: 4b0c4093-3e13-461a-9bdd-426319a4344e
