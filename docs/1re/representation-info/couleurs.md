@@ -207,3 +207,82 @@ Nombre d'octets: $3 \cdot 2\,073\,600 = 6\,220\,800$ octets
 
 Cela correspond à environ $6.2$ Mo (mégaoctets).
 ````
+
+## Exercice {num2}`exercice`
+
+```{exec} python
+:name: fonctions_dessin_svg
+:class: hidden
+:when: never
+from tdoc import svg
+
+def creation_image(largeur, hauteur, couleur):
+  global img
+  img = svg.Image(largeur, hauteur, stroke='black', style='width: 100%; height: 100%')
+  rectangle(0, 0, largeur, hauteur, couleur)
+
+def rectangle(x, y, largeur, hauteur, remplissage, bord="transparent"):
+  img.rect(x, y, largeur, hauteur, stroke=bord, fill=remplissage)
+
+def triangle(point_1, point_2, point_3, remplissage, bord="transparent"):
+  img.polygon(point_1, point_2, point_3, stroke=bord, fill=remplissage)
+
+def cercle(centre_x, centre_y, rayon, remplissage, bord="transparent"):
+  img.circle(centre_x, centre_y, rayon, stroke=bord, fill=remplissage)
+
+def ellipse(centre_x, centre_y, rayon_x, rayon_y, remplissage, bord="transparent"):
+  img.ellipse(centre_x, centre_y, rayon_x, rayon_y, stroke=bord, fill=remplissage)
+
+def ligne(x1, y1, x2, y2, couleur, epaisseur):
+  img.line(x1, y1, x2, y2, stroke=svg.Stroke(couleur, width=epaisseur))
+
+def texte(x, y, texte, couleur, taille):
+  font = f"font: bold italic {taille}px serif"
+  img.text(x, y, texte, stroke='transparent', fill=couleur, style=font)
+```
+
+```{exec} python
+:name: rendu
+:class: hidden
+:when: never
+
+# Affiche l'image
+render(img)
+```
+
+```{exec} python
+:name: maison_solution
+:after: fonctions_dessin_svg
+:then: rendu
+:when: load
+:editor: bca4e74d-3a0b-4daa-86d1-146c57ff0acf
+:style: max-height: 80vh
+creation_image(600, 400, "white")
+
+# variables pour la position de départ
+x = 10
+y = 50
+
+# côté du carré
+cote = 50
+
+# variables pour les couleurs RGB
+r = 255
+g = 0
+b = 0
+
+for i in range(10):
+  # la couleur peut être donnée avec hexadécimal #FF0000 ou avec rgb(255 0 0)
+  couleur = "rgb(" + str(r) + " " + str(g) + " " + str(b) + ")"
+  rectangle(x, y, cote, cote, couleur)
+  x += cote
+```
+
+1.  Que fait le programme ci-dessus? Comprenez-vous tout le code?
+2.  Modifiez le programme pour qu'il affiche un dégradé de rouge.
+3.  Modifiez le programme pour qu'il affiche un dégradé de bleu.
+4.  Modifiez le programme pour qu'il affiche un dégradé de vert.
+5.  Modifiez le programme pour qu'il affiche un dégradé de magenta.
+6.  Modifiez le programme pour qu'il affiche un dégradé de jaune.
+7.  Modifiez le programme pour qu'il affiche un dégradé de cyan.
+8.  Modifiez le programme pour qu'il affiche un dégradé de gris.
