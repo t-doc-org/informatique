@@ -7,8 +7,8 @@ But: Créer un site web sur une personnalité, un livre ou un hobby / une passio
 
 Le site doit être composé de:
 
-- Une page contenant plusieurs sections accessibles depuis un menu (format `.html`).
-- Un fichier CSS (format `.css`).
+- Une page contenant plusieurs sections accessibles depuis un menu (`index.html`).
+- Un fichier CSS (`style.css`).
 
 ## Marche à suivre
 
@@ -31,9 +31,9 @@ Cette partie sera faite pas à pas ensemble en classe.
 
 1.  Installez VSCode [](../../logiciels/vscode.md).
 2.  Installez les extensions.
-3.  Dans le dossier `PRENOM projet html`, créez:
-        - un fichier `index.html`
-        - un fichier `style.css`
+3.  Dans le dossier `PRENOM projet html`, créez:<br>
+        - un fichier `index.html`<br>
+        - un fichier `style.css`<br>
         - un dossier `images`
 
 ### Début avec le site Web
