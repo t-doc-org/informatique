@@ -3,11 +3,6 @@
 
 # Introduction
 
-## Exercices
-
-Le fichier pdf des exercices du chapitre **Représentation de l'information** est
-à disposition [Exercices](Exercices.pdf).
-
 ## Information versus données
 
 Dans le langage courant, **information** et **données** sont souvent utilisés de
