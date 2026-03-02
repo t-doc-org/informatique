@@ -69,7 +69,7 @@ BLANK, Caroline. «HTML et CSS», 2026. Consulté le 14 février 2026.
 
 Vidéos:
 
-TAIEB, John. *Comment fonctionne un site web?* Youtube, 2016.
+TAIEB, John. *Comment fonctionne un site web?* Youtube, 2016. [\<https://www.youtube.com/watch?v=C4nWUvFBMX0\>](https://www.youtube.com/watch?v=C4nWUvFBMX0)
 
 
 ## Règlement concernant l'utilisation de l'intelligence artificielle et du Web
