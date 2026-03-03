@@ -11,5 +11,4 @@ entiers-signes
 caracteres
 couleurs
 images
-images-2
 ```
