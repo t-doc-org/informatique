@@ -36,8 +36,10 @@ Encodage d'un image en SVG:
 
 Le résultat:
 
-<svg width="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx = "100" cy = "100" r ="80" stroke = "black" stroke-width = "4" fill = "yellow" fill-opacity="20%" />
+<svg style="display: block; margin: 1rem auto;" width="400"
+     viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx = "100" cy = "100" r ="80" stroke = "black" stroke-width = "4"
+     fill = "yellow" fill-opacity="20%" />
   <rect x = "61" y = "61" width = "78" height= "78" fill = "#00FFFF" />
   <line x1 = "0" y1 = "0" x2 = "200" y2 = "200" stroke = "rgb(121 21 161)" />
   <line x1 = "0" y1 = "0" x2 = "0" y2 = "200" stroke = "rgb(121 21 161)" />
