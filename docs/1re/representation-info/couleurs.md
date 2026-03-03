@@ -251,17 +251,15 @@ render(img)
 ```
 
 ```{exec} python
-:name: maison_solution
 :after: fonctions_dessin_svg
 :then: rendu
-:when: load
 :editor: bca4e74d-3a0b-4daa-86d1-146c57ff0acf
 :style: max-height: 80vh
-creation_image(600, 400, "white")
+creation_image(520, 70, "white")
 
 # variables pour la position de départ
 x = 10
-y = 50
+y = 10
 
 # côté du carré
 cote = 50
@@ -271,14 +269,15 @@ r = 255
 g = 0
 b = 0
 
-for i in range(10):
+for _ in range(10):
   # la couleur peut être donnée avec hexadécimal #FF0000 ou avec rgb(255 0 0)
   couleur = "rgb(" + str(r) + " " + str(g) + " " + str(b) + ")"
   rectangle(x, y, cote, cote, couleur)
   x += cote
 ```
 
-1.  Que fait le programme ci-dessus? Comprenez-vous tout le code?
+1.  Sans exécuter le code, que fait le programme ci-dessus? Comprenez-vous tout
+    le code?
 2.  Modifiez le programme pour qu'il affiche un dégradé de rouge.
 3.  Modifiez le programme pour qu'il affiche un dégradé de bleu.
 4.  Modifiez le programme pour qu'il affiche un dégradé de vert.
@@ -286,3 +285,119 @@ for i in range(10):
 6.  Modifiez le programme pour qu'il affiche un dégradé de jaune.
 7.  Modifiez le programme pour qu'il affiche un dégradé de cyan.
 8.  Modifiez le programme pour qu'il affiche un dégradé de gris.
+9.  Modifiez le programme pour qu'il affiche un dégradé arc en ciel comme
+    ci-dessous.
+    ```{figure} images/arc-en-ciel.png
+    :alt: Dégradé arc en ciel
+    :width: 30%
+    :align: center
+    ```
+
+````{solution}
+```{exec} python
+:after: fonctions_dessin_svg
+:then: rendu
+creation_image(220, 180, "white")
+
+# variables pour la position de départ
+x = 10
+y = 10
+
+# côté du carré
+cote = 20
+
+# variables pour les couleurs RGB
+r = 255
+g = 0
+b = 0
+
+for _ in range(10):
+  # la couleur peut être donnée avec hexadécimal #FF0000 ou avec rgb(255 0 0)
+  couleur = "rgb(" + str(r) + " " + str(g) + " " + str(b) + ")"
+  rectangle(x, y, cote, cote, couleur)
+  x += cote
+  r -= 25
+
+r = 255
+g = 125
+x = 10
+y += cote
+for _ in range(10):
+  # la couleur peut être donnée avec hexadécimal #FF0000 ou avec rgb(255 0 0)
+  couleur = "rgb(" + str(r) + " " + str(g) + " " + str(b) + ")"
+  rectangle(x, y, cote, cote, couleur)
+  x += cote
+  r -= 25
+  g -= 12
+
+r = 255
+g = 255
+x = 10
+y += cote
+for _ in range(10):
+  # la couleur peut être donnée avec hexadécimal #FF0000 ou avec rgb(255 0 0)
+  couleur = "rgb(" + str(r) + " " + str(g) + " " + str(b) + ")"
+  rectangle(x, y, cote, cote, couleur)
+  x += cote
+  r -= 25
+  g -= 25
+
+r = 0
+g = 255
+x = 10
+y += cote
+for _ in range(10):
+  # la couleur peut être donnée avec hexadécimal #FF0000 ou avec rgb(255 0 0)
+  couleur = "rgb(" + str(r) + " " + str(g) + " " + str(b) + ")"
+  rectangle(x, y, cote, cote, couleur)
+  x += cote
+  g -= 25
+
+g = 255
+b = 125
+x = 10
+y += cote
+for _ in range(10):
+  # la couleur peut être donnée avec hexadécimal #FF0000 ou avec rgb(255 0 0)
+  couleur = "rgb(" + str(r) + " " + str(g) + " " + str(b) + ")"
+  rectangle(x, y, cote, cote, couleur)
+  x += cote
+  g -= 25
+  b -= 12
+
+g = 255
+b = 255
+x = 10
+y += cote
+for _ in range(10):
+  # la couleur peut être donnée avec hexadécimal #FF0000 ou avec rgb(255 0 0)
+  couleur = "rgb(" + str(r) + " " + str(g) + " " + str(b) + ")"
+  rectangle(x, y, cote, cote, couleur)
+  x += cote
+  g -= 25
+  b -= 25
+
+g = 125
+b = 255
+x = 10
+y += cote
+for _ in range(10):
+  # la couleur peut être donnée avec hexadécimal #FF0000 ou avec rgb(255 0 0)
+  couleur = "rgb(" + str(r) + " " + str(g) + " " + str(b) + ")"
+  rectangle(x, y, cote, cote, couleur)
+  x += cote
+  g -= 12
+  b -= 25
+
+g = 0
+b = 255
+x = 10
+y += cote
+for _ in range(10):
+  # la couleur peut être donnée avec hexadécimal #FF0000 ou avec rgb(255 0 0)
+  couleur = "rgb(" + str(r) + " " + str(g) + " " + str(b) + ")"
+  rectangle(x, y, cote, cote, couleur)
+  x += cote
+  b -= 25
+```
+````
