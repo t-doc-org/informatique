@@ -66,7 +66,13 @@ Réalisez les manipulations suivantes dans le document ci-dessus:
     les températures les plus hautes (Mise en forme conditionnelle: nuances de
     couleurs).
 5.  Ajoutez une colonne qui détermine pour chaque ville si la moyenne annuelle
-    des températures est supérieure à celle suisse.
+    des températures est supérieure à celle suisse. Il faut utiliser une
+    référence absolue.
+    ```{tip}
+    Pour référencer une cellule de manière absolue, il faut utiliser le `$`
+    devant la lettre de la colonne et le nombre de la ligne.<br>
+    Exemple: `$N$9`
+    ```
 6.  Colorez avec un dégradé de bleu les cellules repésentant les précipitations
     (Mise en forme conditionnelle: nuances de couleurs).
 7.  Calculez la somme des précipitations annuelles pour chaque ville.
