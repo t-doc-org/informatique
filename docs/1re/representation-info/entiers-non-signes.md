@@ -3,6 +3,8 @@
 
 ```{metadata}
 solutions: dynamic
+versions:
+    mathjax: 3.2.2
 ```
 
 # Nombres entiers non signés
