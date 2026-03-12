@@ -194,7 +194,6 @@ ne peut être une clé primaire à elle seule. Dans ce cas, nous utilisons la
 combinaison des deux colonnes comme clé primaire. Alternativement, nous aurions
 pu créer une nouvelle colonne pour servir de clé primaire.
 
-
 % TODO: Améliorer le rendu des diagrammes (titre, couleur).
 
 ```{graphviz}
@@ -269,8 +268,9 @@ digraph UML_Class_diagram {
 
 ### Exercice {num2}`exercice`
 
-Dessiner le schéma de la base de données relationnelle qui représente un système
+Dessinez le schéma de la base de données relationnelle qui représente un système
 de location de trottinettes électriques.
+
 1. Quelles sont les différentes tables?
 2. Quelles sont les colonnes de ces tables?
 3. Existe-t-il déjà une clé primaire?

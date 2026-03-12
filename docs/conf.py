@@ -9,6 +9,7 @@ license = 'CC-BY-NC-SA-4.0'
 language = 'fr'
 
 myst_links_external_new_tab = True
+myst_footnote_transition = False
 
 html_css_files = ['site-styles.css']
 html_theme_options = {
