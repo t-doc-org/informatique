@@ -22,7 +22,7 @@ Il existe plusieurs catégories de types de données:
 
 ## Types numériques
 
-Les entiers:
+### Nombres entiers
 
 | Type | Description |
 | :--- | :---------- |
@@ -31,7 +31,7 @@ Les entiers:
 | **`int`** | -2'147'483'648 à 2'147'483'647 |
 | `bigint` | -9'223'372'036'854'775'808 à 9'223'372'036'854'775'807 |
 
-Les nombres réels:
+### Nombres réels
 
 | Type | Description |
 | :--- | :---------- |
