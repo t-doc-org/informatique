@@ -85,8 +85,8 @@ const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
 
 quiz.check('negdec', args => {
     args.answer = {
-      neg: v => core.strToInt(v, 2),
-      dec: v => core.strToInt(v),
+        neg: v => core.strToInt(v, 2),
+        dec: v => core.strToInt(v),
     }[args.solution](args.answer);
     const tr = args.field.closest('tr');
     const tex = MathJax.startup.document.getMathItemsWithin(tr)[0].math;
@@ -95,7 +95,7 @@ quiz.check('negdec', args => {
     const wrap = 1 << tv.length, neg = wrap - value;
     const dec = neg < wrap / 2 ? neg : neg - wrap;
     if (tdoc.dev && args.solution === 'neg') {
-      console.log(`${tex} => ${neg.toString(2)}, ${dec}`);
+        console.log(`${tex} => ${neg.toString(2)}, ${dec}`);
     }
     args.solution = {neg, dec}[args.solution];
 });
