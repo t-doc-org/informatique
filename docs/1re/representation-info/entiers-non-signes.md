@@ -3,8 +3,6 @@
 
 ```{metadata}
 solutions: dynamic
-versions:
-    mathjax: 3.2.2
 ```
 
 # Nombres entiers non signés
@@ -58,22 +56,19 @@ const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
 
 quiz.check('conv', args => {
     const p = args.field.closest('p');
-    const rel = core.qs(p, 'math > msub > :nth-child(2)');
-    const fradix = rel ? core.strToInt(rel.textContent): 10;
+    const tex = MathJax.startup.document.getMathItemsWithin(p)[0].math;
+    const [fval, fradix] = tex.replace(/[\\,{}]/g, '').split('_', 2);
     const tradix = core.strToInt(args.solution);
-    let s = '';
-    for (const el of core.qsa(p,
-          'math > :is(mn, mi), math > msub > :first-child')) {
-      s += el.textContent;
-    }
+    args.solution = core.strToInt(fval, fradix ?? 10);
     args.answer = core.strToInt(args.answer, tradix);
-    args.solution = core.strToInt(s, fradix);
+    if (tdoc.dev) console.log(`${tex} => ${args.solution.toString(tradix)}`);
 });
 quiz.check('digits', args => {
     const p = args.field.closest('p');
-    args.solution = Math.ceil(Math.log2(
-        core.strToInt(core.qs(p, 'math').textContent) + 1));
+    const tex = MathJax.startup.document.getMathItemsWithin(p)[0].math;
+    args.solution = Math.ceil(Math.log2(core.strToInt(tex) + 1));
     args.answer = core.strToInt(args.answer);
+    if (tdoc.dev) console.log(`${tex} => ${args.solution}`);
 });
 </script>
 

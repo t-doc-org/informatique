@@ -3,8 +3,6 @@
 
 ```{metadata}
 solutions: dynamic
-versions:
-    mathjax: 3.2.2
 ```
 
 # Nombres entiers signés
@@ -87,17 +85,18 @@ const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
 
 quiz.check('negdec', args => {
     args.answer = {
-      neg: v => core.strToInt(v, 2),
-      dec: v => core.strToInt(v),
+        neg: v => core.strToInt(v, 2),
+        dec: v => core.strToInt(v),
     }[args.solution](args.answer);
     const tr = args.field.closest('tr');
-    let s = '';
-    for (const el of core.qsa(tr, 'math > mn, math > msub > mn:first-child')) {
-      s += el.textContent;
-    }
-    const value = core.strToInt(s, 2);
-    const wrap = 1 << s.length, neg = wrap - value;
+    const tex = MathJax.startup.document.getMathItemsWithin(tr)[0].math;
+    const [tv] = tex.replace(/[\\,{}]/g, '').split('_', 2);
+    const value = core.strToInt(tv, 2);
+    const wrap = 1 << tv.length, neg = wrap - value;
     const dec = neg < wrap / 2 ? neg : neg - wrap;
+    if (tdoc.dev && args.solution === 'neg') {
+        console.log(`${tex} => ${neg.toString(2)}, ${dec}`);
+    }
     args.solution = {neg, dec}[args.solution];
 });
 quiz.check('mag', args => {
