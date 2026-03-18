@@ -282,7 +282,7 @@ On considère le code $B(5, 4)$.
     S'il y a 1 erreur, le récepteur considère-t-il que le message reçu est
     correct?
 3.  {select}`oui`
-    S'il y a 2 erreurs, le récepteur considère-t-il que lemessage reçu est
+    S'il y a 2 erreurs, le récepteur considère-t-il que le message reçu est
     correct?
 4.  {select}`non`
     S'il y a 3 erreurs, le récepteur considère-t-il que le message reçu est
