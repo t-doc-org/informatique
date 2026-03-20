@@ -16,14 +16,14 @@
 | - des images pertinentes aux bonnes dimensions avec légende                                         | 3      | 0.5    | 1.5   |
 | - des tableaux utilisés de façon pertinente                                                         | 3      | 0.5    | 1.5   |
 | - des listes utilisées de façon pertinente                                                          | 3      | 0.5    | 1.5   |
-| - des conteneurs utilisés de façon pertinente                                                       | 3      | 0.5    | 1.5   |
 | - des sélecteurs utilisés de façon pertinente                                                       | 3      | 0.5    | 1.5   |
 | Le code source HTML est syntaxiquement correct et lisible<br> (structure, indentation, pas de CSS inclus directement dans le fichier HTML)                                                                                 | 3      | 1.5    | 4.5   |
 | Le code source CSS est syntaxiquement correct et lisible <br> (syntaxe des éléments, indentation, pas de répétition inutile)                                                                                              | 3      | 1      | 3     |
 | Les fichiers sont nommés adéquatement et classés dans une hiérarchie                                | 3      | 0.5    | 1.5   |
 | Le site est bien présenté et agréables à lire                                                       | 3      | 1      | 3     |
 | Le site est original                                                                                |        |        |       |
-| Le délai et la forme du rendu du projet, ainsi que les règles concernant l'IA sont respectés                                                                                             |        |        |       |
+| Le rendu a été fait correctement (forme et délai)                                                   | 3      | 0.5    | 1.5   |
+| Les règles concernant l'IA sont  respectées                                                         |        |        |       |
 | **Total aspects formels**                                                                           | 42     | 9      | 27    |
 
 

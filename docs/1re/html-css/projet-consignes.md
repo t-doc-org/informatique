@@ -87,3 +87,18 @@ TAIEB, John. *Comment fonctionne un site web?* Youtube, 2016. [\<https://www.you
 
 Toutes les parties qui ne respecterons pas le règlement ci-dessus seront
 ignorées lors de l'évaluation du projet.
+
+## Rendu du projet
+
+Le projet est à rendre pour le **lundi 30 mars à 20h00**.
+
+Le rendu doit se faire de la manière suivante:
+
+1.  Sélectionnez votre dossier de projet `1F...-Prenom-Projet-html` qui se trouve
+    sur OneDrive.
+2.  Générez un fichier compressé (.zip):<br>
+        -   faites un clic droit sur le dossier<br>
+        -   choisissez `envoyer vers/Dossier compressé`<br>
+        -   vérifiez que la classe et le prénom sont notés dans le nom du fichier
+            .zip
+3.  Envoyez le fichier via mail (outlook)
