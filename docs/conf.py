@@ -20,5 +20,5 @@ html_theme_options = {
 
 metadata = {
     'exec': {'pnm': {}},
-    # 'solutions': 'dynamic',
+    'solutions': 'dynamic',
 }

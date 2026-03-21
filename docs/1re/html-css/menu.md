@@ -3,6 +3,10 @@
 
 # Menu
 
+```{metadata}
+solutions: show
+```
+
 Un menu de navigation est un élément essentiel d'un site web qui permet aux
 utilisateurs de se déplacer facilement entre les différentes pages ou sections.
 Il se présente généralement sous forme de liste de liens (par exemple : Accueil,

@@ -4,6 +4,10 @@
 
 # Correction d'erreur - Magie
 
+```{metadata}
+solutions: show
+```
+
 ## Exercice {num2}`exercice`
 
 On considère un carré de 4x4 cases qui sont soit blanches, soit noires.\

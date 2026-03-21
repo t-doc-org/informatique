@@ -3,6 +3,10 @@
 
 # CSS
 
+```{metadata}
+solutions: show
+```
+
 Le langage **CSS** (**C**ascading **S**tyle **S**heet en français feuilles de
 style en cascade) permet de mettre en forme les documents HTML. Il permet
 notamment de modifier la police, la couleur, la taille et l'emplacement du

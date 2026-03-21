@@ -1,8 +1,11 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-
 # Compression
+
+```{metadata}
+solutions: show
+```
 
 La compression sert à minimiser la taille d'un fichier pour limiter son poids et
 permettre une transmission plus rapide, un temps de téléchargement ou un espace

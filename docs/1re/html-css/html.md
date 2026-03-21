@@ -1,11 +1,15 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+# HTML
+
+```{metadata}
+solutions: show
+```
+
 ```{role} html(code)
 :language: html
 ```
-
-# HTML
 
 Le format **HTML** (**H**yper**T**ext **M**arkup **L**anguage) est un format qui
 permet de décrire le contenu et la structure d'une page Web. HTML n'est pas un
