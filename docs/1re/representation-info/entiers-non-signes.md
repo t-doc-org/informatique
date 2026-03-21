@@ -1,10 +1,6 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: dynamic
-```
-
 # Nombres entiers non signés
 
 Dans un premier temps, nous travaillerons avec les nombres entiers positifs,

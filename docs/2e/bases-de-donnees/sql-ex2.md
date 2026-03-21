@@ -1,10 +1,6 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: dynamic
-```
-
 # SQL - Exercices (2)
 
 Le but de cette section est d'entraîner les concepts vus dans les sections

@@ -1,10 +1,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: dynamic
-```
-
 # Internet
 
 Internet est un réseau informatique mondiale et publique. Il regroupe des

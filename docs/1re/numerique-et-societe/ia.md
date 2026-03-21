@@ -4,10 +4,6 @@
 
 # Intelligence artificielle
 
-```{metadata}
-solutions: dynamic
-```
-
 ```{poll} 424dffac-9cd1-4d5c-9007-0bd2facce7f3
 :number: none
 À quelle fréquence utilisez-vous l'intelligence artificielle? Par exemple

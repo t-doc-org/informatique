@@ -2,10 +2,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: dynamic
-```
-
 # Listes Lab - Mini projet
 
 Le but de cet exercice est de créer étape par étape une simulation de la

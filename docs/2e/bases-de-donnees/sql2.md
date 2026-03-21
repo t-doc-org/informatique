@@ -3,10 +3,6 @@
 
 # Langage SQL - Notions avancées
 
-```{metadata}
-solutions: dynamic
-```
-
 ## Clé primaire
 
 Reprenons l'exemple du client. Lors de la création de la table client en SQL,

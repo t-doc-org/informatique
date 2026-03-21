@@ -1,10 +1,6 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: dynamic
-```
-
 # Couleurs
 
 Avant de voir la représenter des images, il est nécessaire de s'intéresser à la

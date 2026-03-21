@@ -1,10 +1,6 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: dynamic
-```
-
 # Excel
 
 Excel est un tableur, c'est-à-dire un logiciel qui permet d'organiser des

@@ -1,10 +1,6 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: dynamic
-```
-
 # Listes - Boucles `for`
 
 La boucle `for` permet d'accéder à tous les éléments d'une liste l'un après

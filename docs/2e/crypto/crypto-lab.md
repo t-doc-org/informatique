@@ -1,10 +1,6 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: dynamic
-```
-
 # Cryptographie Lab
 
 Dans le cours, nous avons vu plusieurs exemples de cryptographie symétrique et

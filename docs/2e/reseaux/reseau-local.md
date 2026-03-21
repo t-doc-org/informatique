@@ -1,10 +1,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: dynamic
-```
-
 # Réseau local
 
 Un réseau local, en anglais Local Area Network (LAN), est un réseau informatique
