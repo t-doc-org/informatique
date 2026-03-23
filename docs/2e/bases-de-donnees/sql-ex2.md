@@ -391,7 +391,7 @@ Pour cet exercice, il faudra utiliser des jointures de tables.
     ````
 
 2.  Écrivez une requête SQL qui retourne le titre des livres empruntés à rendre
-    après le 15 décembre.
+    après le 15 décembre 2024.
 
     ```{exec} sql
     :after: sql-biblio-insert
