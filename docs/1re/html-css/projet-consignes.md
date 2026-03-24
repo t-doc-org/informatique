@@ -64,12 +64,16 @@ NAVARRO, Morgane, PATINO, Bruno. *9 secondes, la civilisation du poisson rouge*.
 
 Documents web:
 
-BLANK, Caroline. «HTML et CSS», 2026. Consulté le 14 février 2026.
-[\<https://informatique.t-doc.org/1re/html-css/index.html\>](https://informatique.t-doc.org/1re/html-css/index.html).
+BLANK, Caroline. "HTML et CSS", 2026. Consulté le 14 février 2026.
+[https://informatique.t-doc.org/1re/html-css/index.html](https://informatique.t-doc.org/1re/html-css/index.html).
 
 Vidéos:
 
-TAIEB, John. *Comment fonctionne un site web?* Youtube, 2016. [\<https://www.youtube.com/watch?v=C4nWUvFBMX0\>](https://www.youtube.com/watch?v=C4nWUvFBMX0)
+TAIEB, John. *Comment fonctionne un site web?* Youtube, 2016. [https://www.youtube.com/watch?v=C4nWUvFBMX0](https://www.youtube.com/watch?v=C4nWUvFBMX0)
+
+Images:
+
+[https://new.cscfr.ch/index.php/fr/notre-college/nos-batiments](https://new.cscfr.ch/index.php/fr/notre-college/nos-batiments)
 
 
 ## Règlement concernant l'utilisation de l'intelligence artificielle et du Web
