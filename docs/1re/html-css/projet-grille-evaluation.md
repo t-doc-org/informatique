@@ -13,7 +13,7 @@
 | - des hyperliens utilisés de façon adéquate                                                         | 3      | 0.5    | 1.5   |
 | - des paragraphes et des sauts de lignes utilisés de façon pertinente                               | 3      | 0.5    | 1.5   |
 | - un menu qui permet de naviguer entre les différentes sections                                     | 3      | 1      | 3     |
-| - des images pertinentes aux bonnes dimensions avec légende                                         | 3      | 0.5    | 1.5   |
+| - des images pertinentes aux bonnes dimensions (avec légende si nécessaire)                         | 3      | 0.5    | 1.5   |
 | - des tableaux utilisés de façon pertinente                                                         | 3      | 0.5    | 1.5   |
 | - des listes utilisées de façon pertinente                                                          | 3      | 0.5    | 1.5   |
 | - des sélecteurs utilisés de façon pertinente                                                       | 3      | 0.5    | 1.5   |
