@@ -4,10 +4,6 @@
 
 # Détection d'erreur
 
-```{metadata}
-solutions: show
-```
-
 ## Stockage et transmission de l'information
 
 L'information doit souvent être transmise ou stockée:

@@ -3,10 +3,6 @@
 
 # Compression
 
-```{metadata}
-solutions: show
-```
-
 La compression sert à minimiser la taille d'un fichier pour limiter son poids et
 permettre une transmission plus rapide, un temps de téléchargement ou un espace
 de stockage réduit, tout en conservant au maximum sa qualité.

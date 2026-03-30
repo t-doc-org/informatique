@@ -4,10 +4,6 @@
 
 # Correction d'erreur
 
-```{metadata}
-solutions: show
-```
-
 ## Introduction
 
 Dans le chapitre précédent, nous avons vu des procédés qui permettent de
