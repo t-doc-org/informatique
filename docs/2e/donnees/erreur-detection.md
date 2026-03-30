@@ -533,6 +533,6 @@ Les cartes de crédit suivantes sont-elles valides?
     Numéro modifié:
     <b>8</b>9<b>14</b>0 <b>2</b>0<b>2</b>2 <b>6</b>4<b>10</b>6
     <b>14</b>8<b>18</b>0\
-    Somme: $8+9+1+4+0+2+0+2+2+6+4+1+0+6+1+4+8+1+8+0 = 76$\
+    Somme: $8+9+1+4+0+2+0+2+2+6+4+1+0+6+1+4+8+1+8+0 = 67$\
     Ce numéro est faux.
 ```
