@@ -24,7 +24,7 @@
 | Le site est original                                                                                |        |        |       |
 | Le rendu a été fait correctement (forme et délai)                                                   | 3      | 0.5    | 1.5   |
 | Les règles concernant l'IA sont  respectées                                                         |        |        |       |
-| **Total aspects formels**                                                                           | 42     | 9      | 27    |
+| **Total aspects formels**                                                                           | 39     | 9      | 27    |
 
 
 
@@ -47,9 +47,9 @@
 ## Total
 |                                  | Points | Coeff. | Total |
 |----------------------------------|--------|--------|-------|
-| **Total aspects formels**        | 42     | 9      | 27    |
+| **Total aspects formels**        | 39     | 9      | 27    |
 | **Total contenu**                | 9      | 5      | 15    |
-| **TOTAL**                        | 51     | 14     | 42    |
+| **TOTAL**                        | 48     | 14     | 42    |
 
 ---
 
