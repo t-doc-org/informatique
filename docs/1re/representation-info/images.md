@@ -6,6 +6,76 @@
 Nous avons vu comment représenter des nombres et des caractères. Maintenant nous
 allons nous intéresser aux images.
 
+`````{solution} Activité de découverte
+{.lower-alpha-paren}
+Par groupe de deux, les élèves doivent décrire leur image avec un minimum
+d'information pour qu'un autre groupe puisse la reproduire exactement.
+
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+-   # Dessin 1
+    ```{exec} pnm
+    :class: hidden
+    :when: load
+    P1
+    10 10
+    0 0 1 1 1 1 1 1 1 1
+    0 0 1 1 1 1 1 1 1 1
+    1 1 1 1 0 0 1 1 0 0
+    1 1 1 1 0 0 1 1 0 0
+    1 1 1 1 1 1 0 0 0 0
+    1 1 1 1 1 1 0 0 0 0
+    1 1 1 1 1 1 1 1 0 0
+    1 1 1 1 1 1 1 1 0 0
+    0 0 1 1 1 1 1 1 1 1
+    0 0 1 1 1 1 1 1 1 1
+    ```
+
+-   # Dessin 2
+    <svg style="display: block; margin: 1rem auto;" width="300"
+     viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x = "0" y = "0" width = "100" height= "100" fill = "#0000FF"/>
+    <rect x = "100" y = "0" width = "100" height= "100" fill = "#FF0000"/>
+    <circle cx = "100" cy = "100" r ="50" stroke = "black" stroke-width = "4"
+        fill = "yellow" fill-opacity="100%" />
+    <line x1 = "0" y1 = "0" x2 = "200" y2 = "200" stroke = "red" />
+    </svg>
+
+
+-   # Dessin 3
+    <svg style="display: block; margin: 1rem auto;" width="300"
+     viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x = "0" y = "0" width = "200" height= "200" stroke-width = "8"
+        stroke = "black" fill = "#FF00FF" />
+    <rect x = "66.7" y = "66.7" width = "66.7" height= "66.7" stroke-width = "3"
+        stroke = "black" fill = "#00FFFF" />
+    <rect x = "88.9" y = "88.9" width = "22.2" height= "22.2" stroke-width = "2"
+        stroke = "black" fill = "#7F00FF" />
+    </svg>
+
+-   # Dessin 4
+    ```{exec} pnm
+    :class: hidden
+    :when: load
+    P3
+    12 12
+    256
+    0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0
+    0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0
+    0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0
+    0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0
+    255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255
+    255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255
+    0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0
+    0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0
+    0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0
+    0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0
+    255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255
+    255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255 255 0 0 255 0 0 0 255 0 0 255 0 0 0 255 0 0 255
+    ```
+````
+`````
+
 ## Images vectorielles
 
 Une image vectorielle est composée d'objets géométriques (segments, cercles,
