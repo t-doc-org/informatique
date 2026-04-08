@@ -191,17 +191,40 @@ De quelle couleur s'agit-il ?
 
 ## Exercice {num2}`exercice`
 
-Combien d'octets faut-il pour représenter une image de 1920 × 1080 pixels en
-couleur?
+Combien d'octets au minimum faut-il pour représenter une image de 1920 × 1080
+pixels
+
+{.lower-alpha-paren}
+1. en noir et blanc?
+2. en 4 niveaux de gris?
+3. en 8 niveaux de gris?
+4. en 64 niveaux de gris?
+5. en couleur?
 
 ```{solution}
-Chaque pixel nécessite 3 octets (un pour R, un pour G, un pour B).
+Nombre de pixels de l'image: $1920 \cdot 1080 = 2\,073\,600$ pixels
 
-Nombre de pixels: $1920 \cdot 1080 = 2\,073\,600$ pixels
+Rappel: 8 bits = 1 octet
 
-Nombre d'octets: $3 \cdot 2\,073\,600 = 6\,220\,800$ octets
-
-Cela correspond à environ $6.2$ Mo (mégaoctets).
+{.lower-alpha-paren}
+1.  Chaque pixel nécessite 1 bit (un bit permet de représenter 2 états: noir et
+    blanc).<br>
+    Nombre de bits: $1 \cdot 2\,073\,600 = 2\,073\,600$ bits<br>
+    Nombre d'octets: $2\,073\,600 : 8 = 259\,200 \text{ octets} = 259.2 \text{ ko}$<br>
+2.  Chaque pixel nécessite 2 bits (deux bits permettent de représenter $2^2=4$
+    états: noir, gris foncé, gris clair et blanc).<br>
+    Nombre de bits: $2 \cdot 2\,073\,600 = 4\,147\,200$ bits<br>
+    Nombre d'octets: $4\,147\,200 : 8 = 518\,400 \text{ octets} = 518.4 \text{ ko}$<br>
+3.  Chaque pixel nécessite 3 bits (trois bits permettent de représenter $2^3=8$
+    états).<br>
+    Nombre de bits: $3 \cdot 2\,073\,600 = 6\,220\,800$ bits<br>
+    Nombre d'octets: $6\,220\,800 : 8 = 777\,600 \text{ octets} = 777.6 \text{ ko}$<br>
+4.  Chaque pixel nécessite 6 bits (six bits permettent de représenter $2^6=64$
+    états).<br>
+    Nombre de bits: $6 \cdot 2\,073\,600 = 12\,441\,600$ bits<br>
+    Nombre d'octets: $12\,441\,600 : 8 = 1\,555\,200 \text{ octets} \simeq 1.6 \text{ Mo}$<br>
+5.  Chaque pixel nécessite 3 octets (un pour R, un pour G, un pour B).<br>
+    Nombre d'octets: $3 \cdot 2\,073\,600 = 6\,220\,800 \text{ octets} \simeq 6.2 \text{ Mo}$
 ````
 
 ## Exercice {num2}`exercice`
