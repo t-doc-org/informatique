@@ -97,7 +97,7 @@ Notez le calcul qui permet de déterminer le nombre de bits minimum pour représ
 ```{solution}
 Pour encoder 4 niveaux de gris, il faut 2 bits, car $2^2 = 4$.
 
-Nombre de bits: $2 \cdot 800 \cdot 606$ bits
+Nombre de bits: $2 \cdot 800 \cdot 600$ bits
 ```
 
 ## Question {nump}`question`{points}`3`
@@ -116,8 +116,12 @@ P1
 ```
 
 ````{solution}
-```{figure} images/canard.png
-:width: 50%
-:align: center
+```{exec} pnm
+:class: hidden
+:when: load
+P1
+5 4
+0 1 1 0 0 1 1 1 0 0
+0 1 1 1 1 0 1 1 1 0
 ```
 ````
