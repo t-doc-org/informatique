@@ -52,4 +52,13 @@ subject: "Informatique 2e année"
 -   Connaîtres les formats PBM, PGM et PPM, ainsi que leur fonctionnement.
 -   Savoir encoder ou décoder une image en formats PBM, PGM ou PPM.
 
+## Document à disposition pendant l'évaluation
+
+### Tableau ASCII
+
+```{figure} images/ascii.png
+:alt: Tableau code ASCII
+:width: 100%
+:align: center
+```
 

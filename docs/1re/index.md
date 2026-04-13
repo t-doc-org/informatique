@@ -22,4 +22,5 @@ architecture/index
 numerique-et-societe/index
 microbit/index
 objectifs/index
+evaluations-formatives/index
 ```
