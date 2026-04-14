@@ -12,6 +12,7 @@ subject: "Informatique 2e année"
 -   Connaître les trois défis de la représentation de l'information.
 -   Connaître les unités de mesure (bits, octets) et leurs multiples
     (ko, Mo, ...).
+-   Savoir faire des conversions d'unités pour comparer des valeurs.
 
 ## Nombres entiers
 
@@ -31,7 +32,8 @@ subject: "Informatique 2e année"
 ### Nombres entiers signés
 
 -   Savoir représenter un entier signé en binaire.
--   Savoir déterminer l'opposé d'un nombre entier signé.
+-   Savoir déterminer l'opposé d'un nombre entier signé binaire, ainsi que sa
+    valeur décimale.
 
 ## Caractères
 
