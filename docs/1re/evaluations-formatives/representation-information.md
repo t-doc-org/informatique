@@ -62,7 +62,8 @@ Complétez:
 ```{solution}
 {.lower-alpha-paren}
 1.  $1001_2 + 0011_2 = 1100_2$
-2.  $1010\,0110_2$ est un nombre négatif, car il commence par 1.
+2.  $1010\,0110_2$ est un nombre négatif, car le bit de poids fort (celui tout à
+     gauche) est égal à 1.
 3.  L'opposé de $1010\,0110_2$ est $0101\,1010$.
 ```
 
