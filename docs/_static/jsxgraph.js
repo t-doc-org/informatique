@@ -13,6 +13,9 @@ export const screen = [{
         y: {ticks: {minorTicks: 1}},
     },
     defaults: {
+        arrow: {
+            strokeWidth: 2, strokeColor: JXG.palette.black,
+        },
         circle: {
             strokeWidth: 2, strokeColor: JXG.palette.blue,
             label: {strokeColor: JXG.palette.blue},
