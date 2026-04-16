@@ -10,7 +10,7 @@ page-break-force: 1
 page-break-avoid: 2
 ```
 
-```{include} ../../entete-examen.md
+```{include} /_include/entete-examen.md
 ```
 ```{class} align-center
 **Détails des calculs obligatoires. Attention au soin. Calculatrice non
