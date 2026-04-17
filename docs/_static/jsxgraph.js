@@ -46,7 +46,7 @@ export const print = [nonInteractive, {
         y: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
     },
     defaults: {
-        curve: {strokeColor: JXG.palette.black, strokeWidth: 2},
+        curve: {strokeWidth: 2, strokeColor: JXG.palette.black},
         point: {
             name: '', size: 2,
             strokeWidth: 1, strokeColor: JXG.palette.black,
