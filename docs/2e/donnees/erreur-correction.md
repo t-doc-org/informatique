@@ -42,8 +42,8 @@ d'utiliser un code correcteur d'erreur.
 ## Codes correcteurs d'erreur
 
 Les exemples précédents montrent qu'il n'est souvent pas nécessaire de corriger
-des erreurs et que le simple fait de savoir est suffisant. Mais dans certains
-cas, il est essentiel de pouvoir corriger des erreurs.
+des erreurs et que le simple fait de savoir qu'il y a une erreur est suffisant.
+Mais dans certains cas, il est essentiel de pouvoir corriger des erreurs.
 
 Nous allons voir deux procédés qui permettent de corriger des erreurs.
 
@@ -120,7 +120,7 @@ Structure du code de Hamming $H(m, u)$:
 
     Les $u$ bits du message et les $c$ bits de contrôle sont mélangés, mais
     placés à des endroits bien définis.
-2.  Le message codé est de longueur $m = 2^u - 1$, C'est-à-dire 7, 15, 31, ...
+2.  Le message codé est de longueur $m = 2^u - 1$, c'est-à-dire 7, 15, 31, ...
 3.  Les bits de parité $p_i$ sont en position $2^i$, avec $i = 0, 1, 2, \dots$
 4.  Les bits du message $d_i$ occupent les autres places.
 
