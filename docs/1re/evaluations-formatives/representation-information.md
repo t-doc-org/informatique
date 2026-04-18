@@ -10,7 +10,7 @@ page-break-force: 1
 page-break-avoid: 2
 ```
 
-```{include} /_include/entete-examen.md
+```{include} /_include/entete-examen.export.md
 ```
 ```{class} align-center
 **Détails des calculs obligatoires. Attention au soin. Calculatrice non
@@ -105,7 +105,9 @@ Nombre de bits: $2 \cdot 800 \cdot 600$ bits
 
 Représentez sur le quadrillage l'image dont l'encodage est le suivant:
 
-```{code-block} text
+```{exec} pnm
+:name: image
+:when: never
 P1
 5 4
 0 1 1 0 0 1 1 1 0 0
@@ -120,9 +122,6 @@ P1
 ```{exec} pnm
 :class: hidden
 :when: load
-P1
-5 4
-0 1 1 0 0 1 1 1 0 0
-0 1 1 1 1 0 1 1 1 0
+:after: image
 ```
 ````
