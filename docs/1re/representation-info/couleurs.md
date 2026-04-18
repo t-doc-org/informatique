@@ -289,7 +289,7 @@ g = 0
 b = 0
 
 for _ in range(10):
-  # la couleur peut être donnée avec hexadécimal #FF0000 ou avec rgb(255 0 0)
+  # la couleur peut être donnée sous forme RGB avec rgb(255 0 0)
   couleur = "rgb(" + str(r) + " " + str(g) + " " + str(b) + ")"
   rectangle(x, y, cote, cote, couleur)
   x += cote
