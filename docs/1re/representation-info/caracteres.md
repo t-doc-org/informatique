@@ -118,7 +118,7 @@ Une solution au problème des caractères spécifiques à chaque langue, comme l
 accents, est l'Unicode. L'Unicode est une table de correspondance capable de
 représenter plus d'un million de caractères, ce qui suffit largement pour
 inclure tous les caractères de toutes les langues, ainsi que des icônes et des
-emojis. Cependant, cette capacité nécessite d'utiliser jusqu'à 3 octets pour
+emojis. Cependant, cet encodage nécessite d'utiliser jusqu'à 3 octets pour
 encoder un seul caractère.
 
 Cela implique que le stockage d'un texte demanderait trois fois plus de mémoire
