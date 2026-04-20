@@ -101,17 +101,6 @@ Convertissez le texte suivant écrit en code ASCII hexadécimal.
 J'aime l'informatique!
 ```
 
-## Exercice {num2}`exercice`
-
-Comment peut-on transformer un lettre majuscule en lettre minuscule et
-vice-versa en utilisant le code ASCII?
-
-```{solution}
-Le code de A majuscule en décimale est 65, pour a minuscule c'est 97. Il faut
-donc ajouter 32 (97-65) pour passer d'une lettre majuscule à l'équivalent en
-minuscule.
-```
-
 ## Unicode
 
 Une solution au problème des caractères spécifiques à chaque langue, comme les
