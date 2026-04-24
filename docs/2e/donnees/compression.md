@@ -116,6 +116,40 @@ Données codées: 6a1b3c2d &rarr; 8 caractères (données compressées)
 Cette manière de faire n'altère pas l'image, il s'agit donc d'une compression
 sans perte.
 
+### Exercice {num2}`exercice`
+
+Utilisez le codage par plage pour encoder l'image ci-dessous.
+
+```{exec} pnm
+:when: load
+P1
+16 14
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0 0 1 1 1 1 0 0 0 0 0 0
+0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0
+0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0
+0 1 1 0 1 0 1 0 0 1 0 1 0 1 1 0
+0 1 0 1 1 0 1 0 0 1 0 1 1 0 1 0
+0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+0 0 1 0 0 0 0 1 1 0 0 0 0 1 0 0
+0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0
+0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0
+0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0
+0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0
+0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+```
+
+
+
+````{solution}
+En commençant par le blanc:
+```{code-block} text
+22 4 11 1 4 1 9 1 6 1 5 2 1 1 1 1 2 1 1 1 1 2 2 1 1 2 1 1 2 1 1 2 1 1 2
+1 12 1 3 1 4 2 4 1 4 1 8 1 6 1 8 1 6 1 8 1 7 1 6 1 9 6 21
+```
+````
+
 ## Son
 
 À partir des années 1980, la numérisation audio a permis de stocker de la
