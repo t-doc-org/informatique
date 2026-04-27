@@ -184,7 +184,7 @@ disque (DVD), dont la capacité est de 4.7 Go. Pour cela, on exploite les limite
 de notre perception visuelle et auditive en supprimant les éléments que nos sens
 ne distinguent pas clairement. Par exemple, un ensemble de pixels aux couleurs
 proches peut être remplacé par une couleur moyenne, ce qui entraîne une perte de
-qualité.
+qualité, mais ne fera pas de différence pour l'oeil humain.
 
 Une autre approche repose sur la similarité entre les images successives: plutôt
 que d’encoder chaque image en entier, on représente uniquement les différences
