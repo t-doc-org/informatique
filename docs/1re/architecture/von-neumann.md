@@ -70,15 +70,16 @@ Les périphériques d'entrées/sorties permettent à l'ordinateur de communiquer
 avec l'extérieur (clavier, écran, etc.).
 
 Les périphériques d'entrées convertissent l'information qu'ils récupèrent de
-l'extérieur (appui d'une touche) en données compréhensibles par l'ordinateur
-(en binaire).
+l'extérieur (par exemple: appui d'une touche) en données compréhensibles par
+l'ordinateur (en binaire).
 
 Les périphériques de sorties décodent l'information fournie par l'ordinateur (en
-binaire) afin de la rendre compréhensible par l'utilisateur (une image qui
-s'affiche sur l'écran).
+binaire) afin de la rendre compréhensible par l'utilisateur (par exemple: une
+image qui s'affiche sur l'écran).
 
-% TODO: À Ajouter lorsque la section sera créée.
-% Nous verrons cela plus en détail dans la section [](encodage-information.md).
+Comment l'information est encodée en binaire est expliqué dans le chapitre
+[Représentation de l'information](../representation-info/index.md).
+
 
 ## Vidéo
 

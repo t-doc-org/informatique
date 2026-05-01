@@ -11,8 +11,9 @@ contient des fichiers.
 
 ## Exercice {num2}`exercice`
 
-Répondre aux questions:
+Répondez aux questions:
 
+{.lower-alpha-paren}
 1.  Quelle est la différence entre un fichier et un répertoire, appelé aussi
     dossier?
 
@@ -35,7 +36,7 @@ Répondre aux questions:
     ```
 
 3.  Voici un schéma "standard" d'un système de fichiers (Windows 10). Qu'est-ce
-    qui est différent sur ton ordinateur? Faire un schéma de ton système de
+    qui est différent sur ton ordinateur? Faites un schéma de ton système de
     fichiers.
 
     ```{image} images/syst-fichiers.png
@@ -44,7 +45,7 @@ Répondre aux questions:
     :align: center
     ```
 
-4.  Changer les vues possibles du système de fichiers (icones, listes, détails,
+4.  Changez les vues possibles du système de fichiers (icones, listes, détails,
     etc.).
 
 5.  Dans l'affichage avec le détail, quelles sont les métadonnées[^sn1]
@@ -69,7 +70,7 @@ Répondre aux questions:
     le fichier, lors de l'ouverture.
     ```
 
-7.  Citer quelques extensions et indiquer à quel type de fichier ça correspond.
+7.  Citez quelques extensions et indiquez à quel type de fichier ça correspond.
 
     ```{solution}
     `.docx`
@@ -94,7 +95,7 @@ Répondre aux questions:
     : Fichier compressé
     ```
 
-8.  Créer un répertoire pour les documents de cette année (ex:
+8.  Créez un répertoire pour les documents de cette année (ex:
     `1F.../informatique`) soit sur oneDrive directement, sinon dans vos
-    documents ou sur le bureau en activant la sauvegarde sur oneDrive. Vérifier
+    documents ou sur le bureau en activant la sauvegarde sur oneDrive. Vérifiez
     que la synchronisation est activée.
