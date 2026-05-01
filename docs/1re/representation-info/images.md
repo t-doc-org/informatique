@@ -283,9 +283,9 @@ P3
 
 ## Format PGM (Portable GreyMap)
 
-Le format PBM  est l'un des plus simples pour exprimer des images en noir et
-blanc. Un tel fichier contient les informations suivantes dans l'ordre et
-séparées par un espace ou un retour à la ligne:
+Le format PGM  permet de représenter des images en nuances de gris. Un tel fichier
+contient les informations suivantes dans l'ordre et séparées par un espace ou
+un retour à la ligne:
 
 - `P2`
 
@@ -297,9 +297,9 @@ séparées par un espace ou un retour à la ligne:
 
 ## Format PPM (Portable PixMap)
 
-Le format PBM  est l'un des plus simples pour exprimer des images en noir et
-blanc. Un tel fichier contient les informations suivantes dans l'ordre et
-séparées par un espace ou un retour à la ligne:
+Le format PPM permet de représenter des images en couleurs. Un tel fichier
+contient les informations suivantes dans l'ordre et séparées par un espace ou un
+retour à la ligne:
 
 - `P3`
 
