@@ -277,3 +277,8 @@ Avec compression:
 | D | 00 |
 
 Le message codé sera 1 1 ... 1 1 010 011 00 &rarr; 108 bits
+
+## Vidéo
+
+```{youtube} Z4sYZrKuL_E
+```
