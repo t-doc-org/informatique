@@ -88,7 +88,7 @@ Complétez:
 Convertissez la chaîne de caractères **Info-23** en utilisant le code ASCII en hexadécimal (cf. annexe).
 
 ```{solution}
-$49\,6E\,66\,6F\2D\,32\,33_{16}$
+$49\,6E\,66\,6F\,2D\,32\,33_{16}$
 ```
 
 ## Question {nump}`question`{points}`2`
