@@ -58,7 +58,7 @@ qu'elle contient.
 l'ordinateur. Il en existe différents types:
    - Le **disque dur** qui se trouvent dans l'ordinateur.
    - Tous les **supports externes** qui permettent de stocker des données tels
-   que disques durs externes, mémoire flash (SSD), clés USB, carte SD, CD, DVD,
+   que disques durs externes, mémoires flash (SSD), clés USB, cartes SD, CD, DVD,
    Blu-ray.
 
 3. La **mémoire morte** ou ROM est une mémoire en lecture seule. C'est-à-dire
