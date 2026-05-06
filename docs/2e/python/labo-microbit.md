@@ -182,7 +182,7 @@ display.show(img)
 1.  Écrivez un programme qui affiche l'image de pacman, attend 2 secondes et
     ensuite affiche l'image d'un fantôme.
 
-2.  Modifiez le programme de la partie 1 pour qu'il change d'images toute les
+2.  Modifiez le programme de la partie 1 pour qu'il change d'images toutes les
     secondes en continu.
     ````{tip}
     :class: dropdown
