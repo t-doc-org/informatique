@@ -13,6 +13,100 @@ display.clear()
 
 ## Exercice {num2}`exercice`
 
+Dans cet exercice, vous allez déplacer un pixel sur l'écran, d'abord sur la
+première ligne et ensuite sur tout l'écran.
+
+Dans le programme ci-dessous le premier pixel de la première ligne est allumé.
+
+{.lower-alpha-paren}
+1.  En utilisant une boucle `for`, déplacez le pixel sur la première ligne.
+    ```{tip}
+    Dans chaque passage dans la boucle, il faudra effacer tout l'écran, avant
+    d'afficher le pixel au nouvel emplacement.
+    ```
+2.  [Optionnel] En utilisant une deuxième boucle for, faites parcourir au pixel
+    tout l'écran.
+    ```{tip}
+    Une des boucles va modifier la valeur de `x` et l'autre la valeur de `y`.
+    ```
+3.  [Optionnel] Modifiez la vitesse de déplacement du pixel.
+
+```{exec} micropython
+:after: microbit-reset
+:editor: 84d579d6-d427-4edf-817d-e2c7a0eb237b
+:reset: hide
+from microbit import *
+
+# coordonnées du pixel
+x = 0
+y = 0
+
+# affichage du pixel
+display.set_pixel(x, y, 9)
+```
+
+````{solution}
+```{exec} micropython
+:after: microbit-reset
+from microbit import *
+
+# coordonnées du pixel
+x = 0
+y = 0
+
+# affichage du pixel
+for _ in range(5):
+  for _ in range(5):
+      display.set_pixel(x, y, 9)
+      x += 1
+      sleep(100)
+      display.clear()
+  y += 1
+  x = 0
+```
+````
+
+
+## Exercice {num2}`exercice`
+
+{.lower-alpha-paren}
+1.  Écrivez un programme qui affiche l'image de Pacman `Image.PACMAN` lorsque le
+    bouton A est appuyé et affiche l'image d'un fantôme `Image.GHOST` lorsque
+    c'est le bouton B.
+2.  Ajoutez que l'écran ne doit rien afficher quand aucun bouton n'est pressé.
+    ```{tip}
+    La fonction `display.clear()` efface l'écran, c'est-à-dire éteint toutes les
+    LED.<br>
+    ```
+
+```{exec} micropython
+:after: microbit-reset
+:editor: 7c6de191-9dc8-486b-b1c1-5cb7e1549ff1
+:reset: hide
+from microbit import *
+
+# Écrivez le programme ici
+```
+
+````{solution}
+```{exec} micropython
+:after: microbit-reset
+from microbit import *
+
+while True:
+    if button_a.was_pressed():
+        display.show(Image.PACMAN)
+    elif button_b.was_pressed():
+        display.show(Image.GHOST)
+    else:
+        display.clear()
+    sleep(500)
+```
+````
+
+## Exercice {num2}`exercice`
+
+{.lower-alpha-paren}
 1.  Écrivez un programme qui affiche un décompte: 9, 8, ... et lorsque le
     compteur est arrivé à 0, affichez "BOOM" suivi de l'image d'un crâne.
     (Image.SKULL).
@@ -27,9 +121,10 @@ display.clear()
 ```{exec} micropython
 :after: microbit-reset
 :editor: 41b8a48d-bf5a-4ba8-96f8-7cd5dd84a7b6
+:reset: hide
 from microbit import *
 
-# écrivez le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -42,7 +137,7 @@ compteur = 9
 while compteur > 0:
   display.show(compteur)
   compteur -= 1
-  sleep(1000)
+  sleep(200)
 display.scroll("BOOM")
 display.show(Image.SKULL)
 music.play(music.POWER_DOWN)
@@ -51,10 +146,15 @@ music.play(music.POWER_DOWN)
 
 ## Exercice {num2}`exercice`
 
+{.lower-alpha-paren}
 1.  Écrivez un programme qui simule un lancer de dé, c'est-à-dire que lorsque
     vous secouez le micro:bit, un nombre aléatoire entre 1 et 6 doit s'afficher.
+    ```{tip}
+    La fonction `randint(a, b)` du module `random` renvoie un nombre entier
+    "aléatoire" entre a et b, tous les deux compris ($a \leq randint(a,b) \leq b$).
+    ```
 
-2.  Modifiez le programme de la partie 1 pour qu'il affiche la valeur obtenue
+2.  Modifiez le programme de la partie a) pour qu'il affiche la valeur obtenue
     comme sur un dé: &#9856; &#9857; &#9858; &#9859; &#9860; et &#9861;.
 
 ```{tip}
@@ -66,12 +166,14 @@ renvoie `True` si le micro:bit a été secoué.
 ```{exec} micropython
 :after: microbit-reset
 :editor: 1f26bdb4-c78d-41ed-9a30-1f56b3c9a340
+:reset: hide
 from microbit import *
 
-# écrivez le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
+{.lower-alpha-paren}
 1.  ```{exec} micropython
     :after: microbit-reset
     from microbit import *
@@ -113,18 +215,13 @@ from microbit import *
 - si l'utilisateur appuie sur le bouton B, le pixel se déplace à droite,
 - si le pixel est au bord de l'écran, il ne se passe rien.
 
-
-```{tip}
-La fonction `display.clear()` permet d'effacer tout l'écran, c'est-à-dire
-éteindre toutes les LED.
-```
-
 ```{exec} micropython
 :after: microbit-reset
 :editor: 1eb13c044-deed-4951-a000-92c09b171f31
+:reset: hide
 from microbit import *
 
-# écrivez le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
@@ -152,6 +249,7 @@ while True:
 
 Écrivez un programme qui mesure votre temps de réaction en secondes.
 
+{.lower-alpha-paren}
 1.  Des images d'animaux défilent aléatoirement sur l'écran. (`Image.RABBIT`,
     `Image.COW`, `Image.TORTOISE`, `Image.DUCK`, `Image.SNAKE`,
     `Image.BUTTERFLY`, `Image.GIRAFFE`)
@@ -172,9 +270,10 @@ démarrage du micro:bit.
 ```{exec} micropython
 :after: microbit-reset
 :editor: 9ebc49b0-40b5-47ab-a8c5-e3d2bb638a22
+:reset: hide
 from microbit import *
 
-# écrivez le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}

@@ -87,12 +87,14 @@ display.show(smile)
 
 ### Exercice {num2}`exercice`
 
+{.lower-alpha-paren}
 1.  Exécutez le programme suivant et répondez aux questions:
     - Que fait ce programme?
     - Que fait `display.scroll("Salut!")`?
     - Que fait `sleep(2000)`?
 
-2. Modifiez le programme pour qu'il affiche 4 fois "J'aime l'informatique!".
+2. Modifiez le programme pour qu'il affiche 4 fois "Hello" et
+    attende trois secondes entre les affichages.
 
 ```{exec} micropython
 :after: microbit-reset
@@ -110,8 +112,8 @@ display.scroll("Comment vas-tu?")
 from microbit import *
 
 for _ in range(4):
-    display.scroll("Vive l'informatique!")
-    sleep(2000)
+    display.scroll("Hello")
+    sleep(3000)
 ```
 ````
 
@@ -147,6 +149,7 @@ Le **module microbit** contient de nombreuses images intégrées, telles que
 
 ### Exercice {num2}`exercice`
 
+{.lower-alpha-paren}
 1.  Sans l'exécuter, que fait le programme suivant?
     ```{exec} micropython
     :after: microbit-reset
@@ -182,13 +185,18 @@ display.show(img)
 
 ### Exercice {num2}`exercice`
 
+{.lower-alpha-paren}
 1.  Écrivez un programme qui affiche l'image de pacman, attend 2 secondes et
     ensuite affiche l'image d'un fantôme.
+    ```{tip}
+    La fonction `sleep(ms)` met en pause l'exécution du programme pendant un
+    nombre défini de millisecondes.<br>
+    1000 millisecondes (ms) correspondent à 1 seconde.
+    ```
 
-2.  Modifiez le programme de la partie 1 pour qu'il change d'images toute les
+2.  Modifiez le programme de la partie a) pour qu'il change d'images toutes les
     secondes en continu.
     ````{tip}
-    :class: dropdown
     Pour faire défiler les images de manière continue, on utilise une boucle
     `while`. Cette boucle s'exécute tant que la condition reste vraie. En
     écrivant `while True`, on crée une boucle infinie, c’est-à-dire qu'elle
@@ -205,12 +213,14 @@ display.show(img)
 ```{exec} micropython
 :after: microbit-reset
 :editor: c925f708-dd7c-4747-bba8-3c535d9d02e6
+:reset: hide
 from microbit import *
 
-# écrivez le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}
+{.lower-alpha-paren}
 1.  ```{exec} micropython
     :after: microbit-reset
     from microbit import *
@@ -240,8 +250,29 @@ La fonction `was_pressed()` retourne la value `True` si le bouton a été
 enfoncé depuis le début du programme ou depuis le dernier appel de cette
 fonction.
 
-### Exemple {num2}`exemple`
+### Exercice{num2}`exercice`
 
+{.lower-alpha-paren}
+1.  Sans l'exécuter, expliquez ce que fait le programme ci-dessous.
+2.  Vérifiez votre réponse.
+3.  Modifiez le programme pour qu'il affiche "B" quand le bouton B est appuyé.<br>
+    Utilisez la structure if/elif/else.
+
+```{exec} micropython
+:after: microbit-reset
+:editor: 92705dbe-1349-4d3b-b4ec-1af76ba48a91
+:console-style: max-height: 10rem
+from microbit import *
+
+while True:
+  if button_a.was_pressed():
+    display.show("A")
+  else:
+    display.show("X")
+  sleep(500)
+```
+
+````{solution}
 ```{exec} micropython
 :after: microbit-reset
 :console-style: max-height: 10rem
@@ -249,80 +280,14 @@ from microbit import *
 
 while True:
   if button_a.was_pressed():
-    print("Le bouton A a été appuyé.")
+    display.show("A")
   elif button_b.was_pressed():
-    print("Le bouton B a été appuyé.")
+    display.show("B")
   else:
-    print("Aucun bouton n'a été appuyé.")
-  sleep(1000)
-```
-
-### Exercice {num2}`exercice`
-
-Écrivez un programme qui affiche une image lorsque le bouton A est appuyé et
-affiche une autre image lorsque c'est le bouton B.
-
-```{exec} micropython
-:after: microbit-reset
-:editor: 7c6de191-9dc8-486b-b1c1-5cb7e1549ff1
-from microbit import *
-
-# écrivez le programme ici
-```
-
-````{solution}
-```{exec} micropython
-:after: microbit-reset
-from microbit import *
-
-while True:
-    if button_a.was_pressed():
-        display.show(Image.HAPPY)
-    elif button_b.was_pressed():
-        display.show(Image.SAD)
-    sleep(1000)
+    display.show("X")
+  sleep(500)
 ```
 ````
-
-### Exercice {num2}`exercice`
-
-Testez les deux programmes suivants.
-- Quelles différences y a-t-il entre les deux programmes?
-- Que fait la fonction `is_pressed()`?
-
-```{exec} micropython
-:after: microbit-reset
-from microbit import *
-
-while True:
-    if button_a.was_pressed():
-        display.show(Image.HAPPY)
-    else:
-        display.show(Image.SAD)
-    sleep(200)
-```
-
-```{exec} micropython
-:after: microbit-reset
-from microbit import *
-
-while True:
-    if button_a.is_pressed():
-        display.show(Image.HAPPY)
-    else:
-        display.show(Image.SAD)
-    sleep(200)
-````
-
-```{solution}
-La fonction `was_pressed()` détecte lorsque le bouton a été appuyé une
-fois et effectue le bloc d'instructions. Si on laisse le bouton appuyé,
-le bloc d'instructions ne sera effectué qu'une seule fois.
-
-La fonction `is_pressed()` détecte lorsque le bouton est enfoncé et
-effectue le bloc d'instructions tant que celui-ci est enfoncé.
-```
-
 
 ## Changement d'état d'un pixel
 
@@ -348,9 +313,10 @@ maximale et les LED des quatre coins avec une valeur intermédiaire.
 ```{exec} micropython
 :after: microbit-reset
 :editor: 830d1f74-9ab6-42de-b50f-ce0a4c974112
+:reset: hide
 from microbit import *
 
-# écrivez le programme ici
+# Écrivez le programme ici
 ```
 
 ````{solution}

@@ -19,7 +19,7 @@ Voici une liste de fonctions utiles pour le micro:bit.
 
 `display.set_pixel(x, y, i)`
 : allume la LED à la position (x; y) avec une intensité de i (i allant de 0
-éteint à 9 intensité maximum)
+éteint à 9 intensité maximale)
 
 `display.get_pixel(x, y)`
 : renvoie la valeur de l'intensité de la LED à la position (x; y)
