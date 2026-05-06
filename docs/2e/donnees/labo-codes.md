@@ -52,6 +52,7 @@ Vous allez recevoir un message codé:
     message qui a effectivement été envoyé. Que s'est-il passé?
     - Quels mots sont décodés correctement?
     - Quels mots ne sont pas décodés correctement? Pourquoi?
+    - Mettez en couleur les différences entre le message envoyé et celui reçu.
 
 ## Code de Hamming
 
@@ -86,4 +87,5 @@ En utilisant les fiches transmises par l'enseignant.e:
     message qui a effectivement été envoyé.
     - Quels mots sont décodés correctement?
     - Quels mots ne sont pas décodés correctement? Pourquoi?
+    - Mettez en couleur les différences entre le message envoyé et celui reçu.
 
