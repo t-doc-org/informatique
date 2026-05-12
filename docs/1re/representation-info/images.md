@@ -220,7 +220,7 @@ P1
 
 ### Exercice {num2}`exercice`
 
-Voici une image encodée dans un autre format que PBM, répondez aux trois
+Voici une image encodée dans un autre format que PGM, répondez aux trois
 questions suivantes avant de convertir l'image:
 
 {.lower-alpha-paren}
@@ -254,7 +254,7 @@ P2
 
 ### Exercice {num2}`exercice`
 
-Voici une image encodée dans un autre format que PBM, répondez aux questions
+Voici une image encodée dans un autre format que PPM, répondez aux questions
 suivantes avant de convertir l'image:
 
 {.lower-alpha-paren}
