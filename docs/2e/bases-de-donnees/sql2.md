@@ -21,6 +21,7 @@ celle-ci ou si elle est `null`.
       fontname="Helvetica,Arial,sans-serif"
       fontsize="20pt"
       layout="circo"
+      bgcolor="transparent"
     ]
     node [
       fontname="Helvetica,Arial,sans-serif"

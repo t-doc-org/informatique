@@ -75,6 +75,7 @@ avec un compteur (la valeur augmentera toujours de 1).
       fontname="Helvetica,Arial,sans-serif"
       fontsize="20pt"
       layout="circo"
+      bgcolor="transparent"
     ]
     node [
       fontname="Helvetica,Arial,sans-serif"
@@ -124,6 +125,7 @@ primaire. Nous avons choisi `nom`.
       fontname="Helvetica,Arial,sans-serif"
       fontsize="20pt"
       layout="circo"
+      bgcolor="transparent"
     ]
     node [
       fontname="Helvetica,Arial,sans-serif"
@@ -205,6 +207,7 @@ digraph UML_Class_diagram {
     fontname="Helvetica,Arial,sans-serif"
     fontsize="20pt"
     layout="circo"
+    bgcolor="transparent"
   ]
   node [
     fontname="Helvetica,Arial,sans-serif"
