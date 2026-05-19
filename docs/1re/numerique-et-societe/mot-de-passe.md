@@ -3,6 +3,94 @@
 
 # Mot de passe
 
+## Questionnaire
+
+```{poll} 35694460-7a69-43d0-998e-789d02e58bd7
+:number: none
+Combien de mots de passe différents utilises-tu?
+
+- 1
+- 2
+- 3
+- 4
+- 5
+- plus de 5
+```
+
+```{poll} be525433-43c8-4c32-94e9-936ff3715f46
+:number: none
+As-tu un mot de passe ou un autre système de sécurité pour accéder à ton
+ordinateur?
+
+- oui
+- non
+```
+
+```{poll} 6326ad1e-e2d3-4817-a78a-d1b1299cd599
+:number: none
+:mode: multi
+Comment accèdes-tu à ton téléphone?
+
+- sans rien
+- avec un code PIN
+- avec un mot de passe
+- avec un schéma
+- par empreintes digitales
+- par reconnaissance faciale
+- par reconnaissance de l'iris
+```
+
+```{poll} f5c736ee-e28d-4608-bc9c-d1a5b7b8fe86
+:number: none
+Oublies-tu régulièrement tes mots de passe?
+
+- oui
+- non
+```
+
+```{poll} ba83dfd5-5278-4508-8598-930057832fdb
+:number: none
+Utilises-tu un gestionnaire de mot de passe?
+
+- oui
+- non
+```
+
+```{poll} 036b11ba-2d90-489f-bd01-7b25f73c819e
+:number: none
+Penses-tu que tes mots de passe sont sûrs?
+
+- oui
+- non
+```
+
+```{poll} 59827ffa-32e4-48f7-8f94-c1c49f339ca1
+:number: none
+Combien de caractères possèdent tes mots de passe?
+
+- < 6
+- entre 6 et 8
+- entre 9 et 11
+- entre 12 et 14
+- \> 14
+```
+
+```{poll} 6a8ae065-4870-4867-9d0f-448ed92ff757
+:number: none
+Utilises-tu l'e-banking?
+
+- oui
+- non
+```
+
+```{poll} b6b63dfa-7b91-4c78-9cfb-c780679a03f2
+:number: none
+Sais-tu ce qu'est le phishing (ou hameçonnage)?
+
+- oui
+- non
+```
+
 ## Introduction
 
 De nombreux services, y compris des services sensibles comme la banque en ligne,
