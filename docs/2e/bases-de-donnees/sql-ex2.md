@@ -22,7 +22,6 @@ code-barre personnel. De chaque auteur, nous connaissons le nom et le prénom.
 
 ````{solution}
 ```{graphviz}
-:align: center
 digraph UML_Class_diagram {
   graph [
     label="Schéma relationnel: Bibliothèque"
@@ -30,6 +29,7 @@ digraph UML_Class_diagram {
     fontname="Helvetica,Arial,sans-serif"
     fontsize="20pt"
     layout="circo"
+    bgcolor="transparent"
   ]
   node [
     fontname="Helvetica,Arial,sans-serif"
