@@ -46,6 +46,33 @@ subject: "Informatique 2e année"
   résoudre des exercices.
 
 
-## Documents à disposition pendant l'évaluation
+## Informations à disposition pendant l'évaluation
 
-à compléter
+### Code détecteur
+
+```{code} text
+Algorithme de Luhn:
+
+Il consiste à doubler un chiffre sur deux, puis de faire une somme de contrôle
+sur les chiffres ainsi obtenus (la somme doit être un multiple de 10).
+Pour déterminer quels chiffres sont doublés, on part de la fin, et le chiffre de
+contrôle n'est jamais doublé.
+```
+
+### Code correcteur
+
+````{list-grid}
+:style: |
+: grid-template-columns: 1fr 1fr; align-items: center;
+: margin-bottom: 0;
+- ```{figure} images/hamming6.svg
+  :alt: Bits de contrôle
+  :width: 60%
+  :align: center
+  ```
+- ```{figure} images/hamming1.svg
+  :alt: Bits de contrôle
+  :width: 60%
+  :align: center
+  ```
+````
