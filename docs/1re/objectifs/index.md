@@ -8,4 +8,5 @@
 python1
 python2
 encodage
+architecture-societe
 ```
