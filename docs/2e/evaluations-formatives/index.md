@@ -6,4 +6,5 @@
 ```{toctree}
 :maxdepth: 1
 python2
+donnees-reseaux
 ```
