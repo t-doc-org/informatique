@@ -6,7 +6,7 @@ export const [{
 }] = await tdoc.imports('tdoc/jsxgraph.js');
 
 // Defaults for use on screen media.
-export const screen = attrs.screen = [{
+attrs.screen = [{
   axis: true, grid: true,
   defaultAxes: {
     x: {ticks: {minorTicks: 1}},
@@ -39,7 +39,7 @@ export const screen = attrs.screen = [{
 }];
 
 // Defaults for use on print media.
-export const print = attrs.print = ['nonInteractive', {
+attrs.print = [attrs.nonInteractive, {
   axis: true, grid: true,
   defaultAxes: {
     x: {ticks: {insertTicks: false, ticksDistance: 1, minorTicks: 0}},
