@@ -70,6 +70,7 @@ contrôle n'est jamais doublé.
 ## Question {nump}`question`{points}`2`
 
 Répondez par vrai ou faux et justifiez.
+
 {.lower-alpha-paren}
 1.  Avec un bit de parité, il est possible de corriger une erreur.
 2.  Avec l'algorithme de Luhn, une permutation de deux chiffres consécutifs est
