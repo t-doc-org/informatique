@@ -56,8 +56,14 @@ export const print = attrs.print = ['nonInteractive', {
 }];
 
 templates['discrete-cumulative-distribution'] = (el, {
-  samples, frequency = true, board = {},
+  samples, classes, frequency = true, board = {},
 }) => {
+  if (samples === undefined) {
+    samples = [];
+    for (const [v, count] of classes) {
+      for (let i = 0; i < count; ++i) samples.push(v);
+    }
+  }
   samples.sort();
   let min = Infinity, max = -Infinity;
   const data = [[-Infinity, 0]];
