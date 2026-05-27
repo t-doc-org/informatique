@@ -117,7 +117,7 @@ Répondez par vrai ou faux et justifiez.
 1.  $p_1=0$, $p_2=0$ et $p_3=1$, Message encodé: $0001111$
 2.  |message reçu|$p_1$|$p_2$|$p_3$|bit erroné|message corrigé|message décodé|
     |:----------:|:---:|:---:|:---:|:--------:|:-------------:|:------------:|
-    | $0111110$  | 0   | 0   | 0   | 6/$d_3$  |  $0111100$    |   1100       |
+    | $0111110$  | $0$ | $0$ | $0$ | 6/$d_3$  |  $0111100$    |   $1100$     |
 ````
 
 ## Question {nump}`question`{points}`2`
