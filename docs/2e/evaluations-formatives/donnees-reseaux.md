@@ -4,7 +4,7 @@
 # Données et réseaux
 
 ```{metadata}
-subject: "Mathématiques 1e année"
+subject: "Informatique 2e année"
 print-styles: tdoc/print-exam.css
 page-break-force: 1
 page-break-avoid: 2

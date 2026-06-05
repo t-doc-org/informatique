@@ -4,7 +4,7 @@
 # Architecture de l'ordinateur et numérique et société
 
 ```{metadata}
-subject: "Mathématiques 1re année"
+subject: "Informatique 1re année"
 print-styles: tdoc/print-exam.css
 page-break-force: 1
 page-break-avoid: 2

@@ -2,7 +2,7 @@
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 ```{metadata}
-subject: "Informatique 2e année"
+subject: "Informatique 1re année"
 ```
 
 # Représentation de l'information
