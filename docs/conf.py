@@ -28,4 +28,9 @@ metadata = {
     'page-break-force': 2,
     'page-break-avoid': 3,
     'exec': {'pnm': {}},
+    'chartjs': {
+        'plugins': {
+            'deferred': False,  # Interferes with printing
+        },
+    },
 }
