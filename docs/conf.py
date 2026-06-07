@@ -24,7 +24,6 @@ metadata = {
     'points': {
         'text': [" ({0} pt)", " ({0} pts)"],
     },
-    'print-styles': 'tdoc/print.css',
     'page-break-force': 2,
     'page-break-avoid': 3,
     'exec': {'pnm': {}},
