@@ -7,7 +7,7 @@
 subject: "Informatique 1re année"
 print-styles: tdoc/print-exam.css
 page-break-force: 1
-page-break-avoid: 2
+page-break-avoid-inside: 2
 ```
 
 ```{include} /_include/entete-examen.export.md
