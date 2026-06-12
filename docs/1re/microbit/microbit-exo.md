@@ -21,8 +21,9 @@ Dans le programme ci-dessous le premier pixel de la première ligne est allumé.
 {.lower-alpha-paren}
 1.  En utilisant une boucle `for`, déplacez le pixel sur la première ligne.
     ```{tip}
-    Dans chaque passage dans la boucle, il faudra effacer tout l'écran, avant
-    d'afficher le pixel au nouvel emplacement.
+    Dans chaque passage dans la boucle, il faudra effacer tout l'écran en
+    utilisant la fonction `display.clear()`, avant d'afficher le pixel au nouvel
+    emplacement
     ```
 2.  [Optionnel] En utilisant une deuxième boucle for, faites parcourir au pixel
     tout l'écran.
