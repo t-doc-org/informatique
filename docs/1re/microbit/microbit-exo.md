@@ -108,8 +108,9 @@ while True:
 ## Exercice {num2}`exercice`
 
 {.lower-alpha-paren}
-1.  Écrivez un programme qui affiche un décompte: 9, 8, ... et lorsque le
-    compteur est arrivé à 0, affichez "BOOM" suivi de l'image d'un crâne.
+1.  En utilisant une boucle `while`, écrivez un programme qui affiche un décompte:
+    9, 8, ... et lorsque le compteur est arrivé à 0, affichez "BOOM" suivi de
+    l'image d'un crâne.
     (Image.SKULL).
 
 2.  Ajoutez un son après l'affichage du crâne.
