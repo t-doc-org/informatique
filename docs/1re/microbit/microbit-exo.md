@@ -155,8 +155,9 @@ music.play(music.POWER_DOWN)
     "aléatoire" entre a et b, tous les deux compris ($a \leq randint(a,b) \leq b$).
     ```
 
-2.  Modifiez le programme de la partie a) pour qu'il affiche la valeur obtenue
-    comme sur un dé: &#9856; &#9857; &#9858; &#9859; &#9860; et &#9861;.
+2.  [Optionnel] Modifiez le programme de la partie a) pour qu'il affiche la
+    valeur obtenue comme sur un dé: &#9856; &#9857; &#9858; &#9859; &#9860; et
+    &#9861;.
 
 ```{tip}
 Le micro:bit contient un accéléromètre qui permet de connaître sa position,
