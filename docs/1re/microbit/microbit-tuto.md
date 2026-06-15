@@ -94,7 +94,7 @@ display.show(smile)
     - Que fait `sleep(2000)`?
 
 2. Modifiez le programme pour qu'il affiche 4 fois "Hello" et
-    attende trois secondes entre les affichages.
+    attende trois secondes entre les affichages. Utilisez une boucle `for`.
 
 ```{exec} micropython
 :after: microbit-reset
