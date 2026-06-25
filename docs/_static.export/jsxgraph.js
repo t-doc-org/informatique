@@ -1,9 +1,9 @@
 /* Copyright 2026 Caroline Blank <caro@c-space.org> */
 /* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
 
-export const [{
+export const {
     attrs, gcd, initBoard, JXG, merge, templates, withAxesLabels,
-}] = await tdoc.imports('tdoc/jsxgraph.js');
+} = await tdoc.import('tdoc/jsxgraph.js');
 
 // Defaults for use on screen media.
 attrs.screen = [{
