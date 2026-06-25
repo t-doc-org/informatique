@@ -1,7 +1,7 @@
 // Copyright 2026 Caroline Blank <caro@c-space.org>
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-import {strToInt} from './core.js';
+import {htmlFragment, strToInt} from './core.js';
 import {Runner, UserError} from './exec.js';
 
 const largeur = 20;
@@ -103,8 +103,8 @@ Le nombre de données ne correspond pas aux dimensions de l'image annoncée.`);
             }
         }
         svg.push('</svg>');
-        return svg.join('');
+        return htmlFragment(svg.join('')).firstElementChild;
     }
 }
 
-Runner.apply(PnmRunner);  // Background
+Runner.register(PnmRunner);
