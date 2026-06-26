@@ -2,7 +2,7 @@
 /* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
 
 export const {
-    attrs, gcd, initBoard, JXG, merge, templates, withAxesLabels,
+    attrs, gcd, initBoard, JXG, merge, render, withAxesLabels,
 } = await tdoc.import('tdoc/jsxgraph.js');
 
 // Defaults for use on screen media.
