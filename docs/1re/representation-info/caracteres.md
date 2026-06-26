@@ -43,24 +43,26 @@ identique dans tous les pays.
 Convertissez les chaînes de caractères en utilisant le code ASCII hexadécimal.
 
 <script type="module">
-const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
+const [core, quiz] = await tdoc.import('tdoc/core.js', 'tdoc/quiz.js');
 
-quiz.check('encode', args => {
+quiz.checks.encode = args => {
     const text = core.qs(args.field.closest('p'), 'code').textContent;
     const codes = [];
     for (let i = 0; i < text.length; ++i) {
       codes.push(core.toRadix(text.charCodeAt(i), 16, 2));
     }
     args.solution = codes.join('');
-});
-quiz.check('decode', args => {
+    if (tdoc.local) console.log(`${text} => ${args.solution}`);
+};
+quiz.checks.decode = args => {
     const text = core.qs(args.field.closest('p'), 'code').textContent;
     let s = '';
     for (const c of text.split(/\s+/)) {
       s += String.fromCharCode(Number.parseInt(c, 16));
     }
     args.solution = s;
-});
+    if (tdoc.local) console.log(`${text} => ${args.solution}`);
+};
 </script>
 
 ```{role} input(quiz-input)

@@ -165,7 +165,7 @@ de parité. La somme doit être paire.
 Les messages suivants sont-ils corrects?
 
 <script type="module">
-const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
+const [core, quiz] = await tdoc.import('tdoc/core.js', 'tdoc/quiz.js');
 
 function parity(msg) {
     let p = 0;
@@ -182,8 +182,8 @@ function check(min, max, p) {
         const msg = Math.floor(Math.random() * (1 << bits));
         const correct = parity(msg) ^ p;
         return {
-            msg,
-            equal(other) { return other.msg === msg; },
+            _msg: msg,
+            equal(other) { return other._msg === this._msg; },
             history: (max - min + 1) / 2,
 
             msg(ph) { ph.textContent = core.toRadix(msg, 2, bits); },
@@ -201,8 +201,8 @@ function encode(min, max, p) {
         const encoded = core.toRadix((msg << 1) | (parity(msg) ^ p), 2,
                                      bits + 1);
         return {
-            msg,
-            equal(other) { return other.msg === msg; },
+            _msg: msg,
+            equal(other) { return other._msg === this._msg; },
             history: (max - min + 1) / 2,
 
             msg(ph) { ph.textContent = core.toRadix(msg, 2, bits); },
@@ -213,9 +213,9 @@ function encode(min, max, p) {
     };
 }
 
-quiz.generator('parity-check-4', check(4, 4, 0));
-quiz.generator('parity-check-4-9', check(4, 9, 0));
-quiz.generator('parity-encode', encode(4, 9, 0));
+quiz.generators.parityCheck_4 =  check(4, 4, 0);
+quiz.generators.parityCheck_4_9 = check(4, 9, 0);
+quiz.generators.parityEncode = encode(4, 9, 0);
 </script>
 
 ```{role} oui-non(quiz-select)
@@ -224,7 +224,7 @@ quiz.generator('parity-encode', encode(4, 9, 0));
 : non
 ```
 
-```{quiz} table parity-check-4
+```{quiz} table parityCheck_4
 | message reçu   | correct?           |
 | :------------: | :----------------: |
 | {quiz-ph}`msg` | {oui-non}`correct` |
@@ -237,7 +237,7 @@ $n$ bits et 1 bit de parité. La somme doit être paire.
 
 Les messages suivants sont-ils corrects?
 
-```{quiz} table parity-check-4-9
+```{quiz} table parityCheck_4_9
 | message reçu   | correct?           |
 | :------------: | :----------------: |
 | {quiz-ph}`msg` | {oui-non}`correct` |
@@ -254,7 +254,7 @@ Encodez les messages suivants.
 :style: width: 8rem;
 ```
 
-```{quiz} table parity-encode
+```{quiz} table parityEncode
 | message        | message encodé   |
 | :------------: | :--------------: |
 | {quiz-ph}`msg` | {input}`encoded` |
@@ -304,7 +304,7 @@ somme soit un multiple de 10. Pour chacun des messages suivants, indiquez la
 somme et déterminez si le message est correct.
 
 <script type="module">
-const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
+const [core, quiz] = await tdoc.import('tdoc/core.js', 'tdoc/quiz.js');
 
 // Compute the sum of the digits of the given message.
 function digitSum(msg) {
@@ -350,10 +350,10 @@ function check(fnSum, min, max) {
             randomDecimal(core.randomInt(min, max)), fnSum,
                           Math.random() < 0.5 ? 0 : core.randomInt(1, 9));
         const sum = fnSum(msg);
-        if (tdoc.dev) console.log(`${msg} => ${sum}`);
+        if (tdoc.local) console.log(`${msg} => ${sum}`);
         return {
-            msg,
-            equal(other) { return other.msg === msg; },
+            _msg: msg,
+            equal(other) { return other._msg === this._msg; },
             history: 10 ** (min - 1) / 2,
 
             msg(ph) { ph.textContent = `${msg}`; },
@@ -371,10 +371,10 @@ function encode(fnSum, min, max) {
         // Generate a new random message.
         const msg = randomDecimal(core.randomInt(min, max));
         const encoded = sumEncode(msg, fnSum);
-        if (tdoc.dev) console.log(`${msg} => ${encoded}`);
+        if (tdoc.local) console.log(`${msg} => ${encoded}`);
         return {
-            msg,
-            equal(other) { return other.msg === msg; },
+            _msg: msg,
+            equal(other) { return other._msg === this._msg; },
             history: 10 ** (min - 1) / 2,
 
             msg(ph) { ph.textContent = `${msg}`; },
@@ -385,17 +385,17 @@ function encode(fnSum, min, max) {
     };
 }
 
-quiz.generator('sum-digit-check', check(digitSum, 4, 9));
-quiz.generator('sum-digit-encode', encode(digitSum, 4, 9));
-quiz.generator('sum-luhn-check', check(luhnSum, 4, 9));
-quiz.generator('sum-luhn-encode', encode(luhnSum, 4, 9));
+quiz.generators.sumDigitCheck = check(digitSum, 4, 9);
+quiz.generators.sumDigitEncode = encode(digitSum, 4, 9);
+quiz.generators.sumLuhnCheck = check(luhnSum, 4, 9);
+quiz.generators.sumLuhnEncode = encode(luhnSum, 4, 9);
 </script>
 
 ```{role} input(quiz-input)
 :style: width: 4rem;
 ```
 
-```{quiz} table sum-digit-check
+```{quiz} table sumDigitCheck
 | message reçu   | somme        | correct?           |
 | :------------: | :----------: | :----------------: |
 | {quiz-ph}`msg` | {input}`sum` | {oui-non}`correct` |
@@ -410,7 +410,7 @@ multiple de 10, encodez les messages suivants.
 :style: width: 10rem;
 ```
 
-```{quiz} table sum-digit-encode
+```{quiz} table sumDigitEncode
 | message        | message encodé   |
 | :------------: | :--------------: |
 | {quiz-ph}`msg` | {input}`encoded` |
@@ -463,7 +463,7 @@ si le message est correct.
 :style: width: 4rem;
 ```
 
-```{quiz} table sum-luhn-check
+```{quiz} table sumLuhnCheck
 | message reçu   | somme        | correct?           |
 | :------------: | :----------: | :----------------: |
 | {quiz-ph}`msg` | {input}`sum` | {oui-non}`correct` |
@@ -477,7 +477,7 @@ En utilisant l'algorithme de Luhn, encodez les messages suivants.
 :style: width: 10rem;
 ```
 
-```{quiz} table sum-luhn-encode
+```{quiz} table sumLuhnEncode
 | message        | message encodé   |
 | :------------: | :--------------: |
 | {quiz-ph}`msg` | {input}`encoded` |

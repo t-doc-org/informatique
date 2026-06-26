@@ -252,7 +252,7 @@ Pour chacun des messages utiles suivants:
 - encodez le message
 
 <script type="module">
-const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
+const [core, quiz] = await tdoc.import('tdoc/core.js', 'tdoc/quiz.js');
 
 // Hamming-encode the given message.
 function hammingEncode(msg, parityBits) {
@@ -304,12 +304,12 @@ function encode(parityBits) {
         const msg = Math.floor(Math.random() * (1 << dataBits));
         const encoded = core.toRadix(hammingEncode(msg, parityBits), 2,
                                      (1 << parityBits) - 1);
-        if (tdoc.dev) {
+        if (tdoc.local) {
             console.log(`${core.toRadix(msg, 2, dataBits)} => ${encoded}`);
         }
         return {
-            msg,
-            equal(other) { return other.msg === msg; },
+            _msg: msg,
+            equal(other) { return other._msg === this._msg; },
             history: (1 << dataBits) / 2,
 
             msg(ph) { ph.textContent = core.toRadix(msg, 2, dataBits); },
@@ -328,13 +328,13 @@ function decode(parityBits) {
         const dataBits = ebits - parityBits;
         const msg = Math.floor(Math.random() * (1 << ebits));
         const dec = hammingDecode(msg, parityBits);
-        if (tdoc.dev) {
+        if (tdoc.local) {
             console.log(`\
 ${core.toRadix(msg, 2, ebits)} => ${core.toRadix(dec.corrected, 2, ebits)}`);
         }
         return {
-            msg,
-            equal(other) { return other.msg === msg; },
+            _msg: msg,
+            equal(other) { return other._msg === this._msg; },
             history: (1 << ebits) / 2,
 
             msg(ph) { ph.textContent = core.toRadix(msg, 2, ebits); },
@@ -362,8 +362,8 @@ ${core.toRadix(msg, 2, ebits)} => ${core.toRadix(dec.corrected, 2, ebits)}`);
     };
 }
 
-quiz.generator('hamming-encode', encode(3));
-quiz.generator('hamming-decode', decode(3));
+quiz.generators.hammingEncode = encode(3);
+quiz.generators.hammingDecode = decode(3);
 </script>
 
 ```{role} bit(quiz-select)
@@ -375,7 +375,7 @@ quiz.generator('hamming-decode', decode(3));
 :style: width: 8rem; text-align: center;
 ```
 
-```{quiz} table hamming-encode
+```{quiz} table hammingEncode
 | message utile  | $p_1$     | $p_2$     | $p_3$     | message codé     |
 | :-----------:  | :-------: | :-------: | :-------: | :--------------: |
 | 1010           | 1         | 0         | 1         | 1011010          |
@@ -407,7 +407,7 @@ Pour chacun des messages reçus suivants:
 :style: width: 4rem; text-align: center;
 ```
 
-```{quiz} table hamming-decode
+```{quiz} table hammingDecode
 | message reçu   | parité&nbsp;1 | parité&nbsp;2 | parité&nbsp;3 | bit erroné  | message corrigé   | message décodé  |
 | :------------: | :-----------: | :-----------: | :-----------: | :---------: | :---------------: | :-------------: |
 | 0101001        | fausse        | correcte      | correcte      | 1           | 1101001           | 0001            |

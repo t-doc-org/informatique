@@ -48,24 +48,24 @@ $$
 ## Exercice {num2}`exercice`
 
 <script type="module">
-const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
+const [core, quiz] = await tdoc.import('tdoc/core.js', 'tdoc/quiz.js');
 
-quiz.check('conv', args => {
+quiz.checks.conv = args => {
     const p = args.field.closest('p');
     const tex = MathJax.startup.document.getMathItemsWithin(p)[0].math;
     const [fval, fradix] = tex.replace(/[\\,{}]/g, '').split('_', 2);
     const tradix = core.strToInt(args.solution);
     args.solution = core.strToInt(fval, fradix ?? 10);
     args.answer = core.strToInt(args.answer, tradix);
-    if (tdoc.dev) console.log(`${tex} => ${args.solution.toString(tradix)}`);
-});
-quiz.check('digits', args => {
+    if (tdoc.local) console.log(`${tex} => ${args.solution.toString(tradix)}`);
+};
+quiz.checks.digits = args => {
     const p = args.field.closest('p');
     const tex = MathJax.startup.document.getMathItemsWithin(p)[0].math;
     args.solution = Math.ceil(Math.log2(core.strToInt(tex) + 1));
     args.answer = core.strToInt(args.answer);
-    if (tdoc.dev) console.log(`${tex} => ${args.solution}`);
-});
+    if (tdoc.local) console.log(`${tex} => ${args.solution}`);
+};
 </script>
 
 Convertissez les nombres suivants de binaire en décimal.

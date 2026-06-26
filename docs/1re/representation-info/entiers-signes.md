@@ -77,9 +77,9 @@ Vérification: l'addition d'un nombre et de son opposé doit donner 0.
 ## Exercice {num2}`exercice`
 
 <script type="module">
-const [core, quiz] = await tdoc.imports('tdoc/core.js', 'tdoc/quiz.js');
+const [core, quiz] = await tdoc.import('tdoc/core.js', 'tdoc/quiz.js');
 
-quiz.check('negdec', args => {
+quiz.checks.negdec = args => {
     args.answer = {
         neg: v => core.strToInt(v, 2),
         dec: v => core.strToInt(v),
@@ -90,12 +90,12 @@ quiz.check('negdec', args => {
     const value = core.strToInt(tv, 2);
     const wrap = 1 << tv.length, neg = wrap - value;
     const dec = neg < wrap / 2 ? neg : neg - wrap;
-    if (tdoc.dev && args.solution === 'neg') {
+    if (tdoc.local && args.solution === 'neg') {
         console.log(`${tex} => ${neg.toString(2)}, ${dec}`);
     }
     args.solution = {neg, dec}[args.solution];
-});
-quiz.check('mag', args => {
+};
+quiz.checks.mag = args => {
     const smallest = args.solution[0] === '<';
     const signed = args.solution[1] === 's';
     const bits = core.strToInt(args.solution.slice(2));
@@ -106,7 +106,7 @@ quiz.check('mag', args => {
     if (signed && v < 0 && radix !== 10) v += 1 << bits;
     args.answer = core.strToInt(args.answer, radix);
     args.solution = v;
-});
+};
 </script>
 
 Déterminez l'opposé des nombres suivants en binaire, ainsi que la valeur

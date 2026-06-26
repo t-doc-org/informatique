@@ -114,7 +114,7 @@ P1
 0 1 1 1 1 0 1 1 1 0
 ```
 
-```{jsxgraph} template:grid
+```{jsxgraph} grid
 width: 35, height: 10,
 ```
 
