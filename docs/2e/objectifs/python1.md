@@ -1,9 +1,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Informatique 2e année"
-```
 (eval-python1-2e)=
 # Programmation en Python 1
 

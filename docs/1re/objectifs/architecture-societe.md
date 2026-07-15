@@ -1,10 +1,6 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Informatique 1re année"
-```
-
 # Architecture de l'ordinateur et numérique et société
 
 ## Architecture de l'ordinateur

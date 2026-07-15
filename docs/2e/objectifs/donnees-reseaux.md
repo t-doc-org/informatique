@@ -1,10 +1,6 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Informatique 2e année"
-```
-
 # Données et réseaux
 
 ## Données
@@ -16,7 +12,6 @@ subject: "Informatique 2e année"
 - Connaître le fonctionnement du bit de parité et à quoi il sert.
 - Connaître le fonctionnement de l'algorithme de Luhn et à quoi il sert.
 - Connaître le fonctionnement du code de Hamming.
-
 
 ## Stockage et transmission de données
 
@@ -44,7 +39,6 @@ subject: "Informatique 2e année"
 - Savoir ce que sont un nom de domaine et un DNS.
 - Savoir comment fonctionne le routage et être capable d'utiliser une table pour
   résoudre des exercices.
-
 
 ## Informations à disposition pendant l'évaluation
 

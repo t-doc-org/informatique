@@ -1,10 +1,6 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Informatique 2e année"
-```
-
 # Bases de données
 
 ## Données
@@ -22,7 +18,6 @@ subject: "Informatique 2e année"
   fonctionnement.
 - Savoir dessiner, en respectant les règles, un schéma du modèle relationnel
   correspondant à un énoncé.
-
 
 ## SQL
 

@@ -3,6 +3,11 @@
 
 # 2{sup}`e` année
 
+```{metadata}
+:recursive:
+subject: "Informatique 2e année"
+```
+
 ## Planification
 
 Le cours d'informatique a lieu en classe entière ou en demi-groupe, et cela

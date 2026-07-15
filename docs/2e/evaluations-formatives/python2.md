@@ -1,11 +1,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Informatique 2e année"
-solution: dynamic
-```
-
 # Quiz: Programmation en Python 2
 
 ````{poll} 089837e8-9b28-46a7-b35f-af57b127696d

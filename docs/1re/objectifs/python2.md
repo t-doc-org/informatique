@@ -1,10 +1,6 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Informatique 1re année"
-```
-
 # Programmation en Python 2
 
 Les objectifs de l'évaluation [](#eval-python1-1re) sont considérés comme acquis.

@@ -1,10 +1,6 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-subject: "Informatique 2e année"
-```
-
 # Cryptographie
 
 -   Connaître le vocabulaire en lien avec la cryptographie.

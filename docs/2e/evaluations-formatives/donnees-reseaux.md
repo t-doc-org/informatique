@@ -3,13 +3,6 @@
 
 # Données et réseaux
 
-```{metadata}
-subject: "Informatique 2e année"
-print-styles: tdoc/print-exam.css
-page-break-force: 1
-page-break-avoid-inside: 2
-```
-
 ```{include} /_include/entete-examen.export.md
 ```
 ```{class} align-center
@@ -18,7 +11,6 @@ page-break-avoid-inside: 2
 ---
 
 ## Question {nump}`question`{points}`4`
-
 
 1.  Vous souhaitez envoyer les messages suivants en ajoutant 1 bit de parité aux
     messages utiles donnés ci-dessous.<br>
