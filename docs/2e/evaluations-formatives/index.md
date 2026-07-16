@@ -6,7 +6,6 @@
 ```{metadata}
 :recursive:
 print-styles: tdoc/print-exam.css
-page-break-force: 1
 page-break-avoid-inside: 2
 ```
 
