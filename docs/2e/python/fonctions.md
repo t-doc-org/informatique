@@ -174,28 +174,153 @@ Créez une fonction `compteur()`...
       ```
     ````
 
+## Exercice {num2}`exercice`
+
+Définissez un fonction `affiche_max` qui prend 2 paramètres numériques. Cette
+fonction doit comparer les deux paramètres et afficher le maximum.
+
+
+```{exec} python
+:editor: 085391cb-a478-4b38-b2f3-0acc4fb65c10
+# Complétez la fonction
+def affiche_max(a, b):
+  ...
+
+affiche_max(4, 12)
+affiche_max(14, 5)
+affiche_max(3, -7)
+affiche_max(2, 2)
+```
+
+````{solution}
+```{exec} python
+:linenos:
+def affiche_max(a, b):
+  if a >= b:
+    print(a)
+  else:
+    print(b)
+
+affiche_max(4, 12)
+affiche_max(14, 5)
+affiche_max(3, -7)
+affiche_max(2, 2)
+```
+````
+
+## Exercice {num2}`exercice`
+
+Au-dessus du code donné, définissez une fonction nommée `affiche_prix_billet`
+prenant en paramètre l'âge de l'utilisateur et affichant le prix du billet de
+cinéma en fonction de cet âge.
+
+Le prix du billet est de 10 CHF pour les moins de 12 ans, de 14 CHF pour les
+65 ans et plus et de 16 CHF pour les autres. La fonction affiche uniquement le
+prix.
+
+Le code donné doit ensuite pouvoir s'exécuter sans erreur et afficher exactement
+les prix des billets pour tous les âges de 1 à 70 ans.
+
+```{exec} python
+:editor: 64d9c4cf-247a-4879-b4a4-d9b923bee5b8
+# Définissez la fonction affiche_prix_billet
+...
+
+for a in range(1, 71):
+  affiche_prix_billet(a)
+```
+
+````{solution}
+```{exec} python
+:linenos:
+def affiche_prix_billet(age):
+  if a < 12:
+    print(10)
+  elif a >= 65:
+    print(14)
+  else:
+    print(16)
+
+# affiche le prix des billets de 1 à 70 ans
+for a in range(1, 71):
+  affiche_prix_billet(a)
+```
+````
+
+
+### Exercice {num2}`exercice`
+
+Il est souvent difficile de débugger un code qui ne fonctionne pas. En s'aidant
+des messages d'erreurs affichés, corrigez le programme ci-dessous qui calcule
+l'aire et le périmètre d'un triangle isocèle et rectangle dont la base
+(hypoténuse) est connue.
+
+```{image} images/triangle_iso_rect.png
+:alt: Triangle isocèle rectangle
+:width: 50%
+:align: center
+```
+
+```{exec} python
+:editor: 36bcae3e-b90a-40b1-bac0-33bea021bc99
+from math import sqrt
+
+def affiche_aire(base, hauteur)
+  aire_triangle = base * hauteur
+  print("L'aire vaut", aire_triangle)
+
+def affiche_perimetre(cote1, cote2, cote3):
+  perimetre = cote1 + cote2 + cote3
+  print("Le périmètre vaut" perimetre)
+
+base = 500
+cathete = base / 2
+cote = sqrt(cathete**2 + cathete**2)
+aire = affiche_aire(base, hauteur)
+perimetre = affiche_perimetre(base, cote, cote)
+```
+
+```{solution}
+Erreurs de syntaxe:
+1.  Ligne 3: `SyntaxError: expected ':'` &rarr; il manque les 2 points à la fin
+    de la ligne.
+2.  Ligne 9: `SyntaxError: invalid syntax. Perhaps you forgot a comma?` &rarr;
+    il manque une virgule entre la chaîne de caractère et le variable `perimetre`.
+
+Erreur d'exécution:
+1.  Ligne 14: `NameError: name 'hauteur' is not defined` &rarr; la variable
+`hauteur` n'est pas définie, elle correspond à la variable `cathete`.
+
+Erreur de logique:
+1.  Le calcul d'aire n'est pas correct, pour un rectangle la formule est
+    $\dfrac{base \cdot hauteur}{2}$.
+
+Résultat correct:\
+L'aire vaut 62500.0\
+Le périmètre vaut 1207.1067811865476
+```
+
 
 ### Exemple {num2}`exemple`
+
+Nous avons défini une fonction `discriminant` qui calcule et affiche le
+discriminant d'une équation du 2<sup></sup> degré. L'équation est de la forme:
+
+$$ax^2 + bx + c = 0$$
 
 ```{exec} python
 :editor:
 # definition des fonctions
-def prix_apres_reduction(prix, reduction_pourcent):
-  reduction = prix * reduction_pourcent / 100
-  prix_final = prix - reduction
-  print(prix_final)
+def discriminant(a, b, c):
+  print(b ** 2 - 4 * a * c)
 
-# programme principal
-
-# demande à l'utilisateur le prix et le pourcentage de réduction
-prix = float(input("Prix en CHF: "))
-reduc = float(input("Réduction en %: "))
-
-prix_apres_reduction(prix, reduc)
+# progamme principal
+discriminant(1, 2, 1)
 ```
 
-La fonction ainsi écrite affiche le prix après réduction, mais il n'est pas
-possible d'utiliser la valeur.
+Pour afficher le nombre de solution ou les solutions de cette équation, j'ai
+besoin du résultat du discrimant. Malheureusement la fonction `print` ne permet
+pas de récupérer cette valeur.
 
 ## Fonctions avec valeur de retour
 
@@ -208,25 +333,24 @@ de sauvegarder la valeur retournée dans une variable.
 ```{exec} python
 :editor:
 # definition des fonctions
-def prix_apres_reduction(prix, reduction_pourcent):
-  reduction = prix * reduction_pourcent / 100
-  prix_final = prix - reduction
-  return prix_final
+def discriminant(a, b, c):
+  return(b ** 2 - 4 * a * c)
 
-# programme principal
-print("=== Sortie shopping ===")
+# progamme principal
 
-# demande à l'utilisateur le prix et le pourcentage de réduction
-prix_pantalon = float(input("Prix du pantalon en CHF: "))
-reduc_pantalon = float(input("Réduction du pantalon en %: "))
-prix_veste = float(input("Prix de la veste en CHF: "))
-reduc_veste = float(input("Réduction de la veste en %: "))
-
-# sauvegarde les valeurs de retour dans des variables
-prix_reduit_pantalon = prix_apres_reduction(prix_pantalon, reduc_pantalon)
-prix_reduit_veste = prix_apres_reduction(prix_veste, reduc_veste)
-print("Prix total des achats:", prix_reduit_pantalon + prix_reduit_veste, "CHF.")
+# afficher le nombre de solution
+delta = discriminant(1, 2, 1)
+if delta > 0:
+  print("L'équation a deux solutions.")
+elif delta == 0:
+  print("L'équation a une solution.")
+else:
+  print("L'équation n'a pas de solution.")
 ```
+Améliorations possibles de l'exemple:
+
+1.  Demandez les valeurs des coefficients `a`, `b` et `c` à l'utilisateur.
+2.  Affichez les solutions quand elles existent.
 
 ### Exercice {num2}`exercice`
 
@@ -415,7 +539,7 @@ print("La conversion de 512 octets en bits donne", nb_bits)
 ### Exercice {num2}`exercice`
 
 Pour les prochaines vacances, vous décidez de partir en vacances au Japon. Vous
-avez de l'argent sur un compte épargne et de l'argent que vous avez gagner en
+avez de l'argent sur un compte épargne et de l'argent que vous avez gagné en
 travaillant cet été.
 
 Écrivez un programme qui permet de convertir en YEN les montants qui sont sur un

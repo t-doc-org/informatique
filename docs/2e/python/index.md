@@ -8,13 +8,13 @@
 revisions-bases
 revisions-input
 revisions-if
-revisions-boucles
-revisions-fonctions
+revisions-boucle-while
 erreurs
-labo-microbit
+revisions-fonctions
+boucle-for
 fonctions
 fonctions-lab1
-listes-lab2
+listes-decouverte
 listes-bases
 listes-in
 listes-for

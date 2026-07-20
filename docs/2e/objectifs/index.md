@@ -5,9 +5,9 @@
 
 ```{toctree}
 :maxdepth: 1
+crypto
 python1
 python2
-crypto
-sql
 donnees-reseaux
+sql
 ```

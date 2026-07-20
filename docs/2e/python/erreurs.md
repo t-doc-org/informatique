@@ -80,10 +80,10 @@ résultat n'est pas celui attendu.
 
 ```{exec} python
 :editor:
-def affiche_somme(a, b):
-  print("La somme de", a, "et", b, "donne", a - b)
-
-affiche_somme(15, 18)
+a = int(input("Entrez un nombre:"))
+b = int(input("Entrez un nombre:"))
+somme = a - b
+print("La somme de", a, "et de", b, "est", somme)
 ```
 
 ## Exercices
@@ -97,15 +97,15 @@ Les programmes suivants contiennent tous une erreur.
 
 1.  ```{exec} python
     :editor: 70746cc6-1686-423d-8665-570905cfc918
-    def affiche_aire(longueur, largeur):
-      print(longueur * largeur)
-
-    long = 10
-    affiche_aire(long, larg)
+    :reset: show
+    longueur = float(input("Entrez la longueur du rectangle:"))
+    aire = longueur * largeur
+    print(aire)
     ```
 
 2.  ```{exec} python
     :editor: bba5d2de-9a45-4200-bdd2-802d9ac2a449
+    :reset: show
     n = 0
     while n < 10:
     print(n)
@@ -114,21 +114,28 @@ Les programmes suivants contiennent tous une erreur.
 
 3.  ```{exec} python
     :editor: dc86de5e-ba35-4f9d-ba0e-c98a0520d8d4
-    for i in range(9 / 2):
-      print(i * 5)
+    :reset: show
+    a = 12
+    b = a / 4
+    b -= 3
+    print(a)
+    print(b)
+    print(a/b)
     ```
 
 4.  ```{exec} python
     :editor: 6c00a493-81ee-4ff5-854b-d7d844238e6d
-    for i in range(2)
+    :reset: show
+    i = 0
+    while i < 4
       print(i)
+      n += 1
     ```
 
 ```{solution}
 1. Erreur d'exécution: la variable larg n'est pas définie.
 2. Erreur de syntaxe: l'indentation n'est pas correcte.
-3. Erreur d'exécution: la fonction `range(...)` attend un nombre entier comme
-   paramètre, mais 9/2 = 4.5.
+3. Erreur d'exécution: il n'est pas possible de diviser par 0.
 4. Erreur de syntaxe: il manque les :.
 ```
 
@@ -151,56 +158,4 @@ else:
 ```{solution}
 Le `elif` ne sera jamais exécuté, car si l'âge est supérieur ou égal à 65, il
 est aussi supérieur ou égal à 18. Donc la condition du `if` sera vérifiée.
-```
-
-### Exercice {num2}`exercice`
-
-Il est souvent difficile de débugger un code qui ne fonctionne pas. En s'aidant
-des messages d'erreurs affichés, corrigez le programme ci-dessous qui calcule
-l'aire et le périmètre d'un triangle isocèle et rectangle dont la base
-(hypoténuse) est connue.
-
-```{image} images/triangle_iso_rect.png
-:alt: Triangle isocèle rectangle
-:width: 50%
-:align: center
-```
-
-```{exec} python
-:editor: 36bcae3e-b90a-40b1-bac0-33bea021bc99
-from math import sqrt
-
-def affiche_aire(base, hauteur)
-  aire_triangle = base * hauteur
-  print("L'aire vaut", aire_triangle)
-
-def affiche_perimetre(cote1, cote2, cote3):
-  perimetre = cote1 + cote2 + cote3
-  print("Le périmètre vaut" perimetre)
-
-base = 500
-cathete = base / 2
-cote = sqrt(cathete**2 + cathete**2)
-aire = affiche_aire(base, hauteur)
-perimetre = affiche_perimetre(base, cote, cote)
-```
-
-```{solution}
-Erreurs de syntaxe:
-1.  Ligne 3: `SyntaxError: expected ':'` &rarr; il manque les 2 points à la fin
-    de la ligne.
-2.  Ligne 9: `SyntaxError: invalid syntax. Perhaps you forgot a comma?` &rarr;
-    il manque une virgule entre la chaîne de caractère et le variable `perimetre`.
-
-Erreur d'exécution:
-1.  Ligne 14: `NameError: name 'hauteur' is not defined` &rarr; la variable
-`hauteur` n'est pas définie, elle correspond à la variable `cathete`.
-
-Erreur de logique:
-1.  Le calcul d'aire n'est pas correct, pour un rectangle la formule est
-    $\dfrac{base \cdot hauteur}{2}$.
-
-Résultat correct:\
-L'aire vaut 62500.0\
-Le périmètre vaut 1207.1067811865476
 ```

@@ -104,78 +104,8 @@ affiche_somme(3, 7)
 
 ## Exercice {num2}`exercice-rev`
 
-Au début du code donné ci-dessous, définissez une fonction nommée `au_revoir`
-permettant simplement d'afficher le texte "À bientôt!".
+Que va afficher le programme?
 
-Le code donné doit ensuite pouvoir s'exécuter sans problème afin d'afficher
-20 fois le message d'au revoir.
-
-```{exec} python
-:editor:
-# Définissez la fonction au_revoir
-...
-
-i = 0
-while i < 20:
-  au_revoir()
-  i += 1
-```
-
-````{solution}
-```{exec} python
-:linenos:
-# Définition de la fonction au_revoir
-def au_revoir():
-  print("À bientôt!")
-
-i = 0
-while i < 20:
-  au_revoir()
-  i += 1
-```
-````
-
-## Exercice {num2}`exercice-rev`
-
-Au-dessus du code donné, définissez une fonction nommée `affiche_prix_billet`
-prenant en paramètre l'âge de l'utilisateur et affichant le prix du billet de
-cinéma en fonction de cet âge.
-
-Le prix du billet est de 10 CHF pour les moins de 12 ans, de 14 CHF pour les
-65 ans et plus et de 16 CHF pour les autres. La fonction affiche uniquement le
-prix.
-
-Le code donné doit ensuite pouvoir s'exécuter sans erreur et afficher exactement
-les prix des billets pour tous les âges de 1 à 70 ans.
-
-```{exec} python
-:editor: 64d9c4cf-247a-4879-b4a4-d9b923bee5b8
-# Définissez la fonction affiche_prix_billet
-...
-
-for a in range(1, 71):
-  affiche_prix_billet(a)
-```
-
-````{solution}
-```{exec} python
-:linenos:
-def affiche_prix_billet(age):
-  if a < 12:
-    print(10)
-  elif a >= 65:
-    print(14)
-  else:
-    print(16)
-
-for a in range(1, 71):
-  affiche_prix_billet(a)
-```
-````
-
-## Exercice {num2}`exercice-rev`
-
-Que va afficher le programme?\
 Indiquez l'ordre d'exécution des lignes.
 
 ```{exec} python

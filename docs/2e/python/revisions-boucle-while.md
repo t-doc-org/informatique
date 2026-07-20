@@ -5,47 +5,7 @@
 solutions: show
 ```
 
-# Révisions - Boucles
-
-En programmation, nous sommes souvent amenés à répéter des instructions plusieurs
-fois. Pour cela nous pouvons utiliser des boucles.
-
-## Boucle for
-
-La boucle `for` permet de répéter un bloc d'instructions un nombre de fois connu
-à l'avance.
-
-```{exec} python
-:when: never
-for _ in range(nb_repetitions):
-  instruction 1
-  instruction 2
-  ...
-```
-
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
-- # Programme
-  ```{exec} python
-  :editor:
-  for i in range(5):
-    print(i)
-  ```
-- # Ordinogramme
-  ```{figure} images/for.png
-  :alt: Ordinogramme boucle for
-  ```
-````
-
-1. Quelles valeurs prend la variable i?
-2. Changez le nombre de répétitions.
-3. Modifiez le code pour afficher les nombres de 1 à 10?
-
-En réalité, la boucle `for` fait plus que juste répéter x fois: pour
-chaque itération (passage de la boucle), la variable (ici nommée i) va prendre
-la valeur d'un élément de l'ensemble range(n), c'est-à-dire l'ensemble des
-nombres entiers de 0 à n non compris $\{0; 1; 2; ...; n-1\}$. Il est donc
-possible d'utiliser la valeur de cette variable dans la boucle.
+# Révisions - Boucle while
 
 ## Boucle while
 
@@ -79,122 +39,59 @@ while condition:
   ```
 ````
 
-## Exercice {num2}`exercice-rev`
+## Exercice {num2}`exercice`
 
-```{exec} python
-:linenos:
-:when: never
-somme = 0
-for nombre in range(6):
-  somme += nombre
-print("La somme est:", somme)
-```
-
-Quel est le résultat affiché par ce programme?
-
-````{solution}
-Vérifie ta réponse en exécutant le code.
-```{exec} python
-:linenos:
-somme = 0
-for nombre in range(6):
-  somme += nombre
-print("La somme est:", somme)
-```
-````
-
-## Exercice {num2}`exercice-rev`
-
-1. Écrivez un programme en utilisant le boucle `for` qui affiche les nombres de
+1. Écrivez un programme en utilisant la boucle `while` qui affiche les nombres de
     0 à 9.
 
 ```{exec} python
-:editor: 8adfb3dd-11d5-4a49-a90b-32187bcc8fb7
+:editor: 4256d682-b6eb-4cd6-b02d-2cdfe6c48a78
 # Écrivez le programme ici
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
-for nombre in range(10):
-  print(nombre)
+x = 0
+while x < 10:
+  print(x)
+  x += 1
 ```
 ````
 
-2. Écrivez un programme en utilisant le boucle `for` qui affiche les nombres de
+2. Écrivez un programme en utilisant la boucle `while` qui affiche les nombres de
     1 à 10.
 
 ```{exec} python
-:editor: 97b96b08-9d31-4b39-b1d8-970327cd87bc
+:editor: 47920c08-e53b-4efa-a8db-485299344105
 # Écrivez le programme ici
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
-for nombre in range(10):
-  print(nombre + 1)
-```
-
-```{exec} python
-:linenos:
-for nombre in range(1, 11):
-  print(nombre)
+x = 1
+while x <= 10:
+  print(x)
+  x += 1
 ```
 ````
 
-3. Écrivez un programme en utilisant le boucle `for` qui affiche les 12 premiers
+3. Écrivez un programme en utilisant la boucle `while` qui affiche les 12 premiers
     multiples de 5.
 
 ```{exec} python
-:editor: 88007d1d-34e3-4726-8519-9da79d46861a
+:editor: 323de3c0-6733-4c79-a58b-ab55d76a0052
 # Écrire le programme ici
 ```
 
 ````{solution}
 ```{exec} python
 :linenos:
-for nombre in range(12):
-  print((nombre + 1) * 5)
-```
-
-```{exec} python
-:linenos:
-for nombre in range(1, 13):
-  print(nombre * 5)
-```
-````
-
-## Exercice {num2}`exercice-rev`
-
-Indiquez l'ordre d'exécution des lignes et ce qu'affichera le programme.
-
-```{exec} python
-:linenos:
-:when: never
-a = 4
-b = 1
-for i in range (3):
-  a += 5
-  b *= 2
-  print("i =", i)
-print("a =", a, "b =", b)
-```
-
-````{solution}
-L'ordre d'exécution des ligne est le suivant:
-
-1-2-3-4-5-6-3-4-5-6-3-4-5-6-7
-
-```{exec} python
-:linenos:
-a = 4
-b = 1
-for i in range (3):
-  a += 5
-  b *= 2
-  print("i =", i)
-print("a =", a, "b =", b)
+x = 1
+while x <= 12:
+  print(x * 5)
+  x += 1
 ```
 ````
 

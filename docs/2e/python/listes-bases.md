@@ -256,7 +256,7 @@ controle_position([0, 200])
 
 En Python, il existe beaucoup de fonctions prédéfinies qui permettent de
 manipuler les listes. Nous en avons vu déjà rencontrées certaines dans
-[](listes-lab2.md).
+[](listes-decouverte.md).
 
 len(ma_liste)
 : retourne le nombre d'éléments de `ma_liste`

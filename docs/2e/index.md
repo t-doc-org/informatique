@@ -20,11 +20,11 @@ change chaque semaine. Pensez à vérifier l'horaire régulièrement.
 
 ```{toctree}
 :maxdepth: 1
-python/index
 crypto/index
-bases-de-donnees/index
+python/index
 donnees/index
 reseaux/index
+bases-de-donnees/index
 javascript/index
 objectifs/index
 evaluations-formatives/index
