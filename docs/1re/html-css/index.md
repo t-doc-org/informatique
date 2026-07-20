@@ -4,7 +4,6 @@
 # HTML et CSS
 
 ```{toctree}
-:maxdepth: 1
 introduction
 html
 css

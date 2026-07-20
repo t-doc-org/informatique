@@ -19,7 +19,6 @@ change chaque semaine. Pensez à vérifier l'horaire régulièrement.
 ## Thèmes
 
 ```{toctree}
-:maxdepth: 1
 python/index
 html-css/index
 representation-info/index

@@ -4,7 +4,6 @@
 # Python
 
 ```{toctree}
-:maxdepth: 1
 introduction
 algorithme
 variables

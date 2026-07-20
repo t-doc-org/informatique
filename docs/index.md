@@ -19,7 +19,6 @@ scolaire.
 ## Divers
 
 ```{toctree}
-:maxdepth: 1
 logiciels/index
 ```
 

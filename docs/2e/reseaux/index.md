@@ -4,7 +4,6 @@
 # Réseaux
 
 ```{toctree}
-:maxdepth: 1
 introduction
 reseau-local
 internet

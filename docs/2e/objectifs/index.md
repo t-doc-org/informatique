@@ -4,7 +4,6 @@
 # Objectifs
 
 ```{toctree}
-:maxdepth: 1
 crypto
 python1
 python2

@@ -4,7 +4,6 @@
 # Logiciels utilisés
 
 ```{toctree}
-:maxdepth: 1
 vscode
 python
 ```

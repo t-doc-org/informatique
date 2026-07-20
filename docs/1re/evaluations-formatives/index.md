@@ -10,7 +10,6 @@ page-break-avoid-inside: 2
 ```
 
 ```{toctree}
-:maxdepth: 1
 representation-information
 architecture-societe
 ```

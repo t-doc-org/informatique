@@ -19,7 +19,6 @@ change chaque semaine. Pensez à vérifier l'horaire régulièrement.
 ## Thèmes
 
 ```{toctree}
-:maxdepth: 1
 crypto/index
 python/index
 donnees/index

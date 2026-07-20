@@ -4,7 +4,6 @@
 # Bases de données
 
 ```{toctree}
-:maxdepth: 1
 donnees
 sql
 sql-ex1

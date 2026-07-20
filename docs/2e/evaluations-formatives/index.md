@@ -10,7 +10,6 @@ page-break-avoid-inside: 2
 ```
 
 ```{toctree}
-:maxdepth: 1
 python2
 donnees-reseaux
 ```

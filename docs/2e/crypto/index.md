@@ -4,7 +4,6 @@
 # Cryptographie
 
 ```{toctree}
-:maxdepth: 1
 introduction
 crypto-sym
 crypto-asym

@@ -4,7 +4,6 @@
 # Données
 
 ```{toctree}
-:maxdepth: 1
 erreur-detection
 erreur-correction
 stockage

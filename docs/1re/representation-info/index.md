@@ -4,7 +4,6 @@
 # Représentation de l'information
 
 ```{toctree}
-:maxdepth: 1
 introduction
 entiers-non-signes
 entiers-signes

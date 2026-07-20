@@ -4,7 +4,6 @@
 # Architecture de l'ordinateur
 
 ```{toctree}
-:maxdepth: 1
 systeme-fichiers
 von-neumann
 systeme-exploitation
