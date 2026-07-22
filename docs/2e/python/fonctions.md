@@ -3,6 +3,8 @@
 
 # Fonctions
 
+## Fonctions simples
+
 En programmation, une **fonction** est un bloc de code (suite d'instructions)
 permettant de réaliser une tâche donnée et auquel nous donnons un nom. Cela
 permet de découper un programme en plusieurs petites tâches plus faciles à
@@ -15,7 +17,7 @@ est préférable de placer toutes les définitions de fonctions au début du
 programme (après les imports et les définitions de variables globales).
 ```
 
-## Exemple {num2}`exemple`
+### Exemple {num2}`exemple`
 
 Fonction qui affiche un conseil météo:
 
@@ -174,7 +176,7 @@ Créez une fonction `compteur()`...
       ```
     ````
 
-## Exercice {num2}`exercice`
+### Exercice {num2}`exercice`
 
 Définissez un fonction `affiche_max` qui prend 2 paramètres numériques. Cette
 fonction doit comparer les deux paramètres et afficher le maximum.
@@ -208,7 +210,7 @@ affiche_max(2, 2)
 ```
 ````
 
-## Exercice {num2}`exercice`
+### Exercice {num2}`exercice`
 
 Au-dessus du code donné, définissez une fonction nommée `affiche_prix_billet`
 prenant en paramètre l'âge de l'utilisateur et affichant le prix du billet de
@@ -319,7 +321,7 @@ discriminant(1, 2, 1)
 ```
 
 Pour afficher le nombre de solution ou les solutions de cette équation, j'ai
-besoin du résultat du discrimant. Malheureusement la fonction `print` ne permet
+besoin du résultat du discriminant. Malheureusement la fonction `print` ne permet
 pas de récupérer cette valeur.
 
 ## Fonctions avec valeur de retour
@@ -332,11 +334,11 @@ de sauvegarder la valeur retournée dans une variable.
 
 ```{exec} python
 :editor:
-# definition des fonctions
+# définition des fonctions
 def discriminant(a, b, c):
   return(b ** 2 - 4 * a * c)
 
-# progamme principal
+# programme principal
 
 # afficher le nombre de solution
 delta = discriminant(1, 2, 1)
@@ -489,7 +491,7 @@ def majeur(age):
   else:
     return False
 
-# Demandez son âge à l'utiliateur
+# Demandez son âge à l'utilisateur
 age = int(input("Quel âge as-tu?"))
 
 if majeur(age):
@@ -499,299 +501,276 @@ else:
 ```
 ````
 
-### Exercice {num2}`exercice`
+(string)=
+## Les fonctions sur les chaînes de caractères
 
-1. Écrivez une fonction qui convertit des bits en octets.
-2. Écrivez une fonction qui convertit des octets en bits.
-3. Convertissez 3664000 bits en octets.
-4. Convertissez 512 octets en bits.
+En Python, il existe beaucoup de fonctions prédéfinies qui permettent de
+manipuler les chaînes de caractères. La plupart
+sont des fonctions avec valeurs de retour.
 
-```{tip}
-Un octet contient 8 bits.
-```
+`txt`: représente le texte analysé.<br>
+`s`: représente un caractère ou une chaine de caractères
 
-```{exec} python
-:editor: 6d5c5190-7949-4078-b22d-e2c84a39f4d4
-# Écrire le programme ici
-```
+len(txt)
+: retourne le nombre de caractères du texte (espaces compris)
 
-````{solution}
-```{exec} python
-:linenos:
-# Convertit des bits en octets
-def conversion_bits_octets(a):
-  return a / 8
+txt.count(s)
+: retourne le nombre de fois que `s` apparaît dans `txt`.
 
-# Convertit des bits en octets
-def conversion_octets_bits(a):
-  return a * 8
+txt.find(s)
+: retourne l'index de l'emplacement de la première apparition de `s` dans `txt`.<br>
+ Si `s` n'apparaît pas dans `txt` la fonction retourne `-1`.
 
-nb_octets = conversion_bits_octets(3664000)
-print("La conversion de 3664000 bits en octets donne", nb_octets)
+txt.replace(s, t)
+: retourne une nouvelle chaîne de caractère dans laquelle tous les `s` de `txt`
+  ont été remplacé par `t`.
 
-nb_bits = conversion_octets_bits(512)
-print("La conversion de 512 octets en bits donne", nb_bits)
+txt.lower()
+: retourne une nouvelle chaîne de caractère écrite en minuscules.
 
-```
-````
+txt.upper()
+: retourne une nouvelle chaîne de caractère écrite en majuscules.
 
 
 ### Exercice {num2}`exercice`
 
-Pour les prochaines vacances, vous décidez de partir en vacances au Japon. Vous
-avez de l'argent sur un compte épargne et de l'argent que vous avez gagné en
-travaillant cet été.
+Sans les exécuter, que vont afficher ces programmes?<br>
+Exécutez-les ensuite pour vérifier votre réponse.
 
-Écrivez un programme qui permet de convertir en YEN les montants qui sont sur un
-compte épargne et sur un compte courant afin de déterminer le montant que vous
-aurez à disposition.\
-Le taux est de 1 CHF = 174 YEN.
+1.  ```{exec} python
+    :linenos:
+    txt = "J'aime les pommes, les pommes sont mon fruit favori!"
+    n = len(txt)
+    print(n)
+    ```
+
+2.  ```{exec} python
+    :linenos:
+    txt = "J'aime les pommes, les pommes sont mon fruit favori!"
+    n = txt.count("pommes")
+    print(n)
+    ```
+
+3.  ```{exec} python
+    :linenos:
+    txt = "J'aime les pommes, les pommes sont mon fruit favori!"
+    n = txt.find("pommes")
+    m = txt.find("poires")
+    print(n)
+    print(m)
+    ```
+
+4.  ```{exec} python
+    :linenos:
+    txt = "J'aime les pommes, les pommes sont mon fruit favori!"
+    new_txt = txt.replace("pommes", "poires")
+    print(new_txt)
+    print(txt)
+    ```
+
+5.  ```{exec} python
+    :linenos:
+    txt = "J'aime les POMMES!"
+    minu = txt.lower()
+    maju = txt.upper()
+    print(minu)
+    print(maju)
+    print(txt)
+    ```
+
+### Exercice {num2}`exercice`
 
 ```{exec} python
-:editor: 5f6f63a3-ab47-43c5-9774-f50cabd75e94
-def convertit_chf_en_yen(montant_chf):
-  # à compléter
+:name: texte
+:class: hidden
+texte = "L'école moderne, c'est l'art d'enseigner le théorème de Pythagore à des ados capables de scroller sur TikTok à la vitesse de la lumière tout en ouvrant discrètement trois onglets de jeux en ligne pendant le cours d'histoire. Aujourd'hui, le stylo plume a pris sa retraite, remplacé par des tablettes où les notes de cours cohabitent joyeusement avec des mèmes et des vidéos en tendance. Les profs ne se battent plus contre les avions en papier, mais contre le correcteur automatique et les copier-coller un peu trop magiques de ChatGPT. Au fond, c'est une génération ultra-connectée et pleine de ressources, capable de faire un montage vidéo digne d'Hollywood en deux minutes sur leur téléphone, mais qui cherche encore la formule magique pour faire ses devoirs sans procrastiner."
+```
 
-compte_courant_chf = 1540
-compte_epargne_chf = 2467
+Un texte, généré par Gemini, a été sauvegardé dans la variable `texte`.
 
-# Complétez le programme
-budget_yen =
-print("Tu auras", budget_yen, "YEN.")
+1.  Affichez le texte.
+2.  Calculez et affichez le nombre de caractères de ce texte.
+3.  Calculez et affichez la fréquence de la lettre "e", de la lettre "a", de la
+    lettre "d" et de la lettre "x".<br>
+    Les valeurs correspondent-elles à celles attendues
+    (voir [](../crypto/frequences.md))? Pourquoi?
+4.  Définissez une fonction qui teste si le texte contient une certaine lettre
+    et affiche:
+
+      - "Oui, ce texte contient la lettre ..."
+      - "Non, ce texte ne contient pas la lettre ..."
+
+    La fonction prend deux paramètres: la lettre à tester et le texte.<br>
+    Testez la fonction avec les lettres "y" et "z".
+
+```{exec} python
+:after: texte
+:editor: e43729d7-c4e9-491d-8874-9c7e21038966
 ```
 
 ````{solution}
 ```{exec} python
-:linenos:
-# Compléter la fonction
-def convertit_chf_en_yen(montant_chf):
-  taux_conversion = 174
-  return montant_chf * taux_conversion
+:after: texte
+# 1
+print(texte)
+# 2
+total = len(texte)
+print(total)
+# 3
+n = texte.count("e")
+print(n/total)
+n = texte.count("a")
+print(n/total)
+n = texte.count("d")
+print(n/total)
+n = texte.count("x")
+print(n/total)
+# 4
+def contenu(lettre, texte):
+  if texte.find(lettre) != -1:
+    print("Oui, ce texte contient la lettre", lettre)
+  else:
+    print("Non, ce texte ne contient pas la lettre", lettre)
+contenu("y", texte)
+contenu("z", texte)
+```
 
+Les valeurs pour le "d" et le "x" sont proches, mais pas pour le "e" et le "a".
 
-compte_courant_chf = 1540
-compte_epargne_chf = 2467
+Les fréquences d'apparition des lettres en français des
+[](../crypto/frequences.md) ne tiennent pas compte des différences entre une
+lettre majuscule ou minuscule, ni celles des lettres accentuées. Pour faire une
+analyse de fréquence, il faudrait tout d'abord modifier le texte (supprimer les
+majuscules, les accents, ...).
+````
 
-budget_yen = convertit_chf_en_yen(1540) + convertit_chf_en_yen(2467)
-print("Tu auras", budget_yen, "YEN.")
+### Exercice {num2}`exercice`
+
+Définissez une fonction qui modifie une phrase en son équivalent en **leet
+speak**. La fonction prend le texte à modifier en paramètre et retourne la
+phrase modifiée.
+
+Testez avec d'autres phrases.
+
+```{Admonition} Le saviez-vous?
+:class: attention, dropdown
+Le **leet speak** (ou « 1337 5p34k ») est un système d'écriture informel né dans
+les années 1980. Créé à l'origine pour tromper les filtres automatiques et
+sécuriser les mots de passe, le leet speak est devenu aujourd'hui un pilier
+incontournable de la culture geek et de l'argot des jeux vidéo.
+
+Il consiste à remplacer certaines lettres par des chiffres ou des caractères
+spéciaux qui leur ressemblent visuellement.
+
+{.columns-4}
+- A → 4
+- E → 3
+- G → 6
+- I / L → 1
+- O → 0
+- S → 5
+- T → 7
+- B → 8
+```
+
+```{exec} python
+:editor: fa658599-28d3-44bd-a377-8d4526435362
+phrase = "Mon devoir est corrompu par un virus :-/"
+```
+
+````{solution}
+```{exec} python
+:editor:
+phrase = "Mon devoir est corrompu par un virus :-/"
+def leet_speak(texte):
+  txt = texte.upper()
+  txt = txt.replace("A", "4")
+  txt = txt.replace("E", "3")
+  txt = txt.replace("G", "6")
+  txt = txt.replace("I", "1")
+  txt = txt.replace("L", "1")
+  txt = txt.replace("O", "0")
+  txt = txt.replace("S", "5")
+  txt = txt.replace("T", "7")
+  txt = txt.replace("B", "8")
+  return txt
+
+print(phrase ,"devient:", leet_speak(phrase))
 ```
 ````
 
 ### Exercice {num2}`exercice`
 
-Écrivez une fonction qui prend en paramètre un code de réduction et retourne le
-pourcentage de rabais donné par ce code de réduction. Le code déjà donné utilise
-cette fonction pour calculer le prix final d'un article après y avoir appliqué
-la réduction. Les réductions sont les suivantes :
-- 20% (0.2) pour le code SUN
-- 35% (0.35) pour le code STX
-- 50% (0.5) pour le code MAX
-- 0% (0) pour les autres codes
+Python peut être utilisé pour chiffrer ou déchiffrer un message utilisant le
+[chiffre de César](#cesar), notamment en utilisant les deux fonctions
+ci-dessous.
+
+ord(c)
+: retourne la valeur Unicode du caractère `c` passé en paramètre
+
+chr(u)
+: retourne le caractère qui correspond à la valeur Unicode `u` passée en
+  paramètre
+
+Les textes à chiffrer et déchiffrer ne contiendront que des lettres majuscules
+ou minuscules. Les caractères spéciaux ne seront pas chiffrés (ni déchiffrés),
+il seront simplement retranscrit.
+
+Exemple: **La crypto est sympa!** $\implies$**OD FUBSWR HVW VBPSD!**
+
+```{admonition} Rappel - Unicode
+:class: tip, dropdown
+Le Unicode est une norme internationale qui attribue à chaque caractère une
+valeur unique. Pour les caractères présents dans la table ASCII (lettres sans
+accents, chiffres et caractères spéciaux standards), la valeur Unicode
+correspond à sa valeur ASCII
+(voir [Représentation des caractères](/1re/representation-info/caracteres.md)).
+
+```
+
+Voici les principales étapes:
+
+1.  Écrivez le message en majuscules.
+2.  Créez une variable `code` pour le message codé.
+3.  Parcourez le message un caractère après l'autre en utilisant une boule
+    `for`:
+    ```{code} text
+    for c in text:
+      ...
+    ```
+4.  Si le caractère est une lettre:
+    - Récupérez l'index du caractère et lui appliquez le décalage de 3 lettres.
+    - Ajoutez le nouveau caractère au `code`.
+5.  Sinon, copiez le caractère dans le `code`.
+6.  Affichez le message codé.
+7.  Modifiez le code pour définir une fonction `chiffre(message)` qui chiffre un
+    message au moyen du Chiffre de César. Cette fonction retourne le message
+    codé.
+8.  Définissez une fonction `dechiffre(code)` qui déchiffre un message codé au
+    moyen du Chiffre de César. Cette fonction retourne le message décodé.
+9.  Modifiez les deux fonctions `chiffre` et `dechiffre` pour pouvoir chiffrer
+    et déchiffrer des messages avec un décalage quelconque.
+
 
 ```{exec} python
-:editor: 4cb99c2b-2ac8-4cf6-9263-4a21bb0e8c8a
-def calcule_reduction(code):
- # à compléter
-
-# ne pas modifier le code ci-dessous
-prix = float(input("Quel est le prix de l'article? "))
-code_reduc = input("Quel est le code de réduction? ")
-
-reduction = calcule_reduction(code_reduc)
-prix_final = prix * (1 - reduction)
-print("Le prix final est de", prix_final, "CHF.")
+:editor: 94610dec-64eb-4084-9acd-8e4e7426aa41
+message = "Codez ce message!"
 ```
 
 ````{solution}
 ```{exec} python
-:linenos:
-def calcule_reduction(code):
-  if code == "SUN":
-    return 0.2
-  elif code == "STX":
-    return 0.35
-  elif code == "MAX":
-    return 0.5
+:editor:
+message = "Codez ce message!"
+msg = message.upper()
+code = ""
+for c in msg:
+  index = ord(c) - ord("A")
+  if 0 <= index < 26:
+    index = (index + 3) % 26
+    code += chr(ord("A") + index)
   else:
-    return 0
-
-prix = float(input("Quel est le prix de l'article? "))
-code_reduc = input("Quel est le code de réduction? ")
-
-reduction = calcule_reduction(code_reduc)
-prix_final = prix * (1 - reduction)
-print("Le prix final est de", prix_final, "CHF.")
+    code += c
+print(code)
 ```
 ````
-
-### Exercice {num2}`exercice`
-
-Pour calculer le prix de l'amende à payer en cas de dépassement de vitesse,
-consultez le document suivant: [Liste sanctions](sanctions-vitesse.pdf)
-
-
-Écrivez une fonction qui retourne le prix de l'amende à payer en fonction de la
-vitesse autorisée et la vitesse mesurée par le radar. Traitez seulement le cas
-où le dépassement de vitesse a lieu sur l'autoroute et n'excède pas 25 km/h.
-
-```{exec} python
-:editor: 263a83cb-f587-44f0-bf7d-e5784f778e3f
-def amende(vit_autorisee, vit_mesuree):
-  # à compléter
-
-# ne pas modifier le code ci-dessous
-print(amende(120,140))
-print(amende(120,145))
-print(amende(120,120))
-```
-
-````{solution}
-```{exec} python
-:linenos:
-def amende(vit_autorisee, vit_mesuree):
-  depassement = vit_mesuree - vit_autorisee
-  if depassement <= 0:
-    return 0
-  elif depassement <= 5:
-    return 20
-  elif depassement <= 10:
-    return 60
-  elif depassement <= 15:
-    return 120
-  elif depassement <= 20:
-    return 180
-  elif depassement <= 25:
-    return 260
-  else:
-    print("La sanction sera plus qu'une amende.")
-    return -100
-
-print(amende(120,140))
-print(amende(120,145))
-print(amende(120,120))
-print(amende(120, 180))
-```
-````
-
-````{tip}
-Pour faciliter la compréhension de code, il est courant de créer des fonctions
-qui testent une certaine condition. Par exemple, la fonction `est_pair(n)`
-retourne `True` si la nombre est pair et `False` sinon.
-
-```{exec} python
-:linenos:
-def est_pair(nombre):
-  if nombre % 2 == 0:
-    return True
-  else:
-    return False
-
-print(est_pair(107))
-```
-````
-
-### Exercice {num2}`exercice`
-
-Écrivez un programme qui demande à l'utilisateur un nombre entier strictement
-positif et affiche tous ses diviseurs. Ce programme doit:
-1. contenir un procédé qui vérifie que la réponse de l'utilisateur est bien un
-nombre strictement positif. Si ce n'est pas le cas, lui demander un autre
-nombre.
-2. contenir une fonction `est_diviseur()` qui teste si un nombre est diviseur
-d'un autre nombre.
-3. contenir une fonction `est_premier()` qui teste si un nombre est premier.
-
-```{exec} python
-:editor: 91faf472-2b3d-4729-bc95-ce1c8c0d00a7
-def est_diviseur(nombre, diviseur):
-  # à compléter
-
-def est_premier(nb_diviseurs):
-  # à compléter
-
-n = int(input("Choisir un nombre entier strictement positif:"))
-
-# Complétez le programme
-```
-
-````{solution}
-```{exec} python
-:linenos:
-def est_diviseur(nombre, diviseur):
-  if nombre % diviseur == 0:
-    return True
-  else:
-    return False
-
-def est_premier(nb_diviseurs):
-  if nb_diviseurs == 2:
-    return True
-  else:
-    return False
-
-n = int(input("Choisir un nombre entier strictement positif:"))
-while n <= 0:
-  n = int(input("Le nombre doit être stritement positif!"
-        "Choisir un nombre entier strictement positif:"))
-
-nb_diviseurs = 0
-
-for i in range(1, n + 1):
-  if est_diviseur(n, i):
-    print(i, "est diviseur de", n)
-    nb_diviseurs += 1
-
-if est_premier(nb_diviseurs):
-  print(n, "est un nombre premier.")
-else:
-  print(n, "n'est pas un nombre premier.")
-
-```
-````
-
-```{important}
-L'ordre des paramètres lors de l'appel de la fonction doit être le même que lors
-de la définition de la fonction.
-```
-
-### Exercice {num2}`exercice`
-
-La suite de Syracuse est une suite d'entiers naturels définie de la manière
-suivante:
-- si le nombre est pair, diviser par 2,
-- sinon multiplier par 3 et ajouter 1.
-
-Cette suite à la particularité de toujours se terminer par 4, 2, 1.
-
-Écrivez un programme qui demande à l'utilisateur de choisir un nombre et affiche
-la suite de Syracus (jusqu'à ce que la suite arrive à 1).
-
-```{exec} python
-:editor: bce7f53a-426f-4c3f-b967-c2e41783d2ff
-def syracuse(n):
-  # à compléter
-
-n = int(input("Choisir un nombre entier plus grand que 0."))
-
-# Complétez le programme
-
-```
-
-````{solution}
-```{exec} python
-:linenos:
-def syracuse(n):
-  if n % 2 == 0:
-    return n // 2
-  else:
-    return 3 * n + 1
-
-n = int(input("Choisir un nombre entier plus grand que 0."))
-
-while n != 1:
-  n = syracuse(n)
-  print(n)
-```
-````
-
 

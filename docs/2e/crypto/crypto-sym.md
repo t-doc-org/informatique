@@ -98,6 +98,7 @@ L C Y T G A H E Y E R Q E S F C L A E H F R R
 Dans une **substitution monoalphabétique**, aussi appelée substitution simple,
 chaque lettre est remplacée par un autre symbole, toujours le même.
 
+(cesar)=
 ### Chiffre de César
 
 Ce procédé, déjà utilisé dans l'Antiquité, était connu des Romains. Jules César,

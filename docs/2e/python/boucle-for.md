@@ -8,7 +8,9 @@ solutions: show
 # Boucle for
 
 La boucle `for` permet de répéter un bloc d'instructions un nombre de fois connu
-à l'avance.
+à l'avance. Mais elle permet de faire des choses beaucoup plus intéressantes,
+tel que parcourir une [chaîne de caractères](#string) ou une
+[liste](listes-for.md) un élément après l'autre.
 
 ```{exec} python
 :when: never

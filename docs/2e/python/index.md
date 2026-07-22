@@ -12,6 +12,7 @@ erreurs
 revisions-fonctions
 boucle-for
 fonctions
+fonctions-exo-supp
 fonctions-lab1
 listes-decouverte
 listes-bases
