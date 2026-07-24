@@ -12,11 +12,10 @@ facilement accessibles, gérées et mises à jour par ses utilisateurs. Par exem
 dans une entreprise, toutes les données relatives aux clients sont stockées dans
 une base de données.
 
-## Tableur[^sn1]
+## Tableur
 
-Une approche simple serait d'utiliser un tableur pour stocker les informations.
-[^sn1]: Logiciel pour la création et la manipulation de tableaux, par exemple
-Excel.
+Une approche simple serait d'utiliser un tableur (logiciel pour la création et
+la manipulation de tableaux, par exemple Excel) pour stocker les informations.
 
 Voici un exemple de tableau qui représente les achats effectués par des clients.
 Les informations concernant le client sont son nom, son prénom et son adresse et

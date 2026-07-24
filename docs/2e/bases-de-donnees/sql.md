@@ -4,10 +4,9 @@
 # Langage SQL - Notions de base
 
 Une **base de données** est un ensemble structuré d'informations représentées
-par des tables et des relations entre ces tables. **SQL**[^sn1] est un langage
-qui permet de créer des bases de données et/ou de récupérer les données
-répondant à des critères particuliers.
-[^sn1]: Structured Query Language (langage de requête structuré)
+par des tables et des relations entre ces tables. **SQL** (Structured Query
+Language) est un langage de requête structuré qui permet de créer des bases de
+données et/ou de récupérer les données répondant à des critères particuliers.
 
 ## Création de tables
 

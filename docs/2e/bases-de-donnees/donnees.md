@@ -92,8 +92,8 @@ Pour enregistrer le contenu d'une table de données, il faut pouvoir sauvegarder
 sa structure et son contenu. Il existe différents types de fichiers texte qui
 permettent cela, notamment les formats **CSV**, **XML** et **JSON**.
 
-**CSV**[^sn1] est l'abréviation pour valeurs séparées par des virgules.
-[^sn1]: Comma Separated Values
+**CSV** (Comma Separated Values) est l'abréviation pour valeurs séparées par des
+virgules.
 
 Chaque ligne du fichier CSV correspond à une ligne de la table. La première
 ligne du fichier énumère le nom des colonnes. Chaque ligne suivante du fichier
@@ -108,9 +108,8 @@ Müller, Max, 29.02.2008, 2F7
 Perroud, Marie, 01.11.2007, 2F8
 ```
 
-**XML**[^sn2] est un langage de description de données appartenant à la même
-famille que le HTML.
-[^sn2]: Extensible Markup Language
+**XML** (Extensible Markup Language) est un langage de description de données
+appartenant à la même famille que le HTML.
 
 La structure est définie par des balises dont les noms peuvent être librement
 choisis.
@@ -146,9 +145,8 @@ choisis.
 <eleves>
 ```
 
-**JSON**[^sn3] utilise la même syntaxe que le langage de programmation
-JavaScript.
-[^sn3]: JavaScript Object Notation
+**JSON** (JavaScript Object Notation) utilise la même syntaxe que le langage de
+programmation JavaScript.
 
 ```{code-block} javascript
 :caption: eleves.json
