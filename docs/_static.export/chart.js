@@ -37,7 +37,8 @@ render.vennOperations = async (el, {labels, areas, options}) => {
     }
     colors.push(color);
   }
-  const config = {
+  const venn = await render.venn;
+  return await venn(el, [{
     data: {
       labels,
       datasets: [{data: new Array(2 ** labels.length - 1).fill({})}],
@@ -45,6 +46,7 @@ render.vennOperations = async (el, {labels, areas, options}) => {
     options: {
       borderWidth: 1, borderColor: '#888',
       backgroundColor: colors.slice(1),
+      layout: {padding: 30},
       hover: {mode: ''},
       scales: {
         x: {ticks: {font: {size: 12}}},
@@ -56,8 +58,5 @@ render.vennOperations = async (el, {labels, areas, options}) => {
         legend: {display: false},
       },
     },
-
-  };
-  const venn = await render.venn;
-  return await venn(el, config);
+  }, {options}]);
 };
