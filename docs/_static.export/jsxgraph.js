@@ -1,5 +1,5 @@
-/* Copyright 2026 Caroline Blank <caro@c-space.org> */
-/* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+// Copyright 2026 Caroline Blank <caro@c-space.org>
+// SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 export const {
     attrs, gcd, initBoard, JXG, merge, render, withAxesLabels,
