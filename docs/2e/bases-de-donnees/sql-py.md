@@ -6,7 +6,6 @@ exec:
   python:
     files:
       music.sql:
-    packages: [sqlite3]
 ```
 
 % À modifier
