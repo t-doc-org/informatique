@@ -54,3 +54,11 @@ attrs.print = [attrs.nonInteractive, {
     },
   },
 }];
+
+// TODO(0.88): Import from tdoc/jsxgraph.js
+export function clip(value, {max, min}) {
+  if (value > max) return NaN;
+  if (min === undefined) min = -max;
+  if (value < min) return NaN;
+  return value;
+}
