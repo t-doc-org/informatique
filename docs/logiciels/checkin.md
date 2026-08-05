@@ -82,7 +82,7 @@ applications de votre compte privé**.
 2.  Cliquez sur "Installez apps" en haut à droite et sélectionnez
     "Microsoft 365 apps".
 3.  Cliquez sur "Installer Office". Vérifiez que la langue est correcte.
-4.  Patientez.
+4.  Patientez, car vous êtes nombreux à essayer de télécharger en même temps...
     ```{figure} images/patienter.png
     :width: 40%
     ```
@@ -112,12 +112,20 @@ Avez-vous installé Teams?
 
 ## {nump}`section`. Installation de Safe Exam Browser
 
-1.  Allez sur [https://safeexambrowser.org/download_en.html](https://safeexambrowser.org/download_en.html)
-2.  Choisissez la version qui correspond à votre ordinateur (Windows ou MacOS).
-3.  Sauvegardez le fichier.
-4.  Cliquez sur l'installateur.
+Version Windows:
 
-Si vous êtes sur MacOS, vous pouvez aussi installer l'[application examen.net](https://apps.apple.com/fr/app/exam-net/id1496582158?platform=mac)
+1.  Téléchargez Safe Exam Browser avec le lien suivant:
+    [SEB pour Windows](https://eduetatfr-my.sharepoint.com/:u:/g/personal/caroline_blank_edufr_ch/IQB0dbWwin6hQZpRTQUXUXwyAa134O3kCpeoO1I966hdAkE?e=bNlJbc)
+2.  Cliquez sur le fichier `SEB_3.10.2.920_SetupBundle.exe` et suivez les
+    instructions de l'installateur.
+3.  Vérifiez que Safe Exam Browser se trouve dans vos applications.
+
+Version Mac:
+
+1.  Téléchargez Safe Exam Browser avec le lien suivant:
+     [SEB pour mac](https://eduetatfr-my.sharepoint.com/:u:/g/personal/caroline_blank_edufr_ch/IQBB-bHJPthCTJbhcOlIt8v9ATszEGBPZfYQudN_ihZXubc?e=zeCpaj)
+2.  Glissez le fichier `SafeExamBrowser-3.7.dmg` dans le dossier `Applications`.
+3.  Vérifiez que Safe Exam Browser se trouve dans vos applications.
 
 ```{poll} 044a2472-a206-4a6d-add5-99c11eb8c978
 :number: none
@@ -126,6 +134,26 @@ Avez-vous installé Safe Exam Browser?
 - oui (passez à la suite)
 - non (informez l'enseignant.e)
 ```
+
+## {nump}`section`. Connexion à OneDrive
+
+1.  Vérifiez que que votre OneDrive `EDUETATFR` est bien connecté et
+    synchronisé.
+    ```{figure} images/onedrive.png
+    :width: 40%
+    ```
+    - Si vous n'êtes pas connecté, connectez-vous.
+    - Si le compte `EDUETATFR` n'apparaît pas, allez dans les `paramètres/compte`
+        et ajoutez un compte.
+
+```{poll} 2196a474-977f-460a-8430-e0cf067af253
+:number: none
+Votre OneDrive `EDUETATFR` est-il connecté et synchronisé?
+
+- oui (passez à la suite)
+- non (informez l'enseignant.e)
+```
+
 
 ## {nump}`section`. Installation de Teams et Outlook sur votre smartephone (optionnel)
 

@@ -4,7 +4,6 @@
 # Logiciels utilisés
 
 ```{toctree}
-checkin
 vscode
 python
 ```

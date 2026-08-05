@@ -19,6 +19,7 @@ scolaire.
 ## Divers
 
 ```{toctree}
+logiciels/checkin
 logiciels/index
 ```
 
