@@ -19,10 +19,10 @@ change chaque semaine. Pensez à vérifier l'horaire régulièrement.
 ## Thèmes
 
 ```{toctree}
-python/index
-html-css/index
-representation-info/index
 architecture/index
+html-css/index
+python/index
+representation-info/index
 numerique-et-societe/index
 microbit/index
 objectifs/index
