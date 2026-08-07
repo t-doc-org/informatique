@@ -126,6 +126,7 @@ Version Mac:
      [SEB pour mac](https://eduetatfr-my.sharepoint.com/:u:/g/personal/caroline_blank_edufr_ch/IQBB-bHJPthCTJbhcOlIt8v9ATszEGBPZfYQudN_ihZXubc?e=zeCpaj)
 2.  Glissez le fichier `SafeExamBrowser-3.7.dmg` dans le dossier `Applications`.
 3.  Vérifiez que Safe Exam Browser se trouve dans vos applications.
+4.  Installez aussi l'[application Exam.net](https://apps.apple.com/fr/app/exam-net/id1496582158?platform=mac)  depuis le store Apple.
 
 ```{poll} 044a2472-a206-4a6d-add5-99c11eb8c978
 :number: none
