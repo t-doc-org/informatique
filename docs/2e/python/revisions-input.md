@@ -1,10 +1,6 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: show
-```
-
 # Révisions - Entrée/Sortie
 
 ## Sortie
@@ -39,13 +35,16 @@ jusqu'à ce que l'utilisateur saisisse une réponse et appuye sur {kbd}`Enter`.
 
 ## Exercice {num2}`exercice-rev`
 
-Complétez ce programme permettant de calculer l'aire d'un rectangle.
+Complétez ce programme permettant de calculer l'aire et le périmètre d'un
+rectangle. Testez le code avec les valeurs `3.4` et `6.1`. Dans ce cas, le
+programme devrait afficher `L'aire vaut 20.74 cm^2 et le périmètre vaut 19.0 cm.`
 
 ```{code-block} text
 Demander à l'utilisateur la largeur.
 Demander à l'utilisateur la longueur.
-Calculer l'aire.
-Afficher l'aire.
+Calculer l'aire et stocker la valeur dans la variable aire.
+Calculer le périmètre et stocker la valeur dans la variable perimetre.
+Afficher l'aire et le perimetre.
 ```
 
 ```{exec} python
@@ -54,10 +53,11 @@ Afficher l'aire.
 largeur = input(...)
 longueur = input(...)
 aire =
-print("L'aire vaut")
+perimetre =
+print("L'aire vaut", "cm^2 et le périmètre vaut", "cm.")
 ```
 
-Testez le code avec les valeurs 3.6 et 6.4.
+
 
 ````{solution}
 ```{exec} python
@@ -69,8 +69,11 @@ longueur = float(input("Quelle est la longueur du rectangle"))
 # Calcul de l'aire
 aire = largeur * longueur
 
+# Calcul du périmètre
+perimetre = 2 * (largeur + longueur)
+
 # Affichage de la réponse
-print("L'aire vaut", aire)
+print("L'aire vaut", aire, "cm^2 et le périmètre vaut", perimetre, "cm.")
 ```
 ````
 

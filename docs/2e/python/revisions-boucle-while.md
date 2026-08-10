@@ -1,10 +1,6 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: show
-```
-
 # Révisions - Boucle while
 
 ## Boucle while
@@ -38,6 +34,247 @@ while condition:
   :align: center
   ```
 ````
+
+## Exercice {num2}`exercice`
+
+Cochez la bonne réponse.
+
+```{defaults} quiz-check
+:randomize:
+:class: columns-4
+```
+
+{.lower-alpha-paren}
+1.  `````{quiz}
+    Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog3.1
+    :when: never
+    :linenos:
+    x = 0
+    while x < 4:
+      print(x)
+      x += 1
+    ```
+
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog3.1
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x < 4:
+        print(x)
+        x += 1
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 0
+      while x <= 4:
+        print(x)
+        x += 1
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x <= 4:
+        print(x)
+        x += 1
+      ```
+    ````
+    `````
+2.  `````{quiz}
+    Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog3.2
+    :when: never
+    :linenos:
+    x = 0
+    while x < 4:
+      x += 1
+      print(x)
+    ```
+
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog3.2
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x < 4:
+        x += 1
+        print(x)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 0
+      while x <= 4:
+        x += 1
+        print(x)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x <= 4:
+        x += 1
+        print(x)
+      ```
+    ````
+    `````
+3.  `````{quiz}
+    Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog3.3
+    :when: never
+    :linenos:
+    x = 0
+    while x <= 6:
+      print(x)
+      x += 2
+    ```
+
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog3.3
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x < 6:
+        print(x)
+        x += 2
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 0
+      while x < 6:
+        print(x)
+        x += 1
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x <= 6:
+        print(x)
+        x += 2
+      ```
+    ````
+    `````
+4.  `````{quiz}
+    Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog3.4
+    :when: never
+    :linenos:
+    x = 1
+    while x < 6:
+      x += 3
+      print(x)
+    ```
+
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog3.4
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 0
+      while x < 6:
+        x += 3
+        print(x)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 0
+      while x <= 6:
+        x += 3
+        print(x)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x <= 6:
+        x += 3
+        print(x)
+      ```
+    ````
+    `````
+5.  `````{quiz}
+    Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog3.5
+    :when: never
+    :linenos:
+    x = 10
+    while x >= 4:
+      x -= 2
+      print(x)
+    ```
+
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog3.5
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 10
+      while x > 4:
+        x -= 1
+        print(x)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 10
+      while x > 4:
+        x -= 2
+        print(x)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 11
+      while x >= 4:
+        x -= 2
+        print(x)
+      ```
+    ````
+    `````
 
 ## Exercice {num2}`exercice`
 
@@ -77,7 +314,25 @@ while x <= 10:
 ```
 ````
 
-3. Écrivez un programme en utilisant la boucle `while` qui affiche les 12 premiers
+5. Écrivez un programme en utilisant la boucle `while` qui affiche les nombres
+    de 1 à 20 en comptant de 4 en 4.
+
+```{exec} python
+:editor: 5f9fccff-539a-4224-940a-79a66f0dded4
+# Écrivez le programme ici
+```
+
+````{solution}
+```{exec} python
+:linenos:
+x = 1
+while x <= 20:
+  print(x)
+  x += 4
+```
+````
+
+4. Écrivez un programme en utilisant la boucle `while` qui affiche les 12 premiers
     multiples de 5.
 
 ```{exec} python
@@ -94,6 +349,290 @@ while x <= 12:
   x += 1
 ```
 ````
+
+````{tip}
+Il est possible de répétez les caractères en utilisant `*`.
+
+```{exec} python
+:editor:
+print("@" * 6)  # répète 6 fois le caractère @
+```
+````
+
+
+## Exercice {num2}`exercice`
+
+Cochez la bonne réponse.
+
+```{defaults} quiz-check
+:randomize:
+:class: columns-4
+```
+
+{.lower-alpha-paren}
+1.  `````{quiz}
+    Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog4.1
+    :when: never
+    :linenos:
+    x = 1
+    while x < 6:
+      print("^" * x)
+      x += 1
+    ```
+
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog4.1
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x < 5:
+        print("^" * x)
+        x += 1
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x < 6:
+        print("x" * x)
+        x += 1
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x < 5:
+        print("x" * x)
+        x += 1
+      ```
+    ````
+    `````
+2.  `````{quiz}
+    Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog4.4
+    :when: never
+    :linenos:
+    x = 1
+    n = 5
+    while x <= 4:
+      print(" _ " * n)
+      print("|_|" * n)
+      x += 1
+    ```
+
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog4.4
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      n = 4
+      while x <= 5:
+        print(" _ " * n)
+        print("|_|" * n)
+        x += 1
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      n = 5
+      while x <= 4:
+        print("|_|" * n)
+        print(" _ " * n)
+        x += 1
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      n = 4
+      while x <= 5:
+        print("|_|" * n)
+        print(" _ " * n)
+        x += 1
+      ```
+    ````
+    `````
+
+3.  `````{quiz}
+    Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog4.2
+    :when: never
+    :linenos:
+    x = 1
+    while x <= 4:
+      print(" " * (4-x) + "^" * x)
+      x += 1
+    ```
+
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog4.2
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x <= 8:
+        print(" " * x + "^" * x)
+        x += 2
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      n = 4
+      while x <= 9:
+        print(" " * n + "^" * x)
+        x += 2
+        n -= 1
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x <= 4:
+        print("^" * x)
+        x += 1
+      ```
+    ````
+    `````
+4.  `````{quiz}
+    Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog4.3
+    :when: never
+    :linenos:
+    x = 1
+    n = 4
+    while x <= 9:
+      print(" " * n + "^" * x)
+      x += 2
+      n -= 1
+      print(" " * 3 + "|" * 2)
+    ```
+
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog4.3
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      n = 4
+      while x <= 9:
+        print(" " * n + "^" * x)
+        x += 2
+        n -= 1
+      print(" " * 3 + "| |")
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      n = 4
+      while x <= 9:
+        print(" " * n + "^" * x)
+        x += 2
+        n -= 1
+      print("|" * 2)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 1
+      while x <= 4:
+        print("^" * x)
+        x += 1
+        print("|" * 2)
+      ```
+    ````
+    `````
+    ```{defaults} quiz-check
+    :randomize:
+    :class: columns-2
+    ```
+5.  `````{quiz}
+    Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog4.5
+    :when: never
+    :linenos:
+    x = 4
+    print("~" * 24)
+    while x > 1:
+      x -= 1
+      print("<°)))>< " * x)
+    print("~" * 24)
+    ```
+
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog4.5
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 4
+      while x > 1:
+        print("<°)))>< " * x)
+        print("~" * 24)
+        x -= 1
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 4
+      while x > 1:
+        print("~" * 24)
+        print("<°)))>< " * x)
+        x -= 1
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      x = 4
+      while x > 1:
+        x -= 1
+        print("~" * 24)
+        print("<°)))>< " * x)
+      ```
+    ````
+    `````
+
+
+
 
 ## Exercice {num2}`exercice-rev`
 

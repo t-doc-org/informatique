@@ -1,10 +1,6 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-```{metadata}
-solutions: show
-```
-
 # Révisions - Instructions conditionnelles
 
 Une instruction conditionnelle est composée d'une **condition** puis d'un
@@ -21,6 +17,151 @@ Les opérateurs logiques permettent de combiner plusieurs conditions simples
 | and       | retourne True si les deux conditions sont vraies |
 | or        | retourne True si au moins une des conditions est vraie    |
 | not       | inverse le résultat, renvoie True si le résultat est faux et vice-versa |
+
+## Exercice {num2}`exercice-rev`
+
+Est-ce que les conditions suivantes sont `True` (vrai) ou `False` (faux)?
+
+```{role} select(quiz-select)
+:right:
+:options: |
+: True
+: False
+```
+
+```{quiz}
+:style: max-width: 25rem;
+1.  {select}`True`  `1 + 1 == 2`
+2.  {select}`False` `2 * 3 == 3`
+3.  {select}`True`  `2 + 3 != 4`
+4.  {select}`False` `14 >= 15`
+5.  {select}`False` `2 ** 3 == 6`
+6.  {select}`True`  `13 >= 13`
+```
+
+## Exercice {num2}`exercice-rev`
+
+Est-ce que les conditions suivantes sont `True` (vrai) ou `False` (faux),
+sachant que la variable `pays` contient la valeur `"Suisse"` et la variable
+`temperature` la valeur `26.2`.
+
+```{role} select(quiz-select)
+:right:
+:options: |
+: True
+: False
+```
+
+```{quiz}
+:style: max-width: 25rem;
+1.  {select}`True`  `pays == "Suisse"`
+2.  {select}`True` `pays != "France"`
+3.  {select}`True`  `temperature > 20`
+4.  {select}`False` `temperature < 26.2`
+5.  {select}`False` `temperature < 26`
+6.  {select}`False`  `temperature != 26.2`
+```
+
+## Exercice {num2}`exercice-rev`
+
+Que vont afficher chacun de ces programmes?
+
+```{role} input(quiz-input)
+:check: json remove
+```
+
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Programme 1
+  ```{exec} python
+  :name: prog2.1
+  :when: never
+  :linenos:
+  a = 22
+  b = 5
+  c = 1
+  print((a > b) and (b <= c))
+  ```
+  ```{quiz}
+  Que va afficher ce programme?
+
+  {input}`{"False": true}`
+  ```
+- # Programme 2
+  ```{exec} python
+  :name: prog2.2
+  :when: never
+  :linenos:
+  a = 11
+  b = 3
+  c = 0
+  print((a < b) or (c == 0))
+  ```
+  ```{quiz}
+  Que va afficher ce programme?
+
+  {input}`{"True": true}`
+  ```
+- # Programme 3
+  ```{exec} python
+  :name: prog2.3
+  :when: never
+  :linenos:
+  a = 11
+  b = 3
+  c = 0
+  print((a < b) or (c != 0))
+  ```
+  ```{quiz}
+  Que va afficher ce programme?
+
+  {input}`{"False": true}`
+  ```
+- # Programme 4
+  ```{exec} python
+  :name: prog2.4
+  :when: never
+  :linenos:
+  a = 1.5
+  b = 3.2
+  print(not(a <= b))
+  ```
+  ```{quiz}
+  Que va afficher ce programme?
+
+  {input}`{"False": true}`
+  ```
+````
+
+`````{solution}
+````{list-grid}
+:style: grid-template-columns: 1fr 1fr;
+- # Programme 1
+  ```{exec} python
+  :after: prog2.1
+  :when: load
+  :class: hidden
+  ```
+- # Programme 2
+  ```{exec} python
+  :after: prog2.2
+  :when: load
+  :class: hidden
+  ```
+- # Programme 3
+  ```{exec} python
+  :after: prog2.3
+  :when: load
+  :class: hidden
+  ```
+- # Programme 4
+  ```{exec} python
+  :after: prog2.4
+  :when: load
+  :class: hidden
+  ```
+````
+`````
 
 ## Exemple avec if
 
@@ -107,13 +248,13 @@ else:
   print("Tu es mineur.")
 ```
 
-1. Quel message sera affiché si l'utilisateur entre 21?
+1. Quel message sera affiché si l'utilisateur répond 21?
 2. Que se passe-t-il si l'utilisateur entre 16 ans?
 3. Que se passe-t-il si l'utilisateur entre -10?
 4. Que se passe-t-il si l'utilisateur entre 17.5?
 
 ````{solution}
-Vérifie tes réponses en exécutant le code.
+Vérifiez vos réponses en exécutant le code.
 ```{exec} python
 :linenos:
 age = int(input("Quel âge as-tu? "))
@@ -126,26 +267,104 @@ else:
 
 ## Exercice {num2}`exercice-rev`
 
-```{role} input(quiz-input)
-:right: width: 10rem;
-:check: json remove
-```
+{.lower-alpha-paren}
 
-````{quiz}
-{input}`{"0": true, "-x+2": "Il faut remplacer x par sa valeur."}`
-Que va afficher ce programme?
+1.  ```{role} input(quiz-input)
+    :right: width: 10rem;
+    :check: json remove
+    ```
 
-```{code-block} python
-:linenos:
-x = 2
-if x <= -1:
-  print(2 * x + 1)
-elif x <= 3:
-  print(-x + 2)
-else:
-  print(2 * x - 5)
-```
-````
+    ````{quiz}
+    {input}`{"0": true, "-x+2": "Il faut remplacer x par sa valeur."}`
+    Que va afficher ce programme?
+
+    ```{code-block} python
+    :linenos:
+    x = 2
+    if x <= -1:
+      print(2 * x + 1)
+    elif x <= 3:
+      print(-x + 2)
+    else:
+      print(2 * x - 5)
+    ```
+    ````
+2.  ````{quiz}
+    {input}`{"-7": true, "2*x+1": "Il faut remplacer x par sa valeur.", "9": "2 * (-4) = -8", "-9": "Il faut ajouter 1, pas enlever 1."}`
+    Que va afficher ce programme?
+
+    ```{code-block} python
+    :linenos:
+    x = -4
+    if x <= -1:
+      print(2 * x + 1)
+    elif x <= 3:
+      print(-x + 2)
+    else:
+      print(2 * x - 5)
+    ```
+    ````
+3.  ````{quiz}
+    {input}`{"3": true, "2*x-5": "Il faut remplacer x par sa valeur."}`
+    Que va afficher ce programme?
+
+    ```{code-block} python
+    :linenos:
+    x = 4
+    if x <= -1:
+      print(2 * x + 1)
+    elif x <= 3:
+      print(-x + 2)
+    else:
+      print(2 * x - 5)
+    ```
+    ````
+
+4.  ````{quiz}
+    {input}`{"0": true, "-x+2": "Il faut remplacer x par sa valeur."}`
+    Que va afficher ce programme?
+
+    ```{code-block} python
+    :linenos:
+    x = 2
+    if x <= 3:
+      print(-x + 2)
+    elif x <= -1:
+      print(2 * x + 1)
+    else:
+      print(2 * x - 5)
+    ```
+    ````
+5.  ````{quiz}
+    {input}`{"6": true, "-7": "Quelle est la première expression vraie?", "-1": "-(-4) = 4"}`
+    Que va afficher ce programme?
+
+    ```{code-block} python
+    :linenos:
+    x = -4
+    if x <= 3:
+      print(-x + 2)
+    elif x <= -1:
+      print(2 * x + 1)
+    else:
+      print(2 * x - 5)
+    ```
+    ````
+6.  ````{quiz}
+    {input}`{"3": true, "2*x-5": "Il faut remplacer x par sa valeur."}`
+    Que va afficher ce programme?
+
+    ```{code-block} python
+    :linenos:
+    x = 4
+    if x <= -1:
+      print(2 * x + 1)
+    elif x <= 3:
+      print(-x + 2)
+    else:
+      print(2 * x - 5)
+    ```
+    ````
 
 ## Exercice {num2}`exercice-rev`
 
@@ -193,8 +412,8 @@ else:
     ````{solution}
     ```{exec} python
     :editor:
-    a = ...                                         # choisir la valeur de a
-    b = ...                                         # choisir la valeur de b
+    a = 3                                         # choisir la valeur de a
+    b = 4                                         # choisir la valeur de b
     if b != 0 :                                     # tester que b n'est pas nul
       print(a / b)
     else:
@@ -272,92 +491,147 @@ else:
 
 ## Exercice {num2}`exercice-rev`
 
-Voici trois programmes:
+Le programme ci-dessous demande 3 notes à l'utilisateur. Complétez-le de
+manière à ce qu'il:
 
-1. Quelles sont les différences?
-2. Que vont-ils afficher?
+1.  calcule et affiche la moyenne des 3 notes,
+2.  affiche `Tu n'as aucune note insuffissante` seulement si ces 3 notes
+    sont supérieures ou égales à 4.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr 1fr;
-- # Programme 1
-  ```{exec} python
-  :linenos:
-  x = -4
-  if x < 0:
-    x += 7
-  if x < 5:
-    x *= 4
-  if x < 10:
-    x -= 6
-  else:
-    x = 1000
-  print(x)
-  ```
-- # Programme 2
-  ```{exec} python
-  :linenos:
-  x = -4
-  if x < 0:
-    x += 7
-  elif x < 5:
-    x *= 4
-  elif x < 10:
-    x -= 6
-  else:
-    x = 1000
-  print(x)
-  ```
-- # Programme 3
-  ```{exec} python
-  :linenos:
-  x = -4
-  if x < 0:
-    x += 7
-    if x < 5:
-      x *= 4
-      if x < 10:
-        x -= 6
-  else:
-    x = 1000
-  print(x)
-  ```
+
+
+```{exec} python
+:editor: 57882fac-75bb-4b55-8397-fc19ed69d9b8
+math = float(input("Quelle est ta note de math?"))
+français = float(input("Quelle est ta note de français?"))
+allemand = float(input("Quelle est ta note d'allemand?"))
+
+# Complétez le code à partir de là
+# Calculez et afficher la moyenne
+print("La moyenne est de")
+
+# Testez et affichez si toutes les notes sont suffisantes ou pas
+print("Tu n'as aucune note insuffisante")
+
+print("Tu as au moins 1 note insuffisante")
+```
+
+````{solution}
+```{exec} python
+:linenos:
+math = float(input("Quelle est ta note de math?"))
+francais = float(input("Quelle est ta note de français?"))
+allemand = float(input("Quelle est ta note d'allemand?"))
+
+# Calculez et afficher la moyenne
+moyenne = (math + francais + allemand) / 3
+print("La moyenne est de", moyenne)
+
+# Testez et affichez si toutes les notes sont suffisantes ou pas
+if math >= 4 and francais >= 4 and allemand >= 4:
+  print("Tu n'as aucune note insuffisante")
+else:
+  print("Tu as au moins 1 note insuffisante")
+```
 ````
 
 ## Exercice {num2}`exercice-rev`
 
-Que vont afficher chacun de ces programmes?
+Quelles sont les différences entre ces trois programmes?
 
+```{role} input(quiz-input)
+:check: json remove
+```
+
+`````{list-grid}
+:style: grid-template-columns: 1fr 1fr 1fr;
+  - # Programme 1
+    ```{exec} python
+    :when: never
+    :name: prog1.1
+    :linenos:
+    x = -4
+    if x < 0:
+      x += 7
+    if x < 5:
+      x *= 4
+    if x < 10:
+      x -= 6
+    else:
+      x = 1000
+    print(x)
+    ```
+    ````{quiz}
+    Que va afficher ce programme?
+
+    {input}`{"1000": true}`
+    ````
+  - # Programme 2
+    ```{exec} python
+    :when: never
+    :name: prog1.2
+    :linenos:
+    x = -4
+    if x < 0:
+      x += 7
+    elif x < 5:
+      x *= 4
+    elif x < 10:
+      x -= 6
+    else:
+      x = 1000
+    print(x)
+    ```
+    ````{quiz}
+    Que va afficher ce programme?
+
+    {input}`{"3": true}`
+    ````
+  - # Programme 3
+    ```{exec} python
+    :when: never
+    :name: prog1.3
+    :linenos:
+    x = -4
+    if x < 0:
+      x += 7
+      if x < 5:
+        x *= 4
+        if x < 10:
+          x -= 6
+    else:
+      x = 1000
+    print(x)
+    ```
+    ````{quiz}
+    Que va afficher ce programme?
+
+    {input}`{"12": true}`
+    ````
+`````
+
+`````{solution}
 ````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+:style: grid-template-columns: 1fr 1fr 1fr;
 - # Programme 1
   ```{exec} python
-  :linenos:
-  a = 22
-  b = 5
-  c = 1
-  print((a > b) and (b <= c))
+  :after: prog1.1
+  :when: load
+  :class: hidden
   ```
 - # Programme 2
   ```{exec} python
-  :linenos:
-  a = 11
-  b = 3
-  c = 0
-  print((a < b) or (c == 0))
+  :after: prog1.2
+  :when: load
+  :class: hidden
   ```
 - # Programme 3
   ```{exec} python
-  :linenos:
-  a = 11
-  b = 3
-  c = 0
-  print((a < b) or (c != 0))
-  ```
-- # Programme 4
-  ```{exec} python
-  :linenos:
-  a = 1.5
-  b = 3.2
-  print(not(a <= b))
+  :after: prog1.3
+  :when: load
+  :class: hidden
   ```
 ````
+`````
+
+
