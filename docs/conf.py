@@ -13,7 +13,7 @@ myst_links_external_new_tab = True
 myst_footnote_transition = False
 
 html_static_path = ['_static.export']
-html_css_files = ['tdoc/exec-pnm.css', 'site-styles.css']
+html_css_files = ['tdoc/exec-pnm.css', 'common-styles.css', 'site-styles.css']
 html_theme_options = {
     'repository_url': 'https://github.com/t-doc-org/informatique',
     'show_navbar_depth': 2,
