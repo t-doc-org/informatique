@@ -41,7 +41,7 @@ Cochez la bonne réponse.
 
 ```{defaults} quiz-check
 :randomize:
-:class: columns-4
+:class: grid-4
 ```
 
 {.lower-alpha-paren}
@@ -361,7 +361,7 @@ Cochez la bonne réponse.
 
 ```{defaults} quiz-check
 :randomize:
-:class: columns-4
+:class: grid-4
 ```
 
 {.lower-alpha-paren}
@@ -463,7 +463,6 @@ Cochez la bonne réponse.
       ```
     ````
     `````
-
 3.  Qu'affiche le progamme suivant?
 
     ```{exec} python
@@ -511,10 +510,6 @@ Cochez la bonne réponse.
       ```
     ````
     `````
-    ```{defaults} quiz-check
-    :randomize:
-    :style: display: grid; grid-template-columns: 1fr 1fr;
-    ```
 4.  Qu'affiche le progamme suivant?
 
     ```{exec} python
@@ -530,6 +525,7 @@ Cochez la bonne réponse.
     ```
     `````{quiz}
     ````{quiz-check}
+    :class: grid-2
     - :
       ```{exec} python
       :after: prog4.5
@@ -574,6 +570,7 @@ Cochez la bonne réponse.
     ```
     `````{quiz}
     ````{quiz-check}
+    :class: grid-2
     - :
       ```{exec} python
       :name: prog4.3

@@ -15,9 +15,7 @@
 Cochez la bonne réponse.
 
 ```{list-grid}
-:style: |
-: grid-template-columns: 5fr 1fr 1fr;
-
+:style: grid-template-columns: 5fr 1fr 1fr;
 - Si j'augmente la mémoire de mon disque dur, mon ordinateur sera plus rapide.
 - &#9744; Vrai
 - &#9744; Faux

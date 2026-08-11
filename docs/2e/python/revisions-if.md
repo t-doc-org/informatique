@@ -67,12 +67,14 @@ sachant que la variable `pays` contient la valeur `"Suisse"` et la variable
 Que vont afficher chacun de ces programmes?
 
 ```{role} input(quiz-input)
-:check: json remove
+:style: width: 100%;
 ```
 
 ````{list-grid}
 :style: grid-template-columns: 1fr 1fr;
 - # Programme 1
+  Que va afficher ce programme?
+
   ```{exec} python
   :name: prog2.1
   :when: never
@@ -83,11 +85,11 @@ Que vont afficher chacun de ces programmes?
   print((a > b) and (b <= c))
   ```
   ```{quiz}
-  Que va afficher ce programme?
-
-  {input}`{"False": true}`
+  {input}`False`
   ```
 - # Programme 2
+  Que va afficher ce programme?
+
   ```{exec} python
   :name: prog2.2
   :when: never
@@ -98,11 +100,11 @@ Que vont afficher chacun de ces programmes?
   print((a < b) or (c == 0))
   ```
   ```{quiz}
-  Que va afficher ce programme?
-
-  {input}`{"True": true}`
+  {input}`True`
   ```
 - # Programme 3
+  Que va afficher ce programme?
+
   ```{exec} python
   :name: prog2.3
   :when: never
@@ -113,11 +115,11 @@ Que vont afficher chacun de ces programmes?
   print((a < b) or (c != 0))
   ```
   ```{quiz}
-  Que va afficher ce programme?
-
-  {input}`{"False": true}`
+  {input}`False`
   ```
 - # Programme 4
+  Que va afficher ce programme?
+
   ```{exec} python
   :name: prog2.4
   :when: never
@@ -127,9 +129,7 @@ Que vont afficher chacun de ces programmes?
   print(not(a <= b))
   ```
   ```{quiz}
-  Que va afficher ce programme?
-
-  {input}`{"False": true}`
+  {input}`False`
   ```
 ````
 
@@ -267,16 +267,13 @@ else:
 
 ## Exercice {num2}`exercice-rev`
 
-{.lower-alpha-paren}
+```{role} input(quiz-input)
+:style: width: 100%;
+:check: json remove
+```
 
-1.  ```{role} input(quiz-input)
-    :right: width: 10rem;
-    :check: json remove
-    ```
-
-    ````{quiz}
-    {input}`{"0": true, "-x+2": "Il faut remplacer x par sa valeur."}`
-    Que va afficher ce programme?
+{.lower-alpha-paren .grid-2}
+1.  Que va afficher ce programme?
 
     ```{code-block} python
     :linenos:
@@ -288,25 +285,25 @@ else:
     else:
       print(2 * x - 5)
     ```
-    ````
-2.  ````{quiz}
+    ```{quiz}
+    {input}`{"0": true, "-x+2": "Il faut remplacer x par sa valeur."}`
+    ```
+2.  Que va afficher ce programme?
+
+    ```{code-block} python
+    :linenos:
+    x = -4
+    if x <= -1:
+      print(2 * x + 1)
+    elif x <= 3:
+      print(-x + 2)
+    else:
+      print(2 * x - 5)
+    ```
+    ```{quiz}
     {input}`{"-7": true, "2*x+1": "Il faut remplacer x par sa valeur.", "9": "2 * (-4) = -8", "-9": "Il faut ajouter 1, pas enlever 1."}`
-    Que va afficher ce programme?
-
-    ```{code-block} python
-    :linenos:
-    x = -4
-    if x <= -1:
-      print(2 * x + 1)
-    elif x <= 3:
-      print(-x + 2)
-    else:
-      print(2 * x - 5)
     ```
-    ````
-3.  ````{quiz}
-    {input}`{"3": true, "2*x-5": "Il faut remplacer x par sa valeur."}`
-    Que va afficher ce programme?
+3.  Que va afficher ce programme?
 
     ```{code-block} python
     :linenos:
@@ -318,11 +315,10 @@ else:
     else:
       print(2 * x - 5)
     ```
-    ````
-
-4.  ````{quiz}
-    {input}`{"0": true, "-x+2": "Il faut remplacer x par sa valeur."}`
-    Que va afficher ce programme?
+    ```{quiz}
+    {input}`{"3": true, "2*x-5": "Il faut remplacer x par sa valeur."}`
+    ```
+4.  Que va afficher ce programme?
 
     ```{code-block} python
     :linenos:
@@ -334,10 +330,10 @@ else:
     else:
       print(2 * x - 5)
     ```
-    ````
-5.  ````{quiz}
-    {input}`{"6": true, "-7": "Quelle est la première expression vraie?", "-1": "-(-4) = 4"}`
-    Que va afficher ce programme?
+    ```{quiz}
+    {input}`{"0": true, "-x+2": "Il faut remplacer x par sa valeur."}`
+    ```
+5.  Que va afficher ce programme?
 
     ```{code-block} python
     :linenos:
@@ -349,10 +345,10 @@ else:
     else:
       print(2 * x - 5)
     ```
-    ````
-6.  ````{quiz}
-    {input}`{"3": true, "2*x-5": "Il faut remplacer x par sa valeur."}`
-    Que va afficher ce programme?
+    ```{quiz}
+    {input}`{"6": true, "-7": "Quelle est la première expression vraie?", "-1": "-(-4) = 4"}`
+    ```
+6.  Que va afficher ce programme?
 
     ```{code-block} python
     :linenos:
@@ -364,7 +360,9 @@ else:
     else:
       print(2 * x - 5)
     ```
-    ````
+    ```{quiz}
+    {input}`{"3": true, "2*x-5": "Il faut remplacer x par sa valeur."}`
+    ```
 
 ## Exercice {num2}`exercice-rev`
 
@@ -412,8 +410,8 @@ else:
     ````{solution}
     ```{exec} python
     :editor:
-    a = 3                                         # choisir la valeur de a
-    b = 4                                         # choisir la valeur de b
+    a = 3                                           # choisir la valeur de a
+    b = 4                                           # choisir la valeur de b
     if b != 0 :                                     # tester que b n'est pas nul
       print(a / b)
     else:
@@ -498,8 +496,6 @@ manière à ce qu'il:
 2.  affiche `Tu n'as aucune note insuffissante` seulement si ces 3 notes
     sont supérieures ou égales à 4.
 
-
-
 ```{exec} python
 :editor: 57882fac-75bb-4b55-8397-fc19ed69d9b8
 math = float(input("Quelle est ta note de math?"))
@@ -540,12 +536,14 @@ else:
 Quelles sont les différences entre ces trois programmes?
 
 ```{role} input(quiz-input)
-:check: json remove
+:style: width: 100%;
 ```
 
 `````{list-grid}
 :style: grid-template-columns: 1fr 1fr 1fr;
   - # Programme 1
+    Que va afficher ce programme?
+
     ```{exec} python
     :when: never
     :name: prog1.1
@@ -562,11 +560,11 @@ Quelles sont les différences entre ces trois programmes?
     print(x)
     ```
     ````{quiz}
-    Que va afficher ce programme?
-
-    {input}`{"1000": true}`
+    {input}`1000`
     ````
   - # Programme 2
+    Que va afficher ce programme?
+
     ```{exec} python
     :when: never
     :name: prog1.2
@@ -583,11 +581,11 @@ Quelles sont les différences entre ces trois programmes?
     print(x)
     ```
     ````{quiz}
-    Que va afficher ce programme?
-
-    {input}`{"3": true}`
+    {input}`3`
     ````
   - # Programme 3
+    Que va afficher ce programme?
+
     ```{exec} python
     :when: never
     :name: prog1.3
@@ -604,9 +602,7 @@ Quelles sont les différences entre ces trois programmes?
     print(x)
     ```
     ````{quiz}
-    Que va afficher ce programme?
-
-    {input}`{"12": true}`
+    {input}`12`
     ````
 `````
 
@@ -633,5 +629,3 @@ Quelles sont les différences entre ces trois programmes?
   ```
 ````
 `````
-
-

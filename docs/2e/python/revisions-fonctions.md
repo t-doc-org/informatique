@@ -131,8 +131,9 @@ L'ordre d'exécution des lignes est le suivant:
 
 ```{defaults} quiz-check
 :randomize:
-:style: display: grid; grid-template-columns: 1fr 1fr;
+:class: grid-2
 ```
+
 Qu'affiche le progamme suivant? Cochez la bonne réponse.
 ```{exec} python
 :name: prog5.1

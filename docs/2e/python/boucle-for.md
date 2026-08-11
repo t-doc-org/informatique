@@ -46,7 +46,7 @@ Cochez la bonne réponse.
 
 ```{defaults} quiz-check
 :randomize:
-:class: columns-4
+:class: grid-4
 ```
 
 {.lower-alpha-paren}
@@ -271,7 +271,7 @@ for nombre in range(6):
 print("La somme est", somme)
 ```
 ```{role} input(quiz-input)
-:style: width: 100%; margin-top: 0.25rem;
+:style: width: 100%;
 ```
 
 ```{quiz}
@@ -350,7 +350,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
 ```{defaults} quiz-check
 :randomize:
 :multi:
-:style: display: grid; grid-template-columns: 1fr 1fr;
+:class: grid-2
 ```
 
 {.lower-alpha-paren}
@@ -480,7 +480,6 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
       ```
     ````
     `````
-
 4.  Quel(s) code(s) correspond(ent) à la boucle `while` ci-dessous?
 
     ```{exec} python
@@ -521,15 +520,12 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
       ```
     ````
     `````
-    ```{defaults} quiz-check
-    :randomize:
-    :multi:
-    ```
-4.  Cochez les boucles `while` qui ne peuvent pas être transformées en boucle
+5.  Cochez les boucles `while` qui ne peuvent pas être transformées en boucle
     `for`.
 
     `````{quiz}
     ````{quiz-check}
+    :class: grid-1
     - :
       ```{exec} python
       :when: never
@@ -582,4 +578,3 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
       ```
     ````
     `````
-
