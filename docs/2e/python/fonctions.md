@@ -287,7 +287,7 @@ Erreurs de syntaxe:
 1.  Ligne 3: `SyntaxError: expected ':'` &rarr; il manque les 2 points à la fin
     de la ligne.
 2.  Ligne 9: `SyntaxError: invalid syntax. Perhaps you forgot a comma?` &rarr;
-    il manque une virgule entre la chaîne de caractère et le variable `perimetre`.
+    il manque une virgule entre la chaîne de caractères et le variable `perimetre`.
 
 Erreur d'exécution:
 1.  Ligne 14: `NameError: name 'hauteur' is not defined` &rarr; la variable
@@ -522,14 +522,14 @@ txt.find(s)
  Si `s` n'apparaît pas dans `txt` la fonction retourne `-1`.
 
 txt.replace(s, t)
-: retourne une nouvelle chaîne de caractère dans laquelle tous les `s` de `txt`
+: retourne une nouvelle chaîne de caractères dans laquelle tous les `s` de `txt`
   ont été remplacé par `t`.
 
 txt.lower()
-: retourne une nouvelle chaîne de caractère écrite en minuscules.
+: retourne une nouvelle chaîne de caractères écrite en minuscules.
 
 txt.upper()
-: retourne une nouvelle chaîne de caractère écrite en majuscules.
+: retourne une nouvelle chaîne de caractères écrite en majuscules.
 
 
 ### Exercice {num2}`exercice`

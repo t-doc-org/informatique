@@ -152,7 +152,7 @@ L'ordre d'exécution des ligne est le suivant:
 :linenos:
 a = 4
 b = 1
-for i in range (3):
+for i in range(3):
   a += 5
   b *= 2
   print("i =", i)

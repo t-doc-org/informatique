@@ -35,7 +35,7 @@ while condition:
   ```
 ````
 
-## Exercice {num2}`exercice`
+## Exercice {num2}`exercice-rev`
 
 Cochez la bonne réponse.
 
@@ -45,8 +45,7 @@ Cochez la bonne réponse.
 ```
 
 {.lower-alpha-paren}
-1.  `````{quiz}
-    Qu'affiche le progamme suivant?
+1.  Qu'affiche le progamme suivant?
 
     ```{exec} python
     :name: prog3.1
@@ -57,7 +56,7 @@ Cochez la bonne réponse.
       print(x)
       x += 1
     ```
-
+    `````{quiz}
     ````{quiz-check}
     - :
       ```{exec} python
@@ -91,8 +90,7 @@ Cochez la bonne réponse.
       ```
     ````
     `````
-2.  `````{quiz}
-    Qu'affiche le progamme suivant?
+2.  Qu'affiche le progamme suivant?
 
     ```{exec} python
     :name: prog3.2
@@ -103,7 +101,7 @@ Cochez la bonne réponse.
       x += 1
       print(x)
     ```
-
+    `````{quiz}
     ````{quiz-check}
     - :
       ```{exec} python
@@ -137,8 +135,7 @@ Cochez la bonne réponse.
       ```
     ````
     `````
-3.  `````{quiz}
-    Qu'affiche le progamme suivant?
+3.  Qu'affiche le progamme suivant?
 
     ```{exec} python
     :name: prog3.3
@@ -149,7 +146,7 @@ Cochez la bonne réponse.
       print(x)
       x += 2
     ```
-
+    `````{quiz}
     ````{quiz-check}
     - :
       ```{exec} python
@@ -183,8 +180,7 @@ Cochez la bonne réponse.
       ```
     ````
     `````
-4.  `````{quiz}
-    Qu'affiche le progamme suivant?
+4.  Qu'affiche le progamme suivant?
 
     ```{exec} python
     :name: prog3.4
@@ -195,7 +191,7 @@ Cochez la bonne réponse.
       x += 3
       print(x)
     ```
-
+    `````{quiz}
     ````{quiz-check}
     - :
       ```{exec} python
@@ -229,8 +225,7 @@ Cochez la bonne réponse.
       ```
     ````
     `````
-5.  `````{quiz}
-    Qu'affiche le progamme suivant?
+5.  Qu'affiche le progamme suivant?
 
     ```{exec} python
     :name: prog3.5
@@ -241,7 +236,7 @@ Cochez la bonne réponse.
       x -= 2
       print(x)
     ```
-
+    `````{quiz}
     ````{quiz-check}
     - :
       ```{exec} python
@@ -276,7 +271,7 @@ Cochez la bonne réponse.
     ````
     `````
 
-## Exercice {num2}`exercice`
+## Exercice {num2}`exercice-rev`
 
 1. Écrivez un programme en utilisant la boucle `while` qui affiche les nombres de
     0 à 9.
@@ -360,7 +355,7 @@ print("@" * 6)  # répète 6 fois le caractère @
 ````
 
 
-## Exercice {num2}`exercice`
+## Exercice {num2}`exercice-rev`
 
 Cochez la bonne réponse.
 
@@ -370,8 +365,7 @@ Cochez la bonne réponse.
 ```
 
 {.lower-alpha-paren}
-1.  `````{quiz}
-    Qu'affiche le progamme suivant?
+1.  Qu'affiche le progamme suivant?
 
     ```{exec} python
     :name: prog4.1
@@ -382,7 +376,7 @@ Cochez la bonne réponse.
       print("^" * x)
       x += 1
     ```
-
+    `````{quiz}
     ````{quiz-check}
     - :
       ```{exec} python
@@ -416,8 +410,7 @@ Cochez la bonne réponse.
       ```
     ````
     `````
-2.  `````{quiz}
-    Qu'affiche le progamme suivant?
+2.  Qu'affiche le progamme suivant?
 
     ```{exec} python
     :name: prog4.4
@@ -430,7 +423,7 @@ Cochez la bonne réponse.
       print("|_|" * n)
       x += 1
     ```
-
+    `````{quiz}
     ````{quiz-check}
     - :
       ```{exec} python
@@ -471,8 +464,7 @@ Cochez la bonne réponse.
     ````
     `````
 
-3.  `````{quiz}
-    Qu'affiche le progamme suivant?
+3.  Qu'affiche le progamme suivant?
 
     ```{exec} python
     :name: prog4.2
@@ -483,7 +475,7 @@ Cochez la bonne réponse.
       print(" " * (4-x) + "^" * x)
       x += 1
     ```
-
+    `````{quiz}
     ````{quiz-check}
     - :
       ```{exec} python
@@ -519,68 +511,11 @@ Cochez la bonne réponse.
       ```
     ````
     `````
-4.  `````{quiz}
-    Qu'affiche le progamme suivant?
-
-    ```{exec} python
-    :name: prog4.3
-    :when: never
-    :linenos:
-    x = 1
-    n = 4
-    while x <= 9:
-      print(" " * n + "^" * x)
-      x += 2
-      n -= 1
-      print(" " * 3 + "|" * 2)
-    ```
-
-    ````{quiz-check}
-    - :
-      ```{exec} python
-      :after: prog4.3
-      :when: load
-      :class: hidden
-      ```
-    - ```{exec} python
-      :when: load
-      :class: hidden
-      x = 1
-      n = 4
-      while x <= 9:
-        print(" " * n + "^" * x)
-        x += 2
-        n -= 1
-      print(" " * 3 + "| |")
-      ```
-    - ```{exec} python
-      :when: load
-      :class: hidden
-      x = 1
-      n = 4
-      while x <= 9:
-        print(" " * n + "^" * x)
-        x += 2
-        n -= 1
-      print("|" * 2)
-      ```
-    - ```{exec} python
-      :when: load
-      :class: hidden
-      x = 1
-      while x <= 4:
-        print("^" * x)
-        x += 1
-        print("|" * 2)
-      ```
-    ````
-    `````
     ```{defaults} quiz-check
     :randomize:
-    :class: columns-2
+    :style: display: grid; grid-template-columns: 1fr 1fr;
     ```
-5.  `````{quiz}
-    Qu'affiche le progamme suivant?
+4.  Qu'affiche le progamme suivant?
 
     ```{exec} python
     :name: prog4.5
@@ -593,7 +528,7 @@ Cochez la bonne réponse.
       print("<°)))>< " * x)
     print("~" * 24)
     ```
-
+    `````{quiz}
     ````{quiz-check}
     - :
       ```{exec} python
@@ -630,9 +565,63 @@ Cochez la bonne réponse.
       ```
     ````
     `````
+5.  À quel programme correspond le code ci-dessous?
 
-
-
+    ```{exec} python
+    :after: prog4.3
+    :when: load
+    :class: hidden
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :name: prog4.3
+      :when: never
+      :linenos:
+      x = 1
+      n = 4
+      while x <= 9:
+        print(" " * n + "^" * x)
+        x += 2
+        n -= 1
+      print(" " * 3 + "| |")
+      ```
+    - ```{exec} python
+      :when: never
+      :linenos:
+      x = 1
+      n = 4
+      while x <= 9:
+        print(" " * n + "^" * x)
+        x += 2
+        n -= 1
+        print(" " * 3 + "| |")
+      ```
+    - ```{exec} python
+      :when: never
+      :linenos:
+      x = 1
+      n = 4
+      while x <= 9:
+        print(" " * n + "^" * x)
+        x += 2
+        n += 1
+        print(" " * 3 + "| |")
+      ```
+    - ```{exec} python
+      :when: never
+      :linenos:
+      x = 1
+      n = 4
+      while x <= 9:
+        print(" " * n + "^" * x)
+        x += 1
+        n -= 1
+      print("| |")
+      ```
+    ````
+    `````
 
 ## Exercice {num2}`exercice-rev`
 
@@ -671,34 +660,18 @@ print("Merci")
 
 ## Exercice {num2}`exercice-rev`
 
-Nous souhaitons créer un programme qui compte le temps avant qu'une bombe
-explose. Pour cela, un compte à rebours commencera à 10 et ira jusqu'à 1, puis
-le programme affichera "BOOM".
-
-Écrivez un programme qui correspond à l'algorithme suivant:
-
-```{code-block} text
-Initialiser une variable compte_a_rebours à 10
-Tant que compte_a_rebours est plus grand que 0
-    Afficher La valeur de compte_a_rebours
-    Retirer 1 à compte_a_rebours
-Afficher "BOOM"
-```
+Écrivez un programme qui fait le décompte des 5 dernières secondes avant la
+nouvelle année.
 
 Ce programme doit alors afficher:
 
 ```{code-block} text
-10
-9
-8
-7
-6
 5
 4
 3
 2
 1
-BOOM
+Bonne année!
 ```
 
 ```{exec} python
@@ -709,11 +682,11 @@ BOOM
 ````{solution}
 ```{exec} python
 :linenos:
-compte_a_rebours = 10
+compte_a_rebours = 5
 while compte_a_rebours > 0:
   print(compte_a_rebours)
   compte_a_rebours -= 1
-print("BOOM")
+print("Bonne année!")
 ```
 ````
 
@@ -721,16 +694,16 @@ print("BOOM")
 
 Écrivez un programme qui demande à l'utilisateur combien il y a de cantons en
 Suisse. Tant que la réponse n'est pas 26, le programme redemande une nouvelle
-réponse.
+réponse et indique s'il y en a plus ou moins.
 
 Exemple d'exécution:
 
 ```{code-block} text
 Combien y a-t-il de cantons en Suisse?
 16
-Faux, essaie encore!
+Faux, il y en a plus! Essaie encore.
 27
-Faux, essaie encore!
+Faux, il y en a moins! Essaie encore.
 26
 Bravo!
 ```
@@ -745,15 +718,13 @@ Bravo!
 :linenos:
 nb_cantons = int(input("Combien y a-t-il de cantons en Suisse?"))
 while nb_cantons != 26:
-  nb_cantons = int(input("Faux, essaie encore!"))
+  if nb_cantons < 26:
+    nb_cantons = int(input("Faux, il y en a plus! Essaie encore."))
+  else:
+    nb_cantons = int(input("Faux, il y en a moins! Essaie encore."))
 print("Bravo!")
 ```
 ````
-
-## Bonus {num2}`bonus-rev`
-
-Améliorez le programme de l'exercice précédent en indiquant à l'utilisateur
-s'il y a plus ou moins de cantons en fonction de sa réponse.
 
 ## Exercice {num2}`exercice-rev`
 

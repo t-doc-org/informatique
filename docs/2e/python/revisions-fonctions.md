@@ -126,3 +126,154 @@ L'ordre d'exécution des lignes est le suivant:
 
 7-2-8-2-9-5-10
 ```
+
+## Exercice {num2}`exercice-rev:exo-1`
+
+```{defaults} quiz-check
+:randomize:
+:style: display: grid; grid-template-columns: 1fr 1fr;
+```
+Qu'affiche le progamme suivant? Cochez la bonne réponse.
+```{exec} python
+:name: prog5.1
+:when: never
+:linenos:
+def dessine_cochon():
+  print(" ^---^")
+  print("( 'o' )")
+  print("( u u )")
+
+def dessine_lapin():
+  print("(\\ _ /)")
+  print("( 'X' )")
+  print("c(\")(\")")
+
+def dessine_chat():
+  print(" /\\_/\\")
+  print("(=^.^=)")
+  print("(\")(\")_/")
+
+dessine_chat()
+print()
+dessine_lapin()
+print()
+dessine_cochon()
+```
+`````{quiz}
+````{quiz-check}
+- :
+  ```{exec} python
+  :after: prog5.1
+  :when: load
+  :class: hidden
+  ```
+- ```{exec} python
+  :when: load
+  :class: hidden
+  def dessine_cochon():
+    print(" ^---^")
+    print("( 'o' )")
+    print("( u u )")
+
+  def dessine_lapin():
+    print("(\\ _ /)")
+    print("( 'X' )")
+    print("c(\")(\")")
+
+  def dessine_chat():
+    print(" /\\_/\\")
+    print("(=^.^=)")
+    print("(\")(\")_/")
+
+  dessine_cochon()
+  print()
+  dessine_lapin()
+  print()
+  dessine_chat()
+  ```
+- ```{exec} python
+  :when: load
+  :class: hidden
+  print(" ^---^   (\\ _ /)   /\\_/\\")
+  print("( 'o' )  ( 'X' )  (=^.^=)")
+  print("( u u )  c(\")(\")  (\")(\")_/")
+  ```
+- ```{exec} python
+  :when: load
+  :class: hidden
+  print(" /\\_/\\    (\\ _ /)   ^---^")
+  print("(=^.^=)   ( 'X' )  ( 'o' )")
+  print("(\")(\")_/  c(\")(\")  ( u u )")
+  ```
+````
+`````
+
+## Exercice {num2}`exercice-rev`
+
+Créez un programme qui affiche un dessin choisi par l'utilisateur parmi trois
+dessins prédéfinis.
+
+{.lower-alpha-paren}
+1.  Définissez au moins une fonction qui dessine un animal, un personnage,
+    objet, ... Pour les deux autres, vous pouvez copiez les idées de l'{numref}`exercice %s<exercice-rev:exo-1>`.<br>
+    Quelques idées ici: [https://www.momsarefrommars.com/cute-keyboard-characters.html](https://www.momsarefrommars.com/cute-keyboard-characters.html).
+2.  Écrivez un programme qui demande à l'utilisateur de choisir entre trois
+    possibilités et affichez le dessin correspondant. Demandez jusqu'à ce que la
+    réponse de l'utilisateur soit valide.
+
+````{tip}
+:class: dropdown
+Pour comparer des chaînes de caractères, il est préférable de convertir la
+réponse en minuscule avant de la comparer, cela permet de réduire le nombre de
+tests.
+
+texte.lower()
+: retourne une nouvelle chaîne de caractères écrite en minuscules.
+
+```{exec} python
+:editor:
+reponse = input("Écrivez un mot avec des majuscules et des minuscules:")
+print("La réponse donnée est:", reponse)
+reponse_min = reponse.lower()
+print("La réponse en minuscules est", reponse_min)
+```
+````
+
+```{exec} python
+:editor: c77dbb6e-922e-41a4-89be-09cedb1caf62
+```
+
+````{solution}
+```{exec} python
+:editor:
+def dessine_cochon():
+  print(" ^---^")
+  print("( 'o' )")
+  print("( u u )")
+
+def dessine_lapin():
+  print("(\\ _ /)")
+  print("( 'X' )")
+  print("c(\")(\")")
+
+def dessine_chat():
+  print(" /\\_/\\")
+  print("(=^.^=)")
+  print("(\")(\")_/")
+
+choix = input("Quel animal voulez-vous dessinez entre chat, cochon et lapin?")
+choix = choix.lower()
+while choix != "chat" and choix != "cochon" and choix != "lapin":
+  choix = input("Choisissez chat, cochon ou lapin")
+  choix = choix.lower()
+if choix == "chat":
+  dessine_chat()
+elif choix == "lapin":
+  dessine_lapin()
+elif choix == "cochon":
+  dessine_cochon()
+# Ce cas ne devrait jamais se produire, car la boucle while vérifie la réponse
+else:
+  print("Il n'y a pas de dessin correspondant.")
+```
+````
