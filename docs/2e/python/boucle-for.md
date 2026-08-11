@@ -40,31 +40,163 @@ la valeur d'un élément de l'ensemble range(n), c'est-à-dire l'ensemble des
 nombres entiers de 0 à n non compris $\{0; 1; 2; ...; n-1\}$. Il est donc
 possible d'utiliser la valeur de cette variable dans la boucle.
 
-
 ## Exercice {num2}`exercice`
 
-```{exec} python
-:linenos:
-:when: never
-somme = 0
-for nombre in range(6):
-  somme += nombre
-print("La somme est:", somme)
+Cochez la bonne réponse.
+
+```{defaults} quiz-check
+:randomize:
+:class: columns-4
 ```
 
-Quel est le résultat affiché par ce programme?
+{.lower-alpha-paren}
+1.  Qu'affiche le progamme suivant?
 
-````{solution}
-Vérifie ta réponse en exécutant le code.
-```{exec} python
-:linenos:
-somme = 0
-for nombre in range(6):
-  somme += nombre
-print("La somme est:", somme)
-```
-````
+    ```{exec} python
+    :name: prog6.1
+    :when: never
+    :linenos:
+    for i in range(3):
+      print("Hello")
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog6.1
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(3):
+        print(i)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(2):
+        print("Hello")
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(4):
+        print("Hello")
+      ```
+    ````
+2.  Qu'affiche le progamme suivant?
 
+    ```{exec} python
+    :name: prog6.2
+    :when: never
+    :linenos:
+    for i in range(4):
+      print(i)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog6.2
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(4):
+        print(i+1)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(5):
+        print(i)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(4):
+        print("4")
+      ```
+    ````
+    `````
+3.  Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog6.3
+    :when: never
+    :linenos:
+    for i in range(2):
+      print("i")
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog6.3
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(2):
+        print(i)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(3):
+        print(i)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(1):
+        print(i)
+      ```
+    ````
+    `````
+4.  Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: prog6.4
+    :when: never
+    :linenos:
+    for i in range(5):
+      print(i+1)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: prog6.4
+      :when: load
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(4):
+        print(i+1)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(6):
+        print(i+1)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      for i in range(5):
+        print(i)
+      ```
+    ````
+    `````
 ## Exercice {num2}`exercice`
 
 1. Écrivez un programme en utilisant la boucle `for` qui affiche les nombres de
@@ -129,6 +261,55 @@ for nombre in range(1, 13):
 
 ## Exercice {num2}`exercice`
 
+Que va afficher ce programme?
+```{exec} python
+:linenos:
+:when: never
+somme = 0
+for nombre in range(6):
+  somme += nombre
+print("La somme est", somme)
+```
+```{role} input(quiz-input)
+:style: width: 100%; margin-top: 0.25rem;
+```
+
+```{quiz}
+{input}`La somme est 15`
+{quiz-hint}`Calculez la valeur de la somme et affichez le texte complet avec la
+majuscule.`
+```
+
+````{solution}
+```{exec} python
+:editor:
+somme = 0
+for nombre in range(6):
+  somme += nombre
+print("La somme est", somme)
+```
+````
+
+## Exercice {num2}`exercice`
+
+Écrivez un programme qui affiche le produit de tous les nombres de 1 à 10.
+```{exec} python
+:editor: 1141ad86-d9e5-40b0-83bd-a11c7ca9e9a4
+```
+
+````{solution}
+```{exec} python
+:editor:
+produit = 1
+for nombre in range(1, 11):
+  produit *= nombre
+print("Le produit de tous les nombres de 1 à 10 est", produit)
+```
+````
+
+
+## Exercice {num2}`exercice`
+
 Indiquez l'ordre d'exécution des lignes et ce qu'affichera le programme.
 
 ```{exec} python
@@ -159,4 +340,246 @@ for i in range(3):
 print("a =", a, "b =", b)
 ```
 ````
+
+## Exercice {num2}`exercice`
+
+Il est toujours possible de convertir une boucle `for` en boucle `while`, par
+contre il n'est pas toujours possible de convertir une boucle `while` en boucle
+`for`, notamment si on ne sait pas à l'avance le nombre d'itérations.
+
+```{defaults} quiz-check
+:randomize:
+:multi:
+:style: display: grid; grid-template-columns: 1fr 1fr;
+```
+
+{.lower-alpha-paren}
+1.  Quel(s) code(s) correspond(ent) à la boucle `for` ci-dessous?
+
+    ```{exec} python
+    :when: never
+    :linenos:
+    for i in range(5):
+      print(i)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :when: never
+      :linenos:
+      x = 0
+      while x < 5:
+        print(x)
+        x += 1
+      ```
+    - ```{exec} python
+      :when: never
+      :linenos:
+      while x < 5:
+        print(x)
+      ```
+    - ```{exec} python
+      :when: never
+      x = 0
+      while x < 6:
+        print(x)
+        x += 1
+      ```
+    - ```{exec} python
+      :when: never
+      :linenos:
+      x = 0
+      while x < 5:
+        x += 1
+        print(x)
+      ```
+    ````
+    ``````
+2.  Quel(s) code(s) correspond(ent) à la boucle `for` ci-dessous?
+
+    ```{exec} python
+    :when: never
+    :linenos:
+    for i in range(4):
+      print(i + 1)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :when: never
+      :linenos:
+      x = 1
+      while x < 5:
+        print(x)
+        x += 1
+      ```
+    - :
+      ```{exec} python
+      :when: never
+      :linenos:
+      x = 0
+      while x < 4:
+        x += 1
+        print(x)
+      ```
+    - ```{exec} python
+      :when: never
+      x = 0
+      while x < 5:
+        print(x+1)
+        x += 1
+      ```
+    - ```{exec} python
+      :when: never
+      :linenos:
+      x = 1
+      while x < 5:
+        print(x+1)
+        x += 1
+      ```
+    ````
+    `````
+3.  Quel(s) code(s) correspond(ent) à la boucle `while` ci-dessous?
+
+    ```{exec} python
+    :when: never
+    :linenos:
+    x = 4
+    while x < 7:
+      print(x)
+      x += 1
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :when: never
+      :linenos:
+      for i in range(4, 7):
+        print(i)
+      ```
+    - :
+      ```{exec} python
+      :when: never
+      :linenos:
+      for i in range(3):
+        print(i + 4)
+      ```
+    - ```{exec} python
+      :when: never
+      for i in range(3, 7):
+        print(i)
+      ```
+    - ```{exec} python
+      :when: never
+      :linenos:
+      for i in range(4, 8):
+        print(i)
+      ```
+    ````
+    `````
+
+4.  Quel(s) code(s) correspond(ent) à la boucle `while` ci-dessous?
+
+    ```{exec} python
+    :when: never
+    :linenos:
+    x = 2
+    while x <= 5:
+      print(x)
+      x += 1
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :when: never
+      :linenos:
+      for i in range(2, 6):
+        print(i)
+      ```
+    - :
+      ```{exec} python
+      :when: never
+      :linenos:
+      for i in range(1, 5):
+        print(i + 1)
+      ```
+    - ```{exec} python
+      :when: never
+      :linenos:
+      for i in range(5):
+        print(i)
+      ```
+    - ```{exec} python
+      :when: never
+      :linenos:
+      for i in range(2, 5):
+        print(i)
+      ```
+    ````
+    `````
+    ```{defaults} quiz-check
+    :randomize:
+    :multi:
+    ```
+4.  Cochez les boucles `while` qui ne peuvent pas être transformées en boucle
+    `for`.
+
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :when: never
+      :linenos:
+      n = int(input("Entrer un nombre strictement positif: "))
+      while n <= 0:
+        print("Le nombre doit être strictement positif!")
+        n = int(input("Entrer un nombre strictement positif: "))
+      print("Merci")
+      ```
+    - :
+      ```{exec} python
+      :when: never
+      :linenos:
+      mot_de_passe = ""
+      while mot_de_passe != "secret123":
+          mot_de_passe = input("Entrez le mot de passe: ")
+      print("Accès autorisé!")
+      ```
+    - ```{exec} python
+      :when: never
+      :linenos:
+      compte_a_rebours = 5
+      while compte_a_rebours > 0:
+        print(compte_a_rebours)
+        compte_a_rebours -= 1
+      print("Bonne année!")
+      ```
+    - :
+      ```{exec} python
+      :when: never
+      :linenos:
+      nb_cantons = int(input("Combien y a-t-il de cantons en Suisse?"))
+      while nb_cantons != 26:
+        if nb_cantons < 26:
+          nb_cantons = int(input("Faux, il y en a plus! Essaie encore."))
+        else:
+          nb_cantons = int(input("Faux, il y en a moins! Essaie encore."))
+      print("Bravo!")
+      ```
+    - ```{exec} python
+      :when: never
+      :linenos:
+      x = 1
+      n = 4
+      while x <= 5:
+        print(" _ " * n)
+        print("|_|" * n)
+        x += 1
+      ```
+    ````
+    `````
 
