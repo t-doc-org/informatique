@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 export const {
-    attrs, gcd, initBoard, JXG, merge, render, withAxesLabels,
+    attrs, clip, gcd, initBoard, JXG, merge, render, withAxesLabels,
 } = await tdoc.import('tdoc/jsxgraph.js');
 
 // Defaults for use on screen media.
@@ -54,11 +54,3 @@ attrs.print = [attrs.nonInteractive, {
     },
   },
 }];
-
-// TODO(0.88): Import from tdoc/jsxgraph.js
-export function clip(value, {max, min}) {
-  if (value > max) return NaN;
-  if (min === undefined) min = -max;
-  if (value < min) return NaN;
-  return value;
-}

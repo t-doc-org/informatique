@@ -1,23 +1,2 @@
 /* Copyright 2026 Caroline Blank <caro@c-space.org> */
 /* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
-
-.frame.docutils.container.instructor {
-    border-color: var(--pst-color-secondary-bg);
-}
-.admonition.instructor, div.admonition.instructor {
-    border-color: var(--pst-color-secondary-highlight);
-}
-.admonition.instructor > .admonition-title,
-div.admonition.instructor >.admonition-title {
-    background-color: var(--pst-color-secondary-bg);
-}
-.admonition.instructor > .admonition-title:after,
-div.admonition.instructor > .admonition-title:after {
-    color: var(--pst-color-secondary-highlight);
-}
-
-html:not(#¶) {
-    /* TODO(0.89): Remove */
-    --pst-font-family-monospace-system: ui-monospace, "Source Code Pro",
-        "Menlo", "Consolas", "DejaVu Sans Mono", monospace;
-}
