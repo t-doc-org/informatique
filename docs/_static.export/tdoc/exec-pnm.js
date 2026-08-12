@@ -55,7 +55,10 @@ class PnmRunner extends Runner {
     }
 
     addControls(controls) {
-        if (this.when === 'click' || (this.editable && this.when !== 'never')) {
+        // TODO(0.90): Remove handling of non-array when
+        const when = this.when;
+        if ((Array.isArray(when) && when.includes('click'))
+                || when === 'click' || (this.editable && when !== 'never')) {
             this.runCtrl = controls.appendChild(this.runControl());
         }
         super.addControls(controls);
