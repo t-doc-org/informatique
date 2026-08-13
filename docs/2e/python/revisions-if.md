@@ -77,7 +77,7 @@ Que vont afficher chacun de ces programmes?
 
   ```{exec} python
   :name: prog2.1
-  :when: never
+  :when:
   :linenos:
   a = 22
   b = 5
@@ -92,7 +92,7 @@ Que vont afficher chacun de ces programmes?
 
   ```{exec} python
   :name: prog2.2
-  :when: never
+  :when:
   :linenos:
   a = 11
   b = 3
@@ -107,7 +107,7 @@ Que vont afficher chacun de ces programmes?
 
   ```{exec} python
   :name: prog2.3
-  :when: never
+  :when:
   :linenos:
   a = 11
   b = 3
@@ -122,7 +122,7 @@ Que vont afficher chacun de ces programmes?
 
   ```{exec} python
   :name: prog2.4
-  :when: never
+  :when:
   :linenos:
   a = 1.5
   b = 3.2
@@ -239,7 +239,7 @@ comédie et horreur). Le branchement `else` gérera tous les autres cas.
 ## Exercice {num2}`exercice-rev`
 
 ```{exec} python
-:when: never
+:when:
 :linenos:
 age = int(input("Quel âge as-tu? "))
 if age >= 18:
@@ -545,7 +545,7 @@ Quelles sont les différences entre ces trois programmes?
     Que va afficher ce programme?
 
     ```{exec} python
-    :when: never
+    :when:
     :name: prog1.1
     :linenos:
     x = -4
@@ -566,7 +566,7 @@ Quelles sont les différences entre ces trois programmes?
     Que va afficher ce programme?
 
     ```{exec} python
-    :when: never
+    :when:
     :name: prog1.2
     :linenos:
     x = -4
@@ -587,7 +587,7 @@ Quelles sont les différences entre ces trois programmes?
     Que va afficher ce programme?
 
     ```{exec} python
-    :when: never
+    :when:
     :name: prog1.3
     :linenos:
     x = -4

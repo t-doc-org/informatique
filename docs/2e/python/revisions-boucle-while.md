@@ -9,7 +9,7 @@ La boucle while (qui signifie "tant que" en anglais) permet de répéter un bloc
 d'instructions tant qu'une condition est vraie.
 
 ```{exec} python
-:when: never
+:when:
 while condition:
   instruction 1
   instruction 2
@@ -49,7 +49,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog3.1
-    :when: never
+    :when:
     :linenos:
     x = 0
     while x < 4:
@@ -94,7 +94,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog3.2
-    :when: never
+    :when:
     :linenos:
     x = 0
     while x < 4:
@@ -139,7 +139,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog3.3
-    :when: never
+    :when:
     :linenos:
     x = 0
     while x <= 6:
@@ -184,7 +184,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog3.4
-    :when: never
+    :when:
     :linenos:
     x = 1
     while x < 6:
@@ -229,7 +229,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog3.5
-    :when: never
+    :when:
     :linenos:
     x = 10
     while x >= 4:
@@ -369,7 +369,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog4.1
-    :when: never
+    :when:
     :linenos:
     x = 1
     while x < 6:
@@ -414,7 +414,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog4.4
-    :when: never
+    :when:
     :linenos:
     x = 1
     n = 5
@@ -467,7 +467,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog4.2
-    :when: never
+    :when:
     :linenos:
     x = 1
     while x <= 4:
@@ -514,7 +514,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog4.5
-    :when: never
+    :when:
     :linenos:
     x = 4
     print("~" * 24)
@@ -574,7 +574,7 @@ Cochez la bonne réponse.
     - :
       ```{exec} python
       :name: prog4.3
-      :when: never
+      :when:
       :linenos:
       x = 1
       n = 4
@@ -585,7 +585,7 @@ Cochez la bonne réponse.
       print(" " * 3 + "| |")
       ```
     - ```{exec} python
-      :when: never
+      :when:
       :linenos:
       x = 1
       n = 4
@@ -596,7 +596,7 @@ Cochez la bonne réponse.
         print(" " * 3 + "| |")
       ```
     - ```{exec} python
-      :when: never
+      :when:
       :linenos:
       x = 1
       n = 4
@@ -607,7 +607,7 @@ Cochez la bonne réponse.
         print(" " * 3 + "| |")
       ```
     - ```{exec} python
-      :when: never
+      :when:
       :linenos:
       x = 1
       n = 4

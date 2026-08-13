@@ -9,7 +9,7 @@ La boucle `for` permet de répéter un bloc d'instructions un nombre de fois con
 à l'avance.
 
 ```{exec} python
-:when: never
+:when:
 for _ in range(nb_repetitions):
   instruction 1
   instruction 2

@@ -62,7 +62,7 @@ celle-ci ou si elle est `null`.
 
   ```{exec} sql
   :name: sql-client-select
-  :when: never
+  :when:
   :class: hidden
   select * from client;
   ```
@@ -95,7 +95,7 @@ Recréez la table `produit` des exercices {numref}`exercice:produit-create` et
 
 ```{exec} sql
 :name: sql-produit-select
-:when: never
+:when:
 :class: hidden
 select * from produit;
 ```
@@ -184,7 +184,7 @@ clients. La clé primaire est composée des deux colonnes `no_p` et `no_c`.
 
 ```{exec} sql
 :name: sql-achat-select
-:when: never
+:when:
 :class: hidden
 select * from achat;
 ```
@@ -224,7 +224,7 @@ lisible pour un humain:
 ```{exec} sql
 :name: sql-tables
 :after: sql-produit sql-client sql-achat
-:when: never
+:when:
 :class: hidden
 ```
 

@@ -288,7 +288,7 @@ else:
 Indiquez l'ordre d'exécution et ce que vont afficher les programmes suivants?
 
 1.  ```{exec} python
-    :when: never
+    :when:
     :linenos:
     a = 2
     if a != 2:
@@ -315,7 +315,7 @@ Indiquez l'ordre d'exécution et ce que vont afficher les programmes suivants?
     ````
 
 2.  ```{exec} python
-    :when: never
+    :when:
     :linenos:
     y = 2
     if y <= -1:

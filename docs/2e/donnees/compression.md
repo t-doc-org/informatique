@@ -140,8 +140,6 @@ P1
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 ```
 
-
-
 ````{solution}
 En commençant par le blanc:
 ```{code-block} text

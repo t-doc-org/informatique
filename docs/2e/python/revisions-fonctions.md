@@ -29,7 +29,7 @@ Pour éviter de répéter du code et rendre le code plus lisible, il est utile d
 pouvoir définir nos propres fonctions. La syntaxe est la suivante:
 
 ```{exec} python
-:when: never
+:when:
 # Définition de la fonction
 def nom_de_la_fonction(paramètres):
   instruction 1
@@ -137,7 +137,7 @@ L'ordre d'exécution des lignes est le suivant:
 Qu'affiche le progamme suivant? Cochez la bonne réponse.
 ```{exec} python
 :name: prog5.1
-:when: never
+:when:
 :linenos:
 def dessine_cochon():
   print(" ^---^")

@@ -83,7 +83,7 @@ table ne doit pas accepter les valeurs `null`.
 ```{exec} sql
 :name: sql-canton-select
 :class: hidden
-:when: never
+:when:
 select * from canton;
 ```
 
@@ -254,7 +254,7 @@ pays.
 
 ```{exec} sql
 :name: sql-pays
-:when: never
+:when:
 create table pays (
   nom text not null,
   abr text not null,
@@ -276,7 +276,7 @@ insert into pays values
 ```{exec} sql
 :name: sql-pays-select
 :class: hidden
-:when: never
+:when:
 select * from pays;
 ```
 
@@ -372,7 +372,7 @@ select * from contact limit 4;
 ```{exec} sql
 :name: sql-contact
 :include: contact.sql
-:when: never
+:when:
 :class: hidden
 ```
 

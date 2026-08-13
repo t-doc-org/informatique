@@ -40,7 +40,7 @@ Utilisez la syntaxe `if a in b` pour vérifier si a se trouve dans la liste b.
 
 ````{solution}
 ```{exec} python
-:when: never
+:when:
 :linenos:
 def utilisateur_existe(utilisateur):
   if utilisateur in utilisateurs:
@@ -68,7 +68,7 @@ charger d'ajouter un nouvel utilisateur avec son mot de passe.
 
 ````{solution}
 ```{exec} python
-:when: never
+:when:
 :linenos:
 def utilisateur_existe(utilisateur):
   ...
@@ -132,7 +132,7 @@ Pensez à stocker la valeur pour pouvoir la réutiliser.
 
 ````{solution}
 ```{exec} python
-:when: never
+:when:
 :linenos:
 def utilisateur_existe(utilisateur):
   ...
@@ -168,7 +168,7 @@ simuler l'identification d'un utilisateur.
 
 ````{solution}
 ```{exec} python
-:when: never
+:when:
 :linenos:
 def utilisateur_existe(utilisateur):
   ...
@@ -219,7 +219,7 @@ infinie et continuer le programme.
 
 ````{solution}
 ```{exec} python
-:when: never
+:when:
 :linenos:
 def utilisateur_existe(utilisateur):
   ...

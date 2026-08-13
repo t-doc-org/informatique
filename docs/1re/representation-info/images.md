@@ -133,7 +133,8 @@ Dans l'image suivante, nous avons sélectionné une toute petite partie:
 
 Encodage d'une image en PPM (Portable PixMap)
 
-```{code-block} text
+```{exec} pnm
+:when: load
 P3
 10 6
 255
@@ -146,20 +147,6 @@ P3
 60 170 180 53 148 194 50 127 198 55 107 188 73 96 172 98 92 163 116 90 156 128
 187 102 83 195 117 84 194 143 82 182 170 77 158 185 70 126 184 60 99 172 68 92
 164 96 98 168 124 100 171 141
-```
-
-```{exec} pnm
-:class: hidden
-:when: load
-P3
-10 6
-255
-214 178 64 214 198 48 203 204 45 181 199 50 158 186 61 138 170 73 131 160 90 136 160 115 144 163 125 145 165 127
-193 151 57 193 173 45 188 191 47 175 200 56 155 196 67 127 177 76 112 158 92 111 151 121 119 151 137 120 147 138
-177 128 49 177 151 38 178 178 41 171 199 51 153 205 61 130 195 73 110 174 90 100 157 115 98 148 130 101 141 136
-176 117 57 180 141 48 177 168 44 166 190 45 147 202 48 130 204 62 113 191 83 98 169 106 87 152 116 89 143 127
-184 112 75 189 133 69 184 157 60 170 180 53 148 194 50 127 198 55 107 188 73 96 172 98 92 163 116 90 156 128
-187 102 83 195 117 84 194 143 82 182 170 77 158 185 70 126 184 60 99 172 68 92 164 96 98 168 124 100 171 141
 ```
 
 Les images matricielles contiennent énormément de pixels, par conséquent elles
@@ -388,7 +375,6 @@ propriétés suivantes:
 :class: hidden
 ```
 
-
 ```{exec} pnm
 :editor: 08221482-3cad-4142-b599-bbbe5c4e7c3b
 P2
@@ -423,11 +409,9 @@ utilisez la [palette de couleurs](https://htmlcolorcodes.com/color-names/).
 :class: hidden
 ```
 
-
 ```{exec} pnm
 :editor: e0545ee7-dcd9-433d-9e2e-e8540420e3db
 P3
-
 ```
 
 ````{solution}

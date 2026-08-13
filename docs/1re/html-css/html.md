@@ -380,7 +380,7 @@ collège".
 
 ````{solution}
 ```{exec} html
-:when: load
+:when: load click
 :editor:
 :style: height: 14rem;
 <!DOCTYPE html>

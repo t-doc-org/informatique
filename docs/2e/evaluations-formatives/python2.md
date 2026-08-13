@@ -8,16 +8,16 @@
 L'instruction pour créer une liste vide est ...
 
 -   ```{exec} python
-    :when: never
+    :when:
     liste = 0
     ```
 -   :
     ```{exec} python
-    :when: never
+    :when:
     liste = []
     ```
 -   ```{exec} python
-    :when: never
+    :when:
     liste = [0]
     ```
 ````
@@ -27,16 +27,16 @@ L'instruction pour créer une liste vide est ...
 L'instruction pour afficher le premier élément d'une liste est ...
 
 -   ```{exec} python
-    :when: never
+    :when:
     print(liste[-1])
     ```
 -   ```{exec} python
-    :when: never
+    :when:
     print(liste[1])
     ```
 -   :
     ```{exec} python
-    :when: never
+    :when:
     print(liste[0])
     ```
 ````
@@ -48,16 +48,16 @@ L'instruction pour afficher le dernier élément d'une liste est ...
 
 -   :
     ```{exec} python
-    :when: never
+    :when:
     print(liste[-1])
     ```
 -   ```{exec} python
-    :when: never
+    :when:
     print(liste[len(liste)])
     ```
 -   :
     ```{exec} python
-    :when: never
+    :when:
     print(liste[len(liste)-1])
     ```
 ````
@@ -67,7 +67,7 @@ L'instruction pour afficher le dernier élément d'une liste est ...
 :number: none
 L'instruction suivante ...
 ```{exec} python
-:when: never
+:when:
 notes.insert(4, 3)
 ```
 
@@ -80,7 +80,7 @@ notes.insert(4, 3)
 :number: none
 L'instruction suivante ...
 ```{exec} python
-:when: never
+:when:
 del notes[5]
 ```
 
@@ -93,7 +93,7 @@ del notes[5]
 :number: none
 Qu'affiche le programme suivant?
 ```{exec} python
-:when: never
+:when:
 liste = [2, 1, 7, 3]
 liste.sort()
 ```
@@ -107,7 +107,7 @@ liste.sort()
 :number: none
 Qu'affiche le programme suivant?
 ```{exec} python
-:when: never
+:when:
 liste = [6, 2, 5, 3]
 liste.reverse()
 print(liste)
@@ -122,7 +122,7 @@ print(liste)
 :number: none
 Qu'affiche le programme suivant?
 ```{exec} python
-:when: never
+:when:
 liste = [3, 2, 8, 7]
 print(liste.sum())
 ```
@@ -136,7 +136,7 @@ print(liste.sum())
 :number: none
 Qu'affiche le programme suivant?
 ```{exec} python
-:when: never
+:when:
 liste = [3, 2, 6, 7, 1, 3, 4, 8]
 for nombre in liste:
   if nombre % 2 == 1:
@@ -165,7 +165,7 @@ for nombre in liste:
 :number: none
 Qu'affiche le programme suivant?
 ```{exec} python
-:when: never
+:when:
 liste = [3, 2, 6, 7, 1, 3, 4, 8]
 for n in range(5):
   if n in liste:
@@ -202,18 +202,18 @@ L'instruction pour générer un nombre entier aléatoire entre 3 inclu et 7 incl
 est ...
 
 -   ```{exec} python
-    :when: never
+    :when:
     from random import randint
     nombre = randint(2, 7)
     ```
 -   :
     ```{exec} python
-    :when: never
+    :when:
     from random import randint
     nombre = randint(3, 7)
     ```
 -   ```{exec} python
-    :when: never
+    :when:
     from random import randint
     nombre = randint(3, 8)
     ```

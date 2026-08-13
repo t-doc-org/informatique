@@ -90,7 +90,7 @@ Le contenu d'un page a été défini en HTML de la manière suivante.
 
 ```{exec} html
 :name: selecteur-type
-:when: never
+:when:
 :style: height: 30rem;
 <!DOCTYPE html>
 <html>
@@ -145,7 +145,7 @@ Au moyen du CSS, modifiez les éléments suivants:
 ```{exec} html
 :editor: 76fa6122-75cd-449c-a539-d4141d082c56
 :after: selecteur-type
-:when: load
+:when: load click
 :reset: hide
 <style>
 /*  Écrivez le CSS ici */
@@ -156,7 +156,7 @@ Au moyen du CSS, modifiez les éléments suivants:
 ```{exec} html
 :editor:
 :after: selecteur-type
-:when: load
+:when: load click
 :reset: hide
 <style>
 h1 {
@@ -224,7 +224,7 @@ Le contenu d'un page a été défini en HTML de la manière suivante.
 
 ```{exec} html
 :name: selecteur-id
-:when: never
+:when:
 <style>
 table, th, td {
   border: 1px solid black;
@@ -251,7 +251,6 @@ p {
 </style>
 ```
 
-
 Au moyen du CSS, modifiez les éléments suivants:
 
 1.  Le premier paragraphe doit être en gras et justifié.
@@ -261,7 +260,7 @@ Au moyen du CSS, modifiez les éléments suivants:
 :editor: 7abfb302-7e87-4061-85ba-7ccf0a2ad1b1
 :reset: hide
 :after: selecteur-id
-:when: load
+:when: load click
 :style: height: 30rem;
 <!DOCTYPE html>
 <html>
@@ -428,7 +427,7 @@ Au moyen du CSS, modifiez les éléments suivants:
 ```{exec} html
 :editor:
 :after: selecteur-id
-:when: load
+:when: load click
 :style: height: 30rem;
 <!DOCTYPE html>
 <html>
@@ -623,7 +622,7 @@ Le contenu d'un page a été défini en HTML de la manière suivante.
 
 ```{exec} html
 :name: selecteur-classe
-:when: never
+:when:
 <style>
 td {
   padding: 30px;
@@ -648,7 +647,7 @@ Au moyen du CSS, modifiez les éléments suivants:
 :editor: 4b0c4093-3e13-461a-9bdd-426319a4344e
 :reset: hide
 :after: selecteur-classe
-:when: load
+:when: load click
 :style: height: 30rem;
 <!DOCTYPE html>
 <html>
@@ -705,7 +704,7 @@ Au moyen du CSS, modifiez les éléments suivants:
 ```{exec} html
 :editor:
 :after: selecteur-classe
-:when: load
+:when: load click
 :style: height: 30rem;
 <!DOCTYPE html>
 <html>

@@ -27,7 +27,7 @@ Voici une page web qui permet de calculer les solutions d'une équation
 du deuxième degré.
 
 ```{exec} html
-:when: load
+:when: load click
 :editor: 7f6e9026-6aaf-452b-a60c-88c8a86b8a32
 :style: height: 30rem
 :output-style: height: 30rem

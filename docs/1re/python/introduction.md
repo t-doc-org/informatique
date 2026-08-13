@@ -17,7 +17,7 @@ Comme en français, il comprend:
 Exemple:
 
 ```{exec} python
-:when: never
+:when:
 :linenos:
 prenom = input("Quel est ton prénom? ")
 age = int(input("Quel est ton âge? "))

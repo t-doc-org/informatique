@@ -59,7 +59,7 @@ Modifiez la couleur du menu, du texte, etc.
 :editor: 775b3aa8-74b0-4ac9-9233-3c9779c4dac5
 :reset: hide
 :after: barre-navigation
-:when: load
+:when: load click
 :style: height: 30rem;
 <!DOCTYPE html>
 <html>
@@ -160,7 +160,7 @@ Modifiez la couleur du menu, du texte, etc.
 :editor: f027de1b-d4ad-442f-9c13-f3d3494c802b
 :reset: hide
 :name: barre-navigation
-:when: never
+:when:
 <style>
 html {
   scroll-padding-top: 3.5rem;
@@ -200,7 +200,7 @@ html {
 ```{exec} html
 :editor:
 :after: barre-navigation
-:when: load
+:when: load click
 :style: height: 30rem;
 <!DOCTYPE html>
 <html>

@@ -12,27 +12,27 @@ Nous en avons déjà rencontrées plusieurs:
 
 - print(...): affiche sur la console ce qui est indiqué entre parenthèse
   ```{exec} python
-  :when: never
+  :when:
   print("Hello world")
   ```
 - input(...): demande à l'utilisateur d'entrer une donnée
   ```{exec} python
-  :when: never
+  :when:
   prenom = input("Quel est ton prénom?")
   ```
 - int(...): convertit ce qui est entre parenthèse en nombre entier
   ```{exec} python
-  :when: never
+  :when:
   age = int(input("Quel est ton âge?"))
   ```
 - float(...): convertit ce qui est entre parenthèse en nombre à virgule
   ```{exec} python
-  :when: never
+  :when:
   prix = float(input("Quel est le prix de l'article?"))
   ```
 - range(...): renvoie une liste de nombres (de 0 à la valeur entre parenthèse - 1)
   ```{exec} python
-  :when: never
+  :when:
   for _ in range(3):
     print("Bonjour!")
   ```
@@ -52,7 +52,7 @@ ainsi que la constante &#960; notée `pi`. Dans le module **random**, la fonctio
 Avant de pouvoir utiliser une fonction d'un module, il faut l'importer ainsi:
 
 ```{exec} python
-:when: never
+:when:
 from nom_du_module import nom_de_la_fonction
 ```
 
@@ -128,7 +128,7 @@ De manière générale, la syntaxe de définition et d'appel de fonction est la
 suivante:
 
 ```{exec} python
-:when: never
+:when:
 # définition de la fonction
 def nom_de_la_fonction(parametre_1, parametre_2, ...):
   # instruction 1
@@ -275,27 +275,27 @@ S'il y a une erreur, expliquez et corrigez le problème.
 3.  Pas correct. Les variables `largeur` et `longueur` ne sont pas définies dans
     le programme. Il faut modifier la ligne 8 par:
     ```{exec} python
-    :when: never
+    :when:
     calcule_et_affiche_aire_rectangle(base, hauteur)
     ```
 4.  Correct.
 5.  Pas correct. Attention dans ce cas, l'ordre des paramètres a de
     l'importance. Il faut modifier la ligne 5 par:
     ```{exec} python
-    :when: never
+    :when:
     calcule_et_affiche_pourcentage(52, 15)
     ```
 6.  Pas correct. La fonction `calcule_et_affiche_aire_carre(cote)` a un
     paramètre. Lorsqu'on l'appelle, il est obligatoire de passer un argument. Il
     faut modifier la ligne 6 par:
     ```{exec} python
-    :when: never
+    :when:
     calcule_et_affiche_aire_carre(cote)
     ```
 7.  Pas correct. Il manque l'import de `pi` du module math. Il faut ajouter la
     ligne suivant au tout début de programme:
     ```{exec} python
-    :when: never
+    :when:
     from math import pi
     ```
 ````

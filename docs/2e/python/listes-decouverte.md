@@ -41,7 +41,7 @@ Répondez aux questions en lien avec le programme suivant:
 
 ```{exec} python
 :linenos:
-:when: never
+:when:
 notes = [6, 5, 4.5, 5, 3.5]
 print(notes)
 notes.append(5.5)
@@ -140,7 +140,7 @@ Que va afficher ce programme?
 
 ```{exec} python
 :linenos:
-:when: never
+:when:
 notes = [6, 5, 4.5, 5, 3.5]
 for i in notes:
   print(i)

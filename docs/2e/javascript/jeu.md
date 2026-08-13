@@ -72,7 +72,7 @@ Programmez les éléments suivants en JavaScript (dans la partie `<script>`):
 3.  Définissez la fonction `changeEtat(event)` qui a un paramètre `event` qui est
     déclenché par le clic de la souris (ou du touchpad).
     ```{exec} html
-    :when: never
+    :when:
     function changeEtat(event) {
         const c = event.target;    // récupère l'élément html ciblé par le clic
         ...                        // écrit "clic" dans la cellule
@@ -94,7 +94,7 @@ cellule, celle-ci change d'état. Si elle est allumée (colorée), elle s'étein
     -   dans la partie style, définissez le style de la classe "allume"
         (choisissez une couleur de fond).
         ```{exec} html
-        :when: never
+        :when:
         .allume {
         /* complétez par la propriété et la valeur désirée */
         }
@@ -102,7 +102,7 @@ cellule, celle-ci change d'état. Si elle est allumée (colorée), elle s'étein
     -   ajoutez la classe "allume" au `<td>` de la cellule pour l'allumer et en
         la supprimant pour l'éteindre. Cela se fait au moyen de:
         ```{exec} html
-        :when: never
+        :when:
         c.classList.toggle("allume");  // ajoute la classe "allume" à l'élément ou l'efface
         ```
         Ce code doit remplacer `c.textContent = "clic"`.
@@ -124,7 +124,7 @@ Parcourez toutes les cellules (ce que vous avez déjà programmé à l'étape 3)
 colorez-en certaines en utilisant la fonction `Math.random()` et en leur
 ajoutant la classe "allume".
 ```{exec} html
-:when: never
+:when:
 c.classList.add("allume");  // ajoute la classe entre parenthèse à l'élément c
 ```
 ````
@@ -162,7 +162,7 @@ Il est plus facile de travailler avec des coordonnées x et y pour le tableau
 plutôt que d'utiliser l'index. Voici le code qui permet de convertir l'index
 en coordonnées x et y:
 ```{exec} html
-:when: never
+:when:
 const c = event.target;             // retourne l'élément ciblé
 const index = cellules.indexOf(c);  // retourne l'index de l'élément ciblé
 const x = index % larg;             // calcule la coordonnée x en fonction de l'index
@@ -170,7 +170,7 @@ const y = Math.trunc(index / larg); // calcule la coordonnée y en fonction de l
 ```
 Et celui pour convertir les coordonnées x et y en indexemple:
 ```{exec} html
-:when: never
+:when:
 function changeCoordEnIndex(x, y) {
     return y * larg + x;
 }
@@ -180,7 +180,7 @@ function changeCoordEnIndex(x, y) {
 ``````
 
 ```{exec} html
-:when: load
+:when: load click
 :editor: 74030d10-6a1c-40a9-8e43-5818b63085cf
 :style: height: 30rem
 :output-style: height: 30rem

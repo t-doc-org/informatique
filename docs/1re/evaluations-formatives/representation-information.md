@@ -100,7 +100,7 @@ Représentez sur le quadrillage l'image dont l'encodage est le suivant:
 
 ```{exec} pnm
 :name: image
-:when: never
+:when:
 P1
 5 4
 0 1 1 0 0 1 1 1 0 0

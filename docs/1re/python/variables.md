@@ -81,7 +81,7 @@ et de la valeur.
 
 ```{exec} python
 :linenos:
-:when: never
+:when:
 age = 17                  # La variable age est de type int
 prenom = "Bob"            # La variable prenom est de type str
 moyenne = 5.2             # La variable moyenne est de type float
@@ -207,7 +207,7 @@ tableau d'états.
 
 ```{exec} python
 :linenos:
-:when: never
+:when:
 x = 10
 y = 2
 z = y * x
@@ -255,7 +255,7 @@ tableau d'états.
 
 ```{exec} python
 :linenos:
-:when: never
+:when:
 nombre_habitants = 150 + 25 * 2
 cout = 100
 prix = nombre_habitants * cout

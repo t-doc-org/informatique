@@ -9,7 +9,7 @@ La boucle while (qui signifie "tant que" en anglais) permet de répéter un bloc
 d'instructions tant qu'une condition est vraie.
 
 ```{exec} python
-:when: never
+:when:
 while condition:
   instruction 1
   instruction 2

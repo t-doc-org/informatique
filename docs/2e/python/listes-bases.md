@@ -48,7 +48,7 @@ crochets sans rien à l'intérieur.
 
 ```{exec} python
 :linenos:
-:when: never
+:when:
 liste_vide = []
 ```
 
@@ -88,7 +88,7 @@ correspond à sa position dans la liste en partant de 0 depuis la gauche.
 
 ```{exec} python
 :linenos:
-:when: never
+:when:
 notes = [5.5, 4.8, 6.0, 6.0, 3.5, 4.5]
 ```
 
@@ -302,7 +302,7 @@ ma_liste.count(mon_element)
 
     ```{exec} python
     :linenos:
-    :when: never
+    :when:
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
     print(liste[4])
     ```
@@ -313,7 +313,7 @@ ma_liste.count(mon_element)
 
     ```{exec} python
     :linenos:
-    :when: never
+    :when:
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
     liste[5] = 6
     print(liste)
@@ -326,7 +326,7 @@ ma_liste.count(mon_element)
 
     ```{exec} python
     :linenos:
-    :when: never
+    :when:
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
     liste.remove(5)
     print(liste)
@@ -338,7 +338,7 @@ ma_liste.count(mon_element)
 
     ```{exec} python
     :linenos:
-    :when: never
+    :when:
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
     liste.sort()
     print(liste)
@@ -350,7 +350,7 @@ ma_liste.count(mon_element)
 
     ```{exec} python
     :linenos:
-    :when: never
+    :when:
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
     del liste[2]
     print(liste)
@@ -362,7 +362,7 @@ ma_liste.count(mon_element)
 
     ```{exec} python
     :linenos:
-    :when: never
+    :when:
     liste = [1, 5, 4, 12, 7, 9, 10, 2]
     liste.insert(1, 6)
     print(liste)

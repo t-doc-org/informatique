@@ -37,7 +37,7 @@ et votre imagination.
 ```{exec} python
 :name: fonctions_carte
 :class: hidden
-:when: never
+:when:
 from tdoc import svg
 
 def creation_image(largeur, hauteur, couleur):
@@ -68,7 +68,7 @@ def texte(x, y, texte, couleur, taille):
 ```{exec} python
 :name: rendu
 :class: hidden
-:when: never
+:when:
 
 # Affiche l'image
 render(img)

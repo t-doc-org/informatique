@@ -32,14 +32,14 @@ La recherche de données se fait en deux étapes:
 - Connexion à la base de données (à effectuer une fois au début du programme):
 
   ```{exec} python
-  :when: never
+  :when:
   base_donnees = sqlite3.connect("nom_de_la_base")
   ```
 
 - Exécution de la requête de sélection
 
   ```{exec} python
-  :when: never
+  :when:
   resultats = base_donnees.execute("requete_selection")
   ```
 
@@ -50,7 +50,7 @@ listes avec des parenthèses à la place des crochets). Il est donc possible
 d'afficher les lignes les unes après les autres à l'aide d'une boucle:
 
 ```{exec} python
-:when: never
+:when:
 for resultat in resultats:
   print(resultat)
 ```
@@ -72,7 +72,7 @@ Comme chaque ligne fonctionne comme une liste, il est tout à fait possible
 d'accéder directement à chaque élément grace à son index:
 
 ```{exec} python
-:when: never
+:when:
 for resultat in resultats:
   print("Nom:", resultats[0], "Pays:", resultats[1], "Label:", resultats[2])
 ```
@@ -88,7 +88,7 @@ Nom: Taylor Swift Pays: United States Label: Big Machine Records
 À la fin, il faut encore se déconnecter de la base de données.
 
 ```{exec} python
-:when: never
+:when:
 base_donnees.close()
 ```
 
@@ -112,7 +112,7 @@ Le programme ci-dessous:
 
 ```{exec} python
 :name: creation
-:when: never
+:when:
 :class: hidden
 import contextlib
 import pathlib
@@ -262,34 +262,34 @@ L'ajout de données se fait en trois étapes:
 - Connexion à la base de données (à effectuer une fois au début du programme):
 
   ```{exec} python
-  :when: never
+  :when:
   base_donnees = sqlite3.connect("nom_de_la_base")
   ```
   Par exemple:
 
   ```{exec} python
-  :when: never
+  :when:
   base_donnees = sqlite3.connect("music.sqlite")
   ```
 
 - Exécution de la requête d'ajout
 
   ```{exec} python
-  :when: never
+  :when:
   base_donnees.execute("requete_ajout")
   ```
 
   Par exemple:
 
   ```{exec} python
-  :when: never
+  :when:
   base_donnees.execute("insert into song values ('Leave Right Now', 2017, 'Life Changes', 'country');")
   ```
 
 - Écriture dans la base de données (à effectuer à la fin de toutes les requêtes)
 
   ```{exec} python
-  :when: never
+  :when:
   base_donnees.commit()
   ```
 
@@ -322,7 +322,7 @@ Avant d'ajouter des informations dans une table, il est préférable de vérifie
 que ces informations n'y sont pas déjà.
 
 ```{exec} python
-:when: never
+:when:
 if resultats > 0:
   # Ajout des informations
 else:

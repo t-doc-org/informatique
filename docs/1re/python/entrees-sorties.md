@@ -240,7 +240,7 @@ chaîne de caractères (de type `str`). Pour effectuer des calculs, il faut la
 convertir en `int` (nombre entier) ou en `float` (nombre à virgule).
 
 ```{exec} python
-:when: never
+:when:
 nom_variable = input("...")
 ```
 

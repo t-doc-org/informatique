@@ -23,7 +23,7 @@ Aux échecs, chaque pièce se déplace différemment:
 
 ```{exec} python
 :name: py-chess
-:when: never
+:when:
 :class: hidden
 from chess import *
 moves = []
@@ -32,7 +32,7 @@ def deplace(dx, dy): moves.append((dx, dy))
 
 ```{exec} python
 :name: py-deplacements
-:when: never
+:when:
 :class: hidden
 def nord():
   deplace(0, 1)
@@ -49,7 +49,7 @@ def ouest():
 
 ```{exec} python
 :name: py-deplacements-2
-:when: never
+:when:
 :class: hidden
 def sud_est():
   deplace(1, -1)
@@ -73,7 +73,7 @@ def nord_ouest():
 :after: py-chess py-deplacements
 :then: py-roi-1-check
 :editor: 9c8a69d8-8540-4864-901c-395277902e53
-:when: load
+:when: load click
 nord()
 est()
 nord()
@@ -83,7 +83,7 @@ ouest()
 
 ```{exec} python
 :name: py-roi-1-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(5, 4).piece(White.king, 2, 0), moves,
@@ -113,13 +113,13 @@ minimum de coups.
 :after: py-chess py-deplacements
 :then: py-tour-1-check
 :editor: 5352b74a-be0a-46e9-966c-e61ed25c766c
-:when: load
+:when: load click
 # Écrivez le programme ici
 ```
 
 ```{exec} python
 :name: py-tour-1-check
-:when: never
+:when:
 :class: hidden
 board = Board(5, 5)
 board.piece(Black.pawn, 1, 1)
@@ -159,7 +159,7 @@ De cette manière le programme est plus lisible!
 :after: py-chess py-deplacements
 :then: py-tour-1-check
 :editor: d788a976-e9e5-41ec-83f4-9215b0f62b19
-:when: load
+:when: load click
 # définition de la fonction diagonale
 def diagonale():
   est()
@@ -198,7 +198,7 @@ de nouvelles fonctions ont été définies.
 ```{exec} python
 :after: py-chess py-deplacements py-deplacements-2
 :then: py-roi-3-check
-:when: load
+:when: load click
 :editor: e617f139-035e-4af2-b49f-3620f38349e7
 nord_ouest()
 nord()
@@ -208,7 +208,7 @@ sud_ouest()
 
 ```{exec} python
 :name: py-roi-3-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(5, 4).piece(White.king, 2, 0), moves,
@@ -238,7 +238,7 @@ Modifiez le programme pour que la tour suive les numéros.
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-tour-2-check
-:when: load
+:when: load click
 :editor: a19e71d9-284c-42e3-885f-a60f918132d7
 for _ in range(3):
   nord()
@@ -246,7 +246,7 @@ for _ in range(3):
 
 ```{exec} python
 :name: py-tour-2-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(5, 4).piece(White.rook, 0, 0), moves,
@@ -286,7 +286,7 @@ fonction.
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-tour-2-check
-:when: load
+:when: load click
 :editor: a64c9b31-40ab-4001-83e3-ddc6b6f53c18
 # définition de la fonction aller_nord qui prend le nombre de cases en paramètre
 def aller_nord(nb_cases):
@@ -329,7 +329,7 @@ aller_est(2)
 
 ```{exec} python
 :name: py-deplacements-3
-:when: never
+:when:
 :class: hidden
 def nord(n):
   deplace(0, n)
@@ -354,14 +354,14 @@ noirs en un minimum de coups.
 ```{exec} python
 :after: py-chess py-deplacements-3
 :then: py-tour-3-check
-:when: load
+:when: load click
 :editor: 80e4aab5-c336-456f-9b40-c5acd3911445
 # Écrivez le programme ici
 ```
 
 ```{exec} python
 :name: py-tour-3-check
-:when: never
+:when:
 :class: hidden
 board = Board(5, 5)
 board.piece(Black.pawn, 0, 4)
@@ -396,7 +396,7 @@ La fonction `deplace(x, y)` a été définie.
 ```{exec} python
 :after: py-chess
 :then: py-dame-1-check
-:when: load
+:when: load click
 :editor: a9e3a33d-87ea-4262-a3b2-4e96bd862fac
 deplace(2, 0)
 deplace(-4, 4)
@@ -405,7 +405,7 @@ deplace(0, -3)
 
 ```{exec} python
 :name: py-dame-1-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(8, 8).piece(White.queen, 5, 0), moves,
@@ -433,7 +433,7 @@ mouvement ("ne", "se", "so" ou "no") et le deuxième est le nombre de cases.
 ```{exec} python
 :after: py-chess
 :then: py-fou-1-check
-:when: load
+:when: load click
 :editor: 3177f22c-18e0-4fb0-9de3-1b1e61e9c543
 # remplacez les ... par la bonne direction
 def deplace_fou(direction, nb_cases):
@@ -455,7 +455,7 @@ deplace_fou("ne", 5)
 
 ```{exec} python
 :name: py-fou-1-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(8, 8).piece(White.bishop, 2, 0), moves,
@@ -487,7 +487,7 @@ deplace_fou("se", 1)
 
 ```{exec} python
 :name: py-deplacements-fou
-:when: never
+:when:
 :class: hidden
 def deplace_fou(direction, nb_cases):
   if direction == "ne":
@@ -512,7 +512,7 @@ avec un pion blanc.
 ```{exec} python
 :after: py-chess py-deplacements-fou
 :then: py-fou-2-check
-:when: load
+:when: load click
 :editor: 455b60ce-403f-4995-9e3f-98f86214fb04
 # Écrivez le programme ici
 
@@ -520,7 +520,7 @@ avec un pion blanc.
 
 ```{exec} python
 :name: py-fou-2-check
-:when: never
+:when:
 :class: hidden
 board = Board(8, 8)
 board.piece(White.pawn, 4, 1)
@@ -557,7 +557,7 @@ la direction, est nécessaire.
 ```{exec} python
 :after: py-chess
 :then: py-roi-4-check
-:when: load
+:when: load click
 :editor: 8b17e107-454d-48ec-a45e-a626527baa8a
 # Complétez la fonction
 def deplace_roi(...):
@@ -585,7 +585,7 @@ def deplace_roi(...):
 
 ```{exec} python
 :name: py-roi-4-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(8, 8).piece(White.king, 4, 0), moves,
@@ -638,7 +638,7 @@ noirs. Quels paramètres sont nécessaires?
 ```{exec} python
 :after: py-chess
 :then: py-cavalier-1-check
-:when: load
+:when: load click
 :editor: a3e67fea-d5fb-4f80-8161-c63120091a6f
 # Écrivez le programme ici
 
@@ -647,7 +647,7 @@ noirs. Quels paramètres sont nécessaires?
 
 ```{exec} python
 :name: py-cavalier-1-check
-:when: never
+:when:
 :class: hidden
 board = Board(8, 8)
 board.piece(Black.pawn, 1, 4)
@@ -708,7 +708,7 @@ deplace_cavalier("en")
 
 ```{exec} python
 :name: py-deplacements-cavalier
-:when: never
+:when:
 :class: hidden
 def deplace_cavalier(direction):
   if direction == "ne":
@@ -742,7 +742,7 @@ minimum de coups.
 ```{exec} python
 :after: py-chess py-deplacements-cavalier
 :then: py-cavalier-2-check
-:when: load
+:when: load click
 :editor: 0f472020-c25d-4d14-a443-e647c6c737fe
 # Écrivez le programme ici
 
@@ -751,7 +751,7 @@ minimum de coups.
 
 ```{exec} python
 :name: py-cavalier-2-check
-:when: never
+:when:
 :class: hidden
 board = Board(8, 8)
 board.piece(Black.pawn, 3, 2)
@@ -787,7 +787,7 @@ En utilisant la fonction `deplace(x, y)`, définissez une fonction
 ```{exec} python
 :after: py-chess
 :then: py-dame-2-check
-:when: load
+:when: load click
 :editor: 27976cba-efa5-45db-9a18-9fffaf4ceeb6
 # Écrivez le programme ici
 
@@ -795,7 +795,7 @@ En utilisant la fonction `deplace(x, y)`, définissez une fonction
 
 ```{exec} python
 :name: py-dame-2-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(8, 8).piece(White.queen, 3, 0), moves,
@@ -838,7 +838,7 @@ deplace_dame("s", 1)
 
 ```{exec} python
 :name: py-deplacements-dame
-:when: never
+:when:
 :class: hidden
 def deplace_dame(direction, nb_cases):
   if direction == "n":
@@ -870,7 +870,7 @@ minimum de coups en évitant les cases avec les pièces blanches.
 ```{exec} python
 :after: py-chess py-deplacements-dame
 :then: py-dame-3-check
-:when: load
+:when: load click
 :editor: 54d79281-f256-403d-ae1e-64e0f5bd276b
 # Écrivez le programme ici
 
@@ -878,7 +878,7 @@ minimum de coups en évitant les cases avec les pièces blanches.
 
 ```{exec} python
 :name: py-dame-3-check
-:when: never
+:when:
 :class: hidden
 board = Board(8, 8)
 board.piece(White.pawn, 0, 1)
@@ -928,7 +928,7 @@ précédent, déplacez le cavalier pour prendre tous les pions noirs en un minim
 ```{exec} python
 :after: py-chess py-deplacements-cavalier
 :then: py-cavalier-3-check
-:when: load
+:when: load click
 :editor: 09e9312f-e506-4252-9d81-0452340a023e
 # Écrivez le programme ici
 
@@ -936,7 +936,7 @@ précédent, déplacez le cavalier pour prendre tous les pions noirs en un minim
 
 ```{exec} python
 :name: py-cavalier-3-check
-:when: never
+:when:
 :class: hidden
 board = Board(4, 4)
 board.piece(Black.pawn, 2, 0)
@@ -983,7 +983,7 @@ précédent, déplacez le cavalier pour prendre tous les pions noirs en un minim
 ```{exec} python
 :after: py-chess py-deplacements-cavalier
 :then: py-cavalier-4-check
-:when: load
+:when: load click
 :editor: bcb5a1f2-98ef-4e0d-85f6-c8d4d4e46ea5
 # Écrivez le programme ici
 
@@ -991,7 +991,7 @@ précédent, déplacez le cavalier pour prendre tous les pions noirs en un minim
 
 ```{exec} python
 :name: py-cavalier-4-check
-:when: never
+:when:
 :class: hidden
 board = Board(5, 5)
 for i in range(5):
@@ -1010,14 +1010,14 @@ await render_check_and_take(board.piece(White.knight, 2, 2), moves)
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-tour-2-check
-:when: load
+:when: load click
 :editor: de1f184a-7716-4fbc-97c3-3f8dc8e37b26
 # Écrivez le programme ici
 ```
 
 ```{exec} python
 :name: py-tour-2-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(5, 4).piece(White.rook, 0, 0), moves,
@@ -1044,14 +1044,14 @@ for _ in range(3):
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-tour-3-check
-:when: load
+:when: load click
 :editor: 4efbf6a9-e18e-463a-9a69-8e651706e508
 # Écrivez le programme ici
 ```
 
 ```{exec} python
 :name: py-tour-3-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(5, 4).piece(White.rook, 0, 0), moves,
@@ -1080,14 +1080,14 @@ for _ in range(3):
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-roi-1-check
-:when: load
+:when: load click
 :editor: c66f739b-be52-4940-b368-d5b9b1c117d3
 # Écrivez le programme ici
 ```
 
 ```{exec} python
 :name: py-roi-1-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(5, 5).piece(White.king, 0, 0), moves,
@@ -1113,14 +1113,14 @@ for _ in range(4):
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-roi-2-check
-:when: load
+:when: load click
 :editor: 33fa19d1-6896-423a-a54f-d61dcf677153
 # Écrivez le programme ici
 ```
 
 ```{exec} python
 :name: py-roi-2-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(5, 5).piece(White.king, 0, 0), moves,
@@ -1164,7 +1164,7 @@ nouvelle fonction?
 ```{exec} python
 :after: py-chess py-deplacements
 :then: py-roi-3-check
-:when: load
+:when: load click
 :editor: 85b69fdf-28f8-410a-b5e7-3114489c1e7b
 # Définition de la fonction
 def aller_nord_est():
@@ -1179,7 +1179,7 @@ aller_nord_est()
 
 ```{exec} python
 :name: py-roi-3-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(5, 5).piece(White.king, 0, 0), moves,
@@ -1218,7 +1218,7 @@ gauche (`dx < 0`) ou la droite (`dx > 0`) et / ou le haut (`dy > 0`) ou le bas
 
 ```{exec} python
 :name: py-roi
-:when: never
+:when:
 :editor:
 def deplace_roi(direction):
   x, y = 0, 0
@@ -1235,7 +1235,7 @@ indiquées, dans l'ordre.
 ```{exec} python
 :after: py-chess py-roi
 :then: py-roi-check
-:when: load
+:when: load click
 :editor:
 deplace_roi('n')
 deplace_roi('se')
@@ -1245,7 +1245,7 @@ deplace_roi('o')
 
 ```{exec} python
 :name: py-roi-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(3, 3).piece(White.king, 1, 1), moves,
@@ -1260,7 +1260,7 @@ indiquées, dans l'ordre. Évitez les répétitions.
 ```{exec} python
 :after: py-chess py-roi
 :then: py-roi-2-check
-:when: load
+:when: load click
 :editor:
 for i in range(4):
   deplace_roi('e')
@@ -1273,7 +1273,7 @@ for i in range(3):
 
 ```{exec} python
 :name: py-roi-2-check
-:when: never
+:when:
 :class: hidden
 await render_and_check(
   Board(5, 4).piece(White.king, 0, 0), moves,

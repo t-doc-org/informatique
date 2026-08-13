@@ -33,7 +33,7 @@ create table stock (
 
 ```{exec} sql
 :name: sql-stock-select
-:when: never
+:when:
 :class: hidden
 select * from stock;
 ```
@@ -53,7 +53,7 @@ sachant que `no_p` et `prix` sont des entiers et que `nom` et
 
 ```{exec} sql
 :name: sql-produit-select
-:when: never
+:when:
 :class: hidden
 select * from produit;
 ```
@@ -382,7 +382,7 @@ Ajoutez une ligne avec vos propres informations sauf le numéro de téléphone.
 
 ```{exec} sql
 :name: sql-eleve-select
-:when: never
+:when:
 :class: hidden
 select * from eleve;
 ```
@@ -439,7 +439,7 @@ insert into crepe (nom, description) values
 
 ```{exec} sql
 :name: sql-crepe-select
-:when: never
+:when:
 :class: hidden
 select * from crepe;
 ```
@@ -461,7 +461,7 @@ Insérez les données du tableau ci-dessous.
 
 ```{exec} sql
 :name: sql-boisson-select
-:when: never
+:when:
 :class: hidden
 select * from boisson;
 ```

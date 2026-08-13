@@ -171,7 +171,7 @@ select * from emprunt;
 ````{solution}
 ```{exec} sql
 :name: sql-biblio
-:when: never
+:when:
 :include: biblio-creation.sql
 ```
 ````
@@ -184,7 +184,7 @@ Toutes les requêtes de cet exercice se font dans une seule table.
 :name: sql-biblio-insert
 :after: sql-biblio
 :include: biblio-insertion.sql
-:when: never
+:when:
 :class: hidden
 ```
 

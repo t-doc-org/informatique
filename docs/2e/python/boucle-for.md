@@ -9,7 +9,7 @@ tel que parcourir une [chaîne de caractères](#string) ou une
 [liste](listes-for.md) un élément après l'autre.
 
 ```{exec} python
-:when: never
+:when:
 for _ in range(nb_repetitions):
   instruction 1
   instruction 2
@@ -54,7 +54,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog6.1
-    :when: never
+    :when:
     :linenos:
     for i in range(3):
       print("Hello")
@@ -90,7 +90,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog6.2
-    :when: never
+    :when:
     :linenos:
     for i in range(4):
       print(i)
@@ -127,7 +127,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog6.3
-    :when: never
+    :when:
     :linenos:
     for i in range(2):
       print("i")
@@ -164,7 +164,7 @@ Cochez la bonne réponse.
 
     ```{exec} python
     :name: prog6.4
-    :when: never
+    :when:
     :linenos:
     for i in range(5):
       print(i+1)
@@ -264,7 +264,7 @@ for nombre in range(1, 13):
 Que va afficher ce programme?
 ```{exec} python
 :linenos:
-:when: never
+:when:
 somme = 0
 for nombre in range(6):
   somme += nombre
@@ -314,7 +314,7 @@ Indiquez l'ordre d'exécution des lignes et ce qu'affichera le programme.
 
 ```{exec} python
 :linenos:
-:when: never
+:when:
 a = 4
 b = 1
 for i in range (3):
@@ -357,7 +357,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
 1.  Quel(s) code(s) correspond(ent) à la boucle `for` ci-dessous?
 
     ```{exec} python
-    :when: never
+    :when:
     :linenos:
     for i in range(5):
       print(i)
@@ -366,7 +366,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
     ````{quiz-check}
     - :
       ```{exec} python
-      :when: never
+      :when:
       :linenos:
       x = 0
       while x < 5:
@@ -374,20 +374,20 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
         x += 1
       ```
     - ```{exec} python
-      :when: never
+      :when:
       :linenos:
       while x < 5:
         print(x)
       ```
     - ```{exec} python
-      :when: never
+      :when:
       x = 0
       while x < 6:
         print(x)
         x += 1
       ```
     - ```{exec} python
-      :when: never
+      :when:
       :linenos:
       x = 0
       while x < 5:
@@ -399,7 +399,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
 2.  Quel(s) code(s) correspond(ent) à la boucle `for` ci-dessous?
 
     ```{exec} python
-    :when: never
+    :when:
     :linenos:
     for i in range(4):
       print(i + 1)
@@ -408,7 +408,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
     ````{quiz-check}
     - :
       ```{exec} python
-      :when: never
+      :when:
       :linenos:
       x = 1
       while x < 5:
@@ -417,7 +417,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
       ```
     - :
       ```{exec} python
-      :when: never
+      :when:
       :linenos:
       x = 0
       while x < 4:
@@ -425,14 +425,14 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
         print(x)
       ```
     - ```{exec} python
-      :when: never
+      :when:
       x = 0
       while x < 5:
         print(x+1)
         x += 1
       ```
     - ```{exec} python
-      :when: never
+      :when:
       :linenos:
       x = 1
       while x < 5:
@@ -444,7 +444,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
 3.  Quel(s) code(s) correspond(ent) à la boucle `while` ci-dessous?
 
     ```{exec} python
-    :when: never
+    :when:
     :linenos:
     x = 4
     while x < 7:
@@ -455,25 +455,25 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
     ````{quiz-check}
     - :
       ```{exec} python
-      :when: never
+      :when:
       :linenos:
       for i in range(4, 7):
         print(i)
       ```
     - :
       ```{exec} python
-      :when: never
+      :when:
       :linenos:
       for i in range(3):
         print(i + 4)
       ```
     - ```{exec} python
-      :when: never
+      :when:
       for i in range(3, 7):
         print(i)
       ```
     - ```{exec} python
-      :when: never
+      :when:
       :linenos:
       for i in range(4, 8):
         print(i)
@@ -483,7 +483,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
 4.  Quel(s) code(s) correspond(ent) à la boucle `while` ci-dessous?
 
     ```{exec} python
-    :when: never
+    :when:
     :linenos:
     x = 2
     while x <= 5:
@@ -494,26 +494,26 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
     ````{quiz-check}
     - :
       ```{exec} python
-      :when: never
+      :when:
       :linenos:
       for i in range(2, 6):
         print(i)
       ```
     - :
       ```{exec} python
-      :when: never
+      :when:
       :linenos:
       for i in range(1, 5):
         print(i + 1)
       ```
     - ```{exec} python
-      :when: never
+      :when:
       :linenos:
       for i in range(5):
         print(i)
       ```
     - ```{exec} python
-      :when: never
+      :when:
       :linenos:
       for i in range(2, 5):
         print(i)
@@ -528,7 +528,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
     :class: grid-1
     - :
       ```{exec} python
-      :when: never
+      :when:
       :linenos:
       n = int(input("Entrer un nombre strictement positif: "))
       while n <= 0:
@@ -538,7 +538,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
       ```
     - :
       ```{exec} python
-      :when: never
+      :when:
       :linenos:
       mot_de_passe = ""
       while mot_de_passe != "secret123":
@@ -546,7 +546,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
       print("Accès autorisé!")
       ```
     - ```{exec} python
-      :when: never
+      :when:
       :linenos:
       compte_a_rebours = 5
       while compte_a_rebours > 0:
@@ -556,7 +556,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
       ```
     - :
       ```{exec} python
-      :when: never
+      :when:
       :linenos:
       nb_cantons = int(input("Combien y a-t-il de cantons en Suisse?"))
       while nb_cantons != 26:
@@ -567,7 +567,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
       print("Bravo!")
       ```
     - ```{exec} python
-      :when: never
+      :when:
       :linenos:
       x = 1
       n = 4
