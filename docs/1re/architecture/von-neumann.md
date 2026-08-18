@@ -80,9 +80,3 @@ image qui s'affiche sur l'écran).
 Comment l'information est encodée en binaire est expliqué dans le chapitre
 [Représentation de l'information](../representation-info/index.md).
 
-
-## Vidéo
-
-```{youtube} 85XUJXHbjBo
-:title: Vidéo sur l'architecture de l'ordinateur
-```
