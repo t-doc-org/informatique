@@ -55,11 +55,10 @@ petite boule de cire. Le messager avalait ensuite cette boule...
 
 Au XVI{sup}`e` siècle, le scientifique italien Giovanni Porta dissimula un
 message dans un oeuf dur. Pour cela, il faut écrire sur la coquille avec une
-encre contenant une once[^sn1] d'alun pour une pinte[^sn2] de vinaigre. Cette solution
+encre contenant une once (unité de masse comprise entre 25 et 34 grammes) d'alun
+pour une pinte (unité de volume qui vaut environ 0.9 litre) de vinaigre. Cette solution
 traverse la coquille et se dépose sur le blanc d'oeuf. Pour lire le message, il
 suffit de peler l'oeuf.
-[^sn1]: Unité de masse comprise entre 25 et 34 grammes.
-[^sn2]: Unité de volume qui vaut environ 0.9 litre.
 
 ## Cryptographie
 
@@ -75,12 +74,11 @@ Le 15 octobre 1586, Marie Stuart est jugée pour trahison. Elle est accusée
 d'avoir pris part à un complot pour tenter d'assassiner la reine Elizabeth et
 ainsi s'emparer de la couronne d'Angleterre.
 
-Le code[^sn3] utilisé est constitué de 23 symboles qui remplacent les lettres de
-l'alphabet (sauf j, v et w), ainsi que 36 symboles représentant des mots ou des
-phrases. De plus, il y a quatre symboles qui ne font rien et un symbole qui
+Le code (ensemble des conventions et des symboles utilisés pour rendre le
+message secret) utilisé est constitué de 23 symboles qui remplacent les lettres
+de l'alphabet (sauf j, v et w), ainsi que 36 symboles représentant des mots ou
+des phrases. De plus, il y a quatre symboles qui ne font rien et un symbole qui
 indique que la lettre suivante est doublée.
-[^sn3]: Ensemble des conventions et des symboles utilisés pour rendre le message
-secret.
 
 ```{figure} images/code-mary.gif
 :alt: Tablette de cire

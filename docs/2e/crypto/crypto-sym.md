@@ -361,9 +361,8 @@ lettre a.
 
 Les chiffrements vus précédemment sont simples et donc faciles à décrypter, ce
 qui explique pourquoi ils ne sont plus utilisés aujourd'hui. Les systèmes
-modernes, comme AES[^sn1], reposent sur le chiffrement par blocs qui fonctionne
-plus ou moins de la manière suivante:
-[^sn1]: Advanced Encryption Standard
+modernes, comme AES (Advanced Encryption Standard), reposent sur le chiffrement
+par blocs qui fonctionne plus ou moins de la manière suivante:
 
 1. Remplacer les caractères par un code binaire (par exemple, par l'encodage
    ASCII), ce qui génère une chaîne de 0 et de 1.
