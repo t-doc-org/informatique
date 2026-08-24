@@ -34,12 +34,12 @@ d'origine.
 
 ````{list-grid}
 :style: grid-template-columns: 9fr 4fr;
-- Ce procédé était déjà utilisé pendant l'Antiquité par les Spartes. La scytale
-  est un morceau de bois autour duquel est entouré une bande de cuir ou de
-  parchemin. L'expéditeur écrit son message et déroule la bande qui est une
-  suite de lettre sans signification. Le messager amène cette bande, en générale
-  portée comme ceinture, au destinataire qui enroulera cette bande sur son bâton
-  de même diamètre pour lire le message en clair.
+- Ce procédé était déjà utilisé pendant l'Antiquité (~3400 av. J.-C. à 476) par
+  les Spartes. La scytale est un morceau de bois autour duquel est entouré une
+  bande de cuir ou de parchemin. L'expéditeur écrit son message et déroule la
+  bande qui est une suite de lettre sans signification. Le messager amène cette
+  bande, en générale portée comme ceinture, au destinataire qui enroulera cette
+  bande sur son bâton de même diamètre pour lire le message en clair.
 
   **Clé de chiffrement:** la largeur du bâton.
 - ```{figure} images/scytale.jpg
@@ -50,8 +50,8 @@ d'origine.
 
 ### Chiffre Rail Fence
 
-Ce procédé a été beaucoup utilisé pendant la guerre de Sécession. Le Rail Fence
-dispose les lettres en "zig-zag" sur un nombre de lignes donné.
+Ce procédé a été beaucoup utilisé pendant la guerre de Sécession (1861-1865).
+Le Rail Fence dispose les lettres en "zig-zag" sur un nombre de lignes donné.
 
 Le texte "vive le collège saint-croix" donnera le message codé sur 2 lignes:
 VVLCLEEANERIIEEOLGSITCOX\
@@ -162,6 +162,70 @@ $1.5 \cdot 10^{25}$ possibilités.
 | Chiffré | K | T | E | W | Q | J | S | V | M | A | Z | G | P | X | C | U | I | O | B | L | Y | F | R | N | D | H |
 
 **Clé de chiffrement:** le tableau de correspondance entier.
+
+`````{admonition} Le saviez vous?
+:class: attention, dropdown
+# Première Guerre mondiale - Cryptanalyse
+
+Imaginez une guerre où les armes les plus puissantes ne sont pas les canons,
+mais les crayons et les cerveaux. Pendant la Première Guerre mondiale, une
+bataille invisible s'est jouée dans l'ombre : celle des codes secrets. Pour la
+première fois de l'histoire, les décodeurs (la cryptanalyse) ont remporté une
+victoire totale sur les créateurs de codes (la cryptographie), incapables de
+s'adapter aux réalités du terrain.
+
+À cette époque, la technologie crée un paradoxe de vitesse. Grâce aux inventions
+du XIX<sup>e</sup> siècle, les messages radio voyagent instantanément d'un bout
+à l'autre de l'Europe. En revanche, le codage et le décodage se font entièrement
+à la main, sur le papier. Sur le champ de bataille, au milieu des explosions et
+du stress, les soldats n'ont pas le temps de manipuler des calculs complexes.
+Pour éviter les erreurs matérielles et transmettre les ordres à temps, les codes
+doivent rester simples et rapides à appliquer — une heure maximum. Le problème?
+Cette simplicité obligatoire rend les messages extrêmement vulnérables. Les
+chiffres utilisés n'offrent plus une sécurité suffisante, ouvrant grand la porte
+aux espions:
+
+  - Le décryptage de Louis Thévenin (1914):<br>
+    Premier message allemand cassé dès le début du conflit, offrant un avantage
+    stratégique immédiat aux Alliés.
+  - Le télégramme Zimmermann par le Royaume-Uni (1917):<br>
+    Interception d'une proposition d'alliance secrète entre l'Allemagne et le
+    Mexique, provoquant l'entrée en guerre des États-Unis.
+  - Le radiotélégramme de Georges Painvin (1er juin 1918):<br>
+    Clé d'un code allemand brisée à temps pour stopper net l'une de leurs
+    dernières grandes offensives.
+
+Cette guerre marque la fin d'une époque. Ce conflit a prouvé que le chiffrement
+artisanal à la main était devenu trop dangereux et dépassé.
+
+# Deuxième Guerre mondiale - Machine Enigma
+
+````{list-grid}
+:style: grid-template-columns: 2fr 1fr;
+-   La machine Enigma est l'un des exemples les plus célèbres de chiffrement
+    symétrique. Utilisée par l'Allemagne nazi pendant la Seconde Guerre
+    mondiale, elle était une machine électromécanique aux airs de machine à
+    écrire capable de chiffrer et déchiffrer des messages.
+
+    Elle fonctionnait selon le principe du chiffrement symétrique :
+
+      1.  Les Allemands configuraient la machine avec une clé secrète (position
+          initiale des rotors, configuration des fiches de permutation).
+      2.  Un message était saisi, et chaque lettre était transformée par un
+          système de rotors et de substitution.
+      3.  Le texte chiffré était transmis par radio.
+      4.  Le destinataire, possédant une machine Enigma configurée avec la même
+          clé, pouvait déchiffrer le message.
+
+    [Machine Enigma (Wikipédia)](https://fr.wikipedia.org/wiki/Enigma_(machine))
+
+-   ```{figure} images/enigma.jpg
+    :alt: Machine Enigma
+    :width: 80%
+    :align: center
+    source: Wikipédia
+    ```
+`````
 
 ### Attaque
 
