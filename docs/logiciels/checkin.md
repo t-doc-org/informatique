@@ -3,7 +3,7 @@
 
 # Check-in numérique
 
-Afin de pouvoir utiliser votre ordinateur de manière optinale pendant les cours,
+Afin de pouvoir utiliser votre ordinateur de manière optimale pendant les cours,
 il est nécessaire de faire certaines configurations ou installations.
 
 ## {nump}`section`. Adresse et mot de passe de l'école
@@ -138,7 +138,7 @@ Avez-vous installé Safe Exam Browser?
 
 ## {nump}`section`. Connexion à OneDrive
 
-1.  Vérifiez que que votre OneDrive `EDUETATFR` est bien connecté et
+1.  Vérifiez que votre OneDrive `EDUETATFR` est bien connecté et
     synchronisé.
     ```{figure} images/onedrive.png
     :width: 40%
@@ -156,9 +156,9 @@ Votre OneDrive `EDUETATFR` est-il connecté et synchronisé?
 ```
 
 
-## {nump}`section`. Installation de Teams et Outlook sur votre smartephone (optionnel)
+## {nump}`section`. Installation de Teams et Outlook sur votre smartphone (optionnel)
 
-Afin d'avoir les informations directement sur votre smartephone, vous pouvez y
+Afin d'avoir les informations directement sur votre smartphone, vous pouvez y
 installer Teams et Outlook à partir du store.
 
 ## {nump}`section`. Utilisation des imprimantes/photocopieuses de l'école
@@ -174,6 +174,6 @@ l'école, pour cela il faut associer votre badge et votre compte.
         ```{figure} images/nip.png
         :width: 90%
         ```
-2.  Activez votre bagde sur une photocopieuse et entrez votre PIN à 6 chiffres (à
+2.  Activez votre badge sur une photocopieuse et entrez votre PIN à 6 chiffres (à
     faire une seule fois)
 3.  Pour savoir comment imprimer, consultez [https://eduetatfr.sharepoint.com/sites/FRITIC-M365usages/SitePages/Uniflow-Online.aspx](https://eduetatfr.sharepoint.com/sites/FRITIC-M365usages/SitePages/Uniflow-Online.aspx).
