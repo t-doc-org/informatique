@@ -35,7 +35,7 @@ le mot de passe).
     ```{figure} images/reseau-etat.png
     :width: 40%
     ```
-3.  Cliquez sur "Ecole".
+3.  Cliquez sur "Ecoles".
     ```{figure} images/reseau-etudiant.png
     :width: 80%
     ```
