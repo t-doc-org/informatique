@@ -85,6 +85,7 @@ applications de votre compte privé**.
 4.  Patientez, car vous êtes nombreux à essayer de télécharger en même temps...
     ```{figure} images/patienter.png
     :width: 40%
+    source: Image générée par Copilot
     ```
 5.  Ouvrez Outlook et envoyez un mail à votre professeur.e de classe.
 
