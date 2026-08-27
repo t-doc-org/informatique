@@ -10,6 +10,7 @@ il est nécessaire de faire certaines configurations ou installations.
 
 ```{poll} 0e9fd553-5be5-4997-953e-4dab3686b5b6
 :number: none
+:close-after: 2h
 Vous souvenez-vous de votre adresse et de votre mot de passe de l'école?
 
 - oui (passez à la suite)
@@ -43,6 +44,7 @@ le mot de passe).
 
 ```{poll} a3c0142a-bf21-41f3-b287-3907daa19f28
 :number: none
+:close-after: 2h
 Êtes-vous connecté au réseau de l'école?
 
 - oui (passez à la suite)
@@ -66,6 +68,7 @@ En cas de problème de connexion [https://eduetatfr.sharepoint.com/sites/FRITIC-
 
 ```{poll} 67c5fa55-f8e3-4a9b-9045-3c123028da0a
 :number: none
+:close-after: 2h
 Avez-vous ajouté une troisième méthode d'authentification?
 
 - oui (passez à la suite)
@@ -91,6 +94,7 @@ applications de votre compte privé**.
 
 ```{poll} ce974b7c-10e5-4fab-8662-1cdde5471daf
 :number: none
+:close-after: 2h
 Avez-vous installé les applications office?
 
 - oui (passez à la suite)
@@ -104,6 +108,7 @@ Avez-vous installé les applications office?
 
 ```{poll} 6d7fc88b-bda6-4b04-9444-53bbe7bba5c5
 :number: none
+:close-after: 2h
 Avez-vous installé Teams?
 
 - oui (passez à la suite)
@@ -131,6 +136,7 @@ Version Mac:
 
 ```{poll} 044a2472-a206-4a6d-add5-99c11eb8c978
 :number: none
+:close-after: 2h
 Avez-vous installé Safe Exam Browser?
 
 - oui (passez à la suite)
@@ -150,6 +156,7 @@ Avez-vous installé Safe Exam Browser?
 
 ```{poll} 2196a474-977f-460a-8430-e0cf067af253
 :number: none
+:close-after: 2h
 Votre OneDrive `EDUETATFR` est-il connecté et synchronisé?
 
 - oui (passez à la suite)
