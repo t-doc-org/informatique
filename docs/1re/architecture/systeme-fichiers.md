@@ -48,9 +48,7 @@ Répondez aux questions:
 4.  Changez les vues possibles du système de fichiers (icones, listes, détails,
     etc.).
 
-5.  Dans l'affichage avec le détail, quelles sont les métadonnées[^sn1]
-    affichées?
-    [^sn1]: données qui décrivent une autre donnée.
+5.  Dans l'affichage avec le détail, quelles sont les métadonnées affichées?
 
     ```{solution}
     Les métadonnées sont les suivantes: le nom du fichier, l'extension, la date
