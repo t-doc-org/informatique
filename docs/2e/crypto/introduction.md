@@ -3,6 +3,17 @@
 
 # Introduction
 
+```{admonition} Intro
+:class: attention dropdown noprint instructor
+- Que signifie ou vous inspire la cryptographie?
+- Comment envoyer des messages à un camarade de classe sans que les autres
+  remarques ou comprennent? → cacher le message ou utiliser un code.
+- Stéganographie: tatouage, tablette de cire, boulette de cire, oeuf,
+  (écrire sur une feuille avec du jus de citron → chauffer)
+- Scytale: Donner les messages aux élèves (en 4 groupe), ils doivent les
+  découvrir. (10 minutes)
+```
+
 Depuis la nuit des temps, les humains ont cherché à protéger leurs secrets et à
 garantir la confidentialité de leurs échanges, développant des techniques
 ingénieuses pour transmettre des messages secrets.  Deux approches distinctes
