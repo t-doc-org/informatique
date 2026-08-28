@@ -137,9 +137,9 @@ calculs.
 ```
 
 ```{solution}
-1. Calculer $n = p \cdot q = 13 \cdot 11 = 143$.
-2. Calculer $\phi = (p - 1) \cdot (q - 1) = 12 \cdot 10 = 120$.
-3. Choisir e, tel que $120 \textrm{ mod } e \ne 0$ et e premier.\
+1. Calculez $n = p \cdot q = 13 \cdot 11 = 143$.
+2. Calculez $\phi = (p - 1) \cdot (q - 1) = 12 \cdot 10 = 120$.
+3. Choisissez e, tel que $120 \textrm{ mod } e \ne 0$ et e premier.\
    Choisissons $e = 7$, car $e$ n'est pas un divisieur de 120.
 4. En utilisant [WolframAlpha](https://www.wolframalpha.com/), il faut résoudre
    l'équation: $(7 \cdot d) \textrm{ mod } 120 = 1$.\

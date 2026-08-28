@@ -8,6 +8,13 @@
 ```{iframe} https://view.genially.com/68a5883499046bf67cdb9028
 ```
 
+```{solution}
+Énigme 1: Gallia -> 234483 <br>
+Énigme 2: MXOHV -> jules <br>
+Énigme 3: NIORGITVJQD <br>
+Code final: 318
+```
+
 ## Définition
 
 La **cryptographie symétrique**, également appelée cryptographie à clé secrète,

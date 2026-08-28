@@ -96,45 +96,6 @@ compte que c est une comedie (Joker)
 quoi on va tomber (Forrest Gump)
 ```
 
-## Exercice {nump}`exercice`
-
-**But:** Décrypter un message utilisant la substitution monoalphabétique en
-faisant une analyse de fréquences.
-
-Décryptez à l'aide de l'analyse de fréquences, le cryptogramme suivant,
-chiffré par une substitution monoalphabétique (cas général):
-
-ZRJ VDAARJ CLWJJRCK RK ERARMHRCK ZWIHRJ RK RULMP RC EHDWKJ. ZRJ EWJKWCBKWDCJ
-JDBWLZRJ CR FRMNRCK RKHR TDCERRJ GMR JMH Z'MKWZWKR BDAAMCR.
-
-Les espaces et la ponctuation ont été laissés pour faciliter l'exercice.
-
-1. Faire une [analyse de fréquences](https://www.dcode.fr/analyse-frequences)
-   des lettres, des digrammes et des caractères répétés et utiliser les
-   [tables de fréquences](frequences.md).
-2. Décrypter le message.
-
-````{tip}
-Écrivez un programme python qui permet de remplacer les lettres les unes après
-les autres.
-```{code-block} python
-:linenos:
-texte = "IMPLU SR KPXOR"
-texte = texte.replace("R", "t")
-print(texte)
-```
-Ce programme donnera:
-```{code-block} text
-IMPLU St KPXOt
-```
-````
-
-```{solution}
-**Texte clair:** les hommes naissent et demeurent libres et egaux en droits. les
-distinctions sociales ne peuvent etre fondees que sur l'utilite commune.
-
-Article 1 de la Déclaration des Droits de l'homme et du Citoyen de 1789.
-```
 
 ## Exercice {nump}`exercice`
 
@@ -218,4 +179,44 @@ Les caractères seront envoyés les uns après les autres, il y aura donc 6
 messages envoyés:\
 12266 4128 6530 6530 12860 12092
 
+```
+
+## Exercice {nump}`exercice`
+
+**But:** Décrypter un message utilisant la substitution monoalphabétique en
+faisant une analyse de fréquences.
+
+Décryptez à l'aide de l'analyse de fréquences, le cryptogramme suivant,
+chiffré par une substitution monoalphabétique (cas général):
+
+ZRJ VDAARJ CLWJJRCK RK ERARMHRCK ZWIHRJ RK RULMP RC EHDWKJ. ZRJ EWJKWCBKWDCJ
+JDBWLZRJ CR FRMNRCK RKHR TDCERRJ GMR JMH Z'MKWZWKR BDAAMCR.
+
+Les espaces et la ponctuation ont été laissés pour faciliter l'exercice.
+
+1. Faire une [analyse de fréquences](https://www.dcode.fr/analyse-frequences)
+   des lettres, des digrammes et des caractères répétés et utiliser les
+   [tables de fréquences](frequences.md).
+2. Décrypter le message.
+
+````{tip}
+Écrivez un programme python qui permet de remplacer les lettres les unes après
+les autres.
+```{code-block} python
+:linenos:
+texte = "IMPLU SR KPXOR"
+texte = texte.replace("R", "t")
+print(texte)
+```
+Ce programme donnera:
+```{code-block} text
+IMPLU St KPXOt
+```
+````
+
+```{solution}
+**Texte clair:** les hommes naissent et demeurent libres et egaux en droits. les
+distinctions sociales ne peuvent etre fondees que sur l'utilite commune.
+
+Article 1 de la Déclaration des Droits de l'homme et du Citoyen de 1789.
 ```
