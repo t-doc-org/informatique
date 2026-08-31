@@ -10,6 +10,13 @@ page-break-avoid-inside: 2
 ```
 
 ```{toctree}
+architecture
+html-css
+html-css-annexe
+python1
+python2
+python2-annexe
 representation-information
-architecture-societe
+representation-information-annexe
+societe
 ```

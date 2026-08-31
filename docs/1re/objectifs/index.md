@@ -4,8 +4,10 @@
 # Objectifs
 
 ```{toctree}
+architecture
+html-css
 python1
 python2
 encodage
-architecture-societe
+societe
 ```
