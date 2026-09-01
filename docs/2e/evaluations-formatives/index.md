@@ -10,6 +10,11 @@ page-break-avoid-inside: 2
 ```
 
 ```{toctree}
+crypto
+python1
+python2-quiz
 python2
 donnees-reseaux
+sql
+sql-annexe
 ```
