@@ -12,6 +12,25 @@
 
 ## Exercice {num2}`exercice`
 
+Recherchez les informations suivantes relatives à votre ordinateur portable:
+
+- Type de processeur
+- RAM
+- Stockage (SSD)
+- Système d'exploitation
+
+```{solution}
+Par exemple:
+
+- Type de processeur: 11th Gen Inter(R) Core(TM) i7-1165G7
+- RAM: 32 Go
+- Stockage (SSD): 954 GB
+- Système d'exploitation: Windows 11 Professionel
+```
+
+
+## Exercice {num2}`exercice`
+
 Trois ordinateurs portables sont en vente chez Digitec. Ouvrez les trois fiches
 produit:
 
