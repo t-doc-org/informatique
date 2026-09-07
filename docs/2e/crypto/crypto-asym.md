@@ -123,7 +123,7 @@ des messages en toute sécurité avec Bob.
    $d = \dots $ \
    $d = 27 \quad \;\, (3 \cdot 27) \textrm{ mod } 40 = 81 \textrm{ mod } 40 = 1 \quad \;\,$ &#9989;
 
-6. Alice garde secret sa clé privée (5, 11, 27) et publie sa clé publique (55, 43).
+6. Alice garde secret sa clé privée (5, 11, 27) et publie sa clé publique (55, 3).
 
 #### Exercice {num2}`exercice`
 
