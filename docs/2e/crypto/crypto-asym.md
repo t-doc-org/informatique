@@ -171,7 +171,7 @@ l'alphabet, plutôt que par son code ASCII étendu.
 
 Bob souhaite envoyer à Alice le message suivant: "salut".
 
-1. Bob cherche dans l'annuaire la clé publique d'Alice qui est (55, 43).
+1. Bob cherche dans l'annuaire la clé publique d'Alice qui est (55, 3).
 2. Bob transforme le message en nombre:
    s &rarr; 19, a &rarr; 01, l &rarr; 12, u &rarr; 21, t &rarr; 20.\
    Le message transformé donnera: 19 01 12 21 20.
@@ -180,12 +180,12 @@ Bob souhaite envoyer à Alice le message suivant: "salut".
    Il y aura donc 5 blocs qui seront chiffrés et envoyés séparément.
 4. Bob détermine le cryptogramme de chaque bloc, noté $m$, en utilisant la
    formule suivante:\
-   $$c = m^{43} \textrm{ mod } 55$$
-   s: $c = 19^{43} \textrm{ mod } 55 = 39$\
-   a: $c = 1^{43} \textrm{ mod } 55 = 1$\
-   l: $c = 12^{43} \textrm{ mod } 55 = 23$\
-   u: $c = 21^{43} \textrm{ mod } 55 = 21$\
-   t: $c = 20^{43} \textrm{ mod } 55 = 25$
+   $$c = m^{3} \textrm{ mod } 55$$
+   s: $c = 19^{3} \textrm{ mod } 55 = 39$\
+   a: $c = 1^{3} \textrm{ mod } 55 = 1$\
+   l: $c = 12^{3} \textrm{ mod } 55 = 23$\
+   u: $c = 21^{3} \textrm{ mod } 55 = 21$\
+   t: $c = 20^{3} \textrm{ mod } 55 = 25$
 
    Bob transmet à Alice le cryptogramme suivant composé de 5 blocs:
    39 01 23 21 25.
