@@ -480,15 +480,15 @@ create table boisson (
   prix dec(3,2) not null default 2.50
 );
 
-insert into boisson values
-  ('Espresso', 2.00),
-  ('Café', 2.00);
 insert into boisson (nom) values
   ('Café au lait'),
   ('Cappuccino'),
   ('Latte Macchiato'),
   ('Chocolat chaud'),
   ('Chocolat froid');
-insert into boisson values ('Thé', 2.00);
+insert into boisson values
+  ('Espresso', 2.00),
+  ('Café', 2.00),
+  ('Thé', 1.80);
 ```
 ````
