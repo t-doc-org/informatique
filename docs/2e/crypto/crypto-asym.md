@@ -116,7 +116,6 @@ des messages en toute sécurité avec Bob.
 4. Alice choisit $e = 3$, car $40 \textrm{ mod } 3 = 1 \ne 0$.
 5. Alice cherche $d$, $d \ne 3$ tel que $(3 \cdot d) \textrm{ mod } 40 = 1$.\
    Essais:\
-   $d = 3 \quad \quad (3 \cdot 3) \textrm{ mod } 40 = 9 \textrm{ mod } 40 = 9 \;\, \quad \quad$ &#10060; \
    $d = 4 \quad \quad (3 \cdot 4) \textrm{ mod } 40 = 12 \textrm{ mod } 40 = 12 \quad \quad$ &#10060; \
    $d = 5 \quad \quad (3 \cdot 5) \textrm{ mod } 40 = 15 \textrm{ mod } 40 = 15 \quad \quad$ &#10060; \
    $d = 6 \quad \quad (3 \cdot 6) \textrm{ mod } 40 = 18 \textrm{ mod } 40 = 18 \quad \quad$ &#10060; \
