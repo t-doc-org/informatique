@@ -13,7 +13,7 @@ présentent pas les faiblesses des systèmes symétriques.
 
 Alice souhaite envoyer un message privé à Bob:
 1. Alice écrit son message en clair.
-2. Alice crypte son message avec la clé publique de Bob mise à disposition sur
+2. Alice chiffre son message avec la clé publique de Bob mise à disposition sur
    le web.
 3. Alice envoie le {term}`cryptogramme` à Bob.
 4. Bob déchiffre le cryptogramme à l'aide de sa propre clé privée.
@@ -43,7 +43,7 @@ Les systèmes à clés publiques ont permis la mise en place de la **signature
 Alice souhaite envoyer un message à Bob de telle manière que Bob soir sûr que
 ce message vient d'Alice:
 1. Alice écrit son message en clair.
-2. Alice crypte son message avec sa clé privée.
+2. Alice chiffre son message avec sa clé privée.
 3. Alice envoie le cryptogramme à Bob.
 4. Bob déchiffre le cryptogramme à l'aide de la clé publique d'Alice.
 
