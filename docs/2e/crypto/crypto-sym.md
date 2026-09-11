@@ -55,6 +55,7 @@ d'origine.
   ```
 ````
 
+(railfence)=
 ### Chiffre Rail Fence
 
 Ce procédé a été beaucoup utilisé pendant la guerre de Sécession (1861-1865).
@@ -158,6 +159,7 @@ lettre permet de découvrir tout le message sans difficulté.
 
 Si les 25 positions possibles sont testées, le message sera découvert.
 
+(cas-general)=
 ### Cas général
 
 Pour rendre le {term}`décryptage` plus difficile, on peut substituer à chaque
@@ -263,6 +265,7 @@ Dans une **substitution polyalphabétique**, une lettre dans le texte clair peut
 Ce procédé rend le {term}`décryptage` beaucoup plus difficile, car l'analyse de
 fréquences vue précédemment ne peut pas être utilisée.
 
+(vigenere)=
 ### Chiffre de Vigenère
 
 Blaise Vigenère (1523-1596) est un diplomate, cryptologue, kabbaliste,

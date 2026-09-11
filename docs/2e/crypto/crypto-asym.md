@@ -88,6 +88,7 @@ malgré l'utilisation d'un modulo, en tirant parti des propriétés des nombres
 premiers. Il s'appuie sur la difficulté à factoriser un nombre en facteurs
 premiers.
 
+(creation-cles)=
 ### Création des clés
 
 #### Méthode
@@ -148,6 +149,7 @@ calculs.
 La clé privée est (13, 11, 103) et la clé publique est (143, 7).
 ```
 
+(chiffrement)=
 ### Chiffrement
 
 #### Méthode
@@ -201,7 +203,7 @@ Chiffrez le message $m = 34$ à l'aide du système RSA, avec la clé publique
 
 Le message chiffré est 122.
 ```
-
+(dechiffrement)=
 ### Déchiffrement
 
 #### Méthode
