@@ -381,6 +381,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
       ```
     - ```{exec} python
       :when:
+      :linenos:
       x = 0
       while x < 6:
         print(x)
@@ -426,6 +427,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
       ```
     - ```{exec} python
       :when:
+      :linenos:
       x = 0
       while x < 5:
         print(x+1)
@@ -469,6 +471,7 @@ contre il n'est pas toujours possible de convertir une boucle `while` en boucle
       ```
     - ```{exec} python
       :when:
+      :linenos:
       for i in range(3, 7):
         print(i)
       ```
