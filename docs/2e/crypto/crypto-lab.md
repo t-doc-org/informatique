@@ -19,7 +19,7 @@ Pendant ce laboratoire, vous allez faire le processus complet utilisé en
 cryptographie moderne:
 
 
-### Exercice {nump}`exercice`: Envoi de la clé symétrique avec RSA
+### Exercice {nump}`exercice`: Chiffrement et envoi de la clé symétrique avec RSA
 
 {.lower-alpha-paren}
 1.  Créez les clés publique et privée avec les valeurs $p$ et $q$ transmises
@@ -120,7 +120,7 @@ $12860^11981 \textrm{ mod } (97 \cdot 157) = 111$ -> o
 La clé de chiffrement pour Vigenère est donc **hello**.
 ```
 
-### Exercice {nump}`exercice`: Envoi d'un message avec Vigenère
+### Exercice {nump}`exercice`: Chiffrement et envoi d'un message avec Vigenère
 
 Écrivez un message (une phrase) au groupe qui vous a transmis la clé
 symétrique. (cf. [](#vigenere))
@@ -411,7 +411,7 @@ Message: Le chiffre de Vigenère a été utilisé.
 
 ### Exercice {nump}`exercice`: Décryptage d'un chiffre de César
 
-Vous avez intercepté, sur le réseau public, un des messages suivants chiffré au
+Vous avez intercepté, sur le réseau public, un des messages suivants chiffrés au
 moyen du Chiffre de César (décalage de l'alphabet, mais pas forcément de 3
 positions). (cf. [](#cesar))
 
