@@ -49,6 +49,8 @@ Afficher l'aire et le perimetre.
 
 ```{exec} python
 :editor: e35ab3c5-b735-4fc5-b20d-0b261633aa15
+:editor-config: store: 'cloud'
+:reset: show
 # Complétez le programme
 largeur = input(...)
 longueur = input(...)

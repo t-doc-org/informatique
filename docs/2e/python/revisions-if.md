@@ -1,7 +1,12 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Révisions - Instructions conditionnelles
+
 
 Une instruction conditionnelle est composée d'une **condition** puis d'un
 **bloc d'instructions**. La condition est une expression ou une variable logique
@@ -436,6 +441,7 @@ Sinon
 
 ```{exec} python
 :editor: 62b603f8-6468-490d-ad94-a7afe58a5e14
+:reset: show
 # Modifiez et complétez le programme
 prix_unitaire = ...
 nb_canettes = int(input("Nombre de canettes de Red Bull à acheter?"))
@@ -469,6 +475,7 @@ Sinon
 
 ```{exec} python
 :editor: 473120c2-5476-4dd2-abf5-eba9e1cb2f97
+:reset: show
 # Modifiez et complétez le programme
 ... input("Quel est votre âge?")
 ...
@@ -498,6 +505,7 @@ manière à ce qu'il:
 
 ```{exec} python
 :editor: 57882fac-75bb-4b55-8397-fc19ed69d9b8
+:reset: show
 math = float(input("Quelle est ta note de math?"))
 français = float(input("Quelle est ta note de français?"))
 allemand = float(input("Quelle est ta note d'allemand?"))

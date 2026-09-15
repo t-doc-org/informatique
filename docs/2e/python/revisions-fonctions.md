@@ -242,6 +242,7 @@ print("La réponse en minuscules est", reponse_min)
 
 ```{exec} python
 :editor: c77dbb6e-922e-41a4-89be-09cedb1caf62
+:editor-config: store: 'cloud'
 ```
 
 ````{solution}

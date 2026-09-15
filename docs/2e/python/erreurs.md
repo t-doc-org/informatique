@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Erreurs
 
 En appuyant sur le bouton {kbd}`Run`, Python va d'abord **compiler** le

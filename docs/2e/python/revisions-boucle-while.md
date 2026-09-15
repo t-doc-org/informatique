@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Révisions - Boucle while
 
 ## Boucle while
@@ -638,6 +642,7 @@ Afficher "Merci"
 
 ```{exec} python
 :editor: d8324808-567b-4ff5-84a3-7968443ba125
+:reset: show
 # Complétez le programme
 n = int(input("Entrer un nombre strictement positif: "))
 print("Le nombre doit être strictement positif!")
