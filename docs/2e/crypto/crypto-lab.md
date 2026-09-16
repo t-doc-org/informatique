@@ -33,7 +33,7 @@ cryptographie moderne:
     ```
 2.  Choisissez une **clé de chiffrement symétrique** que vous utiliserez
     pour chiffrer tous les autres messages avec le chiffre de Vigenère (un
-    mot entre 4 et 8 lettres).
+    mot entre 3 et 5 lettres).
 
 3.  Chiffrez votre clé symétrique:
     - Transformez la clé symétrique en nombre en utilisant le code ASCII
