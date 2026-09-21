@@ -3,6 +3,10 @@
 
 # Cryptographie Lab
 
+```{container} frame instructor noprint
+Document à imprimer pour les élèves [labo-crypto.odt](labo-crypto.odt)
+```
+
 ```{important}
 Par convention, nous écrivons le texte en minuscules pour le message clair et en
 majuscules pour le cryptogramme (texte chiffré).
