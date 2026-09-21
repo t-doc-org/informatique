@@ -104,8 +104,8 @@ messages envoyés:\
 ### Exercice {nump}`exercice`: Réception et déchiffrement d'un message avec RSA
 
 Déchiffrez la clé symétrique reçue en utilisant la bonne clé. Cette
-clé vous permettra ensuite de chiffrer et envoyer des messages au groupe
-correspondant. (cf. [](#dechiffrement))
+clé vous permettra ensuite de déchiffrer le message que vous recevrez.
+(cf. [](#dechiffrement))
 
 ```{solution}
 Déchiffrement de 12266 4128 6530 6530 12860 12092 avec la clé privé
@@ -122,7 +122,7 @@ La clé de chiffrement pour Vigenère est donc **hello**.
 
 ### Exercice {nump}`exercice`: Chiffrement et envoi d'un message avec Vigenère
 
-Écrivez un message (une phrase) au groupe qui vous a transmis la clé
+Écrivez un message (une phrase) au groupe à qui vous avez transmis votre clé
 symétrique. (cf. [](#vigenere))
 
 ````{solution}
@@ -266,7 +266,8 @@ Code: SINSW MJCPR LZTRS UICPO LXPFH PPTDS
 
 ### Exercice {nump}`exercice`: Réception et déchiffrement d'un message avec Vigenère
 
-Déchiffrez le message reçu.
+Déchiffrez le message reçu avec la clé symétrique que vous avez reçu
+précédemment.
 
 ````{solution}
 Code: SINSW MJCPR LZTRS UICPO LXPFH PPTDS
