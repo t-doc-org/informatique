@@ -539,4 +539,21 @@ Message codé:
 
 NASLU IEAEA IVXRI ETOSV NUIIE NHFRD RIFNE TOSIE UPUER RCTXE UOTSC FELCR NAOCE E
 
+````{solution}
+Nombre de lettres: $66$ et donc $66: 4 = 16$ lettres par ligne reste $2$.<br>
+Il y aura $16$ lettres sur la première et la dernière ligne et le double sur
+celle du milieu. Il faut encore ajouter le reste: $+1$ sur la première ligne et
+$+1$ sur la ligne du milieu (dans l'ordre d'apparition).
+
+```{code-block} text
+N   A   S   L   U   I   E   A   E   A   I   V   X   R   I   E   T
+ O S V N U I I E N H F R D R I F N E T O S I E U P U E R R C T X E
+  U   O   T   S   C   F   E   L   C   R   N   A   O   C   E   E
+```
+
+Message décodé:
+
+nous avons utilise un chiffre de rail fence a trois niveaux pour ecrire ce texte.
+````
+
 
