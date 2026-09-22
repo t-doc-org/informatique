@@ -115,11 +115,11 @@ clé vous permettra ensuite de déchiffrer le message que vous recevrez.
 Déchiffrement de 12266 4128 6530 6530 12860 12092 avec la clé privé
 (97, 157, 11981):
 
-$12266^11981 \textrm{ mod } (97 \cdot 157) = 72$ -> h\
-$4128^11981 \textrm{ mod } (97 \cdot 157) = 101$ -> e\
-$6530^11981 \textrm{ mod } (97 \cdot 157) = 108$ -> l\
-$6530^11981 \textrm{ mod } (97 \cdot 157) = 108$ -> l\
-$12860^11981 \textrm{ mod } (97 \cdot 157) = 111$ -> o
+$12266^{11981} \textrm{ mod } (97 \cdot 157) = 72$ -> h\
+$4128^{11981} \textrm{ mod } (97 \cdot 157) = 101$ -> e\
+$6530^{11981} \textrm{ mod } (97 \cdot 157) = 108$ -> l\
+$6530^{11981} \textrm{ mod } (97 \cdot 157) = 108$ -> l\
+$12860^{11981} \textrm{ mod } (97 \cdot 157) = 111$ -> o
 
 La clé de chiffrement pour Vigenère est donc **hello**.
 ```
