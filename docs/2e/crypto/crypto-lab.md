@@ -104,26 +104,6 @@ messages envoyés:\
 
 ```
 
-
-### Exercice {nump}`exercice`: Réception et déchiffrement d'un message avec RSA
-
-Déchiffrez la clé symétrique reçue en utilisant la bonne clé. Cette
-clé vous permettra ensuite de déchiffrer le message que vous recevrez.
-(cf. [](#dechiffrement))
-
-```{solution}
-Déchiffrement de 12266 4128 6530 6530 12860 12092 avec la clé privé
-(97, 157, 11981):
-
-$12266^{11981} \textrm{ mod } (97 \cdot 157) = 72$ -> h\
-$4128^{11981} \textrm{ mod } (97 \cdot 157) = 101$ -> e\
-$6530^{11981} \textrm{ mod } (97 \cdot 157) = 108$ -> l\
-$6530^{11981} \textrm{ mod } (97 \cdot 157) = 108$ -> l\
-$12860^{11981} \textrm{ mod } (97 \cdot 157) = 111$ -> o
-
-La clé de chiffrement pour Vigenère est donc **hello**.
-```
-
 ### Exercice {nump}`exercice`: Chiffrement et envoi d'un message avec Vigenère
 
 Écrivez un message (une phrase) au groupe à qui vous avez transmis votre clé
@@ -267,6 +247,27 @@ Message: Le chiffre de Vigenère a été utilisé.
 
 Code: SINSW MJCPR LZTRS UICPO LXPFH PPTDS
 ````
+
+### Exercice {nump}`exercice`: Réception et déchiffrement d'un message avec RSA
+
+Déchiffrez la clé symétrique reçue en utilisant la bonne clé. Cette
+clé vous permettra ensuite de déchiffrer le message que vous recevrez.
+(cf. [](#dechiffrement))
+
+```{solution}
+Déchiffrement de 12266 4128 6530 6530 12860 12092 avec la clé privé
+(97, 157, 11981):
+
+$12266^{11981} \textrm{ mod } (97 \cdot 157) = 72$ -> h\
+$4128^{11981} \textrm{ mod } (97 \cdot 157) = 101$ -> e\
+$6530^{11981} \textrm{ mod } (97 \cdot 157) = 108$ -> l\
+$6530^{11981} \textrm{ mod } (97 \cdot 157) = 108$ -> l\
+$12860^{11981} \textrm{ mod } (97 \cdot 157) = 111$ -> o
+
+La clé de chiffrement pour Vigenère est donc **hello**.
+```
+
+
 
 ### Exercice {nump}`exercice`: Réception et déchiffrement d'un message avec Vigenère
 
