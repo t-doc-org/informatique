@@ -54,7 +54,7 @@ Cette partie sera faite pas à pas ensemble en classe.
 ## Sources
 
 Les sources doivent être indiquées dans la section `Références`, dernière section
-de votre menu.
+de votre menu et avoir la même présentation que les exemples ci-dessous.
 
 ### Exemples
 
@@ -80,21 +80,26 @@ Images:
 
 1.  Il est **interdit** d'utiliser l'IA pour générer du code HTML, CSS et
     JavaScript.
-2.  Il est **interdit** d'utiliser l'IA pour générer du contenu.
-3.  Il est **interdit** de faire un copier-coller de contenu sur le Web.
-
-4.  Il est autorisé d'utiliser l'IA pour reformuler et/ou corriger un texte que
-    vous avez rédigé, mais cela doit être explicitement mentionné.
-5.  Il est autorisé de rechercher sur le Web des exemples pour "styliser" votre
-    page, mais la source doit être explicitement mentionné en commentaire dans
+2.  Il est autorisé de rechercher sur le Web des exemples pour "styliser" votre
+    page, mais la source doit être explicitement mentionnée en commentaire dans
     le fichier `index.html` ou `style.css`.
+3.  Il est autorisé d'utiliser l'IA pour résumé du contenu, mais celui-ci
+    doit être mentionné avec la balise `[IA-RES]`.
+4.  Il est autorisé d'utiliser l'IA pour générer du contenu, mais celui-ci
+    doit être mentionné avec la balise `[IA-GEN]`.
+5.  Il est autorisé d'utiliser l'IA pour reformuler et/ou corriger un texte que
+    vous avez rédigé,  mais celui-ci doit être mentionné avec la balise
+    `[IA-PARA]`.
 
-Toutes les parties qui ne respecterons pas le règlement ci-dessus seront
-ignorées lors de l'évaluation du projet.
+Dans les balises `[IA-...]`, remplacez "IA" par l'outil d'intelligence
+artificielle utilisé, par exemple `[Copilot-...]` ou `[ChatGPT-...]`.
+
+**Toutes les parties qui ne respecterons pas le règlement ci-dessus seront
+ignorées lors de l'évaluation du projet.**
 
 ## Rendu du projet
 
-Le projet est à rendre pour le **lundi 30 mars à 20h00**.
+Le projet est à rendre pour le **vendredi 4 décembre à 18h00**.
 
 Le rendu doit se faire de la manière suivante:
 
@@ -105,4 +110,4 @@ Le rendu doit se faire de la manière suivante:
         -   choisissez `envoyer vers/Dossier compressé`<br>
         -   vérifiez que la classe et le prénom sont notés dans le nom du fichier
             .zip
-3.  Envoyez le fichier via mail (outlook)
+3.  Envoyez le fichier via mail (outlook).

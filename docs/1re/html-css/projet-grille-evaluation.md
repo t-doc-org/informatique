@@ -23,8 +23,8 @@
 | Le site est bien présenté et agréables à lire                                                       | 3      | 1      | 3     |
 | Le site est original                                                                                |        |        |       |
 | Le rendu a été fait correctement (forme et délai)                                                   | 3      | 0.5    | 1.5   |
-| Les règles concernant l'IA sont  respectées                                                         |        |        |       |
-| **Total aspects formels**                                                                           | 39     | 9      | 27    |
+| Les règles concernant l'IA sont  respectées                                                         | 3      |1       | 3     |
+| **Total aspects formels**                                                                           | 42     | 9      | 30    |
 
 
 
@@ -32,24 +32,21 @@
 
 | Critères                                                                      | Points | Coeff. | Total |
 |-------------------------------------------------------------------------------|--------|--------|-------|
-| Le contenu du site web est exact et argumenté :                               | 3      | 3      | 9     |
-| - le thème est traité dans son ensemble                                       |        |        |       |
-| - les explications données sont claires et correctes                          |        |        |       |
-| - le thème est adéquatement structuré (sections, etc.)                        |        |        |       |
-| - suffisamment de sources différentes ont été utilisées                       |        |        |       |
-| - le public cible est respecté                                                |        |        |       |
+| Le thème est adéquatement structuré (sections, etc.)                          | 3      | 1      | 3     |
+| Les sources choisies sont de qualités (minimum 3)                             | 3      | 1      | 3     |
 | Les sources sont mentionnées selon les consignes (y compris les images)       | 3      | 1      | 3     |
-| L'orthographe et la grammaire sont corrects                                   | 3      | 1      | 3     |
-| **Total contenu**                                                             | 9      | 5      | 15    |
+| L'utilisation de l'IA est indiquée correctement                               | 3      | 1      | 3     |
+| L'orthographe et la grammaire sont corrects                                   |        |        |       |
+| **Total contenu**                                                             | 12     | 4      | 12    |
 
 ---
 
 ## Total
 |                                  | Points | Coeff. | Total |
 |----------------------------------|--------|--------|-------|
-| **Total aspects formels**        | 39     | 9      | 27    |
-| **Total contenu**                | 9      | 5      | 15    |
-| **TOTAL**                        | 48     | 14     | 42    |
+| **Total aspects formels**        | 42     | 9      | 30    |
+| **Total contenu**                | 12     | 4      | 12    |
+| **TOTAL**                        | 54     | 13     | 42    |
 
 ---
 
