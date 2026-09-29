@@ -224,8 +224,8 @@ Cochez la bonne réponse.
       :class: hidden
       x = 1
       while x <= 6:
-        x += 3
         print(x)
+        x += 3
       ```
     ````
     `````
