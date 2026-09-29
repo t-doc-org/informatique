@@ -354,7 +354,7 @@ collège".
 ```{exec} html
 :editor: e330b9eb-ef05-4452-b4bb-ee08c9620a4b
 :reset: hide
-:style: height: 14rem;
+:style: height: 33rem;
 <!DOCTYPE html>
 <html>
   <head>
