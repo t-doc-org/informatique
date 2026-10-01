@@ -3,10 +3,6 @@
 
 # HTML
 
-```{metadata}
-solutions: show
-```
-
 ```{role} html(code)
 :language: html
 ```
