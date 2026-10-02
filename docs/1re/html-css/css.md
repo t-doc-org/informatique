@@ -106,7 +106,7 @@ Le contenu d'un page a été défini en HTML de la manière suivante.
     <h3>Caractéristiques</h3>
     <table>
       <tr>
-        <th>Taille</th><th>Poids</th><th>Espérance de vie</th><th>Couleurs</td>
+        <th>Taille</th><th>Poids</th><th>Espérance de vie</th><th>Couleurs</th>
       </tr>
       <tr>
         <td>54 à 57 cm</td><td>25 à 36 kg</td><td>10 à 14 ans</td>
