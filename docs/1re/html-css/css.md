@@ -120,7 +120,7 @@ Le contenu d'un page a été défini en HTML de la manière suivante.
     familial.</p>
 
     <h2>Photo</h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Labrador_Retriever_portrait.jpg/1024px-Labrador_Retriever_portrait.jpg">
+    <img src="https://d2qyp4pqjcr206.cloudfront.net/optimized/hero/ec47cca4-eb41-47c4-96b0-448a6cd408a1.webp">
 
     <p>Source: texte généré par Copilot.</p>
 </body>
