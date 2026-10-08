@@ -82,7 +82,7 @@ Ce style s'appliquera au contenu de toutes les balises `<h1>...</h1>`.
 
 ## Exercice {num2}`exercice`
 
-Le contenu d'un page a été défini en HTML de la manière suivante.
+Le contenu de la page a été défini en HTML de la manière suivante.
 
 ```{exec} html
 :name: selecteur-type
@@ -134,8 +134,7 @@ Au moyen du CSS, modifiez les éléments suivants:
 3.  La table doit avoir une bordure (attributs: `border` et `border-collapse`).
 4.  La table doit prendre `100%` de la largeur de la page.
 5.  L'image doit avoir une largeur de `300px`.
-6.  La famille de la police `font-family` des paragraphes doit être "Goudy
-    Bookletter 1911".
+6.  La famille de la police `font-family` des paragraphes doit être "URW Chancery L, cursive".
 7.  La couleur de fond `background-color` doit être "cornsilk".
 
 ```{exec} html
@@ -178,7 +177,7 @@ img {
 }
 
 p {
-  font-family: "Goudy Bookletter 1911";
+  font-family: "URW Chancery L, cursive";
 }
 
 body {
@@ -216,7 +215,7 @@ Ce style ne s'appliquera qu'à un élément unique, la balise dont l'`id` est
 
 ## Exercice {num2}`exercice`
 
-Le contenu d'un page a été défini en HTML de la manière suivante.
+Le style de la page a été défini en CSS de la manière suivante.
 
 ```{exec} html
 :name: selecteur-id
@@ -247,7 +246,7 @@ p {
 </style>
 ```
 
-Au moyen du CSS, modifiez les éléments suivants:
+En ajoutant des identifiants dans le HTML, modifiez les éléments pour que:
 
 1.  Le premier paragraphe doit être en gras et justifié.
 2.  Le dernier tableau doit avoir la couleur de fond "orange".
@@ -614,7 +613,7 @@ Ce style ne s'appliquera qu'aux balises dont la classe est "centre".
 
 ## Exercice {num2}`exercice`
 
-Le contenu d'un page a été défini en HTML de la manière suivante.
+Le style de la page a été défini en CSS de la manière suivante.
 
 ```{exec} html
 :name: selecteur-classe
@@ -633,7 +632,7 @@ td {
 ```
 
 
-Au moyen du CSS, modifiez les éléments suivants:
+En ajoutant des classes dans le HTML, modifiez les éléments suivants:
 
 1.  Le titre doit être centré.
 2.  Le texte à gauche de l'image doit être centré.
