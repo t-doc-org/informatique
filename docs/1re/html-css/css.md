@@ -622,6 +622,7 @@ Le style de la page a été défini en CSS de la manière suivante.
 td {
   padding: 30px;
   vertical-align: top;
+  width: 50%;
 }
 
 .centre {
@@ -726,10 +727,9 @@ En ajoutant des classes dans le HTML, modifiez les éléments suivants:
     </p>
 
     <h2>Drapeau</h2>
-    <table>
+    <table class="centre">
       <tr>
         <td>
-          <div class="centre">
           <p>
             Le drapeau suisse est rouge avec une croix blanche au centre.
             Il est unique car il est de forme carrée, contrairement à la plupart des drapeaux
@@ -740,17 +740,13 @@ En ajoutant des classes dans le HTML, modifiez les éléments suivants:
             Ce drapeau est reconnu dans le monde entier et est un symbole fort de la
             Confédération suisse.
           </p>
-          </div>
         </td>
         <td>
-          <div class="centre">
           <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg" width="200">
           <p>source: <a href= "https://fr.wikipedia.org/wiki/Suisse">Wikipédia</a></p>
-          </div>
         </td>
       </tr>
     </table>
-
     <p>Source: texte généré par Copilot.</p>
   </body>
 </html>
