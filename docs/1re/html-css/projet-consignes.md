@@ -99,7 +99,7 @@ ignorées lors de l'évaluation du projet.**
 
 ## Rendu du projet
 
-Le projet est à rendre pour le **vendredi 4 décembre à 18h00**.
+Le projet est à rendre pour le **vendredi 11 décembre à 15h45**.
 
 Le rendu doit se faire de la manière suivante:
 
