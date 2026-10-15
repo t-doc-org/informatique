@@ -1,6 +1,10 @@
 % Copyright 2026 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Boucle for
 
 La boucle `for` permet de répéter un bloc d'instructions un nombre de fois connu

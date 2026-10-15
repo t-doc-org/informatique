@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Révisions - Fonctions
 
 En programmation, une fonction est un bloc de code (suite d'instructions) qui
@@ -242,7 +246,6 @@ print("La réponse en minuscules est", reponse_min)
 
 ```{exec} python
 :editor: c77dbb6e-922e-41a4-89be-09cedb1caf62
-:editor-config: store: 'cloud'
 ```
 
 ````{solution}

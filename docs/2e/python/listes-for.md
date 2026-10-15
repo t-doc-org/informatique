@@ -1,7 +1,11 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Listes - Boucles `for`
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
+# Listes - Boucles for
 
 La boucle `for` permet d'accéder à tous les éléments d'une liste l'un après
 l'autre.

@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Listes - Bases
 
 En Python, une liste est une variable dans laquelle il est possible de stocker
@@ -256,7 +260,7 @@ controle_position([0, 200])
 
 En Python, il existe beaucoup de fonctions prédéfinies qui permettent de
 manipuler les listes. Nous en avons vu déjà rencontrées certaines dans
-[](listes-decouverte.md).
+[](listes-intro.md).
 
 len(ma_liste)
 : retourne le nombre d'éléments de `ma_liste`

@@ -13,8 +13,9 @@ revisions-fonctions
 boucle-for
 fonctions
 fonctions-exo-supp
-fonctions-lab1
-listes-decouverte
+fonctions-lab-bancomat
+fonctions-lab-frequences
+listes-intro
 listes-bases
 listes-in
 listes-for

@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Fonctions
 
 ## Fonctions simples
@@ -336,7 +340,7 @@ de sauvegarder la valeur retournée dans une variable.
 :editor:
 # définition des fonctions
 def discriminant(a, b, c):
-  return(b ** 2 - 4 * a * c)
+  return b ** 2 - 4 * a * c
 
 # programme principal
 
@@ -580,72 +584,6 @@ Exécutez-les ensuite pour vérifier votre réponse.
 
 ### Exercice {num2}`exercice`
 
-```{exec} python
-:name: texte
-:class: hidden
-texte = "L'école moderne, c'est l'art d'enseigner le théorème de Pythagore à des ados capables de scroller sur TikTok à la vitesse de la lumière tout en ouvrant discrètement trois onglets de jeux en ligne pendant le cours d'histoire. Aujourd'hui, le stylo plume a pris sa retraite, remplacé par des tablettes où les notes de cours cohabitent joyeusement avec des mèmes et des vidéos en tendance. Les profs ne se battent plus contre les avions en papier, mais contre le correcteur automatique et les copier-coller un peu trop magiques de ChatGPT. Au fond, c'est une génération ultra-connectée et pleine de ressources, capable de faire un montage vidéo digne d'Hollywood en deux minutes sur leur téléphone, mais qui cherche encore la formule magique pour faire ses devoirs sans procrastiner."
-```
-
-Un texte, généré par Gemini, a été sauvegardé dans la variable `texte`.
-
-1.  Affichez le texte.
-2.  Calculez et affichez le nombre de caractères de ce texte.
-3.  Calculez et affichez la fréquence de la lettre "e", de la lettre "a", de la
-    lettre "d" et de la lettre "x".<br>
-    Les valeurs correspondent-elles à celles attendues
-    (voir [](../crypto/frequences.md))? Pourquoi?
-4.  Définissez une fonction qui teste si le texte contient une certaine lettre
-    et affiche:
-
-      - "Oui, ce texte contient la lettre ..."
-      - "Non, ce texte ne contient pas la lettre ..."
-
-    La fonction prend deux paramètres: la lettre à tester et le texte.<br>
-    Testez la fonction avec les lettres "y" et "z".
-
-```{exec} python
-:after: texte
-:editor: e43729d7-c4e9-491d-8874-9c7e21038966
-```
-
-````{solution}
-```{exec} python
-:after: texte
-# 1
-print(texte)
-# 2
-total = len(texte)
-print(total)
-# 3
-n = texte.count("e")
-print(n/total)
-n = texte.count("a")
-print(n/total)
-n = texte.count("d")
-print(n/total)
-n = texte.count("x")
-print(n/total)
-# 4
-def contenu(lettre, texte):
-  if texte.find(lettre) != -1:
-    print("Oui, ce texte contient la lettre", lettre)
-  else:
-    print("Non, ce texte ne contient pas la lettre", lettre)
-contenu("y", texte)
-contenu("z", texte)
-```
-
-Les valeurs pour le "d" et le "x" sont proches, mais pas pour le "e" et le "a".
-
-Les fréquences d'apparition des lettres en français des
-[](../crypto/frequences.md) ne tiennent pas compte des différences entre une
-lettre majuscule ou minuscule, ni celles des lettres accentuées. Pour faire une
-analyse de fréquence, il faudrait tout d'abord modifier le texte (supprimer les
-majuscules, les accents, ...).
-````
-
-### Exercice {num2}`exercice`
-
 Définissez une fonction qui modifie une phrase en son équivalent en **leet
 speak**. La fonction prend le texte à modifier en paramètre et retourne la
 phrase modifiée.
@@ -758,8 +696,8 @@ message = "Codez ce message!"
 ```
 
 ````{solution}
+Corrigé 1 à 6:
 ```{exec} python
-:editor:
 message = "Codez ce message!"
 msg = message.upper()
 code = ""
@@ -771,6 +709,70 @@ for c in msg:
   else:
     code += c
 print(code)
+```
+
+Corrigé 7:
+```{exec} python
+def chiffre(message):
+  msg = message.upper()
+  code = ""
+  for c in msg:
+    index = ord(c) - ord("A")
+    if 0 <= index < 26:
+      index = (index + 3) % 26
+      code += chr(ord("A") + index)
+    else:
+      code += c
+  return code
+
+print(chiffre("Codez ce message!"))
+```
+
+Corrigé 8:
+```{exec} python
+def dechiffre(msg_code):
+  code = msg_code.upper()
+  msg = ""
+  for c in code:
+    index = ord(c) - ord("A")
+    if 0 <= index < 26:
+      index = (index - 3) % 26
+      msg += chr(ord("A") + index)
+    else:
+      msg += c
+  return msg.lower()
+
+print(dechiffre("OD FUBSWR HVW VBPSD!"))
+```
+
+Corrigé 9:
+```{exec} python
+def chiffre(message, cle):
+  msg = message.upper()
+  code = ""
+  for c in msg:
+    index = ord(c) - ord("A")
+    if 0 <= index < 26:
+      index = (index + cle) % 26
+      code += chr(ord("A") + index)
+    else:
+      code += c
+  return code
+
+def dechiffre(msg_code, cle):
+  code = msg_code.upper()
+  msg = ""
+  for c in code:
+    index = ord(c) - ord("A")
+    if 0 <= index < 26:
+      index = (index - cle) % 26
+      msg += chr(ord("A") + index)
+    else:
+      msg += c
+  return msg.lower()
+
+print(dechiffre("GOQVSN EIS JCHFS QVWSB", 14))
+print(chiffre("c'est trop calme", 20))
 ```
 ````
 
