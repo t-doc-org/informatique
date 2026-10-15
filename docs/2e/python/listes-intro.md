@@ -18,6 +18,8 @@ demandées à l'utilisateur.
 # Écrivez le programme ici
 ```
 
+Quels sont les inconvénients du programme que vous avez écrit?
+
 ````{solution}
 ```{exec} python
 :linenos:
@@ -34,14 +36,22 @@ moyenne = somme_notes / 5
 # Affiche la moyenne
 print(moyenne)
 ```
+
+Inconvénients:
+
+-   pas possible de donner plus ou moins de notes,
+-   soit on stocke toutes les notes et il faut beaucoup de variables, soit on ne
+    peut par réutiliser la valeur des notes.
 ````
 
 ## Exercice {nump}`exercice:py2-lab2-exemple-liste`
 
-Répondez aux questions en lien avec le programme suivant:
-1.  Que fait `append(5.5)`?
-2.  Qu'affiche `print(notes[2])`?
-3.  Quelle différence y a-t-il entre `remove()` et `del`?
+Faites des suppositions sur le programme ci-dessous:
+1.  Que fait `print(notes)`?
+2.  Que fait `append(5.5)`?
+3.  Que fait `print(notes[2])`?
+4.  Que fait `notes.remove(5)`?
+5.  Que fait `del notes[3]`?
 
 ```{exec} python
 :linenos:
@@ -59,55 +69,51 @@ print(notes)
 
 ## Exercice {nump}`exercice`
 
-1.  Exécutez le code et vérifier les réponses de
-    l'{numref}`exercice %s<exercice:py2-lab2-exemple-liste>`.
+```{exec} python
+:editor:
+notes = [6, 5, 4.5, 5, 3.5]
+print(notes)
+notes.append(5.5)
+print(notes)
+print(notes[2])
+notes.remove(5)
+print(notes)
+del notes[3]
+print(notes)
+```
 
-    ```{exec} python
-    :editor:
-    notes = [6, 5, 4.5, 5, 3.5]
-    print(notes)
-    notes.append(5.5)
-    print(notes)
-    print(notes[2])
-    notes.remove(5)
-    print(notes)
-    del notes[3]
-    print(notes)
-    ```
+Répondez aux questions suivantes en testant le code ci-dessus. Vous pouvez
+changer les valeurs pour observer ce qui se passe.
 
-2.  Répondez aux questions suivantes en testant dans le code ci-dessus, si
-    nécessaire:
-
-    1.  À quel endroit de la variable notes la fonction `append()` ajoute-t-elle
-        une valeur?
-    2.  Qu'est-ce qui s'affiche en remplaçant `print(notes[2])` par
-        `print(notes[0])`?
-    3.  Qu'est-ce qui s'affiche en remplaçant `print(notes[2])` par
-        `print(notes[5])`?
-    4.  Qu'est-ce qui s'affiche en remplaçant `print(notes[2])` par
-        `print(notes[6])`?
-    5.  Quelle hypothèse peut être faite sur l'utilisation de la notation
-        `notes[i]` où `i` est un nombre entier?
-    6.  `notes` est une variable de type "list" (une liste). Comment créer une
-        liste vide?
+1.  À quel endroit de la variable notes la fonction `append()` ajoute-t-elle
+    une valeur?
+2.  Qu'est-ce qui s'affiche en remplaçant `print(notes[2])` par
+    `print(notes[0])`?
+3.  Qu'est-ce qui s'affiche en remplaçant `print(notes[2])` par
+    `print(notes[5])`?
+4.  Qu'est-ce qui s'affiche en remplaçant `print(notes[2])` par
+    `print(notes[6])`?
+5.  Quelle hypothèse peut être faite sur l'utilisation de la notation
+    `notes[i]` où `i` est un nombre entier?
+6.  Que fait `notes.remove(5)`? Que fait `del notes[3]`? Quelle différence y
+    a-t-il entre `remove()` et `del`?
+7.  `notes` est une variable de type "list" (une liste). Comment créer une
+    liste vide?
 
 ```{solution}
-1.  1.  `apprend(5.5)` ajoute la note 5.5 à la fin de la liste des notes.
-    2.  `print(notes[2])` affiche le 3{sup}`e` élément de la liste.
-    3.  `remove()` est une fonction qui efface la première occurence de l'élément
-        spécifié entre parenthèse.\
-        `del` est un mot clé qui supprime l'élément à l'emplacement spécifié.
-2.  1.  La fonction `append()` ajoute l'élément à la fin de la liste.
-    2.  `print(notes[0])` affiche le premier élément de la liste, c'est-à-dire
-        6.
-    3.  `print(notes[5])` affiche le 6{sup}`e` élément, c'est-à-dire 5.5.
-    4.  `print(notes[6])` produit une erreur `IndexError: list index out of
-        range` qui est une erreur lors de l'exécution, car `notes[6]` appelle
-        le 7{sup}`e` élément de la liste, mais il n'y a que 6 éléments dans
-        celle-ci.
-    5.  `notes[i]` où `i` est un nombre entier retourne l'élément en position
-        `i+1`.
-    6.  Pour créer une liste vide: `notes = []`
+1.  La fonction `append()` ajoute l'élément à la fin de la liste.
+2.  `print(notes[0])` affiche le premier élément de la liste, c'est-à-dire
+    6.
+3.  `print(notes[5])` affiche le 6{sup}`e` élément, c'est-à-dire 5.5.
+4.  `print(notes[6])` produit une erreur `IndexError: list index out of
+    range` qui est une erreur lors de l'exécution, car `notes[6]` appelle
+    le 7{sup}`e` élément de la liste, mais il n'y a que 6 éléments dans
+    celle-ci.
+5.  `notes[i]` où `i` est un nombre entier retourne l'élément en position
+    `i+1`.
+6.  `remove(5)` est une fonction qui supprime la première note qui vaut "5".\
+    `del notes[3]` est un mot clé qui supprime le 4{sup}`e` élément.
+7.  Pour créer une liste vide: `notes = []`
 ```
 
 ## Exercice {nump}`exercice`
