@@ -1,7 +1,11 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-# Fonctions Lab
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
+# Fonctions Lab - Bancomat
 
 ## Exercice {nump}`exercice`
 
