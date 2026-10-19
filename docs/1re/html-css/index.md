@@ -8,6 +8,7 @@ introduction
 html
 css
 menu
+css-proprietes
 projet-consignes
 projet-grille-evaluation
 bureautique

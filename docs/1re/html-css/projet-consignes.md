@@ -25,16 +25,22 @@ dans le dossier partagé sur OneDrive nommé `PRENOM projet html`.
       - Quelles seront les différentes sections?
       - Quel style aura votre site?
 
-### Installation de l'environnement de travail
+### Préparation de l'environnement de travail
 
 Cette partie sera faite pas à pas ensemble en classe.
 
-1.  Installez VSCode [](../../logiciels/vscode.md).
-2.  Installez les extensions.
-3.  Dans le dossier `PRENOM projet html`, créez:<br>
+1.  Sur OneDrive, créez un dossier nommé `classe-prenom-projet-web`.
+2.  Installez VSCode en suivant les [instustructions](../../logiciels/vscode.md).
+3.  Ouvrez Visual Studio Code.
+4.  Sur la page de bienvenue, sélectionnez ***Ouvrir un dossier...*** ou cliquez
+    sur ***Fichier -> Ouvrir le dossier...*** afin d'ouvrir le dossier du projet
+    créé précédemment.
+3.  Dans le dossier `classe-prenom-projet-web`, créez:<br>
         - un fichier `index.html`<br>
         - un fichier `style.css`<br>
         - un dossier `images`
+
+Pour visualiser votre travail, ouvrez le fichier `index.html`.
 
 ### Début avec le site Web
 
@@ -44,12 +50,15 @@ Cette partie sera faite pas à pas ensemble en classe.
 
 ### Conseils
 
-1. Toutes les images de votre site doivent être importées dans le dossier `images`.
-2. Soignez l'indentation des fichiers pour faciliter la lecture.
-3. Commentez vos fichiers HTML avec `<!--` `-->` ou vos fichiers CSS avec `/**` `**/`.
-4. Notez toutes les références (sites visités et images téléchargées) au fur et à mesure.
-5. Soignez la grammaire et l'orthographe.
-6. Consultez régulièrement la grille d'évaluation.
+1.  Toutes les images de votre site doivent être importées dans le dossier
+    `images`.
+2.  Soignez l'indentation des fichiers pour faciliter la lecture.
+3.  Commentez vos fichiers HTML avec `<!--` `-->` ou vos fichiers CSS avec
+    `/**` `**/`.
+4.  Notez toutes les références (sites visités et images téléchargées) au fur et
+    à mesure.
+5.  Soignez la grammaire et l'orthographe.
+6.  Consultez régulièrement la grille d'évaluation.
 
 ## Sources
 
@@ -103,8 +112,8 @@ Le projet est à rendre pour le **vendredi 11 décembre à 15h45**.
 
 Le rendu doit se faire de la manière suivante:
 
-1.  Sélectionnez votre dossier de projet `1F...-Prenom-Projet-html` qui se trouve
-    sur OneDrive.
+1.  Sélectionnez votre dossier de projet `classe-prenom-projet-web` qui se
+    trouve sur OneDrive.
 2.  Générez un fichier compressé (.zip):<br>
         -   faites un clic droit sur le dossier<br>
         -   choisissez `envoyer vers/Dossier compressé`<br>
