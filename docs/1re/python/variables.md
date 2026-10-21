@@ -242,15 +242,16 @@ données entre parenthèses.
 :class: grid-4
 ```
 
+{.lower-alpha-paren}
 1. Qu'affiche le progamme suivant?
 
     ```{exec} python
-    :name: ex1
+    :name: ex1.1
     :after: fonctions_dessin_svg
     :when:
     :linenos:
-    position_x = 100
-    position_y = 200
+    position_x = 50
+    position_y = 50
     largeur = 150
     hauteur = 150
     couleur = "red"
@@ -261,7 +262,7 @@ données entre parenthèses.
     ````{quiz-check}
     - :
       ```{exec} python
-      :after: ex1
+      :after: ex1.1
       :when: load
       :then: rendu
       :class: hidden
@@ -271,8 +272,8 @@ données entre parenthèses.
       :class: hidden
       :after: fonctions_dessin_svg
       :then: rendu
-      position_x = 100
-      position_y = 200
+      position_x = 50
+      position_y = 50
       largeur = 150
       hauteur = 150
       couleur = "blue"
@@ -284,8 +285,8 @@ données entre parenthèses.
       :class: hidden
       :after: fonctions_dessin_svg
       :then: rendu
-      position_x = 100
-      position_y = 200
+      position_x = 50
+      position_y = 50
       largeur = 150
       hauteur = 150
       couleur = "green"
@@ -297,8 +298,8 @@ données entre parenthèses.
       :class: hidden
       :after: fonctions_dessin_svg
       :then: rendu
-      position_x = 100
-      position_y = 200
+      position_x = 50
+      position_y = 50
       largeur = 150
       hauteur = 150
       couleur = "yellow"
@@ -307,6 +308,469 @@ données entre parenthèses.
       ```
     ````
     `````
+
+2. Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: ex1.2
+    :after: fonctions_dessin_svg
+    :when:
+    :linenos:
+    position_x = 50
+    position_y = 50
+    largeur = 300
+    hauteur = 150
+    couleur = "blue"
+
+    rectangle(position_x, position_y, largeur, hauteur, couleur)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: ex1.2
+      :when: load
+      :then: rendu
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 50
+      position_y = 50
+      largeur = 150
+      hauteur = 300
+      couleur = "blue"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 50
+      position_y = 50
+      largeur = 150
+      hauteur = 150
+      couleur = "blue"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 50
+      position_y = 50
+      largeur = 450
+      hauteur = 150
+      couleur = "blue"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    ````
+    `````
+3.  Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: ex1.3
+    :after: fonctions_dessin_svg
+    :when:
+    :linenos:
+    position_x = 350
+    position_y = 50
+    largeur = 200
+    hauteur = 200
+    couleur = "green"
+
+    rectangle(position_x, position_y, largeur, hauteur, couleur)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: ex1.3
+      :when: load
+      :then: rendu
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 50
+      position_y = 50
+      largeur = 200
+      hauteur = 200
+      couleur = "green"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 150
+      position_y = 50
+      largeur = 200
+      hauteur = 200
+      couleur = "green"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 250
+      position_y = 50
+      largeur = 200
+      hauteur = 200
+      couleur = "green"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    ````
+    `````
+4.  Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: ex1.4
+    :after: fonctions_dessin_svg
+    :when:
+    :linenos:
+    position_x = 50
+    position_y = 200
+    largeur = 100
+    hauteur = 100
+    couleur = "red"
+
+    rectangle(position_x, position_y, largeur, hauteur, couleur)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: ex1.4
+      :when: load
+      :then: rendu
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 50
+      position_y = 100
+      largeur = 100
+      hauteur = 100
+      couleur = "red"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 50
+      position_y = 300
+      largeur = 100
+      hauteur = 100
+      couleur = "red"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 50
+      position_y = 0
+      largeur = 100
+      hauteur = 100
+      couleur = "red"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    ````
+    `````
+
+5.  Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: ex1.5
+    :after: fonctions_dessin_svg
+    :when:
+    :linenos:
+    position_x = 0
+    position_y = 0
+    largeur = 100
+    hauteur = 100
+    couleur = "blue"
+
+    rectangle(position_x, position_y, largeur, hauteur, couleur)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: ex1.5
+      :when: load
+      :then: rendu
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 500
+      position_y = 300
+      largeur = 100
+      hauteur = 100
+      couleur = "blue"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 0
+      position_y = 300
+      largeur = 100
+      hauteur = 100
+      couleur = "blue"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 500
+      position_y = 0
+      largeur = 100
+      hauteur = 100
+      couleur = "blue"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    ````
+    `````
+
+### Exercice {num2}`exercice`
+
+{.lower-alpha-paren}
+1. Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: ex2.1
+    :after: fonctions_dessin_svg
+    :when:
+    :linenos:
+    point_1 = (50, 50)
+    point_2 = (350, 50)
+    point_3 = (150, 200)
+    couleur = "green"
+
+    point_1 = (300, 100)
+    point_2 = (500, 50)
+    point_3 = (400, 300)
+    couleur = "blue"
+
+    triangle(point_1, point_2, point_3, couleur)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: ex2.1
+      :when: load
+      :then: rendu
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      point_1 = (50, 50)
+      point_2 = (550, 100)
+      point_3 = (150, 300)
+      couleur = "green"
+      triangle(point_1, point_2, point_3, couleur)
+
+      point_1 = (300, 100)
+      point_2 = (500, 50)
+      point_3 = (400, 300)
+      couleur = "blue"
+      triangle(point_1, point_2, point_3, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      point_1 = (300, 100)
+      point_2 = (500, 50)
+      point_3 = (400, 300)
+      couleur = "blue"
+      triangle(point_1, point_2, point_3, couleur)
+
+      point_1 = (50, 50)
+      point_2 = (550, 100)
+      point_3 = (150, 300)
+      couleur = "green"
+      triangle(point_1, point_2, point_3, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      point_1 = (50, 50)
+      point_2 = (550, 100)
+      point_3 = (150, 300)
+      couleur = "green"
+      triangle(point_1, point_2, point_3, couleur)
+      ```
+    ````
+    `````
+
+2. Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: ex2.2
+    :after: fonctions_dessin_svg
+    :when:
+    :linenos:
+    position_x = 200
+    position_y = 200
+    largeur = 100
+    hauteur = 100
+    couleur = "blue"
+    couleur = "violet"
+
+    rectangle(position_x, position_y, largeur, hauteur, couleur)
+    cercle(position_x, position_y, largeur, couleur)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: ex2.2
+      :when: load
+      :then: rendu
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 200
+      position_y = 200
+      largeur = 100
+      hauteur = 100
+      couleur = "blue"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      couleur = "violet"
+      cercle(position_x, position_y, largeur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 200
+      position_y = 200
+      largeur = 100
+      hauteur = 100
+      couleur = "blue"
+
+      cercle(position_x, position_y, largeur, couleur)
+      couleur = "violet"
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 200
+      position_y = 200
+      largeur = 100
+      hauteur = 100
+      couleur = "blue"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      cercle(position_x, position_y, largeur, couleur)
+      ```
+    ````
+    `````
+
+### Exercice {num2}`exercice`
+
+Définissez les variables pour dessiner
+
+{.lower-alpha-paren}
+1.  un cercle de rayon **100** positionné en **(100; 100)** et de couleur
+    **verte**.
+
+2.  un cercle de rayon **200** positionné en **(250; 150)** et de couleur
+    **magenta**.
+
+```{exec} python
+:editor: c82bdfda-3c43-4d2a-872a-f0b40cb52d6b
+:after: fonctions_dessin_svg
+:then: rendu
+# définition des variables
+
+cercle(centre_x, centre_y, rayon, couleur)
+```
+
+````{solution}
+{.lower-alpha-paren}
+1.  ```{exec} python
+    :editor:
+    :after: fonctions_dessin_svg
+    :then: rendu
+    # définition des variables
+    rayon = 100
+    centre_x = 100
+    centre_y = 100
+    couleur = "green"
+
+    cercle(centre_x, centre_y, rayon, couleur)
+    ```
+2.  ```{exec} python
+    :editor:
+    :after: fonctions_dessin_svg
+    :then: rendu
+    # définition des variables
+    rayon = 200
+    centre_x = 250
+    centre_y = 150
+    couleur = "magenta"
+
+    cercle(centre_x, centre_y, rayon, couleur)
+    ```
+````
+
 
 
 
