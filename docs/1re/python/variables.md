@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Variables
 
 ## Définition
@@ -62,6 +66,7 @@ De quel type sont les valeurs suivantes?
 
 ```{quiz}
 :style: max-width: 20rem;
+{.lower-alpha-paren}
 1.  {select}`int`   `60`
 2.  {select}`str`   `"Hello Bob"`
 3.  {select}`float` `1.34`
@@ -92,6 +97,14 @@ promu = True              # La variable promu est de type bool
 
 Ce programme Python déclare 5 variables, mais contient une erreur par ligne.
 Trouvez et corrigez-les.
+
+```{tip}
+Lisez toujours le message d'erreur qui donne différentes informations:
+- la ligne de l'erreur
+- où se trouve probablement l'erreur sur la ligne
+- le type d'erreur
+- une explication
+```
 
 ```{exec} python
 :editor:
@@ -149,6 +162,7 @@ Quel est le résultat des expressions suivantes en Python?
 
 ```{quiz}
 :style: max-width: 30rem;
+{.lower-alpha-paren}
 1.  {input}`{"3": true}`
     {quiz-hint}`Il faut effectuer la division entière de 15 par 4.`
     `15 // 4`

@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Boucle while
 
 ## Répétition d'un bloc d'instructions
@@ -440,9 +444,9 @@ Calculez le montant total à payer.
 
 ```{tab-item} Étape 3
 :sync: etape3
-Modifiez le code pour que l'utilisateur puisse choisir le montant à emprunter et
-la durée du crédit en mois et qu'il soit possible de changer le taux d'intérêt
-facilement.
+Modifiez le programme pour que l'utilisateur puisse choisir le montant à
+emprunter et la durée du crédit en mois et qu'il soit possible de changer le
+taux d'intérêt facilement.
 ```
 ````
 

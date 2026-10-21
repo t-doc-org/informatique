@@ -1,6 +1,10 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Compréhension de code
 
 ## Notion de variable
@@ -9,6 +13,7 @@
 
 Sans l'exécuter, qu'affiche ce programme si:
 
+{.lower-alpha-paren}
 1. `nombre_km = 55`?
 2. `nombre_km = 45`?
 3. `nombre_km = 50`?
@@ -26,6 +31,7 @@ print(nombre_km, prix_location)
 ```
 
 ```{solution}
+{.lower-alpha-paren}
 1. 55 122 (passage dans le else)
 2. 45 122.5 (passage dans le if)
 3. 50 125 (passage dans le if)
@@ -35,6 +41,7 @@ print(nombre_km, prix_location)
 
 Sans exécuter le programme, répondez aux questions.
 
+{.lower-alpha-paren}
 1. Quelle est la valeur stockée dans la variable `n` à la fin du programme?
 2. Qu'est-ce que le programme affiche?
 
@@ -49,6 +56,7 @@ print(n+1)
 ```
 
 ```{solution}
+{.lower-alpha-paren}
 1. n = 19
 2. 20
 ```
@@ -78,6 +86,7 @@ print(n)
 
 Sans l'exécuter, qu'affiche ce programme:
 
+{.lower-alpha-paren}
 1. si `n = 0`?
 2. si `n = 5`?
 3. si `n = 9`?
@@ -93,6 +102,7 @@ while n <= 5:
 ```
 
 ```{solution}
+{.lower-alpha-paren}
 1. 0\
    1\
    2\
@@ -107,6 +117,7 @@ while n <= 5:
 
 Sans l'exécuter, qu'affiche ce programme si:
 
+{.lower-alpha-paren}
 1. si `n = 0`?
 2. si `n = 5`?
 3. si `n = 9`?
@@ -122,6 +133,7 @@ while n <= 5:
 ```
 
 ```{solution}
+{.lower-alpha-paren}
 1. 1\
    2\
    3\
@@ -136,6 +148,7 @@ while n <= 5:
 
 Sans l'exécuter, qu'affiche ce programme si:
 
+{.lower-alpha-paren}
 1. si `n = 0`?
 2. si `n = 5`?
 3. si `n = 9`?
@@ -151,6 +164,7 @@ print(n)
 ```
 
 ```{solution}
+{.lower-alpha-paren}
 1. 6
 2. 6
 3. 9
@@ -160,6 +174,7 @@ print(n)
 
 Sans l'exécuter, qu'affiche ce programme si:
 
+{.lower-alpha-paren}
 1. `n = 0`?
 2. `n = 9`?
 
@@ -174,6 +189,7 @@ while n <= 5:
 ```
 
 ```{solution}
+{.lower-alpha-paren}
 1. une infinité de 0
 2. \
 ```
@@ -184,6 +200,7 @@ while n <= 5:
 
 Sans exécuter le programme,
 
+{.lower-alpha-paren}
 1. Indiquez l'ordre dans lequel les instructions seront exécutées (numéros de lignes).
 2. Notez ce qui sera affiché sur la console.
 
@@ -197,6 +214,7 @@ print("Bonjour", nom, "vous avez", age + 1, "ans!")
 ```
 
 ```{solution}
+{.lower-alpha-paren}
 1. 1 - 2 - 3
 2. Bonjour Bob vous avez 17 ans!
 ```
@@ -204,12 +222,15 @@ print("Bonjour", nom, "vous avez", age + 1, "ans!")
 ### Exercice {nump}`exercice`
 
 Sans exécuter le programme,
+
+{.lower-alpha-paren}
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
 (numéros de lignes).
 2. Notez ce qui sera affiché sur la console.
 
 Ensuite, exécutez le programme pour vérifier votre réponse.
 
+{.lower-alpha-paren}
 3. Même question si on remplace la ligne 1 par `nombre = -8`
 4. Même question si on remplace la ligne 1 par `nombre = 0`
 
@@ -225,6 +246,7 @@ else:
 ```
 
 ```{solution}
+{.lower-alpha-paren}
 1. 1 - 2 - 4 -  6 - 7
 2. Ce nombre est négatif.
 3. 1 - 2 - 3 / Ce nombre est nul.
@@ -234,6 +256,8 @@ else:
 ### Exercice {nump}`exercice`
 
 Sans exécuter le programme,
+
+{.lower-alpha-paren}
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
 (numéros de lignes).
 2. Notez ce qui sera affiché sur la console.
@@ -251,6 +275,7 @@ print("n =", n, "et s =", s)
 ```
 
 ```{solution}
+{.lower-alpha-paren}
 1. 1 - 2 - 3 - 4 - 5 - 3 - 4 - 5 - 6
 2. n = 4 et s = 3
 
@@ -259,6 +284,8 @@ print("n =", n, "et s =", s)
 ### Exercice {nump}`exercice` (boucle while)
 
 Sans exécuter le programme,
+
+{.lower-alpha-paren}
 1. Indiquez l'ordre dans lequel les instructions seront exécutées.
 (numéros de lignes).
 2. Notez ce qui sera affiché sur la console.
@@ -275,6 +302,7 @@ print("J'ai fini!")
 ```
 
 ```{solution}
+{.lower-alpha-paren}
 1. 1 - 2 - 3 - 4 - 2 - 3 - 4 - 2 - 3 - 4 - 5
 2. 6\
    8\

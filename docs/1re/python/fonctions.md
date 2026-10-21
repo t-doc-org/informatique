@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Fonctions
 
 ## Introduction
@@ -147,6 +151,7 @@ programme juste après les imports.
 
 ### Exercice {num2}`exercice`
 
+{.lower-alpha-paren}
 1. Définissez une fonction `calcule_et_affiche_perimetre_carre()`.
 2. Combien de paramètres sont nécessaires?
 3. Affichez le périmetre d'un carré de côté 7, d'un carré de côté 12, ainsi qu'en
@@ -186,6 +191,7 @@ Sans les exécuter, déterminez ce que vont afficher les programmes suivants.\
 Font-ils ce qui est demandé?\
 S'il y a une erreur, expliquez et corrigez le problème.
 
+{.lower-alpha-paren}
 1.  Calculez l'aire d'un rectangle de côtés 20 et 100.
 
     ```{exec} python
@@ -270,6 +276,7 @@ S'il y a une erreur, expliquez et corrigez le problème.
     ```
 
 ````{solution}
+{.lower-alpha-paren}
 1.  Correct.
 2.  Correct.
 3.  Pas correct. Les variables `largeur` et `longueur` ne sont pas définies dans
@@ -304,6 +311,7 @@ S'il y a une erreur, expliquez et corrigez le problème.
 
 Complétez les programmes suivants uniquement où il y a des `...`:
 
+{.lower-alpha-paren}
 1.  Calculez le périmètre d'un rectangle de côtés 4 et 7.
 
     ```{exec} python

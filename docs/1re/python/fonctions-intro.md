@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Fonctions - Introduction
 
 ## Déplacement des pièces
@@ -66,6 +70,7 @@ def nord_ouest():
 
 ## Exercice {nump}`exercice`
 
+{.lower-alpha-paren}
 1. Essayez de comprendre le programme en comparant le programme et le résultat.
 2. Modifiez le programme pour que le roi suive les numéros.
 
@@ -192,6 +197,7 @@ diagonale()
 Pour avoir des pièces qui se déplacent vraiment en diagonale comme le roi,
 de nouvelles fonctions ont été définies.
 
+{.lower-alpha-paren}
 1. Essayez de comprendre le programme en comparant le programme et le résultat.
 2. Modifiez le programme pour que le roi suive les numéros.
 
@@ -279,6 +285,7 @@ Il serait mieux de pouvoir indiquer entre parenthèse le nombre de cases
 desquelles on veut déplacer la tour. Pour cela, il faut définir une nouvelle
 fonction.
 
+{.lower-alpha-paren}
 1. Définissez de la même manière les autres fonctions `aller_est`, `aller_ouest`
   et `aller_sud`.
 2. Résolvez l'exercice précédent en appelant les fonctions.
@@ -389,6 +396,8 @@ est(1)
 ## Exercice {nump}`exercice`
 
 La fonction `deplace(x, y)` a été définie.
+
+{.lower-alpha-paren}
 1. Essayez de comprendre le programme en comparant le programme et le résultat.
 2. Modifiez le programme pour que la dame suive les numéros.
 

@@ -1,6 +1,10 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Fonctions - dessin
 
 Python peut être utilisé pour faire des dessins.

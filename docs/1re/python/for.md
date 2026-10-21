@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Boucle for
 
 ## Répétition d'un bloc d'instructions
@@ -483,7 +487,9 @@ Bob souhaite construire une pyramide à base carrée comme sur la photo.
 Le 1{sup}`er` janvier, les parents de Chrystel ont déposé sur son livret
 d'épargne 15 000 CHF au taux de 0.5 %.
 
+{.lower-alpha-paren}
 1.  Écrivez un programme pour calculer le montant qu'elle aura après 1 an.
+    Utilisez une variable `montant`.
 
     ```{exec} python
     :editor: b0e0d36f-ab70-423e-bcaa-ed4c8007fad2
@@ -533,7 +539,7 @@ d'épargne 15 000 CHF au taux de 0.5 %.
     ````
 
 3.  Modifiez le programme pour que l'utilisateur puisse choisir la durée (le
-    nombre d'années) et la montant initial.
+    nombre d'années) et la montant initial. Utilisez une variable `duree`.
 
     ```{exec} python
     :editor: 5fcdfd6a-df26-4601-841b-a827f878979f
@@ -561,7 +567,7 @@ d'épargne 15 000 CHF au taux de 0.5 %.
     ````
 
 4.  Modifiez le programme pour que l'utilisateur puisse aussi choisir le taux
-    d'intérêt (en %).
+    d'intérêt (en %). Utilisez une variable `taux`.
 
     ```{exec} python
     :editor: 700fa29d-9736-4692-82b2-44ffce6c6d18

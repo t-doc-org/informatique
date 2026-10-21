@@ -5,6 +5,10 @@
 solutions: show
 ```
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Révisions
 
 ## Exercice {nump}`exercice`

@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Instructions conditionnelles
 
 Une instruction conditionnelle est composée d'une **condition** puis d'un
@@ -35,6 +39,7 @@ Est-ce que les expressions suivantes sont `True` (vrai) ou `False` (faux)?
 
 ```{quiz}
 :style: max-width: 25rem;
+{.lower-alpha-paren}
 1.  {select}`True`  `1 + 1 == 2`
 2.  {select}`False` `2 * 3 == 3`
 3.  {select}`True`  `2 + 3 != 4`
@@ -222,7 +227,7 @@ else:
   print("a est ...")
 ```
 
-Tester la justesse de votre code avec différentes valeurs de a.
+Testez la justesse de votre code avec différentes valeurs de a.
 
 ````{solution}
 ```{exec} python
@@ -285,8 +290,10 @@ else:
 
 ### Exercice {num2}`exercice`
 
-Indiquez l'ordre d'exécution et ce que vont afficher les programmes suivants?
+Indiquez l'ordre d'exécution (numéros de ligne) et ce que vont afficher les
+programmes suivants?
 
+{.lower-alpha-paren}
 1.  ```{exec} python
     :when:
     :linenos:
@@ -346,7 +353,16 @@ Indiquez l'ordre d'exécution et ce que vont afficher les programmes suivants?
 ### Exercice {num2}`exercice`
 
 Le programme suivant est censé affiché le tarif appliqué en fonction de l'âge de
-l'utilisateur. Mais il contient une erreur par ligne, trouvez-les et corrigez-les.
+l'utilisateur. Mais il contient une erreur par ligne, trouvez-les et
+corrigez-les.
+
+```{tip}
+Lisez toujours le message d'erreur qui donne différentes informations:
+- la ligne de l'erreur
+- où se trouve probablement l'erreur sur la ligne
+- le type d'erreur
+- une explication
+```
 
 ```{exec} python
 :editor: 55bcea11-979f-43f8-8d1c-46f102e56b2b
@@ -398,6 +414,7 @@ print(nombre)
 
 Voici trois programmes:
 
+{.lower-alpha-paren}
 1. Quelles sont les différences?
 2. Indiquez l'ordre d'exécution des lignes.
 3. Que vont-ils afficher?

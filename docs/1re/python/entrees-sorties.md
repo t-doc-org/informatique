@@ -1,6 +1,10 @@
 % Copyright 2024 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Entrées et sorties
 
 ## Fonction `print()`
@@ -10,6 +14,7 @@ la console.
 
 ## Exemple {num2}`exemple`
 
+{.lower-alpha-paren}
 1.  Affichage d'une chaine de caractère. Ce qui se trouve entre guillemets sera
     affiché tel quel.
 
@@ -17,7 +22,6 @@ la console.
     :editor:
     print("Hello world!")
     ```
-
 2.  Affichage de la valeur d'une variable.
 
     ```{exec} python
@@ -27,7 +31,6 @@ la console.
     a += 5
     print(a)
     ```
-
 3.  Affichage d'une chaîne de caractère et de la valeur d'une variable. Il faut
     utiliser une virgule pour séparer les différents éléments.
 
@@ -65,45 +68,21 @@ print("J'aime bien jouer au volley.")
 ```
 ````
 
-% ### Exercice {num2}`exercice`
-%
-% 1. Écrivez un programme qui affiche "Bonjour tout le monde!".
-% 2. Écrivez un programme qui affiche "Je programme!".
-% 3. Écrivez un programme qui affiche "Je programme! Je programme!".
-% 4. Écrivez un programme qui affiche "Je programme! " 10 fois de suite sans
-% récrire 10 fois la même chose.
-% 5. Ajoutez un commentaire qui explique ce que tu as fait au point précédent.
-%
-% ```{exec} python
-% :editor: 4d040bd2-fe01-409f-9b82-5edd968bd23d
-% # Écrivez le programme ici
-% ```
-%
-% ````{solution}
-% ```{exec} python
-% :linenos:
-% print("Bonjour tout le monde!")
-% print("Je programme!")
-% print("Je programme! Je programme!")
-% # Pour répéter plusieurs fois une chaine de caractères, on peut utiliser *
-% print("Je programme! " * 10)
-% ```
-% ````
-
 ### Exercice {num2}`exercice`
 
+{.lower-alpha-paren}
 1.  Sans exécuter le programme ci-dessous, prédisez ce qu'il affichera.
 
-```{exec} python
-:linenos:
-salutations = "Bonjour"
-print(salutations)
-print("salutations")
-```
-
+    ```{exec} python
+    :linenos:
+    salutations = "Bonjour"
+    print(salutations)
+    print("salutations")
+    ```
 2.  Quel est l'impact des guillemets sur le mot `salutations`?
 
 ```{solution}
+{.lower-alpha-paren}
 2.  Lorsque le mot `salutations` est écrit sans guillemets, il fait référence à
 la variable. L'affichage substitue donc la variable par son contenu. Lorsque des
 guillemets entourent `salutations`, alors le mot est considéré comme une chaîne
@@ -112,6 +91,7 @@ de type caractère et le mot est alors affiché tel quel.
 
 ### Exercice {num2}`exercice`
 
+{.lower-alpha-paren}
 1.  Écrivez un programme qui permet d'effectuer les 4 opérations de base
     (addition, soustraction, multiplication et division) avec les nombres 13 et
     2 en affichant le résultat.
@@ -147,6 +127,7 @@ print(a / b)
 Écrivez un programme qui permet d'afficher les calculs suivants, ainsi que la
 réponse:
 
+{.lower-alpha-paren}
 1. 452.52 + 27.78 =
 2. 5.65 * 3.4 =
 3. 4 569 - 8 532 =
@@ -173,53 +154,65 @@ print("Le reste de la division de 345 par 37 est ", 345 % 37)
 
 ### Exercice {num2}`exercice`
 
-Écrivez un programme qui permet de résoudre l'exercice suivant (ne pas oublier
-les phrases d'explication):
+{.lower-alpha-paren}
+1.  Avant de l'exécuter, expliquez en français ce que fait/calcule le programme
+    suivant:
 
-1.  Luc va faire des courses. Il achète deux livres à 9.30 CHF, un jeu vidéo à
-    59 CHF et trois mangas à 13.50 CHF. Calculer le montant total des dépenses
-    de Luc.
-2.  Juliette achète un livre, deux jeux vidéo et deux mangas. Calculer le
-    montant total des dépenses de Juliette.
-3.  En période de soldes, les jeux vidéo sont à 50 %, les livres à 5 CHF et les
-    mangas ont 6 CHF de rabais.
+    ```{exec} python
+    :editor: 04e50d20-dbc2-4f09-b8dd-8135adaf9406
+    :reset: show
+    :name: achats
+    prix_livre = 9.30
+    prix_jeu = 59
+    prix_manga = 13.50
 
-```{exec} python
-:editor: 7b1c5323-09e9-4e1d-9f32-f28d9d5743d4
-# Complétez le programme
-prix_livre =
-prix_jeu =
-prix_manga =
+    print("Montant total des achats de Luc:",
+          2 * prix_livre + 1 * prix_jeu + 3 * prix_manga, "francs.")
+    print("Montant total des achats de Juliette:",
+          1 * prix_livre + 2 * prix_jeu + 2 * prix_manga, "francs.")
+    ````
 
-print("Montant total des achats de Luc:", ... , "francs.")
-print("Montant total des achats de Juliette:", ... , "francs.")
+2.  En période de soldes, les jeux vidéo sont à 50 %, les livres à 5 CHF et les
+    mangas ont 6 CHF de rabais. Écrivez le programme qui correspond à ces
+    changements.
 
-print("Après réduction")
-prix_livre =
-prix_jeu =
-prix_manga =
+    ```{exec} python
+    :editor: 7b1c5323-09e9-4e1d-9f32-f28d9d5743d4
+    :after: achats
+    print("Après réductions")
+    # Complétez le programme ici
 
-print("Montant total des achats de Luc avec réduction:", ... , "francs.")
-print("Montant total des achats de Juliette avec réductions:", ... , "francs.")
-```
+    # définition des variables (prix des articles)
+
+    # calcul et affichage des montants à payer
+    ```
+3.  Que se passe-t-il si les prix de base (dans l'éditeur de la partie a)
+    changent? Est-ce que les prix après réductions s'adaptent aussi?
+    Si ce n'est pas le cas, adapter votre programme pour que les prix après
+    réductions soient calculer en fonction des prix de base.
 
 ````{solution}
 ```{exec} python
 :linenos:
+# définition des variables (prix des articles)
 prix_livre = 9.30
 prix_jeu = 59
 prix_manga = 13.50
 
+# calcul et affichage des montants à payer
 print("Montant total des achats de Luc:",
       2 * prix_livre + 1 * prix_jeu + 3 * prix_manga, "francs.")
 print("Montant total des achats de Juliette:",
       1 * prix_livre + 2 * prix_jeu + 2 * prix_manga, "francs.")
 
-print("Après réduction")
+# 2.
+print("Après réductions")
+# définition des variables (prix des articles)
 prix_livre = 5
 prix_jeu = prix_jeu * 50 / 100
 prix_manga = prix_manga - 6
 
+# calcul et affichage des montants à payer
 print("Montant total des achats de Luc avec réductions:",
       2 * prix_livre + 1 * prix_jeu + 3 * prix_manga, "francs.")
 print("Montant total des achats de Juliette avec réductions:",
@@ -286,6 +279,14 @@ print("Je vois que tu habites à", lieu)
 ### Exercice {num2}`exercice`
 
 Le programme ci-dessous contient une erreur par ligne. Trouvez et corrigez-les.
+
+```{tip}
+Lisez toujours le message d'erreur qui donne différentes informations:
+- la ligne de l'erreur
+- où se trouve probablement l'erreur sur la ligne
+- le type d'erreur
+- une explication
+```
 
 ```{exec} python
 :editor:

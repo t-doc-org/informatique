@@ -1,6 +1,10 @@
 % Copyright 2025 Caroline Blank <caro@c-space.org>
 % SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
+```{defaults} exec
+:editor-config: store: 'cloud'
+```
+
 # Projet - Carte de voeux
 
 Dans ce projet, vous allez créer un carte de voeux en utilisant les fonctions
