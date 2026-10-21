@@ -5,6 +5,23 @@
 :editor-config: store: 'cloud'
 ```
 
+```{exec} python
+:name: fonctions_dessin_svg
+:class: hidden
+:include: fonctions-dessin.py
+:when:
+creation_image(600, 400, "#FFFFFF")
+```
+
+```{exec} python
+:name: rendu
+:class: hidden
+:include: fonctions-dessin.py
+:when:
+# Affiche l'image
+render(img)
+```
+
 # Variables
 
 ## Définition
@@ -213,6 +230,85 @@ permettent de connaître à chaque ligne, la valeur des variables.
   | 4 | 10| 30| 40| 400|
   | 5 | 20| 30| 40| 400|
 ````
+
+### Exercice {num2}`exercice`
+
+La fonction `rectangle(position_x, position_y, largeur, hauteur, couleur)`
+est une fonction qui permet de dessiner un rectangle avec les propriétés
+données entre parenthèses.
+
+```{defaults} quiz-check
+:randomize:
+:class: grid-4
+```
+
+1. Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: ex1
+    :after: fonctions_dessin_svg
+    :when:
+    :linenos:
+    position_x = 100
+    position_y = 200
+    largeur = 150
+    hauteur = 150
+    couleur = "red"
+
+    rectangle(position_x, position_y, largeur, hauteur, couleur)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: ex1
+      :when: load
+      :then: rendu
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 100
+      position_y = 200
+      largeur = 150
+      hauteur = 150
+      couleur = "blue"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 100
+      position_y = 200
+      largeur = 150
+      hauteur = 150
+      couleur = "green"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      position_x = 100
+      position_y = 200
+      largeur = 150
+      hauteur = 150
+      couleur = "yellow"
+
+      rectangle(position_x, position_y, largeur, hauteur, couleur)
+      ```
+    ````
+    `````
+
+
 
 ### Exercice {num2}`exercice`
 
