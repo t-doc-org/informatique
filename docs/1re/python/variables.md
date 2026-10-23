@@ -772,8 +772,6 @@ cercle(centre_x, centre_y, rayon, couleur)
 ````
 
 
-
-
 ### Exercice {num2}`exercice`
 
 Déterminez la valeur de chacune des variables de ce programme en créant un

@@ -5,6 +5,23 @@
 :editor-config: store: 'cloud'
 ```
 
+```{exec} python
+:name: fonctions_dessin_svg
+:class: hidden
+:include: fonctions-dessin.py
+:when:
+creation_image(600, 400, "#FFFFFF")
+```
+
+```{exec} python
+:name: rendu
+:class: hidden
+:include: fonctions-dessin.py
+:when:
+# Affiche l'image
+render(img)
+```
+
 # Entrées et sorties
 
 ## Fonction `print()`
@@ -245,6 +262,92 @@ age = int(input("Quel est ton age?"))    # age est un nombre entier
 taille = float(input("Quelle est ta taille en mètres?")) # taille est un nombre à virgule
 print(prenom, age, taille)
 ```
+
+### Exercice {num2}`exercice`
+
+{.lower-alpha-paren}
+1.  Complétez le programme pour demander à l'utilisateur la couleur du carré.
+
+    ```{exec} python
+    :editor: 52dd0403-306d-4767-b937-0f4632d6caf3
+    :after: fonctions_dessin_svg
+    :then: rendu
+    couleur =
+    position_x = 100
+    position_y = 50
+    cote = 300
+
+    rectangle(position_x, position_y, cote, cote, couleur)
+    ```
+
+    ````{solution}
+    ```{exec} python
+    :editor:
+    :after: fonctions_dessin_svg
+    :then: rendu
+    # définition des variables
+    couleur = input("Quelle doit être la couleur du carré?")
+    position_x = 100
+    position_y = 50
+    cote = 300
+
+    rectangle(position_x, position_y, cote, cote, couleur)
+    ```
+    ````
+
+2.  Complétez le programme pour demander à l'utilisateur le côté du carré.
+
+    ```{exec} python
+    :editor: 79450216-3949-435f-86ee-f70aea4b0694
+    :after: fonctions_dessin_svg
+    :then: rendu
+    cote =
+    couleur = "cyan"
+    position_x = 100
+    position_y = 50
+
+    rectangle(position_x, position_y, cote, cote, couleur)
+    ```
+
+    ````{solution}
+    ```{exec} python
+    :editor:
+    :after: fonctions_dessin_svg
+    :then: rendu
+    # définition des variables
+    cote = int(input("Quelle doit être la longueur du côté de carré?"))
+    couleur = "cyan"
+    position_x = 100
+    position_y = 50
+
+    rectangle(position_x, position_y, cote, cote, couleur)
+    ```
+    ````
+
+2.  Complétez le programme pour demander à l'utilisateur la couleur, le côté et la position (coordonnées x et y) du carré.
+
+    ```{exec} python
+    :editor: fe81fd86-5851-48f5-9f4a-f6aa7ad7bc32
+    :after: fonctions_dessin_svg
+    :then: rendu
+
+    rectangle(position_x, position_y, cote, cote, couleur)
+    ```
+
+    ````{solution}
+    ```{exec} python
+    :editor:
+    :after: fonctions_dessin_svg
+    :then: rendu
+    # définition des variables
+    couleur = input("Quelle doit être la couleur du carré?")
+    cote = int(input("Quelle doit être la longueur du côté de carré?"))
+    position_x = int(input("Quelle doit être la position x du carré?"))
+    position_y = int(input("Quelle soit être la position y du carré?"))
+
+    rectangle(position_x, position_y, cote, cote, couleur)
+    ```
+    ````
 
 
 ### Exercice {num2}`exercice`

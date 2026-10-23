@@ -5,6 +5,24 @@
 :editor-config: store: 'cloud'
 ```
 
+```{exec} python
+:name: fonctions_dessin_svg
+:class: hidden
+:include: fonctions-dessin.py
+:when:
+creation_image(600, 400, "#FFFFFF")
+```
+
+```{exec} python
+:name: rendu
+:class: hidden
+:include: fonctions-dessin.py
+:when:
+# Affiche l'image
+render(img)
+```
+
+
 # Instructions conditionnelles
 
 Une instruction conditionnelle est composée d'une **condition** puis d'un
@@ -132,6 +150,328 @@ Dans l'exemple ci-dessus, il y a le choix entre trois types de films (action,
 comédie et horreur). Le branchement `else` gérera tous les autres cas. Remplacer
 la valeur de la variable `type_film` par "action", "horreur" ou "drame". Que se
 passe-t-il?
+
+### Exercice {num2}`exercice`
+
+```{defaults} quiz-check
+:randomize:
+:class: grid-4
+```
+
+{.lower-alpha-paren}
+1. Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: ex1.1
+    :after: fonctions_dessin_svg
+    :when:
+    :linenos:
+    choix = "cercle"
+    position_x = 150
+    position_y = 150
+    longueur = 150
+
+    if choix == "cercle":
+      couleur = "magenta"
+      rectangle(position_x, position_y, longueur, longueur, couleur)
+    else:
+      couleur = "black"
+      rectangle(position_x, position_y, longueur, longueur, couleur)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: ex1.1
+      :when: load
+      :then: rendu
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      choix = "cercle"
+      position_x = 150
+      position_y = 150
+      longueur = 150
+
+      if choix == cercle:
+        couleur = "magenta"
+        rectangle(position_x, position_y, longueur, longueur, couleur)
+      else:
+        couleur = "black"
+        rectangle(position_x, position_y, longueur, longueur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      choix = cercle
+      position_x = 150
+      position_y = 150
+      longueur = 150
+
+      if choix == "cercle":
+        couleur = "magenta"
+        cercle(position_x, position_y, longueur, couleur)
+      else:
+        couleur = "black"
+        cercle(position_x, position_y, longueur, couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      choix = "cercle"
+      position_x = 150
+      position_y = 150
+      longueur = 150
+
+      if choix == "cercle":
+        couleur = "magenta"
+        cercle(position_x, position_y, longueur, couleur)
+      else:
+        couleur = "black"
+        cercle(position_x, position_y, longueur, couleur)
+      ```
+    ````
+    `````
+2. Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: ex1.2
+    :after: fonctions_dessin_svg
+    :when:
+    :linenos:
+    choix = "rectangle"
+    position_x = 200
+    position_y = 200
+    longueur = 150
+    couleur = "red"
+
+    if choix == "cercle":
+      cercle(position_x, position_y, longueur, couleur)
+    elif choix == "rectangle":
+      couleur = "green"
+      rectangle(position_x, position_y, longueur, longueur, couleur)
+    else:
+      print("Choix pas valide.")
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: ex1.2
+      :when: load
+      :then: rendu
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      choix = "rectangle"
+      position_x = 200
+      position_y = 200
+      longueur = 150
+      couleur = "red"
+
+      if choix == "cercle":
+        cercle(position_x, position_y, longueur, couleur)
+      elif choix == "rectangle":
+        rectangle(position_x, position_y, longueur, longueur, couleur)
+      else:
+        print("Choix pas valide.")
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      choix = "cercle"
+      position_x = 200
+      position_y = 200
+      longueur = 150
+      couleur = "red"
+
+      if choix == "cercle":
+        cercle(position_x, position_y, longueur, couleur)
+      elif choix == "rectangle":
+        couleur = "green"
+        rectangle(position_x, position_y, longueur, longueur, couleur)
+      else:
+        print("Choix pas valide.")
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      choix = "cercle"
+      position_x = 200
+      position_y = 200
+      longueur = 150
+      couleur = "red"
+
+      cercle(position_x, position_y, longueur, couleur)
+      couleur = "green"
+      rectangle(position_x, position_y, longueur, longueur, couleur)
+      ```
+    ````
+    `````
+3. Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: ex1.3
+    :after: fonctions_dessin_svg
+    :when:
+    :linenos:
+    choix = rectangle
+    position_x = 200
+    position_y = 200
+    longueur = 150
+    couleur = "violet"
+
+    if choix == "cercle":
+      cercle(position_x, position_y, longueur, couleur)
+    elif choix == "rectangle":
+      rectangle(position_x, position_y, longueur, longueur, couleur)
+    else:
+      triangle((100, 100), (400, 150), (250, 300), couleur)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - :
+      ```{exec} python
+      :after: ex1.3
+      :when: load
+      :then: rendu
+      :class: hidden
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      choix = "rectangle"
+      position_x = 200
+      position_y = 200
+      longueur = 150
+      couleur = "violet"
+
+      if choix == "cercle":
+        cercle(position_x, position_y, longueur, couleur)
+      elif choix == "rectangle":
+        rectangle(position_x, position_y, longueur, longueur, couleur)
+      else:
+        triangle((100, 100), (400, 150), (250, 300), couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      choix = "cercle"
+      position_x = 200
+      position_y = 200
+      longueur = 150
+      couleur = "violet"
+
+      if choix == "cercle":
+        cercle(position_x, position_y, longueur, couleur)
+      elif choix == "rectangle":
+        rectangle(position_x, position_y, longueur, longueur, couleur)
+      else:
+        triangle((100, 100), (400, 150), (250, 300), couleur)
+      ```
+    - Ce programme génère une erreur.
+    ````
+    `````
+4. Qu'affiche le progamme suivant?
+
+    ```{exec} python
+    :name: ex1.4
+    :after: fonctions_dessin_svg
+    :when:
+    :linenos:
+    choix = "rectangle"
+    position_x = 200
+    position_y = 200
+    longueur = 150
+    couleur = "blue"
+
+    if choix = "cercle":
+      cercle(position_x, position_y, longueur, couleur)
+    elif choix = "rectangle":
+      rectangle(position_x, position_y, longueur, longueur, couleur)
+    else:
+      triangle((100, 100), (400, 150), (250, 300), couleur)
+    ```
+    `````{quiz}
+    ````{quiz-check}
+    - : Ce programme génère une erreur.
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      choix = "rectangle"
+      position_x = 200
+      position_y = 200
+      longueur = 150
+      couleur = "blue"
+
+      if choix == "cercle":
+        cercle(position_x, position_y, longueur, couleur)
+      elif choix == "rectangle":
+        rectangle(position_x, position_y, longueur, longueur, couleur)
+      else:
+        triangle((100, 100), (400, 150), (250, 300), couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      choix = "cercle"
+      position_x = 200
+      position_y = 200
+      longueur = 150
+      couleur = "blue"
+
+      if choix == "cercle":
+        cercle(position_x, position_y, longueur, couleur)
+      elif choix == "rectangle":
+        rectangle(position_x, position_y, longueur, longueur, couleur)
+      else:
+        triangle((100, 100), (400, 150), (250, 300), couleur)
+      ```
+    - ```{exec} python
+      :when: load
+      :class: hidden
+      :after: fonctions_dessin_svg
+      :then: rendu
+      choix = rectangle
+      position_x = 200
+      position_y = 200
+      longueur = 150
+      couleur = "blue"
+
+      if choix == "cercle":
+        cercle(position_x, position_y, longueur, couleur)
+      elif choix == "rectangle":
+        rectangle(position_x, position_y, longueur, longueur, couleur)
+      else:
+        triangle((100, 100), (400, 150), (250, 300), couleur)
+      ```
+    ````
+    `````
+
 
 ### Exercice {num2}`exercice`
 
