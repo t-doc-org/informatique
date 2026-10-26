@@ -10,6 +10,7 @@ date: 20.06.2026
 ## Fichier index.html
 
 ```{code} text
+:number-lines:
 <!DOCTYPE html>
 <html>
 
@@ -42,6 +43,7 @@ date: 20.06.2026
 ## Fichier style.css
 
 ```{code} text
+:number-lines:
 body {
   font-family: Arial, sans-serif;
   background-color: lightblue;
