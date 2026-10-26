@@ -221,7 +221,21 @@ dessins prédéfinis.
 {.lower-alpha-paren}
 1.  Définissez au moins une fonction qui dessine un animal, un personnage,
     objet, ... Pour les deux autres, vous pouvez copiez les idées de l'{numref}`exercice %s<exercice-rev:exo-1>`.<br>
-    Quelques idées ici: [https://www.momsarefrommars.com/cute-keyboard-characters.html](https://www.momsarefrommars.com/cute-keyboard-characters.html).
+    ````{admonition} Quelques idées
+    :class: tip, dropdown
+    ```{code} text
+     (O)_(O)    (O)___(O)   _____       ___         /\_/\
+     (='X'=)     ('(Y)')   (|. .|)     ('V')   ____( '.' )____
+    \_(")(")    c(")-(")   ( (Y) )    ((___))  Vvvv  ^ ^  vvvV
+                           (")_(")_/    ^ ^
+
+      __~__      ____/\____        ___
+    (( ^. ^))     //'<'.\\\      _|___|_
+                 ---(___)--<     ( '<' )
+                     J J      >-(   o   )-<
+                               (    o    )
+    ```
+    ````
 2.  Écrivez un programme qui demande à l'utilisateur de choisir entre trois
     possibilités et affichez le dessin correspondant. Demandez jusqu'à ce que la
     réponse de l'utilisateur soit valide.
