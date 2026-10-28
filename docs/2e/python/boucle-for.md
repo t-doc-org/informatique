@@ -25,6 +25,7 @@ for _ in range(nb_repetitions):
 - # Programme
   ```{exec} python
   :editor:
+  :reset: show
   for i in range(5):
     print(i)
   ```
