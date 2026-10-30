@@ -1,2 +1,9 @@
 /* Copyright 2026 Caroline Blank <caro@c-space.org> */
 /* SPDX-License-Identifier: CC-BY-NC-SA-4.0 */
+
+/* Fix the vertical alignment of list item markers. */
+/* TODO(0.98): Remove */
+figure:is(.align-default, .align-center) img {
+    display: inline;
+    vertical-align: top;
+}
