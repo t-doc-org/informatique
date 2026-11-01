@@ -759,8 +759,7 @@ Voici trois programmes:
 2. Indiquez l'ordre d'exécution des lignes.
 3. Que vont-ils afficher?
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr 1fr;
+````{list-grid} 1fr 1fr 1fr
 - # Programme 1
   ```{exec} python
   :linenos:

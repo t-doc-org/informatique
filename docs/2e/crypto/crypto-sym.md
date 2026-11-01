@@ -39,8 +39,7 @@ d'origine.
 
 ### Scytale
 
-````{list-grid}
-:style: grid-template-columns: 9fr 4fr;
+````{list-grid} 9fr 4fr
 - Ce procédé était déjà utilisé pendant l'Antiquité (~3400 av. J.-C. à 476) par
   les Spartes. La scytale est un morceau de bois autour duquel est entouré une
   bande de cuir ou de parchemin. L'expéditeur écrit son message et déroule la
@@ -237,8 +236,7 @@ artisanal à la main était devenu trop dangereux et dépassé.
 
 # Deuxième Guerre mondiale - Machine Enigma
 
-````{list-grid}
-:style: grid-template-columns: 2fr 1fr;
+````{list-grid} 2fr 1fr
 -   La machine Enigma est l'un des exemples les plus célèbres de chiffrement
     symétrique. Utilisée par l'Allemagne nazi pendant la Seconde Guerre
     mondiale, elle était une machine électromécanique aux airs de machine à

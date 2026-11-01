@@ -37,9 +37,7 @@ marie = False
 
 Complétez le tableau d'états pour le progamme suivant.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
-
+````{list-grid} 1fr 1fr
 -   ```{exec} python
     :when:
     :linenos:
@@ -52,8 +50,7 @@ Complétez le tableau d'états pour le progamme suivant.
     d = a ** 2
     c = a < 4 or b > 3
     ```
--   ```{flex-table}
-    :class: function-table align-center
+-   ```{flex-table} function-table align-center
     |ligne|$\quad a\quad$|$\quad b\quad$|$\quad c\quad$|$\quad d\quad$
     |1||||
     |2||||
@@ -67,8 +64,7 @@ Complétez le tableau d'états pour le progamme suivant.
 ````
 
 ````{solution}
-```{flex-table}
-:class: function-table align-center
+```{flex-table} function-table align-center
 |ligne|$\quad a\quad$|$\quad b\quad$|$\quad c\quad$|$\quad d\quad$
 |1|7|?|?|?
 |2|7|3.5|?|?

@@ -20,8 +20,7 @@ while condition:
   ...
 ```
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Programme
   ```{exec} python
   :editor:
@@ -41,8 +40,7 @@ while condition:
 La boucle `while` peut être utilisée comme une boucle `for`. Pour cela, il faut
 définir un compteur qui va "compter" le nombre de répétitions.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Boucle for
   ```{exec} python
   :editor:
@@ -277,8 +275,7 @@ print("Bravo!")
 Tout d'abord, sans les exécuter, expliquez la différence entre les deux
 programmes. Ensuite, testez-les pour vérifier votre réponse.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Programme 1
   ```{exec} python
   :editor:

@@ -14,8 +14,7 @@
 
 Cochez la bonne réponse.
 
-```{list-grid}
-:style: grid-template-columns: 5fr 1fr 1fr;
+```{list-grid} 5fr 1fr 1fr
 - Si j'augmente la mémoire de mon disque dur, mon ordinateur sera plus rapide.
 - &#9744; Vrai
 - &#9744; Faux
@@ -63,11 +62,9 @@ Complétez ce schéma vu en cours et donnez un exemple pour chaque niveau.
 ```
 
 <style>
-.os td {
+table.os td {
     border: 1px solid black;
-    border-collapse: collapse;
     padding: 10px;
-    text-align: left;
     width: 50%;
 }
 </style>
@@ -77,8 +74,7 @@ Complétez ce schéma vu en cours et donnez un exemple pour chaque niveau.
 Pour chaque description, indiquez le rôle du système d'exploitation (ce que le
 système d'exploitation gère):
 
-```{flex-table}
-:class: os
+```{flex-table} os
 |   |  Le système d'exploitation gère qui peut accéder à quel répertoire ou fichier.
 |   |  Le système d'exploitation détecte un nouveau matériel qui est branché à l'ordinateur.
 |   |  Le système d'exploitation partage la RAM entre les différentes applications qui en ont besoin.
@@ -86,8 +82,7 @@ système d'exploitation gère):
 |   |  Le système d'exploitation permet d'avoir une structure hiérarchique dans nos documents sauvegardés.
 ```
 ````{solution}
-```{flex-table}
-:class: os
+```{flex-table} os
 | Les droits et accès |  Le système d'exploitation gère qui peut accéder à quel répertoire ou fichier.
 | Les périphériques   |  Le système d'exploitation détecte un nouveau matériel qui est branché à l'ordinateur.
 | Les ressources      |  Le système d'exploitation partage la RAM entre les différentes applications qui en ont besoin.

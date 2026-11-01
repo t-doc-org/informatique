@@ -85,8 +85,7 @@ faites:
 
 **TMRTA ATCIS TRGNE IPVTG TJHHX**
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - ```{figure} images/frequences.png
   :align: center
   ```

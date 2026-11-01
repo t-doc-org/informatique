@@ -504,8 +504,7 @@ L'algorithme de Luhn permet-il de détecter:
 
 Les cartes de crédit suivantes sont-elles valides?
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - ```{figure} images/carte1.png
   :alt: Carte de crédit 1
   :width: 90%

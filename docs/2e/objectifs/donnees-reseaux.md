@@ -55,10 +55,8 @@ contrôle n'est jamais doublé.
 
 ### Code correcteur
 
-````{list-grid}
-:style: |
-: grid-template-columns: 1fr 1fr; align-items: center;
-: margin-bottom: 0;
+````{list-grid} 1fr 1fr
+:style: align-items: center; margin-bottom: 0;
 - ```{figure} images/hamming6.svg
   :alt: Bits de contrôle
   :width: 60%

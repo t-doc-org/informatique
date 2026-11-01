@@ -22,8 +22,7 @@ for _ in range(nb_repetitions):
 
 ### Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Programme
   ```{exec} python
   :editor:

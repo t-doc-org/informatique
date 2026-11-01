@@ -79,10 +79,8 @@ Répondez par vrai ou faux et justifiez.
 
 ## Question {nump}`question`{points}`6`
 
-````{list-grid}
-:style: |
-: grid-template-columns: 1fr 1fr; align-items: center;
-: margin-bottom: 0;
+````{list-grid} 1fr 1fr
+:style: align-items: center; margin-bottom: 0;
 - ```{figure} images/hamming6.svg
   :alt: Bits de contrôle
   :width: 60%
@@ -137,10 +135,7 @@ Inconvénients: pas très rapide / sujet aux interférences.
 
 Reliez, si possible, chaque équipement à son rôle:
 
-```{list-grid}
-:style: |
-: grid-template-columns: 1fr 0fr 0fr 0fr 6fr;
-
+```{list-grid} 1fr 0fr 0fr 0fr 6fr
 - Routeur
 - &#9679;
 - {hspace}`3em`
@@ -189,10 +184,7 @@ L'ordinateur envoie les paquets au switch qui les transmets ensuite directement
 
 Cochez la bonne réponse:
 
-```{list-grid}
-:style: |
-: grid-template-columns: 5fr 1fr 1fr;
-
+```{list-grid} 5fr 1fr 1fr
 - Les adresses IPv4 sont de la forme 156.25.4.255.
 - &#9744; Vrai
 - &#9744; Faux

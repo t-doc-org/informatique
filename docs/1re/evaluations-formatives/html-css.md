@@ -14,8 +14,7 @@
 
 Indiquez les mots manquants aux emplacements notés ......(n)......: (cf. annexe)
 
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - (1) {leader}`.|12em`
 - (2) {leader}`.|12em`
 - (3) {leader}`.|12em`
@@ -23,8 +22,7 @@ Indiquez les mots manquants aux emplacements notés ......(n)......: (cf. annexe
 ```
 
 ````{solution}
-```{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+```{list-grid} 1fr 1fr
 - (1) style.css
 - (2) \<body\>
 - (3) Img

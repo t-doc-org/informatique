@@ -7,7 +7,6 @@
 
 # Révisions - Instructions conditionnelles
 
-
 Une instruction conditionnelle est composée d'une **condition** puis d'un
 **bloc d'instructions**. La condition est une expression ou une variable logique
 évaluée par `True` ou `False`. Le bloc d'instructions s'exécute seulement si la
@@ -75,8 +74,7 @@ Que vont afficher chacun de ces programmes?
 :style: width: 100%;
 ```
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Programme 1
   Que va afficher ce programme?
 
@@ -139,8 +137,7 @@ Que vont afficher chacun de ces programmes?
 ````
 
 `````{solution}
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Programme 1
   ```{exec} python
   :after: prog2.1
@@ -547,8 +544,7 @@ Quelles sont les différences entre ces trois programmes?
 :style: width: 100%;
 ```
 
-`````{list-grid}
-:style: grid-template-columns: 1fr 1fr 1fr;
+`````{list-grid} 1fr 1fr 1fr
   - # Programme 1
     Que va afficher ce programme?
 
@@ -615,8 +611,7 @@ Quelles sont les différences entre ces trois programmes?
 `````
 
 `````{solution}
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr 1fr;
+````{list-grid} 1fr 1fr 1fr
 - # Programme 1
   ```{exec} python
   :after: prog1.1

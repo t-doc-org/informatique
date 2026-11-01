@@ -11,8 +11,7 @@ l'attribut `primary key` en plus de `not null`. Ainsi, il sera impossible
 d'insérer une ligne dans la table si la valeur de `no_c` existe déjà dans
 celle-ci ou si elle est `null`.
 
-````{list-grid}
-:style: grid-template-columns: 3fr 7fr;
+````{list-grid} 3fr 7fr
 - ```{graphviz}
   :align: center
   digraph UML_Class_diagram {

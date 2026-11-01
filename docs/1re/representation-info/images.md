@@ -11,8 +11,7 @@ allons nous intéresser aux images.
 Par groupe de deux, les élèves doivent décrire leur image avec un minimum
 d'information pour qu'un autre groupe puisse la reproduire exactement.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 -   # Dessin 1
     ```{exec} pnm
     :class: hidden

@@ -64,8 +64,7 @@ avec un compteur (la valeur augmentera toujours de 1).
 
 #### Exemple - Cantons
 
-````{list-grid}
-:style: grid-template-columns: 3fr 7fr;
+````{list-grid} 3fr 7fr
 - ```{graphviz}
   :align: center
   digraph UML_Class_diagram {
@@ -114,8 +113,7 @@ primaire. Nous avons choisi `nom`.
 
 #### Exemple - Clients
 
-````{list-grid}
-:style: grid-template-columns: 3fr 7fr;
+````{list-grid} 3fr 7fr
 - ```{graphviz}
   :align: center
   digraph UML_Class_diagram {

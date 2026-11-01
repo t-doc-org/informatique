@@ -29,8 +29,7 @@ lire.
 
 ### Tatouage sur le crâne
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - L'historien grec Hérodote, raconte qu'au V{sup}`e` siècle avant Jésus-Christ,
   un certain Histiée rasa le crâne d'un de ses esclaves, y tatoua le message et
   attendit que les cheveux repoussent. Ensuite, il envoya l'esclave à
@@ -44,8 +43,7 @@ lire.
 
 ### Tablette de cire
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - Toujours selon Hérodote, un certain Démarate, pour informer discrètement les
   Spartiates de l'attaque imminente des Perses, prit des tablettes, en racla la
   cire et grava le message secret sur le bois, puis il recouvrit le bois de

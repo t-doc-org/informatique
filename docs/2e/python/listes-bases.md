@@ -618,8 +618,8 @@ a = 4
 print("a:", a, "b:", b)
 ```
 
-````{list-grid}
-:style: grid-template-columns: 10fr 8fr; column-gap: 2rem;
+````{list-grid} 10fr 8fr
+:style: column-gap: 2rem;
 - <br>`a = 5` crée une référence de la variable `a` vers la valeur `5` en
   mémoire.
 
@@ -654,8 +654,8 @@ b.append(7)
 print("a:", a, "b:", b)
 ```
 
-````{list-grid}
-:style: grid-template-columns: 10fr 8fr; column-gap: 2rem;
+````{list-grid} 10fr 8fr
+:style: column-gap: 2rem;
 - <br>`a = [1, 2, 3]` crée une référence de la variable `a` vers la liste
   `[1, 2, 3]` en mémoire.
 

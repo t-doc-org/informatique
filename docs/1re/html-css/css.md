@@ -192,8 +192,7 @@ body {
 Le sélecteur d'identifiant permet d'appliquer un style à un élément précis. Pour
 cela, il faut ajouter un nouvel attribut `id` à la balise HTML concernée.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Fichier HTML
   ```{code-block} html
   <p id="intro">
@@ -593,8 +592,7 @@ Le sélecteur de classe permet d'appliquer un style à plusieurs éléments qui
 appartiennent à une même classe (groupe). Pour cela, il faut ajouter un nouvel
 attribut class à la balise HTML concernée.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Fichier HTML
   ```{code-block} html
   <p class="centre">
@@ -770,8 +768,7 @@ extérieure (margin) ou la bordure (border).
 :align: center
 ```
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Fichier HTML
   ```{code-block} html
   <div id="mon_conteneur">

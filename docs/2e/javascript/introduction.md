@@ -259,8 +259,7 @@ l'{numref}`exemple %s<exemple:js-exemple>`:
 Comme en Python, il est possible de faire une boucle for sur tous les éléments
 d'une liste.
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Python
   ```{code-block} python
   notes = [5, 5.5, 4, 5.5, 6]

@@ -207,8 +207,7 @@ permettent de connaître à chaque ligne, la valeur des variables.
 
 ### Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 1fr min-content;
+````{list-grid} 1fr min-content
 - # Programme
   ```{exec} python
   :linenos:
@@ -793,8 +792,7 @@ print(x, y, z)
 ```
 
 `````{solution}
-````{list-grid}
-:style: grid-template-columns: 1fr min-content;
+````{list-grid} 1fr min-content
 - ```{exec} python
   :linenos:
   x = 10

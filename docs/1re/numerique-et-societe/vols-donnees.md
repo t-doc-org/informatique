@@ -74,8 +74,7 @@ dérober de l'argent.
 
 ### Exemple {num2}`exemple`
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - ```{figure} images/phishing1.png
   :alt: Exemple de phishing
   ```

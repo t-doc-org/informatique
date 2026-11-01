@@ -140,10 +140,8 @@ Les bits de données vont dans un ordre particulier:
 :align: center
 ```
 
-````{list-grid}
-:style: |
-: grid-template-columns: 1fr 1fr; align-items: center;
-: margin-bottom: 0;
+````{list-grid} 1fr 1fr
+:style: align-items: center; margin-bottom: 0;
 - $p_1$: bit de parité de $d_1$, $d_2$ et $d_4$
 
   $p_2$: bit de parité de $d_1$, $d_3$ et $d_4$
@@ -160,10 +158,8 @@ Vérification: Les trois parités doivent être correctes.
 
 ##### Cas 1: une parité fausse
 
-````{list-grid}
-:style: |
-: grid-template-columns: 1fr 1fr; align-items: center;
-: margin-bottom: 0;
+````{list-grid} 1fr 1fr
+:style: align-items: center; margin-bottom: 0;
 - <span style="color: #EA4335;">Parité 1:</span>
   $p_1$, $d_1$, $d_2$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 
@@ -183,10 +179,8 @@ Vérification: Les trois parités doivent être correctes.
 
 ##### Cas 2: deux parités fausses
 
-````{list-grid}
-:style: |
-: grid-template-columns: 1fr 1fr; align-items: center;
-: margin-bottom: 0;
+````{list-grid} 1fr 1fr
+:style: align-items: center; margin-bottom: 0;
 - <span style="color: #EA4335;">Parité 1:</span>
   $p_1$, $d_1$, $d_2$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 
@@ -206,10 +200,8 @@ Vérification: Les trois parités doivent être correctes.
 
 ##### Cas 3: trois parités fausses
 
-````{list-grid}
-:style: |
-: grid-template-columns: 1fr 1fr; align-items: center;
-: margin-bottom: 0;
+````{list-grid} 1fr 1fr
+:style: align-items: center; margin-bottom: 0;
 - <span style="color: #EA4335;">Parité 1:</span>
   $p_1$, $d_1$, $d_2$, $d_4$ <b><span style="color: #EA4335;">&#10007;</span></b>
 

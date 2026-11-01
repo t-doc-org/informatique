@@ -20,8 +20,7 @@ while condition:
   ...
 ```
 
-````{list-grid}
-:style: grid-template-columns: 1fr 1fr;
+````{list-grid} 1fr 1fr
 - # Programme
   ```{exec} python
   :editor:
