@@ -30,7 +30,7 @@ dans le dossier partagé sur OneDrive nommé `PRENOM projet html`.
 Cette partie sera faite pas à pas ensemble en classe.
 
 1.  Sur OneDrive, créez un dossier nommé `classe-prenom-projet-web`.
-2.  Installez VSCode en suivant les [instustructions](../../logiciels/vscode.md).
+2.  Installez VSCode en suivant les [instructions](../../logiciels/vscode.md).
 3.  Ouvrez Visual Studio Code.
 4.  Sur la page de bienvenue, sélectionnez ***Ouvrir un dossier...*** ou cliquez
     sur ***Fichier -> Ouvrir le dossier...*** afin d'ouvrir le dossier du projet
