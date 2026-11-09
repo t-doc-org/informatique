@@ -462,7 +462,7 @@ y = 5
 print(mystery_1(y))
 print(mystery_2(y))
 print(mystery_2(2 * y))
-print(y // 2)
+print(mystery_1(y // 2))
 ```
 
 ### Exercice {num2}`exercice`
@@ -516,7 +516,7 @@ sont des fonctions avec valeurs de retour.
 `s`: représente un caractère ou une chaine de caractères
 
 len(txt)
-: retourne le nombre de caractères du texte (espaces compris)
+: retourne le nombre de caractères du texte (espaces compris).
 
 txt.count(s)
 : retourne le nombre de fois que `s` apparaît dans `txt`.
@@ -621,17 +621,17 @@ phrase = "Mon devoir est corrompu par un virus :-/"
 :editor:
 phrase = "Mon devoir est corrompu par un virus :-/"
 def leet_speak(texte):
-  txt = texte.upper()
-  txt = txt.replace("A", "4")
-  txt = txt.replace("E", "3")
-  txt = txt.replace("G", "6")
-  txt = txt.replace("I", "1")
-  txt = txt.replace("L", "1")
-  txt = txt.replace("O", "0")
-  txt = txt.replace("S", "5")
-  txt = txt.replace("T", "7")
-  txt = txt.replace("B", "8")
-  return txt
+  texte_modifie = texte.upper()
+  texte_modifie = texte_modifie.replace("A", "4")
+  texte_modifie = texte_modifie.replace("E", "3")
+  texte_modifie = texte_modifie.replace("G", "6")
+  texte_modifie = texte_modifie.replace("I", "1")
+  texte_modifie = texte_modifie.replace("L", "1")
+  texte_modifie = texte_modifie.replace("O", "0")
+  texte_modifie = texte_modifie.replace("S", "5")
+  texte_modifie = texte_modifie.replace("T", "7")
+  texte_modifie = texte_modifie.replace("B", "8")
+  return texte_modifie
 
 print(phrase ,"devient:", leet_speak(phrase))
 ```
