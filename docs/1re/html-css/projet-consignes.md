@@ -12,14 +12,14 @@ Le site doit être composé de:
 
 ## Marche à suivre
 
-Le document Word et les fichiers de votre site doivent toujours être sauvegardés
-dans le dossier partagé sur OneDrive nommé `PRENOM projet html`.
+Les fichiers de votre site doivent toujours être sauvegardés dans le dossier sur
+OneDrive nommé `PRENOM projet html`.
 
 ### Avant la création du site
 
 1.  Définissez les différents parties de votre sujet que vous allez aborder.
-2.  Complétez, si nécessaire, les sources déjà trouvées (au minimum 5).
-3.  Lisez les sources et faites des résumés dans le document Word.
+2.  Complétez, si nécessaire, les sources déjà trouvées (au minimum 4).
+3.  Lisez les sources et faites des résumés dans un document Word.
 4.  Réfléchissez à la structure et au design du site:
       - Quel est le public cible?
       - Quelles seront les différentes sections?
@@ -50,8 +50,8 @@ Pour visualiser votre travail, ouvrez le fichier `index.html`.
 
 ### Conseils
 
-1.  Toutes les images de votre site doivent être importées dans le dossier
-    `images`.
+1.  Toutes les images de votre site doivent être téléchargées et sauvegardées
+    dans le dossier `images`.
 2.  Soignez l'indentation des fichiers pour faciliter la lecture.
 3.  Commentez vos fichiers HTML avec `<!--` `-->` ou vos fichiers CSS avec
     `/**` `**/`.
