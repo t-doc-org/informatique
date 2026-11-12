@@ -619,7 +619,6 @@ phrase = "Mon devoir est corrompu par un virus :-/"
 ````{solution}
 ```{exec} python
 :editor:
-phrase = "Mon devoir est corrompu par un virus :-/"
 def leet_speak(texte):
   texte_modifie = texte.upper()
   texte_modifie = texte_modifie.replace("A", "4")
@@ -633,7 +632,9 @@ def leet_speak(texte):
   texte_modifie = texte_modifie.replace("B", "8")
   return texte_modifie
 
-print(phrase ,"devient:", leet_speak(phrase))
+phrase = "Mon devoir est corrompu par un virus :-/"
+new_phrase = leet_speak(phrase)
+print(phrase ,"devient:", new_phrase)
 ```
 ````
 
