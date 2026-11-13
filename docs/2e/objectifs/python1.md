@@ -9,13 +9,11 @@
 -   Connaître la notion de **variables** et savoir les utiliser
 -   Connaître les fonctions **print()** et **input()** et savoir les
     utiliser
--   Connaître la notion de **modules** et savoir les importer
 -   Connaître la syntaxe en Python (indentation, :, etc.)
 -   Savoir utiliser une instruction conditionnelle **if, elif, else**
 -   Savoir utiliser une boucle **while**
 -   Savoir utiliser une boucle **for**
--   Savoir lire un programme et le comprendre
--   Savoir remplir un tableau d'états
+-   Savoir lire un programme, le comprendre et déterminer le résultat
 -   Savoir définir l'ordre d'exécution d'un programme
 -   Savoir écrire un programme à partir d'un énoncé
 
