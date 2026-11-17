@@ -41,7 +41,7 @@ Inconvénients:
 
 -   pas possible de donner plus ou moins de notes,
 -   soit on stocke toutes les notes et il faut beaucoup de variables, soit on ne
-    peut par réutiliser la valeur des notes.
+    peut pas réutiliser la valeur des notes.
 ````
 
 ## Exercice {nump}`exercice:py2-lab2-exemple-liste`
