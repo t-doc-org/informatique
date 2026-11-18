@@ -7,6 +7,32 @@
 
 # Fonctions Lab - Analyse de fréquences
 
+## Fonctions sur les chaines de caractères
+
+`txt`: représente le texte analysé.<br>
+`s`: représente un caractère ou une chaine de caractères
+
+len(txt)
+: retourne le nombre de caractères du texte (espaces compris).
+
+txt.count(s)
+: retourne le nombre de fois que `s` apparaît dans `txt`.
+
+txt.find(s)
+: retourne l'index de l'emplacement de la première apparition de `s` dans `txt`.<br>
+ Si `s` n'apparaît pas dans `txt` la fonction retourne `-1`.
+
+txt.replace(s, t)
+: retourne une nouvelle chaîne de caractères dans laquelle tous les `s` de `txt`
+  ont été remplacé par `t`.
+
+txt.lower()
+: retourne une nouvelle chaîne de caractères écrite en minuscules.
+
+txt.upper()
+: retourne une nouvelle chaîne de caractères écrite en majuscules.
+
+
 ## Exercice {nump}`exercice`
 
 Nous allons analyser la phrase "C'est une belle phrase à analyser!".
@@ -104,9 +130,13 @@ texte:
 1.  Affichez le texte original.
 2.  Convertissez et affichez le texte en minuscule.
 3.  Supprimez les espaces et affichez le texte modifié.
-4.  Définissez une fonction qui convertit toutes les lettres accentuées en
-    caractères sans accents et affichez le texte modifié.
-5.  Supprimez toutes les ponctuations et affichez le texte modifié.
+4.  Définissez une fonction qui prend en paramètre le texte à traiter et qui
+    convertit toutes les lettres accentuées en caractères sans accents. Cette
+    fonction retourne le texte modifié.<br>
+    Affichez le texte sans caractères accentués en appelant la fonction.
+5.  Définissez une fonction qui prend en paramètre le texte à traiter et qui
+    supprime toutes les ponctuations. Cette fonction retourne le texte modifié.<br>
+    Affichez le texte sans poncutation en appelant la fonction.
 6.  Refaites l'analyse de fréquences de l'exercice précédent en définissant une
     fonction `analyse` qui prend en paramètre le texte et la lettre à analyser.<br>
     La fonction doit afficher l'analyse de fréquences en pourcents comme
