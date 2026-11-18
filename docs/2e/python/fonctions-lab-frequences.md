@@ -128,15 +128,17 @@ texte:
 
 
 1.  Affichez le texte original.
-2.  Convertissez et affichez le texte en minuscule.
+2.  Convertissez le texte en minuscule et affichez-le.
 3.  Supprimez les espaces et affichez le texte modifié.
 4.  Définissez une fonction qui prend en paramètre le texte à traiter et qui
     convertit toutes les lettres accentuées en caractères sans accents. Cette
     fonction retourne le texte modifié.<br>
-    Affichez le texte sans caractères accentués en appelant la fonction.
+    Modifiez le texte pour qu'il soit sans caractère accentué en appelant la
+    fonction et affichez-le.
 5.  Définissez une fonction qui prend en paramètre le texte à traiter et qui
     supprime toutes les ponctuations. Cette fonction retourne le texte modifié.<br>
-    Affichez le texte sans poncutation en appelant la fonction.
+    Modifiez le texte pour qu'il soit sans ponctuation en appelant la
+    fonction et affichez-le.
 6.  Refaites l'analyse de fréquences de l'exercice précédent en définissant une
     fonction `analyse` qui prend en paramètre le texte et la lettre à analyser.<br>
     La fonction doit afficher l'analyse de fréquences en pourcents comme
