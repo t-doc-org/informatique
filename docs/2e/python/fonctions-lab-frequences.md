@@ -144,7 +144,7 @@ texte:
     La fonction doit afficher l'analyse de fréquences en pourcents comme
     ci-dessous.
     ```{code-block} text
-    La fréquence de la lettre e est de 18.39622641509434 %.
+    La fréquence de la lettre e est de 18.454258675078865 %.
     ```
 
 ```{exec} python
@@ -162,7 +162,7 @@ def suppression_accents(texte):
   texte = texte.replace("ê", "e")
   texte = texte.replace("ë", "e")
   texte = texte.replace("à", "a")
-  texte = texte.replace("à", "a")
+  texte = texte.replace("â", "a")
   texte = texte.replace("î", "i")
   texte = texte.replace("ï", "i")
   texte = texte.replace("ô", "o")
@@ -181,6 +181,7 @@ def suppression_pontuation(texte):
   texte = texte.replace("!", "")
   texte = texte.replace("?", "")
   texte = texte.replace('"', "")
+  texte = texte.replace("-", "")
   return texte
 
 def analyse(texte, lettre):
