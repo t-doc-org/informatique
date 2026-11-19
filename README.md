@@ -4,6 +4,7 @@
 # Cours d'informatique
 
 [![Publish](https://github.com/t-doc-org/informatique/actions/workflows/publish.yml/badge.svg)](https://github.com/t-doc-org/informatique/actions/workflows/publish.yml) [![Fixes](https://informatique.t-doc.org/tdoc-fixes.svg)](https://github.com/t-doc-org/informatique/actions/workflows/publish.yml) [![Version](https://informatique.t-doc.org/tdoc-version.svg)](https://common.t-doc.org/release-notes.html)
+
 Ce projet contient des documents pour l'enseignement de l'informatique au
 secondaire supérieur en Suisse.
 
