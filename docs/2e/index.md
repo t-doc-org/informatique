@@ -20,7 +20,8 @@ change chaque semaine. Pensez à vérifier l'horaire régulièrement.
 
 ```{toctree}
 crypto/index
-python/index
+python/index-1
+python/index-2
 donnees/index
 reseaux/index
 bases-de-donnees/index

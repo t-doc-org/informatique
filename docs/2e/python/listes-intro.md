@@ -8,7 +8,7 @@
 
 # Listes - Introduction
 
-## Exercice {nump}`exercice`
+## Exercice {num2}`exercice`
 
 Écrivez un programme qui calcule et affiche la moyenne de 5 notes qui seront
 demandées à l'utilisateur.
@@ -44,7 +44,7 @@ Inconvénients:
     peut pas réutiliser la valeur des notes.
 ````
 
-## Exercice {nump}`exercice:py2-lab2-exemple-liste`
+## Exercice {num2}`exercice:py2-lab2-exemple-liste`
 
 Faites des suppositions sur le programme ci-dessous:
 1.  Que fait `print(notes)`?
@@ -67,7 +67,7 @@ del notes[3]
 print(notes)
 ```
 
-## Exercice {nump}`exercice`
+## Exercice {num2}`exercice`
 
 ```{exec} python
 :editor:
@@ -116,7 +116,7 @@ changer les valeurs pour observer ce qui se passe.
 7.  Pour créer une liste vide: `notes = []`
 ```
 
-## Exercice {nump}`exercice`
+## Exercice {num2}`exercice`
 
 Écrivez un programme qui demande à l'utilisateur d'entrer 10 notes qui seront
 stockées dans une liste.
@@ -144,7 +144,7 @@ print(notes)
 ```
 ````
 
-## Exercice {nump}`exercice:py2-lab2-exemple-for`
+## Exercice {num2}`exercice:py2-lab2-exemple-for`
 
 Que va afficher ce programme?
 
@@ -156,7 +156,7 @@ for i in notes:
   print(i)
 ```
 
-## Exercice {nump}`exercice`
+## Exercice {num2}`exercice`
 
 1.  Exécutez le code et vérifier les réponses de
     l'{numref}`exercice %s<exercice:py2-lab2-exemple-for>`.
@@ -191,7 +191,7 @@ for i in notes:
     ```
 ````
 
-## Exercice {nump}`exercice`
+## Exercice {num2}`exercice`
 
 Modifiez le programme suivant pour qu'il calcule et affiche la somme des notes
 quel que soit le nombre de notes ajoutées.
@@ -223,7 +223,7 @@ print(somme)
 ```
 ````
 
-## Exercice {nump}`exercice`
+## Exercice {num2}`exercice`
 
 Complétez le programme précédent pour qu'il:
 - demande à l'utilisateur le nombre de notes qu'il veut entrer,
@@ -272,7 +272,7 @@ print("Moyenne: ", moyenne)
 ```
 ````
 
-## Exercice {nump}`exercice`
+## Exercice {num2}`exercice`
 
 Pour améliorer le programme, créez une fonction `calcule_moyenne(notes)` qui:
 - prend en paramètre la liste des notes,
