@@ -78,8 +78,9 @@ def analyse(texte, lettre):
   f = n/total
   return round(f * 100, 2)
 
+```
 
-lettres = ["e", "a", "s", "i", "t", "n", "r", "u", "l", "o", "d", "m", "c", "p", "v", "q", "f", "g", "h", "b", "j", "x", "y", "z", "k", "w"]
+<!-- lettres = ["e", "a", "s", "i", "t", "n", "r", "u", "l", "o", "d", "m", "c", "p", "v", "q", "f", "g", "h", "b", "j", "x", "y", "z", "k", "w"]
 textes = [texte0, texte1, texte2, texte3, texte4, texte5, texte6, texte7, texte8]
 
 for texte in textes:
@@ -92,8 +93,8 @@ for texte in textes:
   resultat = ""
   for l in lettres:
     resultat += l + ": " + str(analyse(txt, l)) + " "
-  print(resultat)
-```
+  print(resultat) -->
+
 
 
 
