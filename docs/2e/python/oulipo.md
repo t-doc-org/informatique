@@ -7,12 +7,17 @@
 
 # Oulipo - Outil d'analyse de texte
 
+Les textes ont été stockés dans les variables `texte1`, `texte2`, `texte3`,
+`texte4`, `texte5`, `texte6` et `texte7`.
+
+Les fonctions `suppression_accents(texte)`, `suppression_pontuation(texte)`,
+`suppression_caracteres_speciaux(texte)` et `analyse(texte, lettre)`.
+
 ```{exec} python
 :include: textes.py
 :name: textes
 :class: hidden
 ```
-
 
 ```{exec} python
 :after: textes
@@ -42,11 +47,14 @@ def suppression_pontuation(texte):
   texte = texte.replace("!", "")
   texte = texte.replace("?", "")
   texte = texte.replace('"', "")
+  texte = texte.replace("’", "")
+  texte = texte.replace("'", "")
   texte = texte.replace("«", "")
   texte = texte.replace("»", "")
   texte = texte.replace("“", "")
   texte = texte.replace("”", "")
   texte = texte.replace("-", "")
+  texte = texte.replace("*", "")
   texte = texte.replace("…", "")
   return texte
 
@@ -78,12 +86,85 @@ def analyse(texte, lettre):
   f = n/total
   return round(f * 100, 2)
 
+# "Nettoyez" le texte en appelant les 3 fonctions de suppression (accents, ponctuation, ...)
+
+# Vérifier que le texte est "nettoyé"
+
+# Effectuez les analyses de fréquences pour compléter le tableau
 ```
 
-<!-- lettres = ["e", "a", "s", "i", "t", "n", "r", "u", "l", "o", "d", "m", "c", "p", "v", "q", "f", "g", "h", "b", "j", "x", "y", "z", "k", "w"]
-textes = [texte0, texte1, texte2, texte3, texte4, texte5, texte6, texte7, texte8]
+````{solution}
+```{exec} python
+:after: textes
+:editor:
+def suppression_accents(texte):
+  texte = texte.replace("é", "e")
+  texte = texte.replace("è", "e")
+  texte = texte.replace("ê", "e")
+  texte = texte.replace("ë", "e")
+  texte = texte.replace("à", "a")
+  texte = texte.replace("â", "a")
+  texte = texte.replace("î", "i")
+  texte = texte.replace("ï", "i")
+  texte = texte.replace("ô", "o")
+  texte = texte.replace("ù", "u")
+  texte = texte.replace("û", "u")
+  texte = texte.replace("ü", "u")
+  texte = texte.replace("ç", "c")
+  return texte
 
-for texte in textes:
+def suppression_pontuation(texte):
+  texte = texte.replace("'", "")
+  texte = texte.replace(",", "")
+  texte = texte.replace(".", "")
+  texte = texte.replace(":", "")
+  texte = texte.replace(";", "")
+  texte = texte.replace("!", "")
+  texte = texte.replace("?", "")
+  texte = texte.replace('"', "")
+  texte = texte.replace("’", "")
+  texte = texte.replace("'", "")
+  texte = texte.replace("«", "")
+  texte = texte.replace("»", "")
+  texte = texte.replace("“", "")
+  texte = texte.replace("”", "")
+  texte = texte.replace("-", "")
+  texte = texte.replace("*", "")
+  texte = texte.replace("…", "")
+  return texte
+
+def suppression_caracteres_speciaux(texte):
+  texte = texte.replace("_", "")
+  texte = texte.replace("\n", "")
+  texte = texte.replace("(", "")
+  texte = texte.replace(")", "")
+  texte = texte.replace("[", "")
+  texte = texte.replace("]", "")
+  return texte
+
+def suppression_chiffres(texte):
+  texte = texte.replace("0", "")
+  texte = texte.replace("1", "")
+  texte = texte.replace("2", "")
+  texte = texte.replace("3", "")
+  texte = texte.replace("4", "")
+  texte = texte.replace("5", "")
+  texte = texte.replace("6", "")
+  texte = texte.replace("7", "")
+  texte = texte.replace("8", "")
+  texte = texte.replace("9", "")
+  return texte
+
+def analyse(texte, lettre):
+  total = len(texte)
+  n = texte.count(lettre)
+  f = n/total
+  return round(f * 100, 2)
+
+lettres = ["e", "a", "s", "i", "t", "n", "r", "u", "l", "o", "d", "m", "c", "p", "v", "q", "f", "g", "h", "b", "j", "x", "y", "z", "k", "w"]
+textes = [texte1, texte2, texte3, texte4, texte5, texte6, texte7]
+
+for i, texte in enumerate(textes):
   txt = texte.lower()
   txt = txt.replace(" ", "")
   txt = suppression_accents(txt)
@@ -93,7 +174,10 @@ for texte in textes:
   resultat = ""
   for l in lettres:
     resultat += l + ": " + str(analyse(txt, l)) + " "
-  print(resultat) -->
+  print("Texte", i + 1, ":", resultat)
+```
+````
+
 
 
 
